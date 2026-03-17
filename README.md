@@ -3,8 +3,11 @@
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-49.0%25-blue)](https://www.typescriptlang.org/)
 [![Python](https://img.shields.io/badge/Python-13.4%25-yellow)](https://www.python.org/)
+[![Website](https://img.shields.io/badge/Website-actualplanet.com-00d4ff)](https://actualplanet.com)
 
 > **A research project exploring swarm intelligence through neural ant colonies, adaptive multi-agent systems, and machine learning for emergent collective behavior patterns**
+
+🌐 **Website**: [actualplanet.com](https://actualplanet.com) | 📖 **GitHub**: [Prajwalvv/Actual-Planet](https://github.com/Prajwalvv/Actual-Planet)
 
 ---
 

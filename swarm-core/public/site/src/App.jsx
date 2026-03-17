@@ -779,7 +779,7 @@ export default function App() {
               <line x1="8" y1="22" x2="16" y2="26" stroke="currentColor" strokeWidth="1" opacity="0.25"/>
               <line x1="24" y1="22" x2="16" y2="26" stroke="currentColor" strokeWidth="1" opacity="0.25"/>
             </svg>
-            <span style={{ fontWeight: '700', fontSize: '1.3rem', letterSpacing: '0.5px' }}>RYLVO</span>
+            <span style={{ fontWeight: '700', fontSize: '1.3rem', letterSpacing: '0.5px' }}>ACTUAL PLANET</span>
           </a>
           <div className="nav-links">
             <a href="index.html" className="active">
@@ -867,7 +867,7 @@ export default function App() {
               fontSize: "1.35rem",
             }}
           >
-            Rylvo uses stigmergy—simulating real ant colonies—to discover,
+            Actual Planet uses stigmergy—simulating real ant colonies—to discover,
             validate, and cross-reference live data for your LLM. Thousands of
             specialized agents routing in perfect parallel.
           </motion.p>
@@ -1314,7 +1314,7 @@ export default function App() {
             <br />
             <span className="keyword">const</span> response ={" "}
             <span className="keyword">await</span> fetch(
-            <span className="string">'https://api.rylvo.dev/api/query'</span>,{" "}
+            <span className="string">'https://api.actualplanet.com/api/query'</span>,{" "}
             {"{"}
             <br />
             &nbsp;&nbsp;method: <span className="string">'POST'</span>,<br />
@@ -1335,7 +1335,7 @@ export default function App() {
           </motion.div>
         </div>
 
-        {/* ── WHY RYLVO ─────────────────────────── */}
+        {/* ── WHY ACTUAL PLANET ─────────────────────────── */}
         <div
           className="container section-sm"
           style={{ paddingTop: "80px", paddingBottom: "100px" }}
@@ -1358,7 +1358,7 @@ export default function App() {
                 marginBottom: "16px",
               }}
             >
-              Why Rylvo
+              Why Actual Planet
             </div>
             <h2 style={{ marginBottom: "20px" }}>
               built different from the ground up
@@ -1372,7 +1372,7 @@ export default function App() {
                 lineHeight: "1.7",
               }}
             >
-              Traditional scrapers break. Static APIs stale. Rylvo's stigmergic
+              Traditional scrapers break. Static APIs stale. Actual Planet's stigmergic
               architecture adapts, self-heals, and scales without central
               coordination.
             </p>
@@ -1762,8 +1762,8 @@ export default function App() {
             >
               {[
                 { name: "REST API", mono: "POST /api/query" },
-                { name: "Python SDK", mono: "pip install rylvo" },
-                { name: "TypeScript SDK", mono: "npm i @rylvo/sdk" },
+                { name: "Python SDK", mono: "pip install actualplanet" },
+                { name: "TypeScript SDK", mono: "npm i @actualplanet/sdk" },
                 { name: "Webhooks", mono: "real-time push" },
                 { name: "LangChain", mono: "tool integration" },
                 { name: "OpenAI Tools", mono: "function calling" },
@@ -1927,7 +1927,7 @@ export default function App() {
                     <line x1="8" y1="22" x2="16" y2="26" stroke="currentColor" strokeWidth="1" opacity="0.25"/>
                     <line x1="24" y1="22" x2="16" y2="26" stroke="currentColor" strokeWidth="1" opacity="0.25"/>
                   </svg>
-                  <span>RYLVO</span>
+                  <span>ACTUAL PLANET</span>
                 </div>
                 <p>
                   Stigmergic intelligence infrastructure. Real-time,
@@ -1954,7 +1954,7 @@ export default function App() {
               </div>
             </div>
             <div className="footer-bottom">
-              <span>&copy; 2026 Rylvo Inc. All rights reserved.</span>
+              <span>&copy; 2026 Actual Planet. All rights reserved.</span>
               <span>Built with swarm intelligence.</span>
             </div>
           </div>

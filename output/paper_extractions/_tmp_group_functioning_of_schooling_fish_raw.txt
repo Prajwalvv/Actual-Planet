@@ -1,0 +1,1022 @@
+
+
+===== PAGE 1 =====
+Report
+Consistent Individual Differences Drive Collective
+Behavior and Group Functioning of Schooling Fish
+Highlights
+d Fish with low sociability scores swim faster in both social and
+asocial contexts
+d This trait explains the structure, leadership, dynamics, and
+coordination of groups
+d Together with boldness, it in turn drives individual and group
+foraging success
+d These patterns emerge naturally in simulations of self-
+organized groups
+Authors
+Jolle W. Jolles, Neeltje J. Boogert,
+Vivek H. Sridhar, Iain D. Couzin,
+Andrea Manica
+Correspondence
+j.w.jolles@gmail.com
+In Brief
+Jolles et al. demonstrate in schooling ﬁsh
+that consistent individual differences
+drive the structure, leadership, movement
+dynamics, and foraging performance of
+groups. These effects emerge naturally
+from simulations of self-organized,
+heterogeneous groups. This study shows
+that individual differences provide a
+mechanism to explain collective
+behavior.
+Jolles et al., 2017, Current Biology27, 2862–2868
+September 25, 2017ª 2017 The Author(s). Published by Elsevier Ltd.
+http://dx.doi.org/10.1016/j.cub.2017.08.004
+
+
+===== PAGE 2 =====
+Current Biology
+Report
+Consistent Individual Differences Drive Collective
+Behavior and Group Functioning of Schooling Fish
+Jolle W. Jolles, 1,2,3,5,* Neeltje J. Boogert, 1,4 Vivek H. Sridhar, 2,3 Iain D. Couzin, 2,3 and Andrea Manica 1
+1Department of Zoology, University of Cambridge, Downing Street, Cambridge CB2 3DT, UK
+2Department of Collective Behaviour, Max Planck Institute for Ornithology, Am Obstberg 1, Radolfzell 78315, Germany
+3Department of Biology, University of Konstanz, Universit €atsstrasse 10, Konstanz 78464, Germany
+4Centre for Ecology and Conservation, University of Exeter, Penryn Campus, Penryn, Cornwall TR10 9FE, UK
+5Lead Contact
+*Correspondence: j.w.jolles@gmail.com
+http://dx.doi.org/10.1016/j.cub.2017.08.004
+SUMMARY
+The ubiquity of consistent inter-individual differ-
+ences in behavior (‘‘animal personalities’’) [1, 2] sug-
+gests that they might play a fundamental role
+in driving the movements and functioning of animal
+groups [3, 4], including their collective decision-mak-
+ing, foraging performance, and predator avoidance.
+Despite increasing evidence that highlights their
+importance [5–16], we still lack a uniﬁed mechanistic
+framework to explain and to predict how consistent
+inter-individual differences may drive collective
+behavior. Here we investigate how the structure,
+leadership, movement dynamics, and foraging per-
+formance of groups can emerge from inter-individual
+differences by high-resolution tracking of known
+behavioral types in free-swimming stickleback
+(Gasterosteus aculeatus) shoals. We show that indi-
+vidual’s propensity to stay near others, measured
+by a classic ‘‘sociability’’ assay, was negatively
+linked to swim speed across a range of contexts,
+and predicted spatial positioning and leadership
+within groups as well as differences in structure
+and movement dynamics between groups. In turn,
+this trait, together with individual’s exploratory ten-
+dency, measured by a classic ‘‘boldness’’ assay, ex-
+plained individual and group foraging performance.
+These effects of consistent individual differences
+on group-level states emerged naturally from a
+generic model of self-organizing groups composed
+of individuals differing in speed and goal-oriented-
+ness. Our study provides experimental and theoret-
+ical evidence for a simple mechanism to explain the
+emergence of collective behavior from consistent
+individual differences, including variation in the
+structure, leadership, movement dynamics, and
+functional capabilities of groups, across social and
+ecological scales. In addition, we demonstrate indi-
+vidual performance is conditional on group composi-
+tion, indicating how social selection may drive
+behavioral differentiation between individuals.
+RESULTS AND DISCUSSION
+In recent years, it has become apparent that across a wide range
+of animal taxa, individuals commonly differ consistently from one
+another in their behavior [ 1, 2] (‘‘animal personalities’’), often with
+large ﬁtness consequences [ 17] and wide-ranging ecological
+and evolutionary implications [ 18, 19]. Such variation could pro-
+vide a level of heterogeneity within animal groups that may drive
+collective behavior. Indeed, recent studies have started to pro-
+vide support for that notion and have shown that consistent
+behavioral differences can inﬂuence leadership [ 5–8], social
+network structure [ 9, 10], collective dynamics [ 11, 12], and group
+performance [ 13–16]. However, rarely are consistent behavioral
+differences integrated within the mechanistic framework of col-
+lective behavior research [ 12, 20 ], which has demonstrated
+that relatively simple interaction rules play an important role in
+the emergence of collective behavior [ 21–23]. It therefore re-
+mains unclear how consistent individual differences in behavior
+drive the structure, movement dynamics, and functioning of
+animal groups.
+Here, we combine high-resolution tracking of individuals
+with known behavioral types in free-swimming stickleback
+(Gasterosteus aculeatus) shoals, with agent-based models of
+self-organizing groups, to provide a more mechanistic and pre-
+dictive understanding of the behavior, structure, and perfor-
+mance of groups across ecological contexts. To capture the
+essential dynamics within and between groups, we employ a
+deliberately simple, spatially explicit model, which has previ-
+ously been used successfully to explain the emergence of lead-
+ership, group structure, and consensus decision-making in a
+range of species [ 12, 24–27].
+We ﬁrst determined the behavioral tendencies of 125 ﬁsh by
+exposing them to two classic personality assays and tracking
+their movements (see Figure S1 ). We found consistent inter-
+individual variation in ﬁsh’s tendency to leave a refuge and
+explore an open environment (repeatability R
+C = 0.48, 95%
+conﬁdence intervals: 0.33–0.60). This exploratory tendency,
+which is traditionally referred to as ‘‘boldness’’ since it may
+increase potential predation risk [ 28], was positively linked to
+individuals’ food consumption even in the safety of the holding
+compartment [ 29], reﬂecting an intrinsic higher motivation for
+food. We also found consistent individual differences in ﬁsh’s
+proximity to a conﬁned shoal of conspeciﬁcs (R C = 0.58,
+0.46–0.68), classically used to deﬁne ‘‘sociability’’ [ 30, 31 ],
+2862 Current Biology 27, 2862–2868, September 25, 2017 ª 2017 The Author(s). Published by Elsevier Ltd.
+This is an open access article under the CC BY license ( http://creativecommons.org/licenses/by/4.0/).
+
+===== PAGE 3 =====
+which was not correlated with their exploratory tendency
+(r123 = /C00.05, p = 0.658). Based on the detailed tracking
+data, we found that individual ﬁsh slowed down the closer
+they were to the conﬁned shoal and that ﬁsh that consistently
+stayed closer to the shoal also swam at consistently lower
+speeds. This was even the case when controlling for boundary
+effects ( r
+123 = /C0 0.79, p = 0.001) and when measured in the
+asocial boldness assay (see Figure S1 ). These results show
+that a fundamental link exists between social proximity and
+speed and concord with the general observation that slow-
+moving individuals tend to form more cohesive groups [ 25].
+As consistent differences in social proximity can thus poten-
+tially be both a cause and a result of differences in speed, we
+prefer to refer to this trait as ﬁsh’s ‘‘social proximity tendency.’’
+After quantifying the behavioral tendencies of the ﬁsh, we
+tagged all individuals for identiﬁcation (see STAR Methods )
+and allocated them randomly to groups of ﬁve (n = 25 groups;
+see Figure S1 ). In their natural habitat, animals may experience
+open, homogeneous spaces, encounter resources in spatial
+and temporal patches, and use habitat structures to hide from
+predators [ 30, 31 ]. We therefore tested the groups repeatedly
+in three contexts that reﬂect these different, ecologically relevant
+scenarios, each set up in the same large, circular tanks ( Figures
+1A–1C). Using custom-written software, we automatically identi-
+ﬁed and tracked the position of each ﬁsh in the freely moving
+groups and computed ﬁne-scale spatial, movement, and
+foraging data ( Figure 1 D; see STAR Methods ).
+Figure 1. Group Shoaling Experiments
+(A–C) Schematics of (A) the free-schooling
+context, (B) the open foraging context with
+patches of food, and (C) the semi-covered
+foraging context with patches of food and plant
+cover. Schematics show tracking segments of one
+randomly selected group, with colors corre-
+sponding to the individual ﬁsh. Triangles point in
+the direction of motion.
+(D) Graphic illustrating key spatial and movement
+characteristics with arrows depicting movement
+vectors. For the individual assays, see Figure S1 .
+On average, sticklebacks moved in
+highly cohesive, ordered shoals and
+maintained clear zones of attraction and
+repulsion, mediated by relative changes
+in their speed and heading ( Figure S2 ),
+in high accordance with other ﬁsh spe-
+cies [ 32, 33 ]. However, large and consis-
+tent differences existed between the
+25 groups in terms of their structure
+and movement dynamics. To investigate
+how this variability could be explained
+by the behavioral tendencies of individ-
+uals within the groups, we employed a
+linear mixed modeling approach (see
+STAR Methods ).
+We ﬁrst exposed the groups to the con-
+ventional collective scenario [ 23], free
+movement within an open, homogeneous
+environment (Figure 1A). The speed that ﬁsh adopted in the freely
+moving groups was positively linked to their speed in the individ-
+ual personality assays ( c
+2 = 7.84, p = 0.012), and individuals with
+lower social proximity tendencies, which had higher speeds in
+the individual assays, swam signiﬁcantly faster in this group
+context ( c2 = 8.70, p = 0.009). Fish also strongly conformed in
+their speed (c.f. [ 34]), a requirement to maintain group cohesion,
+and, on average, slowed down or sped up when grouped with
+others that had, respectively, a high or low mean social proximity
+tendency ( c2 = 7.68, p = 0.012).
+In terms of spatial positioning, ﬁsh had smaller nearest-
+neighbor distances the higher their social proximity tendency
+(c
+2 = 26.79, p < 0.001; Figure 2 A). As a result of relative differ-
+ences within groups, it was the ﬁsh with relatively low social
+proximity tendencies (which were also faster) who occupied
+positions toward the periphery ( c2 = 29.98, p < 0.001; Figure 2B)
+and front ( Figure 2 C) of their group, an effect that strengthened
+over time (5 min: DAIC = 38.59 versus 30 min: c2 = 9.14,
+p = 0.008). This result is in line with theory [ 24] and recent work
+on pigeons [ 8] that show that faster individuals tend to lead. By
+assessing the propagation of movement changes in the groups
+[35], we further found that such faster-moving, leading ﬁsh with
+lower social proximity tendencies were also much more inﬂuen-
+tial in deciding group motion ( Figure S3 ) and that, as a result,
+directional leader-follower networks emerged ( Figure 2D). These
+ﬁndings suggest a potential self-organizing mechanism for the
+emergence of group structure and leadership from individual
+Current Biology 27, 2862–2868, September 25, 2017 2863
+
+===== PAGE 4 =====
+differences in speed, with individuals’ behavior being deter-
+mined by their own tendencies as well as the tendencies of other
+group members. In the open, homogeneous environment, ﬁsh’s
+exploratory tendency had no effect on either spatial positioning
+(center distance rank: c
+2 = 0.64, p = 0.495) or leadership (propor-
+tion of time in front: c2 = 0.06, p = 0.804).
+From the behavioral tendencies of the individual ﬁsh, large dif-
+ferences in structure and movement dynamics also emerged be-
+tween the groups. When together as a group, those shoals of in-
+dividuals with, on average, low social proximity tendencies (and
+thus high individual speeds) moved relatively quickly, with high
+alignment and spacing between individuals, and predominantly
+schooled ( Figure 3 ; r
+s = /C00.52, p = 0.014). In contrast, shoals
+with a high mean social proximity tendency moved relatively
+slowly and with little alignment but were much more cohesive
+(F1,22 = 9.31, p = 0.012; Figure 3 ). Further, when measuring the
+strength of social interactions in the groups, we found the stron-
+gest social forces (i.e., stronger responsiveness) were exhibited
+in the fastest-moving groups ( Figure S2G; c.f. [ 32]). This suggest
+that groups that would conventionally be labeled as highly socia-
+ble based on the classic assay actually have the weakest social
+forces, linked to their low speeds, highlighting the need for a
+mechanistic assessment and careful terminology when consid-
+ering individual and group behavior. As for individual spatial
+positioning and leadership, the exploratory tendencies of the
+ﬁsh also had no effect on the cohesion ( F
+1,22 = 1.51, p = 0.305)
+or schooling dynamics ( rs = 0.23, p = 0.337) of the groups.
+Figure 2. Effect of Social Proximity Ten-
+dency on Spatial Positioning and Leader-
+ship
+(A) Fish nearest neighbor distance in groups as a
+function of their social proximity tendency, shown
+in ﬁve equally sized categories (mean ± 2 SEM;
+n = 120 ﬁsh).
+(B) Proportion of time ﬁsh occupied the most
+central to the most peripheral position in the
+group, calculated for each frame and averaged per
+individual across all frames (mean ± 2 SEM).
+(C) Density plot of the proportion of time in-
+dividuals spent in front of the group center for the
+full 30 min trial.
+(D) Visualization of a leadership network in terms of
+propagation of speeding changes of one randomly
+selected group. Numbers indicate the average
+temporal delay in seconds and arrows point in the
+direction of propagation; see Figure S3 .
+For plots (B) and (C), individuals were evenly
+distributed into three categories, with the inter-
+mediate category not shown for clarity. All data
+were analyzed as a continuous variable. See also
+Figures S2 and S4 for model simulations.
+To relate our experimental results to
+theory and to seek a parsimonious expla-
+nation for the observed patterns, we con-
+ducted simulations of a generic model of
+self-organized groups. We integrated
+consistent individual differences in the
+classic parameters of speed and goal-
+orientedness ( u), deﬁned as the likeli-
+hood that an individual biases its motion toward a desired goal
+rather than respond to social information [ 24, 27 ]. We found
+that this simple agent-based model qualitatively recreated the
+patterns observed experimentally, both in terms of ﬁsh’s social
+proximity tendency driving the spatial positioning and leadership
+of individuals and the structure and movement dynamics of
+groups and in terms of the lack of such effects for ﬁsh’s explor-
+atory tendency ( Figure S4 ).
+Building on previous work [ 8, 25, 32 ], our study combines
+empirical data from individual and group assays with model
+simulations to provide evidence that heterogeneity in speed is
+a causal mechanism that drives group states, including the
+structure, leadership, cohesion, and alignment of groups. Due
+to differences in swim speed, faster group members passively
+arrive at positions near the edge and front of groups, which in
+turn increases their propensity to lead. At the same time, higher
+individual speeds increase the speed of the group, which thereby
+passively results in higher order (alignment) and spacing
+between individuals. Differences in individual speed can be
+intrinsic or an emergent property, both of other intrinsic (e.g.,
+size) and labile (e.g., nutritional state) characteristics, as well
+as external factors (e.g., predation risk). These results thus pro-
+vide a relatively simple candidate mechanism by which collective
+behavior can emerge passively from individual differences
+without the need for global knowledge. Our ﬁnding that social
+proximity was strongly, negatively linked with speed across so-
+cial and asocial contexts warrants further work to investigate
+2864 Current Biology 27, 2862–2868, September 25, 2017
+
+===== PAGE 5 =====
+the extent that consistency in social proximity, classically termed
+‘‘sociability,’’ is driven by an intrinsic social tendency rather than
+the preferred movement speed of individuals.
+To further investigate the functional consequences of the
+behavioral tendencies of individuals within groups, we exposed
+the shoals to an open and to a semi-covered environment with
+patches of food ( Figures 1 B and 1C; see STAR Methods ) and
+analyzed group foraging dynamics and performance. Fish
+with a low social proximity tendency (which tended to move
+relatively fast) were most likely to ﬁrst discover the foraging
+areas in the open foraging context ( Figure 4 A), in line with their
+tendency to be in front (see Figure 2 C), whereas in the semi-
+covered foraging environment it was highly exploratory ﬁsh
+that made most discoveries (traits 3 context: c
+2 = 5.77,
+p = 0.030). After the discovery of the food, it was exploratory
+ﬁsh that were fastest to actually consume the food, both in
+the open and in the semi-covered foraging environment
+(survival model [SM]: z = 3.63, p = 0.001; Figure 4 B). Due to
+the availability of cover, individuals spent considerable time
+hiding and groups often split, with exploratory ﬁsh being the
+most likely to initiate foraging trips and thereby lead their
+group-mates out of cover ( c
+2 = 8.15, p = 0.011), but also to
+spent more time out of cover alone ( c2 = 10.28, p = 0.005; Fig-
+ure 4 C), a behavior that may lead to higher potential predation
+risk [ 28, 30 ].
+Ultimately, it was the combined effects of ﬁsh’s social prox-
+imity and exploratory tendencies that explained the foraging per-
+formance of both groups and individuals. Overall, groups
+composed of exploratory ﬁsh that had a low social proximity
+tendency (and thus moved relatively fast) found and depleted
+the food patches most quickly (SM: z = /C02.20, p = 0.046), with
+the relative effect of ﬁsh’s exploratory tendency intensiﬁed
+by the availability of cover ( z = 3.15, p = 0.006; Figure 4 E).
+The interaction of both traits also predicted the foraging
+performance of the individual ﬁsh, with again the relative
+tendencies (rather than the absolute tendencies) being important
+(DAIC = +13.94): exploratory ﬁsh with low social proximity ten-
+dencies had the highest food intake, with the food intake of
+more exploratory ﬁsh being enhanced in the semi-covered envi-
+ronment (traits 3context: c
+2 = 10.32, p = 0.005; Figure 4F). Over-
+all, ﬁsh with low social proximity tendencies experienced greater
+variance in food intake ( F41,39 = 2.06, p = 0.044; Figures 4 D and
+4F), in line with the prediction that leadership positions come
+with higher variance in ﬁtness [ 36].
+Again, the general effects of the behavioral tendencies of the
+ﬁsh, here on the foraging performance of both individuals and
+groups, emerged naturally in simulations of our agent-based
+model: groups with high mean speed and goal-orientedness
+depleted food patches most quickly, and individuals with a
+high speed and a goal-oriented tendency had the highest food
+intake ( Figure S4 ). These ﬁndings show that the exploratory or
+‘‘boldness’’ tendency of individuals is intrinsically linked to their
+goal-directedness and motivation for food [ 5, 16, 29] and thereby
+drives foraging performance directly, whereas the social prox-
+imity tendency of individuals had an indirect effect on foraging
+performance by the effects of speed.
+In summary, we present results from detailed behavioral ex-
+periments on individuals and groups of ﬁsh in combination with
+agent-based model simulations that demonstrate how collec-
+tive behavior can emerge from consistent inter-individual differ-
+ences, including spatial positioning and leadership within
+groups, differences in structure and movement dynamics be-
+tween groups, and group and individual foraging performance.
+Individual differences in speed and goal-orientedness provide
+a simple, self-organizing mechanism by which collective
+behavior and group functioning can emerge without individuals
+requiring global knowledge of their group. These ﬁndings pro-
+vide fundamental insights that may help explain and ultimately
+predict the emergence of complex collective behavioral pat-
+terns across social and ecological scales. We also show that
+the spatial positioning, leadership, and foraging performance
+of individuals was conditional on the composition of their
+Figure 3. Group Structure and Movement Dynamics in Relation to Group Mean Social Proximity Tendency
+(A–C) Heatmaps showing the distribution and link between the three key components of collective motion for groups with a low mean social proximity tendency
+(n = 13) relative to groups with a high mean social proximity tendency (n = 12). Groups with a relatively high social proximity tendency were more likely to be found
+in the bluer regions of the plots, whereas groups with relatively low social proximity tendency were more likely to be found in the redder regions of the plots. Group
+speed depicts the mean median swimming speed of the individuals in a group and is qualitatively similar to the speed of the group centroid. Plots are based on
+frame-by-frame data at time steps of 1/24
+th s, with groups evenly allocated to two categories based on their mean social proximity tendency. Units are in mean
+body length (BL; 40.6 mm), and contours represent iso-levels in percentage of the highest bin for all groups combined; see Figure S2 .
+(D) Proportion of time groups were schooling, characterized based on the raw distributions of group speed, cohesion, and polarization (see STAR Methods). Solid
+gray line and dashed gray lines indicate a linear ﬁt to the data with 95% conﬁdence intervals.
+Current Biology 27, 2862–2868, September 25, 2017 2865
+
+===== PAGE 6 =====
+group. Over time, this could result in behavioral feedback loops
+that may lead to behavioral differentiation between individuals
+via social selection [ 37], which may help explain the evolu-
+tionary maintenance of personality types [ 36, 37 ]. Our study
+calls for a new generation of theoretical and empirical work
+that further integrates individual differences with collective
+behavior to better understand the multi-scale consequences
+of consistent behavioral variation, from within-group posi-
+tioning to group formation and population dynamics [ 37, 38 ],
+as well as its potential drivers, via group-dependent effects
+on individual performance.
+STAR+METHODS
+Detailed methods are provided in the online version of this paper
+and include the following:
+d KEY RESOURCES TABLE
+d CONTACT FOR REAGENT AND RESOURCE SHARING
+d EXPERIMENTAL MODEL AND SUBJECT DETAILS
+d METHOD DETAILS
+B Experimental overview
+B Individual behavioral assays
+B Group shoaling experiments
+B Automated tracking and data collection
+B Individual-based modeling
+d QUANTIFICATION AND STATISTICAL ANALYSIS
+B Computation of behavioral data
+B Data analysis
+d DATA AND SOFTWARE AVAILABILITY
+SUPPLEMENTAL INFORMATION
+Supplemental Information includes four ﬁgures and three movies and can be
+found with this article online at http://dx.doi.org/10.1016/j.cub.2017.08.004.
+AUTHOR CONTRIBUTIONS
+The study was conceived by J.W.J. and A.M with important input from N.J.B.
+J.W.J. and N.J.B performed the experiments, J.W.J analyzed the data, V.H.S.
+and I.D.C. performed the model simulations and provided extensive additional
+input. J.W.J drafted the manuscript with substantial contributions from all
+other authors.
+ACKNOWLEDGMENTS
+We thank Lucy Aplin, Damien Farine, Matt Grobis, Rufus Johnstone, Jelle
+Jolles, Kate Laskowski, Ma ´ t/C19e Nagy, Mike Webster, and Peter Winsberger
+for discussions or comments on the manuscript, and Ben Walbanke-Taylor
+for logistical support. We would also like to thank two anonymous
+reviewers for their constructive feedback. We acknowledge ﬁnancial support
+from the Biotechnology and Biological Sciences Research Council (graduate
+studentship to J.W.J), the Association for the Study of Animal Behaviour
+(research grants to J.W.J and N.J.B), the Royal Society (Dorothy Hodgkin
+Fellowship to N.J.B), the National Science Foundation (IOS-1355061 and
+Figure 4. Effects of Individual Social Proximity and Exploratory Tendencies on Group Foraging Dynamics
+(A) Total number of foraging areas discovered during the open foraging context trials (out of 295 discoveries).
+(B) Inverted survival plot with conﬁdence intervals of ﬁsh’s likelihood to feed in the open and semi-covered foraging context.
+(C) Boxplots depicting total time spent out of plant cover alone in the semi-covered foraging context when food was still available.
+(D) Density plot of the mean number of food items eaten per trial across both foraging contexts.
+For plots (A)–(D), individual tendencies were evenly distributed into low, medium, and high categories (n = 42, n = 42, and n = 41 ﬁsh, respectively), with the
+intermediate category not shown for clarity.
+(E) Group foraging speed in the open (top) and semi-covered foraging cover context (bottom) in terms of the latency to consume each food item (15 provided per
+trial). The plot shows latencies averaged across trials for each group, and groups split into four categories based on their mean exploration and social proximity
+tendencies (low-low, low-high, high-low, and high-high: n = 5, 8, 8, and 4, respectively).
+(F) Surface plot of the mean number of food items eaten (log transformed) in the open foraging context (points indicate individual ﬁsh), based on a generalized
+linear mixed model (GLMM) ﬁt to the data, cropped to 90% to show the effect excluding ﬁsh with the most extreme tendencies (n = 12 ﬁsh). Relative social
+proximity tendency is shown inverted such that faster ﬁsh are on the right and slower ﬁsh on the left, directly comparable with the model simulations of speed (see
+Figure S4 ).
+2866 Current Biology 27, 2862–2868, September 25, 2017
+
+===== PAGE 7 =====
+EAGER-IOS-1251585 to I.D.C), the Ofﬁce of Naval Research (N00014-09-1-
+1074 and N00014-14-1-0635 to I.D.C), the Army Research Ofﬁce (W911NG-
+11-1-0385 and W911NF-14-1-0431 to I.D.C), the Human Frontier Science
+Program (RGP0065/2012 to I.D.C), the Struktur- und Innovationsfonds fu ¨ r
+die Forschung of the state Baden-Wu ¨ rttenberg (SI-BW; to I.D.C), and the
+Max Planck Society.
+Received: April 24, 2017
+Revised: June 20, 2017
+Accepted: August 2, 2017
+Published: September 7, 2017
+REFERENCES
+1. R/C19eale, D., Reader, S.M., Sol, D., McDougall, P.T., and Dingemanse, N.J.
+(2007). Integrating animal temperament within ecology and evolution.
+Biol. Rev. Camb. Philos. Soc. 82, 291–318.
+2. Bell, A.M., Hankison, S.J., and Laskowski, K.L. (2009). The repeatability of
+behaviour: a meta-analysis. Anim. Behav. 77, 771–783.
+3. Webster, M.M., and Ward, A.J.W. (2011). Personality and social context.
+Biol. Rev. Camb. Philos. Soc. 86, 759–773.
+4. Wolf, M., and Krause, J. (2014). Why personality differences matter for so-
+cial functioning and social structure. Trends Ecol. Evol. 29, 306–308.
+5. Ward, A.J.W., Thomas, P., Hart, P.J.B., and Krause, J. (2004). Correlates
+of boldness in three-spined sticklebacks (Gasterosteus aculeatus). Behav.
+Ecol. Sociobiol. 55, 561–568.
+6. Kurvers, R.H.J.M., Eijkelenkamp, B., van Oers, K., van Lith, B., van Wieren,
+S.E., Ydenberg, R.C., and Prins, H.H.T. (2009). Personality differences
+explain leadership in barnacle geese. Anim. Behav. 78, 447–453.
+7. Harcourt, J.L., Ang, T.Z., Sweetman, G., Johnstone, R.A., and Manica, A.
+(2009). Social feedback and the emergence of leaders and followers. Curr.
+Biol. 19, 248–252.
+8. Pettit, B., A´ kos, Z., Vicsek, T., and Biro, D. (2015). Speed determines lead-
+ership and leadership determines learning during pigeon ﬂocking. Curr.
+Biol. 25, 3132–3137.
+9. Pike, T.W., Samanta, M., Lindstro ¨ m, J., and Royle, N.J. (2008).
+Behavioural phenotype affects social interactions in an animal network.
+Proc. Biol. Sci. 275, 2515–2520.
+10. Aplin, L.M., Farine, D.R., Morand-Ferron, J., Cole, E.F., Cockburn, A., and
+Sheldon, B.C. (2013). Individual personalities predict social behaviour in
+wild networks of great tits (Parus major ). Ecol. Lett. 16, 1365–1372.
+11. Jolles, J.W., Fleetwood-Wilson, A., Nakayama, S., Stumpe, M.C.,
+Johnstone, R.A., and Manica, A. (2015). The role of social attraction and
+its link with boldness in the collective movements of three-spined stickle-
+backs. Anim. Behav. 99, 147–153.
+12. Farine, D.R., Strandburg-Peshkin, A., Couzin, I.D., Berger-Wolf, T.Y., and
+Crofoot, M.C. (2017). Individual variation in local interaction rules can
+explain emergent patterns of spatial organization in wild baboons. Proc.
+Biol. Sci. 284, 25–29.
+13. Dyer, J.R.G., Croft, D.P., Morrell, L.J., and Krause, J. (2009). Shoal compo-
+sition determines foraging success in the guppy. Behav. Ecol. 20,
+165–171.
+14. Laskowsk
+i, K.L., Montiglio, P.O., and Pruitt, J.N. (2016). Individual and
+group performance suffers from social niche disruption. Am. Nat. 187,
+776–785.
+15. Pruitt, J.N., and Riechert, S.E. (2011). How within-group behavioural vari-
+ation and task efﬁciency enhance ﬁtness in a social group. Proc. Biol. Sci.
+278, 1209–1215.
+16. Ioannou, C.C., and Dall, S.R.X. (2016). Individuals that are consistent in
+risk-taking beneﬁt during collective foraging. Sci. Rep. 6, 33991 .
+17. Smith, B.R., and Blumstein, D.T. (2008). Fitness consequences of person-
+ality: a meta-analysis. Behav. Ecol. 19, 448–455.
+18. Sih, A., Cote, J., Evans, M., Fogarty, S., and Pruitt, J. (2012). Ecological im-
+plications of behavioural syndromes. Ecol. Lett. 15, 278–289.
+19. R/C19eale, D., Dingemanse, N.J., Kazem, A.J.N., and Wright, J. (2010).
+Evolutionary and ecological approaches to the study of personality.
+Philos. Trans. R. Soc. Lond. B Biol. Sci. 365, 3937–3946.
+20. Schaerf, T.M., Herbert-Read, J.E., Myerscough, M.R., Sumpter, D.J.T.,
+and Ward, A.J.W. (2016). Identifying differences in the rules of interaction
+between individuals in moving animal groups. arXiv, arXiv:1601.08202,
+http://arxiv.org/abs/1601.08202.
+21. Couzin, I.D., and Krause, J. (2003). Self-organization and collective
+behavior in vertebrates. Adv. Stud. Behav. 32, 1–75.
+22. Sumpter, D.J.T. (2010). Collective Animal Behavior (Princeton University
+Press).
+23. Herbert-Read, J.E. (2016). Understanding how animal groups achieve co-
+ordinated movement. J. Exp. Biol. 219, 2971–2983.
+24. Couzin, I.D., Krause, J., James, R., Ruxton, G.D., and Franks, N.R. (2002).
+Collective memory and spatial sorting in animal groups. J. Theor. Biol. 218,
+1–11.
+25. Tunstrøm, K., Katz, Y., Ioannou, C.C., Huepe, C., Lutz, M.J., and Couzin,
+I.D. (2013). Collective states, multistability and transitional behavior in
+schooling ﬁsh. PLoS Comput. Biol. 9, e1002915 .
+26. Couzin, I.D., Krause, J., Franks, N.R., and Levin, S.A. (2005). Effective
+leadership and decision-making in animal groups on the move. Nature
+433, 513–516.
+27. Ioannou, C.C., Singh, M., and Couzin, I.D. (2015). Potential leaders trade
+off goal-oriented and socially oriented behavior in mobile animal groups.
+Am. Nat. 186, 284–293.
+28. Persson, L., and Eklo ¨ v, P. (1995). Prey refuges affecting interactions be-
+tween piscivorous perch and juvenile perch and roach. Ecology 76, 70–81.
+29. Jolles, J.W., Manica, A., and Boogert, N.J. (2016). Food intake rates of
+inactive ﬁsh are positively linked to boldness in three-spined sticklebacks
+Gasterosteus aculeatus. J. Fish Biol. 88, 1661–1668.
+30. Krause, J., and Ruxton, G.D. (2002). Living in Groups (Oxford University
+Press).
+31. Ward
+, A., and Webster, M. (2016). Sociality: The Behaviour of Group-
+Living Animals (Springer International Publishing).
+32. Katz, Y., Tunstrøm, K., Ioannou, C.C., Huepe, C., and Couzin, I.D. (2011).
+Inferring the structure and dynamics of interactions in schooling ﬁsh. Proc.
+Natl. Acad. Sci. USA 108, 18720–18725.
+33. Herbert-Read, J.E., Perna, A., Mann, R.P., Schaerf, T.M., Sumpter, D.J.T.,
+and Ward, A.J.W. (2011). Inferring the rules of interaction of shoaling ﬁsh.
+Proc. Natl. Acad. Sci. USA 108, 18726–18731.
+34. Herbert-Read, J.E., Krause, S., Morrell, L.J., Schaerf, T.M., Krause, J., and
+Ward, A.J.W. (2012). The role of individuality in collective group move-
+ment. Proc. Biol. Sci. 280, 20122564 .
+35. Nagy, M., Akos, Z., Biro, D., and Vicsek, T. (2010). Hierarchical group dy-
+namics in pigeon ﬂocks. Nature 464, 890–893.
+36. Johnstone, R.A., and Manica, A. (2011). Evolution of personality differ-
+ences in leadership. Proc. Natl. Acad. Sci. USA 108, 8373–8378.
+37. Farine, D.R., Montiglio, P.O., and Spiegel, O. (2015). From individuals to
+groups and back: the evolutionary implications of group phenotypic
+composition. Trends Ecol. Evol. 30, 609–621.
+38. Spiegel, O., Leu, S.T., Bull, C.M., and Sih, A. (2017). What’s your move?
+Movement as a link between personality and spatial dynamics in animal
+populations. Ecol. Lett. 20, 3–18.
+39. Borg, B., Bornestaf, C., Hellqvist, A., Schmitz, M., and Mayer, I. (2004).
+Mechanisms in the photoperiodic control of reproduction in the stickle-
+back. Behav. 141, 1521–1530.
+40. Jolles, J.W., Aaron Taylor, B., and Manica, A. (2016). Recent social condi-
+tions affect boldness repeatability in individual sticklebacks. Anim. Behav.
+112, 139–145.
+41. Biro, P.A. (2012). Do rapid assays predict repeatability in labile (behaviou-
+ral) traits? Anim. Behav. 83, 1295–1300.
+Current Biology 27, 2862–2868, September 25, 2017 2867
+
+===== PAGE 8 =====
+42. Webster, M.M., and Laland, K.N. (2009). Evaluation of a non-invasive
+tagging system for laboratory studies using three-spined sticklebacks
+Gasterosteus aculeatus. J. Fish Biol. 75, 1868–1873.
+43. Wright, D., and Krause, J. (2006). Repeated measures of shoaling ten-
+dency in zebraﬁsh (Danio rerio ) and other small teleost ﬁshes. Nat.
+Protoc. 1, 1828–1831.
+44. Crawley, M. (2007). The R Book (Wiley) .
+45. Nakagawa, S., and Schielzeth, H. (2010). Repeatability for Gaussian and
+non-Gaussian data: a practical guide for biologists. Biol. Rev. Camb.
+Philos. Soc. 85, 935–956.
+46. Jolles, J.W., Boogert, N.J., Sridhar, V.H., Couzin, I.D., and Manica, A.
+(2017). Data from: consistent individual differences drive collective behav-
+iour and group functioning of schooling ﬁsh (Cambridge University Data
+Repository). http://dx.doi.org/10.17863/CAM.12136.
+2868 Current Biology 27, 2862–2868, September 25, 2017
+
+===== PAGE 9 =====
+STAR+METHODS
+KEY RESOURCES TABLE
+CONTACT FOR REAGENT AND RESOURCE SHARING
+Further information and requests for resources and reagents should be directed to and will be fulﬁlled by the Lead Contact, Jolle W.
+Jolles ( j.w.jolles@gmail.com).
+EXPERIMENTAL MODEL AND SUBJECT DETAILS
+We collected three-spined sticklebacks ( Gasterosteus aculeatus) during the summer of 2014 from a stream near Cambridge, En-
+gland, and housed them in our lab under controlled temperature (14 /C14 C±1 /C14 C) and light (12 hr:12 hr light:dark) conditions. Fish
+were kept in large glass tanks (120 cm length 360 cm width 360 cm height) with artiﬁcial plants and shelters, which were maintained
+by both under-gravel and external ﬁltration. Fish were fed defrosted bloodworms ( Chironomid larvae) ad libitum once daily. After an
+acclimatization period of six months, when ﬁsh were about nine months old, we randomly selected 125 individuals, controlling for size
+(body length ‘BL’ ± SE: 40.6 ± 0.4 mm), and moved them to individual compartments (18.5 cm 3 9.5 cm), each lined with gravel and
+containing an artiﬁcial plant, where they were kept for the remainder of the experiment. Compartments were divided from
+neighboring compartments by perforated transparent partitions. We pseudo-randomly (controlling for holding tank to minimize
+potential familiarity effects) allocated individuals to one of 25 groups of ﬁve after the completion of the individual behavioral assays
+(described below). Since it is impossible to non-invasively sex sticklebacks outside the breeding season, all groups were assumed to
+be of mixed sex, with group sex ratio unlikely to have a big impact on our results under these controlled laboratory conditions [ 39]a s
+both sexes are non-territorial and actively shoal together. During the whole experimental period, ﬁsh were fed three bloodworms at
+the end of each day. Animal care and experimental procedures were approved by the Animal Users Management Committee of the
+University of Cambridge as a non-regulated procedures-regime.
+METHOD DETAILS
+Experimental overview
+To control for potential social modulation and acclimatization effects [ 40, 41], experiments started three days after individual housing.
+We started with the individual behavioral assays and subjected ﬁsh to a classic ‘boldness’ assay on experimental days 4 and 8 and a
+classic ‘sociability’ assay on days 6 and 10. We then allocated individuals to groups of ﬁve, which is a common group size for stream-
+inhabiting sticklebacks and conforms with previous work, which has predominantly looked at group sizes between 2-30 individuals
+[7, 13, 32, 33 ]. Group size and composition were kept constant throughout the experimental period. To enable individual identiﬁcation
+in the groups, after two rest days (day 13) we tagged ﬁsh on their middle dorsal spine with a uniquely colored disc-shaped tag (6 mm
+diameter) made from colored electrical tape. This non-invasive tagging method only took between 15-30 s per ﬁsh and has been
+shown to have no major effects on either the activity or shoaling behavior of three-spined sticklebacks [ 42]. After another rest
+day, we started with the shoaling experiments using two replicates of a large circular tank. The experimenters were blind to the iden-
+tity of the ﬁsh and the composition of the groups. On day 15 we tested groups in the open tanks without food or cover, on days 16 and
+17, twice per day, with patches of food but without plant cover, and on days 18 and 19 with food patches and a plant cover.
+Individual behavioral assays
+Individual ﬁsh (n = 125) were tested using two standard personality assays, conventionally used to quantify boldness and sociability
+[7, 16, 43 ]. The asocial boldness assay consisted of a white Perspex tank (55 cm 3 15 cm 3 20 cm) containing a deep area (15 cm 3
+10 cm; 13 cm depth) with an artiﬁcial plant as refuge, and an open sandy area with a slope leading to shallow water (3 cm) at the other
+side (Figure S1A). The social assay consisted of a tank (50 cm 3 30 cm, 8 cm depth) that was lengthwise divided by two transparent
+partitions to create one larger middle compartment (30 cm width), used for the focal ﬁsh, and two smaller side compartments
+REAGENT or RESOURCE SOURCE IDENTIFIER
+Deposited Data
+Raw and analyzed data This paper https://doi.org/10.17863/CAM.12136
+Experimental Models: Organisms/Strains
+G. aculeatusWild-type Local stream near Cambridge, UK N/A
+Software and Algorithms
+Software for running the agent-based models documented
+in the paper can be found on GitHub
+N/A https://github.com/vivekhsridhar/
+individual_differences
+Current Biology 27, 2862–2868.e1–e7, September 25, 2017 e1
+
+===== PAGE 10 =====
+(10 cm width), one of which contained ﬁve conspeciﬁcs ( Figure S1 E). At the start of each test day the ﬁsh forming the conspeciﬁcs
+shoal were randomly selected from the stock tanks and allowed to acclimatize to the compartment for 45 min. The position of the
+compartment housing the ﬁve ﬁsh was then randomly selected every four trials after which the shoal was allowed to acclimatize
+for 10 more minutes before the start of the next trial. We calculated an ‘exploratory’ and ‘social proximity’ score for each ﬁsh by
+respectively averaging the proportion of time ﬁsh spent out of cover and averaging their mean distance from the shoal compartment
+across the two trials of each assay. For both assays we also measured ﬁsh’s swim speed as a function of their distance out of cover/
+from the shoal compartment (see Figure S1). Trials lasted 30 and 15 min for the asocial boldness assay and the social assay respec-
+tively. For both assays, ﬁsh were taken from their individual compartment at the start of a trial and returned there immediately after
+completing the trial using a dip net. We used a custom replicated set-up of eight boxes that enabled us to test multiple ﬁsh simul-
+taneously under identical conditions, while minimizing outside disturbances. Sessions were automatically recorded at 12 fps in
+high-deﬁnition using Raspberry Pi computers (Raspberry Pi Foundation, England) positioned in the top of each box.
+Group shoaling experiments
+To investigate the collective behavior of the ﬁsh, groups were repeatedly subjected to a white, circular Perspex tank (80 cm diameter,
+20 cm height; 7 cm water depth), positioned inside a large white light tent (200 cm 3 100 cm 3 160 cm) illuminated from the top and
+sides. For the ﬁsh, the tank is a potentially dangerous environment due to being bright, open, and homogeneous, and results in ﬁsh
+to strongly school together (see Figure S2). For the trials in the foraging contexts we placed three food patches at random locations
+in roughly equilateral triangular formation in the tank, between 5 cm from the wall and 15 cm from the tank center. Food patches consisted
+of white Perspex grids (5 cm 3 5c m 3 1 cm) containing ﬁve bloodworms each, randomly distributed among the grids’ 16 cells. The
+patches were constructed such that ﬁsh would notice the prey items from a distance of approximately 10-15 cm. For the trials in the
+semi-covered foraging context, artiﬁcial plants were positioned in the center of the tank, creating a covered area with a diameter of 15 cm.
+Each group received a total of seven test trials: one in the classic context (30 min), four in the open foraging context (5 min), and two
+in the foraging plus cover context (10 min). The group order of testing was randomized but a ﬁxed context order was used as not to
+confound the behavior of the ﬁsh in the earlier contexts with experience of the foraging patches and cover being available. Data anal-
+ysis of the free-schooling context trials focused on the ﬁrst 5 min only (c.f. [ 33]) but trials lasted 30 min to enable the analysis of certain
+temporal effects (see below). Before each trial, ﬁsh were taken from their individual compartment using a dip net and allowed to ac-
+climatize for 30 s in black plastic cups, after which all ﬁve ﬁsh of a group were simultaneously placed in a transparent Perspex cylinder
+(10 cm diameter) in the center of the tank. After another 30 s acclimatization, the ﬁsh were released by remotely raising the cylinder. At
+the end of each trial, ﬁsh were placed back in their compartments, any ﬁsh droppings and remaining food items removed, and tank
+water circulated to mix any chemical cues. Trials were recorded from above at 24 fps at a resolution of 1400 3 1400 using Raspberry
+Pi computers. As groups received two foraging trials per day, with ﬁve bloodworms provided in each foraging patch, hypothetically a
+ﬁsh could reach a maximum daily food intake of 30 food items. This was by far never observed. Furthermore, sticklebacks under
+similar conditions are capable of consuming up to 60 bloodworms within a three-hour time span [ 29]. Satiation is therefore unlikely
+to have had a strong effect on the observed foraging performance.
+Automated tracking and data collection
+We acquired highly detailed individual-based movement data for both the individual and group assays with custom tracking software
+written in Python version 2.7.12 (AnimTrack, by J.W.J.) based on the OpenCV library. For the individual trials, a background image,
+created by averaging the ﬁrst 200 frames, was subtracted from each frame and ﬁsh were subsequently identiﬁed via automatic
+thresholding using constant threshold values. For the group trials we automatically identiﬁed ﬁsh based on their differently colored
+tags, which enabled us to acquire highly accurate tracking data linked to each individual, despite occasional occlusions. Positional
+coordinates were converted from pixels to mm and subsequently smoothed using a Savitzky & Sgolay smoothing ﬁlter with a window
+of 15 frames. After tracking, all trajectory data were visually checked for any inconsistencies or errors and, if needed, manually cor-
+rected. In addition, we performed manual video observations for the trials in the foraging contexts and recorded the time each food
+item was eaten (0.1 s precision) as well as the identity of the foraging ﬁsh.
+Individual-based modeling
+Overview
+We adapted the simple spatially-explicit self-propelled particle model detailed in Couzin et al. [ 24] and combined it with goal-oriented
+behavior (omega) [26, 27], which has been shown to be an important factor in individuals’ responses to known resource locations. We
+deliberately chose this simple model, not to obtain a quantitative comparison to the experiments, but to determine if the general
+results are consistent with theory, and to seek a parsimonious explanation for the observed patterns.
+Framework
+Groups were composed of individuals, each characterized by a position vector c
+i(t), a unit direction vector cv1 ðtÞ and speed jviðtÞ j ,
+where i is the identity of the individual and t is the current time step. The speed of each individual is drawn from a normal distribution to
+represent consistent inter-individual differences. Hence, each individual differs in speed and a given individual’s speed remains con-
+stant within a simulation. While having a constant speed is an oversimpliﬁcation (to obtain the simplest possible model formulation
+that can explain the experimental results), due to the nature of response to social interactions, individuals can effectively slow down,
+or speed up, by virtue of modiﬁcations to the small-scale tortuosity of their motion. For example, fast individuals at the front of groups
+e2 Current Biology 27, 2862–2868.e1–e7, September 25, 2017
+
+===== PAGE 11 =====
+will tend to be attracted to those behind, resulting in them taking a more tortuous path, effectively slowing them in the direction of
+travel of the group as a whole, whereas slower individuals trailing groups will exhibit highly directed motion that increases their relative
+speed in the direction of travel with respect to other group members (see Movie S3 ).
+Social interactions with others were accounted for through three types of interactions: repulsion, alignment and attraction. Individ-
+uals turn away from nr neighbors encountered within a small radius ( rr) around them. This represents collision avoidance and main-
+tenance of personal space expressed by the agents, and, as is apparent in real schools [ 30, 31 ], takes highest priority.
+sr ðtÞ = /C0
+Xnr
+jsi
+cjðtÞ/C0 ciðtÞ/C12/C12cjðtÞ/C0 ciðtÞ
+/C12
+/C12 (Equation 1)
+where s
+r(t) represents the social component of an individual’s desired direction of motion after responding to individuals within rr.
+If no individual is present within radius rr, the focal individual orients itself with individuals within ro and is attracted to individuals
+in zone ra These zones are circular, with a blind area of a/C14 behind the individual. In these zones, individuals interact with conspeciﬁcs
+only in the remaining (360 /C0 a)/C14 . All three zones are non-overlapping and their widths are deﬁned as Drr = rr, Dro = ro /C0 rr, and Dra =
+ra /C0 ro. Since we simulated a group of ﬁve individuals, and due to the relatively small environment in which experiments were con-
+ducted where individuals can readily see others at the maximum possible spacing, we set the maximal range of perception ra to N.
+Each individual attempts to align its direction of motion with no neighbors in the zone of orientation, giving
+soðtÞ = /C0
+Xno
+j = i
+vjðtÞ/C12/C12vjðtÞ
+/C12
+/C12 (Equation 2)
+and is attracted toward positions of individuals within the zone of attraction
+s
+aðtÞ = /C0
+Xna
+jsi
+cjðtÞ/C0 ciðtÞ/C12
+/C12c
+jðtÞ/C0 ciðtÞ
+/C12
+/C12 : (Equation 3)
+Once individuals have a social vector, they reconcile this with their goal-oriented tendency g
+i(t) weighted by a continuous term u,
+which represents the strength of individual goal-orientedness. Like speed, individual u is drawn from a Gaussian distribution (to
+represent consistent inter-individual differences) and remains constant in a given simulation
+diðt + DtÞ =
+Xn
+i = 1
+siðtÞ
+jsiðtÞj + u bgi ðtÞ: (Equation 4)
+diðt + DtÞ is then normalized bdi ðt + DtÞ = diðt + DtÞ=jdiðt + DtÞj , to represent the desired direction of motion of the individual. Individ-
+uals’ goal-oriented vector gi(t) points in the direction of their current motion until they enter a radius rc of a rewarding cue. This can be
+interpreted as their inertia, or their desire to continue moving in their current direction when reward is not perceived. Once individuals
+are within this set radius, their goal-oriented vector gi(t) is directed toward the reward to an extent determined by their u. Once in-
+dividuals are on a food patch, they feed with a feeding rate f.
+Motion of all individuals is subject to noise (error in movement and/or sensory integration) which is implemented by rotating
+bdi ðt + DtÞ by a random angle chosen from a circularly wrapped Gaussian distribution centered at 0 and of standard deviation e.
+Once the desired direction has been determined, individuals turn toward bdi ðt + DtÞ with a maximum turning rate of jDt.
+In the foraging context (see below), boundary conditions were enforced by modifying the desired direction of an individual to equal
+a boundary vector bi(t) when they reached a narrow zone near the edge of the arena. Boundary vector bi(t) is a unit vector pointing
+toward the center of the arena. This was done to allow agents to avoid walls and to prevent them from leaving the arena. In the free
+schooling context, individuals were initialized in a periodic boundary environment to ensure that no boundary related artifacts are
+observed while measuring spatial positioning of individuals.
+An overview of the parameters used in the individual-based models, with asterisks indicating parameters for the foraging context
+only, can be found in the below table.
+Parameter Symbol Values explored
+Arena size A 500
+Zone of repulsion rr 1
+Zone of orientation ro 6
+Zone of attraction ra N
+Field of perception a 270/C14
+Turning rate j 60/C14
+Speed jvj 0.1–2.0
+Speed error es 0.1
+(Continued on next page)
+Current Biology 27, 2862–2868.e1–e7, September 25, 2017 e3
+
+===== PAGE 12 =====
+Simulations
+In line with the experiments, we started with simulations of groups composed of ﬁve individuals. To simulate the free-schooling
+context and open foraging context presented in the experiments, we initialized the groups both in an open, boundary free environ-
+ment and in a circular environment that contained three food patches (10 units radius). Individuals were initialized with random
+positions and directions in the middle of the arena, again in line with the experimental procedure. Details about model parametrization
+can be found in the above table. Parameter values for the schooling models are standard values, previously explored in [ 24, 25]. To
+explore further how the effects may be group-size dependent, we ran additional simulations with larger groups of twenty. As speed
+distributions are often right-skewed and bound at zero, including our experimental data (skew: 0.289; see Figure S1 I), we also ran
+simulations of the free-schooling context (for one speciﬁc parameter condition) with a Gamma distribution of shape parameter
+(k = 0.4 and scale parameter, q =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+0:05
+p
+). These parameters were chosen so that the distribution had a mean within our tested range
+and variance identical to the one used in case of the Gaussian distribution. For the free-schooling context we ran simulations of 2,000
+time steps and for the foraging context 10,000, with data being stored every 200 and 500 time steps respectively, with 400 replicates
+of each parameter condition explored.
+QUANTIFICATION AND STATISTICAL ANALYSIS
+Computation of behavioral data
+Individual characteristics
+We determined each ﬁsh’s velocity, speed, direction, acceleration, and turning speed directly from the discrete tracking data using
+the following series of calculations. With the vector r
+i(t)=( xi(t), yi(t)) denoting the position of ﬁsh i at time t, we approximated its velocity
+vi(t)=( ui(t), wi(t)) using the forward ﬁnite difference
+vi ðtÞ = riðt + DtÞ/C0 riðtÞ
+Dt ; (Equation 5)
+where Dt = 1/24 s is the time interval between subsequent position measurements. The speed vi(t) is then given by the norm of the
+velocity vector, such that
+viðtÞ = jviðtÞ j =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+u2
+i ðtÞ + w2
+i
+ðtÞ
+q
+: (Equation 6)
+Next, we quantiﬁed the direction of motion using the angle ji(t) between the velocity vector and the positie y axis, which is given by
+jiðtÞ = atan2ðwiðtÞ; uiðtÞÞ (Equation 7)
+Furthermore, we quantiﬁed the acceleration as a ﬁnite difference of the velocity
+aiðtÞ = riðt + DtÞ/C0 2riðtÞ + riðt /C0 DtÞ
+Dt2 ; (Equation 8)
+and the turning speed, or angular velocity, as a ﬁnite difference of the angle,
+giðtÞ = jiðt + DtÞ/C0 jiðtÞ
+Dt : (Equation 9)
+As ﬁsh were placed at the origin of the Cartesian coordinate system pointing north, care was taken to compute the correct angular
+difference with regard to the periodicity of ji(t), anti-clockwise from 0 /C14 to /C0 180/C14 and clockwise from 0 /C14 to 180 /C14 .
+fgiðtÞ < /C0 pÞg : gi = 2p /C0 jgiðtÞ j or fgiðtÞ > pÞg : /C0ð 2p /C0 giðtÞÞ: (Equation 10)
+Continued
+Parameter Symbol Values explored
+Omega u 0.01–0.1
+Omega error eu 0.01
+Timestep increment Dt 0.1
+Cue detection radius rc 30
+Nr of food patches* 3
+Nr of food items per patch* 50
+Feeding rate* f 0.001
+e4 Current Biology 27, 2862–2868.e1–e7, September 25, 2017
+
+===== PAGE 13 =====
+Within group positioning
+We determined the positioning and ordering of the ﬁsh in a group relative to one another and to the direction of motion of the group
+center using the following calculations and linear transformations. To calculate ﬁsh nearest neighbor distance (NND), we computed a
+matrix of distances between all individuals and then determined the minimum value for each ﬁsh such that
+NNDiðtÞ = minjsi
+/C18 ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ðxiðtÞ/C0 xjðtÞÞ2 +
+/C0
+yiðtÞ/C0 yjðtÞ
+/C1 2
+q /C19
+; (Equation 11)
+where j indexes all neighbors of ﬁsh i.
+Next, for each time step we identiﬁed the mean coordinates of all ﬁsh in a group rcðtÞ = ðxcðtÞ; ycðtÞÞ, that is, the group center, and
+then estimated the velocity vc(t) and direction jc(t) of the group center at time t using the calculations as for the individual ﬁsh
+(described above). Then for each frame we calculated the distance of each ﬁsh to the group center as
+CDiðtÞ =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ðxiðtÞ/C0 xcðtÞÞ2 + ðyiðtÞ/C0 ycðtÞÞ2
+q
+: (Equation 12)
+To calculate relative positions of individuals to the group, we shifted the coordinates of each ﬁsh so that the origin of the coordinate
+system was at the group centroid, and determined the angle between the positive y axis through the group centroid and an individ-
+ual’s position
+diðtÞ = atan2ðxiðtÞ/C0 xcðtÞ; yiðtÞ/C0 ycðtÞÞ: (Equation 13)
+Subsequently, we used this to calculate an individual’s relative direction to that of the group center
+stðtÞ = diðtÞ/C0 jcðtÞ; (Equation 14)
+which we then adapted to ﬁt to the Cartesian coordinate system pointing north
+fstðtÞ < /C0 pÞg : st = 2p /C0j stðtÞj or fstðtÞ > pÞg : /C0ð 2p /C0 siðtÞÞ (Equation 15)
+Based on the relative direction and distance to the group center, we calculated the relative position for each ﬁsh to the group
+center:
+/C0
+x0
+i ; y0
+i
+/C1
+= CDiðtÞðsinðsiðtÞÞ; cosðsiðtÞÞÞ: (Equation 16)
+The transformed coordinates of the ﬁsh meant that ﬁsh with greater y-coordinates were at the front for a given time step. We then
+counted the proportion of frames that each ﬁsh was located in front of the group center. To further examine inter-individual posi-
+tioning in the group, we calculated ﬁsh’s relative direction to that of its four group mates qij from the respective angles of the ﬁsh
+with the y axis ( jj) following the calculations as used for the relative positioning to the group center.
+Group characteristics
+To examine the properties of the differently composed groups, we calculated the speed of the group center, group cohesion, and
+polarization using the following calculations. For each time step t, the speed of the group v
+c(t) is given by the norm of the velocity
+vector, such that
+vcðtÞ = jvcðtÞ j : (Equation 17)
+We then calculated the mean inter-individual distance IID c(t) as a measure of group cohesion, based on the individual distances IID ij
+between all ﬁsh ( n) in a group
+IIDcðtÞ = 1
+n
+Xn
+jsi
+IIDij (Equation 18)
+using
+IIDij =
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ðxiðtÞ/C0 xjðtÞÞ2 +
+/C0
+yiðtÞ/C0 yjðtÞ
+/C1 2
+q
+: (Equation 19)
+And ﬁnally we calculated the polarization of the group
+rðtÞ = 1
+n
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ Xn
+i = 1
+sinðjiðtÞÞ
+!2
++
+ Xn
+i = 1
+cosðjiðtÞÞ
+!2
+vuut ; (Equation 20)
+which is a measure of the alignment of the ﬁsh in the group relative to each other, and ranges from 0 (complete non-alignment) to 1
+(complete alignment).
+Schooling is deﬁned as a cohesive group that moves with considerable speed and alignment, while a group is said to swarm when
+it is cohesive but has no or little speed and/or alignment between its members [ 21]. To investigate the schooling tendency of the
+groups, we computed the distributions of the three fundamental components of schooling for the full dataset: group cohesion, speed,
+and polarization (see Figure 3 and Figure S2 ). Furthermore, based on the detailed distributions of all groups as well as parameters
+Current Biology 27, 2862–2868.e1–e7, September 25, 2017 e5
+
+===== PAGE 14 =====
+from previous work [ 25, 32 ], for each frame we also categorized groups to school, based on the following criteria: mean inter-indi-
+vidual distance IID %160 mm, speed of group center vector vc R0.5 BL/s, polarization r R0.6, no outliers or group split. Outliers and
+group splits were computationally identiﬁed based on a non-linear distribution of ordered distances between all group members in
+terms of the IID and NND, with parameters identiﬁed based on the raw data distributions Those frames in which outliers or group
+splits occurred were scored as ‘non-schooling.’ To check the robustness of the schooling measure and selected parameter combi-
+nation, we checked 124 alternative parameter combinations with Spearman rank correlations: group polarization (0.4–0.8 with 0.1
+increments), speed (1.0–3.0 cm/s with 0.5 cm/s increments), and cohesion (iid 100–220 mm with 30 mm increments) and found
+that over 80% of these combinations were signiﬁcant and 93% showed a trend for an effect with group social proximity tendency
+(see main text).
+Propagation of motion
+To investigate leadership in terms of the propagation of movement changes in the group, we examined temporal correlations in
+speeding and turning changes for all dyads within all groups [ 32, 35 ]. We compared the speed and direction of the two ﬁsh in a
+dyad up to 72 frames (3 s) earlier and later, in time steps of 1/24
+th s, and quantiﬁed the mean time point of the maximum correlation
+coefﬁcient (see Figure S3 ). A leading event was said to have occurred when a ﬁsh’s change in speed or direction was ‘copied’ by
+another ﬁsh delayed in time. Subsequently, we constructed leadership networks based on the time delays between all group
+members following Nagy et al. [ 35]. Analysis was restricted to frames in which ﬁsh were less than four BL apart and moved faster
+than 1 BL/s.
+Foraging and hiding behavior
+For the trials in the two foraging contexts we used the positional data to compute the order that individuals arrived in the vicinity
+(%30 mm) of and above the foraging patches. We deﬁned the ﬁrst ﬁsh to ‘discover’ a foraging patch as the one that ﬁrst arrived
+in its vicinity during a trial. For the trials in the semi-covered foraging context we also calculated the proportion of time individuals
+spent out of cover (with at least half their body), the proportion of time individuals spent out of cover alone, and their mean order num-
+ber for leaving cover. In turn, these measures were used to calculate the mean number of ﬁsh out of cover and the proportion of time
+all ﬁsh were out of cover.
+Data analysis
+Data were analyzed in R 3.2.0. We used a generalized linear mixed modeling (GLMM) approach [ 44] to investigate the effects of inter-
+individual behavioral differences on behavioral repeatability as well as individual and group shoaling and foraging behavior. To
+assess individual behavioral consistency, we calculated Consistency Repeatability [ 45] using linear mixed models that included
+day as a ﬁxed effect and ﬁsh ID as a random factor. We calculated 95% conﬁdence intervals of repeatability by running 10,000 per-
+mutations of each test. Signiﬁcant effects are those with a conﬁdence interval that does not overlap 0. Exploration and social prox-
+imity scores were scaled between 0 and 1, with social proximity values square-root transformed and inverted before scaling, with
+higher scores indicating a stronger tendency. To compute relative scores, we calculated the mean behavioral score of a ﬁsh’s group
+mates and subtracted that from the focal ﬁsh’s behavioral score. Neither ﬁsh’s exploratory tendency nor their social proximity ten-
+dency was signiﬁcantly correlated with body size (Pearson correlation test: r
+123 = 0.02, p = 0.804 and r123 = /C00.03, p = 0.759). The
+randomized group compositions (n = 25 groups) were normally distributed in terms of the mean personality types.
+For the behaviors in the free-shoaling experiments, response variables were calculated based on the distribution of the data on a
+frame-by-frame basis, with mean values calculated for approximately normal (transformed) distributions and median values when
+data was skewed. For the individual-level models we included individual exploration and social proximity scores and the interaction
+between them as ﬁxed effects. Group identity was ﬁtted as a random factor to account for the non-independence of individuals within
+a group, and individual identity nested in group identity was additionally included for the trials in the two foraging contexts to account
+for the repeated-measures-nature of the data. For the group-level models we ﬁtted the mean exploratory and mean social proximity
+tendency of the group and the interaction between them. We only included measures of group variability in behavioral tendencies in
+the case of clear a priori hypotheses as not to over-parametrise our models. Food intake and the likelihood to discover the foraging
+patches were ﬁtted to a Poisson error distribution with log link function, appropriate for count data. To investigate how the effect of
+inter-individual differences on the proportion of time ﬁsh spent in the front of the group changed over time, we compared models
+based on the ﬁrst 5 min and all 30 min of the trial. To investigate the propagation of speeding and turning changes in the groups,
+we ran an ordinal logistic regression with individual exploratory and social proximity tendency ranks in the group as ﬁxed factors,
+and the random data structure as described above. We analyzed the foraging behavior of individual ﬁsh and the groups over time
+with Cox proportional hazards (survival) regression models. Survival analyses avoid censoring the data, thereby allowing for the
+assumption that ﬁsh or groups assigned to maximum time may have foraged or ﬁnished all the food respectively had the trials
+run longer. For these analyses, the data were clustered around ﬁsh identity and group identity to account for dependence in the
+data and for trial to account for changes over time.
+Minimal adequate models were obtained by backward stepwise elimination following Crawley [ 44], i.e., sequentially dropping the
+least signiﬁcant terms from the full model, until all terms in the model were signiﬁcant (all interaction terms were non-signiﬁcant unless
+documented). Statistics for non-signiﬁcant terms were obtained by adding the term to the minimal model. We also report DAIC when
+comparing models when based on different subsets of the data. Residuals were visually inspected to ensure homogeneity of vari-
+ance, normality of error and linearity where appropriate. Differences in variance were analyzed using a Levene’s test, making
+sure there was no difference in variance in the personality composition of those groups. Data were log- or square-root transformed
+e6 Current Biology 27, 2862–2868.e1–e7, September 25, 2017
+
+===== PAGE 15 =====
+if assumptions were violated, or, where appropriate, a robust Spearman rank correlation test was used. We initially also incorporated
+body size as covariate in our models, but these effects were non-signiﬁcant (p > 0.25, results not reported) and were consequently
+removed from the models before reﬁtting. We had to exclude one group onward from the 4th open foraging context trial due to the
+death of one ﬁsh, and one trial in the open foraging context and one trial in the semi-covered foraging context due to experimental
+errors. For two trials in the semi-covered foraging context no foraging data could be collected due to a recording error. One group
+was excluded from spatial positioning analysis in the free-schooling context due to an extreme outlier (8.6 SD > mean), which did not
+qualitatively affect the results. To control for multiple testing, we employed a False Discovery Rate (FDR) correction for all statistical
+tests using the build-in function in R (stats package). FDR is an alternative, relatively powerful method compared to family-wise error
+procedures to control for type I errors. Corrected p values are stated in the text. A table with the uncorrected p values can be found in
+the deposited dataset online. p < 0.05 is reported as signiﬁcant and means are quoted ±SEM throughout unless stated otherwise.
+Other statistical parameters are reported in the main text and ﬁgure legends.
+DATA AND SOFTWARE AVAILABILITY
+Datasets from the experiments and individual-based modeling are deposited at the University of Cambridge data depository ( https://
+doi.org/10.17863/CAM.12136)[ 46].
+Current Biology 27, 2862–2868.e1–e7, September 25, 2017 e7

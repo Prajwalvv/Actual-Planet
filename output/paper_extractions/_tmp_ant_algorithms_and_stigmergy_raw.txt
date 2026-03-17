@@ -1,0 +1,1663 @@
+
+
+===== PAGE 1 =====
+Future Generation Computer Systems 16 (2000) 851–871
+Ant algorithms and stigmergy
+Marco Dorigoa;, Eric Bonabeaub, Guy Theraulazc
+a IRIDIA, Université Libre de Bruxelles, CP 194/6, Avenue Franklin Roosevelt 50, 1050 Brussels, Belgium
+b EuroBios, Paris, France
+c Université Paul Sabatier, Toulouse, France
+Abstract
+Ant colonies, and more generally social insect societies, are distributed systems that, in spite of the simplicity of their
+individuals, present a highly structured social organization. As a result of this organization, ant colonies can accomplish
+complex tasks that in some cases far exceed the individual capacities of a single ant. The study of ant colonies behavior and
+of their self-organizing capacities is interesting for computer scientists because it provides models of distributed organization
+which are useful to solve difﬁcult optimization and distributed control problems. In this paper we overview some models
+derived from the observation of real ants, emphasizing the role played bystigmergyas distributed communication paradigm,
+and we show how these models have inspired a number of novel algorithms for the solution of distributed optimization and
+distributed control problems. © 2000 Elsevier Science B.V . All rights reserved.
+Keywords:Ant algorithms; Ant colony optimization; Swarm intelligence; Social insects; Self-organization; Metaheuristics
+1. Introduction
+Ant colonies have always fascinated human beings.
+Books on ants, ranging from pure literature [52,87] to
+detailed scientiﬁc accounts of all the aspects of their
+life [31,42,43], have often met extraordinary public
+success. What particularly strikes the occasional ob-
+server as well as the scientist is the high degree of
+societal organization that these insects can achieve in
+spite of very limited individual capabilities. Ants ap-
+peared on the earth some 100 millions of years ago,
+and their current population is estimated to be around
+10
+16 individuals [43]. An approximate computation
+tells us that their total weight is the same order of
+Corresponding author. Tel.:C32-2-650-3169;
+fax:C32-2-650-2715.
+E-mail addresses:mdorigo@ulb.ac.be (M. Dorigo),
+eric.bonabeau@biosgroup.com (E. Bonabeau), theraula@cict.fr
+(G. Theraulaz)
+magnitude as the total weight of human beings; like
+human beings, they can be found virtually everywhere
+on the earth. Ants are undoubtedly one of the most
+successful species on the earth today, and they have
+been so for the last 100 million years. It is therefore
+not surprising that computer scientists have taken in-
+spiration from studies of the behavior of ant colonies,
+and more generally of social insects, to design algo-
+rithms for the control of multi-agent systems.
+A particularly interesting body of work is the one
+that focuses on the concept ofstigmergy, a particular
+form of indirect communication used by social in-
+sects to coordinate their activities. By exploiting the
+stigmergic approach to coordination, researchers have
+been able to design a number of successful algorithms
+in such diverse application ﬁelds as combinatorial op-
+timization, routing in communication networks, task
+allocation in a multi-robot system, exploratory data
+analysis, graph drawing and partitioning, and so on
+[2,26].
+0167-739X/00/$ – see front matter © 2000 Elsevier Science B.V . All rights reserved.
+PII:S0167-739X(00)00042-X
+
+===== PAGE 2 =====
+852 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+The termstigmergywas introduced by Grassé [39]
+to describe a form of indirect communication me-
+diated by modiﬁcations of the environment that he
+observed in two species of termites:Bellicositermes
+Natalensisand Cubitermes. Grassé’s original deﬁni-
+tion of stigmergy was:
+“Stimulation of workers
+1 by the performance they
+have achieved”.
+Although Grassé ﬁrst introduced the term stigmergy
+to explain the behavior of termites societies, the same
+term has later been used to indicate indirect commu-
+nication mediated by modiﬁcations of the environ-
+ment that can be observed also in other social insects
+[80].
+Nest building in termites is the typical example of
+stigmergy, and is also the original example used by
+Grassé to introduce the concept. Termite workers use
+soil pellets, which they impregnate with pheromone
+(i.e., a diffusing chemical substance) to build pil-
+lars. Two successive phases take place during nest
+reconstruction [39]. First, a non-coordinated phase
+occurs which is characterized by a random depo-
+sition of pellets. This phase lasts until one of the
+deposits reaches a critical size (Fig. 1). Then, a co-
+ordination phase starts if the group of builders is
+sufﬁciently large and pillars emerge. The existence
+of an initial deposit of soil pellets stimulates work-
+ers to accumulate more material through a positive
+feedback mechanism, since the accumulation of ma-
+terial reinforces the attractivity of deposits through
+the diffusing pheromone emitted by the pellets [6].
+This autocatalyticsnowball effect leads to the coor-
+dinated phase. If the density of builders is too small,
+the pheromone disappears between two successive
+passages by the workers, and the ampliﬁcation mech-
+anism cannot work, which leads to a non-coordinated
+behavior. The system undergoes a bifurcation at this
+critical density: no pillar emerges below it, but pil-
+lars can emerge above it. This example therefore
+illustrates positive feedback (the snowball effect),
+negative feedback (pheromone decay), the ampliﬁca-
+tion of ﬂuctuations (pillars could emerge anywhere),
+multiple interactions (through the environment), the
+emergence of structure (i.e., pillars) out of an initially
+homogenous medium (i.e., a random spatial distri-
+bution of soil pellets), multistability (again, pillars
+1 Workers are one of the castes in termite colonies.
+Fig. 1. An example of stigmergic process as it appears in the
+construction of pillars in termites. Assume that the architecture
+reaches stateS
+0, which triggers responseR0 from workerI. S0
+is modiﬁed by the action ofI (e.g.,I may drop a soil pellet),
+and transformed into a new stimulating conﬁgurationS1 that may
+in turn trigger a new responseR1 from I or any other workerIn
+and so forth. The successive responsesR1;R2;:::;R n may be
+produced by any worker carrying a soil pellet. Each worker creates
+new stimuli in response to existing stimulating conﬁgurations.
+These new stimuli then act on the same termite or on any other
+worker in the colony. Such a process, where the only relevant
+interactions taking place among the agents are indirect, through
+the environment which is modiﬁed by the other agents, is also
+called sematectonic communication [89].
+
+===== PAGE 3 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 853
+Fig. 2. Four simulation steps showing the temporal evolution of the structure built by termites in a 2D system. This simulation shows
+the evolution of the density of building material (on thez-axis) used by termites to build their nest obtained from Deneubourg’s model
+[15]. The simulation begins with a random distribution of building material in space (step 1) and the regularity of the inter-pillar spacing
+emerges progressively over time (steps 2, 3 and 4). (From [82]; reprinted by permission of Birkhävser Verlag.)
+may emerge anywhere) and bifurcation which make
+up the signatures of self-organized phenomena. From
+the experimental observations, Deneubourg [15] de-
+signed a chemotaxis-based reaction–diffusion model
+that exhibits the desired properties for appropriate
+parameter values. Fig. 2 shows the two-dimensional
+spatial distribution of pillars obtained with his model.
+In this model, coordination emerges out of indirect
+(stigmergic) interactions among workers.
+In this paper anant algorithmis informally deﬁned
+as a multi-agent system inspired by the observation of
+some real ant colony behavior exploiting stigmergy.
+In ant algorithms the agents are calledartiﬁcial ants,
+or often simplyants, and coordination among ants is
+achieved by exploiting the stigmergic communication
+mechanism.
+The implementation of ant algorithms is made pos-
+sible by the use of so-calledstigmergic variables, i.e.,
+
+===== PAGE 4 =====
+854 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+variables that contain the information used by artiﬁcial
+ants to indirectly communicate. In some cases, as dis-
+cussed, e.g., in Section 2, the stigmergic variable is a
+speciﬁcally deﬁned variable used by ants to adaptively
+change the way they build solutions to the considered
+problem. In other cases, as discussed in Sections 3 and
+4, the stigmergic variable is one of the problem vari-
+ables: in this case a change in its value determines not
+only a change in the way a solution to the problem is
+built, but also a direct change in the solution of the
+problem itself.
+In the rest of this article we provide a number
+of examples of ant algorithms and for each example
+we highlight the role played by stigmergy. Each sec-
+tion deals with a particular behavior observed in ant
+colonies: foraging (Section 2), division of labor (Sec-
+tion 3), and clustering (Section 4). The ﬁrst part of each
+section provides a brief description of the observed
+phenomenon followed by a description of models de-
+veloped by ethologists to understand the phenomenon;
+engineering-oriented applications, that make use of
+the emergent behavior of ant colonies, are then pre-
+sented. It is worth noting that not all kinds of ant algo-
+rithms are equally advanced: some of them are among
+the best available approaches for selected problems,
+while others are just proofs of concept and further
+work needs to be done to fully evaluate their poten-
+tialities. Therefore, the various sections of this review
+article may emphasize different aspects, the biology
+or the engineering side. Sections that emphasize appli-
+cations are useful because they show very clearly the
+way our understanding of how ants collectively solve
+problems can be applied to design algorithms and dis-
+tributed problem-solving devices; those emphasizing
+the biology are useful because, we believe, they pro-
+vide new ideas to design new types of algorithms and
+distributed artiﬁcial devices.
+2. Pheromone trail following and discrete
+optimization
+2.1. Foraging in ants
+A lot of ant species have a trail-laying/trail-
+following behavior when foraging [42]: individual
+ants deposit pheromone while walking and for-
+agers follow pheromone trails with some probability.
+Deneubourg et al. [16] have shown with an ingenious
+Fig. 3. Experimental setup (insert) and percentage of ants that
+used lower and upper branches as a function of time. Modiﬁed
+from Deneubourg et al. [16].
+experiment, run with ants of the speciesLinepithema
+humile, that this behavior can explain how ants ﬁnd
+the shortest path between their nest and a food source.
+The experimental setup is the following.
+A food source is connected to an ant nest by a bridge
+with two equally long branches (Fig. 3). When the
+experiment starts the ants select randomly, with equal
+probability, one of the branches. Because of statistical
+ﬂuctuations one of the two branches is chosen by a
+few more ants than the other and therefore is marked
+by a slightly higher amount of pheromone. The greater
+amount of pheromone on this branch stimulates more
+ants to choose it, and so on [17]. This autocatalytic
+process leads very soon the ant colony to converge
+towards the use of only one of the two branches.
+The experiment can also be run using a bridge with
+two branches of different length. In this case, the ﬁrst
+ants coming back to the nest are those that took the
+shortest path twice (to go from the nest to the source
+and to return to the nest), so that more pheromone is
+present on the short branch than on the long branch
+immediately after these ants have returned, stimulating
+nestmates to choose the short branch (Fig. 4). This has
+been calleddifferential length effect[25] and explains
+how ants in the long run end up choosing the shortest
+of the two paths without using any global knowledge
+about their environment. Differential length effect and
+pheromone based autocatalysis are at the earth of some
+successful ant algorithms for discrete optimization, in
+which an artiﬁcial pheromone plays the role of stig-
+
+===== PAGE 5 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 855
+Fig. 4. (a) Experimental setup and drawings of the selection of the short branches by a colony ofLinephitema humile, 4 and 8 min after
+the bridge was placed. (b) Distribution of the percentage of ants that selected the shorter branch overn experiments. The longer branch
+isr times longer than the short branch. The second graph (nD18, r D2) corresponds to an experiment in which the short branch is
+presented to the colony 30 min after the long branch: the short branch is not selected, and the colony remains trapped on the long branch.
+Modiﬁed from Goss et al. [38].
+mergic variable, as explained in the following section.
+It is also interesting to note that in some ant species
+the amount of pheromone deposited is proportional
+to the quality of the food source found: paths that
+lead to better food sources receive a higher amount
+of pheromone. Similarly, in the ant algorithms pre-
+sented in this section artiﬁcial ants deposit a quantity
+of pheromone proportional to the quality of the solu-
+tion they found.
+2.2. Ant System and the Traveling Salesman Problem
+Ant System (AS) was the ﬁrst algorithm [24,29]
+inspired by the trail-following behavior of ants to
+be applied to a discrete optimization problem. The
+problem chosen for the ﬁrst experiments was the
+Traveling Salesman Problem (TSP). In the TSP, one
+has to ﬁnd a closed tour of minimal length connecting
+ngiven cities. Each city must be visited once and only
+once. Letd
+ij be the distance between citiesci and cj.
+The problem can either be deﬁned in Euclidean space
+(in which cased
+ij is simply the Euclidean distance
+between citiesi and j), or can be more generally
+deﬁned on a graphG D .V;E/, where the cities
+are the vertices (V) and the connections between the
+cities are the edges of the graph (E). Note that the
+graph need not be fully connected and the distance
+matrix need not be symmetric: if it is asymmetric
+the corresponding problem is called the asymmetric
+TSP.
+In AS the ants build solutions in parallel by visiting
+sequentially the cities of the graph. On each edge.i;j/
+
+===== PAGE 6 =====
+856 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+of the TSP graph anartiﬁcial pheromone trailij.t/
+is maintained. The valuesij.t/ are used by ants to
+direct the way they build tours. They are updated by
+means of a reinforcement procedure: once an ant has
+completed a tour it updates the edges it has crossed
+by adding a quantity of pheromone proportional to the
+goodness of the tour.
+More formally, at iteration
+2 t, after completing its
+tourTk.t/, thekth ant lays a quantity of pheromone
+1k
+ij.t/on each edge.i;j/ belonging toTk.t/;1k
+ij.t/
+is a function of the lengthLk of tourTk.t/:
+1k
+ij.t/ D
+(
+Q=Lk if edge.i;j/ 2Tk.t/;
+0 if edge .i;j/ =2Tk.t/; (1)
+where Qis an adjustable parameter.
+Ants build solutions using a probabilistic transition
+rule. The probabilitypk
+ij.t/with which an antkin city
+i at iterationt chooses the next cityj to move to is a
+function of the following:
+Whether or not cityj has already been visited. For
+each ant, a list is maintained that contains all the
+cities that the ant has already visited in order to
+prevent cities from being visited more than once;
+the list grows within one tour until it is full, and
+is then emptied at the end of the iteration; we call
+J
+k.i/ the set of cities that remain to be visited by
+antkwhen antkis in cityi.
+An heuristic measureij of the desirabilityof
+adding edge.i;j/ to the solution under construc-
+tion. In the TSP a reasonable heuristic isij D
+1=dij, i.e., the inverse of the distance between cities
+i and j.
+The amount ij.t/ of artiﬁcial pheromoneon the
+edge connectingi and j.
+Formallypk
+ij.t/ is given by
+pk
+ij.t/ D
+8
+<
+:
+[ij.t/][ij]
+P
+l2Jk.i/[il.t/][il] if j 2Jk.i/;
+0i f j=2Jk.i/;
+(2)
+where and are two adjustable parameters that con-
+trol the relative inﬂuences of pheromone trailij.t/
+and heuristic desirabilityij.I f D0, the closest
+cities are more likely to be selected: this corresponds
+to a classical stochastic greedy algorithm (with multi-
+2 The iteration counter is incremented by 1 when all ants have
+completed a tour.
+ple starting points since ants are initially randomly dis-
+tributed on the cities). If on the contrary D0, only
+pheromone ampliﬁcation is at work: this method will
+lead the system to astagnationsituation, i.e., to a situa-
+tion in which all the ants generate a same, sub-optimal
+tour [24,29,30]. The trade-off between edge length and
+trail intensity therefore appears to be necessary.
+Finally, AS could not perform well without
+pheromone evaporation. In fact, because the initial
+exploration of the search space is mostly random, the
+values of the pheromone trails in the initial phases are
+not very informative and it is therefore necessary that
+the system slowly forgets these initial values to allow
+the ants to move towards better solutions. Pheromone
+decay is implemented by introducing a coefﬁcient of
+evaporation;0 < 1, such that
+
+ij.tC1/D.1 − /ij.t/C1ij.t/; (3)
+where 1ij.t/ DPm
+kD11k
+ij.t/ and mis the number
+of ants.
+The initial amount of pheromone on edges is as-
+sumed to be a small positive constantc(i.e., there is
+an homogeneous distribution of pheromone att D0).
+The total numberm of ants (assumed constant over
+time) is an important parameter. Too few ants will not
+produce the expected synergistic effects of coopera-
+tion
+3 because of the (otherwise necessary) process
+of pheromone evaporation. On the contrary, too many
+ants result in a less efﬁcient computational system: the
+quality of the results produced after a given number
+of iterations does not improve signiﬁcantly, but, due
+to the higher number of ants, it takes longer to per-
+form an algorithm iteration. Dorigo [24] suggests that
+m Dn, i.e., as many ants as there are cities in the
+problem, provides a good trade-off.
+Ant System has been tested on several relatively
+small problems. The experimentally optimized value
+of the parameters has been set to D1,  D5,
+ D0:5 andQD100. Although the results obtained
+were not state-of-the-art on the TSP [24,29,30], AS
+compared well with other general purpose metaheuris-
+tic methods, like simulated annealing, evolutionary
+computation, and tabu search. But, most important,
+AS gave rise to a whole set of successful applications
+3 Remember the termites nest building behavior of Section 1:
+as in that case, too few ants cannot overcome the evaporation of
+pheromone and stigmergic coordination cannot take place.
+
+===== PAGE 7 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 857
+and extensions which have recently been uniﬁed in
+a novel metaheuristic calledAnt Colony Optimization
+(ACO).
+2.3. The ACO metaheuristic
+The ACO metaheuristic [25] is a novel metaheuris-
+tic obtained a posteriori after a careful analysis of
+the characteristics of a number of ant algorithms
+inspired by the foraging behavior of ants (most of
+these algorithms were strongly inspired by AS).
+ACO algorithms, i.e., heuristic algorithms obtained
+as instances of the ACO metaheuristic, can be used
+to ﬁnd feasible minimum cost paths over a graph
+G D .C;L;W/ , where feasibility is deﬁned with
+respect to a set/Omega1of constraints. The graphG D
+.C;L;W/ and the constraints/Omega1are deﬁned as fol-
+lows:C Dfc
+1;c2;:::;c ngis a ﬁnite set of problem
+components, L Dflcicjjci;cj 2Cga ﬁnite set of
+possibleconnectionsamong the elements ofC,W a
+set of weights associated either to the componentsC
+or to the connectionsLor to both, and/Omega1.C;L;/is
+a ﬁnite set ofconstraintsassigned over the elements
+ofCand L( indicates that the set of constraints can
+change over time). For example, in the TSP deﬁned
+in Section 2.2,Cis the set of cities,Lthe set of edges
+connecting cities,W the length of the edges inL, and
+the constraints/Omega1impose that in any feasible solution
+each city appears once and only once. A feasible path
+over G is called a solution and a minimum cost
+path is an optimal solution and is indicated by 
+;
+f. / is the cost of solution , andf. / the cost
+of the optimal solution. In the TSP a solution is
+an Hamiltonian circuit and  the shortest feasible
+Hamiltonian circuit.
+In ACO algorithms a colony of ants concurrently,
+asynchronously and incrementally build solutions of
+the problem deﬁned byG and /Omega1. Each antk starts
+with a partial solution 
+k.1/ consisting of one ele-
+ment (one of the components inC) and adds compo-
+nents to k.h/ till a complete feasible solution is
+built, wherehis the step counter. Components to be
+added to k.h/are stochastically chosen in an appro-
+priately deﬁned neighborhood of the last component
+added to 
+k.h/. The ants stochastic choice is made by
+applying a stochastic local decision policy that makes
+use of local information available at the visited ver-
+tices/components. Once an ant has built a solution,
+or while the solution is being built, the ant evaluates
+the (partial) solution and adds pheromone, i.e., infor-
+mation about the quality of the (partial) solution, on
+the components and/or the connections it used. This
+pheromone information will direct the search of the
+ants in the following iterations.
+Besides ants’ activity, an ACO algorithm includes
+a pheromone
+evaporation()procedure and an optional
+daemon actions()procedure. Pheromone evaporation,
+as it was the case in AS, is the process by which
+the pheromone trail automatically decreases over time.
+“Daemon” actions can be used to implement cen-
+tralized actions which cannot be performed by sin-
+gle ants. Examples are the activation of a local op-
+timization procedure, or the collection of global in-
+formation that can be used to decide whether it is
+useful or not to deposit additional pheromone to bias
+the search process from a non-local perspective. As a
+practical example, the daemon can observe the path
+found by each ant in the colony and choose to deposit
+extra pheromone on the edges used by the ant that
+made the shortest path. In most applications to com-
+binatorial optimization problems theants
+activity(),
+pheromone evaporation() anddaemon actions() pro-
+cedures (see Fig. 5) are scheduled sequentially. Never-
+theless, theschedule
+activitiesconstruct of the ACO
+metaheuristic (Fig. 5) leaves the decision on how these
+three procedures must be synchronized to the user,
+that is left free to match synchronization policies to
+the considered problems (e.g., in the applications to
+routing in telecommunication networks the execution
+of the three procedures is often interleaved).
+The ACO metaheuristic, which has been introduced
+in [25] where the interested reader can ﬁnd a more de-
+tailed formal deﬁnition, has been successfully applied
+to many discrete optimization problems, as listed in
+Table 1. Among the most studied problems there are
+Fig. 5. Outline of the ACO metaheuristic.
+
+===== PAGE 8 =====
+858 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+Table 1
+Current applications of ACO algorithmsa
+Problem name Authors Algorithm name Year Main references
+Traveling salesman Dorigo, Maniezzo and Colorni AS 1991 [24,29,30]
+Gambardella and Dorigo Ant-Q 1995 [32]
+Dorigo and Gambardella ACS and ACS-3-opt 1996 [27,28,33]
+Stützle and Hoos MMAS 1997 [75,76,78]
+Bullnheimer, Hartl and Strauss AS
+rank 1997 [8,10]
+Quadratic assignment Maniezzo, Colorni and Dorigo AS-QAP 1994 [57]
+Gambardella, Taillard and Dorigo HAS-QAP b 1997 [36,37]
+Stützle and Hoos MMAS-QAP 1997 [74,77]
+Maniezzo ANTS-QAP 1998 [53]
+Maniezzo and Colorni AS-QAP
+c 1999 [56]
+Scheduling problems Colorni, Dorigo and Maniezzo AS-JSP 1994 [12]
+Stützle AS-FSP 1997 [71]
+Bauer et al. ACS-SMTTP 1999 [1]
+den Besten, Stützle and Dorigo ACS-SMTWTP 1999 [14]
+Vehicle routing Bullnheimer, Hartl and Strauss AS-VRP 1997 [7,9]
+Gambardella, Taillard and Agazzi HAS-VRP 1999 [35]
+Connection-oriented network routing Schoonderwoerd et al. ABC 1996 [68,69]
+White, Pagurek and Oppacher ASGA 1998 [88]
+Di Caro and Dorigo AntNet-FS 1998 [22]
+Bonabeau et al. ABC-smart ants 1998 [3]
+Connection-less network routing Di Caro and Dorigo AntNet and AntNet-FA 1997 [20,21,23]
+Subramanian, Druschel and Chen Regular ants 1997 [79]
+Heusse et al. CAF 1998 [41]
+van der Put and Rothkrantz ABC-backward 1998 [84,85]
+Sequential ordering Gambardella and Dorigo HAS-SOP 1997 [34]
+Graph coloring Costa and Hertz ANTCOL 1997 [13]
+Shortest common supersequence Michel and Middendorf AS-SCS 1998 [58,59]
+Frequency assignment Maniezzo and Carbonaro ANTS-FAP 1998 [54,55]
+Generalized assignment Ramalhinho Lourenço and Serra MMAS-GAP 1998 [65]
+Multiple knapsack Leguizam ´on and Michalewicz AS-MKP 1999 [48]
+Optical networks routing Navarro Varela and Sinclair ACO-VWP 1999 [61]
+Redundancy allocation Liang and Smith ACO-RAP 1999 [49]
+aApplications are listed by class of problems and in chronological order.
+bHAS-QAP is an ant algorithm which does not follow all the aspects of the ACO metaheuristic.
+cThis is a variant of the original AS-QAP.
+the traveling salesman, the quadratic assignment and
+routing in telecommunication networks. When applied
+to these problems ACO algorithms result to be com-
+petitive with the best available heuristic approaches.
+In particular we observe the following:
+Results obtained by the application of ACO algo-
+rithms to the TSP are very encouraging (ACO al-
+gorithms for the TSP are overviewed in [73]): they
+are often better than those obtained using other gen-
+eral purpose heuristics like evolutionary computa-
+tion or simulated annealing. Also, when adding to
+ACO algorithms local search procedures based on
+3-opt [50], the quality of the results obtained [28,72]
+is close to that obtainable by other state-of-the-art
+methods.
+ACO algorithms are currently one of the best per-
+forming heuristics available for the particularly
+important class of quadratic assignment problems
+which model real world problems [37,53,56,57].
+AntNet [21,23], an ACO algorithm for routing in
+packet switched networks, outperformed a num-
+ber of state-of-the-art routing algorithms for a set
+
+===== PAGE 9 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 859
+of benchmark problems. AntNet-FA, an extension
+of AntNet for connection oriented network rout-
+ing problems, also shows competitive performance
+[23].
+HAS-SOP, an ACO algorithm coupled to a local
+search routine, has improved many of the best
+known results on a wide set of benchmark instances
+of the sequential ordering problem (SOP) [34], i.e.,
+the problem of ﬁnding the shortest Hamiltonian
+path on a graph which satisﬁes a set of precedence
+constraints on the order in which cities are visited.
+ACO algorithms have also been applied to a num-
+ber of other discrete optimization problems like the
+shortest common supersequence problem, the vehi-
+cle routing problem, the multiple knapsack, single
+machine total tardiness, and others (see Table 1), with
+very promising results.
+3. Labor division and task allocation
+3.1. Division of labor in ant colonies
+Division of labor is an important and widespread
+feature of life in ant colonies, and in social insects
+in general (for a review, see, e.g., [63,67,70]). Social
+insects are all characterized by one fundamental type
+of division of labor, reproductive division of labor, a
+main ingredient in the deﬁnition of eusociality.
+4 Be-
+yond this primary form of division of labor between
+reproductive and worker castes, there most often exists
+a further division of labor among workers, who tend to
+perform speciﬁc tasks for some amount of time, rather
+than to be generalists who perform various tasks all the
+time. Workers are divided into age or morphological
+subcastes. Age subcastes correspond to individuals of
+the same age that tend to perform identical tasks: this
+phenomenon is called temporal polyethism. In some
+species, workers can have different morphologies:
+workers that belong to different morphological castes
+tend to perform different tasks. But even within an
+age or morphological caste, there may be differences
+4 Eusociality characterizes the highest level of sociality in the
+animal kingdom; an animal group is said to be eusocial when the
+following three traits are present: (i) a cooperation in caring for
+the young, (ii) a reproductive division of labor with more or less
+sterile individuals working on behalf of individuals engaged in
+reproduction, and (iii) an overlap of generations.
+among individuals in the frequency and sequence of
+task performance: one may therefore speak of be-
+havioral castes, to describe groups of individuals that
+perform the same set of tasks in a given period.
+One of the most striking aspects of division of labor
+is plasticity, a property achieved through the workers’
+behavioral ﬂexibility: the ratios of workers perform-
+ing the different tasks that maintain the colony’s vi-
+ability and reproductive success can vary (i.e., work-
+ers switch tasks) in response to internal perturbations
+or external challenges. An important question is to
+understand how this ﬂexibility is implemented at the
+level of individual workers, which do not possess any
+global representation of the colony’s needs.
+3.2. A simple model of task allocation in ant colonies
+Bonabeau et al. [5] have developed a simple model
+for task allocation in ants based on the notion of re-
+sponse threshold [66,67]: individuals start to become
+engaged in task performance when the level of the
+task-associated stimuli, which plays the role of stig-
+mergic variable, exceeds their threshold. Differences
+in response thresholds may either reﬂect actual dif-
+ferences in behavioral responses, or differences in the
+way task-related stimuli are perceived. When special-
+ized individuals performing a given task are withdrawn
+(they have low response thresholds with respect to
+stimuli related to this task), the associated task de-
+mand increases and so does the intensity of the stim-
+ulus, until it eventually reaches the higher character-
+istic response thresholds of the remaining individuals
+that are not initially specialized into that task; the in-
+crease of stimulus intensity beyond threshold has the
+effect of stimulating these individuals into performing
+the task. This is exactly what was observed by Wilson
+[90] in experiments where he artiﬁcially reduced the
+minor/major (minor and major are two ant castes) ratio
+to below 1 and observed a change in the rate of activ-
+ity within 1 hour of the ratio change: for small ratios,
+majors engage in tasks usually performed by minors
+and efﬁciently replace the missing minors (the results
+of one of these experiments are shown in Fig. 6).
+What is a response threshold? Letsbe the intensity
+of a stimulus associated with a particular task:scan be
+a number of encounters, a chemical concentration, or
+any quantitative cue sensed by individuals. A response
+threshold, expressed in units of stimulus intensity,
+
+===== PAGE 10 =====
+860 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+Fig. 6. Number of behavioral acts (social behavior and
+self-grooming) per major per hour as a function of the fraction of
+majors in the colony for the speciesPheidole megacephala. Fit-
+ting lines are only visual aids. (From Wilson [90], Fig. 6, p. 94;
+reprinted by permission of Springer-Verlag.)
+is an internal variable that determines the tendency of
+an individual to respond to the stimulussand perform
+the associated task. More precisely, is such that the
+probability of response is low fors and high for
+s . One family of response functionsT.s/ that
+can be parametrized with thresholds that satisfy this
+requirement is given by
+T
+.s/D sn
+sn Cn; (4)
+where n> 1 determines the steepness of the threshold.
+In the rest of the section, we usen D2, but similar
+results can be obtained with other values ofn> 1.
+The meaning of is clear: fors, the probability
+of engaging in task performance is close to 0, and for
+s , this probability is close to 1; ats D, this
+probability is exactly 1/2. Therefore, individuals with
+a lower value of are likely to respond to a lower
+level of stimulus.
+Assume that there are two castes and that only one
+task needs to be performed. This task is associated with
+a stimulus or demand, the level of which increases if
+it is not satisﬁed (because the task is not performed by
+enough individuals, or not performed with enough ef-
+ﬁciency). LetS
+i be the state of an individuali(Si D0
+corresponds to inactivity,Si D1 corresponds to per-
+forming the task), andi the response threshold ofi,
+iD1;2.
+An inactive individual starts performing the task
+with a probabilityP per unit time:
+P.Si D0 !Si D1/D sn
+sn Cn
+i
+: (5)
+The probability that an individual will perform a
+task depends ons, the magnitude of the task-associated
+stimulus, that affects the probability of being exposed
+to it, and on
+i, the probability of responding to
+task-related stimuli [67].
+An active individual gives up task performance
+and becomes inactive with probabilityp per time
+unit (that we take identical for the two castes, i.e.,
+p
+1 Dp2 Dp):
+P.Si D1 !Si D0/Dp; (6)
+1=pis the average time spent by an individual in task
+performance before giving up the task. It is assumed
+thatpis ﬁxed, and independent of the stimulus. Indi-
+viduals give-up task performance after 1=p, but may
+become engaged again immediately if the stimulus is
+still large. Variations in stimulus intensity are due to
+task performance, which reduces stimulus intensity,
+and to the autonomous increase of demand, i.e., irre-
+spective of whether or not the task is performed. The
+resulting equation for the evolution of stimulus inten-
+sitys is therefore (in discrete time)
+s.t C1/Ds.t/ C− n
+act; (7)
+where  is the increase, supposed to be constant, in
+stimulus intensity per unit time,nactthe number of ac-
+tive individuals, andis a scale factor measuring the
+decrease in stimulus intensity due to the activity of one
+individual, i.e., the efﬁciency of individual task per-
+formance. In Monte Carlo simulations [5], this simple
+ﬁxed threshold model shows remarkable agreement
+with experimental results in the case where there are
+two castes characterized by two different values of the
+response threshold: when “minors”, with low response
+thresholds, are removed from the simulated colony,
+“majors”, with higher response thresholds, start to per-
+form tasks usually performed by minors. Fig. 7 shows
+the fraction of majors engaged in task performance
+as a function of the fraction of majors in the colony.
+This curve is very similar to the one observed by Wil-
+son [89]. This simple model with one task can be eas-
+ily extended to the case where there are two or more
+
+===== PAGE 11 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 861
+Fig. 7. Comparison between simulation results and real ants data.
+On the left vertical axis: number of ants per majors during Monte
+Carlo simulations as a function of the fractionf of majors in the
+colony (parameters:
+1 D8;2 D1; D3; D1;p D0:2). On
+the right vertical axis: Wilson’s [90] results (scaled so that curves
+of model and experiments lie within the same range): number
+of social behavior acts per major within time of experiments in
+Pheidola guilelmimuelleriand Pheidole pubiventrisas a function
+of the fractionf of majors in the colony (From [5], reprinted by
+permission).
+tasks to perform. In this case, each individual has a set
+of thresholds, each threshold being associated to the
+stimulus of a speciﬁc task or group of tasks.
+The ﬁxed threshold model described above has been
+used to organize a group of robots by Krieger and Bil-
+leter [44]. They designed a group of Khepera robots
+(miniature mobile robots aimed at “desktop” experi-
+ments [60]) to collectively perform a puck-foraging
+task. In one of the experiments they performed, pucks
+spread in the environment are taken back by the robots
+to the “nest” where they are dropped in a basket. The
+available “energy” of the group, which plays the role
+of stigmergic variable, decreases regularly with time,
+but increases when pucks are dropped into the basket.
+More energy is consumed during foraging trips than
+when robots are immobile in the nest. Each robot has
+a foraging threshold: when the energy of the colony
+goes below the foraging threshold of a robot, the robot
+leaves the nest to look for pucks in the environment.
+Krieger and Billeter’s experiment has shown the
+viability of the threshold-based stigmergic approach
+to self-organization in a rather simple environment.
+Further experimentation is necessary to test the
+methodology on more complex tasks.
+3.3. Adaptive task allocation: the example of mail
+retrieval
+The simple response threshold model, which
+assumes that each worker responds to a given stim-
+ulus when stimulus intensity exceeds the worker’s
+threshold, can explain how ﬂexibility at the colony
+level results from the workers’ behavioral ﬂexibility
+[5]. But it has several limitations, because it assumes
+that workers’ thresholds are ﬁxed over the studied
+time-scale. In fact, it cannot account for the genesis
+of task allocation for it assumes that individuals are
+differentiated and roles preassigned, neither can it
+account for robust task specialization within (phys-
+ical or temporal) castes. Finally, as a model of real
+ants behavior it is valid only over sufﬁciently short
+time-scales, where thresholds can be considered con-
+stant.
+In order to overcome these limitations, Theraulaz et
+al. [81,83] have extended the ﬁxed threshold model by
+allowing thresholds to vary in time, following a simple
+reinforcement process: a threshold decreases when the
+corresponding task is performed, and increases when
+the corresponding task is not performed. This idea had
+been previously introduced by Oster [62], Deneubourg
+et al. [19], and Plowright and Plowright [64], who
+did not attempt to explore its consequences in detail,
+especially when several tasks need to be performed.
+It is this model with threshold reinforcement that has
+been applied by Bonabeau et al. [4] to a problem of
+adaptive mail retrieval.
+Imagine that a group of mailmen belonging to an
+express mail company have to pick-up letters in a city.
+Customers should not have to wait more than a given
+amount of time: the aim of the mail company is there-
+fore to allocate the mailmen to the various demands
+that appear in the course of the day so as to keep the
+global demand as low as possible. The probability that
+mailman i, located in zonez
+i, respond to a demand
+intensitysj in zonej is given by
+pij D
+s2
+j
+s2
+j C2
+ij Cd2
+zij
+; (8)
+
+===== PAGE 12 =====
+862 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+Fig. 8. Adaptive task allocation: simulation results. (a) Demand as a function of time (one iteration at each time step): one mailman is
+removed at timet D2000. (b) Threshold dynamics of a particular mailman with respect to the zone for which a specialist is removed at
+time t D2000. (From [4]; reprinted by permission World Scientiﬁc.)
+where ij 2[min ;max ] is a response threshold of
+mailman i to a demand from zonej, dzij the dis-
+tance betweenzi and j (this distance can either be
+Euclidean or include factors such as one-ways, lights,
+trafﬁc jams, etc.), and and  are two parameters
+that modulate the respective inﬂuences of and d.
+Each time a mailman allocates himself to zonejto re-
+trieve mail, his response thresholds are updated in the
+following way:
+
+ij  ij − 0; (9)
+il  il − 1;l 2nj; (10)
+ik  ik C for k6Dj and k=2nj; (11)
+where nj is the set of zones surroundingj,0 and 1
+are two learning coefﬁcients corresponding to the new
+zone where that agent moved, and is the forgetting
+coefﬁcient applied to response thresholds associated
+with other zones.
+Simulations have been performed with a grid of
+55 zones (we consider four neighbors for the update
+of Eq. (11) with periodic boundary conditions) and
+ﬁve mailmen; at every iteration, the demand increases
+in ﬁve randomly selected zones by an amount of 50,
+D0:5, D500,
+min D0,max D1000,0 D150,
+1 D70, D10. Mailmen are swept in random or-
+der, and they decide to respond to the demand from
+a particular zone according to Eq. (8). If no mailman
+responds after ﬁve sweepings, the next iteration starts.
+If a mailman responds, this mailman will be unavail-
+able for an amount of time that we take to be equal
+to the distance separating his current location from
+the zone where the demand comes from. Once the
+mailman decides to allocate himself to that zone, the
+associated demand in that zone is maintained at zero
+(since any demand emerging between the time of the
+mailman’s response and his arrival in the zone will
+be satisﬁed by the same mailman). Fig. 8a shows how
+the demand increases but is still kept under control
+when one mailman fails to perform his task. Fig. 8b
+shows how the threshold of a mailman with respect
+to a single zone can vary as a function of time. A
+special behavior can be observed after the removal of
+a mailman specialist of a given zone: another mail-
+man lowers his threshold with respect to that zone
+and becomes in turn a new specialist of that zone.
+This is what is observed in Fig. 8b. However, because
+the workload may be too high to allow mailmen to
+settle into a given specialization, response thresholds
+may oscillate in time. All these features point to the
+ﬂexibility and robustness of this algorithm.
+Although we have presented the performance of
+the algorithm on one speciﬁc example, it can cer-
+tainly be modiﬁed to apply to virtually any kind of
+task allocation problem: the demands
+j can be the
+abstract demand associated to some taskj, ij is
+a response threshold of actori with respect to the
+task-associated stimulussj. Finally,dzij is an abstract
+distance betweeni and taskj which can, e.g., rep-
+resent the ability or lack of ability ofi to deal with
+taskj:i fi is not the most efﬁcient actor to perform
+taskj, it will not respond preferentially tosj,b u t
+if no other actor is in a position to respond, it will
+
+===== PAGE 13 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 863
+eventually perform the task. It is certainly possible to
+design a scheme in whichd can vary depending on
+the efﬁciency ofi in performing taskj.
+4. Cemetery formation and exploratory data
+analysis
+4.1. Cemetery organization
+Chrétien [11] has performed intensive experiments
+on the antLasius nigerto study the organization of
+cemeteries. Other experiments on the antPheidole
+pallidulaare also reported in [18], and it is now known
+that many species actually organize a cemetery. The
+phenomenon that is observed in these experiments is
+the aggregation of dead bodies by workers. If dead
+bodies, or more precisely items belonging to dead
+bodies, are randomly distributed in space at the begin-
+ning of the experiment, the workers will form clusters
+within a few hours (see Fig. 9). If the experimental
+arena is not sufﬁciently large, or if it contains spatial
+heterogeneities, the clusters will be formed along
+the borders of the arena or more generally along the
+heterogeneities. The basic mechanism underlying this
+type of aggregation phenomenon is an attraction be-
+tween dead items mediated by the ant workers: small
+clusters of items grow by attracting workers to deposit
+more items. It is this positive feedback that leads to
+Fig. 9. Real ants clustering behavior. The ﬁgures show four suc-
+cessive pictures of the circular arena. From left to right and from
+up to down: the initial state, after 3, 6 and 36 h, respectively.
+the formation of larger and larger clusters. In this case
+it is therefore the distribution of the clusters in the
+environment that plays the role of stigmergic variable.
+Deneubourg et al. [18] have proposed a model rely-
+ing on biologically plausible assumptions to account
+for the above-mentioned phenomenon of dead body
+clustering in ants. The model, called in the follow-
+ingbasic model(BM), relies on the general idea that
+isolated items should be picked-up and dropped at
+some other location where more items of that type are
+present. Let us assume that there is only one type of
+item in the environment. The probability for a ran-
+domly moving ant that is currently not carrying an
+item to pick-up an item is given by
+p
+p D
+ k1
+k1 Cf
+2
+; (12)
+where f is the perceived fraction of items in the neigh-
+borhood of the ant andk1 is the threshold constant:
+forf k1,pp is close to 1 (i.e., the probability of
+picking-up an item is high when there are not many
+items in the neighborhood), andp
+p is close to 0 if
+f k1 (i.e., items are unlikely to be removed from
+dense clusters). The probabilitypd for a randomly
+moving loaded ant to deposit an item is given by
+pd D
+ f
+k2 Cf
+2
+; (13)
+where k2 is another threshold constant: forf k2,
+pd is close to 0, whereas forf k2,pd is close to 1.
+As expected, the pick-up and deposit behaviors obey
+roughly opposite rules. The question is now to deﬁne
+how f is evaluated. Deneubourg et al. [18], having
+in mind a robotic implementation, moved away from
+biological plausibility and assumed thatf is computed
+using a short-term memory that each ant possesses: an
+ant keeps track of the lastT time units, andf is simply
+the numberN of items encountered during these last
+T time units divided by the largest possible number
+of items that can be encountered duringT time units.
+If one assumes that only zero or one object can be
+found within a time unit, thenf DN=T. Fig. 10
+shows a simulation of this model: small evenly spaced
+clusters emerge within a relatively short time and then
+merge into fewer larger clusters. BM can be easily
+extended to the case in which there are more than one
+type of items. Consider, e.g., the case with two types
+
+===== PAGE 14 =====
+864 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+Fig. 10. Computer simulation of the clustering model. The ﬁg-
+ures show four successive pictures of the simulated circular arena
+(diameterD200 grid sites; total areaD31 416 sites). From left to
+right and from up to down: the initial state, with 5000 items placed
+randomly in the arena, the arena att D50 000;t D1 000 000 and
+t D5 000 000. Parameters:T D50;k
+1 D0:1;k2 D0:3, 10 ants.
+Modiﬁed from [2].
+a and b of items in the environment. The principle is
+the same as before, but nowf is replaced byfa and
+fb, the respective fractions of items of typesa and b
+encountered during the lastT time units. Fig. 11 shows
+a simulation of this sorting model with two items.
+4.2. Exploratory data analysis
+Lumer and Faieta [51] have generalized Deneubourg
+et al.’s BM [18] to apply it to exploratory data anal-
+ysis. The idea here is to deﬁne a “dissimilarity”d
+(or distance) between objects in the space of object
+attributes: for instance, in BM, two objectso
+i and
+oj can only be either similar or different, so that a
+binary metric can be deﬁned, whered.oi;oj/ D0,
+ifoi and oj are identical objects, andd.oi;oj/D1,
+otherwise. Obviously, the very same idea can be
+extended to include more complicated objects, i.e.,
+objects with more attributes, and/or more complicated
+distances. It is classical in data analysis to have to
+deal with objects that can be described by a ﬁnite
+number nof real-valued attributes, so that objects can
+Fig. 11. Simulation of the sorting model. (a) Initial spatial dis-
+tribution of 400 items of two types, denoted byand C,o na
+100 100 grid; (b) spatial distribution of items att D500 000;
+and (c) att D5 000 000. Parameters:T D50;k1 D0:1;k2 D0:3,
+10 ants. (From [2]; reprinted by permission of Oxford University
+Press.)
+
+===== PAGE 15 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 865
+be seen as points inRn and d.oi;oj/is the Euclidean
+norm (or any other usual metric, such ask::: k1).
+The algorithm introduced by Lumer and Faieta [51]
+(hereafter LF) consists in projecting the space of at-
+tributes onto some lower dimensional space, so as
+to make clusters appear with the following property:
+intra-cluster distances (i.e, attribute distances between
+objects within clusters) should be small with respect
+to inter-cluster distances (i.e., attribute distances be-
+tween objects that belong to different clusters). Such a
+mapping should therefore keep some of the neighbor-
+hood relationships present in the higher-dimensional
+space (which is relatively easy since, for instance, any
+continuous mapping can do the job) without creating
+too many new neighbors inm dimensions,m<n ,
+that would be false neighbors inndimensions (which
+is much less trivial since projections tend to compress
+information and may map several well-separated
+points in then-dimensional space onto one single
+point in them-dimensional subspace).
+The LF algorithm works as follows. Let us assume
+thatm D2; instead of embedding the set of objects
+intoR
+2, the LF algorithm approximates this embed-
+ding by considering a grid, i.e., a subspace ofZ2.
+Ants can directly perceive a surrounding region of area
+s
+2 − 1 (a square Neighss of ss sites surrounding
+siter). Obviously, direct perception allows a more ef-
+ﬁcient evaluation of the state of the neighborhood than
+the memory-based procedure used in the BM: while
+the BM was aimed to a robotic implementation, the
+LF algorithm is to be implemented in a computer with
+many less practical constraints. Letd.o
+i;oj/ be the
+distance between two objectsoi and oj in the space
+of attributes. Let us also assume that an ant is located
+at siter at timet, and ﬁnds an objecto
+i at that site.
+The local density of objects similar to typeoi at site
+r is given by
+f.oi/Dmax
+8
+<
+:0; 1
+s2
+X
+oj2Neighss.r/
+
+1 − d.oi;oj/
+
+9
+=
+; ;
+(14)
+f.oi/is a measure of the average similarity of object
+oi with the other objectsoj present in its neighbor-
+hood: this expression replaces the fractionf of similar
+objects of the BM. The parameterdeﬁnes the scale
+for dissimilarity: its value is important for it deter-
+mines when two items should or should not be located
+next to each other. For example, ifis too large, there
+is no enough discrimination between different items,
+leading to the formation of clusters composed of items
+which should not belong to the same cluster. If, on the
+other hand,is too small, distances between items in
+attribute space are ampliﬁed to the point where items
+which are relatively close in attribute space cannot be
+clustered together because discrimination is too high.
+Lumer and Faieta [51] deﬁne picking-up and dropping
+probabilities as follows:
+p
+p.oi/D
+ k1
+k1 Cf.oi/
+2
+;
+pd.oi/D
+ 2f.oi/ if f.oi/<k 2;
+1i f f.oi/k2; (15)
+where k1 and k2 are two constants that play a role
+similar tok1 and k2 in the BM.
+As an illustration, Lumer and Faieta [51] have used
+a simple example where the attribute space isR2, and
+the values of the two attributes for each object corre-
+spond to its coordinates.x;y/ inR
+2. Four clusters of
+200 points each are generated in attribute space, with
+xand ydistributed according to normal (or Gaussian)
+distributions (see Fig. 12a for the scatter of points in
+attribute space). The data points were then assigned
+random locations on a 100100 grid, and the cluster-
+ing algorithm was run with 10 ants. Fig. 12b–d shows
+the system att D0;t D500 000 andt D1 000 000
+(at each iteration, indexed by the countert, all ants
+have made a random move and possibly performed an
+action). Objects that are clustered together belong to
+the same initial distribution, and objects that do not
+belong to the same initial distribution are found in dif-
+ferent clusters.
+Because there are generally more clusters in the pro-
+jected system than in the initial distribution, Lumer
+and Faieta [51] have added three features to their
+systems that help to solve this problem:
+Ants with different moving speeds. Let the speedv
+of an ant be distributed uniformly in [1;v
+max ](vis
+the number of grid units walked per time unit by
+an ant along a given grid axis; the simulations use
+v
+max D6). The speedv inﬂuences the tendency of
+an ant to either pick-up or drop an object through
+the functionf.o
+i/:
+
+===== PAGE 16 =====
+866 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+Fig. 12. Simulation of the clustering algorithm with 10 ants. (a) Distribution of points in “attribute space” — 4 clusters of
+200 points each are generated in attribute space, withx and y distributed according to normal (or Gaussian) distributions
+N.;/ :[ x / N.0:2;0:1/;y / N.0:2;0:1/], [x / N.0:8;0:1/;y / N.0:2;0:1/], [x / N.0:8;0:1/;y / N.0:8;0:1/], and
+[x/N.0:2;0:1/;y /N.0:8;0:1/], for clusters 1, 2, 3 and 4, respectively; (b) initial spatial distribution of the 800 items on a 100100 grid
+(grid coordinates are scaled in the unit square); (c) distribution of the items att D500 000; and (d) distribution of the items att D1 000 000.
+Items that belong to different clusters are represented by different symbols:;C;;. Parameters:k1 D0:1;k2 D0:15; D0:5;s2 D9.
+(From [2]; reprinted by permission of Oxford University Press.)
+f.oi/Dmax
+8
+<
+:0; 1
+s2
+X
+oj2Neighss.r/
+2
+41 − d.oi;oj/
+.1 C..v− 1/=vmax //
+3
+5
+9
+=
+; : (16)
+Fast moving ants are not as selective as slow ants
+in their estimation of the average similarity of an
+object to its neighbors. The diversity of ants allows
+to form the clusters over various scales simultane-
+ously: fast ants form coarse clusters on large scales,
+i.e., drop items approximately in the right coarse-
+grained region, while slow ants take over at smaller
+scales by placing objects with more accuracy.
+A short-term memory. Ants can remember the lastm
+items they have dropped along with their locations.
+Each time an item is picked up, the ant compares the
+properties of the item with those of them memo-
+rized items and goes toward the location of the most
+similar item instead of moving randomly. This be-
+havior leads to a reduction in the number of statisti-
+cally equivalent clusters, since similar items have a
+lower probability of initiating independent clusters.
+Behavioral switches. Ants can start to destroy clus-
+ters if they have not performed any pick up or
+
+===== PAGE 17 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 867
+deposit actions for a given number of time steps.
+This procedure allows to “heat-up” the system to
+escape local non-optimal conﬁgurations.
+Fig. 13, which should be compared with Fig. 12d,
+shows the system att D 1 000 000 in the case of
+ants with different speeds and short term memory. The
+effects of behavioral switches, not included here, can
+be found in [51].
+Lumer and Faieta [51] suggest that their algorithm
+is halfway between a cluster analysis — insofar as el-
+ements belonging to different concentration areas in
+theirn-dimensional space end up in different clusters
+— and a multi-dimensional scaling, in which an intra-
+cluster structure is constructed. Note that in the present
+example, the exact locations of the various clusters on
+the two-dimensional space are arbitrary, whereas they
+usually have a meaning in classical factorial analy-
+sis. In a lot of cases, information about the locations
+of the clusters is not necessary or useful (especially
+in the context of textual databases), and relaxing the
+global positioning constraints allows to speed-up the
+clustering process signiﬁcantly.
+Finally, we mention that the LF algorithm has been
+successfully extended by Kuntz et al. [45–47] so that
+it can be applied to a variety of graph drawing and
+graph partitioning problems. In this case the objects
+moved around by the artiﬁcial ants are projections on
+Fig. 13. Extended clustering algorithm att D1 000 000. There
+are 10 ants and 800 items on a 100100 grid (grid coordinates
+are scaled in the unit square). Items that belong to different clus-
+ters are represented by different symbols:;C;;. Parameters:
+k
+1 D0:1;k2 D0:15; D0:5;s2 D9;m D8;vmax D6. (From
+[2]; reprinted by permission; © Oxford University Press.)
+a spaceRn of the vertices of the graph, and the ants
+goal is to ﬁnd conﬁgurations of these objects that ei-
+ther minimize some objective function (in the graph
+partitioning applications) or please the observer’s eye
+(in the graph drawing applications).
+5. Conclusions
+In this paper we informally deﬁned anant al-
+gorithmto be a multi-agent system inspired by the
+observation of some real ant colony behavior exploit-
+ing the stigmergic communication paradigm. In ant
+algorithms stigmergic communication is implemented
+by means of a stigmergic variable which takes dif-
+ferent forms in the different applications: artiﬁcial
+pheromone trail in shortest path problems, level of
+nest energy in puck-foraging, level of customer de-
+mand in the mailmen example, puck distribution in
+robotic clustering, and the distribution of objects in
+the lower-dimensional space in exploratory data anal-
+ysis. Ant algorithms exhibit a number of interesting
+properties like ﬂexibility (a colony responds to inter-
+nal perturbations and external challenges), robustness
+(tasks are completed even if some individuals fail),
+decentralization (there exists no central control) and
+self-organization (solutions to problems faced by a
+colony are emergent rather than predeﬁned), which
+make them well suited for the solution of problems
+that are distributed in nature, dynamically changing,
+and require built-in fault-tolerance.
+Notwithstanding the number of interesting applica-
+tions presented, a number of open problems need to
+be addressed and solved before that of ant algorithms
+becomes a mature ﬁeld. For example, it would be in-
+teresting to give an answer to the following questions:
+How can we deﬁne “methodologies” to program ant
+algorithms? How do we deﬁne “artiﬁcial ants”? How
+complex should they be? Should they all be identical?
+What basic capabilities should they be given? Should
+they be able to learn? Should they be purely reactive?
+How local should their environment knowledge be?
+Should they be able to communicate directly? If yes,
+what type of information should they communicate?
+What is also missing, similarly to what happens
+with many other adaptive systems, is a theory that al-
+lows to predict the system behavior as a function of
+its parameters and of the characteristics of the appli-
+cation domain. On this aspect, let us mention a couple
+
+===== PAGE 18 =====
+868 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+of recent and intriguing results: Gutjahr has recently
+proved (see this special issue [40]) convergence to the
+optimal solution for a particular version of AS, while
+Wagner et al. (see this special issue [86]) have proved
+an upper bound to the time necessary to an ant-like
+agent to cover static and dynamic graphs.
+Acknowledgements
+We are grateful to Gianni Di Caro and to Thomas
+Stützle for critical reading of a draft version of this ar-
+ticle. Dr. Dorigo acknowledges support by the Belgian
+Fund for Scientiﬁc Research (FNRS) of which he is a
+Research Associate. Dr. Theraulaz was partially sup-
+ported by a grant from the Groupement d’Intérêt Sci-
+entiﬁque (GIS) Sciences de la Cognition and a grant
+from the Conseil Régional Midi-Pyrénées.
+References
+[1] A. Bauer, B. Bullnheimer, R.F. Hartl, C. Strauss, An Ant
+Colony Optimization approach for the single machine total
+tardiness problem, in: Proceedings of the 1999 Congress on
+Evolutionary Computation, IEEE Press, Piscataway, NJ, 1999,
+pp. 1445–1450.
+[2] E. Bonabeau, M. Dorigo, G. Theraulaz, Swarm Intelligence:
+From Natural to Artiﬁcial Systems, Oxford University Press,
+Oxford, 1999.
+[3] E. Bonabeau, F. Henaux, S. Guérin, D. Snyers, P. Kuntz,
+G. Theraulaz, Routing in telecommunication networks with
+“Smart” ant-like agents, in: Proceedings of IATA’98,
+Second International Workshop on Intelligent Agents for
+Telecommunication Applications, Lectures Notes in Artiﬁcial
+Intelligence, V ol. 1437, Springer, Berlin, 1998.
+[4] E. Bonabeau, A. Sobkowski, G. Theraulaz, J.-L. Deneubourg,
+Adaptive task allocation inspired by a model of division
+of labor in social insects, in: D. Lundh, B. Olsson, A.
+Narayanan (Eds.), Biocomputation and Emergent Computing,
+World Scientiﬁc, Singapore, 1997, pp. 36–45.
+[5] E. Bonabeau, G. Theraulaz, J.-L. Deneubourg, Quantitative
+study of the ﬁxed threshold model for the regulation of
+division of labour in insect societies, Proc. Roy. Soc. London
+B 263 (1996) 1565–1569.
+[6] O.H. Bruinsma, An analysis of building behaviour
+of the termite Macrotemes subhyalinus, Ph.D. Thesis,
+Landbouwhogeschool, Wageningen, Netherlands, 1979.
+[7] B. Bullnheimer, R.F. Hartl, C. Strauss, An improved
+Ant System algorithm for the vehicle routing problem,
+Technical Report POM-10/97, Institute of Management
+Science, University of Vienna, Austria, 1997, Ann. Oper. Res.
+89 (1999).
+[8] B. Bullnheimer, R.F. Hartl, C. Strauss, A new rank-based
+version of the Ant System: a computational study, Technical
+Report POM-03/97, Institute of Management Science,
+University of Vienna, Austria, 1997.
+[9] B. Bullnheimer, R.F. Hartl, C. Strauss, Applying the Ant
+System to the vehicle routing problem, in: S. V oß, S.
+Martello, I.H. Osman, C. Roucairol (Eds.), Meta-heuristics:
+Advances and Trends in Local Search Paradigms for
+Optimization, Kluwer Academic Publishers, Boston, MA,
+1999, pp. 285–296.
+[10] B. Bullnheimer, R.F. Hartl, C. Strauss, A new rank-based
+version of the Ant System: a computational study, Central
+Eur. J. Oper. Res. Econom. 7 (1) (1999) 25–38.
+[11] L. Chrétien, Organisation spatiale du matériel provenant de
+l’excavation du nid chez Messor Barbarus et des cadavres
+d’ouvrières chez Lasius Niger, Ph.D. Thesis, Université Libre
+de Bruxelles, Brussels, 1996.
+[12] A. Colorni, M. Dorigo, V . Maniezzo, M. Trubian, Ant
+System for job-shop scheduling, Belgian J. Oper. Res. Statist.
+Comput. Sci. 34 (1994) 39–53.
+[13] D. Costa, A. Hertz, Ants can colour graphs, J. Oper. Res.
+Soc. 48 (1997) 295–305.
+[14] M. den Besten, T. Stützle, M. Dorigo, Scheduling single
+machines by ants, Technical Report IRIDIA/99-16, IRIDIA,
+Université Libre de Bruxelles, Belgium, 1999.
+[15] J.-L. Deneubourg, Application de l’ordre par ﬂuctuations à
+la description de certaines étapes de la construction du nid
+chez les termites, Insectes Sociaux 24 (1977) 117–130.
+[16] J.-L. Deneubourg, S. Aron, S. Goss, J.-M. Pasteels, The
+self-organizing exploratory pattern of the Argentine ant, J.
+Insect Behav. 3 (1990) 159–168.
+[17] J.-L. Deneubourg, S. Goss, Collective patterns and decision
+making, Ethol. Ecol. Evol. 1 (1989) 295–311.
+[18] J.-L. Deneubourg, S. Goss, N. Franks, A. Sendova-hanks,
+C. Detrain, L. Chrétien, The dynamics of collective
+sorting: robot-like ants and ant-like robots, in: J.-A. Meyer,
+S.W. Wilson (Eds.), Proceedings of the First International
+Conference on Simulation of Adaptive Behavior: From
+Animals to Animats, MIT Press/Bradford Books, Cambridge,
+MA, 1991, pp. 356–363.
+[19] J.-L. Deneubourg, S. Goss, J.M. Pasteels, D. Fresneau, J.-P.
+Lachaud, Self-organization mechanisms in ant societies II:
+learning in foraging and division of labour, Experientia Suppl.
+54 (1987) 177–196.
+[20] G. Di Caro, M. Dorigo, AntNet: a mobile agents approach
+to adaptive routing, Technical Report IRIDIA/97-12, IRIDIA,
+Université Libre de Bruxelles, Belgium, 1997.
+[21] G. Di Caro, M. Dorigo, AntNet: distributed stigmergetic
+control for communications networks, J. Artiﬁcial Intelligence
+Res. 9 (1998) 317–365.
+[22] G. Di Caro, M. Dorigo, Extending AntNet for best-effort
+quality-of-service routing, in: ANTS’98 — From Ant
+Colonies to Artiﬁcial Ants: First International Workshop on
+Ant Colony Optimization, October 15–16, 1998, Unpublished
+presentation (http://iridia.ulb.ac.be/ants98/ants98.html).
+[23] G. Di Caro, M. Dorigo, Two ant colony algorithms for
+best-effort routing in datagram networks, in: Proceedings
+
+===== PAGE 19 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 869
+of the 10th IASTED International Conference on Parallel
+and Distributed Computing and Systems (PDCS’98),
+IASTED/ACTA Press, Anheim, 1998, pp. 541–546.
+[24] M. Dorigo, Optimization, learning and natural algorithms,
+Ph.D. Thesis, Dipartimento di Elettronica, Politecnico di
+Milano, Italy, 1992 (in Italian).
+[25] M. Dorigo, G. Di Caro, The ant colony optimization
+meta-heuristic, in: D. Come, M. Dorigo, F. Glover (Eds.),
+New Ideas in Optimization, McGraw-Hill, London, UK, 1999,
+pp. 11–32.
+[26] M. Dorigo, G. Di Caro, L.M. Gambardella, Ant algorithms
+for discrete optimization, Artiﬁcial Life 5 (2) (1999) 137–172.
+[27] M. Dorigo, L.M. Gambardella, Ant colonies for the traveling
+salesman problem, BioSystems 43 (1997) 73–81.
+[28] M. Dorigo, L.M. Gambardella, Ant colony system: a
+cooperative learning approach to the traveling salesman
+problem, IEEE Trans. Evol. Comput. 1 (1) (1997) 53–66.
+[29] M. Dorigo, V . Maniezzo, A. Colorni, Positive feedback as
+a search strategy, Technical Report 91-016, Dipartimento di
+Elettronica, Politecnico di Milano, Italy, 1991.
+[30] M. Dorigo, V . Maniezzo, A. Colorni, The ant system:
+optimization by a colony of cooperating agents, IEEE Trans.
+Systems Man Cybernet. B 26 (1) (1996) 29–41.
+[31] J.-H. Fabre, Souvenirs Entomologiques, Librairie Delagrave,
+Paris, 1925.
+[32] L.M. Gambardella, M. Dorigo, Ant-Q: a reinforcement
+learning approach to the traveling salesman problem, in:
+Proceedings of the 12th International Conference on Machine
+Learning, ML-95, Morgan Kaufmann, Palo Alto, CA, 1995,
+pp. 252–260.
+[33] L.M. Gambardella, M. Dorigo, Solving symmetric and
+asymmetric TSPs by ant colonies, in: Proceedings of the
+IEEE Conference on Evolutionary Computation, ICEC’96,
+IEEE Press, New York, 1996, pp. 622–627.
+[34] L.M. Gambardella, M. Dorigo, HAS-SOP: an hybrid Ant
+System for the sequential ordering problem, Technical Report
+IDSIA-11-97, IDSIA, Lugano, Switzerland, 1997.
+[35] L.M. Gambardella, È. Taillard, G. Agazzi, MACS-VRPTW: a
+multiple ant colony system for vehicle routing problems with
+time windows, in: D. Corne, M. Dorigo, F. Glover (Eds.), New
+Ideas in Optimization, McGraw-Hill, London, UK, 1999, pp.
+63–76.
+[36] L.M. Gambardella, È.D. Taillard, M. Dorigo, Ant colonies
+for the QAP, Technical Report IDSIA-4-97, IDSIA, Lugano,
+Switzerland, 1997.
+[37] L.M. Gambardella, È.D. Taillard, M. Dorigo, Ant colonies
+for the quadratic assignment problem, J. Oper. Res. Soc. 50
+(1999) 167–176.
+[38] S. Goss, S. Aron, J.L. Deneubourg, J.M. Pasteels, Self-
+organized shortcuts in the Argentine ant, Naturwis-
+senschaften 76 (1989) 579–581.
+[39] P.P. Grassé, La reconstruction du nid et les coordina-
+tions interindividuelles chezbellicositermes natalensis
+et cubitermes sp. La théorie de la stigmergie: essai
+d’interprétation du comportement des termites constructeurs,
+Insectes Sociaux 6 (1959) 41–81.
+[40] W.J. Gutjahr, A Graph-based Ant System and its convergence,
+this issue, Future Generation Comput. Systems 16 (2000)
+873–888.
+[41] M. Heusse, S. Guérin, D. Snyers, P. Kuntz, Adaptive
+agent-driven routing and load balancing in communication
+networks, Adv. Complex Systems 1 (1998) 234–257.
+[42] B. Hölldobler, E.O. Wilson, The Ants, Springer, Berlin, 1990.
+[43] B. Hölldobler, E.O. Wilson, Journey to the Ants: A Story of
+Scientiﬁc Exploration, Harvard University Press, Cambridge,
+MA, 1994.
+[44] M.J.B. Krieger, J.-B. Billeter, The call of duty: self-organized
+task allocation in a population of up to twelve mobile robots,
+Robot. Autonomous Systems 30 (2000) 65–84.
+[45] P. Kuntz, P. Layzell, A new stochastic approach to ﬁnd clusters
+in vertex set of large graphs with applications to partitioning in
+VLSI technology, Technical Report LIASC, Ecole Nationale
+Supérieure des Télécommunications de Bretagne, 1995.
+[46] P. Kuntz, P. Layzell, D. Snyers, A colony of ant-like agents for
+partitioning in VLSI technology, in: P. Husbands, I. Harvey
+(Eds.), Proceedings of the Fourth European Conference
+on Artiﬁcial Life, MIT Press, Cambridge, MA, 1997, pp.
+417–424.
+[47] P. Kuntz, D. Snyers, New results on an ant-based heuristic for
+highlighting the organization of large graphs, in: Proceedings
+of the 1999 Congress or Evolutionary Computation, IEEE
+Press, Piscataway, NJ, 1999, pp. 1451–1458.
+[48] G. Leguizamón, Z. Michalewicz, A new version of Ant
+System for subset problems, in: Proceedings of the
+1999 Congress on Evolutionary Computation, IEEE Press,
+Piscataway, NJ, 1999, pp. 1459–1464.
+[49] Y .-C. Liang, A.E. Smith, An Ant System approach to
+redundancy allocation, in: Proceedings of the 1999 Congress
+on Evolutionary Computation, IEEE Press, Piscataway, NJ,
+1999, pp. 1478–1484.
+[50] S. Lin, Computer solutions for the traveling salesman
+problem, Bell Systems J. 44 (1965) 2245–2269.
+[51] E. Lumer, B. Faieta, Diversity and adaptation in populations
+of clustering ants, in: J.-A. Meyer, S.W. Wilson (Eds.),
+Proceedings of the Third International Conference on
+Simulation of Adaptive Behavior: From Animals to Animats,
+V ol. 3, MIT Press/Bradford Books, Cambridge, MA, 1994,
+pp. 501–508.
+[52] M. Maeterlinck, The Life of the White Ant, George Allen &
+Unwin, London, 1927.
+[53] V . Maniezzo, Exact and approximate nondeterministic
+tree-search procedures for the quadratic assignment problem,
+Technical Report CSR 98-1, Scienze dell’Informazione,
+Universita di Bologna, Sede di Cesena, Italy, 1998.
+[54] V . Maniezzo, A. Carbonaro, An ANTS heuristic for the
+frequency assignment problem, Technical Report CSR 98-4,
+Scienze dell’Informazione, Università di Bologna, Sede di
+Cesena, Italy, 1998.
+[55] V . Maniezzo, A. Carbonaro, An ANTS heuristic for the
+frequency assignment problem, Future Generation Comput.
+Systems, this issue.
+[56] V . Maniezzo, A. Colorni, The Ant System applied to the
+quadratic assignment problem, IEEE Trans. Knowledge Data
+Eng. 11 (5) (1999) 769–778.
+
+===== PAGE 20 =====
+870 M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871
+[57] V . Maniezzo, A. Colorni, M. Dorigo, The Ant System
+applied to the quadratic assignment problem, Technical
+Report IRIDIA/94-28, IRIDIA, Université Libre de Bruxelles,
+Belgium, 1994.
+[58] R. Michel, M. Middendorf, An island model based Ant
+System with lookahead for the shortest supersequence
+problem, in: A.E. Eiben, T. Back, M. Schoenauer, H.-P.
+Schwefel (Eds.), Proceedings of PPSN-V , Fifth International
+Conference on Parallel Problem Solving from Nature,
+Springer, Berlin, Germany, 1998, pp. 692–701.
+[59] R. Michel, M. Middendorf, An ACO algorithm for the shortest
+supersequence problem, in: D. Come, M. Dorigo, F. Glover
+(Eds.), New Ideas in Optimization, McGraw-Hill, London,
+UK, 1999, pp. 51–61.
+[60] F. Mondada, E. Franzi, P. Ienne, Mobile robot miniaturization:
+a tool for investigation in control algorithms, in: Proceedings
+of the Third International Symposium on Simulation on
+Experimental Robotics (ISER’93), 1993, pp. 501–513.
+[61] G. Navarro Varela, M.C. Sinclair, Ant colony optimisation for
+virtual-wavelength-path routing and wavelength allocation,
+in: Proceedings of the 1999 Congress on Evolutionary
+Computation, IEEE Press, Piscataway, NJ, 1999, pp.
+1809–1816.
+[62] G.F. Oster, Modeling social insect populations. Part I:
+Ergonomics of foraging and population growth in bumblebees,
+Am. Nat. 110 (1977) 215–245.
+[63] G.F. Oster, E.O. Wilson, Caste and Ecology in the Social
+Insects, Princeton University Press, Princeton, NJ, 1978.
+[64] R.C. Plowright, C.M.S. Plowright, Elitism in social insects: a
+positive feedback model, in: R.L. Jeanne (Ed.), Interindividual
+Behavior Variability in Social Insects, Westview Press,
+Boulder, CO, 1988.
+[65] H. Ramalhinho Lourenço, D. Serra, Adaptive approach
+heuristics for the generalized assignment problem, Technical
+Report EWP Series No. 304, Department of Economics and
+Management, Universitat Pompeu Fabra, Barcelona, 1998.
+[66] G.E. Robinson, Modulation of alarm pheromone perception
+in the honey bee: evidence for division of labour based on
+hormonally regulated response thresholds, J. Comput. Physiol.
+A 160 (1987) 613–619.
+[67] G.E. Robinson, Regulation of division of labor in insect
+societies, Ann. Rev. Entomol. 37 (1992) 637–665.
+[68] R. Schoonderwoerd, O. Holland, J. Bruten, Ant-like agents
+for load balancing in telecommunications networks, in:
+Proceedings of the First International Conference on
+Autonomous Agents, ACM, New York, 1997, pp. 209–216.
+[69] R. Schoonderwoerd, O. Holland, J. Bruten, L. Rothkrantz,
+Ant-based load balancing in telecommunications networks,
+Adaptive Behav. 5 (2) (1996) 169–207.
+[70] T.D. Seeley, Adaptive signiﬁcance of the age polyethism
+schedule in honey bee colonies, Behav. Ecol. Sociobiol. 11
+(1982) 287–293.
+[71] T. Stützle, An ant approach to the ﬂow shop problem,
+Technical Report AIDA-97-07, FG Intellektik, FB Informatik,
+TH Darmstadt, September 1997.
+[72] T. Stützle, Local search algorithms for combinatorial
+problems: analysis, improvements, and new applications,
+Ph.D. Thesis, Fachbereich Informatik, TU Darmstadt,
+Germany, 1998.
+[73] T. Stützle, M. Dorigo, ACO Algorithms for the Traveling
+Salesman Problem, in: P. Neittaanmäki, J. Periaux, K.
+Miettinen, M.M. Mäkelä (Eds.), Evolutionary Algorithms in
+Engineering and Computer Science, Wiley, Chichester, UK,
+1999, pp. 163–183.
+[74] T. Stützle, H. Hoos,MAX -MIN Ant System for the
+quadratic assignment problem, Technical Report AIDA-97-4,
+FG Intellektik, TH Darmstadt, July 1997.
+[75] T. Stützle, H. Hoos, TheMAX -MIN Ant System and
+local search for the traveling salesman problem, in:
+T. Bäck, Z. Michalewicz, X. Yao (Eds.), Proceedings
+of IEEE-ICEC-EPS’97, IEEE International Conference on
+Evolutionary Computation and Evolutionary Programming
+Conference, IEEE Press, New York, 1997, pp. 309–314.
+[76] T. Stützle, H. Hoos, Improvements on the Ant System:
+introducingMAX -MIN Ant System, in: Proceedings of the
+International Conference on Artiﬁcial Neural Networks and
+Genetic Algorithms, Springer, Vienna, 1998, pp. 245–249.
+[77] T. Stützle, H. Hoos,MAX -MIN Ant System and local
+search for combinatorial optimization problems, in: S. V oß, S.
+Martello, I.H. Osman, C. Roucairol (Eds.), Meta-heuristics:
+Advances and Trends in Local Search Paradigms for
+Optimization, Kluwer Academic, Boston, MA, 1999, pp.
+313–329.
+[78] T. Stützle, H. Hoos,MAX -MIN Ant System, Future
+Generation Comput. Systems, this issue.
+[79] D. Subramanian, P. Druschel, J. Chen, Ants and reinforcement
+learning: a case study in routing in dynamic networks, in:
+Proceedings of the International Joint Conference on Artiﬁcial
+Intelligence, Morgan Kaufmann, Palo Alto, CA, 1997, pp.
+832–838.
+[80] G. Theraulaz, E. Bonabeau, A brief history of stigmergy,
+Artiﬁcial Life 5 (1999) 97–116.
+[81] G. Theraulaz, E. Bonabeau, J.-L. Deneubourg, Threshold
+reinforcement and the regulation of division of labour in insect
+societies, Proc. Roy. Soc. London B 265 (1998) 327–332.
+[82] G. Theravlaz, E. Bonabeav, J.-L. Denevbourg, The
+mechanisms and rules of coordinated building in social
+insects, in: C. Detrain, J.-L. Deneubourg, J.M. Pasteels (Eds.),
+Information Processing in social Insects, Birkhäuser Verlag,
+Basel, Switzerland, 1999, pp. 309–330.
+[83] G. Theraulaz, S. Goss, J. Gervet, J.-L. Deneubourg, Task
+differentiation in Polistes wasp colonies: a model for
+self-organizing groups of robots, in: J.-A. Meyer, S.W. Wilson
+(Eds.), Proceedings of the First International Conference on
+Simulation of Adaptive Behavior: From Animals to Animats,
+MIT Press/Bradford Books, Cambridge, MA, 1991, pp.
+346–355.
+[84] R. van der Put, Routing in the fax factory using mobile
+agents, Technical Report R&D-SV-98-276, KPN Research,
+The Netherlands, 1998.
+[85] R. van der Put, L. Rothkrantz, Routing in packet switched
+networks using agents, Simulation Practice and Theory
+(1999), in press.
+
+===== PAGE 21 =====
+M. Dorigo et al. / Future Generation Computer Systems 16 (2000) 851–871 871
+[86] I. Wagner, Lindenbaum, F. Bruckstein, ANTS: Agents on
+Networks, Trees, and Subgraphs, this issue, Future Generation
+Computer Systems 16 (2000) 915–926.
+[87] B. Werber, Les fourmis, Albin Michel, 1991 (Engl. Trans.,
+Empire of the Ants, Bantam Books, New York, 1996).
+[88] T. White, B. Pagurek, F. Oppacher, Connection management
+using adaptive mobile agents, in: H.R. Arabnia (Ed.),
+Proceedings of the International Conference on Parallel and
+Distributed Processing Techniques and Applications (PDPTA
+’98), CSREA Press, 1998, pp. 802–809.
+[89] E.O. Wilson, Sociobiology, Harvard University Press,
+Cambridge, MA, 1975.
+[90] E.O. Wilson, The relation between caste ratios and division of
+labour in the antGenus Pheidole(hymenoptera: Formicidae),
+Behav. Ecol. Sociobiol. 16 (1984) 89–98.
+Marco Dorigo was born in Milan, Italy,
+in 1961. He received his Ph.D. degree in
+information and systems electronic engi-
+neering in 1992 from Politecnico di Mi-
+lano, Milan, Italy, and the title of Agrégé
+de l’Enseignement Supérieur in Artiﬁcial
+Intelligence, from the Université Libre de
+Bruxelles, Belgium, in 1995. From 1992
+to 1993 he was a research fellow at the
+International Computer Science Institute
+of Berkeley, CA. In 1993 he was a NATO-CNR fellow, and from
+1994 to 1996 a Marie Curie fellow at the IRIDIA laboratory of
+the Université Libre de Bruxelles. Since 1996 he holds a tenured
+research position in the same laboratory as a Research Associate
+of the FNRS, the Belgian National Fund for Scientiﬁc Research.
+His main current research interest is in ant algorithms, a novel re-
+search area initiated by his seminal doctoral work. Other research
+interests include evolutionary computation, autonomous robotics,
+and reinforcement learning. He is the author of a book on learning
+robots and of a book on swarm intelligence, the editor of three
+books on evolutionary computation and other modern heuristic
+techniques, and of more than 50 scientiﬁc articles published in
+international Journals and conference proceedings. Dr. Dorigo is
+an Associate Editor for the IEEE Transactions on Systems, Man,
+and Cybernetics, the IEEE Transactions on Evolutionary Com-
+putation, the Journal of Heuristics, and the Journal of Cognitive
+Systems Research. He is a member of the Editorial Board of the
+Evolutionary Computation journal, the Adaptive Behavior journal,
+and the Journal of Genetic Programming and Evolvable Machines.
+He was awarded the 1996 Italian Prize for Artiﬁcial Intelligence.
+Eric Bonabeau is the Managing Director
+of EuroBios, a Paris-based start-up com-
+pany applying complexity science to busi-
+ness problems. Prior to this appointment,
+he was the Director of Research at France
+Telecom, R&D Engineer with Cadence
+Design Systems, and research fellow at the
+Santa Fe Institute. He received his Ph.D.
+in theoretical physics from the University
+of Orsay, France, and engineering degrees
+from Ecole Polytechnique and Ecole National Supérieure des Télé-
+communications (France). The Editor-in-Chief of Advances in
+Complex Systems, Dr. Bonabeau is the co-author of three books
+and a 100 scientiﬁc articles.
+Guy Theraulaz received an M.S. degree
+in behavioral neurosciences in 1986, and
+a Ph.D. in ethology in 1991 from the
+Provence University, Marseille, France. He
+is a Research Associate with the French
+CNRS, Centre National de la Recherche
+Scientiﬁque, and is currently working
+at the Ethology and Animal Cognition
+Laboratory, Paul Sabatier University in
+Toulouse, where he is the Head of the Col-
+lective Intelligence in Social Insects and Artiﬁcial Systems group.
+His research interests are collective behaviors in animal societies,
+modeling collective phenomena and designing distributed adaptive
+algorithms inspired by social insects. In 1996 he was awarded the
+bronze medal of the CNRS for his work on Swarm Intelligence.

@@ -1,0 +1,90 @@
+# ─── Environment & Secrets ───────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+serviceAccount*.json
+*firebase-adminsdk*.json
+config.local.*
+
+# ─── Dependencies ─────────────────────────────
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+venv/
+ENV/
+env/
+
+# ─── Build & Distribution ─────────────────────
+dist/
+build/
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+out/
+target/
+
+# ─── IDE & Editor ─────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ─── Testing & Coverage ───────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# ─── Logs & Temp Files ────────────────────────
+*.log
+logs/
+*.tmp
+*.temp
+.cache/
+
+# ─── Firebase & Cloud ─────────────────────────
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.firebaserc
+
+# ─── ML & Data ────────────────────────────────
+*.h5
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.weights
+data/raw/
+data/processed/
+models/checkpoints/
+*.tfrecord
+
+# ─── OS Generated ─────────────────────────────
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─── Package Manager Locks (optional - uncomment if needed) ───
+# package-lock.json
+# yarn.lock
+# poetry.lock

@@ -1,0 +1,2536 @@
+
+
+===== PAGE 1 =====
+
+
+===== PAGE 2 =====
+HONEYBEE
+DEMOCRACY
+THOMAS	D.	SEELEY
+	
+PRINCETON	UNIVERSITY	PRESS
+PRINCETON	AND	OXFORD
+
+===== PAGE 3 =====
+Copyright	©	2010	by	Princeton	University	Press
+Published	by	Princeton	University	Press,	41	William	Street,
+Princeton,	New	Jersey	08540
+In	the	United	Kingdom:	Princeton	University	Press,	6	Oxford	Street,
+Woodstock,	Oxfordshire	OX20	1TW
+press.princeton.edu
+All	Rights	Reserved
+Library	of	Congress	Cataloging-in-Publication	Data
+Seeley,	Thomas	D.
+Honeybee	democracy	/Thomas	D.	Seeley.
+p.	cm.
+Includes	bibliographical	references	and	index.
+ISBN	978-0-691-14721-5	(alk.	paper)
+1.	Honeybee—Behavior.	2.	insect	societies.	I.	Title.
+QL568.A6S439			2010
+595.79'9156—dc22				2010010265
+British	Library	Cataloging-in-Publication	Data	is	available
+This	book	has	been	composed	in	Perpetua
+Printed	on	acid-free	paper.	∞
+Printed	in	the	United	States	of	America
+1	3	5	7	9	10	8	6	4	2
+
+===== PAGE 4 =====
+Contents
+								
+PROLOGUE
+		
+1				INTRODUCTION
+		
+2				LIFE	IN	A	HONEYBEE	COLONY
+		
+3				DREAM	HOME	FOR	HONEYBEES
+		
+4				SCOUT	BEES'	DEBATE
+		
+5				AGREEMENT	ON	BEST	SITE
+		
+6				BUILDING	A	CONSENSUS
+		
+7				INITIATING	THE	MOVE	TO	NEW	HOME
+		
+8				STEERING	THE	FLYING	SWARM
+		
+9				SWARM	AS	COGNITIVE	ENTITY
+10				SWARM	SMARTS
+														
+EPILOGUE
+	
+														
+Notes
+														
+Acknowledgments
+
+===== PAGE 5 =====
+														
+Illustration	Credits
+														
+Index
+
+===== PAGE 6 =====
+PROLOGUE
+B
+eekeepers	have	long	observed,	and	lamented,	the	tendency	of	their	hives	to
+swarm	in	the	late	spring	and	early	summer.	When	this	happens,	the	majority	of	a
+colony’s	members—a	crowd	of	some	ten	thousand	worker	bees—fies	of	with	the
+old	queen	to	produce	a	daughter	colony,	while	the	rest	stays	at	home	and	rears	a
+new	queen	to	perpetuate	the	parental	colony.	The	migrating	bees	settle	on	a	tree
+branch	in	a	beardlike	cluster	and	then	hang	there	together	for	several	hours	or	a
+few	days.	During	this	time,	these	homeless	insects	will	do	something	truly
+amazing;	they	will	hold	a	democratic	debate	to	choose	their	new	home.
+This	book	is	about	how	honeybees	conduct	this	democratic	decision-making
+process.	We	will	examine	the	way	that	several	hundred	of	a	swarm’s	oldest	bees
+spring	into	action	as	nest-site	scouts	and	begin	exploring	the	countryside	for	dark
+crevices.	We	will	see	how	these	house	hunters	evaluate	the	potential	dwelling
+places	they	find;	advertise	their	discoveries	to	their	fellow	scouts	with	lively
+dances;	debate	vigorously	to	choose	the	best	nest	site,	then	rouse	the	entire
+swarm	to	take	off;	and	finally	pilot	the	cloud	of	airborne	bees	to	its	home.	This	is
+typically	a	hollow	tree	several	miles	away.
+My	motive	for	writing	this	book	about	democracy	in	honeybee	swarms	is
+twofold.	First,	I	want	to	present	to	biologists	and	social	scientists	a	coherent
+summary	of	the	research	on	this	topic	that	has	been	conducted	over	the	last	60
+years,	starting	with	the	work	of	Martin	Lindauer	in	Germany.	Until	now,	the
+information	on	this	subject	has	remained	scattered	among	dozens	of	papers
+published	in	numerous	scientific	journals,	which	makes	it	hard	to	see	how	each
+discovery	is	connected	to	all	the	others.	The	story	of	how	honeybees	make	a
+democratic	decision	based	on	a	face-to-face,	consensus-seeking	assembly	is
+certainly	important	to	behavioral	biologists	interested	in	how	social	animals
+make	group	decisions.	
+I	hope	it	will	also	prove	important	to	neuroscientists
+studying	the	neural	basis	of	decision	making,	for	there	are	intriguing	similarities
+between	honeybee	swarms	and	primate	brains	in	the	ways	that	they	process
+information	to	make	decisions.	Furthermore,	I	hope	the	story	of	the	house-
+hunting	bees	will	be	helpful	to	social	scientists	in	their	search	for	ways	to	raise
+the	reliability	of	decision	making	by	human	groups.	One	important	lesson	that
+
+===== PAGE 7 =====
+we	can	glean	from	the	bees	in	this	regard	is	that	even	in	a	group	composed	of
+friendly	individuals	with	common	interests,	conflict	can	be	a	useful	element	in	a
+decision-making	process.	That	is,	it	often	pays	a	group	to	
+argue
+	things	carefully
+through	to	find	the	best	solution	to	a	tough	problem.
+My	second	motive	for	writing	this	book	is	to	share	with	beekeepers	and
+general	readers	the	pleasures	I	have	experienced	in	investigating	swarms	of
+honeybees.	I	can	thank	these	beautiful	little	creatures	for	many	hours	of	the
+purest	joy	of	discovery,	interspersed	among	(to	be	sure)	days	and	weeks	of
+fruitless	and	sometimes	discouraging	work.	To	give	a	sense	of	the	excitement
+and	challenge	of	studying	the	bees,	I	will	report	numerous	personal	events,
+speculations,	and	thoughts	about	conducting	scientific	studies.
+The	work	described	here	rests	on	a	solid	foundation	of	knowledge	that	the	late
+Professor	Martin	Lindauer	(1918–2008)	created	with	his	studies	of	the
+househunting	bees	in	the	1950s.	I	wish	to	dedicate	this	book	to	Martin	Lindauer,
+my	friend	and	teacher,	whose	pioneering	investigations	inspired	my	own
+explorations	of	the	wonderland	of	the	bees’	society.
+Tom	Seeley
+Ithaca,	New	York
+
+===== PAGE 8 =====
+1
+INTRODUCTION
+Go	to	the	bee
+,
+thou	poet:
+consider	her	ways
+and	be	wise.
+—George	Bernard	Shaw
+,	Man	and	Superman,
+	1903
+	
+	
+H
+oneybees	are	sweetness	and	light—producers	of	honey	and	beeswax—so	it	is
+no	great	wonder	that	humans	have	prized	these	small	creatures	since	ancient
+times.	Even	today,	when	rich	sweets	and	bright	lights	are	commonplace,	we
+humans	continue	to	treasure	these	hard-working	insects,	especially	the	200
+billion	or	so	that	live	in	partnership	with	commercial	beekeepers	and	perform	on
+our	behalf	a	critical	agricultural	mission:	go	forth	and	pollinate.	In	North
+America,	the	managed	honeybees	are	the	primary	pollinators	for	some	50	fruit
+and	vegetable	crops,	which	together	form	the	most	nutritious	portion	of	our	daily
+diet.	But	honeybees	also	provide	us	another	great	gift,	one	that	feeds	our	brains
+rather	than	our	bellies,	for	inside	each	teeming	beehive	is	an	exemplar	of	a
+community	whose	members	succeed	in	working	together	to	achieve	shared
+goals.	We	will	see	that	these	little	six-legged	beauties	have	something	to	teach	us
+about	building	smoothly	functioning	groups,	especially	ones	capable	of
+exploiting	fully	the	power	of	democratic	decision	making.
+Our	lessons	will	come	from	just	one	species	of	honeybee,	
+Apis	mellifera
+,	the
+best-known	insect	on	the	planet.	Originally	native	to	western	Asia,	the	
+Middle
+East,	Africa,	and	Europe,	it	is	now	found	in	temperate	and	tropical	regions
+throughout	the	world	thanks	to	the	dispersal	efforts	of	its	human	admirers.	It	is	a
+bee	that	is	beautifully	social.	We	can	see	this	beauty	in	their	nests	of	golden
+combs,	those	exquisite	arrays	of	hexagonal	cells	sculpted	of	thinnest	beeswax
+
+===== PAGE 9 =====
+(
+fig.	1.1
+).	We	can	see	it	further	in	their	harmonious	societies,	wherein	tens	of
+thousands	of	worker	bees,	through	enlightened	self-interest,	cooperate	to	serve	a
+colony’s	common	good.	And	in	this	book,	we	will	see	the	social	beauty	of
+honeybees	vividly,	and	in	fine	detail,	by	examining	how	a	colony	achieves	near-
+perfect	accuracy	when	it	selects	its	home.
+Choosing	the	right	dwelling	place	is	a	life-or-death	matter	for	a	honeybee
+colony.	If	a	colony	chooses	poorly,	and	so	occupies	a	nest	cavity	that	is	too	small
+to	hold	the	honey	stores	it	needs	to	survive	winter,	or	that	provides	it	with	poor
+protection	from	cold	winds	and	hungry	marauders,	then	it	will	die.	Given	the
+vital	importance	of	choosing	a	suitably	roomy	and	snug	homesite,	it	is	not
+surprising	that	a	colony’s	choice	of	its	living	quarters	is	made	not	by	a	few	bees
+acting	alone	but	by	several	hundred	bees	acting	collectively.	This	book	is	about
+how	this	sizable	search	committee	almost	always	makes	a	good	choice.	We	will
+uncover	the	means	by	which	these	house-hunting	bees	scour	the	neighborhood
+for	potential	nest	sites,	report	the	news	of	their	discoveries,	conduct	a	frank
+debate	about	these	options,	and	ultimately	reach	an	agreement	about	which	site
+will	be	their	colony’s	new	dwelling	place.	In	short,	we	will	examine	the
+ingenious	workings	of	honeybee	democracy.
+There	is	one	common	misunderstanding	about	the	inner	operations	of	a
+honeybee	colony	that	I	must	dispel	at	the	outset,	namely	that	a	colony	is
+governed	by	a	benevolent	dictator,	Her	Majesty	the	Queen.	The	belief	that	a
+
+===== PAGE 10 =====
+colony’s	coherence	derives	from	an	omniscient	queen	(or	king)	telling	the
+workers	what	to	do	is	centuries	old,	tracing	back	to	Aristotle	and	persisting	until
+modern	times.	But	it	is	false.	What	is	true	is	that	a	colony’s	queen	lies	at	the
+heart	of	the	whole	operation,	for	a	honeybee	colony	is	an	immense	family
+consisting	of	the	mother	queen	and	her	thousands	of	progeny.	It	is	also	true	that
+the	many	thousands	of	attentive	daughters	(the	workers)	of	the	mother	queen	are,
+ultimately,	all	striving	to	promote	her	survival	and	reproduction.	Nevertheless,	a
+colony’s	queen	is	not	the	Royal	Decider.	Rather,	she	is	the	Royal	Ovipositer.
+Each	summer	day,	she	monotonously	lays	the	1,500	or	so	eggs	needed	to
+maintain	her	colony’s	workforce.	She	is	oblivious	of	her	colony’s	ever-changing
+labor	needs—for	example,	more	comb	builders	here,	fewer	pollen	foragers	there
+—to	which	the	colony’s	staff	of	worker	bees	steadily	adapts	itself.	The	only
+known	dominion	exercised	by	the	queen	is	the	suppression	of	rearing	additional
+queens.	She	accomplishes	this	with	a	glandular	secretion,	called	“queen
+substance,”	that	workers	contacting	her	pick	up	on	their	antennae	and	distribute
+to	all	corners	of	the	hive.	In	this	way,	these	workers	spread	the	word	that	their
+mother	queen	is	alive	and	well,	hence	there	is	no	need	to	rear	a	new	queen.	So
+the	mother	queen	is	not	the	workers’	boss.	Indeed,	there	is	no	all-knowing
+central	planner	supervising	the	thousands	and	thousands	of	worker	bees	in	a
+colony.	The	work	of	a	hive	is	instead	governed	collectively	by	the	workers
+themselves,	each	one	an	alert	individual	making	tours	of	inspection	looking	for
+things	to	do	and	acting	on	her	own	to	serve	the	community.	Living	close
+together,	connected	by	the	network	of	their	shared	
+environment	and	a	repertoire
+of	signals	for	informing	one	another	of	urgent	labor	needs—for	example,	dances
+that	direct	foragers	to	flowers	brimming	with	sweet	nectar—the	workers	achieve
+an	enviable	harmony	of	labor	without	supervision.
+Collective	Intelligence
+This	book	focuses	on	what	I	believe	is	the	most	wondrous	example	of	how	the
+multitude	of	bees	in	a	hive,	much	like	the	multitude	of	cells	in	a	body,	work
+together	without	an	overseer	to	create	a	functional	unit	whose	abilities	far
+transcend	those	of	its	constituents.	Specifically,	we	will	examine	how	a	swarm	of
+honeybees	achieves	a	form	of	collective	intelligence	in	the	choice	of	its	home.
+As	will	be	described	in	
+chapter	2
+,	the	bees’	process	of	house	hunting	unfolds	in
+late	spring	and	early	summer,	when	colonies	become	overcrowded	in	their
+nesting	cavities	(bee	hives	and	tree	hollows)	and	then	cast	a	swarm.	When	this
+happens,	about	a	third	of	the	worker	bees	stay	at	home	and	rear	a	new	queen,
+thereby	perpetuating	the	mother	colony,	while	the	other	two-thirds	of	the
+
+===== PAGE 11 =====
+workforce—a	group	of	some	ten	thousand—rushes	of	with	the	old	queen	to
+create	a	daughter	colony.	The	migrants	travel	only	30	meters	(about	100	feet)	or
+so	before	coalescing	into	a	beardlike	cluster,	where	they	literally	hang	out
+together	for	several	hours	or	a	few	days	(
+fig.	1.2
+).	Once	bivouacked,	the	swarm
+will	field	several	hundred	house	hunters	to	explore	some	70	square	kilometers
+(30	square	miles)	of	the	surrounding	landscape	for	potential	homesites,	locate	a
+dozen	or	more	possibilities,	evaluate	each	one	with	respect	to	the	multiple
+criteria	that	define	a	bee’s	dream	home,	and	democratically	select	a	favorite	for
+their	new	domicile.	The	bees’	collective	judgment	almost	always	favors	the	site
+that	best	fulfills	their	need	for	sufficiently	spacious	and	highly	protective
+accommodations.	Then,	shortly	after	completing	their	selection	process,	the
+swarm	bees	implement	their	choice	by	taking	flight	en	masse	and	fying	straight
+to	their	new	home,	usually	a	snug	cavity	in	a	tree	a	few	miles	away.
+The	enchanting	story	of	house	hunting	by	honeybees	presents	us	with	two
+intriguing	mysteries.	First,	how	can	a	bunch	of	tiny-brained	bees,	hanging	from	a
+tree	branch,	make	such	a	complex	decision	and	make	it	well?	The	solution	to
+this	first	mystery	will	be	revealed	in	chapters	
+3
+,	
+4
+,	
+5
+,	and	
+6
+.	Second,	how	can	a
+swirl	
+ing	ensemble	of	ten	thousand	airborne	bees	steer	themselves	and	stay
+together	throughout	the	cross-country	flight	to	their	chosen	home,	a	journey
+whose	destination	is	typically	a	small	knothole	in	an	inconspicuous	tree	in	a
+remote	forest	corner?	The	solution	to	this	second	mystery	will	be	revealed	in
+chapters	
+7
+	and	
+8
+.
+
+===== PAGE 12 =====
+We	will	see	that	the	1.5	kilograms	(3	pounds)	of	bees	in	a	honeybee	swarm,
+just	like	the	1.5	kilograms	(3	pounds)	of	neurons	in	a	human	brain,	achieve	their
+collective	wisdom	by	organizing	themselves	in	such	a	way	that	even	though	each
+individual	has	limited	information	and	limited	intelligence,	the	group	as	a	whole
+makes	first-rate	collective	decisions.	This	comparison	between	swarms	and
+brains	might	seem	superfcial,	but	there	is	real	substance	here.	Over	the	last	two
+decades,	while	other	sociobiologists	and	I	have	been	analyzing	the	behavioral
+mechanisms	of	decision	making	by	insect	societies,	neurobiologists	have	been
+investigating	the	neuronal	basis	of	decision	making	by	primate	brains.	It	turns
+out	there	are	intriguing	similarities	in	the	pictures	that	have	emerged	from	these
+two	independent	lines	of	study.	For	example,	the	studies	of	individual	neuron
+activity	associated	with	the	eye-movement	decisions	in	monkey	brains	and	the
+studies	of	individual	bee	activity	associated	with	nest-site	decisions	in	honeybee
+swarms	have	both	found	that	the	decision-making	process	is	essentially	a
+competition	between	alternatives	to	accumulate	support	(e.g.,	neuron	firings	and
+bee	visits),	and	the	alternative	that	is	chosen	is	the	one	whose	accumulation	of
+support	first	surpasses	a	critical	threshold.	Consistencies	like	these	suggest	that
+there	are	general	principles	of	organization	for	building	groups	far	smarter	than
+the	smartest	individuals	in	them.	We	will	explore	these	principles	in	
+chapter	9
+,
+where	we	will	compare	the	decision-making	mechanisms	of	bee	swarms	and
+primate	brains,	and	in	
+chapter	10
+,	where	we	will	review	the	lessons	that	have
+
+===== PAGE 13 =====
+been	learned	from	the	bees	about	how	to	structure	a	group	so	that	it	functions	as
+a	smart	decision	maker.
+Group	decisions	by	humans	are	widespread	and	important,	whether	they	are
+small-scale	(e.g.,	agreements	made	among	friends	and	colleagues),	medium-
+scale	(e.g.,	choices	made	in	democratic	town	meetings),	or	large-scale	decisions
+(e.g.,	national	elections	or	international	agreements).	Not	surprisingly,	humans
+have	puzzled	over	how	to	optimize	group	decision	making	for	millennia,	at	least
+since	Plato’s	
+The	Republic
+	(360	BC)	and	no	doubt	long	before,	and	yet	many
+questions	remain	open	about	how	humans	can	improve	social	choice.	In	
+chapter
+10
+,	I	will	offer	some	suggestions,	what	I	call	“Swarm	Smarts”	because	they	have
+been	learned	from	the	bees,	on	how	human	groups	can	organize	themselves	to
+improve	their	decision	making.	The	American	essayist	Henry	David	Thoreau
+expressed	skepticism	about	the	wisdom	of	crowds	when	he	wrote,	“The	mass
+never	comes	up	to	the	standard	of	its	best	member,	but	on	the	contrary	degrades
+itself	to	a	level	with	the	lowest.”	The	German	philosopher	Friedrich	Nietzsche
+was	even	more	negative	about	group	intelligence	when	he	wrote,	“Madness	is
+rare	in	individuals—but	in	groups…it	is	the	rule.”	Certainly	there	are	many
+examples	of	groups	making	lousy	decisions—think	of	stock	market	bubbles	or
+of	deadly	stampedes	from	burning	buildings—but	the	reality	of	honeybee
+swarms	making	good	decisions	shows	us	that	there	really	are	ways	to	endow	a
+group	with	a	high	collective	IQ.
+Dancing	Bees
+The	scientific	story	told	in	this	book	started	in	Germany	almost	seventy	years
+ago,	in	the	summer	of	1944,	when	a	distinguished	professor	of	zoology	at	the
+University	of	Munich,	Karl	von	Frisch,	made	a	revolutionary	discovery	for
+which	he	would	eventually	receive	the	Nobel	Prize:	an	insect,	the	worker
+honeybee,	can	inform	her	hive	mates	of	the	direction	and	distance	to	a	rich	food
+source	by	means	of	dance	behavior.	Von	Frisch	had	already	known	for	nearly
+thirty	years	that	when	a	lone	forager	finds	a	rich	source	of	nectar,	she	returns
+excitedly	to	her	hive	and	performs	a	conspicuous	“waggle	dance.”	In	performing
+this	eye-catching	behavior,	the	dancer	walks	straight	ahead	on	the	vertical
+surface	of	a	comb,	waggling	her	body	from	side	to	side,	then	she	stops	the
+“waggle	run”	and	turns	left	or	right	to	make	a	semicircular	“return	run”	back	to
+her	starting	point,	whereupon	she	produces	another	waggle	run	followed	by
+another	return	run,	and	so	on	(
+fig.	1.3
+).	Each	waggle	dance	consists,	therefore,	of
+a	series	of	dance	circuits,	and	each	dance	circuit	contains	a	waggle	run	and	a
+
+===== PAGE 14 =====
+return	run.	Von	Frisch	also	knew	that	a	bee	may	continue	dancing	for	some
+seconds	or	even	some	minutes,	all	the	while	trailed	by	unemployed	foragers	that,
+in	his	own	words,	“take	part	in	each	of	her	manoeuvrings	so	that	the	dancer
+herself,	in	her	madly	wheeling	movements,	appears	to	carry	behind	her	a
+perpetual	comet’s	tail	of	bees.”	Furthermore,	he	knew	well	that	after	a	dance-
+follower	has	tripped	along	behind	a	dancer	throughout	several	circuits	of	her
+dance,	she	rushes	out	of	the	hive	to	search	for	the	bonanza	announced	by	the
+dancing	bee.	But	before	1944,	von	Frisch	thought	that	the	only	thing	the	dance-
+followers	learned	from	the	dancer	was	the	fragrance	of	the	flow-ers	she	had
+visited—which	they	detected	by	holding	their	antennae	close	to	the	dancer	to
+smell	the	floral	scents	adhering	to	her	body—and	that	upon	leaving	the	hive	the
+newly	aroused	bees	simply	searched	in	ever-expanding	circles	until	they
+discovered	flowers	with	the	memorized	fragrance.	What	von	Frisch	discovered
+in	1944	was	nearly	incredible:	the	dance-followers	did	not	search	for	flowers
+with	the	matching	scent	everywhere	around	the	hive,	but	only	in	the	vicinity	of
+where	the	dancer	had	foraged,	even	if	she	had	foraged	in	a	remote	spot,	such	as
+along	a	shady	lakeside	trail	far	from	the	hive.	Without	a	doubt,	the	newcomers
+were	somehow	acquiring	from	the	successful	forager	information	about	food-
+source	
+location	as	well	as	food-source	scent.	Could	this	location	information	be
+communicated	inside	the	hive,	by	means	of	the	bees’	dances?
+
+===== PAGE 15 =====
+The	answer	turned	out	to	be	a	defnitive	
+yes
+.	In	the	summer	of	1945,	amid	the
+chaos	in	Europe	following	the	end	of	World	War	II,	von	Frisch	returned	to	his
+dancing	bees,	now	observing	their	movements	more	closely	than	ever	before,
+examining	them	for	clues	that	would	help	him	solve	his	mystery.	He	discovered
+that	when	a	bee	performs	a	waggle	run	inside	a	dark	hive,	she	produces	a
+miniaturized	reenactment	of	her	recent	flight	outside	the	hive	over	sunlit
+countryside,	and	in	this	way	indicates	the	location	of	the	rich	food	source	she	has
+just	visited	(
+fig.	1.4
+).	Her	encoding	of	the	information	about	food-source
+location	works	as	
+follows.	The	duration	of	the	waggle	run—made	conspicuous
+despite	the	darkness	by	the	dancer	audibly	buzzing	her	wings	while	waggling	her
+body—is	directly	proportional	to	the	length	of	the	outward	journey.	On	average,
+one	second	of	the	combined	body-waggling/wing-buzzing	represents	some	1,000
+meters	(six-tenths	of	a	mile)	of	flight.	And	the	angle	of	the	waggle	run,	relative
+to	straight	up	on	the	vertical	comb,	represents	the	angle	of	the	outward	journey
+relative	to	the	direction	of	the	sun.	Thus,	for	example,	if	a	successful	forager
+walks	directly	upward	while	producing	a	waggle	run,	she	indicates	that	“the
+feeding	place	is	in	the	same	direction	as	the	sun.”	Or,	if	the	waggling	bee	heads
+40	degrees	to	the	right	of	vertical,	her	message	is,	“The	feeding	place	is	40
+degrees	to	the	right	of	the	sun,”	as	shown	in	
+figure	1.4
+.	Perhaps	most
+
+===== PAGE 16 =====
+remarkably,	the	bees	that	follow	a	dancer,	monitoring	her	waggle	runs,	are	able
+to	decode	her	dance	and	put	her	flight	instructions	into	action.
+While	von	Frisch	was	deciphering	the	secret	message	of	the	waggle	dance,	he
+was	also	supervising	a	young	graduate	student,	named	Martin	Lindauer,	who
+was	to	prove	von	Frisch’s	most	gifted	disciple	in	revealing	the	inner	workings	of
+honeybee	colonies	(
+fig.	1.5
+).	Lindauer	is	an	especially	important	figure	in	this
+book,	for	he	pioneered	the	study	of	honeybee	democracy	as	practiced	in	a	bee
+swarm	choosing	its	home.
+
+===== PAGE 17 =====
+Lindauer	was	born	in	a	tiny	village	in	the	foothills	of	the	Bavarian	Alps,	the
+next	to	youngest	of	15	children	in	a	poor	farming	family.	Here	he	grew	up	close
+to	nature—including	the	bees	in	his	father’s	hives—but	he	was	also	an
+outstanding	student	and	won	a	scholarship	to	a	distinguished	boarding	school	in
+Landshut,	Germany.	In	April	1939,	eight	days	after	his	high	school	graduation,
+he	was	drafted	into	Hitler’s	Work	Service	to	dig	trenches,	and	six	months	later
+he	was	transferred	to	the	army	and	assigned	to	an	antitank	unit.	In	July	1942,
+during	fierce	flighting	on	the	Russian	front,	he	received	deep	shrapnel	wounds
+from	an	exploding	
+grenade.	This	proved	his	salvation.	He	was	removed	from	the
+front,	but	the	other	156	men	in	his	company	went	on	to	the	battle	of	Stalingrad.
+Only	three	returned	alive.
+While	recovering	in	Munich,	Lindauer	was	recommended	by	his	physician	to
+visit	the	university	and	attend	one	of	the	General	Zoology	lectures	delivered	by
+the	famous	Professor	Karl	von	Frisch.	Lindauer	later	recalled	that	when	he	did,
+and	saw	von	Frisch	talking	about	cell	division,	he	returned	to	“a	new	world	of
+humanity,”	where	people	create	rather	than	destroy.	He	resolved	to	study
+biology,	and	in	the	summer	of	1943,	after	being	discharged	from	the	army	as	a
+severely	wounded	soldier,	he	began	university	studies	in	Munich.	Ultimately,	he
+started	his	PhD	research	on	honeybees,	with	von	Frisch	his	advisor,	in	the	spring
+
+===== PAGE 18 =====
+of	1945.
+Dirty	Dancers
+Lindauer	had	a	knack	for	noticing	little	things	in	passing—some	curious
+anomaly	or	surprising	behavioral	quirk—that	would	eventually	turn	out	to	be
+important.	It	was	thanks	to	this	special	talent	that	Lindauer	embarked	on	his
+studies	of	house	hunting	by	honeybees,	which	he	would	later	refer	to	as	“the
+most	beautiful	experience”	in	his	scientifc	work.	It	all	began	on	a	spring
+afternoon	in	1949,	when	Lindauer	was	walking	past	the	beehives	outside	the
+Zoological	Institute,	and	he	spied	a	golden	mass	of	bees,	a	swarm,	hanging	on	a
+bush.	Pausing	to	study	it,	he	noticed	several	bees	performing	waggle	dances	on
+the	swarm’s	surface,	doing	so	with	their	usual	attention-grabbing	vigor,	but
+instead	of	striding	across	a	beeswax	comb,	the	normal	dance	foor	for	bees,	these
+dancers	were	walking	over	the	backs	of	other	bees.	Initially,	he	assumed	that
+these	swarm	dancers	were	foragers	bringing	food	back	to	the	swarm,	because	all
+the	dancing	bees	that	he	and	von	Frisch	had	studied	over	the	past	few	years	had
+been	foragers	bringing	food	back	to	the	hive.	But	with	his	customary	patience	in
+watching	the	bees,	Lindauer	lingered	by	the	swarm,	kept	observing	its	dancers,
+and	gradually	realized	that	they	did	not	look	like	foragers,	for	unlike	pollen
+foragers	they	never	carried	pollen	loads	and	unlike	nectar	foragers	they	never
+regurgitated	droplets	of	nectar	to	adjacent	bees.	He	also	saw	something	odd:
+many	of	the	dancers	arrived	at	the	swarm	dirty	and	dusty.	When	he	plucked
+several	of	these	rather	grubby	bees	from	the	swarm	with	
+forceps,	dusted	them	of
+with	a	small	paintbrush,	and	examined	the	debris	under	a	microscope,	he	found
+no	pollen	grains,	just	various	forms	of	dirt	particles.	“Black	with	soot,”	he
+reported,	“red	with	brick	dust,	white	with	four,	or	gray	and	dusty	as	if	they	had
+been	grubbing	a	hole	in	the	ground.”	Sniffing	the	bees	black	with	soot,	he	was
+reminded	of	the	aroma	of	a	chimney	sweep.
+Lindauer	concluded	that	these	dusty	and	dirty	dancers	were	certainly	not
+foragers.	He	suspected	that	they	were	nest-site	scouts	who	had	discovered
+potential	nesting	cavities	amid	the	rubble	of	bombed-out	Munich—an	unused
+chimney	here,	a	cavity	in	some	collapsed	brick	wall	there,	or	even	a	forgotten
+four	chest	in	an	abandoned	attic—and	were	indicating	the	locations	of	their
+discoveries	by	performing	waggle	dances.	He	was	eager	to	test	this	hunch	by
+making	further	observations	of	swarm	bees,	but	in	1949,	with	Germany’s
+economy	still	in	shambles	and	von	Frisch’s	laboratory	short	of	bees,	von	Frisch
+directed	the	institute’s	beekeeper	to	promptly	hive	all	swarms,	lest	the	bees	be
+
+===== PAGE 19 =====
+lost.	This	meant	that	the	bees’	house-hunting	process	was	cut	short.	And	so,	for
+the	time	being,	Lindauer’s	study	of	the	house-hunting	process	was	also	cut	short.
+But	he	persisted	in	seeking	approval	to	leave	some	swarms	alone	so	he	could
+study	their	dancing	bees,	and	two	summers	later,	in	1951,	von	Frisch	granted
+Lindauer	permission	to	study	as	he	wished	all	the	swarms	from	the	beehives	kept
+in	the	garden	of	the	Zoological	Institute	in	Munich.
+Later,	in	
+chapters	3
+	to	
+6
+,	we	will	review	in	detail	the	intriguing	story	of
+democratic	decision	making	by	honeybees	that	Lindauer	started	piecing	together
+in	1951.	For	now,	we	will	consider	only	how	he	tested	his	hypothesis	that	the
+bees	performing	dances	on	a	swarm	are	nest-site	scouts	advertising	potential
+homes.	In	the	summer	of	1951,	he	examined	the	dances	on	nine	swarms.	Sitting
+patiently	beside	each	swarm	for	hours	and	days	on	end,	he	labeled	each	dancing
+bee	with	a	paint	dot	when	she	began	her	dancing,	and	he	noted	the	direction	and
+distance	of	the	site	indicated	by	her	first	dance.	(Lindauer	reasonably	assumed
+that	his	swarming	bees	were	encoding	distance	and	direction	information	in	their
+dances	in	exactly	the	same	way	as	von	Frisch	had	found	for	his	foraging	bees.)
+These	swarm-side	vigils	led	Lindauer	to	a	surprising	finding:	when	dancers
+started	to	appear	on	a	swarm,	they	announced	a	dozen	or	more	widely	separated
+locations,	but	after	a	few	hours	or	a	few	days,	they	began	to	announce	one
+location	in	in	
+creasing	numbers.	Ultimately,	during	the	last	hour	or	so	before	the
+swarm	took	of	to	fly	to	its	new	home,	the	bees	dancing	on	the	swarm	all
+indicated	just	one	distance	and	direction.	Lindauer	reasoned	that	if	the	bees
+dancing	on	a	swarm	had	been	searching	for	nest	sites,	and	if	they	were
+performing	dances	to	advertise	their	finds,	then	the	location	they	were	indicating
+unanimously	in	the	end	should	correspond	to	the	location	of	the	swarm’s	new
+residence.	To	test	this	prediction,	he	tried	to	follow	each	swarm	when	it	few	to
+its	new	home,	by	sprinting	down	Munich’s	streets	and	alleys	beneath	the
+airborne	swarm	(
+fig.	1.6
+).	Three	times	he	succeeded!	And	in	each	case	the	spot
+indicated	by	the	bees’	closing	dances	matched	the	address	of	their	new	dwelling
+place.	So,	sure	enough,	Lindauer’s	dirty	dancers	really	were	house	hunters.
+
+===== PAGE 20 =====
+Catching	the	Buzz
+In	June	1952,	when	Lindauer	was	busy	in	his	second	summer	of	swarm	watching
+in	Munich,	I	was	born	some	6,500	kilometers	(4,000	miles)	away,	in	a	little	town
+in	Pennsylvania.	A	few	years	later,	my	family	moved	to	Ithaca,	New	York,	which
+has	been	basically	my	hometown	ever	since.	While	growing	up	in	Ellis	Hollow,
+a	rural	community	a	few	miles	east	of	Ithaca,	I	spent	much	time	alone	exploring
+the	wild	areas	around	our	home:	shady	hardwood	forests	on	the	steep	hillsides,
+sunlit	abandoned	fields	where	the	land	slopes	gently,	and	winding	Cas-cadilla
+Creek	connecting	broad	swamps	in	the	valley	bottom.	My	favorite	find	was
+about	a	mile	from	home	down	a	dirt	road	that	led	to	an	old	farmhouse.	Here,	in	a
+sunny	spot	beside	a	field	of	goldenrod,	I	discovered	two	wooden	hives	of	bees
+that	belonged	to	a	beekeeper.	I	loved	visiting	these	hives.	Sitting	beside	one,	I
+could	see	bees	landing	heavily	at	the	entrance	with	loads	of	brightly	colored
+pollen,	I	could	hear	the	hum	of	bees	fanning	their	wings	to	ventilate	their	nest,
+and	I	could	smell	the	aroma	of	ripening	honey.	That	thousands	of	insects	could
+
+===== PAGE 21 =====
+live	together	so	densely	and	harmoniously,	and	could	build	delicate	wax	combs
+filled	with	delicious	honey,	was	an	almost	miraculous	wonder	that	left	a	deep
+impression.	No	less	impressive	was	what	I	saw	when	I	lay	in	the	tall	grass	beside
+these	hives:	thousands	of	humming	bees	crisscrossing	the	blue	summer	sky	like
+shooting	stars.
+It	was	not	until	high	school—when	my	peers	seemed	interested	mostly	in
+sports,	motorcycles,	and	girls—that	I	became	utterly	spellbound	by	the	bees.	I’d
+had	a	deep	curiosity	about	honeybees	ever	since	a	beekeeper	made	a	show-and-
+tell	visit	to	my	third	grade	class	in	elementary	school,	and	I	had	especially
+enjoyed	earning	an	Insect	Study	merit	badge	as	a	Boy	Scout	in	junior	high
+school.	I	had	even	daydreamed	from	time	to	time	about	ordering	a	hive	and
+some	bees	from	the	Sears	catalog	and	taking	up	beekeeping.	But	I	didn’t	really
+catch	the	buzz	until	the	summer	day	in	1969	when	I	found	a	swarm	hanging
+from	a	tree	branch,	
+quickly	nailed	together	some	boards	to	make	a	crude	hive,
+shook	the	bees	into	my	hive,	and	brought	them	home.	Now	I	had	these	little
+sparks	of	wonderment	living	in	a	box	that	I	could	gently	open	to	watch	them
+closely,	and	I	did	so	for	several	hours	each	day	after	work,	mesmerized	by	the
+intricate	behaviors	of	the	individual	bees	and	by	the	peace	of	their	great
+community.
+In	the	fall	of	1970,	when	I	began	my	freshman	year	at	Dartmouth	College,	I
+hadn’t	yet	realized	that	studying	bees	could	be	serious	business,	and	I	aimed	to
+become	a	physician	who	would	do	beekeeping	as	a	hobby.	But	the	allure	of	the
+bees	grew	stronger	and	stronger.	I	made	bees	or	beekeeping	the	subject	of	nearly
+every	college	writing	assignment.	I	chose	chemistry	as	my	major	area	of	study
+so	that	I	could	become	a	cryptographer	of	the	chemical	(pheromonal)	language
+of	bees,	which	was	just	starting	to	be	deciphered.	And	I	returned	each	summer	to
+Ithaca	so	that	I	could	work	at	the	Dyce	Laboratory	for	Honey	Bee	Studies	at
+Cornell.	The	director	of	this	lab,	Roger	A.	Morse	(“Doc”),	understood	my
+passion	for	the	bees	and	advised	me	to	give	graduate	school	some	thought.
+During	my	last	two	years	at	Dartmouth,	I	gradually	became	aware	that	my
+interests	in	entomology	had	eclipsed	those	in	medicine,	so	even	though	I	applied
+to	and	was	accepted	by	three	medical	schools,	I	was	thrilled	when	I	was
+accepted	at	Harvard	to	pursue	graduate	studies	with	the	noted	insect	sociologist
+Edward	O.	Wilson,	whose	1971	book	
+The	 Insect	 Societies
+	had	made	an
+enormous	impression	on	me.
+When	I	arrived	at	Harvard	in	the	fall	of	1974,	I	had	the	good	fortune	of	being
+assigned	to	Bert	Hölldobler,	a	brilliant	investigator	of	ant	behavior	and	a	young
+
+===== PAGE 22 =====
+man	of	immense	personal	appeal,	for	my	provisional	thesis	advisor.	Bert	had
+recently	moved	from	the	University	of	Frankfurt,	Germany.	He	had	been	hired
+by	Harvard	as	a	full	professor	to	seed	the	university	with	the	Karl	von	Frisch
+approach	to	animal	behavior	study:	close	behavioral	observations	of	animals
+living	in	nature	combined	with	incisive	experimental	investigations	on	the
+mechanisms	underlying	their	behavior.	In	Germany,	Bert	had	studied	under
+Martin	Lindauer,	so	he	knew	the	bees	as	well	as	the	ants,	his	own	first	love.	He
+supported	my	beeophilia,	and	we	were	quick	to	become	friends.
+Bert	Hölldobler’	s	connection	with	Martin	Lindauer	was	important	to	me
+because	I	knew	that	I	wanted	my	PhD	thesis	research	to	deepen	Lindauer’	s
+investigations	of	how	a	honeybee	colony	works	as	unit,	a	kind	of	superorganism.
+I	
+was	especially	keen	to	analyze	in	greater	detail	the	decision-making	process	of
+a	honeybee	swarm.	Back	at	Dartmouth,	I	had	read	Lindauer’s	little	book,
+Communication	 among	 Social	 Bees
+,	and	had	been	especially	intrigued	by
+chapter	2
+,	titled	“Communication	by	Dancing	in	Swarm	Bees,”	in	which	he
+summarized	his	studies	of	how	a	swarm	chooses	its	home.	Indeed,	I	was	so
+fascinated	that	I	tracked	down	Lindauer’s	full	report	on	this	work,	a	62-page
+paper,	all	in	German,	titled	“Schwarmbienen	auf	Wohnungssuche”	(Swarm	bees
+out	house	hunting).	There	was	just	one	problem,	I	could	not	read	German.	My
+solution	was	to	enroll	in	an	introductory	German	course	at	Dartmouth,	buy	a
+German-English	dictionary,	make	a	Xerox	copy	of	Lindauer’s	paper,	and
+patiently	decipher	Lindauer’s	big	paper.	(I	penciled	in	the	paper’s	margins	the
+meaning	of	every	new	German	word	and	this	densely	annotated	copy,	now	38
+years	old,	is	a	prize	part	of	my	reprint	collection.)	In	poring	over	this	paper,	I
+began	to	realize	that	Lindauer’s	pioneering	investigation	of	the	swarm	bees’
+process	of	collective	decision	making	provided	just	a	preliminary	understanding
+of	the	subject,	and	that	it,	like	all	good	scientific	
+studies,	raised	many	more
+questions	than	it	answered.	I	was	also	amazed—and	I	confess	delighted—that
+during	the	nearly	20	years	since	Lindauer	had	published	his	work	in	1955,	no
+one	had	pressed	the	investigation	more	deeply.	I	resolved	to	do	so,	starting	with
+my	PhD	thesis	research	(
+fig.	1.7
+).
+
+===== PAGE 23 =====
+This	book	aims	to	present	to	biologists	and	general	readers	what	was	learned
+by	Lindauer	in	the	1950s,	and	by	myself	and	others	since	the	1970s,	about	how
+the	workers	in	a	honeybee	swarm	conduct	a	democratic	decision-making	process
+to	make	the	life-or-death	choice	of	where	to	build	their	new	home.	This	work	has
+revealed	how	the	process	of	evolution	by	natural	selection,	operating	over
+millions	of	years,	has	shaped	the	behavior	of	bees	so	that	they	coalesce	into	a
+single	collective	intelligence.	This	story	about	the	bees	also	provides	useful
+guidelines	to	human	groups	whose	members	share	common	interests	and	want	to
+make	good	group	decisions.	Mainly,	though,	this	book	tries	to	be	a	window	into
+the	private	world	of	a	honeybee	colony.	If	it	bolsters,	in	any	way,	an	appreciation
+of	these	little	creatures	for	the	beauty	of	their	social	behavior,	along	with	their
+service	in	keeping	the	world	flowering	and	fruitful,	then	it	will	have	achieved	its
+purpose.
+
+===== PAGE 24 =====
+2
+LIFE	IN	A	HONEYBEE	COLONY
+…this	being	an	Amazonian
+or	feminine	kingdom.
+—Charles	Butler
+,	The	Feminine	Monarchie,
+	1609
+	
+	
+T
+he	honeybee,	
+Apis	mellifera
+,	is	just	one	of	nearly	20,000	species	of	bees	that
+exist	worldwide.	They	are	a	surprisingly	diverse	lot—some	are	smaller	than	a
+rice	grain,	while	others	will	half	fill	a	teacup—but	they	are	all	descended	from
+one	ancestral	species	of	vegetarian	wasp	that	lived	approximately	100	million
+years	ago,	in	the	Early	Cretaceous	period,	when	huge	dinosaurs	were	still
+stomping	about	and	flowering	plants	were	just	starting	to	appear.	Even	today,
+many	bee	species	are	remarkably	wasplike	in	appearance,	but	behaviorally	the
+two	groups	are	distinct.	Nearly	all	wasps,	including	the	familiar	paper	wasps	and
+yellow	jackets,	are	predators	that	kill	other	insects	or	spiders	(often	by	stinging)
+to	provide	the	egg-laying	females	and	their	growing	young	with	proteinaceous
+food.	Bees,	however,	have	abandoned	the	carnivorous	behavior	of	their	ancestors
+and	depend	instead	on	collecting	protein-rich	pollen	from	flowers.	This
+pollenivo-rous	habit	explains	the	decidedly	fuzzy,	almost	teddy-bearish,	look	of
+many	bees;	their	bodies	are	thickly	covered	with	plumose	hairs	that	effciently
+catch	pollen	grains	when	a	bee	scrabbles	through	a	flower.
+Both	bees	and	wasps	regularly	visit	flowers,	for	both	types	of	insects	feed	on
+sugary	nectar	for	energy,	but	it	is	between	the	pollen-loving	bees	and	the
+flowering	plants	that	a	strong	mutual	dependence	has	evolved	over	the	millions
+of	
+years	since	both	groups	arose.	These	days,	the	two	are	made	for	each	other.
+Bees	depend	on	flowers	for	adequate	nourishment,	while	many	flowering	plants
+depend	on	bees	for	sexual	reproduction.	Bees,	with	their	hairy	bodies	and
+fixation	on	flowers	as	protein	sources,	serve	as	flying	penises	for	the	plants,
+
+===== PAGE 25 =====
+picking	up	pollen	grains	from	the	bursting	anthers	of	one	flower	and	depositing
+them	on	the	sticky	stigma	of	another.	Introducing	a	hive	of	honeybees	to	any
+flowering	area—garden,	orchard,	blooming	wayside,	or	prairie—brings	to	the
+neighborhood,	in	effect,	a	large,	dawn-to-dusk	“escort”	service	of	the	fowers’
+little	friends.
+Honeybees	are	unusual	bees	in	that	they	live	in	teeming	societies	whose
+massive	nests	of	honeycomb	fill	the	boxy	hives	of	beekeepers	or,	as	we	shall	see,
+suitably	spacious	cavities	in	hollow	trees.	In	most	bee	species,	by	contrast,
+individuals	live	in	solitude	and	build	small	nests	in	narrow	tunnels	excavated
+inside	plant	stems	or	in	sandy	soil.	The	typical	life	history	of	one	of	these
+solitary	bee	species	starts	in	late	spring	or	early	summer	when	a	mated	female
+emerges	from	an	overwintering	burrow	(the	males	having	died	of	the	previous
+fall).	 Over	 the	 next	 few	 weeks,	 this	 motherly	 bee	 will	 excavate	 a
+multichambered	nest,	provision	each	chamber	with	a	sticky	ball	of	pollen
+moistened	with	nectar,	lay	one	whitish	egg	atop	each	pollen	ball,	seal	up	each
+chamber,	and	then	leave	her	offspring	to	eat	their	way	to	adulthood	later	that
+summer.	She	will	die	long	before	her	offspring	emerge	as	adults,	mate	with	one
+another,	and	prepare	for	the	coming	winter.	Clearly,	most	bees	are	loners.
+A	Composite	Being
+When	we	look	through	the	glass	walls	of	a	honeybee	observation	hive,	or	gently
+lift	the	lid	from	a	conventional	beehive	and	peer	inside,	we	see	the	opposite	of
+loner	bees:	thousands	and	thousands	of	bees	living	together.	Virtually	all	are
+female	worker	bees,	all	of	whom	are	daughters	of	the	one	queen	bee	that	lives	in
+their	midst.	Even	though	these	workers	are	females	and	are	fully	equipped	to
+care	for	offspring,	they	have	poorly	developed	ovaries	and	they	rarely	lay	any
+eggs.	If	we	proceed	to	search	the	combs	of	the	hive	carefully,	we	will	eventually
+locate	the	queen,	who	resembles	the	workers	but	is	a	bit	bigger,	with	a	longer
+abdomen	and	longer	legs	(
+fig.	2.1
+).	Her	greater	size	is	impressive,	but	what	most
+renders	her	conspicuous	is	how	she	moves	slowly,	indeed	majestically,	across	the
+combs	and	how	she	is	treated	by	her	worker	daughters.	As	the	queen	advances,
+the	workers	before	her	step	back	to	clear	her	path,	and	when	she	pauses,	the
+dozen	or	so	workers	beside	her	gingerly	step	forward	to	feed	and	groom	her,
+forming	a	retinue	of	nudging	bees	that	encircles	her	completely.	In	contrast	to
+the	workers,	the	queen	is	an	amazing	layer	of	eggs,	depositing	them	in	cells	at	a
+rate	of	one	or	more	per	minute,	or	more	than	1,500	per	day	(with	a	combined
+weight	nearly	equal	to	her	own)	in	late	spring	and	early	summer,	when	a
+
+===== PAGE 26 =====
+colony’s	brood	rearing	is	at	its	peak	(
+fig.	2.2
+).	Over	an	entire	summer,	a	colony’s
+queen	will	produce	some	150,000	eggs,	hence	about	half	a	million	during	the
+two	or	three	years	of	her	likely	lifespan.
+Most	of	the	pearly	white	eggs	the	queen	lays	will	be	fertilized,	but	some	will
+be	unfertilized.	During	the	first	week	of	her	life,	she	few	from	her	colony’s	hive
+and	mated	with	10	to	20	males	from	other	hives	in	the	area,	and	so	procured	a
+
+===== PAGE 27 =====
+lifetime	supply	of	approximately	five	million	sperm.	The	queen	stores	all	these
+sperm	in	suspended	animation	inside	a	spherical	organ	called	a	spermatheca,
+which	lies	in	the	rear	of	her	abdomen,	behind	her	massive	ovaries.	With	each	egg
+she	lays,	the	queen	decides	whether	to	dispense	a	few	fertilizing	sperm	or	to	hold
+them	back,	and	in	this	way	she	determines	the	sex	of	her	offspring:	fertilized	for
+female,	unfertilized	for	male.	Whether	a	fertilized	egg	develops	into	a	nonbreed-
+ing	worker	or	an	egg-laying	queen	depends	on	how	it	is	treated.	If	it	is	deposited
+in	a	standard-size	cell	in	the	combs,	where	after	hatching	into	a	larva	it	will	be
+fed	by	the	workers	with	standard-quality	larval	food,	then	it	will	develop	into	a
+worker.	But	if	a	fertilized	egg	is	deposited	in	a	large,	specially	built	queen	cell,
+hanging	from	the	bottom	of	a	comb,	then	the	larva	it	gives	rise	to	will	be	fed	a
+lavish	diet	of	nutrient-rich	secretions	(so-called	royal	jelly),	and	its	development
+will	be	channeled	to	a	developmental	pathway	that	produces	a	queen.	For	the
+fertilized	eggs	of	bees,	food	is	destiny.
+A	queen	withholds	sperm	from	less	than	5	percent	of	her	eggs,	but	these
+unfertilized	eggs	are	important	for	they	give	rise	to	her	sons,	the	colony’s	drones
+(
+fig.	2.3
+).	These	are	a	colony’s	brawniest	bees,	endowed	with	huge	eyes	for
+spying	young	queens	out	on	nuptial	fights	and	massive	flight	muscles	for
+chasing	after	the	queens	at	speeds	up	to	35	kilometers	an	hour	(about	22	miles
+per	hour).	They	are	also	a	colony’s	laziest	bees.	Unlike	the	workers	who	perform
+all	the	household	tasks	inside	their	hive—clean	cells,	feed	larvae,	build	combs,
+ripen	honey,	ventilate	hive,	guard	entrance,	etc.—the	drones	spend	their	time	at
+home	simply	hanging	out	in	restful	leisure,	from	time	to	time	helping	themselves
+to	meals	from	the	colony’s	honey	reserves	or	begging	feedings	from	their
+worker-sisters.	Nevertheless,	they	make	a	fundamentally	important	contribution
+to	their	colony’s	success,	for	in	mating	with	the	young	queens	of	the	neighboring
+colonies	they	help	their	colony	win	in	the	ceaseless	evolutionary	competition	to
+pass	genes	on	to	future	generations.	And	when	it	comes	to	seeking	sex,	drone
+honeybees	are	no	slackers.	Every	sunny	afternoon,	once	a	drone	reaches	sexual
+maturity	at	about	12	days	of	age,	he	will	fly	from	his	hive	looking	for	action.	In
+ways	that	remain	mysterious,	he	will	find	his	way	to	one	of	the	traditional
+honeybee	mating	areas	(“drone	congregation	areas”)	within	a	few	miles	of	his
+home,	and	will	fly	about	this	aerial	pickup	spot,	waiting	for	a	young	queen	to
+appear.	If	one	does,	he	will	zoom	after	her.	And	if	he	manages	to	outrace	his
+rivals	and	contact	the	queen,	he	will	inseminate	her	in	flight,	10	to	20	meters	(30
+to	60	feet)	up	in	the	sky.	If	he	doesn’t	make	contact,	he’ll	fly	home,	rest	and
+refuel,	and	come	out	later	to	try	his	luck	again.
+
+===== PAGE 28 =====
+One	way	to	think	of	a	honeybee	colony	is,	then,	as	a	society	of	many
+thousands	of	individuals:	the	queen,	workers,	and	drones	just	discussed.	But	to
+understand	the	distinctive	biology	of	this	species	of	bee,	it	is	often	helpful	to
+think	of	a	colony	in	a	slightly	different	way,	not	just	as	thousands	of	separate
+bees	but	also	as	a	single	living	entity	that	functions	as	a	unified	whole	(
+fig.	2.4
+).
+In	other	words,	it	can	help	to	think	of	a	honeybee	colony	as	a	superorganism.
+Just	as	a	human	body	functions	as	a	single	integrated	unit	even	though	it	is	a
+multitude	of	cells,	the	superorgan-ism	of	a	honeybee	colony	operates	as	a	single
+coherent	whole	even	though	it	is	a	multitude	of	bees.	The	fact	that	both
+perspectives—colony	as	superorganism	
+and
+	colony	as	society—are	valid	refects
+the	way	in	which	evolution	has	repeatedly	built	higher-level	units	of	biological
+organization:	by	assembling	unified	societies	of	lower-level	units.	For	example,
+during	the	origins	of	multicellular	organisms,	natural	selection	favored	some
+societies	of	cells	whose	members	cooperated	rather	than	competed.	Bit	by	bit,
+this	selection	for	close	cooperation	produced	the	thoroughly	integrated	societies
+of	cells	that	we	know	today,	for	example,	as	hummingbirds	and	human	beings.
+The	same	sort	of	selection	for	extreme	cooperation	also	happened	with	some
+societies	of	animals	to	produce	the	thoroughly	harmonious,	smoothly	running
+insect	societies	that	we	can	call	superorganisms.	These	include	not	just	colonies
+of	honeybees	but	also	the	gigantic	colonies	of	leafcutter	ants,	driver	ants,	or
+fungus-growing	termites.
+A	colony	of	honeybees	is,	then,	far	more	than	an	aggregation	of	individuals,	it
+is	a	composite	being	that	functions	as	an	integrated	whole.	Indeed,	one	can
+accurately	think	of	a	honeybee	colony	as	a	single	living	entity,	weighing	as	much
+
+===== PAGE 29 =====
+as	5	kilograms	(10	pounds)	and	performing	all	of	the	basic	physiological
+processes	that	support	life:	ingesting	and	digesting	food,	maintaining	nutritional
+balance,	circulating	resources,	exchanging	respiratory	gases,	regulating	water
+content,	controlling	body	temperature,	sensing	the	environment,	deciding	how	to
+behave,	and	achieving	locomotion.	Consider,	for	example,	the	control	of	body
+(colony)	temperature	(
+fig.	2.5
+).	From	late	winter	to	early	fall,	when	the	workers
+are	rearing	brood,	a	colony’s	internal	temperature	is	kept	between	34°	and	36°C
+(93°	and	96°F)—just	below	the	core	body	temperature	of	humans—even	as	the
+ambient	air	temperature	ranges	from	-30°	to	50°C	(-20°	to	120°F).	The	colony
+accomplishes	this	by	adjusting	the	rate	at	which	it	sheds	the	heat	generated	by	its
+resting	metabolism	and,	in	times	of	extreme	cold,	by	boosting	its	metabolism	to
+intensify	its	heat	production.	A	colony’s	metabolism	is	fueled	by	the	honey	it	has
+stored	in	its	hive.	Other	indicators	of	the	high	functional	integration	of	a
+honeybee	colony	include	
+colonial	 breathing:
+	limiting	the	buildup	of	the
+respiratory	gas	CO
+2
+	inside	the	hive	by	increasing	its	ventilation	when	the	CO
+2
+level	reaches	1–2	percent;	
+colonial	circulation:
+	keeping	the	heat-producing	bees
+in	the	central,	brood-nest	region	of	the	hive	properly	fueled	with	honey	carried	in
+from	peripheral	honey	combs;	and	
+colonial	fever	response:
+	mounting	a	disease-
+fighting	elevation	of	the	nest	temperature	when	a	colony	suffers	a	dangerous
+fungal	infection	of	the	brood	bees.	I	suggest,	though,	that	the	single	best
+demonstration	of	the	superorganismic	nature	of	a	honeybee	colony	is	the	ability
+of	a	honeybee	swarm	to	function	as	an	intelligent	decision-making	unit	when
+choosing	its	new	home.
+
+===== PAGE 30 =====
+Unique	Annual	Cycle
+
+===== PAGE 31 =====
+The	key	to	understanding	why	honeybee	swarms	are	meticulous	in	the	choice	of
+their	living	quarters	is	the	unique	annual	cycle	of	the	honeybee,	which	depends
+critically	on	colonies	occupying	nesting	cavities	that	are	both	snug	and	roomy.
+Unlike	all	the	other	social	insect	species	that	live	in	cold	climates,	honeybees	do
+not	survive	winter	in	dormancy,	but	as	fully	functioning	colonies	in	self-heated
+nests.	To	achieve	this	means	of	winter	survival,	each	colony	contracts	in	winter
+into	a	tight,	well-insulated	cluster	of	bees	about	the	size	of	a	basketball.	The
+cluster’s	surface	temperature	is	maintained	above	10°C	(50°F),	which	is	a	few
+degrees	above	a	worker	bee’s	chill-coma	threshold,	and	so	is	warm	enough	to
+keep	the	outermost	bees	alive	(
+fig.	2.6
+).	Heat	is	generated	within	the	cluster	by
+the	bees	isometrically	contracting	their	two	sets	of	flight	muscles	(one	for
+elevating	the	wings	and	one	for	depressing	them)	thereby	producing	much	heat
+but	few	or	no	wing	vibrations.	These	flight	muscles	endow	a	bee	with	a
+surprisingly	powerful	means	of	heat	production.	Bees	fly,	of	course,	by	flapping
+their	wings—the	most	energetically	demanding	mode	of	animal	locomotion—
+and	the	flight	muscles	of	insects	are	among	the	most	metabolically	active	of
+tissues.	Indeed,	a	flying	bee	expends	energy	at	a	rate	of	about	500	watts	per
+kilogram	(250	watts	per	pound),	whereas	the	maximum	power	output	of	an
+Olympic	rowing	crew	is	only	about	20	watts	per	kilogram	(10	watts	per	pound).
+At	any	moment,	however,	only	a	small	portion	of	the	clustered	bees	will	be
+shivering	with	maximum	intensity,	so	the	total	heat	output	by	the	approximately
+two	kilograms	(four	pounds)	of	bees	in	a	winter	cluster	isn’t	1,000	watts,	but	is
+only	about	40	watts,	a	rate	of	heat	production	like	that	of	a	small	incandescent
+light	bulb.	In	a	snug	cavity,	sheltered	from	heat-robbing	winds,	a	colony	with
+this	level	of	heat	output	will	survive	the	winter	quite	nicely.	The	importance	of
+inhabiting	a	protective	cavity	is	demonstrated	by	the	sad	fate	of	the	occasional
+colony	that	fails	to	find	shelter	and	nests	in	the	open	(
+fig.	2.7
+);	almost	certainly,
+it	will	perish	when	winter’s	cold	arrives.
+
+===== PAGE 32 =====
+A	honeybee	colony	runs	year-round	on	flower	power,	for	what	fuels	a
+colony’s	heat	production	all	winter	long	is	the	20	or	more	kilograms	(44+
+pounds)	of	honey	that	the	colony	stockpiled	in	its	honeycombs	over	the	previous
+summer.	If	one	mounts	a	hive	of	bees	on	scales	and	takes	a	weight	reading	each
+day	for	an	entire	year,	one	will	see	that	winter	is	a	time	of	steady	weight	losses
+as	a	colony	consumes	its	honey	stores,	and	that	summer	is	a	time	of	episodic
+weight	gains	as	a	colony	scrambles	to	replenish	these	stores	(
+fig.	2.8
+).	For
+example,	in	Ithaca,	New	York,	my	colonies	restock	their	honeycombs	mainly
+
+===== PAGE 33 =====
+during	the	60-day	period	between	May	15	and	July	15,	when	there	unfolds	a
+succession	of	mass	flower-ings	by	plants	that	produce	copious	nectar,	including
+black	locust	and	basswood	trees,	sumac	shrubs,	and	various	herbaceous	plants
+such	as	dandelions,	raspberries,	milkweeds,	and	clover.	On	a	day	when	the	air	is
+warm,	the	sun	is	strong,	and	nectar	is	flush,	the	hive	that	I	keep	at	home	on	a	set
+of	platform	scales	will	grow	heavier	by	several	kilograms,	virtually	all	of	it	fresh
+honey.	Beekeepers	call	a	string	of	such	days	a	“honey	flow.”
+The	task	of	amassing	within	a	short	summer	season	an	ample	supply	of	winter
+heating	fuel	is	one	of	the	greatest	problems	faced	by	a	honeybee	colony.	Honey
+is	a	dense,	energy-rich	food,	but	even	so,	20	kilograms	(44	pounds)	of	the	stuff
+will	nearly	fill	a	16-liter	(14-quart)	bucket,	or	more	than	50	of	those	plastic
+honey	bears	one	sees	lined	up	beside	the	grape	jelly	at	the	supermarket.	How
+much	work	effort	and	storage	space	is	needed	to	create	such	a	bulky	hoard	of
+calories?	Regarding	work	effort,	given	that	freshly	collected	nectar	is	(on
+average)	a	40	percent	sugar	solution	and	fully	ripened	honey	is	roughly	an	80
+percent	sugar	
+solution,	and	given	that	a	foraging	bee	typically	brings	home	a
+nectar	load	weighing	about	40	milligrams	(0.001	ounces),	we	can	calculate	that
+the	collection	of	enough	nectar	to	produce	20	kilograms	(44	pounds)	of	honey
+requires	more	than	1	million	foraging	trips	by	a	colony’s	workers.	And	when	one
+also	considers	the	miles	flown	and	countless	blossoms	visited	on	each	foraging
+
+===== PAGE 34 =====
+trip,	one	realizes	what	prodigious	efforts	the	bees	make	over	summer	to	sustain
+their	colony	through	winter.
+Regarding	storage	space,	given	that	it	takes	250	square	centimeters	of
+honeycomb	to	store	one	kilogram	of	honey	(i.e.,	18	square	inches	of	comb	per
+pound	of	honey),	and	given	that	every	250	square	centimeters	of	honeycomb
+require	about	0.9	liters	of	nest	cavity	space	(to	accommodate	the	honey-filled
+comb	and	the	adjacent	passageways	for	the	bees),	we	can	calculate	that	the
+storage	of	20	kilograms	(44	pounds)	of	honey	requires	a	nesting	cavity	of	at	least
+some	18	liters	(4	gallons).	Thus	we	can	see	that	when	a	colony	chooses	its	future
+homesite,	it	will	need	to	reject	tree	cavities	smaller	than	these	volumes.	Ideally,
+it	will	find	a	nesting	cavity	somewhat	roomier	still,	to	accommodate	extra
+honey-filled	combs	and	still	more	combs	for	the	colony’s	brood	rearing
+operation,	which	in	spring	can	fill	more	than	half	the	cells	in	a	colony’s	nest	as
+the	colony	rebuilds	its	workforce	in	preparation	for	swarming.	Beekeepers,	by
+the	way,	have	found	a	clever	way	to	exploit	the	bees’	drive	to	fill	their	nests	with
+honey.	By	housing	their	colonies	in	hives	that	provide	vastly	more	nesting	space
+—about	160	liters	(some	36	gallons)—than	is	needed	by	bees	living	in	nature,
+beekeepers	induce	their	colonies	to	amass	astonishing	amounts	of	honey,
+sometimes	more	than	100	kilograms	(220	pounds)	of	honey	per	hive	in	a
+summer.	Thus	a	colony	of	hardworking	bees	residing	in	a	beekeeper’s	hive	will
+often	provide	its	landlord	with	dozens	of	combs	brimming	with	honey.
+The	 honeybee’s	 annual	 cycle	 is	 unique	 in	 other	 ways	 besides	 the
+overwintering	process.	Consider	how	a	colony	starts	rebuilding	its	workforce	in
+the	middle	of	winter.	Shortly	after	the	winter	solstice,	when	the	days	begin	to
+grow	longer	but	snow	still	blankets	the	countryside,	each	honeybee	colony	raises
+the	core	temperature	of	its	winter	cluster	to	about	35°C	(95°F),	the	optimum
+temperature	for	rearing	new	bees.	With	the	cluster’s	core	now	serving	as	a	cozy
+incubator,	the	queen	begins	to	lay	eggs,	using	cells	that	were	emptied	of	their
+honey	during	the	preceding	weeks	of	cold.	Larvae	hatch	from	these	eggs,
+approximately	three	days	after	they	were	laid,	and	are	fed	by	the	adult	workers.
+At	first,	the	workers	feed	the	larvae	a	proteinaceous	food	secreted	by	glands
+located	in	their	(the	adult	bees’)	heads,	but	after	about	three	days	they	wean
+them	to	a	mixture	of	honey	and	pollen.	About	ten	days	after	hatching	from	its
+egg,	each	larva	has	grown	to	nearly	fill	its	cell	(
+fig.	2.9
+)	and	starts	to	spin	the
+cocoon	in	which	it	will	metamorphose	into	an	adult	bee.	The	adult	workers	build
+a	wax	capping	over	the	cell	to	protect	the	immature	bee	during	this	delicate,
+pupal	stage	of	development.	Once	metamorphosis	is	complete,	in	about	another
+week,	the	fully	developed	worker	bee	chews	through	the	capping	on	her	cell	and
+
+===== PAGE 35 =====
+joins	her	colony’s	growing	workforce.	When	a	colony	starts	its	impressive
+performance	of	rearing	brood	in	the	middle	of	winter,	there	are	only	a	hundred	or
+so	cells	containing	developing	bees,	but	by	early	spring,	when	the	first	flowers
+blossom,	over	one	thousand	cells	hold	developing	bees,	and	the	pace	of	colony
+growth	quickens	daily.	Come	late	spring,	when	most	other	insects	are	just
+starting	to	become	active,	honeybee	colonies	have	already	grown	to	full	size,
+twenty	or	thirty	thousand	individuals,	and	have	begun	to	reproduce.
+Colony	Reproduction
+Reproduction	by	a	honeybee	colony	is	a	curiously	complex	affair,	for	each
+colony	is	a	hermaphrodite,	meaning	that	it	has	both	male	and	female
+reproductive	powers.	This	is	decidedly	different	from	ourselves	and	most	other
+animals,	where	each	individual	is	either	a	male	or	a	female,	but	it	is	strikingly
+similar	to	many	plants,	such	as	apple	trees.	In	fact,	to	make	sense	of	how	a
+honeybee	colony	reproduces,	I	find	it	helpful	to	compare	how	honeybee	colonies
+and	apple	trees	go	about	achieving	sexual	reproduction.	Their	basic	similarity	is
+that	both	types	of	individual—colony	and	tree—produce	both	male	and	female
+reproductive	propagules.	The	male	propagules	are	drone	bees	and	pollen	grains,
+whereas	the	female	propagules	are	queen	bees	and	egg	cells.	And	just	as	the
+pollen	grains	from	one	apple	tree	fertilize	the	egg	cells	of	other	trees	to	create
+embryos	inside	seeds	that	will	grow	into	new	trees,	the	drones	from	one
+
+===== PAGE 36 =====
+honeybee	colony	fertilize	the	queens	of	other	colonies	to	create	inseminated
+queens	that	will	give	rise	to	new	colonies.	Thus	both	trees	and	colonies	rely	on
+cross-fertilization	to	avoid	the	problems	associated	with	inbreeding.
+Colonies	and	trees	also	resemble	each	other	in	how	the	male	and	female	sides
+of	reproduction	differ.	For	both	bees	and	trees,	the	male	side	of	reproduction	is
+straightforward.	In	late	spring	and	early	summer,	each	colony	or	tree	produces	a
+great	number	of	male	propagules—thousands	of	drone	bees	per	colony	and
+millions	of	pollen	grains	per	tree—that	disperse	over	the	countryside	and
+achieve	fertilizations.	Any	one	drone	bee	or	pollen	grain	has	a	low	probability	of
+fertilizing	a	queen	or	egg,	but	because	a	healthy	individual	(colony	or	tree)
+launches	a	huge	squadron	of	male	propagules,	it	has	a	high	probability	of
+achieving	reproductive	success	via	its	small,	male	gene	carriers.
+Turning	to	the	female	side	of	reproduction,	we	find	a	more	complex	process	in
+both	colony	and	tree.	In	each,	the	fertilized	propagule	(queen	bee	or	egg	cell)	is
+not	discharged	“naked,”	as	happens	with	the	male	propagules,	but	instead	is
+packaged	
+inside	a	large	and	intricate	dispersal	vehicle	that	will	give	it	protection
+and	help	it	along.	Thus,	the	egg	cells	of	an	apple	tree	are	sent	forth	from	the
+parent	tree	enclosed	in	apples,	whereby	each	egg	cell	is	surrounded	by	many
+thousands	of	protective	cells	forming	the	tough	seed	coat	and	delicious	fruit
+flesh.	Likewise,	the	queen	bees	of	a	honeybee	colony	are	sent	forth	from	the
+parent	colony	enclosed	in	swarms,	whereby	each	queen	is	surrounded	by	some
+ten	thousand	worker	bees	providing	a	living	shelter	and	food	supply.	Because
+each	swarm	or	apple	is	many	thousand	times	larger	and	more	costly	than	each
+drone	bee	or	pollen	grain,	it	is	no	surprise	that	a	colony	or	tree	produces
+relatively	few	female	units	each	year,	usually	fewer	than	four	swarms	and	at
+most	a	few	hundred	apples.	But	because	the	costly	female	propagules	are	well
+protected	and	richly	endowed,	they	have	a	high	probability	of	successfully
+establishing	a	new	colony	or	tree.	So,	despite	their	smaller	numbers,	swarms	and
+apples	match	the	effectiveness	of	drone	bees	and	pollen	grains	in	propagating	the
+genes	of	their	parents.
+Swarming
+In	upstate	New	York,	where	I	live,	my	colonies	begin	sending	forth	their	drones
+in	late	April,	and	they	begin	casting	their	swarms—each	one	consisting	of	a
+queen	accompanied	by	several	thousand	workers—a	week	or	two	later	in	early
+May.	In	essence,	colony	reproduction	starts	up	shortly	after	winter	shuts	down.
+Most	years,	the	swarming	season	begins	after	we’ve	enjoyed	a	few	weeks	with
+
+===== PAGE 37 =====
+warm	days	and	profuse	flowering	by	the	maple	trees	
+(Acer
+	spp.),	pussy	willow
+bushes	
+(Salix	discolor)
+,	and	skunk	cabbage	plants	
+(Symplocarpus	 foetidus).
+During	this	time,	the	colonies	have	collected	much	food,	their	queens	have
+diligently	laid	eggs,	and	their	worker	populations	have	rapidly	strengthened.	I
+can	predict	with	fair	reliability	when	I	will	find	my	first	swarm	by	noting	when
+my	hive	of	bees	mounted	on	platform	scales	finally	ends	its	six-month-long	free-
+fall	in	weight	and	begins	to	bulk	up	again	on	fresh	nectar	and	pollen	(see	
+fig.
+2.8
+).
+Swarming	starts	early	in	the	summer	because	each	new	colony	has	much	to
+accomplish	if	it	is	to	survive	the	following	winter.	Specifically,	each	swarm	(new
+colony)	must	locate	a	suitable	nesting	cavity,	occupy	it,	and	then	build	a	set	of
+beeswax	combs,	raise	new	workers,	and	store	sufficient	provisions	to	last
+through	
+winter.	Getting	an	early	start	certainly	helps	a	colony	clear	these	hurdles.
+Even	so,	sadly,	many	new	colonies	don’t	store	up	enough	honey	and	so	starve
+during	their	first	winter.	In	the	mid-1970s,	for	three	years	I	followed	the	fates	of
+several	dozen	feral	honeybee	colonies	living	in	trees	and	houses	around	Ithaca,
+and	I	found	that	less	than	25	percent	of	the	“founder”	colonies	(ones	newly
+started	by	swarms)	would	be	alive	the	following	spring.	In	contrast,	almost	80
+percent	of	the	“established”	colonies	(ones	already	in	residence	for	at	least	a
+year)	would	survive	winter,	no	doubt	because	they	hadn’t	had	to	start	from
+scratch	the	previous	summer.	Beekeepers	describe	the	time	and	energy	crunch
+faced	by	swarms	in	a	rather	grim,	three-line	rhyme:	“A	swarm	of	bees	in	May	is
+worth	a	load	of	hay,	a	swarm	of	bees	in	June	is	worth	a	silver	spoon,	a	swarm	in
+July	isn’t	worth	a	fly.”
+Whether	in	May,	June,	or	July,	the	first	step	that	a	colony	takes	to	prepare	for
+swarming	is	the	rearing	of	10	or	more	queens,	all	daughters	of	the	mother	queen.
+Queen	rearing	starts	with	the	construction	of	queen	cups,	tiny	inverted	bowls
+made	of	beeswax.	They	are	built	usually	along	the	lower	edges	of	the	combs	in
+which	the	colony	is	producing	brood	and	they	will	form	the	bases	of	the	large,
+downward-pointing,	peanut-shaped	cells	in	which	the	queens	will	be	reared	(
+fig.
+2.10
+).	Next,	the	queen	lays	eggs	in	a	dozen	or	more	of	the	queen	cups	and
+workers	feed	the	hatching	larvae	the	royal	jelly	that	ensures	their	development
+into	queens.	An	enduring	mystery	about	honeybees	is	what	exactly	stimulates	a
+colony	to	begin	rearing	queens	and	thereby	initiate	the	process	of	swarming.
+Beekeepers	know	that	certain	conditions	inside	a	colony’s	hive	(congestion	of
+the	adult	bees,	numerous	immature	bees,	and	expanding	food	reserves)	and
+outside	the	hive	(plentiful	forage	and	spring	time)	are	correlated	with	the	start	of
+queen	rearing	for	swarming.	Nevertheless,	to	this	day,	no	one	knows	what
+
+===== PAGE 38 =====
+specific	stimuli	the	worker	bees	are	sensing	and	integrating	when	they	make	the
+critical	decision	to	start	the	swarming	process.
+The	development	of	the	new	queens	is	remarkably	rapid,	requiring	only	16
+days	from	the	time	the	egg	is	laid	to	the	moment	when	an	adult	queen	emerges
+from	her	cell.	While	these	daughter	queens	develop,	the	mother	queen	undergoes
+changes	that	will	prepare	her	for	departure	in	the	swarm.	With	each	passing	day,
+she	is	fed	less	and	less	by	the	workers.	Her	egg	production	declines,	and	her
+abdomen,	no	longer	swollen	with	fully	formed	eggs,	shrinks	dramatically.
+Furthermore,	the	workers	begin	to	show	mild	hostility	toward	their	mother,
+shaking,	pushing,	and	lightly	biting	her.	Each	time	a	worker	shakes	the	queen,
+she	grasps	the	queen	with	her	forelegs	and	shakes	her	own	body	for	a	second	or
+so,	delivering	10	to	20	vigorous	shakings	of	the	queen	(
+fig.	2.11
+).	These	bouts	of
+rough	handling,	which	eventually	can	become	nearly	continuous	(occurring
+every	10	seconds	or	so),	force	the	queen	to	keep	walking	about	the	nest.	This
+increased	exercise,	together	with	the	reduced	feeding,	results	in	a	25	percent
+reduction	in	the	queen’s	body	weight.	In	this	way	the	mother	queen,	usually	too
+large	and	heavy	to	fly,	is	put	into	flying	trim.
+
+===== PAGE 39 =====
+While	the	daughter	queens	are	maturing	and	the	mother	queen	is	slimming,
+the	workers	are	also	preparing	for	the	impending	mass	departure	of	the	mother
+queen	and	thousands	of	workers	in	a	swarm.	To	ensure	that	they	will	be	well
+supplied	with	energy	when	they	leave	home,	the	workers	do	just	the	opposite	of
+slimming;	they	stuff	themselves	with	honey,	causing	their	abdomens	to	swell
+
+===== PAGE 40 =====
+noticeably.	A	study	in	which	the	stomachs	of	workers	from	colonies	preparing	to
+swarm	were	painstakingly	dissected	and	weighed	found	that	most	bees	had	filled
+their	stomachs	with	a	drop	or	two	(35	to	55	milligrams)	of	honey,	thereby
+increasing	their	body	weights	by	about	50	percent.	Thus	when	a	swarm	leaves	on
+its	journey	to	a	new	home,	approximately	one-third	of	its	weight	is	a	food
+reserve.	The	bloating	of	the	workers	is	not	their	only	conspicuous	adjustment	in
+anticipation	of	swarming.	The	wax	glands,	located	on	the	ventral	plates	of	four
+of	the	abdominal	segments	of	each	worker	bee,	become	hypertrophied	in
+preparation	for	the	intense	wax	secretion	needed	for	comb	building	at	the	new
+nest	site.	Turning	over	a	worker	bee	plucked	from	a	colony	that	is	poised	to
+swarm	will	reveal	white	scales	of	beeswax	projecting	from	the	overlapping
+ventral	plates	(
+fig.	2.12
+).	But	what	is	perhaps	the	most	striking	change	in	the
+workers	just	before	swarming	is	their	greater	lethargy.	Many	of	these	laggards
+hang	quietly	on	the	combs,	while	others	rest	in	a	thick	cluster	outside	the	hive
+entrance,	giving	the	alert	beekeeper	a	helpful	warning	that	swarming	is
+imminent.	The	biologist	and	comic	book	artist	Jay	Hosler	has	nicely	called	this
+period	of	odd	inactivity	“the	calm	before	the	swarm.”	Several	dozen	bees,
+however,	remain	active	and	start	scouring	the	countryside	for	five	or	more
+kilometers	(three	miles)	in	all	directions	for	possible	nest	sites.	These
+enterprising	individuals	are	nest-site	scouts,	the	central	figures	in	this	book,	and
+in	
+chapter	4
+	we	will	see	who	they	are.
+In	the	summer	of	2007,	I	learned	that	the	nest-site	scouts	play	a	key	role	in
+
+===== PAGE 41 =====
+triggering	the	next	main	event	in	swarming:	the	swarm’s	explosive	departure
+from	the	parental	nest.	My	partner	in	this	work	was	one	of	my	graduate	students,
+Juliana	Rangel,	who	is	a	fine	scientist,	being	smart,	cheerful,	and	hardworking.
+We	learned	that	the	scout	bees	are	especially	well	qualified	to	instigate	the
+swarm’s	mass	exodus	because	their	special	occupation	causes	them	to	spend
+time	both	outside	and	inside	the	nest:	outside	to	hunt	for	potential	dwelling
+places,	and	inside	to	refuel	and	rest.	Only	a	bee	that	has	information	from	both
+indoors	and	outdoors	can	get	the	timing	right	for	the	swarm’s	departure.	From
+her	time	inside,	a	scout	bee	can	tell	when	some	of	the	developing	queens	have
+reached	the	pupal	stage	and	have	had	their	cells	sealed,	and	from	her	time
+outside,	she	can	tell	when	the	weather	is	sunny	and	warm,	hence	favorable	for	a
+journey.	When	both	of	these	requirements	for	swarming	are	fulfilled,	the	scouts
+burst	into	action.	Starting	in	the	cluster	of	bees	just	outside	the	hive	entrance,	the
+excited	scouts	begin	scrambling	among	their	cool,	calm	sisters.	Every	few
+seconds,	each	scout	will	pause	by	a	quiet	bee	and	briefly	press	her	thorax	against
+the	other	bee	while	activating	her	flight	muscles	to	produce	a	200-	to	250-hertz
+(cycles	per	second)	vibration	that	lasts	for	a	second	or	so.	This	signal	is	called
+worker	piping.	It	sounds	(because	of	high-frequency	harmonics)	like	the	engine
+of	a	Formula	One	race	car	making	an	all-out	acceleration,	and	it	informs	the
+quiescent	bees	that	it	is	time	to	warm	their	flight	muscles	by	shivering	to	a	fight-
+ready	temperature	of	35°C	(95°F)	in	preparation	for	the	swarm’s	departure.	The
+piping	by	the	scout	bees	is	intermittent	and	faint	at	first,	but	over	the	next	hour
+or	so	it	gradually	becomes	steady	and	loud,	as	more	and	more	of	the	scouts	blast
+out	the	message	“Time	to	warm	up!”	Ultimately,	the	piping-hot	scout	bees	sense
+that	all	their	hive-mates	are	flight	ready—perhaps	by	consistently	contacting
+suitably	warmed	bees—at	which	point	the	scouts	start	producing	a	second
+arousal	signal,	the	buzz-run,	in	which	each	scout	bee	runs	about	the	nest	in	great
+excitement,	tracing	out	a	crooked	path,	buzzing	her	wings	in	bursts,	and
+bulldozing	between	sluggish	bees.	The	message	now	is	“Time	to	go!”
+And	go	they	do!	Now	nearly	all	of	the	worker	bees	become	excited	and	run
+about,	crowding	toward	the	entrance	opening	where	they	pour	out	in	a	torrent
+and	take	to	the	air,	pushing	the	mother	queen	out	as	well,	creating	what
+beekeepers	call	the	“prime	swarm”	(
+fig.	2.13
+).	It	contains	some	ten	thousand
+bees,	about	two-thirds	of	the	colony’s	population.	These	swarming	bees	fly
+round	each	other	in	a	wild	whirl,	forming	a	cloud	approximately	10	to	20	meters
+(30	to	60	feet)	across,	with	their	queen	flying	somewhere	in	their	midst.	They
+don’t	go	far.	Soon,	some	of	the	workers	settle	on	the	branch	of	a	tree	or	similar
+object,	the	queen	joins	them,	and	over	the	next	10	or	20	minutes	the	whole	cloud
+
+===== PAGE 42 =====
+of	bees	will	condense	into	a	beard-shaped	cluster.	The	worker	bees	are	attracted
+by	the	scent	of	the	queen	and	by	the	strong	lemony	odor	of	the	attraction
+pheromones	that	the	first	settlers	are	releasing	from	their	scent	organs	(located
+near	the	tip	of	the	abdomen)	and	are	dispersing	by	fanning	their	wings.	Over	the
+next	several	hours,	or	several	days,	most	of	the	swarm	bees	will	hang	here
+quietly,	while	the	scouts	will	busily	search	the	neighborhood	for	candidate
+dwelling	places	and	choose	a	suitable	abode.	Once	the	scouts	have	completed
+their	democratic	decision	making,	they	will	induce	the	whole	swarm	to	again
+take	flight	and	then	will	guide	the	flying	swarm	to	its	new	home.
+Back	in	the	parental	nest,	there	remain	a	few	thousand	worker	bees,	a	dozen	or
+more	queen	cells,	many	thousand	cells	of	worker	brood,	and	much	food.	The
+stay-at-home	workers	are	now	without	a	queen,	but	not	many	days	will	pass
+before	the	first	of	the	new	queens	emerges.	During	the	waiting	period,	the	parent
+colony’s	worker	population	will	rebound	as	new	workers	emerge.	Often,	so
+many	new	workers	appear	that	the	colony’s	strength	is	restored	by	the	time	the
+first	virgin	queen	emerges	from	her	sealed	queen	cell.	If	the	colony	does	regain
+its	strength,	then	the	workers	will	chase	the	first	virgin	queen	away	from	the
+remaining	queen	cells	to	prevent	her	from	destroying	them.	The	workers	will
+also	refrain	from	chewing	away	the	wax	and	pupal	cocoon	fibers	on	the	capped
+ends	of	the	queen	cells	to	prevent	the	other	virgin	queens	from	getting	free,	and
+they	will	feed	the	confined	queens	whenever	they	beg	for	food	by	pushing	their
+tongues	through	little	slits	in	their	cells.	At	the	same	time,	the	first	virgin	queen
+to	emerge	will	announce	her	presence	with	queen	piping	signals,	called	“toots.”
+A	queen	pipes	the	same	way	as	a	worker,	by	pressing	her	thorax	against	a
+substrate	and	activating	her	flight	muscles.	A	queen,	however,	presses	herself
+
+===== PAGE 43 =====
+against	a	comb	instead	of	against	a	bee,	probably	to	give	her	signal	a	broader
+audience.	Also,	a	queen’s	piping	signals	are	longer	than	those	of	a	worker,	for
+they	contain	multiple	pulses	(
+fig.	2.14
+).	When	the	first	virgin	queen	pipes,	the
+workers	instantly	cease	all	movement	for	the	duration	of	her	signal,	perhaps	to
+minimize	the	background	noise	produced	by	their	myriad	footsteps,	and	the
+virgin	queens	confined	in	their	cells	will	pipe	in	response,	producing	lower-
+pitched	“quacks”	that	are	somewhat	longer	than	the	first	virgin	queen’s	“toots.”
+These	quacks	almost	certainly	inform	the	first	virgin	queen	that	she	has	lethal
+rivals.
+This	bad	news	may	encourage	the	first	virgin	queen	to	leave	in	a	secondary
+swarm,	what	beekeepers	call	an	“afterswarm.”	Doing	so	means	that	the	first
+virgin	queen	relinquishes	the	wealth	of	desirable	resources	in	the	parent	nest—
+the	beeswax	combs,	worker	brood,	and	honey	stores—and	starts	down	the	risky
+path	of	founding	a	new	colony.	This	course	of	action	is,	however,	probably	less
+dangerous	for	her	than	staying	home	and	attempting	to	kill	all	her	deadly	serious
+competitors.	Soon,	the	workers	will	start	shaking	the	first	virgin	queen	to	prepare
+her	for	flight,	and	in	a	few	days,	if	good	weather	prevails,	they	will	push	her	out
+of	the	nest	during	the	departure	of	a	second	swarm.	This	process	is	repeated	with
+each	emerging	queen	until	the	colony	is	weakened	to	the	point	where	it	cannot
+support	further	swarming.	At	this	point,	if	there	are	still	multiple	virgin	queens	in
+the	nest,	the	workers	will	allow	them	to	emerge	freely.	The	first	one	out	usually
+attempts	to	kill	those	still	in	their	cells	by	dashing	over	the	combs	in	search	of
+cells	containing	queens,	chewing	small	holes	in	their	sides,	and	stinging	the
+occupants.	If,	however,	two	or	more	virgin	queens	emerge	together,	they	will
+flight	to	the	death,	seizing	each	other	and	attempting	to	sting.	The	battling	queen
+bees	grapple	and	twist,	each	one	struggling	fiercely	to	implant	her	venom-laden
+sting	in	her	sister’s	abdomen.	Ultimately,	one	queen	succeeds	and	the	other,
+
+===== PAGE 44 =====
+fatally	stricken,	collapses	in	paralysis,	falls	from	the	comb,	and	soon	dies.	The
+merciless	sororocide	continues	until	just	one	virgin	queen	remains	alive.	Several
+days	later	the	victor	will	make	her	mating	flights	and,	once	fully	mated,	start	her
+egg	laying.	Soon	her	daughters	and	sons	will	populate	the	coveted	parental	nest.
+Any	virgin	queen	who	departed	in	an	afterswarm	will	likewise	make	mating
+flights	once	she	and	her	workers	have	moved	into	their	new	home,	for	no	queen
+ever	mates	inside	a	nest.
+
+===== PAGE 45 =====
+3
+DREAM	HOME	FOR	HONEYBEES
+If	I	can	with	confidence	say
+That	still	for	another	day
+,
+Or	even	another	year
+,
+I	will	be	therefor	you,	my	dear
+,
+It	will	be	because,	though	small
+As	measured	against	the	All
+,
+I	have	been	so	instinctively	thorough
+About	my	crevice	and	burrow.
+—Robert	Frost
+,	A	Drumlin	Woodchuck,
+	1936
+	
+	
+L
+ike	Robert	Frost’s	woodchuck,	a	honeybee	colony	is	“instinctively	thorough”
+about	its	dwelling	place,	for	only	certain	tree	cavities	provide	good	protection
+from	predators	and	suffcient	refuge	from	harsh	physical	conditions,	especially
+strong	winds	and	deep	cold.	No	fewer	than	six	distinct	properties	of	a	potential
+homesite—including	cavity	volume,	entrance	height,	entrance	size,	and	presence
+of	combs	from	an	earlier	colony—are	assessed	to	produce	an	overall	judgment
+of	a	site’s	quality.	The	care	with	which	honeybees	choose	their	homes	has	been
+known	for	only	about	30	years,	which	might	seem	surprising	given	that	humans
+have	been	culturing	these	bees	since	ancient	times.	The	reason	that	humans	have
+only	recently	learned	about	the	bees’	real	estate	preferences	is	that	the	essence	of
+beekeeping	is	the	tending	of	colonies	living	in	hives	fashioned	by	a	beekeeper
+and	sited	where	the	beekeeper	wants	them.	The	earliest	solid	evidence	of
+beekeeping	comes	from	Egypt,	around	2400	BC,	and	consists	of	a	stone	bas-
+relief	in	a	temple	that	depicts	peasants	removing	honeycombs	from	a	stack	of
+cylindrical	clay	hives	and	also	packing	the	honey	in	pots	(
+fig.	3.1
+).	Thus	for
+some	4,400	years	the	people	living	in	closest	association	with	honeybees	have
+focused	on	devising	housing	arrangements	for	bees	that	serve	human	purposes
+
+===== PAGE 46 =====
+and	have	largely	ignored	what	the	bees’	themselves	seek	in	a	home.	For
+example,	manmade	hives	are	usually	much	more	spacious	than	natural	nest
+cavities,	so	bees	living	in	an	apiary	will	store	more	honey	and	swarm	less	often
+than	will	bees	living	in	nature.	Likewise,	a	beekeeper’s	hives	are	located	at
+ground	level,	which	is	convenient	for	humans	but	dangerous	for	bees.	Honeybee
+colonies	living	low	to	the	ground	are	easily	found	and	attacked	by	destructive
+predators,	such	as	bears.
+Nests	of	Wild	Colonies
+In	1975,	when	I	began	to	study	the	democratic	house-hunting	process	of
+honeybees	for	my	PhD	thesis	project,	I	decided	that	a	logical	first	step	was	to	try
+to	identify	what	makes	a	dream	homesite	for	a	honeybee	colony.	This	would	tell
+me	what	a	swarm	is	seeking	as	it	locates	multiple	candidate	sites	and	works	to
+select	the	best	one.	I	suspected	that	to	identify	the	perfect	dwelling	place	for	a
+honeybee	colony	would	be	a	challenge,	because	the	bees	might	evaluate	several
+attributes	of	each	candidate	site,	and	they	might	weigh	each	attribute	differently
+when	judging	the	overall	goodness	of	a	site.	Nevertheless,	I	figured	that	if	I
+could	identify	what	attributes	are	important	to	the	bees	and	if	I	could	determine
+what	preference	they	have	for	each	attribute,	then	I	would	be	close	to	achieving
+my	goal.
+I	also	figured	that	to	determine	the	bees’	real-estate	preferences,	I	should	start
+
+===== PAGE 47 =====
+by	finding	trees	housing	wild	colonies	of	honeybees,	sawing	them	down,	and
+splitting	open	the	tree	sections	housing	the	bees’	nests	so	that	I	could	scrutinize
+their	natural	living	quarters	(
+fig.	3.2
+).	Each	colony	living	in	nature	occupies	a
+site	chosen	by	scout	bees,	so	it	seemed	reasonable	to	expect	that	consistencies	in
+the	nest	sites	of	these	wild	colonies	would	yield	clues	about	the	bees’	nest-site
+preferences.	And	there	could	be	little	doubt	that	these	preferences	lie	at	the	heart
+of	the	bees’	whole	house-hunting	process,	for	it	is	these	preferences	that	guide
+swarms	to	take	up	residence	in	suitable	nesting	cavities.
+Back	in	1955,	Lindauer	had	reported	experiments,	conducted	in	the	open
+countryside	east	of	Munich,	in	which	he	presented	one	swarm	at	a	time	with	a
+pair	of	nest	boxes	that	differed	in	some	property,	and	then	he	observed	which
+one	attracted	the	greatest	interest	from	the	swarm’s	scout	bees.	These
+experiments	yielded	only	preliminary	findings,	because	Lindauer	could	perform
+just	a	few	trials	for	each	test	of	a	particular	nest-site	property.	Nevertheless,	they
+suggested	to	him	that	his	bees	had	chosen	among	his	nest	boxes	based	on
+differences	in	protection	from	the	wind,	cavity	size,	presence	of	ants,	and	sun
+exposure.	Lindauer	was	impressed	by	the	bees’	apparent	attention	to	multiple
+properties	of	a	possible	residence	when	assessing	its	desirability,	wondered	what
+the	ideal	bee	dwelling	might	be,	and	suggested	that	to	solve	this	mystery	“it
+would	be	best	to	ask	the	bees	themselves	about	this	matter.”	I	would	start	to	do
+so	by	examining	their	nests.
+The	prospect	of	carefully	describing	the	nests	of	wild	honeybee	colonies
+living	in	the	woods	attracted	me	for	emotional	as	well	as	rational	reasons.	While
+an	undergraduate	student,	I	had	majored	in	chemistry	and	done	several	small
+research	projects	in	organic	chemistry,	biochemistry,	and	biophysics.	Of	course,
+these	investigations	were	all	conducted	indoors	in	clean,	brightly	illuminated,
+and	nearly	lifeless	laboratories.	But	now,	as	a	beginning	graduate	student	in
+biology	and	novice	investigator	of	animal	behavior,	I	was	keen	to	work	outdoors
+using	what	has	been	called	the	von	Frisch–Lindauer	approach	to	animal	behavior
+research.	In	their	autobiographical	
+book,	Journey	to	the	Ants
+,	Bert	Hölldobler
+and	Edward	O.	Wilson	explain	that	von	Frisch	and	Lindauer	had	a	philosophy	of
+research	based	on:	a	thorough,	loving	interest	in—a	feel	for—the	organism,
+especially	as	it	fits	into	the	natural	environment.	Learn	the	species	of	your	choice
+every	 way	 you	 can,	 this	 whole-organismic	 approach	 stipulates.	 Try	 to
+understand,	or	at	the	very	least	try	to	imagine,	how	its	behavior	and	physiology
+adapt	it	to	the	real	world.	Then	select	a	piece	of	behavior	that	can	be	separated
+and	analyzed	as	though	it	were	a	bit	of	anatomy.	Having	identified	a
+phenomenon	to	call	your	own,	press	the	investigation	in	the	most	promising
+
+===== PAGE 48 =====
+direction.
+My	thesis	advisor,	Bert	Hölldobler,	had	presented	this	way	of	studying
+behavior	in	his	ethology	course	at	Harvard	and,	more	importantly,	had
+demonstrated	its	power	by	his	own	spectacularly	beautiful	studies	of	ant	social
+behavior.	So,	by	the	end	of	my	first	year	in	graduate	school,	I	was	raring	to	go.	I
+wanted	to	gain	a	feel	for	honeybees	living	in	nature,	to	further	analyze	the
+house-hunting	piece	of	their	behavior,	and	to	see	if	I	could	press	the
+investigation	on	from	where	Martin	Lindauer	had	left	it	some	20	years	before.
+I	knew	that	I	would	abscond	from	Harvard	the	moment	I	had	finished	taking
+my	final	exams	for	the	spring	semester,	and	I	had	my	mind	set	on	returning	to
+the	Dyce	Laboratory	for	Honey	Bee	Studies,	at	Cornell,	where	I	had	worked	for
+the	previous	four	summers	when	an	undergraduate	student.	The	director	of	the
+lab,	Professor	Roger	A.	Morse,	was	truly	a	generous	man.	He	welcomed	me
+back,	assigned	me	a	desk,	and	provided	several	essential	tools	for	the	project—a
+
+===== PAGE 49 =====
+powerful	chain	saw,	steel	wedges	and	maul,	and	one	of	the	lab’s	green	pickup
+trucks.	Most	importantly,	“Doc”	Morse	arranged	for	me	to	team	up	with	a
+member	of	the	Entomology	Department’s	technical	staff,	Herb	Nelson,	who	had
+worked	as	a	logger	in	the	Maine	woods	when	a	teenager	and	could	teach	me	how
+to	cut	down	big	trees	without	getting	killed.
+Herb	and	I	started	with	some	of	the	bee	trees	I	had	discovered	back	in	high
+school	while	exploring	the	woods	around	my	family’s	home.	These	were
+augmented	with	ones	that	I	located	through	a	want	ad	I	placed	in	the	local
+newspaper,	the	
+Ithaca	Journal.
+	The	ad	read,	“
+BEE	TREES
+	wanted.	Will	pay
+$15	or	15	lb	of	honey	for	a	tree	housing	a	live	colony	of	honeybees.	607-254-
+5443.”	I	feared	I’d	get	no	calls,	but	within	a	week	I	had	secured	the	rights	to	18
+accessible	bee	trees	in	the	woods	around	Ithaca.	Two	owners	took	payment	in
+money;	all	the	rest	wanted	honey.
+The	procedure	for	collecting	these	nests	was	simple	but	somewhat	dangerous.
+Shortly	before	sunrise,	when	all	bees	were	still	at	home,	I	would	hike	to	a	bee
+tree	with	a	can	of	calcium	cyanide	powder	(Cyanogas),	an	old	spoon,	and	some
+rags.	If	the	nest	entrance	was	high	in	a	tree	that	I	couldn’t	climb,	I	’d	also	bring
+an	aluminum	extension	ladder.	My	aim	was	to	spoon	cyanide	powder	into	the
+nest	entrance	and	then	quickly	plug	it	with	the	rags.	The	cyanide	powder	would
+react	with	moisture	in	the	air	producing	cyanide	gas	that	would	kill	the	bees	but,
+if	all	went	according	to	plan,	not	me.	(Once	I	did	drop	the	can	of	Cyanogas	from
+the	ladder,	spilling	much	of	its	contents,	but	I	managed	to	hold	my	breath	long
+enough	to	climb	down,	get	the	lid	back	on	the	can,	and	dash	out	of	the	expanding
+cloud	of	deadly	gas.)	By	first	killing	the	bees,	we	could	later	fell	the	tree	and
+collect	the	nest	without	being	ferociously	attacked.	This	protocol	also	enabled
+me	to	census	the	bee	population	of	each	wild	colony	when	I	dissected	its	nest.
+Having	killed	the	bees,	I’d	return	to	Dyce	Lab	to	pick	up	Herb	and	load	the
+truck	with	the	tools	we’d	need	for	the	day:	chain	saw,	wedges	and	maul,	rope,
+ramp	boards,	tape	measure,	magnetic	compass,	35	mm	camera,	and	notebook.
+Our	goal	was	to	cut	down	the	bee	tree	I	had	just	visited,	saw	out	the	trunk
+section	housing	the	nest,	wrestle	it	onto	the	truck,	and	haul	it	back	to	the	lab.	I
+recall	being	impressed	by	Herb’s	confidence	in	driving	the	truck	deep	into	the
+woods	to	get	near	each	bee	tree	(“We’ll	have	plenty	of	traction	for	getting	back
+out,	once	we	get	that	big	log	loaded	on.”)	and	by	his	careful	inspection	of	each
+tree’s	lean	and	crown	before	starting	his	cutting	(“You	gotta	know	which	way	the
+tree	wants	to	fall.”).	Herb’s	lumberjack	skills	weren’t	rusty,	and	each	tree	arced
+down	neatly	into	the	woods	opening	he	had	chosen.	Once	we	had	a	tree	lying	on
+
+===== PAGE 50 =====
+the	ground,	we	proceeded	to	cut	out	the	section	containing	the	nest.	We	did	this
+by	making	a	series	of	crosscuts,	starting	far	above	and	far	below	the	nest
+entrance,	and	then	working	our	way	closer	and	closer	to	the	entrance	until	the
+chain	saw	started	spitting	dark-brown	punk	wood	or	yellow-brown	beeswax,
+indicating	we	had	breached	the	nest	cavity.	We	then	rolled	the	nest-containing
+log—sometimes	a	massive,	2-meter-long	(6-foot)	and	nearly	1-meter-thick	(3-
+foot)	section	of	the	tree’s	bole—up	into	the	truck,	got	it	back	to	the	lab,	and	split
+it	open	(
+fig.	3.3
+).	Finally,	we	would	lug	the	opened	nest	indoors	where	I	could
+dissect	it	carefully	under	good	light	while	measuring	important	features	of	the
+nest	cavity	and	its	contents.	To	measure	the	volume	of	the	cavity,	I	filled	it	with
+liter	after	liter	of	sand	after	removing	the	combs.	As	I	picked	through	the	broken
+combs	and	dead	bees,	sooner	or	later	coming	across	the	lifeless	queen,	I	felt	sad
+to	have	killed	a	whole	colony,	but	also	excited,	knowing	that	I	was	the	first
+human	to	describe	in	detail	the	natural	homes	of	honeybees.
+Over	the	summer	of	1975,	we	collected	and	I	dissected	21	bee	tree	nests,
+enough	to	give	us	a	broad	picture	of	the	nests	of	wild	colonies	living	in	the
+woods.	I	also	located	another	18	nests	in	trees	that	were	left	standing	and	so
+yielded	information	only	about	their	entrance	openings.	Since	the	nest	entrance
+
+===== PAGE 51 =====
+is	the	“front	door”	of	a	colony’s	home	it	is	probably	especially	important	to	the
+bees,	so
+	I	gave	it	extra	attention.	We	found	that	the	bees	occupied	many	kinds	of
+trees,	including	oaks	(
+Quercus
+	spp.),	walnuts	(
+Juglans
+	spp.),	elms	(
+Ulmus
+	spp.),
+pines	(
+Pinus
+	spp.),	hickories	(
+Carya
+	spp.),	ashes	(
+Fraxinus
+	spp.),	and	maples
+(
+Acer
+	spp.).	This	suggested	that	the	bees	don’t	have	a	strong	preference	for
+certain	tree	species.
+Not	surprisingly,	the	tree	cavities	occupied	by	the	bees	were	generally	tall	and
+cylindrical,	consistent	with	the	shape	of	tree	trunks.	But	what	was	surprising	was
+the	discovery	that	most	of	these	wild	colonies	were	occupying	tree	cavities	much
+smaller	than	the	hives	provided	by	beekeepers.	The	average	nest	cavity	was	only
+about	20	centimeters	(8	inches)	in	diameter	and	150	centimeters	(60	inches)	tall;
+hence,	it	had	a	volume	of	only	about	45	liters	(41	quarts)	(
+fig.	3.4
+).	A	tree	cavity
+of	this	size	provides	only	one-quarter	to	one-half	of	the	living	space	provided	by
+a	beekeeper’s	hive.	Were	the	bees	telling	me	that	they	prefer	relatively	small	and
+snug	nest	sites,	ones	in	which	it	might	be	easier	to	keep	warm	in	winter?	Some
+of	the	colonies	even	occupied	tree	cavities	with	only	20	to	30	liters	of	nesting
+space,	though	none	was	found	in	a	space	smaller	than	12	liters.	Was	this	lower
+limit	of	about	12	liters	a	sign	that	bees	carefully	avoid	excessively	cramped
+quarters,	ones	lacking	sufficient	room	for	storing	the	honey	needed	to	survive
+winter?	Certainly	the	bees	living	in	these	tree	cavities	were	making	good	use	of
+their	living	space,	for	each	colony	had	nearly	filled	its	nest	cavity	with	multiple
+combs.	Because	each	comb	formed	a	wall-to-wall	curtain	spanning	the
+(generally)	narrow	tree	cavity,	I	was	impressed	by	the	way	the	bees	had	built
+small	passageways	in	the	combs	where	they	were	attached	to	the	cavity’s	wall,
+so	they	could	crawl	easily	from	one	comb	to	the	next.	And	it	was	clear	that	these
+bees	had	organized	their	use	of	their	combs	in	the	way	familiar	to	all	beekeepers,
+storing	honey	in	the	upper	region	of	the	nest	and	rearing	brood	below.	The	nests
+collected	in	August,	by	the	way,	revealed	that	most	colonies	had	been	making
+good	progress	in	stockpiling	their	winter	heating	fuel.	The	nests	that	I	dissected
+contained,	on	average,	14	kilograms	(30	pounds)	of	golden	honey.	Regrettably,	it
+was	all	laced	with	cyanide.
+The	entrance	openings	of	the	bees’	nests	also	showed	consistencies	that
+suggested	possible	nest-site	preferences	by	the	bees.	Most	nest	entrances
+consisted	of	a	single	knothole	or	crack	with	a	total	area	of	just	10	to	30	square
+centimeters	(2	to	5	square	inches)	(
+fig.	3.5
+).	And	typically	they	were	located	near
+the	floor	of	the	tall	tree	cavity,	on	the	south	side	of	the	tree,	and	close	to	ground
+level.	The	trends	toward	small	size,	floor	level,	and	southern	orientation	all	made
+good	sense	to	me,	for	they	would	make	the	nest	cavity	inaccessible	to	most
+
+===== PAGE 52 =====
+predators,	relatively	free	of	drafts,	and	perhaps	warmed	by	the	sun—all	things
+that	would	be	good	for	a	colony.	But	the	preponderance	of	nest	entrances	just	a
+few	feet	from	the	ground	puzzled	me	greatly.	I	figured	that	a	low	nest	entrance
+must	render	a	colony	vulnerable	to	detection	by	predators,	such	as	bears,	whose
+attacks	can	be	fatal.	And	I	knew	that	in	medieval	times,	in	the	forests	of	northern
+Europe	(Germany,	Poland,	and	Russia),	one	of	the	ancestral	homes	of	the
+honeybees	imported	to	North	America,	raids	by	bears	on	honeybee	nests	in	trees
+were	such	a	great	trouble	for	the	forest	beekeepers	who	owned	these	nests	that
+they	invented	horrific	devices	to	kill	honey-loving	bears.	One	was	a	hinged
+platform	mounted	outside	a	bee	nest.	When	a	bear	climbed	onto	it	to	attack	the
+bees,	it	would	collapse,	causing	the	bear	to	tumble	onto	a	grid	of	deadly	sharp
+stakes	below.
+So	at	first	I	was	perplexed	by	the	rarity	of	nests	high	in	trees.	But	as	will	be
+explained	shortly,	we	now	know	that	bees	actually	have	a	strong	preference	for
+nesting	cavities	with	entrances	located	high	above	the	ground.	I	also	now	know
+that	my	initial	report	of	most	nests	being	near	ground	level	was	an	error
+generated	by	an	unintentional	bias	in	the	way	I	had	sampled	the	population	of
+natural	nests.	Because	the	nests	I	studied	were	ones	that	had	been	noticed
+inadvertently	by	a	person	walking	past	a	bee	tree,	and	because	people	are	much
+more	likely	to	notice	bees	trafficking	from	a	ground-level	nest	entrance	than	a
+tree-top	one,	I	unwittingly	studied	nests	whose	entrances	were	far	lower	than	is
+typical.	I	am	confident	on	this	point	because	several	years	later,	when	I	became	a
+bee	hunter	and	mastered	the	ancient	craft	of	lining	bees	(locating	bee	trees	by
+baiting	foragers	from	flowers	and	observing	their	flights	back	to	their	nests),	I
+found	that	every	hunt	ended	with	me	straining	to	spy	the	bees	zipping	in	and	out
+of	a	nest	entrance	high	in	a	tree,	like	the	one	shown	in	
+figure	3.2
+.	To	date,	I	have
+located	27	bee	trees	by	bee	lining	and	can	report	that	the	average	height	of	their
+nest	entrances	is	6.5	meters	(21	feet).	Needless	to	say,	I’m	now	alert	to	the
+hidden	danger	of	unintentional	sampling	bias.
+
+===== PAGE 53 =====
+Location,	Location,	Location
+Even	though	the	descriptive	study	of	the	natural	homes	of	honeybees	was
+destructive,	it	remains	one	of	my	favorite	studies,	for	it	put	me	in	touch	with
+honeybees	living	in	nature	and	it	helped	me	gain	some	self-confidence	as	a
+researcher.	It	also	guided	me	throughout	the	next	step	of	my	investigation	of	how
+honeybee	swarms	
+choose	a	home:	testing	whether	the	nest-site	patterns	we	had
+found—in	cavity	volume,	entrance	area,	entrance	height,	and	so	forth—were	a
+result	of	preferences	of	scout	bees	or	were	simply	a	consequence	of	the	tree
+cavities	that	were	available.	The	idea	for	the	design	of	the	test	came	from	what	I
+had	read	about	beekeeping	in	East	Africa	and	South	Africa.	In	these	regions,
+beekeepers	acquire	bees	by	hanging	hives	(usually	hollowed	logs	with	the	ends
+stoppered	except	for	an	entrance	hole)	in	trees	and	waiting	for	swarms	to	occupy
+them.	I	had	not	heard	or	read	of	anybody	in	North	America	catching	swarms
+with	“bait	hives,”	but	I	reasoned	that	if	one	could	do	so,	then	I	could	ask	the	bees
+about	their	nest-site	preferences	by	putting	up	groups	of	two	or	three	nest	boxes,
+with	the	boxes	in	each	group	identical	except	for	one	property,	such	as	cavity
+volume	or	the	height	of	the	entrance	above	the	ground.	I	hoped	that	scouts	from
+wild	swarms	would	discover	the	groups	of	nest	boxes	and	would	reveal	their
+real-estate	preferences	by	choosing	among	the	boxes	in	a	group	and	consistently
+occupying	those	with	certain	attributes.
+Almost	always,	one	starts	an	experimental	study	with	a	small-scale,	low-cost
+
+===== PAGE 54 =====
+pilot	study	to	figure	out	what	methods	are	apt	to	work	before	undertaking	a
+costly	full-scale	investigation.	In	the	summer	of	1975,	I	did	a	pilot	study	to	see	if
+wild	swarms	would	occupy	bait	hives	often	enough	to	give	my	experimental
+plan	a	reasonable	chance	of	success.	Using	some	scrap	plywood	scrounged	from
+Dyce	Lab,	I	built	six	nest	boxes,	each	one	a	simple	cubic	box	35	centimeters	(14
+inches)	wide,	tall,	and	deep,	and	bearing	a	4.5-centimeter	(1.75-inch)	diameter
+entrance	hole	on	the	front	side.	I	designed	these	boxes	to	mimic	the	nest	cavities
+I	was	finding	in	bee	trees.	My	bee	houses	looked	like	birdhouses	on	steroids,
+except	that	each	one	had	chicken	wire	nailed	over	its	entrance	opening	to	keep
+birds	out	while	letting	bees	in.	I	took	each	nest	box	to	a	place	I	knew	that	I’d
+enjoy	visiting	in	my	home	“territory”	of	Ellis	Hollow,	and	nailed	it	about	5
+meters	(15	feet)	of	the	ground	onto	the	side	of	a	large	tree.	I	still	remember
+vividly	the	thrill	I	felt	a	few	weeks	later,	in	late	June,	when	I	checked	the	nest
+box	that	I	’d	mounted	on	a	dead	elm	tree	along	Cascadilla	Creek	and	saw	dozens
+of	leather-colored	honeybees	bustling	in	and	out	of	its	entrance.	A	swarm	had
+moved	in!	Yippee!!	When	swarms	occupied	two	more	of	my	nest	boxes	over	the
+next	few	weeks,	I	was	even	more	excited.	This	pilot	study	had	been	simple,	but
+it	had	
+yielded	the	triumph	of	knowing	that	my	experimental	plan	was	likely	to
+work.	My	plan	for	the	next	summer	was	now	clear:	I	had	to	set	out	dozens	and
+dozens	of	nest	boxes	of	various	designs	to	“ask	the	bees	about	this	matter”	of
+their	ideal	dwelling	place.
+The	plan	worked	well.	Each	summer	in	1976	and	1977,	I	set	up	more	than	two
+hundred	green	nest	boxes	in	groups	of	two	or	three	across	Tompkins	County	and
+each	summer	over	half	of	my	nest-box	groups	attracted	at	least	one	wild	swarm.
+The	boxes	within	each	group	were	spaced	about	10	meters	(33	feet)	apart	on
+similar-sized	trees	or,	even	better	yet,	on	power-line	poles	where	they	were
+perfectly	matched	in	visibility,	wind	exposure,	and	the	like	(
+fig.	3.6
+).	Each	group
+of	boxes	was	designed	to	test	one	nest-site	preference,	and	it	did	so	by	giving
+swarms	a	choice	between	one	box	whose	properties	all	matched	those	of	a
+typical
+	nest	site	in	nature	(e.g.,	average	entrance	area,	average	cavity	volume,
+etc.)	and	one	or	two	other	boxes	identical	to	the	first	except	in	one	property,	the
+value	of	which	was	
+atypical
+.	In	this	way,	wild	swarms	were	tested	for	a
+preference	in	the	one	variable	that	differed	between	the	boxes.	For	example,	to
+test	for	a	preference	in	entrance	size,	I	set	up	pairs	of	cubical	nest	boxes	that
+were	identical	except	that	one	had	a	typical	entrance	area	of	12.5	square
+centimeters	(2.5	square	inches)	and	the	other	had	a	larger	than	usual	entrance
+area	of	75	square	centimeters	(15	square	inches).	Similarly,	to	test	for	a
+preference	in	cavity	size,	I	set	up	trios	of	cubical	nest	boxes	that	were	identical
+
+===== PAGE 55 =====
+except	that	one	box	had	the	typical	cavity	volume	of	40	liters	while	the	other	two
+boxes	had	volumes	at	the	two	tails	of	the	distribution	of	nest	cavity	volumes:	10
+and	100	liters.
+To	build	the	many	nest	boxes	needed	for	this	study,	I	spent	most	of	my
+Christmas	break	in	1975	sawing	and	hammering	and	painting	in	the	woodshop	at
+Dyce	Lab.	There	I	constructed	252	nest	boxes	and	used	up	enough	plywood
+(more	than	70	sheets)	for	building	a	small	house.	With	these	hundreds	of	nest
+boxes,	I	would	eventually	capture	124	swarms	in	1976	and	1977.
+As	is	shown	in	
+table	3.1
+,	the	swarms	demonstrated	preferences	in	the
+following	nest-site	variables:	entrance	size,	entrance	direction,	entrance	height
+above	the	ground,	entrance	height	above	the	cavity	floor,	cavity	volume,	and
+presence	of	combs	in	the	cavity.	The	bees	had	revealed	to	me	that	they	prefer	a
+nest	entrance	that	is	rather	small,	faces	south,	is	high	of	the	ground,	and	opens
+into	the	bottom	of	the	nest	cavity.	These	four	preferences	regarding	the	entrance
+opening	no	doubt	help	a	honeybee	colony	survive	against	threats	of	cold	winters
+and	dangerous	predators.	A	small	entrance	is	easily	defended	and	helps	isolate
+the	nest	from	the	outside	environment.	An	entrance	high	up	in	a	tree	is	less	apt	to
+be	discovered	by	predators	than	one	near	the	ground,	and	is	certainly
+inaccessible	to	predators	that	cannot	fly	or	climb	trees.	An	entrance	at	the	bottom
+of	the	nest	cavity	rather	than	at	the	top	may	help	to	minimize	the	loss	of	heat
+from	the	colony	by	convection	currents.	And	an	entrance	that	faces	south
+provides	a	warm,	solar-heated	porch	from	which	foragers	can	take	of	and	on
+which	they	can	land.	Beekeepers,	incidentally,	face	their	hives	to	the	south	to
+help	their	bees	fly	out	in	cool	weather.	This	southern	orientation	is	particularly
+important	in	the	winter	months,	when	bees	go	outside	on	sunny	days	to	make
+their	critical	“cleansing	flights,”	that	is,	to	defecate.	A	Canadian	bee	researcher
+based	in	Alberta,	Tibor	Szabo,	compared	colonies	living	in	south-facing	and
+north-facing	hives.	He	found	that	those	in	south-facing	hives	were	less	apt	to
+suffer	a	hive	entrance	plugged	by	ice	in	winter	and	were	more	populous	in
+spring.
+
+===== PAGE 56 =====
+The	pattern	of	nest-box	occupations	by	swarms	also	showed	clearly	that	the
+bees	avoid	cavities	smaller	than	10	liters	or	greater	than	100	liters,	and	that	they
+very	much	like	40-liter	cavities	(about	the	size	of	a	wastebasket),	especially	ones
+already	equipped	with	combs.	Probably	the	main	problem	the	bees	face
+regarding	cavity	volume	is	avoiding	undersized	cavities,	since	most	tree	cavities
+are	too	small	(less	than	about	15	liters)	to	hold	the	store	of	honey	a	colony	needs
+to	survive	winter.	The	evidence	supporting	this	assertion	comes	from	a	small
+study	I	did	with	one	of	my	brothers,	Daniel	H.	Seeley,	who	owns	a	whole
+hillside	in	Vermont	that	was	logged	in	the	1800s	but	is	now	forested	with	stately
+sugar	maple	
+(Acer	saccharum)
+	and	beech	
+(Fagus	grandifolia)
+	trees.	In	October
+1976,	Dan	and	I	packed	up	logging	tools	and	drove	north	from	Cambridge,
+Massachusetts,	to	Roxbury,	Vermont,	to	spend	several	days	of	Indian	summer
+finding	out	what	size	cavities	scout	bees	are	apt	to	encounter	when	prospecting
+for	homesites.	Working	over	a	0.32-hectare	(0.8-acre)	area,	we	felled	every	tree
+more	than	30	centimeters	(12	inches)	in	diameter,	and	we	sawed	each	felled	tree
+into	120-centimeter	(4-foot)	lengths	to	expose	any	cavities	they	contained.	We
+dissected	39	trees	and	found	14	cavities	with	an	opening	to	the	outside	that	could
+provide	access	to	a	scout	bee.	Of	these	14	tree	hollows,	only	two	(14	percent)
+were	larger	than	15	liters;	they	were	32	and	39	liters.
+
+===== PAGE 57 =====
+The	preference	for	a	site	filled	with	combs—built	by	a	preceding	colony	that
+did	not	survive	winter—doubtless	refects	the	tremendous	energy	savings	that	a
+colony	enjoys	if	it	occupies	a	site	already	furnished	with	a	full	set	of	combs.	The
+energy	thus	saved	turns	out	to	be	a	large	fraction	of	the	honey	store	that	a
+fledgling	colony	needs	to	survive	its	first	winter.	This	is	shown	by	the	following
+calculations.	A	typical	nest	in	a	bee	tree	contains	some	100,000	cells	arranged	in
+eight	or	so	combs	whose	total	surface	area	is	about	two	and	half	square	meters	(3
+square	yards).	Building	this	impressive	edifice	requires	about	1,200	grams	(2.5
+pounds)	of	beeswax.	Given	that	the	weight-to-weight	efficiency	of	beeswax
+synthesis	from	sugar	is	at	most	about	0.20,	we	can	estimate	that	building	the
+combs	in	a	typical	nest	requires	about	6.0	kilograms	of	sugar,	hence	about	7.5
+kilograms	(16	pounds)	of	honey.	This	mass	of	honey	is	about	one-third	of	what	a
+colony	will	consume	over	winter.	Storing	these	7.5	kilograms	of	honey	in	the
+colony’s	food	supply	for	winter	rather	than	spending	it	on	comb	building	will
+greatly	boost	a	colony’s	odds	of	surviving	its	first	winter.	Recall	that	I	found	that
+76	percent	of	the	colonies	newly	established	in	tree	cavities	around	Ithaca	die
+during	their	first	winter,	and	that	nearly	all	of	the	colonies	that	do	so	succumb	to
+starvation.
+The	nest-site	properties	for	which	I	detected	no	preference	were	entrance
+shape,	cavity	shape,	cavity	draftiness,	and	cavity	dryness.	Honeybees	probably
+prefer	tight	and	dry	nest	cavities,	but	because	a	colony	can	caulk	with	tree	resins
+any	cracks	and	crevices	that	let	in	drafts	and	water,	the	nest-site	scouts
+apparently	do	not	pay	much	heed	to	these	properties.	In	contrast,	a	colony	cannot
+
+===== PAGE 58 =====
+modify	the	volume	of	a	nest	cavity,	the	height	of	its	entrance,	or	the	direction	in
+which	it	faces,	so	to	get	a	homesite	that	meets	its	needs	in	these	properties	the
+nest-site	scouts	must	pay	close	attention	to	these	properties	when	evaluating
+prospective	nest	sites.	The	ability	of	a	honeybee	colony	to	remedy	a	drafty	or
+damp	site	was	neatly	demonstrated	by	the	swarm	bees	that	occupied	my
+experimental	nest	boxes.	I	had	rendered	some	of	the	boxes	drafty	by	riddling
+their	fronts	and	sides	with	six-millimeter	(quarter-inch)	diameter	holes	spaced
+7.5	centimeters	(3	inches)	apart	(
+fig.	3.7
+).	Other	boxes	I	had	made	damp	by
+dumping	2	liters	(2	quarts)	of	waterlogged	sawdust	onto	the	floor	of	each	box.
+Every	swarm	that	moved	into	one	of	the	drafty	boxes	soon	made	it	draft	free	by
+plugging	with	tree	resins	all	the	holes	I	had	drilled.	Likewise,	every	swarm	that
+occupied	one	of	the	damp	boxes	quickly	rendered	it	dry	by	hauling	out	all	the
+soggy	sawdust	that	I	had	dumped	inside.	I	was	greatly	impressed	by	the	bees’
+tidiness.
+
+===== PAGE 59 =====
+Freebies
+One	thing	that	makes	studying	honeybees	so	enjoyable	is	the	way	that	what	is
+learned	through	curiosity-driven	research	often	turns	out,	unexpectedly,	to	have
+real	practical	value.	My	best	example	of	this	phenomenon	is	the	way	that
+knowing	something	about	the	defecation	habits	of	Asian	honeybees	helped
+defuse	tensions	between	the	United	States	and	the	Soviet	Union	back	in	the
+1980s.	This	story	starts	in	the	late	1970s	when	I	had	finished	graduate	school
+and	was	keen	to	travel	overseas	and	learn	about	the	marvelous	species	of
+honeybees	that	live	in	the	Asian	tropics:	the	Asian	hive	honeybee	
+(Apis	cerana)
+,
+the	dwarf	honeybee	
+(Apis	florea)
+,	and	the	giant	honeybee	
+(Apis	dorsata).
+	With
+support	from	the	National	Geographic	Society,	my	wife	Robin	and	I	undertook	a
+
+===== PAGE 60 =====
+10-month	study	of	the	colony	defense	strategies	of	the	three	Asian	honeybee
+species	living	in	Thailand.	We	set	up	camp	in	the	pristine	mountain	forests	of	the
+vast	Khao	Yai	National	Park	in	northeast	Thailand,	where	one	can	still	enjoy	the
+sight	of	hornbills	wing	
+ing	their	way	between	towering	dipterocarp	trees,	the
+eerie	smell	of	Asian	tiger	urine	deposited	along	a	trail,	the	whooping	calls	of
+white-faced	gibbons	shortly	after	sunrise,	and	the	mysterious	biology	of	the
+Asian	honeybees.	Gradually	we	assembled	a	picture	of	each	honeybee	species’
+fascinatingly	complex	array	of	colony	defenses	against	such	enemies	as	giant
+hornets,	weaver	ants,	honey	buzzards,	tree	shrews,	rhesus	monkeys,	and	honey
+bears.	This	was	field	biology	done	for	biology’s	sake,	and	it	was	a	wonderful
+adventure	for	two	newlyweds.	Sometimes	I	wonder,	though,	if	even	half	a	dozen
+biologists	worldwide	have	read	closely	the	beautifully	detailed,	21	page	report
+on	the	Asian	honeybees	that	we	published	in	the	scientific	journal	
+Ecological
+Monographs.
+A	few	years	later,	however,	and	to	my	amazement,	the	knowledge	that	we’d
+gained	about	the	Asian	honeybees	proved	important	to	a	large	international
+audience.	In	1981,	the	secretary	of	state	in	the	Reagan	administration,	Alexander
+M.	Haig,	alleged	that	the	Soviet	Union	was	waging	or	abetting	chemical	warfare
+against	opponents	of	the	communist	governments	in	two	countries	bordering
+Thailand:	Laos	and	Kampuchea.	If	true,	this	was	a	violation	of	two	international
+arms-control	treaties,	the	1925	Geneva	Protocol	and	the	1972	Biological
+Weapons	Convention.	The	main	evidence	cited	by	Haig	was	a	material	called
+“yellow	rain,”	that	is,	yellow	spots	less	than	6	millimeters	(one-quarter	inch)	in
+diameter	that	were	found	on	vegetation	at	alleged	attack	sites	and	that
+supposedly	contained	fungal	toxins.	I	realized,	however,	that	the	yellow	spots
+that	U.S.	officials	called	yellow	rain	were	indistinguishable	from	the	yellow
+spots	I	called	honeybee	feces.	They	were	identical	in	size,	shape,	and	color.
+Further	work	revealed	that	both	contained	bee	hairs	and	were	laden	with	pollen
+grains	from	which	the	protein	had	been	digested.	Eventually,	I	was	able	to	help
+Matthew	Meselson,	a	professor	of	molecular	genetics	at	Harvard	and	an	expert
+on	chemical	and	biological	weapons,	show	conclusively	that	yellow	rain	was
+indeed	honeybee	feces,	not	chemical	warfare.	One	wag	said	we	had	uncovered
+the	work	of	“KGBs.”	Shortly	after	yellow	rain	was	proven	to	be	bee	poop,	in
+1984,	officials	of	the	U.S.	State	Department,	without	fanfare,	ceased	accusing
+the	Soviets	of	violating	the	two	arms-control	treaties	on	chemical	and	biological
+weapons.
+The	yellow	rain	story	is	a	striking	example	of	how	research	rooted	in	sheer
+curiosity	can	unexpectedly	yield	useful	knowledge,	but	it	is	not	so	unusual,	for
+
+===== PAGE 61 =====
+real-world	benefits	often	bubble	up	from	basic	research.	My	first	taste	of
+pursuing	personal	curiosity	and	getting	an	unexpected	bonus	of	practical	results
+came	from	my	study	with	Doc	Morse	of	the	nest-site	preferences	of	swarms.	In
+the	summer	of	1976,	we	had	groups	of	nest	boxes	set	up	in	more	than	100	sites
+around	Tompkins	County,	and	we	caught	more	than	60	swarms.	Given	our	high
+success	rate	in	trapping	swarms,	Doc	realized	that	we	should	translate	our
+findings	 about	 the	 bees’	 nest-site	 preferences	 into	 recommendations	 for
+beekeepers	on	how	to	build	and	position	bait	hives	to	catch	wild	swarms	of
+honeybees.	We	prepared	a	simple	design	(
+fig.	3.8
+)	along	with	a	set	of	guidelines
+for	situating	bait	hives—a	good	location	is	about	5	meters	(15	feet)	of	the
+ground,	highly	visible	but	fully	shaded,	and	facing	south—and	published	these
+in	the	beekeeping	magazine	
+Gleanings	 in	 Bee	 Culture
+	and	as	a	Cornell
+Cooperative	Extension	Bulletin.	Beekeepers	responded	enthusiastically.	Before
+this,	beekeepers	wanting	to	capture	wild	swarms	had	to	rely	on	being	notified
+when	a	swarm	had	settled	somewhere,	then	they	had	to	hurry	to	put	it	in	a	hive
+before	the	bees	finished	selecting	a	nest	site	and	few	away	to	their	chosen	home.
+With	bait	hives,	beekeepers	can	collect	swarms	automatically.
+In	recent	years,	other	bee	scientists	have	designed	cheaper,	lighter,	and
+tougher	bait	hives	made	of	reinforced	wood	pulp	material,	and	have	devised
+scent	 lures	 that	 slowly	 leak	 a	 1:1:1	 blend	 of	 chemicals
+(citral:geraniol:nerolic+geranic	acids)	from	a	small	polyethylene	vial.	These
+scent	lures	mimic	the	attraction	phero-mones	that	scout	bees	release	from	their
+scent	organs	to	mark	a	desirable	home-site	(discussed	further	in	
+chapter	8
+).
+Experiments	by	Justin	Schmidt	at	the	USDA	Bee	Research	Center	in	Tucson,
+Arizona,	have	shown	that	a	bait	hive	with	a	scent	lure	can	be	five	times	more
+likely	to	attract	a	swarm	than	one	without	a	lure,	probably	because	the	artificial
+attraction	pheromones	makes	a	bait	hive	much	more	likely	to	be	discovered	by	a
+scout	bee,	but	perhaps	by	also	making	it	more	attractive.	Wood	pulp	bait	hives
+(sometimes	called	“swarm	traps”)	and	swarm	scent	lures	are	now	produced
+commercially	and	are	sold	by	the	companies	that	sell	beekeeping	equipment.
+Each	summer,	I	put	up	a	half	dozen	bait	hives,	partly	because	I	can	always	use	a
+few	additional	colonies	of	bees,	but	mostly	because	I	like	getting	free	bees.
+
+===== PAGE 62 =====
+Property	Assessments
+Probably	every	homeowner	has	wondered	how	his	or	her	local	tax	assessor
+combines	information	about	the	size	of	a	house	lot,	the	floor	area	of	the	house	on
+the	lot,	the	number	of	bedrooms	and	bathrooms	in	the	house,	and	so	forth	to
+determine	the	assessed	value	of	a	particular	property.	I	began	wondering	the
+same	thing	about	scout	bees	in	August	1974,	as	I	watched	several	scouts
+scrutinizing	a	candidate	dwelling	place.	This	happened	in	the	summer	before	I
+went	of	to	start	graduate	school	at	Harvard.	I	was	working	happily	for	Doc
+Morse	at	Cornell’s	Dyce	Laboratory,	but	I	was	a	little	worried	about	my	choice
+of	problem	for	a	doctoral	thesis:	deepening	Martin	Lindauer’s	work	on	how	a
+swarm	chooses	its	home.	In	20	years,	nobody	had	tackled,	much	less	solved,	the
+many	mysteries	raised	by	Lindauer’s	study.	Clearly,	there	was	a	first-rate
+opportunity	here,	but	could	I	succeed	in	making	something	of	it?	To	begin	to	see
+what	I	might	do,	I	decided	simply	to	watch,	with	my	eyes	wide	open,	a	swarm
+go	through	its	democratic	decision-making	process.	In	working	for	Doc,	I	had
+learned	how	to	make	an	swarm—by	shaking	a	colony	(queen	and	workers)	into	a
+cage	
+to	render	them	homeless,	and	then	feeding	them	lavishly	with	sugar	syrup
+to	get	them	stuffed	with	food	like	natural	swarm	bees—so	I	prepared	a	swarm
+and	set	it	up	behind	my	parent’s	house	in	Ellis	Hollow	(see	
+fig.	1.7
+).	I	also	nailed
+a	nest	box	that	I	built	from	scrap	plywood	to	a	white	pine	tree	about	150	meters
+(500	feet)	away,	hoping	the	swarm’s	scouts	would	discover	it	and	select	it	for
+their	new	homesite.	I	mounted	the	box	at	eye	level	so	I	could	observe	easily	any
+scout	bees	that	might	visit	it.
+The	weekend	that	I	watched	this	swarm	turned	out	to	be	a	milestone	in	my
+
+===== PAGE 63 =====
+life.	The	swarm’s	scouts	quickly	began	advertising	several	prospective	homesites
+with	their	dances,	and	before	long	one	bee	was	dancing	with	eye-catching	en-
+thusiasm	for	a	location	nearby	and	to	the	north:	my	nest	box!	This	bee’s	lively
+dance	soon	gave	rise	to	a	small	crowd	of	bees	at	the	box.	Back	at	the	swarm,	I
+adorned	a	few	of	the	bees	dancing	for	my	box	with	dots	of	paint	on	the	thorax
+and	abdomen,	giving	different	bees	different	color	combinations.	This	simple
+trick	transformed	these	individuals	from	mere	members	of	
+Apis	mellifera
+	into
+personal	acquaintances	whose	affairs	became	of	the	greatest	interest	to	me.	At
+the	swarm,	I	saw	how	a	scout	would	perform	a	bout	of	vigorous	dancing,	contact
+another	bee	with	agile	antennal	movements	to	beg	a	droplet	of	honey,	perhaps
+groom	of	a	pesky	feck	of	paint,	and	then	fly	away	for	20	to	30	minutes.	When
+she	returned,	she	might	dance	again	but	she	might	also	just	settle	quietly	within
+the	swarm	cluster.	At	the	nest	box,	I	saw	how	my	labeled	bees	would	land	and
+agitatedly	run	into	the	entrance	opening	and	then	scurry	back	out	a	minute	or	so
+later,	whereupon	they	would	either	crawl	briefly	around	the	entrance	and	then
+pop	back	inside	or	conduct	a	slow,	hovering	flight	around	the	box,	usually	facing
+it	and	maneuvering	within	inches	of	the	box,	apparently	giving	the	nest	structure
+a	detailed	visual	inspection	(
+fig.	3.9
+).	Never	before	had	I	seen	a	honeybee
+behave	with	such	persistent	intention	to	gather	information.	I	was	thoroughly
+intrigued.	Also,	my	worries	about	choice	of	thesis	topic	had	largely	vanished,	for
+I	felt	confident	that	I	could	explore	how	a	scout	bee	inspects	a	site.
+I	began	to	study	closely	the	inspection	behavior	of	nest-site	scouts	the
+following	summer,	in	June	1975.	To	do	so,	I	had	to	leave	the	forested
+countryside	around	Ithaca,	where	since	early	May	I	had	been	busy	finding	bee
+trees	and	describing	natural	nests,	and	shift	to	a	location	largely	devoid	of
+natural	homes	for	honeybees:	Appledore	Island	(
+fig.	3.10
+).	This	rocky,	wind-
+blown	island	is	barely	900	meters	(half	a	mile)	long	and	lies	10	kilometers	(6
+miles)	out	in	the	Atlantic	Ocean	of	the	coast	of	southern	Maine.	It	is	the	site	of
+the	Shoals	Marine	Laboratory	of	Cornell	University	and	the	University	of	New
+Hampshire.	I	was	attracted	to	Appledore	because	it	has	no	resident	honeybees
+and	it	has	no	large	trees.	Instead,	it	is	inhabited	by	approximately	one	thousand
+breeding	pairs	of	herring	gulls	
+(Larus	argentatus)
+	and	great	black-backed	gulls
+(Larus	marinus)
+,	and	it	is	covered	by	thickets	of	poison	ivy	plants	rising	three
+meters	(10	feet)	tall	together	with	tangles	of	blackberry	brambles	and	wind-
+battered	cherry	bushes,	all	richly	fertilized	by	the	gulls.	I	figured	that	if	I	took	a
+honeybee	swarm	out	to	this	scrubby	island,	the	bees	would	have	to	concentrate
+their	house	hunting	on	the	artifcial	nesting	sites	that	I	would	provide.	If	so,	then	I
+could	observe	their	behavior	under	controlled	conditions	and	learn	how	they
+
+===== PAGE 64 =====
+assess	a	possible	dwelling	place.
+My	first	goal	on	Appledore	Island	was	to	make	a	detailed	description	of	the
+behavior	of	scout	bees	inspecting	nest	sites.	I	hoped	these	observations	would
+suggest	how	scouts	evaluate	the	critical	nest-site	properties.	It	was	particularly
+important	to	be	able	to	watch	scouts	inside	a	prospective	homesite	in	order	to
+understand	how	they	might	measure	such	things	as	the	cavity’s	volume	and	the
+entrance’s	height	from	the	cavity	floor.	To	this	end,	I	built	a	lightproof	hut	with	a
+cube-shaped	nest	box	mounted	on	one	of	its	walls	(
+fig.	3.11
+).	The	box	was
+positioned	outside	a	window	covered	with	a	red	filter	(bees	cannot	see	red	light)
+so	that	I	could	peer	inside	the	box	without	disturbing	the	scouts.	The	inner
+surfaces	of	the	box	bore	a	grid-coordinate	system	that	enabled	me	to	record
+where	a	scout	bee	went	while	she	was	in	the	cavity.	After	setting	up	the	hut	in	a
+valley	on	one	side	of	the	island,	I	positioned	a	small	swarm	(about	2,000	bees)	at
+the	center	of	the	island.	The	bees	had	been	given	dots	of	paint	using	a	color	code
+that	made	them	individually	identifiable.	Then	I	retired	to	the	hut	to	wait	for
+scout	bees.
+
+===== PAGE 65 =====
+
+
+===== PAGE 66 =====
+The	first	time	I	tried	this,	I	waited	all	morning	at	the	hut	without	being	visited
+by	a	scout	bee,	which	surprised	and	dismayed	me.	When	I	returned	to	the	swarm
+around	midday,	my	spirits	sank	further,	for	I	saw	several	scouts	performing	long-
+lasting	dances	indicating	a	location	directly	away	from	my	hut.	Rats!	What
+possibly	could	the	bees	have	found?	I	made	careful	measurements	of	the
+direction	and	distance	to	the	location	specified	by	the	bees’	dances	and	plotted
+the	site	on	my	topographical	map.	Now	my	spirits	sank	even	deeper,	for	the
+bees’	dances	were	indicating	unmistakably	one	of	the	two	lobster	fshermen’s
+cottages	on	the	south	shore	of	the	island,	specifically	Rodney	Sullivan’s	cottage
+(
+fig.	3.12
+).	When	I	had	arrived	on	Appledore	a	few	days	before,	and	had	been
+getting	oriented	to	my	new	surroundings,	I	had	been	told	to	keep	well	away	from
+the	fshermen’s	private	properties,	especially	Rodney’s	place,	for	he	valued	his
+privacy	and	kept	a	loaded	shotgun	behind	his	front	door.	What	should	I	do?	I
+sought	advice	from	the	laboratory’s	director,	Professor	John	M.	Kingsbury,	and
+he	kindly	went	with	me	over	to	Rodney’s	cottage,	to	introduce	student	Seeley	to
+fisherman	Sullivan.	We	went	by	boat	so	Rodney	would	be	able	to	see	us	coming,
+approaching	from	the	front	(the	water),	even	while	my	bees	were	“attacking”
+from	the	rear	(the	land).	He	heard	our	boat	approach,	came	out	on	his	porch,	and
+told	us	to	come	ashore.	After	we	climbed	up	the	rocks	to	his	house,	he	told	us	he
+had	an	emergency:	hundreds	of	bees	were	buzzing	in	the	stovepipe	to	his
+woodstove!	“Never	seen	this	before!	Could	they’a	been	blown	out	here	during
+the	[recent]	storm?”	I	didn’t	answer	the	question,	but	I	did	offer	to	help.	While
+Rodney	made	a	fire	in	the	stove	to	smoke	out	the	bees,	I	climbed	his	steep	roof
+
+===== PAGE 67 =====
+(slippery	with	splotches	of	fresh	gull	poop)	and	taped	window	screen	over	his
+chimney	flue	to	exclude	bees	in	the	future.	Rodney	was	delighted…I	was
+relieved.
+No	longer	distracted	by	Rodney’s	house,	the	scouts	from	my	swarm	soon
+started	to	appear	at	my	observation	nest	box	and	began	to	perform	their	striking
+inspection	behavior.	I	saw	that	a	scout	bee	needs	13	to	56	minutes	(average	37
+min)	to	inspect	a	prospective	nest	site.	Her	complete	inspection	is	a	summation
+of	10	to	30	journeys	inside	the	cavity,	each	one	lasting	usually	less	than	a	minute
+and	alternating	with	equally	brief	periods	outside,	during	which	the	bee
+examines	the	exterior	of	the	nest	structure.	I	call	this	first	inspection,	when	a
+scout	is	popping	in	and	out	of	the	cavity,	the	discovery	inspection.	Following	the
+discovery	inspection,	a	scout	returns	to	the	swarm,	and	if	the	site	is	desirable	she
+will	advertise	it	with	a	waggle	dance	and	usually	will	then	make	repeated	visits
+to	the	site	at	approximately	half-hour	intervals,	but	these	subsequent	site	visits
+tend	to	last	only	10	to	20	minutes	(average	13	min)	and	don’t	involve	so	much
+in-and-out	activity.
+When	a	scout	is	inside	a	cavity,	conducting	her	discovery	inspection,	she
+devotes	most	of	her	time	(about	75	percent)	to	rapid	walking	across	the	inner
+surfaces.	This	quick	pacing	about	is	interspersed	with	pauses	to	rest,	groom,	and
+release	attraction	pheromones	from	the	scent	organ,	and	with	short	hopping
+flights.	The	inside	of	a	dark	cavity	seems	an	odd	place	to	attempt	to	fly	about,
+
+===== PAGE 68 =====
+yet	the	bees	make	these	little	flights	that	last	less	than	a	second	and	that	move	a
+bee	from	one	point	to	another	on	the	walls,	floor,	or	ceiling	of	the	cavity.	A
+geometric	pattern	in	the	movements	of	scout	bees	is	that	early	in	the	discovery
+inspection	a	scout	walks	primarily	near	the	entrance	during	her	journeys	inside,
+whereas	later	she	penetrates	to	the	deepest	recesses	of	the	cavity	(
+fig.	3.13
+).
+Three-dimensional	reconstructions	of	the	walking	paths	of	individual	scouts
+reveal	that	when	the	inspection	is	finished,	a	scout	has	walked	60	meters	(200
+feet)	or	more	around	the	inside	of	the	cavity	and	has	covered	all	its	inner
+surfaces.
+I	spent	four	weeks	on	Appledore	Island	in	1975,	departing	without	solving	the
+mystery	of	how	scout	bees	evaluate	candidate	nest	sites.	Nevertheless,	I	felt
+returned	to	the	island	in	July	1976,	I	focused	on	the	puzzle	of	how	scout	bees
+can	measure	the	size	of	potential	nest	cavities,	which	are	immense	compared	to
+the	size	of	a	bee.	Cavity	volume	is	the	nest-site	property	that	is	perhaps	most
+critical	to	a	colony’s	long-term	survival,	since	any	colony	occupying	a	hollow	10
+liters	or	smaller	cannot	store	suffcient	honey	to	get	through	winter,	so	I
+suspected	the	bees	have	evolved	a	way	to	measure	cavity	volume	accurately.
+
+===== PAGE 69 =====
+How	do	scout	bees	measure	the	volume	of	a	cavity?	Their	extensive	walking
+in	the	course	of	an	initial	inspection	could	provide	the	basis	for	an	estimate,	but
+another	hypothesis	was	that	they	simply	go	inside	and	look	around.	I	first
+performed	experiments	with	nest	boxes	in	which	I	could	vary	the	interior	light
+level	(by	changing	the	amount	of	light	coming	in	through	the	entrance	hole)	and
+the	traversable	surface	area	(by	coating	the	inner	surfaces	with	Fluon,	a	teflon-
+type	material	that	creates	a	waxy	surface	that	bees	cannot	walk	up)	(
+fig.	3.14
+).	I
+found	that	in	order	to	measure	a	cavity’s	volume,	scout	bees	need	either	interior
+illumination	greater	than	0.5	lux	(about	the	illumination	provided	by	a	full
+moon)	or	inner	surfaces	that	can	be	traversed	freely.	What	are	the	conditions
+inside	a	typical	tree	cavity?	Certainly	the	wood	walls	inside	a	cavity	are	easily
+traversed	by	a	scout	bee.	To	measure	the	light	level	in	cavities	of	the	sort
+inspected	by	scout	bees,	I	built	a	model	based	on	the	measurements	I	had	made
+of	natural	nests.	It	had	a	series	of	openings	into	which	I	inserted	a	light	meter.	I
+found	the	illumination	to	be	less	than	0.5	lux	except	near	the	entrance	opening
+
+===== PAGE 70 =====
+where	some	sunlight	streams	in.	Evidently,	in	nature	scout	bees	rely	primarily	on
+walking	about	in	a	prospective	nest	site	to	measure	its	volume.
+To	test	this	hypothesis	more	directly,	I	tried	altering	a	scout’s	perception	of	a
+cavity’s	volume	by	manipulating	the	amount	of	walking	required	to	move	from
+point	to	point	inside	a	cavity.	To	do	so,	I	invented	a	bee	treadmill,	a	cylindrical
+nest	box	mounted	vertically	on	a	turntable	that	enabled	me	to	rotate	the	box
+smoothly	while	a	scout	bee	was	inside	(
+fig.	3.14
+).	By	means	of	a	window	at	the
+top,	I	could	look	inside	and	see	which	way	the	bee	was	walking;	then	I	could
+turn	the	walls	according	to	whether	I	wanted	to	increase	or	decrease	the	amount
+of	walking	required	for	her	to	complete	a	horizontal	circuit.	So,	if	a	scout	came
+in	through	the	entrance	and	I	rotated	the	walls	in	the	direction	she	walked,	she
+was	carried	along	and	quickly	found	herself	back	near	the	entrance.	But	if	I
+turned	
+Fig.	3.14
+	Experimental	apparatus	used	in	testing	how	a	scout	bee
+measures	the	volume	of	a	cavity.	Left:	Apparatus	in	which	the	cavity	volume
+could	be	varied	between	5	liters	(with	the	inner	lid	down)	and	2	5	liters	(inner	lid
+up).	The	light	baffle	made	it	possible	to	vary	the	amount	of	light	coming	in
+through	the	entrance	hole,	to	see	whether	scouts	could	measure	the	size	of	the
+cavity	without	relying	mainly	on	vision.	Coating	the	interior	wall	surfaces	made
+it	possible	to	vary	the	amount	of	traversable	surface	area	inside	the	box,	to	assess
+the	importance	of	walking.	Right:	Apparatus	in	which	the	wall	of	the	cylindrical
+cavity	could	be	rotated	to	increase	or	decrease	the	amount	of	walking	a	scout	bee
+had	to	do	to	circumnavigate	the	space.	the	walls	against	her,	she	would	need	to
+walk	much	longer	to	make	her	way	back	around	to	the	entrance	opening.	The
+entire	device	was	mounted	in	my	lightproof	hut	with	a	short	tunnel	connecting
+the	entrance	in	the	nest	box	to	an	opening	in	the	hut’s	wall.	The	only	light
+entering	the	nest	box	came	in	through	its	entrance,	and	it	is	likely	that	this	bright
+spot	provided	each	scout	bee	inside	the	box	with	a	visual	reference	point,	both
+for	finding	her	way	out	of	the	box	and	for	monitoring	her	progress	in
+circumnavigating	it.
+
+===== PAGE 71 =====
+Fig.	3.14	Experimental	apparatus	used	in	testing	how	a	scout	bee	measures	the
+volume	of	a	cavity.	Left:	Apparatus	in	which	the	cavity	volume	could	be	varied
+between	5	liters	(with	the	inner	lid	down)	and	25	liters	(inner	lid	up).	The	light
+baffle	made	it	possible	to	vary	the	amount	of	light	coming	in	through	the
+entrance	hole,	to	see	whether	scouts	could	measure	the	size	of	the	cavity	without
+relying	mainly	on	vision.	Coating	the	interior	wall	surfaces	made	it	possible	to
+vary	the	amount	of	traversable	surface	area	inside	the	box,	to	assess	the
+importance	of	walking.	Right:	Apparatus	in	which	the	wall	of	the	cylindrical
+cavity	could	be	rotated	to	increase	or	decrease	the	amount	of	walking	a	scout	bee
+had	to	do	to	circumnavigate	the	space.
+The	volume	of	this	experimental	box	was	14	liters,	on	the	boundary	between
+an	unacceptably	small	cavity	and	a	suitably	large	one.	If	walking	contributes	to
+the	perception	of	volume,	then	the	first	scout	to	discover	the	box	should	find	it
+either	more	or	less	attractive	than	its	true	volume	would	merit,	according	to
+whether	she	had	been	made	to	walk	more	or	less	than	she	would	in	a	normal	14-
+liter	cavity.	The	assay	of	her	evaluation	of	the	box	was	the	number	of	other
+scouts	she	recruited	to	visit	the	box;	she	should	recruit	more	scouts	if	she	found
+the	box	suitably	large	than	she	would	if	the	box	had	seemed	unacceptably	small.
+That	is	precisely	what	I	observed	in	four	trials	of	this	experiment:	seven	or	nine
+recruits	in	90	minutes	when	the	bee	walked	lots,	but	only	zero	or	one	recruit	in
+90	minutes	when	the	bee	walked	little.	Evidently,	only	the	bees	that	had	taken
+
+===== PAGE 72 =====
+“long	walks”	judged	the	box	sufficiently	roomy	and	recommended	it	to	their
+fellow	scouts	with	enthusiasm.	It	seems	clear,	therefore,	that	a	scout’s	estimate
+of	the	volume	of	a	cavity	is	proportional	to	the	amount	of	walking	she	must	do	to
+circumnavigate	it.	Every	step	is	a	measurement.
+Nigel	R.	Franks	and	Anna	Dornhaus,	biologists	at	the	University	of	Bristol	in
+England	and	the	University	of	Arizona	in	the	United	States,	have	recently
+suggested	a	simple	method	by	which	a	scout	bee	might	judge	a	cavity’s
+roominess	using	the	information	gained	from	the	walking	and	flying	movements
+that	she	makes	inside	the	cavity.	They	point	out	that	physicists	have	long	known
+that	for	any	open	space	the	mean	free	path	length	(MFPL)	of	wall-to-wall	lines
+drawn	in	all	directions	across	the	space	is	equal	to	four	times	the	volume	(V)	of
+the	space	divided	by	its	internal	surface	area	(A):	MFPL	=	4V/A.	Thus,	volume
+is	proportional	to	mean	free	path	length	multiplied	by	internal	surface	area:	V	=
+(MFPL	x	A)/4.	It	is	possible	that	the	extensive	walks	made	by	scout	bees	are	a
+means	of	estimating	a	cavity’s	internal	surface	area.	It	is	also	possible	that	the
+short	hopping	flights	made	by	scout	bees—which	I	had	reported	but	had	not
+linked	to	the	volume	estimation	process—are	a	means	of	seeing	how	far	they	can
+fly	before	hitting	a	wall,	that	is,	a	means	of	estimating	the	mean	free	path	length.
+If	both	possibilities	prove	correct,	then	it	may	be	that	all	a	scout	bee	needs	to	do
+to	be	certain	that	a	cavity	is	sufficiently	spacious	is	to	ascertain	that	the	cavity
+provides	a	suitable	combination	of	internal	surface	area	and	mean	free	path
+length.	Certainly	the	results	of	my	experiment	with	the	rotating-wall	nest	box	are
+consistent	with	this	hypothesis;	
+forcing	a	bee	to	walk	farther	to	return	to	the
+entrance	(thereby	increasing	the	bee’s	estimate	of	internal	surface	area?)	resulted
+in	a	larger	estimate	of	the	box’s	volume.	Franks	and	Dornhaus	have	proposed	an
+ingenious	experimental	test	of	their	idea,	one	that	involves	hanging	a	rigid
+curtain	across	much	of	the	interior	of	a	nest	box	and	coating	the	curtain	with
+Fluon	so	that	scout	bees	cannot	walk	on	it.	This	curtain	will	shorten	the	mean
+free	path	length	of	flights	inside	the	nest	box	but	will	not	change	either	its
+volume	or	its	walkable	surface	area.	One	can	then	see	if	the	bees	behave	as	if	the
+box	has	been	shrunk.	I	hope	the	test	will	be	performed	soon,	and	that	it	will
+provide	support	for	the	proposed	rule	of	thumb,	for	I	think	it’s	an	elegant
+solution	to	a	tough	problem.
+
+===== PAGE 73 =====
+4
+SCOUT	BEES'	DEBATE
+The	experience	of	democracy	is	like	the	experience	of	life	itself—
+always	changing,	infnite	in	its	variety	sometimes	turbulent
+and	all	the	more	valuable	for	having	been	tested	by	adversity
+—Jimmy	Carter
+,	Address	to	the	Parliament	of	India,
+	1978
+	
+	
+W
+hen	a	honeybee	swarm	chooses	its	future	home,	it	practices	the	form	of
+democracy	known	as	direct	democracy,	in	which	the	individuals	within	a
+community	who	choose	to	participate	in	its	decision	making	do	so	personally
+rather	than	through	representatives.	The	collective	decision	making	of	a	bee
+swarm	therefore	resembles	a	New	England	town	meeting	in	which	the	registered
+voters	who	are	interested	in	local	affairs	meet	in	face-to-face	assemblies,	usually
+once	a	year,	to	debate	issues	of	home	rule	and	to	vote	on	them,	rendering	binding
+decisions	for	their	community.	Of	course,	there	are	differences	in	how	direct
+democracy	works	between	bee	swarms	and	town	meetings.	For	example,	the
+scouts	in	a	bee	swarm	have	common	interests	(e.g.,	all	want	to	choose	the	best
+available	homesite)	and	they	reach	decisions	by	building	a	consensus.	The
+people	in	a	town	meeting,	however,	often	have	conflicting	interests	(e.g.,	some
+do	and	some	don’t	want	to	help	fund	the	town	library),	and	they	reach	decisions
+by	using	the	majority	voting	rule:	each	individual	has	one	vote,	all	votes	have
+equal	weight,	and	the	option	that	gets	the	majority	wins.	Another	basic
+difference	between	bee	swarm	
+and	town	meeting	is	that	a	scout	bee	in	a	swarm,
+unlike	a	citizen	in	a	meeting,	cannot	monitor	each	exchange	within	the	group’s
+debate	and	thereby	have	a	synoptic	overview	of	the	discussion.	Instead,	a	bee
+can	only	observe	and	react	to	the	actions	of	her	immediate	neighbors	in	the
+swarm	cluster,	hence	she	operates	without	global	knowledge	of	the	information
+that	percolates	among	her	fellow	swarm	bees.
+
+===== PAGE 74 =====
+While	these	differences—common	versus	conflicting	interests	and	local
+versus	global	knowledge—between	bee	swarm	and	town	meeting	are	real,	they
+do	not	overshadow	several	extremely	important	similarities	between	the	direct
+democracies	of	honeybees	and	human	beings.	Firstly,	in	both	the	insectan	and
+the	human	forms	of	this	collective	decision	making,	each	decision	about	a	future
+course	of	action	refects	the	contributions,	freely	given	and	equally	weighted,	of
+several	hundred	individuals.	In	other	words,	the	control	of	the	group’s	actions	is
+distributed	among	many	of	its	members	rather	than	concentrated	in	a	few
+leaders.	Secondly,	because	hundreds	of	individuals	are	full	participants,	the
+group	 can	 acquire	 and	 process	 information	 from	 multiple	 sources
+simultaneously,	even	ones	that	are	widely	scattered.	Consider,	for	example,	the
+first	stage	of	every	decision-making	process,	where	the	critical	challenge	is	to
+identify	the	available	options.	By	virtue	of	having	numerous	individuals
+examining	a	problem	and	presenting	possible	solutions	to	it,	both	a	bee	swarm
+and	a	town	meeting	are	much	more	capable	than	any	solitary	bee	or	single
+person	in	coming	up	with	a	broad	range	of	alternative	options.	And	the	broader
+this	range	of	options,	the	more	likely	it	will	include	the	one	best	option.	Thirdly
+and	most	intriguingly,	in	both	bee	swarms	and	town	meetings,	the	way	the	group
+selects	its	course	of	future	action	is	by	staging	an	open	competition	among	the
+proposed	alternatives.	An	individual	proposes	a	possible	way	forward,	each
+listener	makes	an	independent	assessment	of	the	proposal	and	decides	whether	to
+reject	or	accept	it,	and	those	that	accept	it	may	announce	their	own	support	for
+the	proposal.	These	endorsements	often	recruit	still	more	supporters	for	this
+option.	The	better	the	proposal,	the	more	supporters	it	will	attract,	and	the	more
+likely	it	is	to	gain	sufficiently	broad	support	to	become	the	community’s	choice.
+In	the	case	of	the	house-hunting	bees,	the	competition	among	the	supporters
+of	different	proposals	is	often	fierce,	with	some	scout	bees	vigorously	champion
+ing	one	lovely	tree	cavity	while	other	scouts,	just	a	few	bees	away	on	the	surface
+of	the	swarm	cluster,	are	enthusiastically	advertising	a	second,	third,	or	even
+fourth	desirable	dwelling	place.	(Later	in	the	chapter,	we	will	see	which	bees
+take	up	the	“profession”	of	nest-site	scout	and	what	prompts	these	bees	to	step
+into	this	dangerous	job.	In	a	nutshell,	nest-site	scouts	are	elderly	bees	who	were
+working	as	common	foragers	but	then	quit	this	line	of	work	when	they	sensed
+that	their	colony,	preparing	to	swarm,	no	longer	needed	additional	food.)	But	it	is
+always	a	“friendly”	competition;	the	scout	bees	agree	on	what	makes	an	ideal
+homesite,	they	are	united	in	the	goal	of	choosing	the	best	available	site,	they
+share	their	information	with	full	honesty,	and	ultimately	they	reach	a	complete
+agreement	about	their	new	residence.	One	valuable	lesson	that	we	can	learn	from
+
+===== PAGE 75 =====
+the	bees	is	that	holding	an	open	and	fair	competition	of	ideas	is	a	smart	solution
+to	the	problem	of	making	a	decision	based	on	a	pool	of	information	dispersed
+across	a	group	of	individuals.
+Lindauer’s	Swarms
+The	discovery	that	swarm	bees	use	debates	to	aggregate	dispersed	information
+was	made	by	Martin	Lindauer	in	1951	and	1952,	when	he	received	permission
+from	Karl	von	Frisch	to	use	all	the	swarms	that	emerged	from	the	hives	of	bees
+kept	in	the	garden	behind	the	Zoological	Institute	at	the	University	of	Munich.
+Thus,	at	last,	Lindauer	was	able	to	make	a	close	study	of	what	had	aroused	his
+curiosity	back	in	the	spring	of	1949:	dirty	dancing	bees	on	the	surface	of	a
+swarm	(
+fig.	4.1
+).	The	institute’s	bee	colonies	did	their	part,	providing	Lindauer
+with	17	swarms	spread	across	the	months	of	May,	June,	and	July.	Many	of	the
+swarms	few	across	the	street	to	the	Botanical	Garden	where	they	settled	on
+various	objects,	and	Lindauer	charmingly	named	each	swarm	for	its	bivouac	site:
+the	Linden	swarm	on	May	18,	1951,	the	Hawthorn	swarm	on	July	9,	1951,	the
+Balcony	swarm	on	June	22,	1952,	and	so	forth.	His	immediate	aim	was	to
+determine	whether	the	bees	dancing	on	a	swarm	are	nest-site	scouts,	but	his
+ultimate	goal	was	to	understand	how	a	swarm	finds	its	new	homesite.	Knowing
+the	value	of	starting	an	investigation	of	animal	behavior	with	a	“watching	and
+wondering”	phase,	during	which	one	patiently	makes	broad	observations	that
+can	yield	unexpected	discoveries,	Lindauer	watched	from	dawn	to	dusk	the	bees
+performing	waggle	dances	on	the	surface	of	each	clustered	swarm.	Knowing	too
+that	he	wanted	his	dancing	bees	to	be	identifiable	individuals,	so	that	he	could
+begin	to	enter	the	world	of	a	bee	in	a	swarm,	he	applied	colored	paint	dots	to	the
+back	of	each	dancing	bee.	Karl	von	Frisch	had	devised	a	marking	scheme	back
+in	the	1910s	that	enables	one	to	number	bees	from	1	to	599	with	just	5	paint
+colors,	and	Lindauer	used	this	system,	deftly	daubing	with	a	tiny	paint	brush	one
+to	four	tiny	dots	of	shellac	paint	on	the	thorax	of	each	dancing	bee.
+
+===== PAGE 76 =====
+Lindauer’s	endeavor	to	record	the	dances	on	a	swarm	started	easily	enough,
+for	few	bees	danced	and	their	dance	performances	were	intermittent.	So	at	first
+Lindauer	could	record	in	his	notebook	the	time	of	each	bout	of	dancing,	the
+identity	of	the	dancer,	and	what	location	this	individual	advertised	with	her
+dance.	
+In	time,	however,	his	task	of	recording	the	swarm	bees’	dance	activity
+became	almost	impossibly	difficult;	sooner	or	later	he	faced	a	dozen	or	more
+bees	dancing	simultaneously	on	the	swarm.	He	coped	with	this	overwhelming
+display	of	dancing	bees	by	becoming	more	selective	in	what	he	recorded;	he
+noted	only	the	time	he	saw	each	new	(not	yet	labeled)	dancing	bee	and	the
+location	indicated	by	each	new	bee’s	dance.	It	was	exhausting	to	single-handedly
+observe,	label,	and	record	the	dancing	swarm	bees	for	hour	after	hour,
+sometimes	for	days	on	end.	But	it	was	immensely	revealing.	In	
+chapter	1
+,	we
+saw	how	Lindauer	tested	his	hunch	that	the	bees	dancing	on	swarms	are	nest-site
+scouts	advertising	potential	nesting	cavities.	He	found	that	the	site	indicated
+unanimously	by	the	dancing	bees	shortly	before	a	swarm	few	to	its	new
+homesite	matched	the	address	of	their	new	dwelling	place.	Even	more	marvelous
+was	Lindauer'	s	discovery	that	a	swarm’s	scouts	conduct	a	vigorous	debate	to
+select	their	new	home.
+Figure	4.2
+	shows	an	example	of	one	of	these	debates.	It	was	held	on	the	Eck
+swarm,	a	swarm	that	left	its	parental	hive	at	1:35	in	the	afternoon	on	June	26,
+
+===== PAGE 77 =====
+1951,	soon	settled	in	a	privet	bush,	and	then	hung	out	there	for	nearly	four	days
+while	its	scout	bees	went	about	choosing	a	dwelling	place.	On	the	first	day,
+Lindauer	observed	and	labeled	just	two	dancing	scout	bees,	between	1:35	and
+3:00	p.m.	One	bee	reported	a	candidate	homesite	approximately	1,500	meters	to
+the	north,	while	the	other	proposed	a	second	site	300	meters	to	the	southeast.	By
+3:00	p.m.	the	sky	had	filled	with	dark	rain	clouds	and	the	air	had	became	cooler,
+so	the	scout	bees	ceased	their	explorations	for	the	day.	The	next	day	the	scouts
+remained	inactive	until	late	in	the	morning,	when	the	clouds	parted	and	bright
+sunshine	returned.	
+Figure	4.2
+	shows	that	Lindauer	labeled	11	new	dancers
+between	noon	and	5:00	p.m.,	and	that	three	of	them	advertised	the	site	1,500
+meters	to	the	north,	two	others	advertised	the	site	300	meters	to	the	southeast,
+and	the	remaining	six	indicated	six	other	sites	in	various	directions	and
+distances.	Clearly,	no	agreement	among	the	dancing	bees	was	reached	during
+this	second	day	of	debate.	On	the	third	day,	the	weather	was	mostly	rainy	and
+Lindauer	recorded	just	two	new	dancers,	both	in	late	morning.	One	advocated
+the	site	to	the	north,	thereby	strengthening	this	site’s	slim	lead	among	the
+dancers	(with	five	bees	total,	so	far),	and	the	other	reported	a	new	site,	about	400
+meters	to	the	southwest.
+
+===== PAGE 78 =====
+On	the	fourth	day,	the	sky	cleared,	the	air	warmed,	and	the	bees	became
+active.	More	than	20	new	sites	were	reported,	though	surprisingly	the	site	1,500
+meters	to	the	north	did	not	receive	additional	dancers.	Lindauer	suggested	that	it
+might	have	been	a	cavity	with	a	leaky	roof	into	which	rainwater	had	seeped	the
+previous	day,	rendering	it	unattractive	as	a	nesting	site.	Most	of	these	20	new
+possibilities	were	announced	by	just	one	dancer	each	and	so	weren’t	serious
+proposals	in	the	bees’	debate,	but	a	few	did	receive	the	attention	of	multiple	bees
+and	so	became	important	possibilities.	For	example,	between	9:30	a.m.	and	4:00
+p.m.	nine	bees	advertised	a	site	located	1,500	meters	to	the	west.	Even	here,
+however,	the	bees’	interest	eventually	faded;	from	4:00	to	5:00	p.m.,	Lindauer
+recorded	no	new	dancers	for	the	western	site.	Only	one	site,	the	one	located	300
+meters	to	the	southeast,	held	the	bees’	interest	all	day,	with	new	dancers	for	this
+
+===== PAGE 79 =====
+site	getting	painted	on	the	swarm	each	hour.	
+Figure	4.2
+	shows	that	the	rate	at
+which	Lindauer	recorded	new	dancers	for	the	southeast	site	grew	gradually	over
+the	day,	and	that	by	4:00	p.m.	this	site	held	a	commanding	lead.	But	it	was	not
+until	the	final	hour	of	dance	activity,	between	4:00	and	5:00	p.m.,	that	the
+recruitment	of	scouts	to	the	southeast	site	utterly	overwhelmed	that	to	other	sites,
+with	fully	61	dancing	newcomers	advertising	the	southeast	site	and	only	two
+recruiting	to	alternative	sites.	The	situation	remained	the	same	the	following
+morning,	with	83	out	of	the	85	new	dancers	in	favor	of	the	southeast	site.
+Finally,	at	9:40	in	the	morning	on	June	30,	this	swarm	launched	into	flight	and
+few	300	meters	to	the	southeast	to	take	up	residence	in	the	wall	of	a	bomb-
+damaged	building.
+The	overall	pattern	that	Lindauer	reported	for	the	Eck	swarm—initially	new
+dancers	appeared	on	the	swarm	indicating	various	possible	nesting	site,	then	bit
+by	bit	the	new	dancers	became	concentrated	on	one	of	the	sites,	and	finally	the
+swarm	few	of	in	the	direction	of	the	favored	site—proved	typical	for	the	17
+swarms	he	watched.	Occasionally,	though,	Lindauer	encountered	a	swarm	where
+the	debate	did	not	progress	so	smoothly.	For	example,	sometimes	the	scout	bees
+would	find	two	sites	that	elicited	strong	dancing	starting	at	about	the	same	time.
+In	this	situation,	both	sites	would	receive	plenty	of	fresh	recruits	and	so	new
+dancers	for	both	sites	would	continue	to	appear	on	the	swarm	for	many	hours.	Of
+course,	this	made	it	extremely	difficult	for	the	dancing	bees	to	reach	an
+agreement.
+
+===== PAGE 80 =====
+Figure	4.3
+	shows	one	example	of	how	a	prolonged	debate	arose	when	a
+swarm’s	scout	bees	created	two	equal-strength	groups	of	dancers.	The	Propyläen
+swarm’s	saga	began	on	June	11,	1952,	when	it	left	its	mother	hive	at	2:14	p.m.
+Over	the	remainder	of	the	afternoon,	the	scouts	discovered	and	reported	on	11
+sites,	one	of	which	attracted	the	greatest	number	of	dancers.	We	see	that
+Lindauer	labeled	15	bees	dancing	for	a	site	some	900	meters	to	the	northeast,	but
+only	14	total	for	the	other	10	sites.	So	at	first	it	looked	like	the	scouts	in	this
+swarm	had	come	close	to	an	agreement	in	less	than	three	hours	of	discussion.	On
+the	morning	of	the	second	day,	however,	another	group	of	strong	dancers
+appeared,	with	each	of	its	members	promoting	a	site	1,400	meters	to	the
+southwest.	Lindauer	reported	that	“their	dances	were	no	less	lively	and
+continual,	and	for	the	observer	it	was	a	nerve-wracking	task	to	witness	the	tug-
+of-war	of	these	two	dance	groups	that	dragged	on	for	two	days	with	see-sawing
+prospects	for	victory.”	Throughout	the	second	day	the	appearance	of	new
+dancers	for	the	northeast	and	southwest	sites	was	nearly	symmetrical,	and	it	was
+
+===== PAGE 81 =====
+not	until	late	in	the	morning	on	the	third	day,	June	13,	that	this	symmetry	began
+to	break.	For	some	reason,	the	strength	of	dancing	for	the	southwest	site	must
+have	weakened	slightly,	so	fewer	new	dancers	for	this	site	were	marked,	and
+over	the	afternoon	the	mustering	of	new	dancers	for	the	northeast	site	surged
+ahead	of	that	for	the	southwest	site:	first	25	versus	9	new	dancers	(12:00	to	2:00
+p.m.),	then	41	versus	7	new	dancers	(2:00	to	4:00	p.m.),	and	eventually	34
+versus	0	new	dancers	(4:00	to	5:00	p.m.).	We	see	that	by	the	end	of	the	third	day
+an	agreement	had	been	reached,	but,	alas,	it	was	too	late	in	the	day	for	the	swarm
+to	undertake	its	flight	to	its	new	home.	(Swarm’s	rarely	take	flight	after	5:00
+p.m.,	perhaps	to	avoid	risking	a	move	without	a	long	period	of	daylight	ahead.	A
+swarm’s	queen	may	need	to	make	an	emergency	landing	to	rest,	and	when	this
+happens	it	can	take	the	workers	in	an	airborne	swarm	over	an	hour	to	halt	their
+group	flight,	locate	their	missing	queen,	and	reassemble	around	her.)	The
+Propyläen	swarm’s	delayed	decision-making	forced	it	to	stay	put	until	the	next
+day,	which	turned	out	to	be	cool	and	rainy,	so	it	was	not	until	the	afternoon	of
+June	15,	fully	four	days	after	the	swarm	left	its	parental	hive,	that	the	bees
+finally	few	of	to	their	new	residence	in	the	northeast.
+
+
+===== PAGE 82 =====
+Lindauer	even	observed	one	swarm	that	failed	to	reach	an	agreement,	that	is,
+there	never	arose	a	dancer	group	that	so	dominated	the	deliberations	that
+Lindauer	marked	new	dancers	for	only	one	site.	It	was	the	Balcony	swarm	of
+June	22,	1952	(
+fig.	4.4
+).	As	in	the	Propyläen	swarm,	its	scout	bees	got	into	a
+balanced	competition,	with	one	group	of	dancers	advocating	a	site	600	meters	to
+the	northwest	and	a	second	group	favoring	instead	a	site	800	meters	to	the
+southwest.	For	four	hours	(12:00	to	4:00	p.m.)	neither	group	managed	to	gain	a
+decisive	lead.	Nevertheless,	at	4:10	p.m.	the	swarm	lifted	of	and	then	did
+something	that	Lindauer	could	scarcely	believe	even	though	he	was	seeing	it
+with	his	own	eyes.	In	his	words,	“The	swarm…sought	to	divide	itself.	The	one
+half	wanted	to	fly	to	the	northwest,	the	other	to	the	[southwest].	Apparently,	each
+group	of	scouting	bees	wanted	to	abduct	the	swarm	to	the	nesting	place	of	its
+own	choice.”	And	each	group	partly	succeeded,	for	half	of	the	airborne	bees
+started	moving	southwest	toward	the	main	railway	station	while	the	other	half
+began	trending	northwest	toward	the	Karlstrasse	(see	
+fig.	1.6
+).	But	neither	group
+managed	to	keep	going	in	its	desired	direction,	perhaps	because	each	lacked	the
+queen,	and	eventually	the	two	clouds	of	swirling	bees	reunited	in	the	air	where
+they	had	started.	Then	a	remarkable	tug-of-war	between	the	two	groups	began.
+Over	the	next	half	hour,	one	group	tried	again	to	advance	to	the	northwest,	going
+of	100	meters	before	coming	back,	then	the	other	group	pushed	150	meters	to
+the	southwest,	but	then	it	too	returned	to	the	original	site.	At	this	point	the	bees
+resettled	on	the	balcony	where	they	had	previously	been	clustered.	Sadly,	the
+swarm’s	queen	had	become	lost	during	the	aerial	tug-of-war,	and	over	the	next
+several	hours	Lindauer	watched	the	swarm	cluster	gradually	dissolve	as	the
+queenless	bees	drifted	home	to	their	mother	hive.
+
+===== PAGE 83 =====
+The	history	of	the	ill-fated	Balcony	swarm	highlights	several	features	of
+honeybee	swarms	and	their	decision-making	process.	From	the	tragedy	of	the
+queen’s	
+loss	and	the	swarm’s	dissolution,	we	are	reminded	that	the	survival	of	a
+swarm’s	queen,	who	carries	the	new	colony’s	genes	in	her	ovaries	and	her
+spermathe-ca,	is	absolutely	critical	to	a	swarm’s	success.	From	the	failure	of	the
+scouts	to	reach	an	agreement,	we	are	shown	how	swarms	are	not	infallible	in
+their	decision	making.	Occasionally,	a	swarm	will	produce	a	split	decision,
+though	usually	this	is	just	a	temporary	situation	and	the	swarm	manages	to
+resolve	the	problem.	We	will	see	in	
+chapter	7
+	that	when	a	split	decision	arises,	a
+swarm	will	normally	take	of,	fail	to	move	to	either	site,	resettle,	and	then
+conduct	further	debate	leading	to	an	agreement.	Lindauer	watched	17	swarms	of
+which	just	two	(the	Balcony	and	Moosacher	swarms)	produced	split	decisions.
+Only	the	Balcony	swarm	never	reached	agreement,	and	this	was	because	it	lost
+its	queen,	so	it	seems	clear	that	complete	failure	in	swarm	decision	making	is
+rare.	Finally,	from	the	launch	of	the	Balcony	swarm	into	flight	without	prior
+consensus	among	the	dancers,	we	are	given	a	strong	indication	that	dancer
+consensus,	though	conspicuous	to	the	human	observer,	is	not	what	the	bees
+themselves	monitor	to	know	when	they	should	switch	from	
+making
+	a	decision	to
+
+===== PAGE 84 =====
+implementing
+	a	decision.	How	the	bees	actually	make	this	switch	will	be
+revealed	in	
+chapter	7
+.
+My	Swarms
+A	great	scientific	discovery	is	one	that	gives	rise	to	shining	insights	whose	light
+dispels	obscurities,	opens	up	new	paths,	and	reveals	unknown	horizons.	Martin
+Lindauer	made	such	a	discovery	when	he	found	that	a	honeybee	swarm	chooses
+its	future	home	through	a	debate	in	which	the	nest-site	scouts	express	their
+arguments	in	waggle	dances.	He	elucidated	the	function	of	dances	on	swarms,	he
+blazed	a	trail	toward	understanding	the	swarm	bees’	system	of	decision	making,
+and	most	importantly	he	guided	us	into	a	whole	new	scientific	territory:
+sophisticated	group	decision	making	by	nonhuman	animals.
+Lindauer	was	certainly	a	pioneer	in	behavioral	biology,	and	like	all	pioneers,
+the	time	and	tools	available	to	him	were	insufficient	to	explore	fully	the	new
+terrain	he	had	discovered.	It	is	not	surprising,	therefore,	that	his	investigation	of
+honeybee	democracy	was	incomplete	in	many	ways.	We	can	see	this	perhaps
+most	clearly	in	the	way	he	was	limited	by	his	equipment	(notebook,	watch,	and
+paint	
+set)	to	recording	only	the	appearance	of	new	dancers	on	his	swarms.
+Ideally,	he	would	have	recorded	all	the	dancers	(new	and	old)	that	appeared	on
+his	swarms	during	each	stage	of	the	decision-making	process,	so	that	he	could
+have	acquired	a	full	picture	of	the	dynamics	in	the	dancing	for	the	alternative
+sites.	This	would	have	shown	how	the	total	number	of	supporters	for	each
+proposed	site—not	just	the	appearance	of	new	supporters—changed	over	time,
+and	how	in	the	end	presumably	just	one	site	was	being	advocated	by	the	dancing
+bees.	The	records	shown	in	
+figures	4.2
+	and	
+4.3
+	indicate	that	shortly	before
+swarms	few	away	the	winning	site	was	being	advertised	by	all	the	new	dancers,
+but	these	records	don’t	tell	us	whether	in	the	end	the	winning	site	was	being
+advertised	by	
+all	the	dancers
+,	that	is,	all	the	old	ones	and	all	the	new	ones.	Does
+the	decision-making	process	in	fact	end	cleanly,	with	essentially	every	dancer
+supporting	a	single	site,	the	winning	site?	Lindauer	suggested	that	it	does;	he
+wrote	that	the	scouts	for	the	losing	sites	ultimately	“gave	up	their	recruitment,”
+presumably	by	ceasing	to	dance,	but	he	did	not	show	that	they	stopped	dancing.
+Also,	he	did	not	show	when	the	advocates	of	the	losing	sites	stopped	dancing	or
+how	they	stopped	dancing.	It	would	be,	therefore,	very	informative	to	have	a
+complete	picture	of	the	dancing	on	a	swarm.	It	would	also	be	extremely
+desirable	to	have	complete	records	of	the	behaviors	of	individual	dancers,	so	that
+one	could	track	each	dancer’s	actions	following	her	first	bout	of	dancing.	Does
+
+===== PAGE 85 =====
+she	perform	multiple	bouts	of	dancing?	Is	the	total	amount	of	her	dancing	related
+to	the	quality	of	the	site	that	she	is	advertising?	And	if	she	stops	dancing,	how
+does	she	decide	to	do	so?	Does	she	quit	on	her	own	regardless	of	what	is
+happening	around	her,	or	only	after	encountering	another	bee	performing	a	more
+vigorous	dance?	Lindauer'	s	study	is	an	amazing	frst	reconnaissance	of	how
+house-hunting	honeybees	perform	their	collective	decision	making,	but	it	left
+unanswered	countless	questions	about	the	rules	of	procedure	that	nest-site	scouts
+follow	when	conducting	their	deliberations.
+In	1996,	I	decided	to	tackle	these	questions.	This	was	nearly	20	years	after	I
+had	finished	my	PhD	thesis	research	on	the	nest-site	preferences	of	honeybees
+and	the	way	they	estimate	the	volume	of	a	prospective	nest	cavity.	Why	hadn’t	I
+started	addressing	the	gaps	in	Lindauer'	s	work	back	in	the	mid	1970s?	It	was
+because	I	didn’t	see	how	I	could	get	the	video	recording	equipment	that	I	knew
+I’d	need	to	go	beyond	Lindauer's	analysis	of	swarm	decision	making.	In	those
+days,	
+a	color	video	camera,	recorder,	and	monitor	(they	were	all	separate	units
+back	then)	cost	many,	many	thousands	of	dollars,	a	price	that	far	exceeded	the
+budgets	of	the	small	grants	I	could	get	as	a	beginner	scientist.	So	I	changed	the
+focus	of	my	research,	but	without	abandoning	the	topic	of	how	social	animals
+make	collective	decisions.	Rather,	I	switched	to	studying	another	form	of
+collective	decision	making	by	the	bees:	how	a	honeybee	colony	wisely	deploys
+its	foragers	among	the	kaleidoscopic	array	of	flower	patches	in	the	surrounding
+countryside.	This	is	a	different	sort	of	collective	choice,	for	whereas	a	homeless
+swarm	makes	a	“consensus	decision”	about	which	
+single	option
+	(candidate	nest
+site)	it	will	choose,	a	foraging	colony	makes	a	“combined	decision”	about	how
+to	allocate	its	foragers	among	
+multiple	options
+	(candidate	food	sources).	I	was
+attracted	to	the	puzzle	of	colony	decision	making	about	forager	allocation	partly
+because	it	looked	fundamentally	similar	to	nest-site	choice—being	based	on
+competition	among	groups	of	dancing	bees	advertising	different	options	(food
+sources	rather	than	nest	sites)—and	partly	because	it	looked	more	tractable	than
+nest-site	choice.	Swarming	is	an	ephemeral	phenomenon	that	lasts	at	most	a	few
+days,	whereas	foraging	goes	on	all	summer	long.	So	for	about	15	years	I
+explored	with	pleasure	how	the	bees	in	a	hive	work	together	as	a	unified	whole
+in	gathering	their	food,	especially	how	they	wisely	distribute	themselves	among
+flower	patches.	In	1995	I	summarized	this	body	of	research	in	a	book,	
+The
+Wisdom	of	the	Hive
+,	and	with	this	behind	me	I	looked	forward	to	resuming	my
+exploration	of	collective	decision	making	in	honeybee	swarms.
+The	starting	point	was	clear.	I	should	obtain	a	complete	record	of	the	scout
+bees’	dances	throughout	a	swarm’s	choice	of	its	new	home	in	order	to	get	a	full
+
+===== PAGE 86 =====
+picture	of	how	a	debate	among	scout	bees	unfolds.	This	broad	description	of	the
+scout	bees’	behavior	at	the	swarm	would	fill	the	gaps	in	the	description	provided
+by	Lindauer,	and	probably	would	also	yield	important	discoveries,	as	indeed	it
+did.	Unlike	Lindauer	40	years	before,	or	myself	20	years	before,	I	now	had
+sophisticated	video	recording	and	slow-motion	playback	equipment	that	made	it
+possible	to	build	a	comprehensive	record	of	the	scout	bees’	dance	activity.	Also,
+I	now	knew	how	to	label	thousands	of	bees	for	individual	identification	with
+plastic	color-number	tags	glued	on	the	thorax	and	paint	marks	placed	on	the
+abdomen	(
+fig.	4.5
+),	a	skill	that	I	had	honed	in	my	studies	of	honeybee	foraging.
+With	each	bee	in	a	swarm	so	labeled,	I	figured	that	it	should	be	possible	to	trace
+each	individual’s	history	of	dancing	throughout	the	decision-making	process.
+Success	in	this	project	would	require,	however,	a	formidable	amount	of
+painstaking	labor.	Thousands	of	bees	had	to	be	individually	labeled	for	each
+swarm,	the	swarm	and	video	equipment	had	to	be	tended	throughout	each
+swarm’s	choice	of	a	home,	and	the	information	about	each	dance	(the	dancer’s
+ID,	the	site	being	advertised,	and	the	dance’s	duration)	had	to	be	extracted
+manually	from	the	video	recordings.	It	was	my	immense	good	fortune	to	be
+joined	in	this	endeavor	by	Susannah	Buhrman,	an	extremely	bright	and
+indefatigable	undergraduate	student	at	Cornell.	She	proved	an	indispensable
+partner	in	this	project.	Working	together	throughout	the	summer	of	1997,	we
+achieved	success.
+
+===== PAGE 87 =====
+
+
+===== PAGE 88 =====
+Susannah	and	I	eavesdropped	on	the	deliberations	among	the	scout	bees	on
+three	swarms,	and	we	obtained	a	complete	record	of	the	dances	performed	for
+each	swarm’s	decision	making.	
+Figure	4.6
+	shows	the	debate	recorded	on	Swarm
+1,	which	was	set	up	at	10:00	a.m.	on	June	19.	We	see	that	nest-site	scouts	started
+reporting	discoveries	between	1:00	and	3:00	p.m.	and	that	by	the	end	of	the	
+day
+seven	candidate	nest	sites	(A–G)	had	been	raised	for	consideration,	though	none
+of	these	had	elicited	enthusiastic	support.	The	next	day	the	scout	bees	were
+livelier.	By	midday,	four	additional	sites	(H–K)	had	been	entered	into	the
+discussion	and	three	sites—G	(2,200	meters	to	the	southeast),	H	(2,600	meters	to
+the	east),	and	I	(4,200	meters	to	the	south)—had	received	endorsements	by
+multiple	dancing	bees.	Site	G	appeared	to	be	developing	a	lead,	for	nine	bees
+had	advertised	it,	but	no	site	was	yet	dominant	in	the	dancing.	The	situation
+changed	markedly	between	12:00	and	2:00	p.m.	Now	site	I	rose	to	prominence,
+supported	by	23	out	of	the	25	dancing	bees.	This	situation	persisted	for	the
+remainder	of	the	afternoon,	though	still	two	more	possibilities	(sites	L	and	M)
+
+===== PAGE 89 =====
+were	presented	and	the	dancing	bees	showed	support	for	sites	K,	L,	and	M	as
+well	as	site	I	until	the	end	of	the	day.	The	next	morning,	however,	there	was	a
+clear	consensus	among	the	dancing	bees	in	favor	of	site	I,	and	at	9:10	a.m.	the
+swarm	took	of	and	few	to	the	south,	no	doubt	with	site	I	its	destination.
+The	debate	on	Swarm	1	proceeded	in	a	manner	reminiscent	of	what	Lindauer
+described	for	his	Eck	swarm.	During	the	first	half	of	the	decision-making
+process,	the	scouts	reported	numerous	candidate	sites	located	at	various
+directions	and	distances	from	the	swarm	cluster.	Then,	in	the	second	half	of	the
+debate,	the	dances	of	the	scout	bees	quickly	and	smoothly	became	focused	on
+just	one	site.	Ultimately,	there	was	virtual	unanimity	among	the	dancing	bees,
+and	the	swarm	moved	to	the	agreed-upon	site.	It	is	worth	stressing	that	
+figure	4.6
+depicts,	for	each	time	interval,	the	number	of	
+total
+	dancers	for	each	site,	not	just
+the	number	of	
+new
+	dancers	for	each	site.	We	can	be	confident,	therefore,	that	the
+conclusion	of	this	swarm’s	decision	making	was	marked	by	a	real	consensus
+among	the	dancing	bees.
+The	most	interesting	scout	bee	debate	that	Susannah	and	I	observed	occurred
+in	our	Swarm	3;	in	this	one	there	was	a	strong	competition	between	two	groups
+of	dancers,	and	for	many	hours	it	was	unclear	which	faction	would	emerge
+victorious	(
+fig.	4.7
+).	This	swarm	was	set	up	at	2:30	p.m.	on	July	19,	but	it	was
+not	until	the	middle	of	the	next	day	that	scout	bees	started	advertising	potential
+nest	sites	with	their	dances.	Six	sites	(A–F)	were	announced	between	11:00	a.m.
+and	1:00	p.m.,	one	of	which	(site	A,	2,200	meters	to	the	east)	quickly	developed
+a	strong	lead	with	eight	dancing	bees	promoting	it.	Over	the	next	four	hours
+three	more	possible	home	sites	(G,	H,	I)	were	entered	into	the	discussion,	and
+four	sites	(A,	B,	D,	G)	received	strong	consideration,	each	being	advertised	by
+several	bees.	Site	A,	though,	was	losing	its	initial	lead	as	sites	B	(900	meters	to
+the	south)	and	site	G	(1,400	meters	to	the	southwest)	gained	more	and	more
+support.	Between	3:00	and	5:00	p.m.,	only	four	bees	danced	for	site	A,	whereas
+17	bees	danced	for	site	B	and	10	did	so	for	site	G.	At	5:00	p.m.	it	seemed	that
+the	contest	among	dancer	groups	on	this	swarm	was	still	wide	open.	This
+situation	changed	dramatically	during	the	remaining	two	hours	of	dance	debate
+that	day,	for	although	bees	performed	dances	for	seven	sites	during	these	last	two
+hours,	including	two	new	sites	(J	and	K),	only	sites	B	and	G	received	the	support
+of	multiple	dancing	bees.	Susannah	and	I	could	see	that	the	supporters	of	these
+two	sites	had	managed	to	gain	wide	leads	over	the	bees	promoting	the	other	nine
+sites,	and	we	made	bets	on	whether	the	B	group	or	the	G	group	would	prevail	the
+next	day.	I	bet	on	site	B	and	Susannah	on	site	G.	Whoever	would	win	the	bet
+would	be	treated	to	a	triple	scoop	ice	cream	cone	at	the	new	Ben	and	Jerry’s	in
+
+===== PAGE 90 =====
+Ithaca.
+The	tension	was	high	the	next	morning.	We	arrived	at	the	lab	shortly	after
+sunrise,	got	our	recording	equipment	set	up	before	the	scout	bees	could	resume
+their	debate,	and	waited	eagerly	to	see	who	would	win	our	little	bet.	For	the	first
+two	hours,	7:00	to	9:00	a.m.,	we	both	remained	hopeful,	because	both	sites	were
+being	advertised	by	about	a	dozen	dancing	bees.	Starting	around	9:00	a.m.,
+though,	my	optimism	began	to	ebb,	for	the	dancers	supporting	Susannah’s	site	G
+began	to	build	a	commanding	lead	over	those	for	my	site	B,	with	32	versus	17
+bees	respectively	between	9:00	and	11:00	a.m.,	and	20	versus	4	between	11:00
+and	11:54	(when	it	started	raining).	Somehow	the	site	G	bees	had	managed	to
+overwhelm	those	for	site	B.	The	rain	continued	throughout	the	afternoon,	during
+the	night,	and	until	about	8:00	a.m.	the	next	day.	The	scout	bees	resumed

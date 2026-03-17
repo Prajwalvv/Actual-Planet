@@ -1,0 +1,2206 @@
+
+
+===== PAGE 1 =====
+
+
+===== PAGE 2 =====
+SWARM INTELLIGENCE
+
+
+===== PAGE 3 =====
+This page intentionally left blank 
+
+===== PAGE 4 =====
+SWARM INTELLIGENCE
+From Natural to Artificial Systems
+Eric Bonabeau
+Sante Fe Institute
+Sante Fe, New Mexico USA
+Marco Dorigo
+FNRS
+Belgium
+Guy Theraulaz
+CNRS
+France
+Sante Fe Institute
+Studies in the Sciences of Complexity
+New York Oxford
+Oxford University Press
+1999
+
+
+===== PAGE 5 =====
+Oxford University Press
+Oxford New York
+Athens Auckland Bangkok Bogota Buenos Aires Calcutta
+Cape Town Chennai Dar es Salaam Delhi Florence Hong Kong Istanbul
+Karachi Kuala Lumpur Madrid Melbourne Mexico City Mumbai
+Nairobi Paris Sao Paulo Singapore Taipei Tokyo Toronto Warsaw
+and associated companies in
+Berlin Ibadan
+Copyright © 1999 by Oxford University Press
+Published by Oxford University Press, Inc.
+198 Madison Avenue, New York, New York 10016
+Oxford is a registered trademark of Oxford University Press
+All rights reserved. No part of this publication may be reproduced,
+stored in a retrieval system, or transmitted, in any form or by any means,
+electronic, mechanical, photocopying, recording, or otherwise,
+without the prior permission of Oxford University Press.
+Library of Congress Cataloging-in-Publication Data
+Bonabeau, Eric.
+Swarm intelligence : from natural to artificial intelligence / by
+Eric Bonabeau, Marco Dorigo, Guy Theraulaz.
+p. cm.
+Includes bibliography references and index.
+ISBN 0-19-513158-4 (cloth); ISBN 0-19-513159-2 (pbk.)
+1. Artificial intelligence. 2. Insect societies. 3. Insects—Psychology.
+4. Biological models. I. Theraulaz, Guy.
+II. Dorigo, Margo. III. Title.
+Q335.B59 1999
+006.3—dc21 98-49821
+9876
+Printed in the United States of America
+on acid-free paper
+
+
+===== PAGE 6 =====
+About the Santa Fe Institute
+The Santa Fe Institute (SFI) is a private, independent, multidisciplinary re-
+search and education center, founded in 1984. Since its founding, SFI has devoted
+itself to creating a new kind of scientific research community, pursuing emerging
+science. Operating as a small, visiting institution, SFI seeks to catalyze new col-
+laborative, multidisciplinary projects that break down the barriers between the
+traditional disciplines, to spread its ideas and methodologies to other individuals,
+and to encourage the practical applications of its results.
+All titles from the Santa Fe Institute Studies
+in the Sciences of Complexity series will carry
+this imprint which is based on a Mimbres
+pottery design (circa A.D. 950-1150), drawn
+by Betsy Jones. The design was selected because
+the radiating feathers are evocative of the out-
+reach of the Santa Fe Institute Program to many
+disciplines and institutions.
+
+
+===== PAGE 7 =====
+Santa Fe Institute Editorial Board
+September 1997
+Ronda K. Butler-Villa, Chair
+Director of Publications, Santa Fe Institute
+Dr. David K. Campbell
+Chair, Department of Physics, University of Illinois
+Prof. Marcus W. Feldman
+Director, Institute for Population & Resource Studies, Stanford University
+Prof. Murray Gell-Mann
+Division of Physics & Astronomy, California Institute of Technology
+Dr. Ellen Goldberg
+President, Santa Fe Institute
+Prof. George J. Gumerman
+Arizina State Museum, The University of Arizona
+Dr. Erica Jen
+Vice President for Academic Affairs, Santa Fe Institute
+Dr. Stuart A. Kauffman
+Professor, Santa Fe Institute
+Dr. Edward A. Knapp
+Visiting Scientist, Santa Fe Institute
+Prof. David Lane
+Dipart. di Economia Politica, Modena University, Italy
+Prof. Simon Levin
+Department of Ecology & Evolution Biology, Princeton University
+Dr. Melanie Mitchell
+Research Professor, Santa Fe Institute
+Dr. Alan S. Perelson
+Theoretical Division, Los Alamos National Laboratory
+Prof. David Pines
+Department of Physics, University of Illinois
+Dr. Charles F. Stevens
+Molecular Neurobiology, The Salk Institute
+
+
+===== PAGE 8 =====
+Dedications
+To Croque.
+—Eric Bonabeau
+To Laura and Luca for sharing with me their lives.
+—Marco Dorigo
+To Sylvie.
+—Guy Theraulaz
+
+
+===== PAGE 9 =====
+This page intentionally left blank 
+
+===== PAGE 10 =====
+Contents
+Preface xi
+CHAPTER 1
+Introduction 1
+CHAPTER 2
+Ant Foraging Behavior, Combinatorial
+Optimization, and Routing in Communications
+Network 25
+CHAPTER 3
+Division of Labor and Task Allocation 109
+CHAPTER 4
+Cemetery Organization, Brood Sorting, Data
+Analysis, and Graph Partitioning 149
+CHAPTER 5
+Self-Organization and Templates: Application to
+Data Analysis and Graph Partitioning 183
+CHAPTER 6
+Nest Building and Self-Assembling 205
+CHAPTER 7
+Cooperative Transport by Insects and Robots 253
+CHAPTER 8
+Epilogue 271
+Bibliography 275
+Index 297
+
+
+===== PAGE 11 =====
+This page intentionally left blank 
+
+===== PAGE 12 =====
+Preface
+The social insect metaphor for solving problems has become a hot topic in the last
+five years. This approach emphasizes distributedness, direct or indirect interactions
+among relatively simple agents, flexibility, and robustness. The number of its suc-
+cessful applications is exponentially growing in combinatorial optimization, commu-
+nications networks, and robotics. More and more researchers are interested in this
+new exciting way of achieving a form of artificial intelligence, swarm intelligence—
+the emergent collective intelligence of groups of simple agents. Researchers have
+good reasons to find swarm intelligence appealing: at a time when the world is
+becoming so complex that no single human being can understand it, when informa-
+tion (and not the lack of it) is threatening our lives, when software systems become
+so intractable that they can no longer be controlled, swarm intelligence offers an
+alternative way of designing "intelligent" systems, in which autonomy, emergence,
+and distributed functioning replace control, preprogramming, and centralization.
+But the field of swarm intelligence relies to a large extent on fragmented knowledge
+and no attempt had been made at putting all the pieces together.
+Therefore, the timing seemed just perfect to summarize for the first time the
+advances made in, and provide an organized survey of, this new field. Not only do
+we now have enough material to justify the publication of a book on swarm intel-
+ligence, but the growing interest of many researchers and the potential usefulness
+of explicitly connecting the functioning principles of social insect colonies to the
+xi
+
+
+===== PAGE 13 =====
+XII Preface
+design principles of artificial systems were also important factors in our decision to
+undertake the writing of this book.
+Each chapter is organized around a biological example (foraging, division of
+labor, corpse clustering, larval sorting, nest building, and cooperative transport):
+the example is described, modeled (when a model exists), and used as a metaphor
+to design an algorithm, a multiagent system, or a group of robots. Although the re-
+sulting book is rather unusual since biological modeling and engineering are equally
+important, hopefully the reader will find our work enjoyable and useful.
+Of course, this book would not exist without the help and care of many people.
+We wish to thank Ronald C. Arkin, Hajime Asama, John S. Bay, Scott Camazine,
+Jean-Louis Deneubourg, Pablo Punes, Sylvain Guerin, Florian Henaux, Alain Hertz,
+C. Ronald Kube, Pascale Kuntz, Alcherio Martinoli, Jordan Pollack, Andrew Rus-
+sell, Dominique Snyers, and Hong Zhang for providing us with valuable articles,
+sharing their results prior to publication, or communicating their enthusiasm. Spe-
+cial thanks are due to Bernd Bullnheimer, Daniele Costa, Gianni Di Caro, Thomas
+Stiitzle, and Marco Wiering for reading and commenting draft versions of the book;
+to Erica Jen and the Santa Fe Institute for their support; to all the researchers of
+the IRIDIA laboratory for their friendship; to Philippe Smets and Hugues Bersini,
+for supporting Marco Dorigo's research; to Greg Chirikjian, Nigel R. Franks, Pablo
+Funes, Owen Holland, Kazuo Hosokawa, C. Ronald Kube, Alcherio Martinoli, Jor-
+dan Pollack, and Eiichi Yoshida for help with figures and much more; and, last but
+certainly not least, to Jean-Louis Deneubourg for being our source of inspiration.
+Marco Dorigo wishes to thank Alberto Colorni and Vittorio Maniezzo, who, while
+he was a graduate student at Politecnico di Milano, started with him the work on
+ant colony optimization, and Luca Gambardella and Gianni Di Caro, who have had
+the faith to follow his adventure and greatly contributed with their fantasy and pro-
+gramming skills to the success of part of the research presented in this book. Marco
+Dorigo acknowledges the support received from all the members of the Artificial
+Intelligence and Robotics Project of Politecnico di Milano at the time he started his
+research on ant colony optimization, particularly from Marco Somalvico, Andrea
+Bonarini, and colleague and friend Marco Colombetti.
+In addition, Eric Bonabeau is grateful to the Santa Fe Institute for supporting
+his work through the Interval Research Fellowship. Eric Bonabeau and Guy Ther-
+aulaz have benefited from a grant from the GIS (Groupement d'Interet Scientifique)
+Sciences de la Cognition. Guy Theraulaz is a Charge de Recherche at CNRS (Cen-
+tre National pour la Recherche Scientifique). Marco Dorigo is a Chercheur Qualifie
+at the FNRS, the Belgian Fund for Scientific Research.
+Finally, this book would not be worth anything without the work, help, and care
+(or gentle pressure?) of Ronda Butler-Villa, Marylee Mclnnes, and Delia Ulibarri.
+—Eric Bonabeau, Marco Dorigo, and Guy Theraulaz
+
+
+===== PAGE 14 =====
+CHAPTER 1
+Introduction
+1.1 SOCIAL INSECTS
+Insects that live in colonies, ants, bees, wasps,1 and termites, have fascinated nat-
+uralists as well as poets for many years. "What is it that governs here? What is it
+that issues orders, foresees the future, elaborates plans, and preserves equilibrium?,"
+wrote Maeterlinck [230]. These, indeed, are puzzling questions. Every single insect
+in a social insect colony seems to have its own agenda, and yet an insect colony
+looks so organized. The seamless integration of all individual activities does not
+seem to require any supervisor.
+For example, Leafcutter ants (Atta) cut leaves from plants and trees to grow
+fungi (Figure 1.1). Workers forage for leaves hundreds of meters away from the nest,
+literally organizing highways to and from their foraging sites [174].
+Weaver ant (Oecophylla) workers form chains of their own bodies, allowing
+them to cross wide gaps and pull stiff leaf edges together to form a nest (Figure 1.2).
+Several chains can join to form a bigger one over which workers run back and forth.
+Such chains create enough force to pull leaf edges together. When the leaves are in
+place, the ants connect both edges with a continuous thread of silk emitted by a
+mature larva held by a worker (Figure 1.3) [172, 174].
+1 Only a fraction of all species of bees and wasps are social: most are solitary.
+1
+
+
+===== PAGE 15 =====
+Swarm Intelligence
+FIGURE 1.1 Leafcutter ants (Atta) bringing back cut leaves to the nest.
+FIGURE 1.2 Chains of Oecophylla longinoda.
+In their moving phase, army ants (such as Eciton) organize impressive hunting
+raids, involving up to 200,000 workers, during which they collect thousands of prey
+(see chapter 2, section 2.2.3) [52, 269, 282].
+In a social insect colony, a worker usually does not perform all tasks, but rather
+specializes in a set of tasks, according to its morphology, age, or chance. This divi-
+sion of labor among nestmates, whereby different activities are performed simulta-
+neously by groups of specialized individuals, is believed to be more efficient than if
+tasks were performed sequentially by unspecialized individuals [188, 272].
+In polymorphic species of ants, two (or more) physically different types of work-
+ers coexist. For example, in Pheidole species, minor workers are smaller and mor-
+phologically distinct from major workers. Minors and majors tend to perform differ-
+2
+
+
+===== PAGE 16 =====
+Chapter 1
+FIGURE 1.3 Two workers holding a larva in their mandibles.
+ent tasks: whereas majors cut large prey with their large mandibles or defend the
+nest, minors feed the brood or clean the nest. Removal of minor workers stimulates
+major workers into performing tasks usually carried out by minors (see chapter 3,
+section 3.2) [330]. This replacement takes place within two hours of minor removal.
+More generally, it has been observed in many species of insects that removal of
+a class of workers is quickly compensated for by other workers: division of labor
+exhibits a high degree of plasticity.
+Honey bees (Apis mellifica) build series of parallel combs by forming chains that
+induce a local increase in temperature. The wax combs can be more easily shaped
+thanks to this temperature increase [82]. With the combined forces of individuals in
+the chains, wax combs can be untwisted and be made parallel to one another. Each
+comb is organized in concentric rings of brood, pollen, and honey. Food sources are
+exploited according to their quality and distance from the hive (see section 1.2.2).
+At certain times, a honey bee colony divides: the queen and approximately half of
+the workers leave the hive in a swarm and first form a cluster on the branch of a
+nearby tree (Figure 1.4). Potential nesting sites are carefully explored by scouts.
+The selection of the nesting site can take up to several days, during which the
+swarm precisely regulates its temperature [166].
+Nest construction in the wasp Polybia occidentalis involves three groups of
+workers, pulp foragers, water foragers, and builders. The size of each group is reg-
+ulated according to colony needs through some flow of information among them
+(Figure 1.5) [189].
+Tropical wasps (for example, Parachartergus, Epipona) build complex nests,
+comprised of a series of horizontal combs protected by an external envelope and
+connected to each other by a peripheral or central entrance hole (Figure 1.6) [187].
+Some species of termites (Macrotermes) build even more complex nests (Fig-
+ure 1.7), comprised of roughly cone-shaped outer walls that often have conspicuous
+3
+
+
+===== PAGE 17 =====
+Swarm Intelligence
+FIGURE 1.4 A swarm of honey bees Apis mellifica.
+FIGURE 1.5 Nest building in the neotropical wasp Polybia occidentalis.
+ribs containing ventilation ducts which run from the base of the mound toward
+its summit, brood chambers within the central "hive" area, which consists of thin
+horizontal lamellae supported by pillars, a base plate with spiral cooling vents, a
+royal chamber, which is a thick-walled protective bunker with a few minute holes
+in its walls through which workers can pass, fungus gardens, draped around the
+hive and consisting of special galleries or combs that lie between the inner hive and
+the outer walls, and, finally, peripheral galleries constructed both above and below
+ground which connect the mound to its foraging sites [227, 228].
+And there are many more examples of the impressive capabilities of social in-
+sects.2 If no one is in charge, how can one explain the complexity and sophistication
+2Many more examples are discussed in greater detail in Camazine et al. [60].
+4
+
+
+===== PAGE 18 =====
+Chapter 1
+FIGURE 1.6 (a) Nest of a Parachartergus wasp species, (b) Nest of the wasp Epipona
+tatua.
+FIGURE 1.7 Cross section of a Macrotermes mound. (1) Walls containing ventilation
+ducts. (2) Brood chambers. (3) Base plate. (4) Royal chamber. After Liischer [228].
+Reprinted by permission © John L. Howard.
+5
+
+
+===== PAGE 19 =====
+Swarm Intelligence
+of their collective productions? An insect is a complex creature: it can process a
+lot of sensory inputs, modulate its behavior according to many stimuli, including
+interactions with nestmates, and make decisions on the basis of a large amount
+of information. Yet, the complexity of an individual insect is still not sufficient to
+explain the complexity of what social insect colonies can do. Perhaps the most dif-
+ficult question is how to connect individual behavior with collective performance?
+In other words, how does cooperation arise?
+Some of the mechanisms underlying cooperation are genetically determined:
+for instance, anatomical differences between individuals, such as the differences be-
+tween minors and majors in polymorphic species of ants, can organize the division
+of labor. But many aspects of the collective activities of social insects are self-
+organized. Theories of self-organization (SO) [164, 248], originally developed in the
+context of physics and chemistry to describe the emergence of macroscopic patterns
+out of processes and interactions denned at the microscopic level, can be extended
+to social insects to show that complex collective behavior may emerge from inter-
+actions among individuals that exhibit simple behavior: in these cases, there is no
+need to invoke individual complexity to explain complex collective behavior. Recent
+research shows that SO is indeed a major component of a wide range of collective
+phenomena in social insects [86].
+Models based on SO do not preclude individual complexity: they show that
+at some level of description it is possible to explain complex collective behavior
+by assuming that insects are relatively simple interacting entities. For example,
+flying from a food source back to the nest involves a set of complex sensorimotor
+mechanisms; but when one is interested in collective food source selection in honey
+bees (see section 1.2.2), the primitives that one may use in a model need not go
+into the detail of the implementation of flight, and flying back to the nest will be
+considered a simple behavior, although at the neurobiological level of description,
+flying back to the nest is certainly not simple. Nor does one need to use a model
+based on elementary particles to describe the aerodynamics of airplanes. Moreover,
+models based on SO are logically sound: they assume that it might be possible to
+explain something apparently complex in terms of simple interacting processes. If
+such an explanation is possible, then why does it have to be more complex? It is
+only when such an explanation fails that more complex assumptions will be put
+into the model.
+The discovery that SO may be at work in social insects not only has conse-
+quences on the study of social insects, but also provides us with powerful tools to
+transfer knowledge about social insects to the field of intelligent system design. In
+effect, a social insect colony is undoubtedly a decentralized problem-solving system,
+comprised of many relatively simple interacting entities. The daily problems solved
+by a colony include finding food, building or extending a nest, efficiently divid-
+ing labor among individuals, efficiently feeding the brood, responding to external
+challenges, spreading alarm, etc. Many of these problems have counterparts in engi-
+neering and computer science. One of the most important features of social insects
+is that they can solve these problems in a very flexible and robust way: flexibility
+6
+
+
+===== PAGE 20 =====
+Chapter 1
+allows adaptation to changing environments, while robustness endows the colony
+with the ability to function even though some individuals may fail to perform their
+tasks. Finally, social insects have limited cognitive abilities: it is, therefore, simple
+to design agents, including robotic agents, that mimic their behavior at some level
+of description.
+In short, the modeling of social insects by means of SO can help design artificial
+distributed problem-solving devices that self-organize to solve problems—swarm-
+intelligent systems. It is, however, fair to say that very few applications of swarm
+intelligence have been developed. One of the main reasons for this relative lack of
+success resides in the fact that swarm-intelligent systems are hard to "program,"
+because the paths to problem solving are not predefined but emergent in these
+systems and result from interactions among individuals and between individuals
+and their environment as much as from the behaviors of the individuals themselves.
+Therefore, using a swarm-intelligent system to solve a problem requires a thorough
+knowledge not only of what individual behaviors must be implemented but also of
+what interactions are needed to produce such or such global behavior.
+One possible idea is to develop a catalog of all the collective behaviors that can
+be generated with simple interacting agents: such a catalog would be extremely
+useful in establishing clear connections between artificial swarms and what they can
+achieve, but this could be a boring and endless undertaking. Another, somewhat
+more reasonable, path consists of studying how social insects collectively perform
+some specific tasks, modeling their behavior, and using the model as a basis upon
+which artificial variations can be developed, either by tuning the model parameters
+beyond the biologically relevant range or by adding nonbiological features to the
+model. The aim of this book is to present a few models of natural swarm intelligence
+and how they can be transformed into useful artificial swarm-intelligent devices.
+This approach is similar to other approaches that imitate the way "nature"
+(that is, physical or biological systems) solves problems [37, 121]. Another possible,
+and apparently very promising, pathway is to use economic or financial metaphors
+to solve problems [182, 185, 196].
+The expression "swarm intelligence" was first used by Beni, Hackwood, and
+Wang [13, 14, 15, 16, 161, 162] in the context of cellular robotic systems, where
+many simple agents occupy one- or two-dimensional environments to generate pat-
+terns and self-organize through nearest-neighbor interactions. Using the expression
+"swarm intelligence" to describe only this work seems unnecessarily restrictive:
+that is why we extend its definition to include any attempt to design algorithms
+or distributed problem-solving devices inspired by the collective behavior of social
+insect colonies and other animal societies. And, strangely enough, this definition
+only marginally covers work on cellular robotic systems, which does not borrow a
+lot from social insect behavior.
+From an historical perspective [2], the idea of using collections of simple agents
+or automata to solve problems of optimization and control on graphs, lattices, and
+networks was already present in the works of Butrimenko [53], Tsetlin [318], Ste-
+fanyuk [292], and Rabin [79, 265]. The latter introduced moving automata that
+7
+
+
+===== PAGE 21 =====
+8 Swarm Intelligence
+solve problems on graphs and lattices by interacting with the consequences of
+their previous actions [2]. Tsetlin [318] identified the important characteristics of
+biologically-inspired automata that make the swarm-based approach potentially
+powerful, randomness, decentralization, indirect interactions among agents, and
+self-organization. Butrimenko [53] applied these ideas to the control of telecommu-
+nications networks, and Stefanyuk [292] to cooperation between radio stations.
+1.2 MODELING COLLECTIVE BEHAVIOR IN SOCIAL INSECTS
+1.2.1 MODELING AND DESIGNING
+The emphasis of this book is how to design adaptive, decentralized, flexible, and
+robust artificial systems, capable of solving problems, inspired by social insects.
+But one necessary first step toward this goal is understanding the mechanisms
+that generate collective behavior in insects. This is where modeling plays a role.
+Modeling is very different from designing an artificial system, because in modeling
+one tries to uncover what actually happens in the natural system—here an insect
+colony. Not only should a model reproduce some features of the natural system it
+is supposed to describe, but its formulation should also be consistent with what
+is known about the considered natural system: parameters cannot take arbitrary
+values, and the mechanisms and structures of the model must have some biological
+plausibility. Furthermore, the model should make testable predictions, and ideally
+all variables and parameters should be accessible to experiment.
+Without going too deeply into epistemology, it is clear that an engineer with
+a problem to solve does not have to be concerned with biological plausibility: effi-
+ciency, flexibility, robustness, and cost are possible criteria that an engineer could
+use. Although natural selection may have picked those biological organizations that
+are most "efficient" (in performing all the tasks necessary to survival and repro-
+duction), "flexible," or "robust," the constraints of evolution are not those of an
+engineer: if evolution can be seen as essentially a tinkering process, whereby new
+structures arise from, and are constrained by, older ones, an engineer can and must
+resort to whatever available techniques are appropriate. However, the remarkable
+success of social insects (they have been colonizing a large portion of the world for
+several million years) can serve as a starting point for new metaphors in engineering
+and computer science.
+The same type of approach has been used to design artificial neural networks
+that solve problems, or in the development of genetic algorithms for optimization:
+if the brain and evolution, respectively, served as starting metaphors, most exam-
+ples of neural networks and genetic algorithms in the context of engineering are
+strongly decoupled from their underlying metaphors. In these examples, some basic
+principles of brain function or of evolutionary processes are still present and are
+most important, but, again, ultimately a good problem-solving device does not have
+to be biologically relevant.
+
+
+===== PAGE 22 =====
+Chapter 1
+1.2.2 SELF-ORGANIZATION IN SOCIAL INSECTS
+Self-organization is a set of dynamical mechanisms whereby structures appear at
+the global level of a system from interactions among its lower-level components. The
+rules specifying the interactions among the system's constituent units are executed
+on the basis of purely local information, without reference to the global pattern,
+which is an emergent property of the system rather than a property imposed upon
+the system by an external ordering influence. For example, the emerging struc-
+tures in the case of foraging in ants include spatiotemporally organized networks of
+pheromone trails. Self-organization relies on four basic ingredients:
+1. Positive feedback (amplification) often constitutes the basis of morphogenesis
+in the context of this book: they are simple behavioral "rules of thumb" that
+promote the creation of structures. Examples of positive feedback include recruit-
+ment and reinforcement. For instance, recruitment to a food source is a positive
+feedback that relies on trail laying and trail following in some ant species, or
+dances in bees.
+When a bee finds a nectar source, she goes back to the hive and relinquishes
+her nectar to a hive bee. Then she can either start to dance to indicate to other
+bees the direction and the distance to the food source, or continue to forage
+at the food source without recruiting nestmates, or she can abandon her food
+source and become an uncommitted follower herself. If the colony is offered two
+identical food sources at the same distance from the nest, the bees exploit the
+two sources symmetrically. However, if one source is better than the other, the
+bees are able to exploit the better source, or to switch to this better source even
+if discovered later. Let us consider the following experiment (Figure 1.8). Two
+food sources are presented to the colony at 8:00 a.m. at the same distance from
+the hive: source A is characterized by a sugar concentration of 1.00 mol/1 and
+source B by a concentration of 2.5 mol/1. Between 8:00 and noon, source A has
+been visited 12 times and source B 91 times. At noon, the sources are modified:
+source A is now characterized by a sugar concentration of 2.5 mol/1 and source
+B by a concentration of 0.75 mol/1. Between noon and 4:00 p.m., source A has
+been visited 121 times and source B only 10 times.
+It has been shown experimentally that a bee has a relatively high probability of
+dancing for a good food source and abandoning a poor food source. These simple
+behavioral rules allow the colony to select the better quality source. Seeley et
+al. [287] and Camazine and Sneyd [59] have confirmed with a simple mathemati-
+cal model based on these observations that foragers can home in on the best food
+source through a positive feedback created by differential rates of dancing and
+abandonment based upon nectar source quality. Figure 1.9 shows a schematic
+representation of foraging activity; decision points (Cl: become a follower?) and
+(C2: become a dancer?) are indicated by black diamonds. Figure 1.10(a) shows
+the number of different individuals that visited each feeder during the previous
+half hour in the experiments. Figure 1.10(b) shows the forager group size (here,
+9
+
+
+===== PAGE 23 =====
+10 Swarm Intelligence
+FIGURE 1.8 Schematic representation of the experimental setup.
+the sum of the bees dancing for the feeder, the bees at the feeder, and the bees
+unloading nectar from the feeder) for each feeder obtained from simulations of
+the simple model depicted in Figure 1.9.
+2. Negative feedback counterbalances positive feedback and helps to stabilize the
+collective pattern: it may take the form of saturation, exhaustion, or compe-
+tition. In the example of foraging, negative feedback stems from the limited
+number of available foragers, satiation, food source exhaustion, crowding at the
+food source, or competition between food sources.
+3. SO relies on the amplification of fluctuations (random walks, errors, random
+task-switching, and so on). Not only do structures emerge despite randomness,
+but randomness is often crucial, since it enables the discovery of new solutions,
+and fluctuations can act as seeds from which structures nucleate and grow. For
+example, foragers may get lost in an ant colony, because they follow trails with
+some level of error; although such a phenomenon may seem inefficient, lost for-
+agers can find new, unexploited food sources, and recruit nestmates to these
+food sources.
+
+
+===== PAGE 24 =====
+Chapter 1 11
+FIGURE 1.9 Schematic representation of foraging activity.
+4. All cases of SO rely on multiple interactions. A single individual can generate a
+self-organized structure such as a stable trail provided pheromonal3 lifetime is
+sufficient, because trail-following events can then interact with trail-laying ac-
+tions. However. SO generally requires a minimal density of mutually tolerant
+individuals. Moreover, individuals should be able to make use of the results of
+their own activities as well as of others' activities (although they may perceive
+3A pheromone is a chemical used by animals to communicate. In ants, a pheromone trail
+is a trail marked with pheromone. Trail-laying trail-following behavior is widespread in ants (see
+chapter 2)
+
+
+===== PAGE 25 =====
+12 Swarm Intelligence
+FIGURE 1.10 (a) Experimental number of different individuals that visited each feeder
+during the previous half hour, (b) Forager group size for each feeder obtained from model.
+the difference): for instance, trail networks can self-organize and be used collec-
+tively if individuals use others' pheromone. This does not exclude the existence
+of individual chemical signatures or individual memory which can efficiently
+complement or- sometimes replace responses to collective marks.
+When a given phenomenon is self-organized, it can usually be characterized by
+a few key properties:
+The creation of spatiotemporal structures in an initially homogeneous medium.
+Such structures include nest architectures, foraging trails, or social organization.
+For example, a characteristic well-organized pattern develops on the combs of
+honeybee colonies. This pattern consists of three concentric regions (a central
+brood area, a surrounding rim of pollen, and a large peripheral region of honey)
+(Figure 1.11). It results to a large extent from a self-organized process based
+on local information [58]. The model described in Camazine [58] relies on the
+following assumptions, suggested by experimental observations:
+(a) The queen moves more or less randomly over the combs and lays most eggs
+in the neighborhood of cells already occupied by brood. Eggs remain in place
+for 21 days.
+(b) Honey and pollen are deposited in randomly selected available cells.
+(c) Four times more honey is brought back to the hive than pollen.
+1.
+
+
+===== PAGE 26 =====
+Chapter 1 13
+FIGURE 1.11 Comb of a manmade hive: the three concentric regions of cells can be
+clearly seen.
+(d) Typical removal input ratios for honey and pollen are 0.6 and 0.95, respec-
+tively.
+(e) Removal of honey and pollen is proportional to the number of surrounding
+cells containing brood.
+Simulations of a cellular automaton based on these assumptions were
+performed [58]. Figure 1.12 shows six successive steps in the formation of the
+concentric regions of brood (black dot on a white background), pollen (dark
+grey), and honey (light grey). Assumptions la and le ensure the growth of a
+central compact brood area if the first eggs are laid approximately at the center
+of the comb. Honey and pollen are initially randomly mixed [assumption Ib],
+but assumptions le and Id imply that pollen cells are more likely to be emptied
+and refilled with honey, so that pollen located in the periphery is removed and
+replaced by honey. The only cells available for pollen are those surrounding the
+brood area, because they have a high turnover rate. The adaptive function of
+this pattern is discussed by Camazine [58].
+The possible coexistence of several stable states (multistability). Because struc-
+tures emerge by amplification of random deviations, any such deviation can be
+amplified, and the system converges to one among several possible stable states,
+depending on initial conditions. For example, when two identical food sources,
+A and B, are presented at the same distance from the nest to an ant colony that
+resorts to mass recruitment,4 one of them is eventually massively exploited while
+the other is neglected: both sources have the same chance of being exploited,
+but only one of them is, and the colony could choose either one. There are
+therefore two possible attractors in this example: massive exploitation of A, or
+4 Mass recruitment in ants is based solely on trail-laying trail-following.
+
+
+===== PAGE 27 =====
+14 Swarm Intelligence
+massive exploitation of B. Which attractor the colony will converge to depends
+on random initial events.
+3. The existence of bifurcations when some parameters are varied. The behavior
+of a self-organized system changes dramatically at bifurcations. For example,
+the termite Macrotermes uses soil pellets impregnated with pheromone to build
+pillars. Two successive phases take place [157]. First, the noncoordinated phase is
+characterized by a random deposition of pellets. This phase lasts until one of the
+deposits reaches a critical size. Then, the coordination phase starts if the group
+of builders is sufficiently large: pillars or strips emerge. The existence of an initial
+deposit of soil pellets stimulates workers to accumulate more material through
+a positive feedback mechanism, since the accumulation of material reinforces
+the attractivity of deposits through the diffusing pheromone emitted by the
+pellets [48]. This autocatalytic, "snowball effect" leads to the coordinated phase.
+If the number of builders is too small, the pheromone disappears between two
+successive passages by the workers, and the amplification mechanism cannot
+work; only the noncoordinated phase is observed. Therefore, there is no need
+to invoke a change of behavior by the participants in the transition from the
+noncoordinated to the coordinated phase: it is merely the result of an increase
+in group size. A more detailed account of pillar construction in Macrotermes can
+be found in chapter 5 (section 5.2).
+1.2.3 STIGMERGY
+Self-organization in social insects often requires interactions among insects: such
+interactions can be direct or indirect. Direct interactions are the "obvious" inter-
+actions: antennation, trophallaxis (food or liquid exchange), mandibular contact,
+visual contact, chemical contact (the odor of nearby nestmates), etc. Indirect in-
+teractions are more subtle: two individuals interact indirectly when one of them
+modifies the environment and the other responds to the new environment at a
+later time. Such an interaction is an example of stigmergy. In addition to, or in
+combination with, self-organization, stigmergy is the other most important the-
+oretical concept of this book. Grasse [157, 158] introduced stigmergy (from the
+Greek stigma: sting, and ergon: work) to explain task coordination and regulation
+in the context of nest reconstruction in termites of the genus Macrotermes. Grasse
+showed that the coordination and regulation of building activities do not depend
+on the workers themselves but are mainly achieved by the nest structure: a stim-
+ulating configuration triggers the response of a termite worker, transforming the
+configuration into another configuration that may trigger in turn another (possibly
+different) action performed by the same termite or any other worker in the colony.
+Nest reconstruction consists of first building strips and pillars with soil pellets and
+stercoral mortar; arches are then thrown between the pillars and finally the inter-
+pillar space is filled to make walls. Figure 1.13 sketches how Grasse's [157, 158]
+notion of stigmergy can be applied to pillar construction.
+
+
+===== PAGE 28 =====
+Chapter 1 15
+FIGURE 1.12 Six successive steps in the formation of the concentric regions of brood
+(black dot in a white background), pollen (dark grey), and honey (light grey). Empty cells
+are represented in white.
+
+
+===== PAGE 29 =====
+16 Swarm Intelligence
+Stigmergy is easily overlooked, as it does not explain the detailed mechanisms
+by which individuals coordinate their activities. However, it does provide a general
+mechanism that relates individual and colony-level behaviors: individual behavior
+modifies the environment, which in turn modifies the behavior of other individuals.
+The case of pillar construction in termites shows how stigmergy can be used to
+coordinate the termites' building activities by means of self-organization. Another
+illustration of how stigmergy and self-organization can be combined is recruitment
+in ants, described in more detail in chapter 2: self-organized trail laying by individ-
+ual ants is a way of modifying the environment to communicate with nestmates that
+follow such trails. In chapter 3, we will see that task performance by some workers
+decreases the need for more task performance: for instance, nest cleaning by some
+workers reduces the need for nest cleaning. Therefore, nestmates communicate to
+other nestmates by modifying the environment (cleaning the nest), and nestmates
+respond to the modified environment (by not engaging in nest cleaning): that is
+stigmergy. In chapters 4 and 5, we describe how ants form piles of items such as dead
+bodies, larvae, or grains of sand. There again, stigmergy is at work: ants deposit
+items at initially random locations. When other ants perceive deposited items, they
+are stimulated to deposit items next to them. In chapter 6, we describe a model of
+nest building in wasps, in which wasp-like agents are stimulated to deposit bricks
+when they encounter specific configurations of bricks: depositing a brick modifies
+the environment and hence the stimulatory field of other agents. Finally, in chap-
+ter 7, we describe how insects can coordinate their actions to collectively transport
+prey. When an ant changes position or alignment, it modifies the distribution of
+forces on the item. Repositioning and realignment cause other transporting ants
+to change their own position or alignment. The case for stigmergy is a little more
+ambiguous there, because the item could be considered a medium of "direct" com-
+munication between ants. Yet, the same mechanism as in the other examples is at
+work: ants change the perceived environment of other ants. In every example, the
+environment serves as a medium of communication.
+What all these examples have in common is that they show how stigmergy can
+easily be made operational. That is a promising first step to design groups of arti-
+ficial agents which solve problems: replacing coordination through direct commu-
+nications by indirect interactions is appealing if one wishes to design simple agents
+and reduce communication among agents. Another feature shared by several of
+the examples is incremental construction: for instance, termites make use of what
+other termites have constructed to contribute their own piece. In the context of op-
+timization, incremental improvement is widely used: a new solution is constructed
+from previous solutions. Finally, stigmergy is often associated with flexibility: when
+the environment changes because of an external perturbation, the insects respond
+appropriately to that perturbation, as if it were a modification of the environment
+caused by the colony's activities. In other words, the colony can collectively respond
+to the perturbation with individuals exhibiting the same behavior. When it comes
+to artificial agents, this type of flexibility is priceless: it means that the agents can
+
+
+===== PAGE 30 =====
+Chapter 1 17
+respond to a perturbation without being reprogrammed to deal with that particular
+perturbation.
+1.3 MODELING AS AN INTERFACE
+As was discussed in section 1.2.1, understanding nature and designing useful sys-
+tems are two very different endeavors. Understanding nature requires observing,
+carrying out experiments, and making models that are constrained by observations
+and experiments. Designing, on the other hand, requires making models that are
+only limited by one's imagination and available technology. But, in both cases,
+models are of utmost importance, although they are sometimes implicitly, rather
+than explicitly, and verbally, rather than mathematically, formulated. Discussing
+the essence of modeling is definitely beyond the scope of this book. However, it is
+worth giving a brief outline of what it means to model a phenomenon because mod-
+els are central to the work presented here. Indeed, models of natural phenomena
+in social insects set the stage for artificial systems based on them. For the purpose
+of this book, a model is a simplified picture of reality: a usually small number of
+observable quantities, thought to be relevant, are identified and used as variables; a
+model is a way of connecting these variables. Usually, a model has parameters, that,
+ultimately, should be measurable. Hidden variables, that is. additional assumptions
+which are not based on observable quantities, are often necessary to build a connec-
+tion among variables that is consistent with observed behavior. Varying the values
+of the parameters usually modifies the output or behavior of the model. When the
+model's output is consistent with the natural system's behavior, parameter values
+should be compared with the values of their natural counterparts whenever possi-
+ble. Sources of hidden variables are looked for in the natural system. A good model
+has several qualities: parsimony, coherence, refutability, etc.
+Models channel imagination in the sense that they usually contain the ingredi-
+ents necessary to explain classes of phenomena: it might be worth exploring models
+which are known to (plausibly) explain phenomena of interest rather than start from
+scratch. Exploring a model beyond the constraints of reality amounts to using a
+tool beyond its initial purpose. Knowing that social insects have been particularly
+successful at solving problems which can be abstracted away and formulated in,
+say, algorithmic language, makes models of problem solving in social insects partic-
+ularly attractive: models that help explain how social insects solve problems serve
+as a starting point because they can be explored beyond their initial boundaries.
+For instance, optimization algorithms based on models of foraging often resort to
+pheromone decay over time scales that are too short to be biologically plausible:
+in this case, models have been explored beyond what is biologically relevant to
+generate an interesting new class of algorithms. The underlying principles of these
+algorithms are strongly inspired by the functioning of social insect colonies, but
+some of the parameter values do not lie within empirical boundaries. In the con-
+text of this book, modeling serves, therefore, as an interface between understanding
+
+
+===== PAGE 31 =====
+18 Swarm Intelligence
+FIGURE 1.13 Assume that the architecture reaches state A, which triggers response R
+from worker S. A is modified by the action of S (for example, S may drop a soil pellet),
+and transformed into a new stimulating configuration A\, that may in turn trigger a new
+response R\ from S or any other worker Sn and so forth. The successive responses RI ,
+Rz, Rn may be produced by any worker carrying a soil pellet. Each worker creates new
+stimuli in response to existing stimulating configurations. These new stimuli then act on
+the same termite or any other worker in the colony. Such a process, where the only relevant
+interactions taking place among the agents are indirect, through the environment which
+is modified by the other agents, is also called sematectornc communication [329]. After
+Grasse [158]. Reprinted by permission @ Masson.
+
+
+===== PAGE 32 =====
+Chapter 1 19
+nature and designing artificial systems: one starts from the observed phenomenon,
+tries to make a biologically motivated model of it, and then explores the model
+without constraints.
+1.4 FROM ALGORITHMS TO ROBOTICS
+Swarm-based robotics is growing so rapidly that it is becoming very difficult to
+keep track of what is going on and to keep up with novelty. A recent issue of the
+journal Autonomous Robots was dedicated to "colonies" of robots. Other major
+journals in the field of robotics have already published, or are in the process of
+publishing special issues on this topic. Our aim is not to provide the reader with
+an extensive survey of the field,5 but rather to present a few selected examples in
+which researchers have clearly made use of the social insect metaphor, or the swarm-
+based approach, through one or all of the following: the design of distributed control
+mechanisms, the type of coordination mechanisms implemented, the tasks that the
+robots perform. This will be sufficient to have an idea of the advantages and pitfalls
+of reactive distributed robotics, which can also be called, in the present context,
+swarm-based robotics.
+Why is swarm-based robotics, that we would define loosely as reactive collective
+robotics, an interesting alternative to classical approaches to robotics? Some of the
+reasons can be found in the characteristic properties of problem solving by social in-
+sects, which is flexible, robust, decentralized, and self-organized. Some tasks may be
+inherently too complex or impossible for a single robot to perform [62] (see, for ex-
+ample, chapter 7, where pushing a box requires the "coordinated" efforts of at least
+two individuals). Increased speed can result from using several robots, but there is
+not necessarily any cooperation: the underlying mechanism that allows the robots
+to work together is a minimum interference principle. Designing, building, and using
+several simple robots may be easier because they use, for example, a simpler senso-
+rimotor apparatus, cheaper because they are simple, more flexible without the need
+to reprogram the robots, and more reliable and fault-tolerant because one or sev-
+eral robots may fail without affecting task completion—although completion time
+may be affected by such a perturbation—than having a powerful complex robot.
+Furthermore, theories of self-organization [31] teach us that, sometimes, collective
+behavior results in patterns which are qualitatively different from those that could
+be obtained with a single agent or robot. Randomness or fluctuations in individual
+behavior, far from being harmful, may in fact greatly enhance the system's ability to
+explore new behaviors and find new "solutions." In addition, self-organization and
+decentralization, together with the idea that interactions among agents need not be
+direct but can rather take place through the environment, point to the possibility of
+significantly reducing communication between robots: explicit robot-to-robot com-
+munication rapidly becomes a big issue when the number of robots increases; this
+5Such reviews—thorough at the time they were released and already somewhat obsolete—can
+be found, for example, in Cao et al. [61, 62].
+
+
+===== PAGE 33 =====
+20 Swarm Intelligence
+issue can be, to a large extent, eliminated by suppressing such communication! Also,
+central control is usually not well suited to dealing with a large number of agents
+(this is also true for a telecommunications network: see section 2.7 in chapter 2),
+not only because of the need for robot-to-controller-and-back communications, but
+also because failure of the controller implies failure of the whole system.
+Of course, using a swarm of robots has some drawbacks. For example, stagna-
+tion is one (see chapter 7): because of the lack of a global knowledge, a group of
+robots may find itself in a deadlock, where it cannot make any progress. Another
+problem is to determine how these so-called "simple" robots should be programmed
+to perform user-designed tasks. The pathways to solutions are usually not prede-
+fined but emergent, and solving a problem amounts to finding a trajectory for the
+system and its environment so that the states of both the system and the environ-
+ment constitute the solution to the problem: although appealing, this formulation
+does not lend itself to easy programming. Until now, we implicitly assumed that
+all robots were identical units: the situation becomes more complicated when the
+robots can perform different tasks, respond to different stimuli, or respond differ-
+ently to the same stimuli, and so forth; if the body of theory that roboticists can
+use for homogeneous groups of robots is limited, there is virtually no theoretical
+guideline for the design of heterogeneous swarms.
+The current success of collective robotics is the result of several factors:
+1. The relative failure of the Artificial Intelligence (AI) program, which "classical"
+robotics relied upon, has forced many computer scientists and roboticists to re-
+consider their fundamental paradigms; this paradigm shift has led to the advent
+of connectionism, and to the view that sensorimotor "intelligence" is as impor-
+tant as reasoning and other higher-level components of cognition. Swarm-based
+robotics relies on the anti-classical-AI idea that a group of robots may be able
+to perform tasks without explicit representations of the environment and of the
+other robots; finally, planning is replaced by reactivity.
+2. The remarkable progress of hardware during the last decade has allowed many
+researchers to experiment with real robots, which have not only become more
+efficient and capable of performing many different tasks, but also cheap(er).
+3. The field of Artificial Life, where the concept of emergent behavior is emphasized
+as essential to the understanding of fundamental properties of the living, has
+done much to propagate ideas about collective behavior in biological systems,
+particularly social insects; theories that had remained unknown to roboticists
+have eventually reached them; of course, the rise of the internet-based "global
+information society" enhanced this tendency.
+4. Finally, collective robotics has become fashionable by positive feedback. The field
+is booming, but not that many works appear to be original, at least conceptually,
+which is the only level the authors of this book can judge.
+Interesting directions for the future include ways of enhancing indirect commu-
+nications among robots. For example, Deveza et al. [95] introduced odor sensing
+
+
+===== PAGE 34 =====
+Chapter 1 21
+for robot guidance (which, of course, is reminiscent of trail following in ants), Rus-
+sell [278] used a short-lived heat trail for the same purpose. Prescott and Ibbot-
+son [264] used a particularly original medium of communication to reproduce the
+motion of prehistoric worms: bathroom tissue. A dispenser on the back of the robot
+releases a stream of paper when the robot is moving; two light detectors on each
+of the side arms measure reflected light from the floor and control the thigmotaxis
+(toward track) and phobotaxis (away from track) behaviors. Although their work
+is not about collective robotics, it sets the stage for studying and implementing
+indirect communication in groups of robots.
+Finally, what are the areas of potential application for swarm-based multirobot
+systems? "In aerospace technology, it is envisioned that teams of flying robots may
+effect satellite repair, and aircraft engine maintenance could be performed by thou-
+sands of robots built into the engine eliminating the need for costly disassembly
+for routine preventive maintenance. Environmental robots are to be used in pipe
+inspection and pest eradication. While industrial applications include waste dis-
+posal and micro cleaners. Ship maintenance and ocean cleaning could be performed
+by hundreds of underwater robots designed to remove debris from hulls and ocean
+floors.... Some researchers envision microsurgical robots that could be injected into
+the body by the hundreds designed to perform specific manipulation tasks with-
+out the need for conventional surgical techniques," writes Kube [208] (p. 17). Most
+of these applications require miniaturization! Very small robots, micro- and nano-
+robots, which will by construction have severely limited sensing and computation,
+may need to "operate in very large groups or swarms to affect the macroworld [237]."
+Approaches directly inspired or derived from swarm intelligence may be the only
+way to control and manage such groups of small robots. As the reader will per-
+haps be disappointed by the "simplicity" of the tasks performed by state-of-the-art
+swarm-based robotic systems such as those presented in chapters 4, 6, and 7, let
+us remind him that it is in the perspective of miniaturization that swarm-based
+robotics becomes meaningful.
+In view of these great many potential applications, it seems urgent to work
+at the fundamental level of what algorithms should be put into these robots: un-
+derstanding the nature of coordination in groups of simple agents is a first step
+toward implementing useful multirobot systems. The present book, although it
+deals marginally with collective robotics, provides a wealth of ideas that, we hope,
+will be useful in that perspective.
+1.5 READING GUIDE
+It may be useful at this point to issue a series of warnings to the reader. This book is
+not intended to provide the reader with recipes for solving problems. It is full of wild
+speculations and statements that may (or may not) turn out to be just plain wrong.
+This book is not describing a new kind of algorithmic theory. Nor does it provide
+
+
+===== PAGE 35 =====
+22 Swarm Intelligence
+an overview of social insect behavior. Finally, this book is not a textbook, although
+it could be used to propagate our excitement to new generations of researchers.
+Knowing what this book is not does not necessarily help define what it is. Well,
+this book is an educated guess about the future of artificial intelligence. It provides
+the reader, not with a synthesis of a mature and well-defined field, but rather with
+new ideas from a booming field with no clear-cut boundaries. It provides the reader,
+not with proofs of theorems, but with intuitions of emergent phenomena [268]. We
+suggest that the social insect metaphor may go beyond superficial considerations.
+At a time when the world is becoming so complex that no single human being
+can really understand it, when information (and not the lack of it) is threatening
+our lives, when software systems become so intractable that they can no longer be
+controlled, perhaps the scientific and engineering world will be more willing to con-
+sider another way of designing "intelligent" systems, where autonomy, emergence
+and distributed functioning replace control, preprogramming and centralization.
+Of course, such an approach raises fundamental issues: how do we design such sys-
+tems so that they eventually solve the problems we want them to solve? How do we
+make sure that such systems will not exhibit catastrophic behavior when confronted
+with pathological situations (note that the same question applies to large pieces of
+"classical" software)? And many other questions, some of which are waiting to be
+formulated. To these formulated and unformulated questions, we hope that this
+book will offer an implicit, rather than explicit, response.
+Each chapter deals with a particular behavior observed in social insects: for-
+aging (chapter 2), division of labor (chapter 3), clustering and sorting (chapter 4),
+building (chapter 5 and chapter 6), and cooperative transport (chapter 7). The first
+part of each chapter provides a brief description of the phenomenon followed by a
+more or less thorough description of models developed by ethologists to understand
+the phenomenon. Engineering-oriented applications, that make use of the emergent
+behavior of social insects, are then presented. It is worth noting that not all sub-
+fields of swarm intelligence are equally advanced. Therefore, although each chapter
+emphasizes different aspects of swarm intelligence, all of them present an outline
+of the underlying biology before proceeding to resulting applications, chapters 2,
+4, and 7 present more applications than biology or modeling, whereas chapters 3
+and 5 are more biology oriented. Chapter 6 is more difficult to classify: it does
+not contain any actual application, nor does it present a lot of biology. Chapter
+6 is speculative at two levels: the model described is highly speculative, whereas
+potential applications remain to be explored. But we expect all types of chapters to
+be useful: those emphasizing applications because they show very clearly how our
+understanding of how social insects collectively solve problems can be applied to
+designing algorithms and distributed artificial problem-solving devices; those em-
+phasizing the biology because, we believe, they provide new, largely untested, ideas
+to design new types of algorithms and distributed artificial devices. Chapter 6 be-
+longs to this latter category, although a complete understanding of the underlying
+biology currently seems out of reach of modeling.
+
+
+===== PAGE 36 =====
+Chapter 1 23
+Because this book is about designing problem-solving devices inspired by social
+insects, the models presented throughout the book need not be "perfect" models of
+social insect behavior. In fact, all the models presented in the book, including those
+introduced earlier in this chapter, remain speculative to a varying extent. Carefully
+designed empirical tests are required to validate them. Some of the models may even
+turn out to be false—although in most cases they will likely reflect at least part of
+the truth. But algorithms do not have to be designed after accurate or even true
+models of biological systems: efficiency, robustness, and flexibility are the driving
+criteria, not biological accuracy. This warning is extremely important because the
+models of social insect behavior presented in the book are still being developed and
+tested, whereas our writing style may leave the reader with the impression that
+everything is 100% certain. But the study of self-organization in social insects is
+almost as new as artificial swarm intelligence!
+
+
+===== PAGE 37 =====
+This page intentionally left blank 
+
+===== PAGE 38 =====
+CHAPTER 2
+Ant Foraging Behavior, Combinatorial
+Optimization, and Routing in
+Communications Networks
+2.1 OVERVIEW
+This chapter is dedicated to the description of the collective foraging behavior
+of ants and to the discussion of several computational models inspired by that
+behavior—ant-based algorithms or ant colony optimization (AGO) algorithms. In
+the first part of the chapter, several examples of cooperative foraging in ants are
+described and modeled. In particular, in some species a colony self-organizes to find
+and exploit the food source that is closest to the nest.
+A set of conveniently defined artificial ants, the behavior of which is designed
+after that of their real counterparts, can be used to solve combinatorial optimiza-
+tion problems. A detailed introduction to ant-based algorithms is given by using
+the traveling salesman problem (TSP) as an application problem. Ant-based al-
+gorithms have been applied to other combinatorial optimization problems such as
+the quadratic assignment problem, graph coloring, job-shop scheduling, sequential
+ordering, and vehicle routing. Results obtained with ant-based algorithms are often
+as good as those obtained with other general-purpose heuristics. Application to the
+quadratic assignment problem is described in detail. Coupling ant-based algorithms
+with local optimizers obtains, in some cases, world-class results. Parallels are drawn
+25
+
+
+===== PAGE 39 =====
+26 Swarm Intelligence
+between ant-based optimization algorithms and other nature-inspired optimization
+techniques, such as neural nets and evolutionary computation.
+All the combinatorial problems mentioned above are static, that is, their char-
+acteristics do not change over time. In the last part of the chapter, the application of
+ant-based algorithms to a class of stochastic time-varying problems is investigated:
+routing in telecommunications networks. Given the adaptive capabilities built into
+the ant-based algorithms, they may be more competitive in stochastic time-varying
+domains, in which solutions must be adapted online to changing conditions, than
+in static problems. The performance of AntNet, an ant-based algorithm designed
+to adaptively build routing tables in packet-switching communications networks, is
+the best of a number of state-of-the-art algorithms compared on an extensive set
+of experimental conditions.
+2.2 FORAGING STRATEGIES IN ANTS
+Many ant species have trail-laying trail-following behavior when foraging: individ-
+ual ants deposit a chemical substance called pheromone as they move from a food
+source to their nest, and foragers follow such pheromone trails. The process whereby
+an ant is influenced toward a food source by another ant or by a chemical trail is
+called recruitment, and recruitment based solely on chemical trails is called mass re-
+cruitment. In this section, two phenomena based on mass recruitment are described.
+These phenomena inspired the AGO algorithms described later in this chapter.
+2.2.1 NATURAL OPTIMIZATION (1): THE BINARY BRIDGE EXPERIMENT
+Using a simple and elegant experimental setup, Deneubourg et al. [87] showed
+that path selection to a food source in the Argentine ant Linepithema humile (for-
+merly Iridomyrmex humilis) is based on self-organization. In this experiment, a
+food source is separated from the nest by a bridge with two equally long branches
+A and B (Figure 2.1). Initially, there is no pheromone on the two branches, which
+have, therefore, the same probability of being selected by the ants. Nevertheless,
+random fluctuations will cause a few more ants to randomly select one branch, say
+A, over the other. Because ants deposit pheromone while walking, the greater num-
+ber of ants on branch A determines a greater amount of pheromone on A, which in
+turn stimulates more ants to choose A, and so on [87].
+Deneubourg et al. [87] developed a model of this phenomenon, the behavior
+of which closely matches the experimental observations. Let us assume that the
+amount of pheromone on a branch is proportional to the number of ants that used
+the branch to cross the bridge. With this assumption, pheromone evaporation is
+not taken into account: this is a plausible assumption, because the experiments
+typically last of the order of an hour, a time scale that may not be sufficient for the
+amount of pheromone to be reduced significantly. In the model, the probability of
+choosing a branch at a certain time depends on the total number of ants that used
+
+
+===== PAGE 40 =====
+Chapter 2 27
+FIGURE 2.1 Percentage of all passages per unit time on each of the two branches as
+a function of time: one of the branches is eventually used most of the time. Note that
+the winning branch was not favored by the initial fluctuations, which indicates that these
+fluctuations were not strong enough to promote exploitation of the other branch. The
+inset is a schematic representaton of the experimental setup. After Deneubourg et al. [87].
+Reprinted by permission © Plenum Publishing.
+the branch until that time. More precisely, let Ai and Bi be the numbers of ants
+that have used branches A and B after i ants have used the bridge. The probability
+PA(PB) that the (i + l)th ant chooses branch A(B) is
+Equation (2.1) quantifies the way in which a higher concentration on branch A gives
+a higher probability of choosing branch A, depending on the absolute and relative
+values of A± and B^. The parameter n determines the degree of nonlinearity of the
+choice function: when n is large, if one branch has only slightly more pheromone
+than the other, the next ant that passes will have a high probability of choosing it.
+The parameter k quantifies the degree of attraction of an unmarked branch: the
+greater k, the greater the amount of pheromone to make the choice nonrandom.
+This particular form of PA was obtained from experiments on trail following [259].
+The values of the parameters k and n that give the best fit to the experimental
+measures are n « 2 and k « 20 [87]. If At » Bi and Ai > 20, PA « 1; if At » Bi
+but Ai < 20, then PA ^ 0.5. The same holds true for Pg. The choice dynamics
+follows from Eq. (2.1):
+
+
+===== PAGE 41 =====
+28 Swarm Intelligence
+FIGURE 2.2 Percentage of passages on the dominant branch as a function of the total
+number of ants that took the bridge. Solid black curve: average result of 200 Monte Carlo
+simulations of the model given by Eqs. (2.1) to (2.4), with 2,000 ant passages in each
+simulation. Gray broken line: percentage of passages on the dominant branch measured
+every 100 ant passages, average over 20 experiments of 30 minutes each. Nine colonies
+of 150-1200 workers each were used for the experiments. After Deneubourg et al. [87].
+Reprinted by permission © Plenum Publishing.
+where S is a random variable uniformly distributed over [0,1].
+The model expressed in Eqs. (2.1) to (2.4) was analyzed by means of Monte
+Carlo simulations. The results of these simulations are in perfect agreement with
+the experiments (Figure 2.2).
+The experiment where the bridge's branches are the same length can be ex-
+tended to the case where one branch is longer than the other [154]. Likewise, the
+model can be modified to apply to this situation. By the same mechanism as in
+the previous situation, that is, the amplification of initial fluctuations, the shortest
+branch is most often selected: the first ants coming back to the nest are those that
+took the shortest path twice (to go from the nest to the source and to return to
+the nest), so that, immediately after these ants have returned, more pheromone
+is present on the short branch than on the long branch, stimulating nestmates to
+choose the short branch (Figure 2.3(a)). Experiments have shown that the chance of
+the short branch being eventually selected by amplification of initial fluctuations in-
+creases with the length ratio r of the two branches. Figure 2.3(b) on the left shows
+that short branch selection is only statistically verified, when r = 2 (the longer
+branch is twice as long as the short branch): in some cases, more ants initially
+choose the long branch, so that this branch will be more strongly marked, leading
+to the preferential exploitation of the long branch. This indicates that recruitment
+based primarily on pheromone may not be particularly flexible. Figure 2.3(b) on
+
+
+===== PAGE 42 =====
+Chapter 2 29
+the right shows what happens when, given the same experimental setup, the short
+branch is presented to the colony 30 minutes after the long branch: the short branch
+is not selected and the colony remains trapped on the long branch.
+With Lasius niger, another species of ants resorting to mass recruitment, an-
+other mechanism allows the selection of the shorter path, even when it is presented
+30 minutes after the longer path. When it finds itself in the middle of the long
+branch, this ant often realizes that it is heading almost perpendicularly to the re-
+quired direction: this induces it to make U-turns on the long branch [11]. In this
+case, the combination of individual memory for the direction to the nest or food
+source plus collective trail following allows the systematic selection of the short
+branch (Figure 2.4). In other words, the colony is more flexible.
+FIGURE 2.3 (a) Experimental setup and drawings of the selection of the short branches
+by a colony of Linepithema humile respectively 4 and 8 minutes after the bridge was placed.
+After Goss et al. [154]. Reprinted by permission © Springer-Verlag. (b) Distribution of the
+percentage of ants that selected the shorter path over n experiments (r is the length ratio
+between the two branches). The longer branch is r times longer than the short branch.
+Left: short and long branches are presented from beginning of the experiment. Right: the
+short branch is presented to the colony 30 minutes after the long branch. After Goss et
+al. [154]. Reprinted by permission © Springer-Verlag. continued.
+
+
+===== PAGE 43 =====
+30 Swarm Intelligence
+FIGURE 2.3 continued, (c) Image of the real experiment. The nest is located in the lower
+arena and the food source in the upper arena.
+In the above-mentioned ant species, which base their recruitment on phero-
+mone^), it would be interesting to know the physico-chemical properties of the
+pheromones. It is fair to say that not much is known about these chemicals. "In-
+direct" experiments, which test for the behavior of ants that encounter different
+amounts of pheromone on different substrates and/or after varying amounts of
+time, have provided a rough approximation of quantities such as evaporation rate,
+absorption rate, diffusion constant, etc. One consistent finding about the above-
+mentioned species is that their pheromone trails usually persist for a long time,
+from at least several hours up to several months (depending on the species, the
+substrate, colony size, weather conditions, etc.), indicating that the lifetimes of
+pheromones have to be measured on long time scales.
+In the field of ant colony optimization and swarm intelligence, common wisdom
+holds that pheromone evaporation, when occurring on a sufficiently short time scale,
+allows ant colonies to avoid being trapped on a "suboptimal" solution, as is the case
+for Linepithema humile. This is because maintaining a well-marked pheromone trail
+is more difficult on a longer trail (Figure 2.5) (see Bonabeau [27, 28]).
+In reality, however, this does not seem to be the case, because pheromones are
+persistent. Also, the notion of optimality is a slippery one in biology: optimality is
+defined with respect to many constraints, including ecological constraints, such as
+predation or competition with other colonies. In some situations, it may be to the
+advantage of the colony to focus its foraging activity on a given site or area, even if
+
+
+===== PAGE 44 =====
+Chapter 2 31
+FIGURE 2.4 Same experimental setup as in Figure 2.3(a), but with Lasius niger. In this
+case, the combination of individual memory for the direction to the nest or food source,
+plus collective trail following allows a more systematic selection of the short branch when
+the short branch is presented after the long branch. After Beckers et al. [11]. Reprinted
+by permission © Academic Press.
+not the best one, because one single trail is easier to protect; switching to other sites
+in an "opportunistic" way could induce costs, such as a reduction in the colony's
+level of protection, which should not be neglected. This is an interesting example
+where there is clear divergence between real and artificial ants: the ant colony
+algorithms that are described in the following sections heavily rely on techniques
+similar to pheromone evaporation, which is indeed quite a powerful method for
+optimization.
+2.2.2 NATURAL OPTIMIZATION (2): THE CASE OF INTER-NEST TRAFFIC
+Aron et al. [5], in a remarkable experiment involving several nests and bridges
+between them, have shown that the Argentine ant Linepithema humile can solve
+the minimal spanning tree problem. Although this problem is not combinatorially
+hard in the formulation used in the experiment, some of its variants are,1 and it is
+interesting to have an example of collective problem solving for the simplest variant,
+since this could inspire similar techniques with which to attack harder versions.
+'Such as the Steiner problem [144].
+
+
+===== PAGE 45 =====
+32 Swarm Intelligence
+FIGURE 2.5 Simulation of a situation where 3 food sources (Si, 82, and 83) of identical
+quality are presented to the colony at various distances from the nest (Figure 2.5(a)).
+Ants returning from a food source to the nest deposit pheromone, and ants that go out
+of the nest follow pheromone trails, or walk randomly in the absence of pheromone. Trail
+following is probabilistic: errors can occur and ants may lose the trail. Pheromone decay is
+assumed to occur over short time scales. At time t\, ants, represented by black dots, explore
+their environment randomly (Figure 2.5(b)). At time t-z, trails that connect the nest to the
+food sources are being established (Figure 2.5(c)). At time ts, only the trails that connect
+the nest to the closest food sources are maintained, leading to the exploitation of these
+sources (Figure 2.5(d)). The next closest source will be exploited later, when the first two
+exploited sources are exhausted, and so forth. The simulation has been written in the
+StarLogo programming language, developed by the Epistemology and Learning Group at
+the MIT Media Lab. The program can be downloaded from the MIT StarLogo website at
+http://starlogo.www.media.mit.edu. More details about StarLogo and these simulations
+can be found in Resnick [268].
+
+
+===== PAGE 46 =====
+Chapter 2 33
+FIGURE 2.6 Top: Experimental design and results for a triangular network connecting
+three nests. Bottom: Drawings represent the qualitative solutions adopted. A solid line
+indicates heavy traffic, and an interrupted line a cut branch. The numbers indicate the
+quantitative results for each experiment, with the percentage of traffic on each branch (a,
+b, and c) and the total traffic (n) on the branches, (a) The triangular network was left
+for two weeks before counting the traffic (4 experiments). This experiment indicates that
+chemical, rather than visual, cues play a key role in the selection of branches, (b) The entire
+bridge system was rotated 120 degrees, the nests not being moved (3 experiments), (c) The
+most frequented branch was then cut (3 experiments). After Aron et al. [5]. Reprinted by
+permission © Springer- Verlag.
+
+
+===== PAGE 47 =====
+34 Swarm Intelligence
+FIGURE 2.7 Top: Experimental design and results for a square network connecting four
+nests. Bottom: Same as Figure 2.6. "In light" means that the experiment has been per-
+formed with light. "In dark" means that the experiment has been performed in the dark.
+The absence of significant difference between experiments performed with and without
+light suggests that visual cues are not essential, (a) The square network was left for two
+weeks before counting the traffic; branch a is not exploited, (b) Branch c (the base of the
+U-shaped solution in A) was then cut. (c) Branches b and d were presented to the colony
+for two weeks, and then branches a and c were added; branch a is not exploited. After
+Aron et al. [5]. Reprinted by permission © Springer-Verlag.
+
+
+===== PAGE 48 =====
+Chapter 2 35
+FIGURE 2.8 Network of interconnected nests of a super-colony of Formica lugubris. Nests
+are represented by circles. After Cherix [68]. Reprinted by permission © Springer- Verlag.
+Societies of Linepithema humile are composed of subsocieties connected by a
+permanent network of chemical trails. Workers, larvae and even queens are contin-
+uously exchanged between the nests of these subsocieties. Such exchanges enable
+a flexible allocation of the work force in the foraging area in response to environ-
+mental cues. Moreover, inter-nest trails are extended to include trails to permanent,
+long-lasting or rich food sources. In the laboratory experiments carried out by Aron
+et al. [5], three or four nests were connected by cardboard bridges (Figures 2.6 and
+2.7). The resulting traffic of ants was such that the ants were travelling on a set of
+paths connecting all the nests. The set of paths formed a minimal spanning tree,
+that is, ant did not use redundant bridges. Besides, cutting a frequented bridge
+caused the traffic to transfer to a previously unused branch (Figures 2.6 and 2.7).
+
+
+===== PAGE 49 =====
+36 Swarm Intelligence
+Aron et al. [5] have shown that chemical cues play a crucial role in this process,
+whereas visual cues were not essential. They were able to reproduce most of the
+experimental observations with a model similar to the one used to describe the
+binary bridge experiment of Figure 2.3.
+This example may seem trivial, not only because the minimal spanning tree
+problem is not a hard optimization problem, but also because this particular in-
+stance involves only three or four nodes. But some ant colonies build huge net-
+works of connected nests that span hundreds of meters. For example, Figure 2.8
+shows a network of interconnected nests of a super-colony of Formica lugubris in
+Switzerland. Although no study has been done in relation with the graph-theoretic
+properties of this network, it would not be surprising to find that the network is
+close to a minimum spanning tree that connects all nests, represented by circles in
+Figure 2.8.
+2.2.3 THE RAID PATTERNS OF ARMY ANTS
+In this section, we examine the foraging patterns of army ants. Army ants are among
+the largest and most cohesive societies [86]. Their foraging systems coordinate hun-
+dreds of thousands of individuals and cover a thousand square meters in a single
+day. The largest swarm raids of neotropical army ants are those of Eciton burchelli,
+which may contain up to 200,000 workers raiding in a dense phalanx 15m or more
+wide [129]. These swarm raids, comprised of individuals that are virtually blind, are
+fascinating examples of powerful, totally decentralized control. "The raid system is
+composed of a swarm front, a dense carpet of ants that extends for approximately
+1m behind the leading edge of the swarm, and a very large system of anastomosing
+trails. These trails, along which the ants run out to the swarm front and return
+with prey items, characteristically form loops that are small near the raid front and
+get ever bigger and less frequent away from it. The final large loop leads to a single
+principal trail2 that provides a permanent link between the army ants' raid and
+their bivouac" [129]. Raid patterns are dynamic but always exhibit the same basic
+structure. Figure 2.9 shows the swarm raid structures of three species of army ants,
+Eciton hamatum, E. rapax, and E. burchelli.
+These three species have different "diets": E. hamatum feeds mainly on dis-
+persed social insect colonies, Eciton burchelli feeds largely on scattered arthropods,
+and E. rapax has an intermediary diet. These different diets correspond to different
+spatial distributions of food items: for E. hamatum, food sources are rare but large,
+whereas for E. burchelli, food can easily be found but in small quantities each time.
+Could these different spatial distributions explain the different foraging patterns
+observed in Figure 2.9? More precisely, is it possible to explain the differences in
+the foraging patterns of the three army ant species without invoking a different
+behavior, but a different environment? This question is interesting from the view-
+point of the biology of army ants: if all three species have common ancestors, it is
+2The principal trail is often a mostly straight line [122]. A mathematical model which explains
+how ants build straight trails was given by Bruckstein [47].
+
+
+===== PAGE 50 =====
+Chapter 2 37
+FIGURE 2.9 Foraging patterns of three army ant species: Eciton hamatum, E. rapax, and
+E. burchelli. After Burton and Franks [52]. Reprinted by permission © Kansas Science
+Bulletin.
+not unlikely that their behavior is similar—only their diet may be different, simply
+because they adapted to different niches. But the question is also interesting from
+a problem-solving perspective: it means that the same program (the computer sci-
+ence equivalent of behavior) can solve different problems, or can adapt to different
+environments.
+Deneubourg et al.'s [86] self-organization model of army ant raid patterns tells
+us that the answer to the question is yes. The assumptions of the model are as
+follows:
+(a) For modeling purposes, the environment is represented as a bidimensional grid,
+represented in Figure 2.10. Each node of the grid is called a site. The system is
+updated at discrete time steps.
+(b) The ants lay pheromone trails both on the way out to the raid front and when
+returning to the nest or bivouac. Ants deposit one unit of pheromone per unit
+area (that is, per visited site) on their way out to the raid front; if the amount
+of pheromone at the site exceeds 1,000 units, no additional pheromone is laid.
+Returning ants deposit ten units of pheromone per visited site; if the amount
+
+
+===== PAGE 51 =====
+38 Swarm Intelligence
+This expression is similar to Eq. (2.1) with n = 2 and k = 5.
+(f) Ten ants leave the nest per time step. There cannot be more than 20 ants per
+site. If the ant has decided to move, and selected a site that is full, it moves to
+the other site; if both sites are full, the ant stays where it is.
+(g) The food distribution is represented by a probability of finding a food source per
+site. The food source can be small or large. Each ant that finds a food source
+returns to the nest with one unit of food.
+Figure 2.11 shows two patterns obtained from Monte Carlo simulations of
+Deneubourg et al.'s [86] model, with two different spatial distributions of food.
+The pattern on the right has been obtained when each site contains 1 unit of food
+with probability 1/2. Such a food distribution would represent the prey distribution
+of E. burchelli. A well-defined raid front can be observed. Returning ants cause the
+central trail to split into lateral trails which branch out. The pattern on the right
+has been obtained when each site has a small probability (1/100) of containing a
+large number (400) of food units, a food distribution that would represent the prey
+distribution of E. hamatum or E. rapax. Indeed, the pattern obtained from the
+simulation is similar to the swarm raid patterns of these two species: the swarm
+splits up into a number of small columns.
+The similarity between the patterns obtained in Figure 2.11 and those of Fig-
+ure 2.9 is not perfect. There are, however, some important common characteristics,
+which suggest that individual foragers with similar behavior operate in all three
+of pheromone at the site exceeds 300 units, no additional pheromone is laid. A
+fixed fraction e = 1/30 of the pheromone at each site evaporates at each time
+step.
+(c) Ants return to the nest after finding prey; an ant that returns to the nest is
+laden with a prey item.
+(d) At each time step, an ant decides whether to advance or stay at its current
+site. Let pi and pr be the amounts of pheromone on the left and right sites,
+respectively. The probability of moving is given by.
+Therefore, the more pheromone on the sites the ant is facing, the more likely
+the ant is to move. This corresponds to the empirical observation that the ants
+move more and more quickly as the pheromone concentration increases, and
+move more slowly in unmarked areas.
+(e) When an ant chooses to move, it selects the left or right site according to its
+absolute and relative pheromone concentrations. More precisely, the ant selects
+the left site with probability
+
+
+===== PAGE 52 =====
+Chapter 2 39
+FIGURE 2.10 Grid used to run the Monte Carlo simulations. Left: an ant starts from
+the nest and moves forward at each time step with probability pm. When the ant moves,
+it selects the left site with probability p, or the right site with probability 1 - p. One unit
+of pheromone is deposited at each visited site. Some sites contain food (small circles).
+Shaded areas at each site represent pheromone concentrations; a darker grey represents
+a higher pheromone concentration. Right: an ant is returning from a site where it found
+food. Ten units of pheromone are deposited at each visited site.
+species. The main factor that influences the structure of swarm raid patterns seems
+to be the environment, here, the food distribution. This prediction of Deneubourg
+et al.'s [86] model was tested in the field by Franks et al. [129]. By manipulating
+the prey distributions for E. burchelli swarms, they have made them raid in a form
+more typical of other army ant species, where the swarm breaks up into subswarms.
+Although the question has never been formally studied, it would not be surpris-
+ing, given the structure of their patterns, to find that the swarm raids are optimal
+"distribution networks," in the sense that they maximize the amount of retrieved
+prey for a given energy expense, or minimize the energy expense for a given amount
+of food brought back to the nest. Each pattern seems to be adapted, in that respect,
+to the species' food distribution. If this is the case, it means that a single algorithm
+based on self-organization is capable of generating optimal foraging structures, or
+distribution networks, in different conditions, without any central control. A desir-
+able feature indeed for, say, a routing algorithm in a communications network.
+2.3 ANT COLONY OPTIMIZATION: THE TRAVELING
+SALESMAN PROBLEM
+An important aspect of the foraging strategies described in the previous section is
+that, as an emergent result of the actions of many ants, the shortest path between
+two or more locations (often between a food source and a nest) is discovered and
+
+
+===== PAGE 53 =====
+40 Swarm Intelligence
+FIGURE 2.11 Patterns obtained from Monte Carlo simulations of the swarm raid model,
+with two different food distributions. Left: each site contains 1 unit of food with proba-
+bility 1/2. Right: each site has a probability 1/100 of containing 400 of food units. Insets
+show prey distributions. After Deneubourg et al. [86] Reprinted by permission © Plenum
+Publishing.
+maintained. It is, therefore, natural that the first application of an ant colony
+algorithm was to a path optimization problem: the traveling salesman problem
+(TSP).
+The TSP was chosen for several reasons:
+It is a shortest path problem to which the ant colony metaphor is easily adapted.
+It is a very difficult (NP-hard) problem [145].
+It has been studied a lot (it is considered to be "the benchmark problem" in
+combinatorial optimization, see for example Lawler et al. [214] and Reinelt [267])
+and therefore many sets of test problems are available, as well as many algorithms
+with which to run comparisons.
+It is a didactic problem: it is very easy to understand and explanations of the
+algorithm behavior are not obscured by too many technicalities.
+
+
+===== PAGE 54 =====
+Chapter 2 41
+The ant colony optimization approach was initiated by Dorigo [108], in collab-
+oration with Colorni and Maniezzo [76, 77, 107], and has turned out to be more
+than just a fun metaphor to be presented at exotic conferences: although the first
+results, obtained with an algorithm called Ant System,3 were a little bit disap-
+pointing, recent developments, which combine the ant colony approach with local
+searches and/or other optimization methods, are promising.
+On the traveling salesman problem (TSP) ant colony optimization algorithms
+augmented with local search have performance similar to that of the best heuris-
+tic approaches (such as Johnson and McGeoch's [191] Iterated Lin-Kernighan and
+Freisleben and Merz's [133] genetic algorithm), a very encouraging sign.
+What is the basic idea underlying all ant-based algorithms? It is to use a positive
+feedback [107, 108] mechanism, based on an analogy with the trail-laying trail-
+following behavior of some species of ants and some other social insects, to reinforce
+those portions of good solutions that contribute to the quality of these solutions,
+or to directly reinforce good solutions. A virtual pheromone, used as reinforcement,
+allows good solutions to be kept in memory, from where they can be used to make
+up better solutions. Of course, one needs to avoid some good, but not very good,
+solutions becoming reinforced to the point where they constrain the search too
+much, leading to a premature convergence (stagnation] of the algorithm. To avoid
+that, a form of negative feedback is implemented through pheromone evaporation,
+which includes a time scale into the algorithm. This time scale must not be too
+large, otherwise suboptimal premature convergence behavior can occur. But it must
+not be too short either, otherwise no cooperative behavior can emerge. Cooperative
+behavior is the other important concept here: ant colony algorithms make use of
+the simultaneous exploration of different solutions by a collection of identical ants.
+Ants that perform well at a given iteration influence the exploration of ants in
+future iterations. Because ants explore different solutions, the resulting pheromone
+trail is the consequence of different perspectives on the space of solutions. Even
+when only the best performing ant is allowed to reinforce its solution, there is a
+cooperative effect across time because ants in the next iteration use the pheromone
+trail to guide their exploration.
+2.3.1 ANT SYSTEM (AS)
+In the TSP the goal is to find a closed tour of minimal length connecting n given
+cities. Each city must be visited once and only once. Let dij be the distance between
+cities i and j. The problem can either be defined in Euclidean space, in which case
+3Ant System, the first ant colony optimization algorithm, had a performance similar to that of
+general purpose heuristics, such as simulated annealing or genetic algorithms, on small problems,
+but did not scale up well.
+
+
+===== PAGE 55 =====
+42 Swarm Intelligence
+where x, and y^ are the coordinates of city i, or can be more generally defined
+on a graph (N, E) where the cities are the nodes TV and the connections between
+the cities are the edges of the graph E. The graph need not be fully connected.
+Note that the "distance" matrix need not be symmetric: if it is asymmetric (the
+corresponding problem is called the asymmetric TSP or ATSP) the length of an
+edge connecting two cities i and j depends on whether one goes from i to j or from
+j to i (that is, in general d^ ^ dji). But whether the problem is symmetric or
+asymmetric does not change how it is being solved by Ant System (AS).
+In AS ants build solutions to the TSP by moving on the problem graph from
+one city to another until they complete a tour. During an iteration of the AS
+algorithm each ant k, k = I,..., m, builds a tour executing n = \N\ steps in which
+a probabilistic transition rule is applied. Iterations are indexed by t, 1 < t < imax,
+where imax is the user defined maximum number of iterations allowed.
+For each ant, the transition from city i to city j at iteration t of the algorithm
+depends on:
+1. Whether or not the city has already been visited. For each ant, a memory (also
+called tabu list) is maintained: it grows within a tour, and is then emptied
+between tours. The memory is used to define, for each ant k, the set Jf of
+cities that the ant still has to visit when it is on city i (at the beginning, J*
+contains all the cities but i). By exploiting J* an ant k can avoid visiting a city
+more than once.
+2. The inverse of the distance n^ = 1/djj, called visibility. Visibility is based on
+strictly local information and represents the heuristic desirability of choosing
+city j when in city i. Visibility can be used to direct ants' search, although
+a constructive method based on its sole use would produce very low quality
+solutions. The heuristic information is static, that is, it is not changed during
+problem solution.
+3. The amount of virtual pheromone trail Ty(i) on the edge connects city i to city
+j. Pheromone trail is updated on-line and is intended to represent the learned
+desirability of choosing city j when in city i. As opposed to distance, a pheromone
+trail is a more global type of information. The pheromone trail information
+is changed during problem solution to reflect the experience acquired by ants
+during problem solving.
+The transition rule, that is, the probability for ant k to go from city i to city j while
+building its tth tour is called random proportional transition rule and is given by:
+
+
+===== PAGE 56 =====
+Chapter 2 43
+4The values of all the parameters as used in the experiments are given in the algorithms.
+5The nearest-neighbor heuristic builds a solution starting from a randomly selected city and
+repeatedly selecting as the next city the nearest one among those not yet visited.
+if j € J,fc, and 0 if j ^ Jf, where a and /? are two adjustable parameters4 that
+control the relative weight of trail intensity, Tij(t), and visibility, 77^. If a = 0, the
+closest cities are more likely to be selected: this corresponds to a classical stochastic
+greedy algorithm (with multiple starting points since ants are initially randomly
+distributed on the nodes). If, on the contrary, 0 = 0, only pheromone amplification
+is at work: this method will lead to the rapid selection of tours that may not be
+optimal. A tradeoff between tour length and trail intensity therefore appears to
+be necessary. It is important to note that, although the form of Eq. (2.6) remains
+constant during an iteration, the value of the probability p^-(i) can be different for
+two ants on the same city i, since p^j(t) is a function of J*, that is, of the partial
+solution built by ant k.
+After the completion of a tour, each ant k lays a quantity of pheromone Ar*j. (t)
+on each edge (i,j) that it has used; the value Art*(i) depends on how well the ant
+has performed. At iteration t (the iteration counter is incremented by 1 when all
+ants have completed a tour), ant k lays Ar^(t) on edge (i,j):
+where Tk(i) is the tour done by ant k at iteration t, Lk(t) is its length, and Q
+is a parameter (although the value of Q only weakly influences the final result, it
+should be set so that it has a value of the same order of magnitude as that of the
+optimal tour length, for example, found running a simple constructive heuristic like
+the nearest neighbor heuristic5).
+This method could not perform well without pheromone decay: in effect, it
+would lead to the amplification of the initial random fluctuations, which very prob-
+ably would not be optimal. In order to ensure efficient solution space exploration,
+trail intensity must be allowed to decay, otherwise all ants will end up doing the
+same tour (stagnation): because of the additivity of trail intensity, the probabilities
+of transitions between cities would be dominated by the pheromone term. Trail de-
+cay is implemented by introducing a coefficient of decay p,0 < p < 1. The resulting
+pheromone update rule, which is applied to all edges, is then:
+where Arj.,-(t) = X^fcLi Ar^i), ancl m ig the number of ants. The initial amount of
+pheromone on edges is assumed to be a small positive constant TO (that is, there is
+an homogeneous distribution of pheromone at time t = 0).
+The total number of ants m, assumed constant over time, is an important
+parameter: too many ants would quickly reinforce suboptimal trails and lead to
+early convergence to bad solutions, whereas too few ants would not produce the
+
+
+===== PAGE 57 =====
+44 Swarm Intelligence
+expected synergistic effects of cooperation because of the (otherwise necessary)
+process of pheromone decay. Dorigo et al. [109] suggest that to set m = n, that is,
+using as many ants as there are cities in the problem, provides a good tradeoff. At
+the beginning of each tour, ants are either placed randomly on the nodes (cities), or
+one ant is placed on each city (no significant difference in performance was observed
+between the two choices).
+Dorigo et al. [109], in an effort to improve AS performance, also introduced
+"elitist ants" (the term "elitist ant" was chosen due to its similarity with the elitist
+strategy used in genetic algorithms [171]). An elitist ant is an ant which reinforces
+the edges belonging to T+, the best tour found from the beginning of the trial, by
+a quantity Q/L+, where L+ is the length of T+.
+At every iteration e elitist ants are added to the usual ants so that the edges
+belonging to T+ get an extra reinforcement e-Q/L+. The idea is that the pheromone
+trail of T+, so reinforced, will direct the search of all the other ants in probability
+toward a solution composed of some edges of the best tour itself. Experiments have
+shown that a small number of elitist ants can improve the algorithm's performance.
+Algorithm 2.1 reports a high-level description of the AS-TSP algorithm, to-
+gether with parameter values as set by Dorigo et al. [107, 109] in their experiments.
+The time complexity of AS is O(t • n'2 • m), where t is the number of iterations
+dene. lf. m = n. that is, if the number of ants is equal to the number of cities, the
+time complexity becomes O(t • n3).
+Ant System has been compared with other general purpose heuristics on some
+relatively small traveling salesman problems (these were problems ranging from 30
+to 70 cities). The results [109] were very interesting and disappointing at the same
+time. AS-TSP6 was able to find and improve the best solution found by a genetic
+algorithm for OliverSO [327], a 30-city problem, and it had a performance similar to
+or better than that of the general purpose heuristics with which it was compared
+(see Table 2.1). Unfortunately, for problems of growing dimensions (e.g., EilonSO
+and Eilon75 [119], see also TSPLIB, a library of traveling salesman problems at:
+http:// www.iwr.uni-heidelberg.de/ iwr/ comopt/ soft/ TSPLIB95/ TSPLIB.html),
+AS-TSP never reached the best known solutions within a number of iterations
+bounded by tmax = 3,000, although it exhibited quick convergence to good solu-
+tions. Also, its performance level was much lower than that of specialized algorithms
+for the TSP. The problem here was that all general purpose heuristics are out-
+performed by specialized algorithms. Current wisdom says that high-performance
+heuristic algorithms for the TSP, as well as for many other combinatorial problems,
+must couple good generators of initial solutions with rapid local optimizers [191].
+We will see in the next section that an improved version of Ant System augmented
+with a simple local search reaches outstanding performance.
+6Because Ant System (AS) has been used to attack different problems, we will often add a
+suffix, such as AS-TSP, to make clear to which problem AS was applied.
+
+
+===== PAGE 58 =====
+Chapter 2 45
+Algorithm 2.1 High-level description of AS-TSP
+/* Initialization */
+For every edge (i,j) do
+r«(0)=7io
+End For
+For k = 1 to m do
+Place ant fc on a randomly chosen city
+End For
+Let T+ be the shortest tour found from beginning and L+ its length
+/* Main loop */
+For t = 1 to imax do
+For fc = 1 to m do
+Build tour Tk(t) by applying n — 1 times the following step:
+Choose the next city j with probability
+where i is the current city
+End For
+For A; = 1 to m do
+Compute the length Lk(t) of the tour Tk(t) produced by ant fc
+End For
+If an improved tour is found then
+update T+ and L+
+End If
+For every edge (i,j) do
+Update pheromone trails by applying the rule:
+*v(0 <-(!-*>)• Tij(t) + Ary(«) + e • Ar=.(t) where
+End For
+For every edge (i,j) do
+r^(i+l) = ry(i)
+End For
+End For
+Print the shortest tour T+ and its length L+
+Stop
+/* Values of parameters used in experiments */
+Q= l,/3 = 5,p = 0.5,m = n,Q= 100, TO = 10~6,e = 5
+and
+
+
+===== PAGE 59 =====
+46 Swarm Intelligence
+TABLE 2.1 Comparison of the average best solution generated by Ant System (AS-TSP),
+tabu search (TS) and simulated annealing (SA). TS is a class of procedures in which a set of
+solutions recently obtained by the algorithm is kept in memory so as to restrict local choices
+by preventing some moves to neighboring solutions [150, 151, 168]. SA is a physics-inspired
+local search method in which a slowly decreasing temperature-like parameter determines a
+contraction of the search step until the system reaches a state of minimum energy [1, 199].
+Each algorithm was given one hour of computing time on an IBM-compatible PC with an
+80386 processor. Averages are over 10 runs. Distances between cities are computed using
+integer numbers. Test problem: OliverSO. From Dorigo et al. [109].
+AS-TSP
+TS
+SA
+Best tour
+420
+420
+422
+Average
+420.4
+420.6
+459.8
+Std. Dev.
+1.3
+1.5
+25.1
+Dorigo et al. [109] also ran a number of experiments aimed at understanding
+the way AS functions. Among others, a set of experiments showed that the popu-
+lation of solutions generated by AS does not converge to a single common solution.
+On the contrary, the algorithm continues to produce new, possibly improving, solu-
+tions. Figure 2.12 shows the evolution of the best tour length in these experiments,
+Figure 2.13 the evolution of the population standard deviation, and Figure 2.14
+the evolution of the average node branching number. (The branching number of a
+node is the number of edges that exit from the node, the pheromone concentration
+of which exceeds a small threshold.) It is clear that, although the best solution
+produced by AS converges toward the optimal solution within 500 iterations, the
+population maintains a high diversity, as shown by the relatively high standard de-
+viation value and by the fact that the average branching number has a value greater
+than 5 after 3,000 iterations. If all generated solutions were identical, the average
+branching number would quickly drop to 2. This "nonconvergence" property of the
+population of solutions is interesting because:
+1. It tends to avoid the algorithm getting trapped in local optima.
+2. It makes AS promising for applications to dynamical problems, that is, problems
+the characteristics of which change at run time.
+2.3.2 ANT COLONY SYSTEM (ACS)
+The Ant Colony System (ACS) algorithm has been introduced by Dorigo and Gam-
+bardella [111, 112] to improve the performance of Ant System, that was able to
+find good solutions within a reasonable time only for small size problems. ACS is
+based on four modifications of Ant System: a different transition rule, a different
+
+
+===== PAGE 60 =====
+Chapter 2 47
+FIGURE 2.12 Evolution of best tour length (Test problem: OliverSO). Typical run. After
+Dorigo et al. [109]. Reprinted by permission © IEEE Press.
+pheromone trail update rule, the use of local updates of pheromone trail to favor
+exploration, and the use of a candidate list to restrict the choice of the next city to
+visit. These are described in the following.
+Transition rule. The transition rule is modified to allow explicitly for exploration.
+An ant k on city i chooses the city j to move to following the rule:
+where q is a random variable uniformly distributed over [0,1], go is a tunable pa-
+rameter (0 < go < 1), and J 6 Jf is a city that is randomly selected according to
+probability
+which is very similar to the transition probability used by Ant System (see Eq. (2.6)).
+We see therefore that the ACS transition rule is identical to Ant System's when
+q > qo, and is different when q < qo- More precisely, q < qo corresponds to an
+exploitation of the knowledge available about the problem, that is, the heuristic
+knowledge about distances between cities and the learned knowledge memorized
+in the form of pheromone trails, whereas q > qo favors more exploration. Cutting
+exploration by tuning #0 allows the activity of the system to concentrate on the
+best solutions instead of letting it explore constantly. It is clear that tuning qo is
+similar to tuning temperature in simulated annealing: when go is close to 1, only
+the locally optimal solution is selected (but a combination of locally optimal solu-
+tions may not result in a globally optimal solution), whereas when qo is close to 0,
+
+
+===== PAGE 61 =====
+48 Swarm Intelligence
+FIGURE 2.13 Evolution of the standard deviation of the population's tour lengths (Test
+problem: OliverSO). Typical run. After Dorigo et al. [109]. Reprinted by permission ©
+IEEE Press.
+FIGURE 2.14 Evolution of the average node branching of the problem's graph (Test
+problem: OliverSO). Typical run. After Dorigo et al. [109]. Reprinted by permission ©
+IEEE Press.
+all local solutions are examined, although a larger weight is given to locally optimal
+solutions (unlike simulated annealing, where all states have similar weights at high
+temperature). It is therefore possible in principle to progressively freeze the system
+by tuning go from 0 to 1, in order to favor exploration in the initial part of the
+algorithm and then favor exploitation. This possibility has not been explored yet.
+Pheromone trail update rule. In Ant System all ants are allowed to deposit pheromone
+after completing their tours. By contrast, in ACS only the ant that generated the
+best tour since the beginning of the trial is allowed to globally update the concen-
+trations of pheromone on the branches. The ants therefore are encouraged to search
+Average node branching
+Tour length
+standard deviation
+
+
+===== PAGE 62 =====
+Chapter 2 49
+7Gambardella and Dorigo [138] and Dorigo and Gambardella [110] also tested a variant of
+ACS in which the local update rule was inspired by Q-learning [323], but, despite the increased
+amount of computation, this did not produce significantly better results than using the fixed value
+TO-
+for paths in the vicinity of the best tour found so far. In other words, exploration is
+more directed. Another difference is that in Ant System the pheromone trail updat-
+ing rule was applied to all edges, while in ACS the global pheromone trail updating
+rule is applied only to the edges belonging to the best tour since the beginning of
+the trial. The updating rule is:
+where (i, j)'s are the edges belonging to T+, the best tour since the beginning of
+the trial, p is a parameter governing pheromone decay, and
+where L+ is the length of T+. We see that this procedure allows only the best tour
+to be reinforced by a global update. Local updates are however also performed, so
+that other solutions can emerge.
+Local updates of pheromone trail. The local update is performed as follows: when,
+while performing a tour, ant k is in city i and selects city j € Jf, the pheromone
+concentration of (i,j) is updated by the following formula:
+The value TO is the same as the initial value of pheromone trails and it was experi-
+mentally found that setting TO = (n • Lnn)~~l, where n is the number of cities and
+Lnn is the length of a tour produced by the nearest neighbor heuristic, produces
+good results.7
+When an ant visits an edge, the application of the local update rule makes the
+edge pheromone level diminish. This has the effect of making the visited edges less
+and less attractive as they are visited by ants, indirectly favoring the exploration
+of not yet visited edges. As a consequence, ants tend not to converge to a common
+path. This fact, which was observed experimentally, is a desirable property given
+that if ants explore different paths then there is a higher probability that one of them
+will find an improved solution than there is in the case that they all converge to the
+same tour (which would make the use of m ants pointless). In other words, the role
+of the ACS local updating rule is to shuffle the tours, so that the early cities in one
+ant's tour may be explored later in other ants' tours. The effect of local-updating
+is, therefore, to make the learned desirability of edges change dynamically: every
+time an ant uses an edge this becomes slightly less desirable (since it loses some of
+its pheromone). In this way ants will make better use of pheromone information:
+without local updating all ants would search in a narrow neighborhood of the best
+previous tour.
+
+
+===== PAGE 63 =====
+50 Swarm Intelligence
+Use of a candidate list. ACS exploits a candidate list, that is, a data structure
+commonly used when trying to solve large TSP instances. A candidate list is a
+list of preferred cities to be visited from a given city: instead of examining all the
+possibilities from any given city, unvisited cities in the candidate list are examined
+first, and only when all cities in the candidate list have been visited are other
+cities examined. The candidate list of a city contains d cities (cl being a parameter
+of the algorithm), which are the cl closest cities. Cities in the candidate list are
+ordered by increasing distance, and the list is scanned sequentially. ACS-TSP with
+candidate list works as follows: an ant first restricts the choice of the next city to
+those in the list, and considers the other cities only if all the cities in the list have
+already been visited. If there are cities in the candidate list, then the next city j is
+chosen according to Eqs. (2.9) and (2.10). Otherwise j is set to the closest of the
+yet unvisited cities.
+Algorithm 2.2 reports a high-level description of ACS-TSP, the ACS algorithm
+applied to the TSP.
+ACS-TSP was tested on problems of various sizes and compared with other al-
+gorithms, such as the elastic net algorithm (EN) [117], self-organizing maps (SOM),
+and simulated annealing (SA) [262], genetic algorithms (GA) [20, 327], and evolu-
+tionary programming (EP) [125]. Table 2.2 gives a comparison of results (average
+tour length over 25 runs) obtained by ACS-TSP on randomly generated sets of
+symmetric 50-city problems with those obtained by SA, EN, and SOM. ACS-TSP
+was run for 2500 iterations with 10 ants, which leads to approximately the same
+number of tours being generated by every algorithm. It can be seen that ACS-TSP
+produces the best results in most cases.
+Table 2.3 shows a comparison of results obtained with ACS-TSP with those
+obtained with GA, EP, and SA on a set of geometric problems (geometric problems
+are problems taken from the real world, like finding the shortest tour that visits
+all the European Union states capitals). ACS-TSP was run for 1250 iterations with
+20 ants, which, again, leads to approximately the same number of tours being
+generated by every algorithm.
+In order to apply ACS-TSP to larger problems, Dorigo and Gambardella [111]
+introduced a local search procedure to be performed in combination with ACS. This
+means combining ACS with a procedure used for iteratively improving a solution.
+In the case of the TSP, the most widespread local search procedures are 2-opt and
+3-opt [220], and Lin-Kernighan (LK) [221], whereby two, three, and a variable
+number of edges are exchanged iteratively until a local minumum is reached. Dorigo
+and Gambardella [111] used 3-opt, because 3-opt can be used for both symmetric
+and asymmetric instances of TSP. They resorted to a variant of 3-opt, a restricted
+3 -opt procedure, in which only 3-opt moves that do not revert the order in which the
+cities are visited are applied: this amounts to changing three edges (k, I}, (p, q), and
+(r, s) into three other edges (k,q), (p, s), and (r, I) while maintaining the orientations
+of all other subtours. This 3-opt procedure avoids unpredictable tour length changes
+due to the inversion of a subtour.
+
+
+===== PAGE 64 =====
+Chapter 2 51
+Algorithm 2.2 High-level description of ACS-TSP
+/* Initialization */
+For every edge (i,j) do
+Tij(O) = TO
+End For
+For k = 1 to m do
+Place ant fc on a randomly chosen city
+End For
+Let T+ be the shortest tour found from beginning and L+ its length
+/* Main loop */
+For t = 1 to tmax do
+For k = 1 to m do
+Build tour Tk(t) by applying n — 1 times the following steps:
+If exists at least one city j £ candidate list then
+Choose the next city j, j £ Jk, among the cl cities in the candidate list as follows
+where J £ Jk is chosen according to the probability:
+and where i is the current city
+Else
+choose the closest j £ Jk
+End If
+After each transition ant k applies the local update rule:
+TijW +- (\ - p) • Tij(t) + p • TQ
+End For
+For k = 1 to m do
+Compute the length Lk(t) of the tour Tk(t) produced by ant k
+End For
+If an improved tour is found then
+update T+ and L+
+End If
+For every edge (i,f) 6 T+ do
+Update pheromone trails by applying the rule:
+Tij(t) +-(l-p)- Tij(t) + p • &Tij(t) where Ar^(i) = 1/L+
+End For
+For every edge (i,j) do
+ry(t + l) = ry(*)
+End For
+End For
+Print the shortest tour T+ and its length L+
+Stop
+/* Values of parameters used in experiments */
+/? = 2,p = 0.1, q0 = 0.9, m = 10, TO = (n • Lnn)~l,d = 15
+
+
+===== PAGE 65 =====
+52 Swarm Intelligence
+TABLE 2.2 Comparison of ACS-TSP with other algorithms on randomly generated prob-
+lems. Results for EN are from Durbin and Willshaw [117] and results for SA and SOM are
+from Potvin [262]. For ACS-TSP, averages are over 25 runs. Best results are in boldface.
+From Dorigo and Gambardella [111].
+ACS-TSP
+City set
+(50-city
+City set
+(50-city
+City set
+(50-city
+City set
+(50-city
+City set
+(50-city
+1
+problem)
+2
+problem)
+3
+problem)
+4
+problem)
+5
+problem)
+5.
+6.
+5.
+5.
+6.
+88
+05
+58
+74
+18
+SA
+5.
+6.
+5.
+5.
+6.
+88
+01
+65
+81
+33
+EN
+5
+6
+5
+5
+6
+.98
+.03
+.70
+.86
+.49
+SOM
+6
+6
+5,
+5
+6
+.06
+.25
+.83
+.87
+.70
+TABLE 2.3 Comparison of ACS-TSP with GA, EP, and SA on four test
+problems (available at TSPLIB: http://www..iwr.uni-heidelberg.de/iwr/comopt/soft/
+TSPLIB95/TSPLIB.html). Results for ACS-TSP are from Dorigo and Gambardella [111].
+ACS-TSP is run for 1250 iterations using 20 ants, which amounts to approximately the
+same number of tours searched by the other heuristics; averages are over 15 runs. Results
+for GA are from Bersini et al. [20] for the KroAlOO problem, and from Whitley et al. [327]
+for the Oliver30, EilSO and Eil75 problem; results for EP are from Fogel [125]; and results
+for SA from Lin et al. [222], For each algorithm results are given in two columns: the first
+one gives the best integer tour length (that is, the tour length obtained when distances
+among cities are given as integer numbers), and, in parenthesis, the best real tour length
+(that is, the tour length obtained when distances among cities are given as real numbers);
+the second one gives the number of tours that were generated before the best integer tour
+length was discovered. Best results are in boldface. (N/A: Not available.)
+Eil50
+(50-city
+problem)
+E1175
+(75-city
+problem)
+KroAlOO
+(100-city
+problem)
+ACS-TSP
+best
+425
+(427.96)
+535
+(542.37)
+21282
+(21285.44)
+ACS-TSP
+# iter.
+1830
+3480
+4820
+GA
+best
+428
+(N/A)
+545
+(N/A)
+21761
+(N/A)
+GA
+# iter.
+25000
+80000
+103000
+EP
+best
+426
+(427.86)
+542
+(549.18)
+N/A
+(N/A)
+EP
+# iter.
+100000
+325000
+N/A
+SA
+best
+443
+(N/A)
+580
+(N/A)
+N/A
+(N/A)
+SA
+# iter.
+68512
+173250
+N/A
+
+
+===== PAGE 66 =====
+Chapter 2 53
+Algorithm 2.3 The local optimization step in ACS-3-opt
+For k — 1 to m do
+Tk(t) +- 3-opt (Tk(t}) {apply the local optimizer to each Tk(t)}
+End For
+/* Values of parameters used in experiments */
+/3 = 2,p = 0.l,q0 = 0.98,m= 10,r0 = (n • Lnn)'1 ,cl = 20
+TABLE 2.4 Comparison of results, over 10 runs, obtained by ACS-3-opt (the results are
+from Dorigo and Gambardella [111]) on symmetric TSP problems of various sizes with
+those obtained by the genetic algorithm (STSP—the results are the best between those
+published by Freisleben and Merz [133, 134]) which won the First International Contest
+on Evolutionary Optimization [21]. Best results are in boldface.
+d!98
+(198-city problem)
+Iin318
+(318-city problem)
+att532
+(532-city problem)
+rat 783
+(783-city problem)
+ACS-3-opt
+best
+15780
+42029
+27693
+8818
+ACS-3-opt
+average
+15781.7
+42029
+27718.2
+8837.9
+STSP
+best
+15780
+42029
+27686
+8806
+STSP
+average
+15780
+42029
+27693.7
+8807.3
+The ACS algorithm with restricted 3-opt procedure, ACS-3-opt, is the same as
+ACS except for the fact that the tour Tk(t) produced by each ant k is taken to
+its local optimum. The "for cycle" reported in Algorithm 2.3 is applied at every
+iteration of the algorithm, after each ant k has completed the construction of its
+tour Tk(t) and before the best tour T+ and its length L+ are updated. Note that, as
+indicated in Algorithm 2.3, some algorithm parameters were set to different values
+from those used in ACS.
+Table 2.4 shows results of simulations of ACS-3-opt (with candidate list) per-
+formed on symmetric problems, compared with results obtained by the genetic
+algorithm (STSP) [133, 134] that won the First International Contest on Evolu-
+tionary Optimization [21]. Table 2.5 shows results obtained on asymmetric TSP
+instances. The performance of the two algorithms is similar, with the genetic algo-
+rithm having a slightly better performance on symmetric problems and ACS-3-opt
+on the asymmetric ones. Note that in both cases the genetic algorithm operators
+were finely tuned to the TSP application and that a local optimizer took the solu-
+tions generated by the GA to the local optimum.
+
+
+===== PAGE 67 =====
+54 Swarm Intelligence
+TABLE 2.5 Comparison of results, over 10 runs, obtained by ACS-3-opt (the results
+are from Dorigo and Gambardella [111]) on asymmetric TSP problems of various sizes
+with those obtained by the genetic algorithm (ATSP—the results are from Freisleben and
+Merz [133, 134]) which won the First International Contest on Evolutionary Optimiza-
+tion [21]. Best results are in boldface.
+p43
+(43-city problem)
+ry48p
+(48-city problem)
+ft70
+(70-city problem)
+kro!24p
+(124-city problem)
+ftvlTO
+(1 70-city problem)
+ACS-3-opt
+best
+2810
+14422
+38673
+36230
+2755
+ACS-3-opt
+average
+2810
+14422
+38679.8
+36230
+2755
+ATSP
+best
+2810
+14422
+38673
+36230
+2755
+ATSP
+average
+2810
+14440
+38683.8
+36235.3
+2766.1
+As further, not implemented improvements of ACS, Dorigo and Gambardella [111]
+suggest the following possible additions:
+1. Allow the two best ants (or more generally, the best r ants) to update the
+pheromone trail, instead of using a single ant. This should make the probability
+of getting trapped in local minima smaller.
+2. Remove pheromone from edges that belong to the worst tours. Giving negative
+reinforcement to bad tours should increase the convergence speed toward good
+solutions.
+3. Use a more powerful local search procedure.
+Finally, the "nonconvergence" property of AS (see section 2.3.1), which is com-
+mon to many swarm-based systems, can also be observed in ACS. As an exam-
+ple, Figure 2.15 shows that the pheromone level on different edges of a problem
+graph can greatly differ. The level of pheromone for a run of ACS is represented
+by line thickness in Figure 2.15(a). Some edges are strongly marked, while others
+are weakly marked. Strongly marked edges are most likely to be part of the best
+solution found by the system. However, more weakly marked edges point to po-
+tential "alternative" solutions. The continued availability of these weakly marked
+edges helps ACS maintain a diverse population of solutions, thereby avoiding con-
+vergence to a single solution. That is a nice and desirable property because it can
+help avoid getting trapped in local optima. But there is more: imagine for example
+that the problem, instead of being static, is dynamic with nodes and/or edges being
+
+
+===== PAGE 68 =====
+Chapter 2 55
+FIGURE 2.15 (a) An example of a trail configuration found by ACS in a 50-city problem
+(Eil50). Line thickness reflects pheromone concentration, (b) Best solution found by ants.
+dynamically added to, or removed from, the graph. In this case, the trail configu-
+ration provides a set of alternative pathways which can be used to quickly produce
+a new solution. Although this type of problem would need to be more precisely
+formulated by allowing for the design of dynamic benchmark problems, we believe
+it is on dynamic problems that swarm-based algorithms might exhibit particularly
+good performance. This latter conjecture remains to be confirmed.
+2.3.3 OTHER METHODS BASED ON AS OR ACS
+Several suggestions have been made to modify the original AS algorithm in order
+to improve the quality of its solutions, but not necessarily its convergence time.
+Stiitzle and Hoos [298, 299] have introduced Max-Min AS (hereafter MMAS),
+which is basically similar to AS, but (i) only one ant (the best in the current
+iteration) is allowed to update pheromone trails, (ii) pheromone trail values are
+restricted to an interval [rmin, rmax], and (iii) trails are initialized to their maximum
+value rmax. Putting a bound, rmax, on the maximum value a pheromone trail can
+have avoids some edges being reinforced to the point where it is impossible to
+make a path without them. This helps to avoid stagnation, which was one of the
+reasons why AS performed poorly (in terms of solution quality) on large problems.
+Stiitzle and Hoos [298, 299] have also added what they called a "trail smoothing
+mechanism" to further avoid stagnation. They implement this mechanism through
+a proportional update mechanism: Ar^(i) ex (rmax — Tjj-(t)). In this way stronger
+pheromone trails are proportionally less reinforced than weaker ones, a procedure
+that obviously favors the exploration of new paths. They found that, when applied
+to the TSP, MMAS finds significantly better tours than AS, but comparable to
+those obtained with ACS. Stiitzle and Hoos [298, 299] have also proposed adding a
+
+
+===== PAGE 69 =====
+56 Swarm Intelligence
+local search procedure (2-opt or 3-opt for ATSP) to their system, in a way similar
+to Dorigo and Gambardella [111].
+Bullnheimer et al. [49] proposed yet another modification of AS, called AS-
+rank. Their modification is based on (i) using elitist ants, as was done in Dorigo
+et al. [109] (see also section 2.3.1), and (ii) ranking the m ants by tour length
+(L1 (t), L2(t),... ,Lm(t)) and making ants update the edges with a quantity of
+pheromone proportional to their rank. They used a elitist ants, and only the best
+a — 1 ants were allowed to deposit a pheromone trail. The weight of a given ant's
+update was set to max{0, u — /j,}, where /j, is the ant's rank; in this way no ant could
+give a contribution higher than that given by the elitist ants.
+The dynamics of the amount of pheromone Tij(t) on edge (i,j) is given by:
+where Ar^(i) = Q/L+(t), L+ being, as usual, the length of the best solution from
+trial beginning, and Arr.(*) = ££l| AT£.(*), AT£(<) = (<7-/i)-Q/L"(t) if ant /j. uses
+(i,j) and Ar^(i) = 0 otherwise. LM(i) is the length of the tour performed by ant
+p, at iteration t, and Q was set to the value Q = 100. Bullnheimer et al. [49] found
+that this new procedure significantly improves the quality of the results obtained
+with AS, but did not try to compare them with those obtained with ACS.
+2.4 ANT COLONY OPTIMIZATION: THE QUADRATIC
+ASSIGNMENT PROBLEM
+The quadratic assignment problem (QAP) has been introduced by Koopmans and
+Beckman [201] in an economic context. The problem can be stated as follows.
+Consider a set of n activities that have to be assigned to n locations (or vice versa).
+A matrix D = [dy]n>n gives distances between locations, where dy- is the Euclidean
+distance between location i and location j, and a matrix F = [fhk]n,n characterizes
+flows among activities (transfers of data, material, humans, etc.), where fhk is
+the flow between activity h and activity k. An assignment is a permutation TT of
+{!,... ,n}, where n(i) is the activity that is assigned to location i. The problem
+is to find a permutation 7rm such that the product of the flows among activities
+be minimized by the distances between their locations. Formally, the QAP can
+be formulated as the problem of finding the permutation ?r which minimizes the
+following objective function:
+The optimal permutation Tropt is defined by
+
+
+===== PAGE 70 =====
+Chapter 2 57
+where H(n) is the set of all permutations of {1,..., n}.
+The QAP has been shown to be NP-hard [279], and the problem rapidly be-
+comes intractable with growing instance size. Heuristics have, therefore, been de-
+veloped to find good solutions in a reasonably short computation time. In the
+following sections we will illustrate how this problem can be attacked by ant colony
+optimization algorithms.
+2.4.1 ANT SYSTEM FOR THE QAP
+AS-QAP, the first application of an ant colony algorithm to the QAP, was proposed
+by Maniezzo et al. [233]. In their application of ant colony optimization to the QAP,
+the graph representation is similar to the one used in the TSP case: the nodes of
+the graph are locations, and the ants' goal is to visit all the locations and to couple
+one activity with each location. The pheromone trail Ty-, which in the QAP case
+represents the learned desirability of setting ir(i) = j in the solution, is deposited
+on edges and used to build solutions as in AS-TSP. Also the constraint satisfaction
+method is very similar to the one used for the TSP: while building a permutation,
+ants memorize the activities still to be assigned and the locations which have already
+been assigned an activity.
+The only tricky point was then to devise a heuristic that allows a constructive
+definition of the solutions. This was done as follows. Consider the vectors d and /
+called distance potentials and flow potentials. Each of these vectors is obtained by
+summing the elements of each line of the two matrices of distances D and of flows
+F:
+The potential values indicate, respectively, the sum of the distances between a
+particular node and all the others, and the total flow exchanged between an activity
+and all the others. The lower the value d, (distance potential) of the ith node, the
+more this node is barycentric in the network; the higher the value //, (flow potential)
+of activity h, the more important this activity is in the system of flows exchanged.
+As an example, consider a randomly generated problem of order 4 characterized
+by the following matrices D andF:

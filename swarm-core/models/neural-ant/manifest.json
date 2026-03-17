@@ -1,0 +1,19 @@
+{
+  "enabled": false,
+  "version": "1.0.0-alpha",
+  "modelFile": "neural_ant_v1.onnx",
+  "inputDim": 51,
+  "hiddenSize": 64,
+  "inputName": "observation",
+  "hiddenInputName": "hidden_state",
+  "outputNames": {
+    "movement": "movement_logits",
+    "pheromone": "pheromone_values",
+    "communication": "communication_values",
+    "mode": "mode_logits",
+    "hiddenState": "new_hidden_state"
+  },
+  "movementActions": 8,
+  "modeActions": 4,
+  "description": "GRU-based neural ant model for fully autonomous agent behavior"
+}

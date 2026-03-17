@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.js.map
+.DS_Store
+
+# Firebase service account keys — NEVER commit these
+*-adminsdk-*.json
+*-firebase-adminsdk-*.json
+service-account*.json

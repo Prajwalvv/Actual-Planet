@@ -1,0 +1,10 @@
+{
+  "actions": [
+    "link_pathfinder",
+    "news_reader",
+    "forum_thread_reader",
+    "docs_reader",
+    "paper_abstract_reader",
+    "stop_explore"
+  ]
+}

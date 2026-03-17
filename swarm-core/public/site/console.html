@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Console — Rylvo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ─── LAYOUT ─────────────────────────────── */
+.console-layout{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+.console-sidebar{background:var(--bg);padding:24px 16px;border-right:1px solid var(--border);display:flex;flex-direction:column}
+.console-sidebar .sidebar-logo{font-family:var(--mono);font-size:14px;font-weight:700;letter-spacing:1.5px;color:var(--accent2);padding:8px 10px;margin-bottom:28px;display:flex;align-items:center;gap:8px;justify-content:center}
+.sidebar-nav{flex:1}
+.sidebar-nav a{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text2);padding:9px 12px;border-radius:8px;margin-bottom:2px;transition:all .15s}
+.sidebar-nav a:hover{color:var(--text);background:var(--surface2)}
+.sidebar-nav a.active{color:var(--text);background:var(--accentBg)}
+.sidebar-nav a svg{width:16px;height:16px;opacity:.5;flex-shrink:0}
+.sidebar-nav a.active svg{opacity:1;color:var(--accent2)}
+.sidebar-divider{height:1px;background:var(--border);margin:14px 8px}
+.sidebar-plan{padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-top:auto}
+.sidebar-plan .plan-label{font-size:.6rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:4px}
+.sidebar-plan .plan-name{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--accent2)}
+.sidebar-plan .plan-credits{font-size:.72rem;color:var(--text3);margin-top:4px}
+
+/* ─── MAIN CONTENT ───────────────────────── */
+.console-main{background:var(--bg1);padding:32px 40px;overflow-y:auto;max-height:100vh}
+.console-header{margin-bottom:28px}
+.console-header h1{font-size:1.4rem;font-weight:700;margin-bottom:2px}
+.console-header p{font-size:.85rem;color:var(--text3)}
+
+/* ─── OVERVIEW CARDS ─────────────────────── */
+.overview-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.overview-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px}
+.overview-card .oc-label{font-size:.65rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:8px}
+.overview-card .oc-value{font-family:var(--mono);font-size:1.6rem;font-weight:800;line-height:1}
+.overview-card .oc-sub{font-size:.72rem;color:var(--text3);margin-top:6px}
+.oc-value.green{color:var(--green)}
+.oc-value.accent{color:var(--accent2)}
+.oc-value.muted{color:var(--text3)}
+
+/* ─── USAGE BAR ──────────────────────────── */
+.usage-bar-wrap{background:var(--bg2);border-radius:8px;height:8px;overflow:hidden;margin:10px 0 6px}
+.usage-bar{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .6s ease}
+.usage-labels{display:flex;justify-content:space-between;font-size:.72rem;color:var(--text3);font-family:var(--mono)}
+
+/* ─── API KEYS ───────────────────────────── */
+.key-row{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px}
+.key-row .key-name{font-size:.85rem;font-weight:600;min-width:100px}
+.key-row .key-value{font-family:var(--mono);font-size:.8rem;color:var(--text3);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:.5px}
+.key-row .key-created{font-size:.72rem;color:var(--text3);min-width:100px;text-align:right}
+.key-actions{display:flex;gap:6px}
+.key-actions button{font-family:var(--mono);font-size:.68rem;padding:4px 10px;border-radius:4px;border:1px solid var(--border2);background:var(--bg2);color:var(--text2);cursor:pointer;transition:all .15s}
+.key-actions button:hover{background:var(--bg3);color:var(--text);border-color:var(--accent)}
+.key-actions button.danger:hover{border-color:var(--red);color:var(--red)}
+
+/* ─── TABLES ─────────────────────────────── */
+.calls-table{width:100%;border-collapse:collapse;margin-top:8px}
+.calls-table th{text-align:left;font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:var(--text3);padding:8px 12px;border-bottom:1px solid var(--border)}
+.calls-table td{padding:10px 12px;border-bottom:1px solid var(--border);font-size:.8rem;font-family:var(--mono);color:var(--text2)}
+.calls-table tr:hover td{background:var(--surface2)}
+.method-badge{font-size:.62rem;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase}
+.method-badge.post{background:rgba(99,102,241,.1);color:var(--accent2)}
+.method-badge.get{background:rgba(34,197,94,.1);color:var(--green)}
+.status-dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:6px}
+.status-dot.ok{background:var(--green)}
+.status-dot.err{background:var(--red)}
+
+/* ─── CHART ──────────────────────────────── */
+.chart-wrap{position:relative;min-height:140px}
+.chart{display:flex;align-items:flex-end;gap:4px;height:120px;padding:0 4px;margin:16px 0 6px}
+.chart-bar{flex:1;border-radius:3px 3px 0 0;transition:height .4s ease;min-width:0;min-height:2px}
+.chart-bar.has-data{background:linear-gradient(180deg,var(--accent2),var(--accent))}
+.chart-bar.no-data{background:var(--bg2)}
+.chart-labels{display:flex;gap:4px;padding:0 4px}
+.chart-labels span{flex:1;text-align:center;font-size:.58rem;color:var(--text3);font-family:var(--mono)}
+
+/* ─── EMPTY STATES ───────────────────────── */
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;color:var(--text3);text-align:center}
+.empty-state svg{width:32px;height:32px;margin-bottom:12px;opacity:.3}
+.empty-state .empty-title{font-size:.85rem;font-weight:600;color:var(--text2);margin-bottom:4px}
+.empty-state .empty-desc{font-size:.78rem;line-height:1.5;max-width:280px}
+
+/* ─── PANELS ─────────────────────────────── */
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.panel-head h3{font-size:.9rem}
+
+/* ─── SETTINGS ───────────────────────────── */
+.settings-section{margin-bottom:28px}
+.settings-section h2{font-size:1rem;font-weight:700;margin-bottom:4px}
+.settings-section p.section-desc{font-size:.78rem;color:var(--text3);margin-bottom:16px;line-height:1.5}
+.settings-grid{display:grid;grid-template-columns:200px 1fr;gap:0;align-items:start}
+.settings-grid .sg-label{font-size:.78rem;font-weight:600;color:var(--text2);padding:10px 0}
+.settings-grid .sg-field{padding:6px 0}
+.settings-input{width:100%;max-width:360px;padding:9px 12px;font-size:.82rem;font-family:var(--sans);border:1px solid var(--border2);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);transition:border-color .15s}
+.settings-input:focus{outline:none;border-color:var(--accent)}
+.settings-input:disabled{opacity:.5;cursor:not-allowed;background:var(--bg2)}
+.settings-input.mono{font-family:var(--mono);font-size:.78rem}
+.settings-hint{font-size:.7rem;color:var(--text3);margin-top:4px;line-height:1.4}
+.settings-avatar{display:flex;align-items:center;gap:16px}
+.settings-avatar .avatar-circle{width:56px;height:56px;border-radius:50%;background:var(--bg2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.settings-avatar .avatar-circle img{width:100%;height:100%;object-fit:cover}
+.settings-avatar .avatar-circle .avatar-initials{font-size:1.2rem;font-weight:700;color:var(--text3)}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border)}
+.toggle-row:last-child{border-bottom:none}
+.toggle-row .toggle-info{flex:1}
+.toggle-row .toggle-label{font-size:.82rem;font-weight:600;color:var(--text)}
+.toggle-row .toggle-desc{font-size:.72rem;color:var(--text3);margin-top:2px}
+.toggle-switch{position:relative;width:40px;height:22px;flex-shrink:0;margin-left:16px}
+.toggle-switch input{opacity:0;width:0;height:0}
+.toggle-switch .slider{position:absolute;cursor:pointer;inset:0;background:var(--bg3);border-radius:22px;transition:.2s}
+.toggle-switch .slider:before{content:"";position:absolute;height:16px;width:16px;left:3px;bottom:3px;background:white;border-radius:50%;transition:.2s}
+.toggle-switch input:checked+.slider{background:var(--accent)}
+.toggle-switch input:checked+.slider:before{transform:translateX(18px)}
+.provider-list{display:flex;flex-wrap:wrap;gap:8px}
+.provider-badge{display:flex;align-items:center;gap:6px;padding:6px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.78rem;color:var(--text2)}
+.provider-badge svg{width:14px;height:14px;opacity:.6}
+.provider-badge.connected{border-color:var(--green);color:var(--green)}
+.provider-badge.connected svg{opacity:1}
+.danger-zone{border:1px solid rgba(220,38,38,.2);border-radius:var(--radius);padding:20px;background:rgba(220,38,38,.02)}
+.danger-zone h3{font-size:.9rem;color:var(--red);margin-bottom:4px}
+.danger-zone p{font-size:.78rem;color:var(--text3);margin-bottom:12px;line-height:1.5}
+.danger-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn-danger{padding:8px 16px;font-size:.78rem;font-weight:600;border:1px solid var(--red);background:transparent;color:var(--red);border-radius:var(--radius-sm);cursor:pointer;transition:all .15s;font-family:var(--sans)}
+.btn-danger:hover{background:var(--red);color:white}
+.btn-save{padding:8px 20px;font-size:.78rem;font-weight:600;border:none;background:var(--accent);color:white;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s;font-family:var(--sans)}
+.btn-save:hover{opacity:.85}
+.btn-save:disabled{opacity:.4;cursor:not-allowed}
+.settings-saved{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;color:var(--green);margin-left:12px;opacity:0;transition:opacity .3s}
+.settings-saved.show{opacity:1}
+.meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.meta-item{padding:12px 16px;background:var(--bg1);border-radius:var(--radius-sm)}
+.meta-item .meta-label{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:4px}
+.meta-item .meta-value{font-family:var(--mono);font-size:.82rem;color:var(--text)}
+
+/* ─── RESPONSIVE ─────────────────────────── */
+@media(max-width:900px){
+  .overview-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .console-layout{grid-template-columns:1fr}
+  .console-sidebar{display:none}
+  .console-main{padding:20px 16px;max-height:none}
+}
+</style>
+</head>
+<body>
+
+<div class="console-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="console-sidebar">
+    <a href="/" class="sidebar-logo">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="2.5" fill="currentColor"/><circle cx="8" cy="10" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="24" cy="10" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="8" cy="22" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="24" cy="22" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="16" cy="6" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="16" cy="26" r="1.8" fill="currentColor" opacity="0.7"/><line x1="16" y1="16" x2="8" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="24" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="8" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="24" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="16" y2="6" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="16" y2="26" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>
+      <span>RYLVO</span>
+    </a>
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-panel="overview">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Overview
+      </a>
+      <a href="#" data-panel="keys">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+        API Keys
+      </a>
+      <a href="#" data-panel="usage">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+        Usage
+      </a>
+      <a href="#" data-panel="logs">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Request Log
+      </a>
+      <a href="#" data-panel="settings">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a>
+      <div class="sidebar-divider"></div>
+      <a href="/admin" id="adminLink" style="display:none;color:var(--red)">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2zm10-10V7a4 4 0 0 0-8 0v4h8z"/></svg>
+        Admin Panel
+      </a>
+      <a href="/docs">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Documentation
+      </a>
+      <a href="/">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Homepage
+      </a>
+      <div class="sidebar-divider"></div>
+      <a href="#" id="btnLogout" style="color:var(--red)">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Log out
+      </a>
+    </nav>
+    <div class="sidebar-plan">
+      <div class="plan-label">Current plan</div>
+      <div class="plan-name" id="sidebar-plan-name">Free</div>
+      <div class="plan-credits" id="sidebar-plan-credits">10,000 / 10,000 credits left</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="console-main">
+
+    <!-- DEBUG BANNER (remove after fixing) -->
+    <div id="debugBanner" style="padding:8px 16px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:8px;margin-bottom:12px;font-size:.75rem;font-family:var(--mono);color:var(--red);display:none"></div>
+
+    <!-- OVERVIEW PANEL -->
+    <div id="panel-overview">
+      <div class="console-header">
+        <h1>Dashboard</h1>
+        <p id="welcomeName">Welcome to your developer console.</p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="oc-label">Credits Used</div>
+          <div class="oc-value accent" id="oc-credits">0</div>
+          <div class="oc-sub" id="oc-credits-sub">of 10,000 this month</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">API Calls</div>
+          <div class="oc-value" id="oc-calls">0</div>
+          <div class="oc-sub">this month</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Avg Latency</div>
+          <div class="oc-value muted" id="oc-latency">N/A</div>
+          <div class="oc-sub" id="oc-latency-sub">no calls yet</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Success Rate</div>
+          <div class="oc-value muted" id="oc-success">N/A</div>
+          <div class="oc-sub" id="oc-success-sub">no calls yet</div>
+        </div>
+      </div>
+
+      <!-- USAGE BAR -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Credit Usage</h3>
+          <span class="badge badge-accent" id="usage-bar-plan">Free Plan</span>
+        </div>
+        <div class="usage-bar-wrap"><div class="usage-bar" id="usage-bar-fill" style="width:0%"></div></div>
+        <div class="usage-labels">
+          <span id="usage-used">0 used</span>
+          <span id="usage-remaining">10,000 remaining</span>
+        </div>
+      </div>
+
+      <!-- DAILY CHART -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Daily Usage (last 14 days)</h3>
+          <span style="font-size:.72rem;color:var(--text3);font-family:var(--mono)">credits</span>
+        </div>
+        <div class="chart-wrap">
+          <div class="chart" id="usageChart"></div>
+          <div class="chart-labels" id="chartLabels"></div>
+        </div>
+      </div>
+
+      <!-- RECENT CALLS -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Recent API Calls</h3>
+          <a href="#" class="btn btn-sm btn-secondary" onclick="showPanel('logs');return false">View all</a>
+        </div>
+        <div id="recentCallsWrap">
+          <div class="empty-state">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+            <div class="empty-title">No API calls yet</div>
+            <div class="empty-desc">Create an API key and make your first request to see activity here.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEYS PANEL -->
+    <div id="panel-keys" style="display:none">
+      <div class="console-header">
+        <h1>API Keys</h1>
+        <p>Manage your API keys. Keep them secret — they grant access to your credits.</p>
+      </div>
+      <div style="margin-bottom:20px">
+        <button class="btn btn-primary btn-sm" onclick="createKey()">+ Create new key</button>
+      </div>
+      <div id="keysContainer">
+        <div class="empty-state">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          <div class="empty-title">No API keys</div>
+          <div class="empty-desc">Create your first API key to start making requests.</div>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)">
+        <h3 style="font-size:.9rem;margin-bottom:8px">How to use</h3>
+        <p style="font-size:.82rem;color:var(--text3);line-height:1.6">Include your API key in the <code style="color:var(--accent2)">Authorization</code> header:</p>
+        <div class="code-block" style="margin-top:8px;padding:12px 16px;font-size:.8rem">Authorization: Bearer sk_live_swr_your_key_here</div>
+      </div>
+    </div>
+
+    <!-- USAGE PANEL -->
+    <div id="panel-usage" style="display:none">
+      <div class="console-header">
+        <h1>Usage & Billing</h1>
+        <p>Track your credit consumption and manage your plan.</p>
+      </div>
+      <div class="overview-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="overview-card">
+          <div class="oc-label">Current Plan</div>
+          <div class="oc-value accent" style="font-size:1.4rem" id="usage-plan-name">Free</div>
+          <div class="oc-sub" id="usage-plan-price">$0/month</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Credits This Cycle</div>
+          <div class="oc-value" style="font-size:1.4rem" id="usage-credits-total">0</div>
+          <div class="oc-sub" id="usage-credits-of">of 10,000 included</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Overage Cost</div>
+          <div class="oc-value green" style="font-size:1.4rem">$0.00</div>
+          <div class="oc-sub">$0.0004 per extra credit</div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:16px">
+        <div class="panel-head">
+          <h3>Credit Breakdown by Model</h3>
+        </div>
+        <table class="calls-table">
+          <thead><tr><th>Model</th><th>Calls</th><th>Credits/Call</th><th>Total Credits</th><th>% of Total</th></tr></thead>
+          <tbody id="modelBreakdown"></tbody>
+        </table>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:16px">
+        <a href="/pricing" class="btn btn-secondary">Change plan</a>
+        <button class="btn btn-ghost" style="color:var(--text3)">Download invoice</button>
+      </div>
+    </div>
+
+    <!-- LOGS PANEL -->
+    <div id="panel-logs" style="display:none">
+      <div class="console-header">
+        <h1>Request Log</h1>
+        <p>Full history of API calls from your account.</p>
+      </div>
+      <div class="panel">
+        <div id="fullLogsWrap">
+          <table class="calls-table">
+            <thead><tr><th>Time</th><th>Method</th><th>Endpoint</th><th>Model</th><th>Credits</th><th>Status</th><th>Latency</th></tr></thead>
+            <tbody id="fullLogs">
+              <tr><td colspan="7" style="text-align:center;padding:32px 12px">
+                <div class="empty-state" style="padding:12px">
+                  <div class="empty-title">No requests yet</div>
+                  <div class="empty-desc">API call history will appear here once you start making requests.</div>
+                </div>
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS PANEL -->
+    <div id="panel-settings" style="display:none">
+      <div class="console-header">
+        <h1>Settings</h1>
+        <p>Manage your profile, security, and notification preferences.</p>
+      </div>
+
+      <!-- PROFILE -->
+      <div class="settings-section">
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Profile</h3>
+            <div>
+              <button class="btn-save" id="btnSaveProfile" disabled onclick="window.saveProfile()">Save changes</button>
+              <span class="settings-saved" id="profileSaved">Saved</span>
+            </div>
+          </div>
+
+          <div class="settings-avatar" style="margin-bottom:20px">
+            <div class="avatar-circle" id="settingsAvatar">
+              <span class="avatar-initials" id="settingsAvatarInitials">?</span>
+            </div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600" id="settingsDisplayNamePreview">—</div>
+              <div style="font-size:.72rem;color:var(--text3)" id="settingsEmailPreview">—</div>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <div class="sg-label">Display name</div>
+            <div class="sg-field">
+              <input type="text" class="settings-input" id="settingsDisplayName" placeholder="Your name" maxlength="100">
+            </div>
+
+            <div class="sg-label">Email</div>
+            <div class="sg-field">
+              <input type="email" class="settings-input" id="settingsEmail" disabled>
+              <div class="settings-hint">Email cannot be changed. Contact support if needed.</div>
+            </div>
+
+            <div class="sg-label">Photo URL</div>
+            <div class="sg-field">
+              <input type="url" class="settings-input mono" id="settingsPhotoURL" placeholder="https://example.com/avatar.jpg">
+              <div class="settings-hint">Direct link to your profile photo. Leave empty to use initials.</div>
+            </div>
+
+            <div class="sg-label">User ID</div>
+            <div class="sg-field">
+              <input type="text" class="settings-input mono" id="settingsUid" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCOUNT INFO -->
+      <div class="settings-section">
+        <div class="panel">
+          <div class="panel-head"><h3>Account</h3></div>
+          <div class="meta-grid" id="settingsMeta">
+            <div class="meta-item">
+              <div class="meta-label">Plan</div>
+              <div class="meta-value" id="settingsPlan">—</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Role</div>
+              <div class="meta-value" id="settingsRole">—</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Member since</div>
+              <div class="meta-value" id="settingsCreatedAt">—</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Last login</div>
+              <div class="meta-value" id="settingsLastLogin">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECURITY -->
+      <div class="settings-section">
+        <div class="panel">
+          <div class="panel-head"><h3>Security</h3></div>
+          <p class="section-desc" style="margin-bottom:16px;font-size:.78rem;color:var(--text3)">Connected authentication providers and password management.</p>
+
+          <div style="margin-bottom:16px">
+            <div class="sg-label" style="padding:0 0 8px">Linked providers</div>
+            <div class="provider-list" id="settingsProviders">
+              <div class="provider-badge">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                Loading...
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <div class="sg-label">Password</div>
+            <div class="sg-field">
+              <button class="btn btn-sm btn-secondary" id="btnChangePassword" onclick="window.changePassword()">Send password reset email</button>
+              <div class="settings-hint" style="margin-top:6px">A reset link will be sent to your email address.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTIFICATIONS -->
+      <div class="settings-section">
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Notifications</h3>
+            <div>
+              <button class="btn-save" id="btnSaveNotifications" disabled onclick="window.saveNotifications()">Save</button>
+              <span class="settings-saved" id="notifSaved">Saved</span>
+            </div>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <div class="toggle-label">Usage alerts</div>
+              <div class="toggle-desc">Get notified when credit usage exceeds your threshold.</div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="notifUsageAlerts" onchange="window.markNotifDirty()">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <div class="toggle-label">Weekly report</div>
+              <div class="toggle-desc">Receive a weekly summary of your API usage and discoveries.</div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="notifWeeklyReport" onchange="window.markNotifDirty()">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <div class="toggle-label">Security alerts</div>
+              <div class="toggle-desc">Get notified about new logins and API key changes.</div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="notifSecurityAlerts" onchange="window.markNotifDirty()">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-grid" style="margin-top:16px">
+            <div class="sg-label">Alert threshold</div>
+            <div class="sg-field">
+              <div style="display:flex;align-items:center;gap:8px;max-width:200px">
+                <input type="range" id="notifThreshold" min="0" max="100" value="80" style="flex:1" onchange="window.markNotifDirty()">
+                <span style="font-family:var(--mono);font-size:.78rem;min-width:36px;text-align:right" id="notifThresholdVal">80%</span>
+              </div>
+              <div class="settings-hint">Alert when credit usage reaches this percentage.</div>
+            </div>
+
+            <div class="sg-label">Webhook URL</div>
+            <div class="sg-field">
+              <input type="url" class="settings-input mono" id="notifWebhookUrl" placeholder="https://hooks.slack.com/..." oninput="window.markNotifDirty()">
+              <div class="settings-hint">Receive JSON payloads for alerts. Supports Slack, Discord, or custom endpoints.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DANGER ZONE -->
+      <div class="settings-section">
+        <div class="danger-zone">
+          <h3>Danger Zone</h3>
+          <p>These actions are permanent and cannot be undone. Proceed with caution.</p>
+          <div class="danger-actions">
+            <button class="btn-danger" onclick="window.exportData()">Export all data</button>
+            <button class="btn-danger" onclick="window.deleteAccount()">Delete account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script type="module" src="firebase-init.js"></script>
+<script type="module">
+const API = (() => {
+  const loc = window.location;
+  if (loc.hostname === 'localhost' || loc.hostname === '127.0.0.1') {
+    return `${loc.protocol}//localhost:3388`;
+  }
+  return loc.origin;
+})();
+let currentUser = null;
+let idToken = null;
+
+// ─── WAIT FOR AUTH ──────────────────────────
+
+function dbg(msg) {
+  console.log('[DBG] ' + msg);
+  const el = document.getElementById('debugBanner');
+  if (el) { el.style.display = 'block'; el.textContent = msg; }
+}
+
+function waitForAuth() {
+  return new Promise((resolve, reject) => {
+    if (window.SwarmAuth) { dbg('SwarmAuth found immediately'); return resolve(window.SwarmAuth); }
+    let tries = 0;
+    const iv = setInterval(() => {
+      tries++;
+      if (window.SwarmAuth) { clearInterval(iv); dbg('SwarmAuth loaded after ' + (tries * 50) + 'ms'); resolve(window.SwarmAuth); }
+      if (tries > 200) { // 10 second timeout
+        clearInterval(iv);
+        dbg('ERROR: SwarmAuth not loaded after 10s. firebase-init.js may have crashed. Check browser console (F12).');
+        reject(new Error('SwarmAuth timeout'));
+      }
+    }, 50);
+  });
+}
+
+// ─── NAVIGATION ─────────────────────────────
+
+window.showPanel = function showPanel(name) {
+  document.querySelectorAll('[id^="panel-"]').forEach(p => p.style.display = 'none');
+  const el = document.getElementById('panel-' + name);
+  if (el) el.style.display = 'block';
+  document.querySelectorAll('.sidebar-nav a[data-panel]').forEach(a => a.classList.remove('active'));
+  const link = document.querySelector(`.sidebar-nav a[data-panel="${name}"]`);
+  if (link) link.classList.add('active');
+};
+
+document.querySelectorAll('.sidebar-nav a[data-panel]').forEach(a => {
+  a.addEventListener('click', e => { e.preventDefault(); window.showPanel(a.dataset.panel); });
+});
+
+// ─── API HELPER ─────────────────────────────
+
+async function apiCall(path, method = 'GET', body = null) {
+  const opts = {
+    method,
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${idToken}` },
+  };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(API + '/api' + path, opts);
+  return await res.json();
+}
+
+// ─── INIT ───────────────────────────────────
+
+(async () => {
+  dbg('Waiting for SwarmAuth...');
+  let SA;
+  try {
+    SA = await waitForAuth();
+  } catch(e) {
+    dbg('FATAL: ' + e.message);
+    return;
+  }
+
+  dbg('SwarmAuth ready. Waiting for auth state...');
+
+  SA.onAuth(async (user) => {
+    if (!user) {
+      dbg('No user — redirecting to /login');
+      window.location.href = '/login';
+      return;
+    }
+    dbg('User: ' + (user.email || user.uid));
+    currentUser = user;
+
+    try {
+      idToken = await user.getIdToken();
+      dbg('Got ID token (' + idToken.substring(0, 20) + '...)');
+    } catch(e) {
+      dbg('ERROR getting ID token: ' + e.message);
+      return;
+    }
+
+    // Set welcome immediately from auth
+    const displayName = user.displayName || user.email?.split('@')[0] || 'Developer';
+    document.getElementById('welcomeName').textContent = `Welcome back, ${displayName}.`;
+
+    // Ensure user doc exists in Firestore
+    try {
+      dbg('Syncing user to server...');
+      if (SA.syncToServer) {
+        const syncResult = await SA.syncToServer(user, user.providerData?.[0]?.providerId || 'email');
+        dbg('Sync result: ' + JSON.stringify(syncResult).substring(0, 100));
+      }
+    } catch(e) {
+      dbg('Sync error (non-fatal): ' + e.message);
+    }
+
+    // Load all console data in parallel
+    try {
+      dbg('Loading console data...');
+      await Promise.all([loadUserData(), loadApiKeys(), loadUsage(), loadRequestLogs(), loadSettings()]);
+      dbg('Console data loaded OK');
+    } catch(e) {
+      dbg('ERROR loading data: ' + e.message);
+    }
+
+    // Hide debug banner on success
+    const banner = document.getElementById('debugBanner');
+    if (banner && banner.textContent.includes('loaded OK')) {
+      setTimeout(() => { banner.style.display = 'none'; }, 3000);
+    }
+
+    // Check if admin — show admin link
+    try {
+      const adminCheck = await apiCall('/admin/check');
+      if (adminCheck.ok && adminCheck.data?.isAdmin) {
+        document.getElementById('adminLink').style.display = 'flex';
+      }
+    } catch(e) {}
+  });
+
+  // Wire logout
+  const logoutLink = document.getElementById('btnLogout');
+  if (logoutLink) logoutLink.addEventListener('click', (e) => { e.preventDefault(); SA.logout(); });
+})();
+
+// ─── LOAD USER DATA ─────────────────────────
+
+async function loadUserData() {
+  const r = await apiCall('/me');
+  if (!r.ok) return;
+  const u = r.data;
+
+  const creditsUsed = u.creditsUsed || 0;
+  const creditsTotal = u.creditsTotal || 10000;
+  const remaining = creditsTotal - creditsUsed;
+  const pct = creditsTotal > 0 ? (creditsUsed / creditsTotal * 100) : 0;
+  const plan = u.plan || 'free';
+  const planDisplay = plan.charAt(0).toUpperCase() + plan.slice(1);
+
+  // Sidebar plan
+  document.getElementById('sidebar-plan-name').textContent = planDisplay;
+  document.getElementById('sidebar-plan-credits').textContent = `${remaining.toLocaleString()} / ${creditsTotal.toLocaleString()} credits left`;
+
+  // Overview cards
+  document.getElementById('oc-credits').textContent = creditsUsed.toLocaleString();
+  document.getElementById('oc-credits-sub').textContent = `of ${creditsTotal.toLocaleString()} this month`;
+
+  // Usage bar
+  document.getElementById('usage-bar-fill').style.width = pct + '%';
+  document.getElementById('usage-bar-plan').textContent = planDisplay + ' Plan';
+  document.getElementById('usage-used').textContent = creditsUsed.toLocaleString() + ' used';
+  document.getElementById('usage-remaining').textContent = remaining.toLocaleString() + ' remaining';
+
+  // Usage panel
+  document.getElementById('usage-plan-name').textContent = planDisplay;
+  document.getElementById('usage-plan-price').textContent = plan === 'pro' ? '$49/month' : plan === 'enterprise' ? 'Custom' : '$0/month';
+  document.getElementById('usage-credits-total').textContent = creditsUsed.toLocaleString();
+  document.getElementById('usage-credits-of').textContent = `of ${creditsTotal.toLocaleString()} included`;
+
+  // Welcome (overwrite with Firestore displayName if available)
+  const name = u.displayName || currentUser.displayName || currentUser.email?.split('@')[0] || 'Developer';
+  document.getElementById('welcomeName').textContent = `Welcome back, ${name}.`;
+}
+
+// ─── LOAD API KEYS ──────────────────────────
+
+async function loadApiKeys() {
+  const r = await apiCall('/keys');
+  if (!r.ok) return;
+  const keys = r.data.keys || [];
+  const container = document.getElementById('keysContainer');
+  const activeKeys = keys.filter(k => k.active);
+
+  if (activeKeys.length === 0) {
+    container.innerHTML = `<div class="empty-state">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+      <div class="empty-title">No API keys</div>
+      <div class="empty-desc">Create your first API key to start making requests.</div>
+    </div>`;
+    return;
+  }
+
+  container.innerHTML = activeKeys.map(k => {
+    const created = k.createdAt ? new Date(k.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
+    return `<div class="key-row" data-key-id="${k.id}">
+      <div class="key-name">${esc(k.name)}</div>
+      <div class="key-value">${esc(k.prefix)}</div>
+      <div class="key-created">${created ? 'Created ' + created : ''}</div>
+      <div class="key-actions">
+        <button onclick="window.copyKeyPrefix(this)">Copy prefix</button>
+        <button class="danger" onclick="window.revokeKey('${k.id}')">Revoke</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─── LOAD USAGE ─────────────────────────────
+
+async function loadUsage() {
+  const r = await apiCall('/usage');
+  if (!r.ok) return;
+  const usage = r.data.usage || {};
+
+  document.getElementById('oc-calls').textContent = (usage.totalCalls || 0).toLocaleString();
+
+  // Model breakdown table
+  const byModel = usage.byModel || {};
+  const models = ['discover', 'precise', 'correlate', 'sentiment', 'full'];
+  const costMap = { discover: 1, sentiment: 1, precise: 3, correlate: 3, full: 5 };
+  const totalCredits = usage.totalCredits || 0;
+  const tbody = document.getElementById('modelBreakdown');
+  if (tbody) {
+    if (totalCredits === 0) {
+      tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:20px;color:var(--text3)">No usage data yet. Make API calls to see breakdown here.</td></tr>`;
+    } else {
+      tbody.innerHTML = models.map(m => {
+        const credits = byModel[m] || 0;
+        const calls = costMap[m] ? Math.round(credits / costMap[m]) : 0;
+        const pct = totalCredits > 0 ? (credits / totalCredits * 100).toFixed(1) : '0.0';
+        return `<tr><td>${m}</td><td>${calls.toLocaleString()}</td><td>${costMap[m]}</td><td>${credits.toLocaleString()}</td><td>${pct}%</td></tr>`;
+      }).join('');
+    }
+  }
+
+  // Daily chart
+  const daily = usage.dailyBreakdown || {};
+  renderChart(daily);
+}
+
+// ─── CHART ──────────────────────────────────
+
+function renderChart(daily) {
+  const chart = document.getElementById('usageChart');
+  const labels = document.getElementById('chartLabels');
+  chart.innerHTML = '';
+  labels.innerHTML = '';
+
+  const today = new Date();
+  const days = [];
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const key = d.toISOString().split('T')[0];
+    days.push({ date: d, key, credits: daily[key]?.credits || 0 });
+  }
+
+  const maxVal = Math.max(1, ...days.map(d => d.credits));
+  const hasAnyData = days.some(d => d.credits > 0);
+
+  days.forEach(d => {
+    const bar = document.createElement('div');
+    bar.className = 'chart-bar ' + (d.credits > 0 ? 'has-data' : 'no-data');
+    bar.style.height = hasAnyData ? Math.max(2, d.credits / maxVal * 100) + '%' : '2px';
+    bar.title = d.credits + ' credits';
+    chart.appendChild(bar);
+
+    const lbl = document.createElement('span');
+    lbl.textContent = (d.date.getMonth() + 1) + '/' + d.date.getDate();
+    labels.appendChild(lbl);
+  });
+}
+
+// ─── LOAD REQUEST LOGS ──────────────────────
+
+async function loadRequestLogs() {
+  const r = await apiCall('/request-logs?limit=50');
+  if (!r.ok) return;
+  const logs = r.data.logs || [];
+
+  // Compute latency stats
+  const latencies = logs.filter(l => l.latencyMs).map(l => l.latencyMs);
+  if (latencies.length > 0) {
+    const avg = latencies.reduce((a, b) => a + b, 0) / latencies.length;
+    const sorted = [...latencies].sort((a, b) => a - b);
+    const p99 = sorted[Math.floor(sorted.length * 0.99)] || sorted[sorted.length - 1];
+    const el = document.getElementById('oc-latency');
+    el.textContent = (avg / 1000).toFixed(1) + 's';
+    el.className = 'oc-value green';
+    document.getElementById('oc-latency-sub').textContent = `P99: ${(p99 / 1000).toFixed(1)}s`;
+  }
+
+  // Compute success rate
+  if (logs.length > 0) {
+    const successes = logs.filter(l => l.status < 400).length;
+    const errors = logs.length - successes;
+    const rate = (successes / logs.length * 100).toFixed(1);
+    const el = document.getElementById('oc-success');
+    el.textContent = rate + '%';
+    el.className = 'oc-value green';
+    document.getElementById('oc-success-sub').textContent = errors === 0 ? 'no errors' : `${errors} error${errors > 1 ? 's' : ''} recent`;
+  }
+
+  function renderRow(l) {
+    const time = l.timestamp ? new Date(l.timestamp).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',second:'2-digit'}) : '';
+    const mCls = l.method === 'POST' ? 'post' : 'get';
+    const sCls = l.status < 400 ? 'ok' : 'err';
+    const latency = l.latencyMs ? (l.latencyMs / 1000).toFixed(1) + 's' : '';
+    return `<tr>
+      <td>${time}</td>
+      <td><span class="method-badge ${mCls}">${l.method}</span></td>
+      <td>${esc(l.endpoint)}</td>
+      <td>${l.model || ''}</td>
+      <td>${l.credits || 0}</td>
+      <td><span class="status-dot ${sCls}"></span>${l.status}</td>
+      <td>${latency}</td>
+    </tr>`;
+  }
+
+  // Recent calls (overview)
+  const recentWrap = document.getElementById('recentCallsWrap');
+  if (logs.length > 0) {
+    recentWrap.innerHTML = `<table class="calls-table">
+      <thead><tr><th>Time</th><th>Method</th><th>Endpoint</th><th>Model</th><th>Credits</th><th>Status</th><th>Latency</th></tr></thead>
+      <tbody>${logs.slice(0, 6).map(renderRow).join('')}</tbody>
+    </table>`;
+  }
+  // else: keep the empty state already in HTML
+
+  // Full logs
+  const fullEl = document.getElementById('fullLogs');
+  if (logs.length > 0) {
+    fullEl.innerHTML = logs.map(renderRow).join('');
+  }
+  // else: keep the empty state already in HTML
+}
+
+// ─── KEY ACTIONS ────────────────────────────
+
+window.copyKeyPrefix = function(btn) {
+  const val = btn.closest('.key-row').querySelector('.key-value').textContent;
+  navigator.clipboard.writeText(val).then(() => {
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy prefix', 1500);
+  });
+};
+
+window.createKey = async function() {
+  const name = prompt('Key name (e.g. "Production", "Staging"):');
+  if (!name) return;
+  const r = await apiCall('/keys', 'POST', { name });
+  if (r.ok) {
+    const key = r.data.key;
+    prompt('Your new API key (copy it now — it will not be shown again):', key);
+    await loadApiKeys();
+  } else {
+    alert(r.error || 'Failed to create key');
+  }
+};
+
+window.revokeKey = async function(keyId) {
+  if (!confirm('Revoke this API key? This cannot be undone.')) return;
+  const r = await apiCall('/keys/' + keyId, 'DELETE');
+  if (r.ok) { await loadApiKeys(); }
+  else { alert(r.error || 'Failed to revoke key'); }
+};
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+// ─── SETTINGS ───────────────────────────────
+
+let settingsData = null; // cached user data for settings panel
+
+async function loadSettings() {
+  const r = await apiCall('/me');
+  if (!r.ok) return;
+  settingsData = r.data;
+  const u = settingsData;
+
+  // Profile fields
+  document.getElementById('settingsDisplayName').value = u.displayName || '';
+  document.getElementById('settingsEmail').value = u.email || '';
+  document.getElementById('settingsPhotoURL').value = u.photoURL || '';
+  document.getElementById('settingsUid').value = currentUser?.uid || '';
+
+  // Avatar preview
+  const avatarEl = document.getElementById('settingsAvatar');
+  const initialsEl = document.getElementById('settingsAvatarInitials');
+  if (u.photoURL) {
+    avatarEl.innerHTML = `<img src="${esc(u.photoURL)}" alt="Avatar" onerror="this.parentElement.innerHTML='<span class=\\'avatar-initials\\'>${esc(getInitials(u))}</span>'">`;
+  } else {
+    initialsEl.textContent = getInitials(u);
+  }
+  document.getElementById('settingsDisplayNamePreview').textContent = u.displayName || u.email?.split('@')[0] || '—';
+  document.getElementById('settingsEmailPreview').textContent = u.email || '—';
+
+  // Account meta
+  const plan = u.plan || 'free';
+  document.getElementById('settingsPlan').textContent = plan.charAt(0).toUpperCase() + plan.slice(1);
+  document.getElementById('settingsRole').textContent = (u.role || 'user').charAt(0).toUpperCase() + (u.role || 'user').slice(1);
+  document.getElementById('settingsCreatedAt').textContent = u.createdAt ? formatDate(u.createdAt) : '—';
+  document.getElementById('settingsLastLogin').textContent = u.lastLoginAt ? formatDate(u.lastLoginAt) : '—';
+
+  // Providers
+  const providers = u.providers || ['email'];
+  const providerIcons = {
+    'email': '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>',
+    'google.com': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>',
+    'github.com': '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>',
+  };
+  const providerNames = { 'email': 'Email', 'google.com': 'Google', 'github.com': 'GitHub' };
+  const allProviders = ['email', 'google.com', 'github.com'];
+  document.getElementById('settingsProviders').innerHTML = allProviders.map(p => {
+    const connected = providers.includes(p);
+    return `<div class="provider-badge ${connected ? 'connected' : ''}">
+      ${providerIcons[p] || ''}
+      ${providerNames[p] || p}${connected ? '' : ' (not linked)'}
+    </div>`;
+  }).join('');
+
+  // Notification preferences
+  const settings = u.settings || {};
+  const notifs = settings.emailNotifications || {};
+  document.getElementById('notifUsageAlerts').checked = notifs.usageAlerts !== false;
+  document.getElementById('notifWeeklyReport').checked = !!notifs.weeklyReport;
+  document.getElementById('notifSecurityAlerts').checked = notifs.securityAlerts !== false;
+  const threshold = settings.alertThreshold ?? 80;
+  document.getElementById('notifThreshold').value = threshold;
+  document.getElementById('notifThresholdVal').textContent = threshold + '%';
+  document.getElementById('notifWebhookUrl').value = settings.webhookUrl || '';
+
+  // Wire up threshold slider live update
+  document.getElementById('notifThreshold').addEventListener('input', (e) => {
+    document.getElementById('notifThresholdVal').textContent = e.target.value + '%';
+  });
+
+  // Wire up profile dirty tracking
+  const profileInputs = ['settingsDisplayName', 'settingsPhotoURL'];
+  profileInputs.forEach(id => {
+    document.getElementById(id).addEventListener('input', () => {
+      document.getElementById('btnSaveProfile').disabled = false;
+    });
+  });
+
+  // Reset dirty states
+  document.getElementById('btnSaveProfile').disabled = true;
+  document.getElementById('btnSaveNotifications').disabled = true;
+}
+
+function getInitials(u) {
+  const name = u.displayName || u.email || '?';
+  const parts = name.split(/[\s@]+/);
+  if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
+  return name.substring(0, 2).toUpperCase();
+}
+
+function formatDate(d) {
+  if (!d) return '—';
+  try {
+    const date = typeof d === 'string' ? new Date(d) : (d._seconds ? new Date(d._seconds * 1000) : new Date(d));
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+  } catch { return '—'; }
+}
+
+function flashSaved(id) {
+  const el = document.getElementById(id);
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+
+window.markNotifDirty = function() {
+  document.getElementById('btnSaveNotifications').disabled = false;
+};
+
+window.saveProfile = async function() {
+  const btn = document.getElementById('btnSaveProfile');
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+
+  const displayName = document.getElementById('settingsDisplayName').value.trim();
+  const photoURL = document.getElementById('settingsPhotoURL').value.trim();
+
+  const body = {};
+  if (displayName) body.displayName = displayName;
+  body.photoURL = photoURL || '';
+
+  try {
+    const r = await apiCall('/settings', 'PATCH', body);
+    if (r.ok) {
+      flashSaved('profileSaved');
+      // Update preview
+      document.getElementById('settingsDisplayNamePreview').textContent = displayName || settingsData?.email?.split('@')[0] || '—';
+      if (photoURL) {
+        document.getElementById('settingsAvatar').innerHTML = `<img src="${esc(photoURL)}" alt="Avatar" onerror="this.parentElement.innerHTML='<span class=\\'avatar-initials\\'>${esc(getInitials({displayName}))}</span>'">`;
+      }
+      // Update welcome name on overview
+      document.getElementById('welcomeName').textContent = `Welcome back, ${displayName || 'Developer'}.`;
+    } else {
+      alert(r.error || 'Failed to save profile');
+      btn.disabled = false;
+    }
+  } catch(e) {
+    alert('Error saving profile: ' + e.message);
+    btn.disabled = false;
+  }
+  btn.textContent = 'Save changes';
+};
+
+window.saveNotifications = async function() {
+  const btn = document.getElementById('btnSaveNotifications');
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+
+  const body = {
+    emailNotifications: {
+      usageAlerts: document.getElementById('notifUsageAlerts').checked,
+      weeklyReport: document.getElementById('notifWeeklyReport').checked,
+      securityAlerts: document.getElementById('notifSecurityAlerts').checked,
+    },
+    alertThreshold: parseInt(document.getElementById('notifThreshold').value, 10),
+    webhookUrl: document.getElementById('notifWebhookUrl').value.trim(),
+  };
+
+  try {
+    const r = await apiCall('/settings', 'PATCH', body);
+    if (r.ok) {
+      flashSaved('notifSaved');
+    } else {
+      alert(r.error || 'Failed to save notifications');
+      btn.disabled = false;
+    }
+  } catch(e) {
+    alert('Error saving notifications: ' + e.message);
+    btn.disabled = false;
+  }
+  btn.textContent = 'Save';
+};
+
+window.changePassword = async function() {
+  const email = currentUser?.email;
+  if (!email) { alert('No email associated with this account.'); return; }
+
+  const btn = document.getElementById('btnChangePassword');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    const { getAuth, sendPasswordResetEmail } = await import('https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js');
+    await sendPasswordResetEmail(getAuth(), email);
+    alert(`Password reset email sent to ${email}. Check your inbox.`);
+  } catch(e) {
+    alert('Failed to send reset email: ' + e.message);
+  }
+  btn.disabled = false;
+  btn.textContent = 'Send password reset email';
+};
+
+window.exportData = async function() {
+  if (!confirm('Export all your account data as JSON?')) return;
+
+  try {
+    const r = await apiCall('/export-data', 'POST');
+    if (!r.ok) { alert(r.error || 'Export failed'); return; }
+
+    const blob = new Blob([JSON.stringify(r.data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `rylvo-data-export-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } catch(e) {
+    alert('Export error: ' + e.message);
+  }
+};
+
+window.deleteAccount = async function() {
+  const email = currentUser?.email || 'your account';
+  const step1 = confirm(`Are you sure you want to permanently delete ${email}?\n\nThis will delete:\n- Your profile and settings\n- All API keys\n- Usage history and request logs\n- All associated data\n\nThis action CANNOT be undone.`);
+  if (!step1) return;
+
+  const typed = prompt('Type DELETE to confirm permanent account deletion:');
+  if (typed !== 'DELETE') { alert('Account deletion cancelled.'); return; }
+
+  try {
+    const r = await apiCall('/account', 'DELETE', { confirmation: 'DELETE_MY_ACCOUNT' });
+    if (r.ok) {
+      alert('Your account has been permanently deleted.');
+      window.location.href = '/';
+    } else {
+      alert(r.error || 'Failed to delete account');
+    }
+  } catch(e) {
+    alert('Error deleting account: ' + e.message);
+  }
+};
+</script>
+</body>
+</html>

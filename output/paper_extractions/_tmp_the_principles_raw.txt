@@ -1,0 +1,2106 @@
+
+
+===== PAGE 1 =====
+Review
+The principles of collective animal behaviour
+D. J. T. Sumpter*
+Department of zoology, South Parks Road, Oxford, OX1 3PS, UK
+In recent years, the concept of self-organization has been used to understand collective behaviour of
+animals. The central tenet of self-organization is that simple repeated interactions between
+individuals can produce complex adaptive patterns at the level of the group. Inspiration comes from
+patterns seen in physical systems, such as spiralling chemical waves, which arise without complexity
+at the level of the individual units of which the system is composed. The suggestion is that biological
+structures such as termite mounds, ant trail networks and even human crowds can be explained in
+terms of repeated interactions between the animals and their environment, without invoking
+individual complexity. Here, I review cases in which the self-organization approach has been
+successful in explaining collective behaviour of animal groups and societies. Ant pheromone trail
+networks, aggregation of cockroaches, the applause of opera audiences and the migration of ﬁsh
+schools have all been accurately described in terms of individuals following simple sets of rules.
+Unlike the simple units composing physical systems, however, animals are themselves complex
+entities, and other examples of collective behaviour, such as honey bee foraging with its myriad of
+dance signals and behavioural cues, cannot be fully understood in terms of simple individuals alone.
+I argue that the key to understanding collective behaviour lies in identifying the principles of the
+behavioural algorithms followed by individual animals and of how information ﬂows between the
+animals. These principles, such as positive feedback, response thresholds and individual integrity, are
+repeatedly observed in very different animal societies. The future of collective behaviour research lies
+in classifying these principles, establishing the properties they produce at a group level and asking
+why they have evolved in so many different and distinct natural systems. Ultimately, this research
+could inform not only our understanding of animal societies, but also the principles by which we
+organize our own society.
+Keywords: self-organization; animal groups; societies; collective behaviour
+1. INTRODUCTION
+I am sitting at my ofﬁce window watching the students
+come out of the lecture theatre. They queue to buy
+coffee. When served, they leave in groups of three or
+four and edge towards the cafe ´ ’s tables, looking
+nervously at each others faces to ascertain some weak
+preference for a seat in the sun or shade. Once the
+unspoken decision is made they sit down quickly, sip
+their coffee and begin to relax, the morning’s lectures
+behind them. Faces light up and their conversation
+turns in directions I cannot possibly imagine.
+For those ﬁve or so minutes after the lecture the
+students’ behaviour is almost entirely predictable. The
+picture I have painted is not simply something I see
+every morning, but is familiar to university campuses
+all over the world. Different personal histories and
+drink preference aside, the pattern of waiting our turn,
+making joint, unspoken decisions about where to sit
+and relaxing together after a period of concentration is
+familiar to us all. Every day we see examples of groups
+of autonomous individuals behaving collectively in a
+manner that can be described in a few simple words.
+Although familiar to us all, a few students standing
+in a queue probably qualiﬁes as one of the least
+spectacular examples of collective behaviour of human
+or animal groups. It is difﬁcult to know where to start
+when choosing the most spectacular. A ﬂock of birds
+twisting in the evening light; a ﬁsh school wincing at the
+thought of a predator; the cram to leave an under-
+ground station; ants marching in an endless line; the
+stop and start trafﬁc jams; the quiet hum of a honey bee
+hive; the pulsating roar of a football crowd; a swarm of
+locusts ﬂying across the desert; or even the bureaucracy
+of the European Union ( ﬁgure 1 ). In all these
+examples, the individual is submerged as the group
+takes on a life of its own. The individual units do not
+have a complete picture of their position in the overall
+structure and the structure they create has a form that
+extends well beyond that of the individual units.
+There is a sense in which all these collective patterns
+are regular and even predictable. In the hustle and
+bustle of a busy street we can forget the complex
+reasons each of us had for shopping on this particular
+Saturday morning. Brought together to search for a
+roost, the migrating birds do not reﬂect on the long
+day’s ﬂight behind them. The submergence of the
+individual brings a new order to the group. Never-
+theless, understanding how coordinated patterns
+Phil. Trans. R. Soc. B (2006) 361, 5–22
+doi:10.1098/rstb.2005.1733
+Published online 28 November 2005
+*david.sumpter@zoo.ox.ac.uk
+Received 11 March 2005
+Accepted 11 August 2005
+5 q 2005 The Royal Society
+
+===== PAGE 2 =====
+emerge from a mass of interactions between individuals
+poses a difﬁcult problem. The regularity of collective
+animal behaviour leaves us feeling that there must be
+some unifying laws which govern these different
+phenomena. But, while the line of commuting cars
+might remind us of a trail of ants, are there deep
+similarities which connect them? If so, can we
+determine a set of principles that allow us to classify
+and understand collective animal behaviour?
+It was on the basis that ‘experimental evidence, as
+well as daily observation, show that systems involving a
+large number of interacting subunits can present, under
+certain conditions, a marked coherent behaviour
+extending well beyond the scale of the individual
+subunit’ that Nicolis & Prigogine (1977) wrote ‘Self-
+organization in Nonequilibrium Systems’. Their desire
+was to go beyond simple analogies and pin down a
+rigorous theory of these ‘self-organized’ systems. Such
+a theory should explain how complex structures arise
+from repeated interactions between the individual
+units. It should show why certain structures are created
+and persist and explain the similarities between systems
+at very different scales and levels of biological
+organization. For example, could the ﬂow of trafﬁc be
+described by the mathematics of ﬂuid ﬂow? And if this
+was the case could we make general statements about
+the ﬂow of any type of matter, be it swarms of locusts,
+crowds leaving football grounds or water running down
+the drain.
+Nicolis and Prigogine were partially successful in
+their enterprise. They showed that many of the
+mathematical equations used for describing chemical
+reactions could equally well be considered as models
+of, for example, predator–prey interactions or the
+building behaviour of termites. By applying the same
+mathematical models to very different systems they
+argued for a formal correspondence, above that of mere
+analogy, between the modelled systems.
+Nicolis and Prigogine were not alone in their belief
+that many aspects of collective behaviour could be
+modelled mathematically, and thus direct and useful
+comparisons drawn between diverse systems. The
+preceding decades had seen books by Ashby (1947) ,
+Wiener (1948) and von Bertalanffy (1968) all of which
+aimed at providing a framework for the study of
+collective behaviour. Von Bertalanffy argued for the
+existence of general growth laws of social entities as
+diverse as manufacturing companies, urbanization and
+Figure 1. Examples of collective animal behaviour. ( a) Fish milling (reproduced with permission from Philip Colla,
+oceanlight.com). (b) The entrance crater to a nest of the antMessor barbarus (from Theraulazet al. 2003). (c) Trafﬁc ﬂow in Paris
+(reproduced with permission from Anthony Atkielski). (d ) A bifurcation in a Pharaoh’s ant trail (reproduced with permission
+from Duncan Jackson). (e) A Mexican wave at an American football game (taken from Farkas 2002). ( f ) A band of marching
+locusts (reproduced with permission from Iain Couzin).
+6 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 3 =====
+Napoleon’s empire. His approach was ‘empirico-
+intuitive’, in that he used observations on the growth
+of organisms and applied the principles to other
+systems. However, neither von Bertalanffy, Nicolis
+and Prigogine nor any of the other early pioneers of
+self-organization experimentally validated the models
+they proposed for collective phenomena in humans or
+animals.
+There was good reason for the lack of exper-
+imental testing of the theories of self-organization.
+For most collective phenomena involving humans it
+is simply impossible to perform experiments. How
+do you do an experiment to test a hypothesized
+model for the growth of Napoleonic empires? Even
+for the collective behaviour of animals, such as
+ﬂocking birds, the collection of ﬁeld data requires a
+large number of cameras and sophisticated computer
+tracking software. However, around the time of
+Nicolis & Prigogines’ book another member of
+their Brussels group, Jean–Louis Deneubourg,
+began to develop and test a theory of self-
+organization in social insect societies. Based on the
+assumption that insect societies follow simple
+behavioural rules, Deneubourg’s approach was to
+write down mathematical models of how colonies of
+ants forage and termites build mounds ( Deneubourg
+1977; Deneubourg & Goss 1989 ). By conducting
+laboratory experiments where the insects were
+constrained to relatively simple environments,
+Deneubourg and his colleagues were able to test
+and, in some cases, validate these models ( Camazine
+et al . 2001 ).
+Similar approaches, in many cases developed
+independently of the Brussels’s school, have been
+applied to understanding the collective behaviour of
+ﬁsh, cockroaches, humans and other animals. Nicolis
+and Prigogine’s basic observation, that individuals
+following simple behavioural rules can produce
+complex behavioural patterns, has not only proved a
+useful idiom for describing a whole range of collective
+phenomena; even more importantly, the fact that these
+simple rules can be encapsulated in mathematical
+models has meant that clear, testable predictions
+about the collective behaviour of animal groups and
+societies can be made. Making and testing these
+predictions has become the ﬁeld of ‘self-organization’.
+2. EXAMPLES OF SELF-ORGANIZATION
+(a) Ant trails
+The canonical example of a self-organized animal
+behaviour is ant pheromone trails. Many species of
+ants deposit chemicals, known as pheromones, to mark
+the route from food to nest ( Wilson 1971 ). After
+ﬁnding a food source and feeding, an ant returns to the
+nest, pausing at regular intervals on its way to leave
+small amounts of pheromone. The ant then makes
+repeated trips from nest to food source, often leaving
+more pheromone to reinforce its trail. Other ants,
+which were previously unaware of the food source and
+encounter the trail, will follow the trail and ﬁnd the
+food source. Once they have collected food, these
+follower ants also leave pheromone on their return
+journey. Through this positive reinforcement, the
+pheromone trail builds up and after a short time we
+see a steady trail of ants walking between food and nest.
+Pheromone trails are formed purely on the basis of local
+information. They are started by a single individual or a
+small group of ants responding to the presence of food
+and they are reinforced by ants that encounter and
+follow the trail.
+Despite their simplicity, pheromone trails can be
+used to solve the problem of directing the majority of
+ants on the shortest route from food to nest. For
+example, Beckers et al . (1992) presented starved
+colonies of the ant Lasius niger with two alternative
+bridges between food and nest, then measured the
+number of ants using the two bridges 30 min after the
+ﬁrst ant had found food. When one of the bridges was
+only 40% longer than the other, over 80% of the ants
+took the shorter bridge in 16 out of the 20 experimental
+trials. Individual ants make little or no comparison of
+the two bridges, instead the slightly longer trip time
+means that pheromone is laid less rapidly on the longer
+bridge. Thus, when trail following ants make the choice
+between two bridges they detect a higher concentration
+of pheromone on one of the bridges, the shorter one
+(Beckers et al. 1993). The shorter bridge is thus chosen
+with a higher probability by the follower ants and when
+these ants return home they further reinforce the
+shortest path. Since pheromone continually evaporates
+on both paths but is more strongly reinforced only on
+the shortest path, the ants rapidly concentrate their trail
+on the shorter path.
+While lab experiments are usually on the scale of
+tens of centimetres, in nature some species of ants build
+trail networks on the scale of kilometres or even
+hundreds of kilometres ( Ho¨lldobler & Wilson 1990 ).
+Using computer simulations, Deneubourg et al. (1989)
+showed that the complex trail networks created by
+army ants during a raid could be reproduced by the
+simple rules for pheromone laying and following found
+in the double bridge experiments. By manipulating the
+food distribution, Franks et al. (1991) showed that the
+model accurately predicted network structure. It is in
+this sense we call ant foraging self-organized: ants
+follow only local rules regarding the laying and
+following of pheromone, but the resulting trail
+structure is built on a scale well beyond that of a single
+ant.
+To be more speciﬁc, we can say that ant trails result
+from positive feedback. The one ant which ﬁrst ﬁnds
+the food starts a feedback loop as more and more ants
+are recruited to the food, and as more ants are
+recruited the rate of recruitment increases further.
+Similar positive feedback loops are also seen in the
+recruitment dance of the honey bee (Seeley et al. 1991;
+Seeley 1995 ), the construction of termite mounds
+(Bonabeau et al . 1998 ) and cemetery building by
+Messor sancta ants (Theraulaz et al. 2002). In each of
+these cases, the mechanism for recruitment is different
+but the same pattern of rapid ampliﬁcation of some
+initial event is seen. Positive feedback is not limited to
+social insects, where there are high levels of genetic
+relatedness and thus co-operation between the colony
+members, but is also observed within groups of
+unrelated animals. For example, cockroaches rest for
+longer periods under shelters with more cockroaches
+Principles of collective animal behaviour D. J. T. Sumpter 7
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 4 =====
+leading to aggregation ( Ame et al . 2004 )a n d
+solitarious locusts are excited through multiple con-
+tacts with other solitarious locusts leading to gregar-
+ization and collective migration (see ﬁgure 1e; Collett
+et al. 1998; Simpson et al. 2001).
+(b) Flocks, schools and crowds
+Some of the most mesmerizing examples of collective
+behaviour of animal groups can be seen overhead every
+day. V-shaped formations of migrating geese, starlings
+dancing in the evening sky and hungry seagulls
+swarming over a ﬁsh market, are just some of the
+wide variety of shapes formed by bird ﬂocks. Fish
+schools also come in many different shapes and sizes:
+stationary swarms; predator avoiding vacuoles and
+ﬂash expansions; hourglasses and vortices; highly
+aligned cruising parabolas, herds and balls ( Partridge
+1982; Partridge et al. 1983; Parrish et al. 2002). These
+shapes are often seen on a scale that far exceeds the size
+or even the range of interaction of individual ﬁsh.
+Herring schools can consist of more than 5000
+individuals spread over 700 m
+2 (Mackinson 1999).
+Despite the variety of shapes and motions of animal
+groups it is possible that many of the different collective
+patterns are generated by small variations in the rules
+followed by individual group members. Several authors
+have developed computer simulation models, known as
+self-propelled particle (SPP) models, that attempt to
+capture the collective behaviour of animal groups in
+terms of the interactions between group members
+(Okubo 1986 ; Reynolds 1987 ; Gueron et al . 1996 ;
+Czirok & Vicsek 2000 ). For example, Couzin et al .
+(2002) proposed a model in which individual animals
+follow three simple rules of thumb: (i) move away from
+very nearby neighbours; (ii) adopt the same direction as
+those that are close by and (iii) avoid becoming
+isolated. Each individual thus has three zones—
+repulsion, alignment and attraction—which increase
+in size, so that individuals are attracted to neighbours
+over a larger range than they align, but decrease in
+priority, so that an individual would always move away
+from neighbours in the repulsion zone ( ﬁgure 2 a).
+Keeping the repulsion and attraction radii constant,
+Couzin et al. (2002) found that as the alignment radius
+increased, individuals would go from a loosely packed
+stationary swarm ( ﬁgure 2 b), to a torus where
+individuals circle round their centre of mass
+(ﬁgures 1 a and 2 c) and, ﬁnally, to a parallel group
+moving in a common direction ( ﬁgure 2d ). Far from
+requiring a distinct set of behaviours, these three very
+different collective patterns self-organize in response to
+a small adjustments to one factor: the radius over which
+individuals align with each other ( Couzin & Krause
+2003). Hoare et al. (2004) later used a similar model to
+explain the group size distribution they observed in
+laboratory experiments.
+zoa
+y
+x
+z
+a˚
+(360-a)˚
+zoo
+zor
+(a)( b)
+(c)( d)
+Figure 2. Couzin et al. (2002) model of ﬁsh dynamics. (a) Illustration of the rules governing an individual in the ﬁsh model. The
+individual is centred at the origin: zor, zone of repulsion; zoo, zone of orientation; zoa, zone of attraction. The possible ‘blind
+volume’ behind an individual is also shown,a, ﬁeld of perception. Collective behaviours exhibited by the model: (b) swarm, (c)
+torus and (d ) dynamic parallel group.
+8 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 5 =====
+If the complex patterns produced by animal groups
+can be explained in terms of a few simple rules, is it
+possible to use simulation models to predict and even
+control the behaviour of human crowds? Helbing et al.
+(2000) proposed a simulation model for pedestrians
+attempting to escape life-threatening situations
+through a limited number of exits. They assumed
+that, in such a situation pedestrians’ behaviour is
+limited to following a few simple rules: try to minimize
+travel time, avoid collisions with walls and move in the
+direction of other people. Tragically, these natural
+behaviours are also those which lead to increased
+blockages and decreased probability of escape.Helbing
+et al . (2000) were also able to show that widening
+corridors could actually lead to slower collective
+motion, because pedestrians at the end of the widening
+slow down trafﬁc by trying to squeeze back in to the
+main ﬂow. Helbing’s modelling approach has been
+usefully applied in understanding: why pedestrians
+walking on a busy street form bands moving in
+alternative directions (Milgram & Toch 1969; Helbing
+& Molnar 1995 ), the speed of Mexican waves in
+football stadiums (see ﬁgure 1 e; Farkas et al . 2002 ,
+2003); as well as the formation of trafﬁc jams (Helbing
+& Huberman 1998 ; Helbing & Treiber 1998 ). These
+models, which treat humans as particles that interact
+according to a set of ‘social forces’, have been
+remarkably successful in predicting the shape and
+dynamics of crowds.
+(c) Audience applause
+After any good concert performance, audiences express
+their appreciation by a loud round of applause. In
+Eastern Europe and Scandinavia this applause is often
+rhythmical, with the entire audience clapping simul-
+taneously and periodically. Neda et al . (2000 a,b)
+recorded and analysed the clapping of theatre and
+opera audiences in Romania and Hungary and found a
+common pattern: ﬁrst an initial phase of incoherent but
+loud clapping, followed by a relatively sudden jump
+into synchronized clapping that, after about half a
+minute, was again rapidly replaced by unsynchronized
+applause (ﬁgure 3a). A surprising observation was that
+the average volume of the synchronized clapping is
+lower than that of unsynchronized applause, both
+before and after the synchronized bouts. While an
+audience presumably wants to maximize their volume
+and thus their appreciation of the performance, they
+are unable to combine louder volumes with synchro-
+nized clapping.
+Neda et al. (2000a,b) went on to record small local
+groups in the audience and asked individuals, isolated
+in a room, to clap as if (I) ‘at the end of a good
+performance’ or (II) ‘during rhythmic applause’. Both
+modes of clapping were rhythmical at the individual
+level, with individuals clapping in mode I twice as fast
+as those clapping in mode II (ﬁgure 3b). The important
+difference was in the between individual variation for
+the two modes. When asked to clap rhythmically,
+isolated individuals chose similar, though not precisely
+identical, clapping frequencies, while when given the
+freedom to applaud spontaneously the chosen frequen-
+cies spread over a much wider range.
+To interpret this observation, Neda et al. (2000a,b)
+used a classical mathematical result about coupled
+oscillators. Kuramoto (1975) showed that if a large
+number of oscillators, for example pendulums hanging
+on a wall, each with its own frequency, are coupled
+together so that they continually adjust their frequency
+to be nearer that of the average frequency, then
+provided the oscillators’ initial frequencies are not too
+different they will eventually adopt the same frequency
+and oscillate synchronously (Kuramoto 1984). This is
+what happens to audiences clapping according to mode
+II. Their initial independent clapping frequencies are
+close together, and by listening to the clapping of
+0.03
+0.4
+0.3
+0.2
+0.1
+0
+1234567
+0.02|
+g
+dN/dr 1/Nt
+0.01
+0 10 20 30
+t (s)
+f (1/s)
+(a)
+(b)
+Figure 3. The emergence of synchronized clapping (from Neda et al. 2000a,b). (a) The average noise intensity of a crowd
+through time. The ﬁrst 10 s shows unsynchronized fast clapping, followed by a change to regular slower clapping until around
+27 s, followed by synchronized clapping again. (b) A normalized histogram of clapping frequencies for 73 high school students
+(isolated from each other) for Mode I (solid) and Mode II (dashed) clapping.
+Principles of collective animal behaviour D. J. T. Sumpter 9
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 6 =====
+others, they synchronize their clapping. Audiences
+clapping in mode I, however, have initial clapping
+frequencies which are less similar to each other. Thus,
+even if they try to adjust their clapping in reaction to the
+sound around them, the Kuramoto model predicts that
+they will never arrive at a state of synchronized
+clapping. This is exactly what happened in the
+audiences that were recorded: faster clapping, with
+greater inter-individual variation never synchronized.
+Theatre audiences are thus forced to choose between
+two different manners of showing their appreciation:
+loud, frequent, unsynchronized or quieter, less fre-
+quent, synchronized clapping.
+Synchronized rhythmic activity is seen in many
+different animal groups and across all of biology
+(Strogatz 2003 ). For example, Leptothorax ants syn-
+chronize their bouts of activity (Franks et al. 1990; Cole
+1991; Boi et al . 1999 ), human females’ menstrual
+cycles become synchronized when living or working
+closely together ( Stern & McClintock 1998 )a n d ,
+probably the best studied example, ﬁreﬂies synchronize
+their ﬂashing (Buck & Buck 1976). The importance of
+Kuramoto’s model is that it shows that individuals with
+slightly different frequencies can synchronize, each by
+moving their frequency slightly towards the average.
+This observation is by no means obvious, and the
+prediction that above some critical amount of between-
+individual variation synchronization cannot occur has
+wide ranging implications. For ﬁreﬂies, the prediction
+is that species that do not synchronize their ﬂashing will
+have higher between-individual variation, and possibly
+more rapid ﬂashing.
+3. PROPERTIES OF SELF-ORGANIZATION
+Beyond the fact that individuals produce collective
+patterns, is there anything more speciﬁc we can say
+about these phenomena we have labelled self-orga-
+nized? The answer to this question lies in the
+relationship between similarities in the rules governing
+and the patterns generated by very different systems.
+Opera audiences and groups of ﬁreﬂies are different in
+shape and size, method of communication and their
+objectives, but both are restricted by inter-individual
+differences when trying to synchronize their actions.
+Birds ﬂy, ﬁsh swim and pedestrians walk, but they all
+exhibit the tendency to move away from those that are
+too close while avoiding being left completely out on
+their own. These simple rules result in similar patterns
+1000
+800
+600
+400
+200
+0 200 400 600 800 1000
+number of components
+number of ants at feeder
+system output
+colony size (n)
+1200
+(a)
+200 400 600 800 1000
+1000
+800
+600
+400
+200
+0
+(b)
+colony size (n)
+400 800 1200 1600 2000
+40
+30
+20
+10
+increase in number of ants walking
+to feeder along the trail (x)
+0
+–5
+35
+25
+15
+5
+(c)
+Figure 4. How different systems increase output as a function of number of system components. (a) A linear increase in system
+output with number of components. (b) Model prediction of how the number of foragers visiting a feeder changes with number
+of ants in the colony. The black line is the predicted stable equilibrium for number of foragers visiting the feeder. The grey line is
+the unstable equilibrium. If fewer ants than the unstable equilibrium initially discover the source, then the total increase in
+foragers will be determined by the lower stable equilibrium. However, if the initial discovery is by a larger group than the
+unstable equilibrium, then the increase will be to the upper equilibrium. The model for the rate of change of ants going to the
+feeder, x,i sd x=dtZaxCbxðnKxÞKsx=ðsCxÞ: The ﬁgure shows the equilibrium solutions for parameter values: aZ0.004 5,
+bZ0.000 15, sZ10 and n, the total number of ants, varied between 0 and 65 (see Beekman et al. 2001 for details). (c) Colony
+size versus the maximum increase in the number of ants walking to a feeder within 40 min of its introduction to an arena
+containing a starved ant colony (see Beekman et al. 2001 for details). The solid line connects the means of all trials at a given
+colony size, while crosses represent single trials.
+10 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 7 =====
+of aggregation and directed movement, independent of
+the details of the animals involved.
+If we are to build a useful theory of self-organization
+of animal groups it is not enough to say that certain
+things ‘look’ similar. In the above examples, the aspect
+that links different systems together is similarity in the
+mathematical models we used to describe their
+behaviour. For pheromone trails, cockroach shelter
+choice and ant cemeteries, mechanisms of positive and
+negative feedback produced aggregations and collective
+decisions; for oscillating ﬁreﬂies and hand clapping, the
+Kuramoto model of coupled oscillators provided
+understanding of the role of variation in synchroniza-
+tion; and the dynamics of ﬁsh schools and human
+crowds were all captured by SPP models. If the same
+mathematical model captures the behaviour of different
+systems then we can talk about similarities between
+systems that go further than simple analogy. We can use
+our mathematical models to make predictions that
+apply to many different systems. Furthermore, if two
+systems obey the same mathematical laws, we can
+perform experiments on one system and infer how
+another system might behave under similar conditions.
+(a) More than the sum of its parts
+A concrete example of a mathematical prediction that
+spans all systems subject to positive feedback is that
+these systems are ‘more than the sum of their parts’
+(Aristotle, Metaphysica, 10f–1045a). That is to say that
+when we plot system ‘output’ against number of system
+components we do not get a straight line (ﬁgure 4). For
+example, if an ant in a small colony ﬁnds a food source
+a long way from the nest, then by the time another ant
+passes over the place she left a pheromone trail, the
+pheromone will probably have evaporated. In this case,
+the trail does not help other ants ﬁnd the food. For large
+colonies of ants, however, it is more likely that an ant
+will cross the pheromone trail before it evaporates and
+reinforce it. The reinforcement leads to the familiar
+positive feedback loop and a well-established trail
+between nest and food. Thus, the output of the system,
+i.e. number of ants visiting the feeder and hence food
+collected, is low for small ant colonies but rapidly
+increases as the colony becomes larger.
+Beekman et al . (2001) formalized this verbal
+argument in a mathematical model of trail laying. The
+model predicted that (a) as the number of ants in the
+colony increased the number of ants visiting the feeder
+would increase nonlinearly and (b) provided the rate at
+which ants found the food without following a trail was
+small, then at a critical colony size there would be a
+sudden switch from few ants visiting the feeder to a large
+proportion of the ants visiting the feeder ( ﬁgure 4 b).
+Both these predictions were conﬁrmed experimentally
+(ﬁgure 4c). Small colonies were unable to establish an
+effective pheromone trail, while above a critical size, in
+this case 700 ants, trails were formed between nest and
+food. In small groups the ant colony was merely a sum of
+its parts, the amount of food collected being a total of
+that collected by ants that discovered food indepen-
+dently. But together, in large numbers, the positive
+feedback of pheromone communication meant a jump
+in efﬁciency that made the colony more than the sum of
+independently working ants.
+We can also think of bird ﬂocks and other animal
+herds as being more than the sum of their parts. Using a
+simple SPP model, Czirok et al. (1999) showed that a
+group of individuals that align their direction with that
+of their neighbours undergo a rapid transition from
+random motion at low densities, where each individual
+moves largely independently of the others, to directed
+motion at high densities where all individuals move in a
+common direction. We can think of the output of the
+ﬂock to be a common direction, e.g. a shared migration
+route, and as the ﬂock’s density increases there is a
+continuous, but rapid nonlinear change to having a
+shared direction. More recently, it has been shown that
+under some conditions the transition from random to a
+common direction can be discontinuous, as it was for
+ant foraging ( Gregoire et al. 2003; Gregoire & Chate
+2004).
+(b) The central limit theorem
+Not all of the collective patterns produced by animal
+groups are more than the sum of their parts. Symmetri-
+cal structures, such as the domes built by wood ants or
+the craters built by M. barbarus ants (Chretien 1996;
+Theraulaz et al. 2003), can result from the independent
+actions of the colony’s ants ( ﬁgure 1b). For example,
+Chretien (1996) showed that when an individual
+M. barbarus ant leaves the nest hole with a sand pellet,
+she moves in a straight line away from the hole in a
+random direction. Once the ant is, on average, 4.8 cm
+from the hole she drops the pellet. The fact that the
+direction chosen by the ant is independent of the
+direction taken by the other ants in the colony produces
+a symmetrical crater. The height of this crater, which
+here can be considered the output of the colony, is
+proportional to the number of building ants (as in
+ﬁgure 4a). It is purely the sum of the parts that created it.
+The fact that the crater wall is equally high on all
+sides of the ants’ nest entrance is a consequence of a
+remarkable mathematical theorem that applies to all
+systems consisting of large numbers of independent
+individuals: the central limit theorem. The theorem
+states that if each of a large number of independent
+individuals contributes a small randomly distributed
+quantity to some total output, then that total output is
+distributed according to a Normal distribution. More-
+over, the standard deviation of total output increases in
+proportion to the square root of the number of
+individuals. Since the height of the ants’ wall increases
+in proportion to the number of individuals and, by the
+central limit theorem the standard deviation around the
+wall increases as its square root, once the wall is
+reasonably high the variation in its height will be small
+relative to its average height. Thus, despite, and indeed
+because of, the ants working independently an even
+outer wall is constructed.
+The central limit theorem is the most basic
+statement about and the cornerstone for understanding
+all collective phenomena. It proves that systems
+consisting of independent parts are ‘usually’ no more
+than a square root of the number of parts more or less
+than the sum of their parts. The Normal distribution is
+universal, in the sense that all systems consisting of
+independent parts are subject to it. It thus provides a
+null hypothesis against which all data taken from
+Principles of collective animal behaviour D. J. T. Sumpter 11
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 8 =====
+systems purporting to exhibit some kind of feedback or
+self-organization can be compared. Indeed, in this
+sense all self-organized systems can be explained in
+terms of the manner in which their output deviate from
+a Normal distribution (Sornette 2004).
+(c) Sensitivity to initial conditions
+M. barbarus ’ crater is not particularly sensitive to the
+distribution of sand before building begins. If a small
+pile of sand was put on one side of the nest hole, this
+pile would grow at the same rate as all other sides of the
+crater. Once the walls of the crater had grown, the
+initial difference may remain but look small relative to
+the total height of the surrounding walls. Such
+insensitivity to initial distribution is not the case for
+ant trails. For example, Beckers et al. (1992) repeated
+their bridge experiments described earlier, this time
+starting with only the longer bridge (28 cm between
+nest and food) available. Once the ants established a
+trail on this bridge a shorter bridge (14 cm) was
+introduced. However, the established feedback on the
+longer bridge was so strong, that in 16 out of 20 trials
+the ants did not switch to the shorter bridge. Strong
+positive feedback had locked the ant in a suboptimal
+path choice.
+A standard test for whether a particular collective
+animal behaviour is sensitive to initial conditions is the
+identical binary choice experiment. In the absence of
+positive feedback we would expect a 50 : 50 split
+between two equal alternatives. This does not occur
+for systems subject to positive feedback. WhenBeckers
+et al . (1992) offered Lasius niger ants two identical
+bridges between food and nest, after 30 min the
+majority of the ants took only one of the two bridges.
+Sumpter & Beekman (2003) reported similar results
+for Pharaoh’s ants when they offered the ants two
+identical feeders in opposite directions from the nest.
+Instead of a 50 : 50 split between feeders, the split was
+closer to 70 : 30 or 30 : 70, giving a u-shaped
+distribution of number of ants at one of the feeders
+over all the trials (ﬁgure 5a). The ‘winning’ feeder was
+the one that had the most ants nearby when it was
+initially placed in the foraging arena.
+Similar results have been observed from cockroaches
+to consumers. For the cockroach, Blattella germanica ,
+the positive feedback mechanism for aggregation is
+resting time: cockroaches rest for longer at sites
+containing more cockroaches (Ame et al. 2004; Jeanson
+et al. 2005). The result is the same as for the ants, a
+u-shaped distribution of shelter choice (ﬁgure 5b). This
+same resting time feedb ack operates in spiders
+( Jeanson et al . 2004 ) as well as chain formation by
+weaver ants ( Deneubourg et al . 2002 ). It has been
+argued that similar patterns are seen in consumer
+choice ( Ormerod 1998 ). When two similar products
+are released on the market, such as Betamax and VHS
+video recorders in the 1980s, after a short period of
+both products being used, one of them often out-
+competes the other. Fashion and group pressure could
+provide a powerful positive feedback mechanism
+whereby small differences in products are ampliﬁed as
+the herd of consumers follow the initial choices of a few
+individuals.
+4. INDIVIDUAL VERSUS GROUP COMPLEXITY
+The examples of self-organization I have discussed so
+far illustrate how, for various types of interaction
+between individuals, we can use mathematical models
+to predict complex group level patterns of behaviour.
+Similarities and differences in the mathematical models
+applied to these systems were helpful in drawing useful
+comparisons between the systems themselves. I have
+even outlined some useful and general predictions
+about these systems: that if the system consists of
+independent units its output will be normally dis-
+tributed, that if the units are subject to positive
+feedback the systems output will be ‘more than the
+sum of its parts’ and strongly subject to its initial
+conﬁguration. It may appear now that, through this
+wonderful theory of self-organization and mathemat-
+ical modelling, we are well on our way to fully
+understanding and determining relationships between
+everything from the foraging of ant colonies to
+consumer behaviour in our own society.
+Unfortunately, such understanding is all too far
+away. Unlike the simple units composing physical
+systems, animals are complex entities. While the
+assumption that humans follow a simple set of rules
+may hold in certain limited social situations—such as
+after a concert, in a panic or when queuing for coffee—
+in a wider social context, each individual’s behaviour is
+a combination of countless genetic and environmental
+factors. The same is true for other mammals, birds, ﬁsh
+and even insects. For example, individual honey bees
+7
+6
+5
+4
+3
+2
+1.00
+0.75
+0.50
+0.25
+0
+1
+0 0–20
+0.0–0.2 0.2–0.4 0.4–0.6 0.6–0.8 0.8–1.0
+20–40 40–60
+percentage foraging at feeder A
+proportion of larvae on one site
+proportion of experiments number of trials
+60–80 80–100
+(a)
+(b)
+Figure 5. Distribution of the proportion of individuals
+choosing one of two identical options in binary choice
+experiments where (a) Pharoah’s ant are offered two identical
+(1.0 M sugar solution) food sources (reproduced from
+Sumpter & Beekman 2003 ) and (b) cockroaches are offered
+two identical shelters (reproduced from Ame et al. 2004).
+12 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 9 =====
+are known to use at least 17 different communication
+signals, the most famous of which is the waggle dance,
+and adjust their behaviour in response to at least 34
+different cues (reviewed in Seeley 1998 ). While
+foraging for food, honey bees exhibit at least seven
+different behavioural states, e.g. scout, recruit, inspec-
+tor etc. (seeﬁgure 6b; reviewed inBiesmeijer & de Vries
+2001), and exhibit a range of signals about the location
+and availability of food (Seeley 1995).
+While studies of self-organization have shown that
+simple interacting units can become more than the sum
+of their parts and self-organize ( Bonabeau et al. 1997;
+Camazine et al. 2001) and that they sometimes follow
+‘simple rules of thumb’ (ﬁgure 6a; see also Detrain &
+Deneubourg 1997 ; Detrain et al . 1999 ; Detrain &
+Deneubourg 2002), this does not necessarily imply that
+individual social insects are simple units (Seeley 2002).
+There is evidence that only ant species with large
+colonies use pheromone trails for communicating the
+presence of food (Beckers et al. 1989), but there is little
+evidence from between species comparison that
+individual complexity decreases with increased colony
+size (Anderson & McShea 2001 ). Honey bees are just
+one example of species with both large colony sizes and
+individuals that exhibit a complicated array of com-
+munication signals and behavioural states ( ﬁgure 6b).
+Even the humble Pharoah’s ant, with its exclusive
+reliance on pheromones for recruiting to food, and the
+subject of Beekman et al. (2001) colony size study, has
+been shown to use at least three different pheromone
+signals to organize trafﬁc on its trails ( Jackson et al .
+2004; Jackson et al. in press ; Duncan Jackson & Elva
+Robinson personal communication). Thus, self-organ-
+ization gives us, through mathematical models, a
+means of predicting the consequences of certain
+interactions between individuals, but it is by no
+means an exclusive principle by which insect societies
+are organized.
+One example of a collective behaviour that has been
+extensively studied from the viewpoint of both
+individual and group level complexity is the emigration
+of ants of the genus T emnothorax (Mo¨glich 1978 ;
+Mallon et al . 2001 ; Pratt 2005 , in press ; Pratt et al .
+2002, 2005). These ants, whose colonies consist of
+between 50 and 500 individuals, live in small
+preformed cavities. In the laboratory, a colony whose
+nest has been damaged moves to a new site within a few
+hours, reliably choosing the best site from as many as
+ﬁve alternatives, discriminating among sites according
+to cavity area and height, entrance size, and light level
+(Pratt & Pierce 2001 ; Franks et al. 2003a,b). Around
+30% of the ants actively partake in the process of
+choosing a new nest site. These active ants undergo
+four phases of graded commitment to a particular nest
+site (ﬁgure 6c). Each ant begins in an exploration phase
+during which she searches for nest sites. Once she ﬁnds
+a site she enters an assessment phase, carrying out an
+independent evaluation of the site, the length of the
+evaluation being inversely proportional to the quality of
+the site (Mallon et al. 2001). Once she has accepted the
+site she enters a canvassing phase, whereby she leads
+tandem runs, in which a single follower is slowly led
+from the old nest to the new site. These recruited ants
+then in turn make their own independent assessments
+of the nest. Once the nest population has reached a
+quorum (a threshold population), the ant enters a
+committed phase, rapidly transporting passive adults
+and brood items.
+Like the self-organized systems discussed earlier, the
+collective ability to choose the best of several new nest
+sites does not rely on one ant possessing information on
+more than a small part of the colony’s task. Tandem run
+recruitment also has elements of the simple positive
+feedback seen in the pheromone trails of Lasius ants
+and the aggregation of cockroaches. However, the four
+phase decision-making process, the use of a quorum
+threshold to decide whether to perform a tandem runs
+or a transport (Pratt 2005, in press; Pratt et al. 2002),
+and the fact that some ants ﬁnd both nests and choose
+the superior one ( Mallon et al . 2001 ), makes the
+behaviour of individual migrating ants more compli-
+cated than ‘simple rules of thumb’. T emnothoraxants
+combine elements of self-organization, whereby a
+global solution to the problem of ﬁnding a new nest
+emerges from the interactions of the multiple ants, with
+a sophisticated behavioural algorithm, whereby indi-
+vidual ants continually monitor the progress of the
+emigration and change their behaviour accordingly.
+The detailed experimental understanding of T em-
+nothorax migration has made it possible to determine
+the behavioural algorithm followed by, and the
+communication pathways between the ants. Pratt et al.
+(2002, 2005) have, as new experimental data have
+become available, systematically reﬁned this beha-
+vioural algorithm in order to capture everything that is
+known about ant migration in a model (ﬁgure 6c). Their
+approach follows that used in modelling gene regulatory
+(von Dassow et al. 2000) and other complex networks
+(Kitano 2002 ). Once the behavioural algorithm is
+developed, the role of its various components can be
+tested. For example, Pratt et al. (2002) showed that the
+requirement that the nest site population reaches
+quorum before transport commences leads to a
+reduction in incidence of colony splitting. Franks et al.
+(2003a,b) went on to show experimentally that the ants
+reduce the size of their quorum in situations where
+migration speed takes priority over the avoidance of
+splitting. Detailed behavioural algorithm models are
+thus a tool for reconciling individual and group level
+complexity, allowing for meaningful analysis of how
+each part of the algorithm contributes to overall system
+function (Fewell 2003).
+The construction of detailed models of the algor-
+ithms followed by individuals also allows for between
+species comparison. For example, Camazine et al .
+(1999), Seeley & Buhrman (2001), Seeley (2003) and
+Seeley & Visscher (2003) have studied the migration of
+honey bees and found that they use a similar
+combination of positive feedback (dancing instead of
+tandem running) and quorum thresholds ( Seeley &
+Visscher 2004 )a s T emnothorax. When algorithms are
+similar across very different species we can ask why they
+have evolved in so many different cases. What is it about
+the combination of positive feedback and response
+thresholds that produces effective collective decision
+making? The power of the behavioural algorithm
+approach is that the algorithm can be analysed and
+compared across systems. Indeed, rather than simply
+Principles of collective animal behaviour D. J. T. Sumpter 13
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 10 =====
+simulating algorithms in order to reproduce exper-
+iments, the algorithms can be studied to ﬁnd out the
+principles that underlie them.
+Before leaving the subject of individual complexity it
+is worth pointing out that, when viewed at certain
+spatial and temporal scales, very complex individuals
+can produce very simple group level dynamics,
+provided they exhibit a reasonable degree of indepen-
+dence. For example, though a highly complex algor-
+ithm may have brought each individual to town in the
+ﬁrst place, the number of people passing by a point on a
+quiet shopping street during a 5 min interval is likely to
+be randomly distributed. This prediction is based on
+the ‘law of small numbers’, that independent low
+frequency events in a large population follow a Poisson
+distribution ( Bortkiewicz 1898 ). While on very small
+time scales there are socially enforced gaps between
+people and on very large time scales there are patterns
+determined by shops opening and closing, on the time
+scale of an hour on a Monday morning passers-by do so
+more or less at random. Once a large number of factors
+begin to inﬂuence behaviour, the complex begins to
+seem simple again.
+5. PRINCIPLES OF COLLECTIVE BEHAVIOUR
+As far as understanding collective animal behaviour I
+have come full circle. First, I marvelled at the
+wonderful patterns produced by animal groups, then
+showed that some of these patterns could be explained
+by simple mathematical models, but found myself back
+at the beginning when we discovered the true complex-
+ity of the individuals and the need for detailed
+behavioural algorithms. These algorithms appear no
+easier to understand than the phenomena they purport
+to model and lack the elegance provided by self-
+organization. There were, however, points on this
+journey where it felt like progress was made: when
+completely different systems seemed to be logically
+equivalent and were given a new explanation by the
+application of a mathematical model.
+life history of a forager
+fieldfield
+scout inspector reactivated
+forager
+internally
+driven
+externally
+drivennoviceforager
+unemployed experienced forager
+employedforagerfind'spoorsource
+find'spoorsource
+find'spoorsource
+find'spoorsource
+spontuneouslysearches a source searches a sourceusing external information
+abandonsource usingexternal info
+spontuneouslycheckknownsource
+spontuneouslychecks knownsource returnsforcolony
+followconfirminginformation
+find'srichsource
+find'srichsource
+find'srichsource
+find'srichsource
+employed
+forager
+(loading)
+recruit
+colony
+exploration
+return without
+trail laying
+return with
+trail laying
+discover
+food?
+food ingestion
+able to ingest
+desired volume?
+yes
+yes
+no
+no
+follow
+(0,–)
+follow
+(l,f)
+follow
+(l,f)
+search
+(l,f)
+at nest
+(l,f)
+at nest
+(l,f)
+1-reject0,j 1-reject0,i
+find0,i
+findi,i
+findi,i
+findj,i
+findj,i
+rejecti,j
+rejecti,j
+rejecti,j
+recruiti
+findj,i
+findi,i
+accepti
+recruiti 1-quorummet
+quorummet
+1-getlost+getlost*losttrans
+getlost*(1-losttrans)
+1–rejecti,j
+1–rejecti,j
+1–rejecti,j
+find0,j
+arrive at
+nest i
+arrive at
+nest j
+arrive at
+nest j
+arrive at
+nest j
+arrive at
+nest j
+find0,0
+reject0,j reject0,i
+getlost
+getlost
+searchexplore
+searchassess
+searchcanvas
+pickedupassess
+pickedupcanvas
+searchcommitted
+pickedupcommitted
+1-reverse
+reverse
+pickupexplore
+at nest
+(l,f)
+at nest
+(l,f)
+leadforward(l,f)
+transport
+(l,f)
+reversetandem(l,f)
+search
+(l,f)
+search
+(l,f)
+carried
+(l,f)
+carried
+(l,f)
+carried
+(l,f)
+search
+(0,–)
+carried
+(0,–)
+at nest
+(0,–)
+stoptrans
+1-stop
+trans
+(a)( c)
+(b)
+Figure 6. Algorithms for social insect behaviour. (a) The ‘simple rule of thumb’ used byLasius niger ants when exploiting liquid
+food sources (Detrain & Deneubourg 2002; from results ofMailleux et al. 2000). (b) Behaviour control structure of a honey bee
+forager. Depicted are the seven behavioural categories of foragers. The left part of the diagram represents internally driven
+categories, the right part, the externally driven categories. Upon locating a rich source, a searching forager becomes employed,
+whereas upon locating a poor source (including no source), a searching forager returns to the hive and becomes unemployed (for
+details see Biesmeijer & de Vries 2001 ). (c) Model of the behaviour of T emnothoraxants when emigrating. Boxes represent
+behavioural states and arrows transitions between them, labels indicate measured probabilities ( Pratt et al. 2005). Colours
+indicate the four major levels of an ant’s commitment to a candidate nest site: exploration (blue), assessment (red), canvassing
+(amber) and commitment (green).
+14 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 11 =====
+Similarities between the logical structure underlying
+different systems have led researchers to dream of a
+unifying theory for the study of complex and self-
+organized systems. The dream is to develop some sort
+of ultracalculus, a way of seeing clearly the conse-
+quences of a myriad of complex interactions ( Strogatz
+2003). Currently, the only universal theorem of this
+type is the central limit theorem, but it is precisely those
+systems consisting of non-independent individuals that
+our ultracalculus should apply to. For Nicolis and
+Prigogine the unifying theory was the thermodynamics
+of open systems; for Bak (1996) it was self-organized
+criticality and sand piles; for Sornette (2004) it is the
+generalization of the normal distribution to power law
+distributions; for Kauffman (1993) it is Boolean
+networks; and for Wolfram (2002) it is cellular
+automata. Elegant as these mathematical ideas are,
+none of them have proved truly universal, and more
+importantly, nor have they been shown to apply to large
+numbers of biological systems. Experimental tests of
+these theories are few and far between.
+My personal view is more pragmatic than the
+development of a universal theory or an ultracalculus
+of self-organization. Studying systems of collective
+animal behaviour should proceed on a case-by-case
+basis. For each particular system, we classify how
+individuals interact with each other and build beha-
+vioural algorithms based on these observations. The
+behavioural algorithms are then the basis for math-
+ematical models. If a similar mathematical model has
+been previously applied to another system, this helps us
+understand the behavioural algorithm and thus the
+system, but the equivalence of mathematical models
+alone should not guide the way in which we study our
+chosen system. Through this approach, mathematical
+models become a tool for investigating natural systems
+and the fact that the same model is applicable to many
+different systems is a happy co-incidence rather than a
+proof of universal laws.
+The pragmatic approach does not deny that there
+are strong similarities between very different systems.
+On the contrary, it is essential to such an approach that
+systems are classiﬁed in terms of their logical or
+mathematical similarities and differences. The
+approach I take now is to list some of the principles
+for the behavioural algorithms that produce collective
+animal behaviour. This approach builds on the idea of
+s e l f - o r g a n i z a t i o nt h a tm a n yo fa na n i m a lg r o u p ’ s
+activities can be described in terms of three principles:
+positive feedback, negative feedback and the ampliﬁ-
+cation of random ﬂuctuations (Bonabeau 1997;
+Camazine et al . 2001 ). Here, I add to this list the
+principles of individual integrity; response thresholds;
+leadership; inhibition; redundancy; synchronization
+and selﬁshness. My current list is not intended as
+exhaustive, but it does include many commonly
+observed features of collective animal behaviour. The
+ultimate aim is to ﬁnd a set of principles on which the
+behavioural algorithms followed by individuals are
+built. These principles should be both empirical, i.e.
+describe behaviour that really does occur, and sufﬁ-
+ciently abstract that mathematical models based on
+these principles can be developed and studied in a way
+that leads to insight into a number of different systems.
+Bearing in mind that individuals do not follow only
+simple rules, it is important that we do not think of
+these principles in isolation. Indeed, we should
+consider how these different principles interact with
+each other to produce collective patterns. For example,
+how does individual integrity mix with positive feed-
+back in allowing information about food sources to ﬂow
+quickly through a honey bee colony without the colony
+losing the ability to discover new sources? Or, how can
+synchronization of mating ﬁreﬂys occur when it is to
+the advantage of one ﬁreﬂy to cheat by ﬂashing faster
+than the others? Many of the big questions for the
+future of collective animal behaviour concern how
+these principles ﬁt together to generate complex
+collective patterns.
+(a) Integrity and variability
+Each of the animals in a group is different, in terms of
+their genes and/or their previous experience. For
+example, if every bee always collected the same type
+of food from the same place then their colony’s
+nutritional needs could not be met. Worse still, when
+the uniquely selected food source is depleted, ﬂow of
+food into the colony stops until the next food source is
+found. Such a situation is avoided in honey bee colonies
+by a high degree of individual variation. From only one
+week old, before they have left the hive for the ﬁrst time,
+honey bees have different levels of response to sucrose,
+which later in life determines their propensity to collect
+water, nectar and pollen (Pankiw & Page 2000). Honey
+bees and other social insects are highly variable in the
+direction, intensity and focus of food collection and
+other tasks ( Jeanne 1988). Sometimes this variability
+alone is sufﬁcient to produce collective patterns. For
+example, the circular structure of M. barbarus craters
+was due to each individual choosing a random direction
+by which to leave the nest. Even when not all activities
+are carried out independently, individual variability is
+of central importance to ensuring that different
+solutions to a problem are explored.
+The importance of individual variability in human
+society is highlighted by an observation by Galton
+(1907). He examined 800 entries into a ‘guess the
+weight of the ox competition’, where a crowd of
+fairgoers each paid a small amount to guess how
+much a large ox would weigh after slaughter, with the
+most accurate guess winning a prize. Although the
+guesses had a wide variation, differing signiﬁcantly
+from a Normal distribution, the average guess was only
+1 pound (450 g) less than the 1197 pounds (544.5 kg)
+that the ox weighed. Acting independently, the crowd
+‘knew’ the weight of the ox. There are many such
+examples of collective accuracy: ask the audience on
+‘Who wants to be a millionaire’; the accurate prediction
+of American presidential elections by betting; and the
+Google search engine using links to a webpage to
+measure its popularity are just some ( Surowiecki
+2004). In all animal groups, high inter-individual
+variation can provide a continual supply of new
+solutions to the problems the group aims to solve.
+(b) Positive feedback
+Positive feedback is the ampliﬁcation of events through
+recruitment or reinforcement ( Bonabeau et al . 1997 ;
+Principles of collective animal behaviour D. J. T. Sumpter 15
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 12 =====
+Camazine et al. 2001). A cockroach stops in a shelter,
+another one pauses nearby. An ant ﬁnds a food source,
+another one follows her trail there. A ﬁsh turns to the
+left, its neighbour follows soon after. A few people
+recommend a particular brand of video recorder,
+others go out and buy it. As such imitation or
+recruitment behaviour continues the number perform-
+ing an activity explodes exponentially. An isolated
+behaviour is quickly subsumed by a mass of similar
+behaviours. Positive feedback is the best studied
+component of collective animal behaviour and we
+have already discussed many of the collective patterns it
+can produce.
+While individual integrity generates new group level
+solutions, positive feedback spreads this information
+quickly through the group. For example, an ant ﬁnding
+a food source relies on the particular search path of that
+ant, but the trail it leaves on the way home is the start of
+a positive feedback loop that homogenizes the beha-
+viour of those following the trail. Followers submit their
+own integrity to the discoveries of others. Too much
+positive feedback can lead to suboptimal solutions
+when conditions change, such as when ants stick to an
+established a trail even when a shortcut is introduced
+(Beckers et al . 1992 ). Successful problem solving by
+collective behaviour often involves striking the correct
+balance between individual variation and positive
+feedback. Information should spread but also be kept
+up to date by new discoveries.
+(c) Negative feedback
+If positive feedback builds up a collective pattern then it
+is negative feedback that stabilizes it. For example,
+once lots of ants are collecting from a food source, new
+arrivals will ﬁnd it hard to collect food and search
+elsewhere. Even if the food source is unlimited, the
+colony is of limited size and the number of ants visiting
+the feeder will stabilize once every available foraging
+ant is collecting food. Negative feedback leads to
+homeostasis, stable output in the face of varied input.
+For the ants, changes in food distribution leads to a
+smooth adjustment of the distribution of ants between
+food sources.
+(d) Response thresholds
+Animals often change their behaviour in response to a
+stimulus reaching some threshold. For example,
+bumble bees begin fanning (to cool down the nest)
+when the temperature concentration inside the nest
+exceeds a particular threshold level, this level of
+fanning often being variable between individuals
+(Weidenmuller 2004 ). Threshold responses are also
+seen in between individual interactions. Figure 7 gives
+four examples of response thresholds where the
+0 10 20 30 40 50 60 70 80 90
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+probability of transporting
+nest population
+0 5 10 15
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9proportion looking up
+size of crowd
+5 10 150
+0.001
+0.002
+0.003
+0.004
+0.005
+0.006
+0.007
+0.008
+0.009
+0.010probability of leaving
+number of cockroaches in the shelter
+(a)( b)
+(c) 0.4
+0.3
+0.2
+0.1
+0
+02468
+number of ants A
+indivdual probability of leaving
+pL (s–1)
+(d)
+Figure 7. Examples of response thresholds. (a) The probability of a recruitingT emnothorax albipennisant performing a transport
+rather than a tandem run, as a function of the mean nest population ( N ) of the destination site on her immediately previous
+visit there (data from Pratt 2005, in press). The ﬁtted line is N6:3=ð20:26:3 CN6:3Þ.( b) The mean proportion of passer-by’s
+looking up as a function of the size of a group (C ) of people stood in the street looking up at a sixth ﬂoor window (taken from
+Milgram 1992). Fitted line is 0 :92!C1:04=ð1:221:04 CC1:04Þ, giving a threshold of 1.22. ( c) The probability of a cockroach
+leaving a shelter as a function of the number of other cockroaches ( C) on the site (taken from Ame et al. 2004). Fitted line is
+0:06!1=ð6CC2Þ.( d ) The probability per second of an ant moving away from a stopped group of ants as a function of the
+number of stopped ants ( A; taken from Depickere et al. 2004). Fitted line is 0 :35AK2:125.
+16 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 13 =====
+stimulus is other individuals. For T emnothoraxants the
+stimulus is the density of ants within a nest cavity
+(ﬁgure 7a). When the density reaches at least 20.2 ants
+in a 24 cm
+2 nest, the ants switch from tandem run
+recruitment to transporting ( Pratt 2005, in press). In
+this sense the response threshold acts as a quorum;
+above the quorum a more rapid form of recruitment
+begins (Pratt et al. 2002).
+Milgram et al. (1969), reported in Milgram (1992),
+planted a stimulus group of people, all of whom looked
+up at a supposed point of interest on the pavement on a
+busy street. The proportion of naı ¨ve passers-by who
+looked up at the point was then observed as a function
+of the size of the stimulus group ( ﬁgure 7 b). The
+proportion of those looking up increased as a function
+of group size in a form similar to that seen in the
+response of the ants to nest mates. The larger the group
+the larger the probability of stopping. The same
+behaviour is observed in ants ( ﬁgure 7 c) and cock-
+roaches (ﬁgure 7d ). In these cases the amount of time
+spent sitting still increases as a threshold like function
+of group size. In all these cases, response thresholds can
+interact with positive feedback to generate local
+aggregations. If only one person stops in the street
+there is only a 40% chance of another following their
+gaze and a group is unlikely to build up. If by chance
+ﬁve people stop and look up then the probability
+increases to 80% and the group has a higher probability
+of becoming stable, even in the absence of any true
+stimulus.
+(e) Leadership
+The notion of self-orga nization seems somehow
+incompatible with the notion of leadership. In insect
+societies, however, there are some key individuals that
+catalyse and organize the group ( Robson & Traniello
+1999). A classic example of catalyst behaviour is the
+shaking signal in honey bees. When foraging begins in
+the morning some of the ﬁrst foraging bees to ﬁnd food
+shake the other bees deep in the hive ( Seeley 1995),
+serving to inform those bees that a period of greater
+activity is about to begin ( Seeley et al . 1998 ). The
+distribution of number of shaking signal bouts across
+individual bees during their lifetime is highly skewed,
+indicating that it is certain bees that act as catalysts
+(Biesmeijer 2003). Often leadership is assumed by the
+possession of particular information. In ﬁsh, a small
+number of informed individuals can lead the migration
+of larger numbers of individuals (Reebs 2000). Couzin
+et al. (2005) used an SPP model to show that the larger
+the group, the smaller the proportion of informed
+individuals required to lead it. This result relies on the
+fact that followers are subject to positive feedback. As a
+few individuals follow a leader, other individuals follow
+these followers and the group takes a single direction.
+Rather than being opposites, self-organized positive
+feedback and leadership are instead powerfully com-
+bined to produce co-ordinated collective migration.
+(f) Inhibition
+Members of a group exhibiting one type of behaviour
+can inhibit the behaviour of others. When this
+inhibition is passive it is indistinguishable from negative
+feedback. For example, as ants are recruited to one
+food source the number available to visit another is
+reduced. Inhibition can also be active, whereby
+members of one group actively try to reduce another
+type of behaviour. For example, when choosing a new
+nest T emnothorax albipenis ants who have begun
+transporting to one nest site will, if they encounter an
+alternative nest site that they rank as inferior, begin
+transporting away from that nest to the nest they ﬁrst
+transported to (Mallon et al. 2001; Pratt et al. 2002). If,
+as often happens during T emnothorax emigrations,
+transport begins to more than one potential nest site,
+these between site transports provide between site
+inhibition. Transports away from a potential nest
+site will reduce the population and the probability the
+nest will reach quorum, and thus the incidence of
+splitting between nest sites.
+(g) Redundancy
+Very little is known about the value of redundancy in
+animal groups or even our own society, but it is often
+implicated in the observation that, as Francis Ratnieks
+has put it, ‘insect societies never crash’. Unlike
+computers, which are constructed of many specialized
+and essential components, insect societies consist, with
+the possible exception of the queen, of vast numbers of
+replaceable units: 20–30% of honey bee workers rest at
+any one time ( Seeley 1995). If one type of honey bee
+workers, for example foragers, are removed, these are
+rapidly replaced by a new cohort of younger bees
+(Lindauer 1952 ). The apparent redundancy in the
+system allows it to continue to function even when
+faced with a major reduction in its workforce.
+(h) Synchronization
+Audience applause and other synchronization phenom-
+ena are achieved through small adjustments by
+individuals of their own frequency towards that of
+some local average. Essentially, synchronization is an
+example of positive feedback in time rather than space.
+The coupling of synchronization in time with positive
+feedback in space may have an important role in
+determining the productivity of animal groups. For
+example, some ant colonies synchronize bouts of
+resting and activity ( Cole 1991). If by all being active
+a tt h es a m et i m et h ea n t sc a nd i s p r o p o r t i o n a b l y
+increase their ‘output’ (as in ﬁgure 4 b), then being
+synchronized will see an overall increase in output
+compared to constant activity levels.
+(i) Selﬁshness
+Tucked away here, as the last subheading in a section
+on components of collective behaviour, is the question
+that would spring to many biologists’ mind even before
+I began giving different examples of collective animal
+behaviour: ‘how did these collective behaviours evolve
+through natural selection?’ I have made no attempt up
+to now to address the problem of the ‘ultimate’ reason
+for cockroach aggregation, ﬁsh schools, ant trail
+networks or audience applause. In the light of my
+discussion of a universal theorem this omission may be
+considered neglectful. There is only one theory of
+biological systems that has any claim on universality
+and that is natural selection. In relation to group co-
+operation, natural selection produces Hamilton’s rule:
+Principles of collective animal behaviour D. J. T. Sumpter 17
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 14 =====
+the relatedness of the individual that proﬁts from the
+altruistic act of the focal individual must be higher than
+the cost/beneﬁt ratio this act imposes (Hamilton 1964).
+All collective animal behaviour involves some form of
+co-operation, in the sense that individuals interact to
+form a pattern that is larger in scale than one
+individual. Hamilton’s rule can explain many of the
+sophisticated forms of co-operation that have evolved
+in social insects, where inter-individual relatedness is
+high (Trivers & Hare 1976 ; Crozier & Pamilo 1996 ).
+Similar reasoning often explains helping behaviour in
+mammals and birds ( Grifﬁn & West 2003). However,
+many studies have failed to detect the levels of
+relatedness predicted for highly co-operative insect
+societies (reviewed by Korb & Heinze 2004), and at all
+levels of biological organization helping behaviour can
+be uncorrelated with relatedness (Grifﬁn & West 2002).
+In cases where collective patterns are generated by
+individuals with low inter-individual relatedness, it
+could be the collective properties of the animal groups
+that are subject to natural selection. For example, if
+working as part of a group means that the group
+becomes more than the sum of its parts, then unrelated
+individuals can increase their own ﬁtness by being part
+of the group. Also, genetically diverse groups may
+beneﬁt from inter-individual variability in terms
+of better informed collective decisions ( Fuchs &
+Schade 1994 ; but see evidence to the contrary in
+Neumann & Moritz 2000) and disease resistance (Baar
+& Schmid-Hempel 1999 ). There is observational
+evidence for such possibilities; many of the behavioural
+interactions observed in ant colonies, such as positive
+feedback and threshold response, are also seen in
+cockroaches ( Deneubourg et al . 2002 ) and locusts
+(Simpson et al . 1999 ). The problem with invoking
+natural selection on the collective properties of groups
+is that individuals should act to maximize their own
+ﬁtness. If one individual can beneﬁt from the other
+individuals’ co-operation, without paying any cost
+associated with the resulting collective pattern, then it
+can pass on its genes more effectively than those paying
+the cost. Ultimately, such reasoning can predict
+changes in the shape or even the collapse of collective
+patterns that can be exploited.
+Collapse of co-operation need not always occur just
+because individuals are expected to act only in pursuit
+of their own reproductive interests or economic gain.
+The last thirty years has seen an explosion of theories
+and experimental tests of theories of why selﬁsh
+individuals ‘apparently’ co-operate: aggregations may
+result from individuals attempting to put others
+between themselves and danger to create a selﬁsh
+herd ( Hamilton 1971 ) or to minimize the cost of
+disintegration (Parrish & Edelstein-Keshet 1999 ); co-
+operation can evolve where individuals interact repeat-
+edly with, or are spatially located close to, each other
+(Nowak & May 1992; Doebeli & Hauert 2005); and in
+some cases, such as worker policing by honey bees
+(Ratnieks 1988 ; Ratnieks & Visscher 1989 ), group
+members actively search out and stop cheaters. In all
+cases, the argument for why acting alone or cheating
+does not out-compete co-operation ﬁrst requires a full
+understanding of the other components of collective
+behaviour. Likewise, rather than being an alternative to
+the mechanistic approach of studying the components
+of collective behaviour, the selﬁshness idea provides us
+with useful constraints on the possible behavioural
+algorithms evolved by individuals in groups.
+6. VISION OF THE FUTURE
+This paper is part of a series of special issues by young
+scientists looking into the future of their ﬁelds. In order
+to think about the future I started by reading the books
+by the pioneers of self-organization—von Bertanﬂy,
+Weiner and Nicolis & Prigogine—to ﬁnd out how they
+saw the future when they ﬁrst had the ideas that have
+inspired our work today. What struck me most was how
+much their vision for the future was also the vision for
+the future that is common to all aspects of modern
+biology, from post-human genome genetics to biodi-
+versity. The emphasis then was on ‘systems biology’, on
+understanding how different parts of biological systems
+work together, moving away from reductionism and
+establishing principles for biological organization. Pick
+up a recent copy of Science or Nature and these same
+issues ﬁll the discussion pages. How do we integrate all
+we know about the parts of biological systems to
+understand how they function at a collective level?
+At ﬁrst thought, it sounds depressing that the vision
+so many of us have for the future is the same as that of
+scientists writing 30 or even 50 years ago. It appears
+that the pioneers of self-organization were wrong when
+they proclaimed the immediate future as a future of
+‘systems biology’. Instead, biology became a ﬁeld of
+super-efﬁcient stamp collecting with research projects,
+most notably the genome projects, mapping out the
+detailed structure of the units making up the biological
+world. 30 years on we have a lot more information, but
+we are only a little wiser as to how we should put it all
+together. Gradually, however, we are beginning to
+understand how the parts of biological systems make
+up the whole. The examples I have presented here
+illustrate how through a combination of mathematical
+modelling, experimental manipulation and observation
+we can begin to understand collective animal beha-
+viour. Similar progress has been made in the study of
+other complex biological systems from human organs
+(Hunter & Borg 2003 ) to ecosystems ( Levin 2000 ).
+Often such understanding relies on technology, such as
+digital tracking and computer simulations, that was not
+available even 10 years ago. The technological tools
+may ﬁnally be available for us to begin to disentangle
+biological complexity.
+So my primary vision for the future is the further use
+of technology and mathematics for ﬁnally doing
+‘systems biology’. We now have a large number of the
+technological tools for performing data analysis and
+building detailed mathematical models. The work I
+have described here has applied these tools mainly to
+the study of insect societies, but they can also be used to
+look at locust swarms, ﬁsh schools, human crowds,
+commercial farm animals and many other animal
+groups. The immediate future should see greater
+emphasis on application of some of the theories
+developed over the last 30 years. With more appli-
+cations will also come a greater pragmatism on the part
+18 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 15 =====
+of the theoreticians and an increased understanding of
+the use of mathematics on the part of experimentalists.
+I hope the term self-organized will be replaced
+gradually by something akin to the principles I describe
+here. Describing a system as self-organized tells us little
+about how it actually works, while providing a slight
+sense of mysticism. From a practical point of view it is
+better to say that the behaviour of a system arises from a
+particular combination of, for example, positive feed-
+back, response thresholds and negative feedback. Such
+description allows for more detailed between system
+comparisons, not only between different types of
+collective animal behaviour but across all complex
+systems. In this article I have avoided using any
+mathematics in the main text, but nearly all of the
+systems I describe have been understood with the help
+of a mathematical model of some sort. I would like to
+see the development of mathematics that is appropriate
+for describing different principles of collective beha-
+viour, but does not insist that the whole world should ﬁt
+in to a certain type of equation. If there are so many
+principles underlying collective behaviour it is unlikely
+that a single formalism can describe them all. Instead,
+mathematics should help us formulate and test
+hypotheses, but our understanding of experimental
+results should be brought together by a common non-
+mathematical language.
+A slightly more controversial vision I have for the
+future is that the division between evolutionary biology
+and mechanistic biology will narrow. At present
+researchers can often be classiﬁed as looking at ‘why’
+questions of the evolution of collective behaviour and
+the ‘how’ questions of the way animal groups function.
+This division is, however, narrowing as evolutionary
+biologists become interested in how, for example,
+beneﬁts of being in a group changes with group size.
+This important function in calculating optimal group
+joining strategy can only be found by detailed knowl-
+edge of how a group is made up of its parts. Likewise,
+biologists whose interest in collective behaviour comes
+from a background in mathematics or physics cannot
+ignore the importance of selﬁshness behaviour in group
+situations. The view I have taken in this article is that
+the primary aim of the study of collective animal
+behaviour is to determine the algorithms that produce
+the collective behaviour and to understand the
+principles that underlie these algorithms. Natural
+selection and the ultimate reasons for and evolutionary
+origin of this behaviour becomes just one of the
+principles in obtaining such understanding.
+If natural selection is to lose its central importance in
+animal behaviour, then rationality is also to lose its grip
+on the study of human behaviour. Rationality has long
+been considered the null model for economics (Popper
+1957), and has assumed importance in the under-
+standing of how humans will behave in group
+situations. Like natural selection, rationality is also
+only one of the principles that govern collective
+behaviour in humans ( Schelling 1978 ; Milgram
+1992). The positive feedback in consumer choice, the
+synchronization of applause and the threshold response
+to a crowd are also important principles. I have
+endeavoured in this article to show that many collective
+human behaviours are similar to their animal
+counterparts. In fact, they are so similar that the
+same mathematical models can be used to describe
+collective patterns in both humans and animals. Such
+understanding could be invaluable in designing the
+spaces in which we live and work, or in developing
+product advertising campaigns. It would not tell us
+what it feels like to be part of a football crowd, but it
+could tell us how to construct an easily evacuated
+football ground. While I can never be sure what
+students might talk about together after their morning
+lectures, I might one day be able to predict how long
+they have to queue for a cup of coffee.
+I would like to thank Madeleine Beekman, David Broom-
+head, Anders Johansson, Stephen Pratt, Francis Ratnieks,
+Max Reuter, Nicole Saam and Lovisa Sumpter for many
+interesting conversations that have contributed to this article.
+Thank you to Hedi Emmerig and Iain Couzin for careful
+readings, and to the two reviewers for their comments. This
+research was funded by the Royal Society.
+REFERENCES
+Ame, J. M., Rivault, C. & Deneubourg, J. L. 2004 Cockroach
+aggregation based on strain odour recognition. Anim.
+Behav. 68, 793–801. ( doi:10.1016/j.anbehav.2004.01.
+009)
+Anderson, C. & McShea, D. W . 2001 Individual versus social
+complexity, with particular reference to ant colonies. Biol.
+Rev. 76, 211–237. (doi:10.1017/S1464793101005656)
+Ashby, W . R. 1947 Principles of the self-organizing dynamic
+system. J. Gen. Psychol., 125–128.
+Baar, B. & Schmid-Hempel, P. 1999 Experimental variation
+in polyandry affects parasite load and ﬁtness in a bumble
+bee. Nature 397, 151–153. (doi:10.1038/16451)
+Bak, P. 1996 How nature works: the science of self-organized
+criticality. New Y ork: Copernicus Books.
+Beckers, R., Goss, S., Deneubourg, J. L. & Pasteels, J. M.
+1989 Colony size, communication and ant foraging
+strategy. Psyche 96, 239–256.
+Beckers, R., Deneubourg, J. L. & Goss, S. 1992 Trails and
+U-turns in the selection of a path by the ant Lasius–Niger.
+J. Theor. Biol. 159, 397–415.
+Beckers, R., Deneubourg, J. L. & Goss, S. 1993 Modulation
+of trail laying in the ant Lasius–Niger (hymenoptera,
+formicidae) and its role in the collective selection of a food
+source. J. Insect Behav. 6, 751–759. ( doi:10.1007/
+BF01201674)
+Beekman, M., Sumpter, D. J. T. & Ratnieks, F. L. W . 2001
+Phase transition between disordered and ordered foraging
+in Pharaoh’s ants. Proc. Natl Acad. Sci. USA 98,
+9703–9706. (doi:10.1073/pnas.161285298)
+Biesmeijer, J. C. 2003 The occurrence and context of the
+shaking signal in honey bees ( Apis mellifera ) exploiting
+natural food sources. Ethology 109, 1009–1020. ( doi:10.
+1046/j.0179-1613.2003.00939.x)
+Biesmeijer, J. C. & de Vries, H. 2001 Exploration and
+exploitation of food sources by social insect colonies: a
+revision of the scout-recruit concept. Behav. Ecol. Socio-
+biol. 49, 89–99. (doi:10.1007/s002650000289)
+Boi, S., Couzin, I. D., Del Buono, N., Franks, N. R. &
+Britton, N. F. 1999 Coupled oscillators and activity waves
+in ant colonies. Proc. R. Soc. B 266, 371–378. ( doi:10.
+1098/rspb.1999.0647)
+Bonabeau, E., Theraulaz, G., Deneubourg, J. L., Aron, S. &
+Camazine, S. 1997 Self-organization in social insects.
+Trends Ecol. Evol. 12, 188–193. (doi:10.1016/S0169-5347
+(97)01048-3)
+Principles of collective animal behaviour D. J. T. Sumpter 19
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 16 =====
+Bonabeau, E., Theraulaz, G., Deneubourg, J. L., Franks,
+N. R., Rafelsberger, O., Joly, J. L. & Blanco, S. 1998 A
+model for the emergence of pillars, walls and royal
+chambers in termite nests. Phil. Trans. R. Soc. B 353,
+1561–1576. (doi:10.1098/rstb.1998.0310)
+Bortkiewicz, L. J. 1898 The law of small numbers.
+Buck, J. & Buck, E. 1976 Synchronous ﬁreﬂies.Sci. Am. 234,
+74–85.
+Camazine, S., Visscher, P. K., Finley, J. & Vetter, R. S. 1999
+House-hunting by honey bee swarms: collective decisions
+and individual behaviors. Insect. Soc. 46, 348–360.
+(doi:10.1007/s000400050156)
+Camazine, S., Deneubourg, J. L., Franks, N. R., Sneyd, J.,
+Theraulaz, G. & Bonabeau, E. 2001 Self-organization in
+biological systems. Princeton studies in complexity. Princeton,
+NJ: Princeton University Press.
+Chretien, L. 1996 Organisation spatiele du materiel prove-
+nant de l’excavation du nid chez Messor barbarus et des
+cadavres d’ouvrieres chez Lasius niger (Hymenoptera:
+Formicidae). In Center for nonlinear phenomena and complex
+systems, Ph.D. thesis, Universite Libre de Bruxelles,
+Brussles.
+Cole, B. J. 1991 Short-term activity cycles in ants: generation
+of periodicity through worker interaction. Am. Nat. 137,
+244–259. (doi:10.1086/285156)
+Collett, M., Despland, E., Simpson, S. J. & Krakauer, D. C.
+1998 Spatial scales of desert locust gregarization. Proc.
+Natl Acad. Sci. USA 95, 13 052–13 055. ( doi:10.1073/
+pnas.95.22.13052)
+Couzin, I. D. & Krause, J. 2003 Self-organization and
+collective behavior in vertebrates. Adv. Study Behav. 32,
+1–75. (doi:full_text)
+Couzin, I. D., Krause, J., James, R., Ruxton, G. D. & Franks,
+N. R. 2002 Collective memory and spatial sorting in
+animal groups. J. Theor. Biol.218, 1–11. (doi:10.1006/jtbi.
+2002.3065)
+Couzin, I. D., Krause, J., Franks, N. R. & Levin, S. A. 2005
+Effective leadership and decision-making in animal
+groups on the move. Nature 433, 513–516. (doi:10.1038/
+nature03236)
+Crozier, R. H. & Pamilo, P. 1996 Evolution of social insect
+colonies: sex allocation and kin selection. Oxford series in
+ecology and evolution . Oxford, UK: Oxford University
+Press.
+Czirok, A. & Vicsek, T. 2000 Collective behavior of
+interacting self-propelled particles. Physica A 281, 17–29.
+Czirok, A., Barabasi, A. L. & Vicsek, T. 1999 Collective
+motion of self-propelled particles: kinetic phase transition
+in one dimension. Phys. Rev. Lett. 82, 209–212.
+Deneubourg, J. L. 1977 Application de l’ordre par ﬂuctu-
+ations a ` la description de certaines e ´ tapes de la
+construction du nid chez les termites. Insect. Soc. 24,
+117–130. (doi:10.1007/BF02227166)
+Deneubourg, J. L. & Goss, S. 1989 Collective patterns and
+decision-making. Ethol. Ecol. Evol. 1, 295–311.
+Deneubourg, J. L., Goss, S., Franks, N. & Pasteels, J. M.
+1989 The blind leading the blind: modeling chemically
+mediated army ant raid patterns. J. Insect Behav. 2,
+719–725. (doi:10.1007/BF01065789)
+Deneubourg, J. L., Lioni, A. & Detrain, C. 2002 Dynamics of
+aggregation and emergence of cooperation.Biol. Bull. 202,
+262–267.
+Depickere, S., Fresneau, D. & Deneubourg, J. L. 2004
+Dynamics of aggregation in Lasius niger (Formicidae):
+inﬂuence of polyethism. Insectes Sociaux 51, 81–90.
+Detrain, C. & Deneubourg, J. L. 1997 Scavenging byPheidole
+pallidula: a key for understanding decision-making systems
+in ants. Anim. Behav. 53, 537–547. ( doi:10.1006/anbe.
+1996.0305)
+Detrain, C. & Deneubourg, J. L. 2002 Complexity of
+environment and parsimony of decision rules in insect
+societies. Biol. Bull. 202, 268–274.
+Detrain, C., Deneubourg, J. L. & Pasteels, J. M. 1999
+Decision-making in foraging by social insects. In Infor-
+mation processing in social insects (ed. C. Detrain, J. L.
+Deneubourg & J. M. Pasteels), pp. 331–354. Basel:
+Birkha¨user Verlag.
+Doebeli, M. & Hauert, C. 2005 Models of cooperation
+based on the prisoner’s dilemma and the snowdrift game.
+Ecol. Lett. 8, 748–766. ( doi:10.1111/j.1461-0248.2005.
+00773.x)
+Farkas, I., Helbing, D. & Vicsek, T. 2002 Social behaviour:
+Mexican waves in an excitable medium—The stimulation
+of this concerted motion among expectant spectators is
+explained. Nature 419, 131–132. (doi:10.1038/419131a)
+Farkas, I., Helbing, D. & Vicsek, T. 2003 Human waves in
+stadiums. Physica A—Stat. Mech. Appl. 330, 18–24.
+(doi:10.1016/j.physa.2003.08.014)
+Fewell, J. H. 2003 Social insect networks. Science 301,
+1867–1870. (doi:10.1126/science.1088945)
+Franks, N. R., Bryant, S., Grifﬁths, R. & Hemerik, L. 1990
+Synchronization of the behaviour within nests of the ant
+Lepothorax acervorum (Fabricius): I. Discovering the
+phenomenon and its relation to the level of starvation.
+Bull. Math. Biol. 52, 597–612. ( doi:10.1016/S0092-
+8240(05)80368-4)
+Franks, N. R., Gomez, N., Goss, S. & Deneubourg, J. L.
+1991 The blind leading the blind in army ant raid patterns:
+testing a model of self-organization (Hymenoptera:
+Formicidae). J. Insect Behav. 4, 583–607. ( doi:10.1007/
+BF01048072)
+Franks, N. R., Dornhaus, A., Fitzsimmons, J. P. & Stevens,
+M. 2003 a Speed versus accuracy in collective decision
+making. Proc. R. Soc. B 270, 2457–2463. ( doi:10.1098/
+rspb.2003.2527)
+Franks, N. R., Mallon, E. B., Bray, H. E., Hamilton, M. J. &
+Mischler, T. C. 2003 b Strategies for choosing between
+alternatives with different attributes: exempliﬁed by
+house-hunting ants. Anim. Behav. 65, 215–223. (doi:10.
+1006/anbe.2002.2032)
+Fuchs, S. & Schade, V . 1994 Lower performance in honey
+bee colonies of uniform paternity. Apidologie 25, 155–168.
+Galton, F. 1907 Vox populi. Nature 75, 450–451.
+Gregoire, G. & Chate, H. 2004 Onset of collective and
+cohesive motion. Phys. Rev. Lett., 92.
+Gregoire, G., Chate, H. & Tu, Y . H. 2003 Moving and staying
+together without a leader. Physica D—Nonlin. Phenom.
+181, 157–170. (doi:10.1016/S0167-2789(03)00102-7)
+Grifﬁn, A. S. & West, S. A. 2002 Kin selection: fact and
+ﬁction. Trends Ecol. Evol. 17, 15–21. (doi:10.1016/S0169-
+5347(01)02355-2)
+Grifﬁn, A. S. & West, S. A. 2003 Kin discrimination and the
+beneﬁt of helping in cooperatively breeding vertebrates.
+Science 302, 634–636. (doi:10.1126/science.1089402)
+Gueron, S., Levin, S. A. & Rubenstein, D. I. 1996 The
+dynamics of mammalian herds: from individual to
+aggregations. J. Theor. Biol. 182, 85–98. ( doi:10.1006/
+jtbi.1996.0144)
+Hamilton, W . D. 1964 The genetical evolution of social
+behaviour. I, II.J. Theor. Biol.7, 1–52. (doi:10.1016/0022-
+5193(64)90038-4)
+Hamilton, W . D. 1971 Geometry for the selﬁsh herd.
+J. Theor. Biol. 31, 295–311. (doi:10.1016/0022-5193(71)
+90189-5)
+Helbing, D. & Huberman, B. A. 1998 Coherent moving
+states in highway trafﬁc. Nature 396, 738–740. ( doi:10.
+1038/25499)
+20 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 17 =====
+Helbing, D. & Molnar, P. 1995 Social force model for
+pedestrian dynamics. Phys. Rev. E 51, 4282–4286.
+(doi:10.1103/PhysRevE.51.4282)
+Helbing, D. & Treiber, M. 1998 Trafﬁc theory—jams, waves,
+and clusters. Science 282, 2001–2003. ( doi:10.1126/
+science.282.5396.2001)
+Helbing, D., Farkas, I. & Vicsek, T. 2000 Simulating
+dynamical features of escape panic. Nature 407,
+487–490. (doi:10.1038/35035023)
+Hoare, D. J., Couzin, I. D., Godin, J. G. J. & Krause, J. 2004
+Context-dependent group size choice in ﬁsh.Anim. Behav.
+67, 155–164. (doi:10.1016/j.anbehav.2003.04.004)
+Ho¨lldobler, B. & Wilson, E. O. 1990 The ants. Cambridge,
+MA: Belknap Press of Harvard University Press.
+Hunter, P. J. & Borg, T. K. 2003 Integration from proteins to
+organs: the physiome project.Nat. Rev. (Mol. Cell Biol.)4,
+237–243. (doi:10.1038/nrm1054)
+Jackson, D. E., Holcombe, M. & Ratnieks, F. L. W . 2004
+Knowing which way to go—trail geometry gives polarity to
+ant foraging networks. Nature 432, 907–909. ( doi:10.
+1038/nature03105)
+Jackson, D. E., Martin, S. J., Holcombe, M., Ratnieks, F. L.
+W . In press. Longevity and detection of persistent foraging
+trails in Pharaoh’s ants,Monomorium pharaonis (L.). Anim.
+Behav.
+Jeanne, R. L. (ed.) 1988 Interindividual behavioral variability
+in social insects. Boulder, CO: Westview Press.
+Jeanson, R., Deneubourg, J. L. & Theraulaz, G. 2004
+Discrete dragline attachment induces aggregation in
+spiderlings of a solitary species. Anim. Behav. 67,
+531–537. (doi:10.1016/j.anbehav.2003.06.013)
+Jeanson, R., Rivault, C., Deneubourg, J. L., Blanco, S., Jost,
+C. & Theraulaz, G. 2005 Self-organized aggregation in
+cockroaches. Anim. Behav. 69, 167–180. ( doi:10.1016/
+j.anbehav.2004.02.009)
+Kauffman, S. A. 1993 The origins of order . Oxford, UK:
+Oxford University Press.
+Kitano, H. 2002 Computational systems biology.Nature 420,
+206–210. (doi:10.1038/nature01254)
+Korb, J. & Heinze, J. 2004 Multilevel selection and social
+evolution of insect societies. Naturwissenschaften 91,
+291–304. (doi:10.1007/s00114-004-0529-5)
+Kuramoto, Y . 1975 Self-entrainment of a population of
+coupled oscillators. InInt. Symp. on Mathematical Problems
+in Theoretical Physics (ed. H. Araki), vol. 39. Berlin:
+Springer.
+Kuramoto, Y . 1984Chemical oscillations, waves and turbulence.
+Berlin: Springer.
+Levin, S. A. 2000 Fragile dominion: complexity and the
+commons. Reading, MA: Helix books.
+Lindauer, M. 1952 Ein Beitrag zur Frage der Arbeitsteilung
+im Bienenstaat. Z. V ergl. Physiol. 34, 299–345. ( doi:10.
+1007/BF00298048)
+Mackinson, S. 1999 Variation in structure and distribution of
+pre-spawning Paciﬁc herring shoals in two regions of
+British Columbia. J. Fish Biol. 55, 972–989.
+Mailleux, A. C., Jean-Louis, D. & Detrain, C. 2000 How do
+ants assess food volume? Anim. Behav. 59, 1061–1069.
+Mallon, E. B., Pratt, S. C. & Franks, N. R. 2001 Individual
+and collective decision-making during nest site selection
+by the antLeptothorax albipennis. Behav. Ecol. Sociobiol.50,
+352–359. (doi:10.1007/s002650100377)
+Milgram, S. 1992 The individual in the social world. New York:
+McGraw-Hill.
+Milgram, S. & Toch, H. 1969 Collective behaviour: crowds
+and social movements. In The handbook of social psychology
+(ed. G. Lindzey & E. Aronson), vol. IV . Reading, MA:
+Addison-Wesley.
+Milgram, S., Bickman, L. & Berkowitz, L. 1969 Note on the
+drawing power of crowds of different size. J. Pers. Soc.
+Psychol. 13, 79–82.
+Mo¨glich, M. 1978 Social organization of nest emigration in
+Leptothorax (Hym., Form.). Insect. Soc. 25, 205–225.
+(doi:10.1007/BF02224742)
+Neda, Z., Ravasz, E., Brechet, Y., Vicsek, T. & Barabasi, A. L.
+2000a The sound of many hands clapping. Nature 403,
+849. (doi:10.1038/35002660)
+Neda, Z., Ravasz, E., Vicsek, T., Brechet, Y. & Barabasi, A. L.
+2000b Physics of the rhythmic applause. Phys. Rev. E 61,
+6987–6992. (doi:10.1103/PhysRevE.61.6987)
+Neumann, P. & Moritz, R. F. A. 2000 Testing genetic
+variance hypotheses for the evolution of polyandry in the
+honeybee (Apis mellifera capensis Escholtz). Insect. Soc. 41,
+271–279.
+Nicolis, G. & Prigogine, I. 1977 Self-organization in non-
+equilibrium systems. New Y ork: Wiley.
+Nowak, M. A. & May, R. M. 1992 Evolutionary games
+and spatial chaos. Nature 359, 826–829. ( doi:10.1038/
+359826a0)
+Okubo, A. 1986 Dynamical aspects of animal grouping.Adv.
+Biophys. 22, 1–94. (doi:10.1016/0065-227X(86)90003-1)
+Ormerod, P. 1998 Butterﬂy economics. New Y ork: Pantheon
+books.
+Pankiw, T. & Page, R. E. 2000 Response thresholds to
+sucrose predict foraging division of labor in honeybees.
+Behav. Ecol. Sociobiol. 47, 265–267. ( doi:10.1007/
+s002650050664)
+Parrish, J. K. & Edelstein-Keshet, L. 1999 Complexity,
+pattern, and evolutionary trade-offs in animal aggregation.
+Science 284, 99–101.
+Parrish, J. K., Viscido, S. V. & Grunbaum, D. 2002 Self-
+organized ﬁsh schools: An examination of emergent
+properties. Biol. Bull. 202, 296–305.
+Partridge, B. L. J. 1982 The structure and function of ﬁsh
+schools. Scientiﬁc American 246.
+Partridge, B. L. J., Johansson, J. & Kalisk, J. 1983 Structure of
+schools of giant blueﬁn tuna in Cape Cod Bay. Environ.
+Biol. Fish. 9, 253–262.
+Popper, K. 1957 The poverty of historicism . London/USA:
+Routledge/Abingdon.
+Pratt, S. C. 2005 Detection of a nestmate quorum by
+encounter rates in the ant Leptothorax albipennis. Behav.
+Ecol. 16, 488–496. (doi:10.1093/beheco/ari020)
+Pratt, S. C. In press. Behavioural mechanisms of collective
+nest-site choice by the ant T emnothorax curvispinosis.
+Insect. Soc.
+Pratt, S. C. & Pierce, N. E. 2001 The cavity-dwelling ant
+Leptothorax curvispinosus uses nest geometry to dis-
+criminate between potential homes. Anim. Behav. 62,
+281–287. (doi:10.1006/anbe.2001.1777)
+Pratt, S. C., Mallon, E. B., Sumpter, D. J. T. & Franks, N. R.
+2002 Quorum sensing, recruitment, and collective
+decision-making during colony emigration by the ant
+Leptothorax albipennis. Behav. Ecol. Sociobiol. 52, 117–127.
+(doi:10.1007/s00265-002-0487-x)
+Pratt, S. C., Sumpter, D. J. T., Mallon, E. B. & Franks, N. R.
+2005 An agent-based model of collective nest site choice
+by the ant Leptothorax albipennis . Anim. Behav. 70,
+1023–1036.
+Ratnieks, F. L. W . 1988 Reproductive harmony via mutual
+policing by workers in Eusocial hymenoptera. Am. Nat.
+132, 217–236. (doi:10.1086/284846)
+Ratnieks, F. L. W . & Visscher, P. K. 1989 Worker policing in
+the honeybee. Nature 342, 796–797. ( doi:10.1038/
+342796a0)
+Reebs, S. G. 2000 Can a minority of informed leaders
+determine the foraging movements of a ﬁsh shoal? Anim.
+Behav. 59, 403–409. (doi:10.1006/anbe.1999.1314)
+Principles of collective animal behaviour D. J. T. Sumpter 21
+Phil. Trans. R. Soc. B (2006)
+
+===== PAGE 18 =====
+Reynolds, C. W . 1987 Flocks, herds and schools: a
+distributed behavioural model. Comp. Graph. 21, 25–33.
+Robson, S. K. & Traniello, J. F. A. 1999 Key individuals and
+the organisation of labor in ants. In Information processing
+in social insects (ed. C. Detrain, J. L. Deneubourg & J. M.
+Pasteels), pp. 239–259. Basel: Birkhauser.
+Schelling, T. 1978 Micromotives and macrobehaviour . New
+York: Norton.
+Seeley, T. D. 1995 The wisdom of the hive . Cambridge, MA:
+Belknap Press of Harvard University Press.
+Seeley, T. D. 1998 Thoughts on information and integration
+in honey bee colonies. Apidologie 29, 67–80.
+Seeley, T. D. 2002 When is self-organization used in
+biological systems? Biol. Bull. 202, 314–318.
+Seeley, T. D. 2003 Consensus building during nest-site
+selection in honey bee swarms: the expiration of dissent.
+Behav. Ecol. Sociobiol. 53, 417–424.
+Seeley, T. D. & Buhrman, S. C. 2001 Nest-site selection in
+honey bees: how well do swarms implement the “best-of-
+N” decision rule? Behav. Ecol. Sociobiol. 49, 416–427.
+(doi:10.1007/s002650000299)
+Seeley, T. D. & Visscher, P. K. 2003 Choosing a home: how
+the scouts in a honey bee swarm perceive the completion
+of their group decision making. Behav. Ecol. Sociobiol. 54,
+511–520. (doi:10.1007/s00265-003-0664-6)
+Seeley, T. D. & Visscher, P. K. 2004 Quorum sensing
+during nest-site selection by honeybee swarms. Behav.
+Ecol. Sociobiol. 56, 594–601. ( doi:10.1007/s00265-004-
+0814-5)
+Seeley, T. D., Camazine, S. & Sneyd, J. 1991 Collective
+decision-making in honey bees: how colonies choose
+among nectar sources. Behav. Ecol. Sociobiol. 28,
+277–290. (doi:10.1007/BF00175101)
+Seeley, T. D., Weidenmuller, A. & Kuhnholz, S. 1998 The
+shaking signal of the honey bee informs workers to prepare
+for greater activity. Ethology 104, 10–26.
+Simpson, S. J., McCaffery, A. R. & Hagele, B. F. 1999
+A behavioural analysis of phase change in the desert
+locust. Biol. Rev. 74, 461–480. ( doi:10.1017/S00063231
+9900540X)
+Simpson, S. J., Despland, E., Hagele, B. F. & Dodgson, T.
+2001 Gregarious behavior in desert locusts is evoked by
+touching their back legs. Proc. Natl Acad. Sci. USA 98,
+3895–3897. (doi:10.1073/pnas.071527998)
+Sornette, D. 2004 Critical phenomena in natural sciences .
+Berlin: Springer.
+Stern, K. & McClintock, M. K. 1998 Regulation of oculation
+by human pheromones. Nature 392, 177–179. ( doi:10.
+1038/32408)
+Strogatz, S. 2003 Sync: the emerging science of spontaneous
+order. London: Penguin books.
+Sumpter, D. J. T. & Beekman, M. 2003 From nonlinearity to
+optimality: pheromone trail foraging by ants.Anim. Behav.
+66, 273–280. (doi:10.1006/anbe.2003.2224)
+Surowiecki, J. 2004 The wisdom of crowds . New Y ork: Little
+Brown.
+Theraulaz, G. et al . 2002 Spatial patterns in ant colonies.
+Proc. Natl Acad. Sci. USA 99, 9645–9649. (doi:10.1073/
+pnas.152302199)
+Theraulaz, G., Gautrais, J., Camazine, S. & Deneubourg,
+J. L. 2003 The formation of spatial patterns in social
+insects: from simple behaviours to complex structures.
+Philos. Trans. R. Soc. A 361, 1263–1282. ( doi:10.1098/
+rsta.2003.1198)
+Trivers, R. L. & Hare, H. 1976 Haplodiploidy and the
+evolution of the social insects. Science 191, 249–263.
+von Bertalanffy, L. 1968 General system theory . New York:
+George Braziller.
+von Dassow, G., Meir, E., Munro, E. & Odell, G. 2000 The
+segment polarity network is a robust development module.
+Nature 406, 188–192. (doi:10.1038/35018085)
+Weidenmuller, A. 2004 The control of nest climate in
+bumblebee ( Bombus terrestris ) colonies: interindividual
+variability and self reinforcement in fanning response.
+Behav. Ecol. 15, 120–128. (doi:10.1093/beheco/arg101)
+Wiener, N. 1948 Cybernetics. New Y ork: Wiley.
+Wilson, E. O. 1971 The insect societies . Cambridge, MA:
+Belknap Press of Harvard University Press.
+Wolfram, S. 2002 A new kind of science . Champaign, IL:
+Wolfram Media.
+22 D. J. T. Sumpter Principles of collective animal behaviour
+Phil. Trans. R. Soc. B (2006)

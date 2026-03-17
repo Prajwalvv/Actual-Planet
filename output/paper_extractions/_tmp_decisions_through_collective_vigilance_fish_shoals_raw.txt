@@ -1,0 +1,467 @@
+
+
+===== PAGE 1 =====
+Fast and accurate decisions through collective
+vigilance in ﬁsh shoals
+Ashley J. W. Warda,1, James E. Herbert-Reada, David J. T. Sumpterb, and Jens Krausec,d
+aSchool of Biological Sciences, University of Sydney, Sydney, NSW 2006, Australia;bMathematics Department, Uppsala University, 751 06 Uppsala, Sweden;
+cLeibniz-Institute of Freshwater Ecology and Inland Fisheries, 12587 Berlin, Germany; anddDepartment for Crop and Animal Sciences, Humboldt University,
+10115 Berlin, Germany
+Edited by Giorgio Parisi, University of Rome, Rome, Italy, and approved December 27, 2010 (received for review May 21, 2010)
+Although it has been suggested that large animal groups should
+make better decisions than smaller groups, there are few empirical
+demonstrations of this phenomenon and still fewer explanations
+of the how these improvements may be made. Here we show that
+both speed and accuracy of decision making increase with group
+size in ﬁsh shoals under predation threat. We examined two
+plausible mechanisms for this improvement:ﬁrst, that groups are
+guided by a small proportion of high-quality decision makers and,
+second, that group members use self-organized division of vigi-
+lance. Repeated testing of individuals showed no evidence of
+different decision-making abilities between individual ﬁsh. In-
+stead, we suggest that shoals achieve greater decision-making
+efﬁciencies through division of labor combined with social in-
+formation transfer. Our results should prompt reconsideration of
+how we view cooperation in animal groups withﬂuid membership.
+swarm intelligence| collective decision-making| sociality
+S
+ocial animals are frequently required to make collective
+decisions about such things as the timing and direction of
+group travel, the detection and avoidance of predators, or the
+location of food (1). The decision-making accuracy of groups is
+typically predicted to be greater than that of component group
+members; accuracy of decision making initially increases with
+group size before leveling off (2, 3). This phenomenon is driven by
+the fact that larger groups of animals are more effective than
+smaller groups or solitary individuals at gathering information,
+whereas the integration of the information gathered by different
+group members allows more accurate decisions to be made by
+larger groups (4, 5). Furthermore, integration of information
+during the decision-making process need not incur a great cost in
+terms of speed if groups use some simple heuristic based on the
+behavior of group mates, such as a quorum response, which allows
+information to be integrated andﬁltered both rapidly and accu-
+rately (6–8).
+The “many eyes” theory predicts that predators will be detected
+sooner by larger groups, increasing the probability of escape for
+the individual thatﬁrst detects them, as well as for other group
+members as the information is transmitted across the group (9–
+13). Despite the fact that numerous studies have provided evi-
+dence in support of this functional beneﬁt of larger group sizes,
+little is known about the decision-making mechanisms that un-
+derlie this key beneﬁt of sociality. If we assume that members
+independently gather information and scan different parts of the
+environment, then theﬁrst individual to detect a given cue could
+initiate a response that proliferates rapidly throughout the group
+(14–17). Under this scenario, improvements in both speed and
+accuracy of collective decision making with group size can result
+because a) the probability that the group contains individuals that
+are better at scanning increases with group size and/orb) indi-
+viduals do not need to scan as much of their environment when
+in groups, effectively focusing their information gathering to a
+smaller area of space.
+Whereas previous studies have predicted increases in decision-
+making accuracy with group size (6), little is known about how
+group size interacts with the other critical parameter of decision
+making: speed. Hence we tested the decision making ofﬁsh on
+their own as well as in groups of different sizes under simulated
+predation risk, predicting that, because animals should optimize
+both speed and accuracy in their decision-making process, larger
+groups would make faster as well as more accurate decisions
+than smaller groups or singletons.
+Results
+In a simple decision-making task (Fig. 1), solitaryﬁsh performed
+relatively poorly, avoiding a replica predator in 60 of 108 trials
+(55.6%). The proportion of ﬁsh making an accurate decision
+increased with group size with focal individuals in groups of 8ﬁsh
+and of 16ﬁsh being signiﬁcantly more likely to make accurate
+decisions (i.e., to avoid the replica predator) than solitary ones
+(binomial test: group of 8, P = 0.02; group of 16, P = 0.02;
+Fig. 2A).
+The theoretical “perfect many eyes” case, where the proba-
+bility of all individuals avoiding the predator is equal to that of
+just one or more individuals detecting the predator, can be cal-
+culated from the single- ﬁsh experiments by noting that the
+probability that a singleﬁsh spots the predator is 0.11 (assuming
+that when they did not spot the predator they take a random fork
+of the Y-maze). Thus, the probability that at least one individual
+in a group of sizen spots the predator is 1− (1 − 0.11)n and the
+probability that the group avoids the predator is then
+1 −1
+2ð1 − 0:11Þn;
+where the factor of 1/2 accounts for the fact that even if the
+group does not spot the predator it has a 50% chance of
+choosing the correct branch. This perfect many eyes model ac-
+curately predicts the experimental results as group sizes increase
+(regression: r4 = 0.92,P = 0.03).
+There was no difference in swimming speed between groups in
+the approach zone (speed in approach zone: ANOVA:F4,157 =
+1.54, P = 0.19). However, in the decision-making zone, swim-
+ming speed increased with increasing group size (speed in the
+decision zone: ANOVA:F4,157 = 9.93,P < 0.001; Fig. 2B). Time
+spent in both zones decreased with increasing group size (time in
+approach zone, ANOVA,F4,157 = 4.51, P = 0.002; time in de-
+cision zone, ANOVA,F4,157 = 5.45, P < 0.001; Fig. 2C; group-
+level dynamics are plotted inFigs. S1and S2). This discrepancy
+between speed and time in the zones is likely explained by path
+tortuosity, which decreased with increasing group size in both
+zones (tortuosity in approach zone, ANOVA,F4,157 = 4.76,P =
+0.001; tortuosity in decision zone, ANOVA,F4,157 = 5.33, P <
+0.001; Fig. 2D). Solitary focalﬁsh and those in pairs decreased
+Author contributions: A.J.W.W., J.E.H.-R., and J.K. designed research; A.J.W.W., J.E.H.-R.,
+and J.K. performed research; A.J.W.W., D.J.T.S., and J.K. analyzed data; and A.J.W.W.,
+D.J.T.S., and J.K. wrote the paper.
+The authors declare no conﬂict of interest.
+This article is a PNAS Direct Submission.
+Freely available online through the PNAS open access option.
+1To whom correspondence should be addressed. E-mail: ashleyjwward@gmail.com.
+This article contains supporting information online atwww.pnas.org/lookup/suppl/doi:10.
+1073/pnas.1007102108/-/DCSupplemental.
+2312–2315 | PNAS | February 8, 2011 | vol. 108 | no. 6 www.pnas.org/cgi/doi/10.1073/pnas.1007102108
+SEE CORRECTION FOR THIS ARTICLE
+Downloaded from https://www.pnas.org by 122.171.18.208 on February 8, 2026 from IP address 122.171.18.208.
+
+
+===== PAGE 2 =====
+their swimming speed in the decision zone compared with the
+approach zone, whereas those in larger groups did not (pairedt
+test: solitary,t107 = 5.1,P < 0.01; group of 2,t12 = 2.4,P = 0.03;
+group of 4,t12 = 1.5,P = 0.16; group of 8,t13 = 0.7,P = 0.49; group
+of 16,t13 = 1.1,P = 0.29). Focalﬁsh in all group sizes increased
+tortuosity in the decision zone compared with the approach zone
+(paired t test: solitary,t107 = 12.9,P < 0.01; group of 2,t12 =5 ,P <
+0.01; group of 4,t12 = 3.4,P < 0.01; group of 8,t13 = 3.7,P < 0.01;
+group of 16,t13 = 3.7,P < 0.01).
+Can the improvement in decision-making ability in larger
+groups be explained by the presence of“expert” decision makers?
+Under this scenario, we envisage that there would be variation
+in decision-making ability between individuals and that, where
+groups are randomly composed, the probability of including high-
+quality decision makers in a group would increase with the number
+of individuals in that group. To test this hypothesis we measured
+the repeated decision-making performance of 44 individualﬁsh in
+nine separate tests at weekly intervals. The observed distribution
+of accurate decisions across these trials did not differ from a null
+expectation of a binomial error probability distribution (χ2-test:
+χ2
+9 = 14.15,P = 0.11). Furthermore, the performance ofﬁsh in the
+ﬁrst four trials did not predict their performance in the subsequent
+ﬁve trials (regression:r43 = 0.15, P = 0.3). Finally, in the trials
+involving groups ofﬁsh, we found thatﬁsh in the front half of
+groups were not more accurate thanﬁsh in the back half of groups
+(paired t test: t53 = 1.97,P = 0.08).
+An alternative explanation is that the improvement in decision
+making occurs not through diversity in individual ability, but
+through social facilitation of predator detection with increasing
+group size. One means by which this could be achieved is through
+a form of self-organized division of the task of vigilance. If group
+members divide up the task of vigilance between each other, then
+each individual can concentrate its attention on a smaller section of
+the environment. This being the case, we predict changes in in-
+dividual scanning behavior as group size increases, including a re-
+duction in the frequency of direction changes. In accordance with
+this prediction, we found that the frequency of direction changes by
+focal ﬁsh did decrease as group size increased (ANOVA:F4,157 =
+9.57, P < 0.001).
+Because self-organization is characterized by positive social
+feedback, we next investigated whether there was any social in-
+ﬂuence on decision making. For each individual focalﬁsh we
+calculated whether theﬁsh avoided the predator and measured
+the number of otherﬁsh in the decision zone at the same time as
+the focal ﬁsh. These decision zone “companions” were also
+classiﬁed as to whether they went on to avoid the predator
+(companions were deﬁned as those ﬁsh that occupied the de-
+cision zone at the same time as the focalﬁsh). Fig. 3 shows the
+frequency of correct choices by the focalﬁsh as a function of the
+number of companions in the decision zone that went on to
+avoid the predator (denotedX1) minus those companions that
+took the branch containing the predator (denotedX2). We ﬁt
+a logistic regression model to the probability of avoiding the
+replica predator:
+p ¼ 1
+1 þ expð −0:24 −b1X1 þ b2X2Þ:
+Fig. 1. Experimental apparatus.
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+1248 1 6
+0
+1
+2
+3
+4
+5
+6
+7
+1248 1 6
+1
+1.1
+1.2
+1.3
+1.4
+1248 1 6
+Group Size
+Mean (±S.E.M.) swimming speed 
+(mms-1) of focal ﬁsh in each zone
+Mean (±S.E.M.) path tortuosity of 
+focal ﬁsh in each zone Propor/g415on of ﬁsh avoiding the predatorMean (±S.E.M.) /g415me (s) spent by 
+focal ﬁsh in each zone
+A
+B
+C
+D
+Fig. 2. (A) proportion of focal ﬁsh (×) and of all ﬁsh (○) avoiding the
+predator as a function of group size. (B) Mean swimming speed (±SEM) of
+focal ﬁsh in each group size. (C) Mean time (±SEM) spent in each zone by
+focal ﬁsh. (D) Mean path tortuosity (±SEM) of focalﬁsh in each group size. In
+B–D, open bars refer to the approach zone, and shaded bars refer to the
+decision zone.
+Ward et al. PNAS | February 8, 2011 | vol. 108 | no. 6 | 2313
+ECOLOGY
+Downloaded from https://www.pnas.org by 122.171.18.208 on February 8, 2026 from IP address 122.171.18.208.
+
+
+===== PAGE 3 =====
+The best ﬁt of this model shows a signiﬁcant positive effect of
+predator-avoiding companions (b1 = 0.512 ± 0.162; z = 3.167;
+P = 0.001) and negative effect of companions that swam past the
+predator (b2 = 1.753± 0.751; z = −2.333; P = 0.019). This result
+suggests a strong concordance of decision making between spa-
+tially close individuals. The solid line in Fig. 3 shows theﬁto f
+a model in which we assume thatﬁsh moving in either direction
+contribute equally to the probability of following (i.e.,b1 = b2).
+The value forb1 under this model is similar to that found when
+b1 and b2 are estimated separately (b1 = b2 = 0.478± 0.156; z =
+3.065; P = 0.002).
+To better understand how interactions betweenﬁsh led to the
+collective avoidance of the predator we analyzed the (x(t), y(t))
+coordinates along with the direction of movement (x(t +1 )− x
+(t), y(t +1 )− y(t)) of the twoﬁsh at the front of the group over
+time, t (Fig. 4A). We chose theﬁrst two ﬁsh in this analysis be-
+cause they were less likely to be correlated with otherﬁsh. The
+analyses of spatial and temporal directional correlation are pro-
+vided in Fig. 4B and C. The directional heading of pairs in which
+the distance betweenﬁsh was 2–6 cm was signiﬁcantly correlated
+(2–4 cm, P = 0.0004; 4–6 cm, P = 0.0008) and not signiﬁcantly
+correlated for distances>6c m( 6–8 cm, P = 0.39; ≥8 cm, P =
+0.85; Fig. 4B). The distance between the pairs was seldom<2c m
+and at this proximity the direction of theﬁsh was not closely
+correlated (P = 0.8). Fish within 6 cm of each other showed
+signiﬁcant temporal correlations in direction of only up to 0.5 s
+(Fig. 4C).
+Discussion
+Both speed and accuracy of collective decision making increase
+with group size. In comparison with singleﬁsh, groups of 8 and of
+16 ﬁsh were signiﬁcantly faster and more accurate. The improve-
+ments in accuracy were remarkably similar to a perfect many
+eyes prediction, where detection of the predator by a single in-
+dividual equates to detection by the entire group.
+Uncertainty in a novel environment is typically indicated by
+a high frequency of turning and a slower traveling speed (18–21).
+This was also the case here as focalﬁsh in all groups showed in-
+creased tortuosity as they moved into the decision zone; however,
+only solitary individuals and those in smaller groups reduced their
+speed. Further, the reduction in path tortuosity and turning fre-
+quency with increasing group size suggests mutual reliance on the
+vigilance of others in our system (22). Singleﬁsh may experience
+greater uncertainty in a novel environment than grouping indi-
+viduals because they have to gather all of the information they
+need to make a decision for themselves without access to social
+information. It appears that this self-reliance makes them prone
+to errors. Sensitivity to social information is likely to be increased
+in situations where private information is limited, which is pre-
+-3  -2  -1  0  1  2  3  4  5+
+Companions avoiding predator – companions passing
+predator
+Mean (± S.E.M.) propor/g415on of focal 
+ﬁsh avoiding predator
+1
+0.2
+0
+0.4
+0.6
+0.8
+Fig. 3. Mean proportion (±SEM) of focal ﬁsh choosing the branch that
+avoids the predator as a function of the number of companions that avoid
+the predator minus the number that pass the predator. Theﬁt of the logistic
+model p ¼ 1  =  ð1 þ expð −0:24 −b1X1 þ b2X2ÞÞ is made assuming the proba-
+bility of a singleﬁsh is equal to that over all our single-ﬁsh observations, i.e.,
+55.7%. The solid line shows the bestﬁt of the model given this assumption.
+Fig. 4. Correlations between the leading pair ofﬁsh. (A) Example ofﬁsh
+positions through time from a 2-ﬁsh trial. Solid circles are the position of the
+leading ﬁsh, and open circles are the followingﬁsh. Labels“1s” and “2s” in-
+dicate the position of thatﬁsh at the time in seconds since theﬁrst ﬁsh entered
+the approach zone. (B) Spatial correlation ofﬁsh direction over theﬁrst 2ﬁsh
+in all 2-, 4-, 8-, and 16-ﬁsh trials. The change in spatial position during each time
+step of 0.2 s was calculated for 2 leadingﬁsh at any point in time (note that the
+leading ﬁsh can change during a trial). The correlation coefﬁcient was calcu-
+lated between the direction of the leading and the secondﬁsh, with binning
+according to distance between theﬁsh. Error bars show 95% conﬁdence
+intervals. The number of observations varied between bins: 0–2c m ,n =1 4 ;
+2–4c m ,n = 142; 4–6c m ,n =4 9 ;6–8c m ,n = 26;≥8c m ,n =4 8 .(C) Temporal
+correlation. For all leading pairs within 6 cm of each other, the correlation
+coefﬁcient was calculated for time lags of 0 up to 2 s, in steps of 0.2 s. The solid
+line is the temporal correlation between the leader ﬁsh direction and
+the secondﬁsh direction at different time lags. Error bars show 95% conﬁ-
+dence intervals. The dotted line gives the autocorrelation of the direction of
+the leaderﬁsh, i.e., correlation in the direction time-lagged for various times.
+2314 | www.pnas.org/cgi/doi/10.1073/pnas.1007102108 Ward et al.
+Downloaded from https://www.pnas.org by 122.171.18.208 on February 8, 2026 from IP address 122.171.18.208.
+
+
+===== PAGE 4 =====
+dicted in theory to lead to more cooperative vigilance behavior
+(23). A strong reliance on social information in the present
+experiments is suggested by the spatial and temporal correlations
+between leaderﬁsh. The similarity of the between-ﬁsh temporal
+correlation to the autocorrelation of the leaderﬁsh alone seems
+to contradict the idea that either of theﬁsh is leading the other
+one. Rather, these observations are consistent with existence of
+a local interaction radius over which directional information is
+rapidly propagated backward and forward between bothﬁsh. At
+the level of the group, individuals can use the available social
+information while concentrating their vigilance efforts on a
+smaller portion of their immediate habitat and ultimately make
+more accurate decisions.
+Clustering of decisions is indicative of positive feedback through
+social cues. This feedback may well involve quorum rules, where
+the probability of moving in a particular direction increases non-
+linearly with group size (7, 8). These quorums allow errors by
+individual ﬁsh to beﬁltered out. However, what is most remark-
+able in the current experiment is that improvements in accuracy
+start even in groups of two and then accelerate rapidly.
+Although the swarm intelligence literature predicts that in-
+terindividual diversity can produce beneﬁts in terms of improved
+collective decision making (2, 24), we found no evidence for in-
+terindividual differences in predator-detection ability between
+ﬁsh. In addition to ourﬁnding that leadingﬁsh (those in the front
+half of shoals) were not more accurate than followers (in the rear
+half of shoals), this result suggests that diversity of the group
+members’abilities cannot effectively explain the observed increase
+in decision-making speed and accuracy with increasing group size
+(25). We propose that the many eyes response is facilitated by
+a form of self-organized vigilance, whereby information acquired
+by one individual is transmitted by positive feedback and com-
+municated across the group (26).
+Although there may be some debate about what mechanisms
+allow such accurate and fast decision making in groups, it is clear
+that our results are not consistent with the game-theoretic rea-
+soning often applied when thinking about predator avoidance
+situations. For example, there is no evidence of individuals in
+larger groups slowing down to force another group member to
+take the risk of inspecting the two options. On the contrary, the
+efﬁciency of theﬁsh shoal’s many eyes suggests a high degree of
+cooperation in detection and avoidance of predators. The evo-
+lution of this cooperation can be understood only by identifying
+the cues used by aﬁsh that allow it to determine when another
+ﬁsh has spotted a predator (26).
+Materials and Methods
+Experimental Subjects. The study species used in this experiment was the
+mosquitoﬁsh, Gambusia holbrooki, obtained from Lake Northam, Sydney,
+Australia (33°53′6.14′′S, 151°11′35.75′′E). Individuals used in the experiments
+measured 26 ± 5 mm. We used both sexes and observed no difference in
+accuracy (male accuracy = 0.577; female accuracy = 0.549; binomial test,P =
+0.34) or speed (independentt test: t38 = 0.48, P = 0.63) between the sexes.
+Before experiments, theﬁsh were held in 180-L vats held at a temperature
+of 23.1± 1 °C in the animal holding rooms at the University of Sydney and
+were fed daily on Wardley aquariumﬂake food.
+Experimental Protocol and Materials. Experiments took place in a Y-maze
+constructed from white Perspex (Fig. 1). The stem of the“Y” was raised so
+that the water gradually increased in depth from 1 cm at the foot of the Y to
+12 cm at the tips of the arms. A replica predator, measuring 12 cm in length,
+was allocated to one of the arms of the Y-maze at random and suspended in
+midwater using ﬁne monoﬁlament line. In pilot trials, the ﬁsh showed
+a strong aversive response to the predator once they detected it.
+Experimental ﬁsh were added to a clear container set in the stem of the Y.
+After 120 s the box was raised, releasing theﬁsh. In all cases, theﬁsh made
+their way down the Y and into one of the arms. All trials wereﬁlmed and the
+ﬁsh were subsequently tracked using ImageJ software. We usedﬁve different
+group sizes: 1, 2, 4, 8, and 16 ﬁsh. Each experiment was ﬁlmed using
+a Logitech Pro9000 webcam positioned directly above the experimental
+apparatus. Theﬁsh were then tracked using the manual tracking facility in
+ImageJ at a frequency ofﬁve frames/s.
+We deﬁned two zones for our analysis: The area immediately before the
+fork in the Y was designated the“decision zone.” An area of the same size
+that theﬁsh crossed before reaching the decision zone was designated the
+“approach zone.” The use of zones allows us to compare the behavior of the
+experimental animals before and during the decision-making process. To
+analyze, we randomly preselected a single focalﬁsh from each replicate
+group and calculated its speed, path tortuosity (deﬁned as the ratio of the
+path taken by theﬁsh to the straight line distance between the beginning
+and the end of that path), the number of direction changes that it made,
+and the accuracy of its decision. We deﬁned accuracy as entry into the arm
+of the Y-maze that did not contain the replica predator. The positioning of
+the zones had little effect on our response variables (Table S1).
+ACKNOWLEDGMENTS. We thank the editor and two anonymous referees
+for their comments, which greatly improved the manuscript. In addition, we
+thank Andrea Perna for his assistance with the spatio-temporal correlation
+analyses and Stefan Krause for his helpful input to our discussions.
+1. Dall SRX, Giraldeau LA, Olsson O, McNamara JM, Stephens DW (2005) Information
+and its use by animals in evolutionary ecology.Trends Ecol Evol20:187–193.
+2. Krause J, Ruxton GD, Krause S (2010) Swarm intelligence in animals and humans.
+Trends Ecol Evol25:28–34.
+3. King AJ, Cowlishaw G (2007) When to use social information: The advantage of large
+group size in individual decision making.Biol Lett3:137–139.
+4. Grunbaum D (1998) Schooling as a strategy for taxis in a noisy environment.Evol Ecol
+12:503–522.
+5. Couzin ID (2009) Collective cognition in animal groups.Trends Cogn Sci13:36–43.
+6. Sumpter DJT, Pratt SC (2009) Quorum responses and consensus decision making.
+Philos Trans R Soc B Biol. Sci 364:743–753.
+7. Sumpter DJT, Krause J, James R, Couzin ID, Ward AJW (2008) Consensus decision
+making byﬁsh. Curr Biol18:1773–1777.
+8. Ward AJW, Sumpter DJT, Couzin ID, Hart PJB, Krause J (2008) Quorum decision-
+making facilitates information transfer inﬁsh shoals. Proc Natl Acad Sci USA105:
+6948–6953.
+9. Treherne JE, Foster WA (1981) Group transmission of predator avoidance-behavior in
+a marine insect - the Trafalgar effect.Anim Behav29:911–917.
+10. Treherne JE, Foster WA (1980) The effects of group-size on predator avoidance in
+a marine insect.Anim Behav28:1119–1122.
+11. Lima SL (1995) Back to the basics of antipredatory vigilance - the group-size effect.
+Anim Behav49:11–20.
+12. Lima SL, Zollner PA (1996) Anti-predatory vigilance and the limits to collective
+detection: Visual and spatial separation between foragers.Behav Ecol Sociobiol38:
+355–363.
+13. Godin JGJ, Morgan MJ (1985) Predator avoidance and school size in a cyprinodontid
+ﬁsh, the banded killiﬁsh (Fundulus diaphanus Lesueur). Behav Ecol Sociobiol 16:
+105–110.
+14. Gerlotto F, Bertrand S, Bez N, Gutierrez M (2006) Waves of agitation inside anchovy
+schools observed with multibeam sonar: A way to transmit information in response to
+predation. ICES J Mar Sci63:1405–1417.
+15. Fernandez-Juricic E, Kacelnik A (2004) Information transfer and gain inﬂocks: The
+effects of quality and quantity of social information at different neighbour distances.
+Behav Ecol Sociobiol55:502–511.
+16. Reebs SG (2000) Can a minority of informed leaders determine the foraging
+movements of aﬁsh shoal? Anim Behav59:403–409.
+17. Sumpter D, Buhl J, Biro D, Couzin I (2008) Information transfer in moving animal
+groups. Theory Biosci127:177–186.
+18. Benhamou S (2004) How to reliably estimate the tortuosity of an animal’s path:
+Straightness, sinuosity, or fractal dimension?J Theor Biol229:209–220.
+19. Biro D, Guilford T, Dell’Omo G, Lipp HP (2002) How the viewing of familiar landscapes
+prior to release allows pigeons to home faster: Evidence from GPS tracking.J Exp Biol
+205:3833–3844.
+20. Dell’ariccia G, Dell’omo G, Lipp HP (2009) The inﬂuence of experience in orientation:
+GPS tracking of homing pigeons released over the sea after directional training.J Exp
+Biol 212:178–183.
+21. Dell’Ariccia G, Dell’Omo G, Wolfer DP, Lipp HP (2008) Flockﬂying improves pigeons’
+homing: GPS track analysis of individualﬂyers versus small groups.Anim Behav 76:
+1165–1172.
+22. Anderson C, Franks NR (2001) Teams in animal societies.Behav Ecol12:534–540.
+23. Jackson AL, Ruxton GD (2006) Toward an individual-level understanding of vigilance:
+The role of social information.Behav Ecol17:532–538.
+24. Hong L, Page SE (2004) Groups of diverse problem solvers can outperform groups of
+high-ability problem solvers.Proc Natl Acad Sci USA101:16385–16389.
+25. Liker A, Bókony V (2009) Larger groups are more successful in innovative problem
+solving in house sparrows.Proc Natl Acad Sci USA106:7893–7898.
+26. Magurran AE, Higham A (1988) Information transfer across ﬁsh shoals under
+predator threat.Ethology 78:153–158.
+Ward et al. PNAS | February 8, 2011 | vol. 108 | no. 6 | 2315
+ECOLOGY
+Downloaded from https://www.pnas.org by 122.171.18.208 on February 8, 2026 from IP address 122.171.18.208.

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Rylvo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ─── GATE: hide everything until admin auth is verified ─── */
+.admin-gate{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg)}
+.admin-gate .gate-spinner{width:24px;height:24px;border:3px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ─── LAYOUT ─── */
+.admin-layout{display:grid;grid-template-columns:230px 1fr;min-height:100vh;display:none}
+.admin-sidebar{background:var(--bg);padding:24px 16px;border-right:1px solid var(--border);display:flex;flex-direction:column}
+.admin-sidebar .sidebar-logo{font-family:var(--mono);font-size:14px;font-weight:700;letter-spacing:1.5px;color:var(--red);padding:8px 10px;margin-bottom:28px;display:flex;align-items:center;gap:8px;justify-content:center}
+.sidebar-nav{flex:1}
+.sidebar-nav a{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text2);padding:9px 12px;border-radius:8px;margin-bottom:2px;transition:all .15s}
+.sidebar-nav a:hover{color:var(--text);background:var(--surface2)}
+.sidebar-nav a.active{color:var(--text);background:rgba(220,38,38,.06)}
+.sidebar-nav a svg{width:16px;height:16px;opacity:.5;flex-shrink:0}
+.sidebar-nav a.active svg{opacity:1;color:var(--red)}
+.sidebar-divider{height:1px;background:var(--border);margin:14px 8px}
+.admin-badge{padding:12px;background:rgba(220,38,38,.04);border:1px solid rgba(220,38,38,.12);border-radius:8px;margin-top:auto;text-align:center}
+.admin-badge .badge-label{font-size:.6rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:2px}
+.admin-badge .badge-name{font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--red)}
+
+.admin-main{background:var(--bg1);padding:32px 40px;overflow-y:auto;max-height:100vh}
+.admin-header{margin-bottom:28px}
+.admin-header h1{font-size:1.4rem;font-weight:700;margin-bottom:2px}
+.admin-header p{font-size:.85rem;color:var(--text3)}
+
+/* ─── STAT CARDS ─── */
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px}
+.stat-card .sc-label{font-size:.65rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:8px}
+.stat-card .sc-value{font-family:var(--mono);font-size:1.6rem;font-weight:800;line-height:1}
+.stat-card .sc-sub{font-size:.72rem;color:var(--text3);margin-top:6px}
+.sc-value.red{color:var(--red)}
+.sc-value.green{color:var(--green)}
+.sc-value.accent{color:var(--accent)}
+
+/* ─── PANELS ─── */
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.panel-head h3{font-size:.9rem}
+
+/* ─── USERS TABLE ─── */
+.users-table{width:100%;border-collapse:collapse}
+.users-table th{text-align:left;font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:var(--text3);padding:8px 12px;border-bottom:1px solid var(--border)}
+.users-table td{padding:10px 12px;border-bottom:1px solid var(--border);font-size:.8rem;color:var(--text2);font-family:var(--sans)}
+.users-table tbody tr{cursor:pointer;transition:background .1s}
+.users-table tbody tr:hover td{background:var(--surface2)}
+.role-badge{font-size:.6rem;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+.role-badge.admin{background:rgba(220,38,38,.08);color:var(--red)}
+.role-badge.user{background:var(--bg2);color:var(--text3)}
+.plan-badge{font-size:.6rem;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+.plan-badge.free{background:var(--bg2);color:var(--text3)}
+.plan-badge.pro{background:rgba(99,102,241,.08);color:#6366f1}
+.plan-badge.enterprise{background:rgba(34,197,94,.08);color:var(--green)}
+
+/* ─── USER DETAIL MODAL ─── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);z-index:100;display:none;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);width:640px;max-width:92vw;max-height:85vh;overflow-y:auto;padding:28px 32px;position:relative}
+.modal h2{font-size:1.1rem;margin-bottom:2px}
+.modal .modal-sub{font-size:.78rem;color:var(--text3);margin-bottom:20px;font-family:var(--mono)}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--text3);cursor:pointer;font-size:1.4rem;line-height:1;padding:4px}
+.modal-close:hover{color:var(--text)}
+.detail-grid{display:grid;grid-template-columns:110px 1fr;gap:6px 12px;margin-bottom:4px}
+.detail-grid .dl{font-size:.75rem;color:var(--text3);padding:4px 0}
+.detail-grid .dv{font-size:.8rem;color:var(--text);font-family:var(--mono);padding:4px 0}
+.detail-section{margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+.detail-section h4{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--text3);margin-bottom:12px}
+.edit-row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.edit-row label{font-size:.78rem;color:var(--text3);min-width:90px}
+.edit-row select,.edit-row input{font-family:var(--mono);font-size:.8rem;padding:7px 10px;background:var(--surface);border:1px solid var(--border2);border-radius:6px;color:var(--text)}
+.edit-row select:focus,.edit-row input:focus{outline:none;border-color:var(--accent)}
+
+/* ─── ENGINE PANEL ─── */
+.engine-status{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.engine-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.engine-dot.running{background:var(--green);box-shadow:0 0 8px rgba(22,163,74,.4)}
+.engine-dot.stopped{background:var(--red)}
+.engine-detail{display:grid;grid-template-columns:100px 1fr;gap:6px 12px;margin-bottom:16px}
+.engine-detail .el{font-size:.75rem;color:var(--text3)}
+.engine-detail .ev{font-size:.82rem;font-family:var(--mono);color:var(--text)}
+.engine-actions{display:flex;gap:10px}
+.engine-actions button{padding:8px 20px;font-size:.78rem;font-weight:600;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s;font-family:var(--sans)}
+.btn-engine-start{background:var(--green);color:white;border:none}
+.btn-engine-start:hover{opacity:.85}
+.btn-engine-start:disabled{opacity:.4;cursor:not-allowed}
+.btn-engine-stop{background:transparent;color:var(--red);border:1px solid var(--red)}
+.btn-engine-stop:hover{background:var(--red);color:white}
+.btn-engine-stop:disabled{opacity:.4;cursor:not-allowed}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .admin-layout{grid-template-columns:1fr}
+  .admin-sidebar{display:none}
+  .admin-main{padding:20px 16px;max-height:none}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADING GATE — shown until auth + admin check completes -->
+<div class="admin-gate" id="adminGate">
+  <div class="gate-spinner"></div>
+</div>
+
+<!-- ADMIN LAYOUT — hidden until admin is confirmed -->
+<div class="admin-layout" id="adminLayout">
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar">
+    <a href="/" class="sidebar-logo">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="2.5" fill="currentColor"/><circle cx="8" cy="10" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="24" cy="10" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="8" cy="22" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="24" cy="22" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="16" cy="6" r="1.8" fill="currentColor" opacity="0.7"/><circle cx="16" cy="26" r="1.8" fill="currentColor" opacity="0.7"/><line x1="16" y1="16" x2="8" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="24" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="8" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="24" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="16" y2="6" stroke="currentColor" stroke-width="1.2" opacity="0.4"/><line x1="16" y1="16" x2="16" y2="26" stroke="currentColor" stroke-width="1.2" opacity="0.4"/></svg>
+      <span>RYLVO</span>
+    </a>
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-panel="overview">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Overview
+      </a>
+      <a href="#" data-panel="users">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Users
+      </a>
+      <a href="#" data-panel="engine">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        Engine
+      </a>
+      <div class="sidebar-divider"></div>
+      <a href="/playground">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Testing Ground
+      </a>
+      <a href="/console">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        User Console
+      </a>
+      <a href="/">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Homepage
+      </a>
+      <div class="sidebar-divider"></div>
+      <a href="#" id="btnLogout" style="color:var(--red)">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Log out
+      </a>
+    </nav>
+    <div class="admin-badge">
+      <div class="badge-label">Signed in as</div>
+      <div class="badge-name" id="sidebarAdminEmail">Admin</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+
+    <!-- OVERVIEW PANEL -->
+    <div id="panel-overview">
+      <div class="admin-header">
+        <h1>Admin Dashboard</h1>
+        <p id="adminWelcome">System overview and recent activity.</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="sc-label">Total Users</div>
+          <div class="sc-value accent" id="stat-users">—</div>
+          <div class="sc-sub">registered accounts</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Credits Used</div>
+          <div class="sc-value" id="stat-credits-used">—</div>
+          <div class="sc-sub" id="stat-utilization">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Engine</div>
+          <div class="sc-value green" id="stat-engine">—</div>
+          <div class="sc-sub" id="stat-engine-sub">loading</div>
+        </div>
+        <div class="stat-card">
+          <div class="sc-label">Plan Distribution</div>
+          <div class="sc-value" id="stat-plans" style="font-size:.85rem;line-height:1.8">—</div>
+          <div class="sc-sub"></div>
+        </div>
+      </div>
+
+      <!-- RECENT USERS -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Recent Signups</h3>
+          <a href="#" class="btn btn-sm btn-secondary" onclick="showPanel('users');return false">View all</a>
+        </div>
+        <table class="users-table">
+          <thead><tr><th>Email</th><th>Name</th><th>Plan</th><th>Role</th><th>Credits</th><th>Joined</th></tr></thead>
+          <tbody id="recentUsers"><tr><td colspan="6" style="color:var(--text3);text-align:center;padding:24px">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- USERS PANEL -->
+    <div id="panel-users" style="display:none">
+      <div class="admin-header">
+        <h1>All Users</h1>
+        <p>Manage user accounts, plans, and credits.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <h3 id="userCount">Loading...</h3>
+          <button class="btn btn-sm btn-secondary" onclick="loadUsers()">Refresh</button>
+        </div>
+        <table class="users-table">
+          <thead><tr><th>Email</th><th>Name</th><th>Plan</th><th>Role</th><th>Credits Used</th><th>Credits Total</th><th>Last Login</th></tr></thead>
+          <tbody id="allUsers"><tr><td colspan="7" style="color:var(--text3);text-align:center;padding:24px">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ENGINE PANEL -->
+    <div id="panel-engine" style="display:none">
+      <div class="admin-header">
+        <h1>Swarm Engine</h1>
+        <p>Monitor query-driven runtime policy, shard activity, and the last adaptive execution plan.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Engine Status</h3></div>
+        <div class="engine-status">
+          <div class="engine-dot stopped" id="engineDot"></div>
+          <span id="engineStatusText" style="font-family:var(--mono);font-size:.9rem;font-weight:600">Loading...</span>
+        </div>
+        <div class="engine-detail">
+          <div class="el">Model</div><div class="ev" id="engineModel">—</div>
+          <div class="el">Round</div><div class="ev" id="engineRound">—</div>
+          <div class="el">Runtime workers</div><div class="ev" id="engineAnts">—</div>
+          <div class="el">Signals / Queue</div><div class="ev" id="engineSignals">—</div>
+        </div>
+        <div class="engine-detail">
+          <div class="el">Lifecycle</div><div class="ev" id="engineLifecycle">—</div>
+          <div class="el">Policy</div><div class="ev" id="enginePolicy">—</div>
+          <div class="el">Breed plan</div><div class="ev" id="engineBreeds">—</div>
+          <div class="el">Coverage</div><div class="ev" id="engineCoverage">—</div>
+          <div class="el">Shard pools</div><div class="ev" id="engineShards">—</div>
+          <div class="el">Evidence timing</div><div class="ev" id="engineTiming">—</div>
+        </div>
+        <div class="engine-actions">
+          <div style="font-size:.78rem;color:var(--text3);line-height:1.6">
+            <div><strong>Lifecycle:</strong> query-driven</div>
+            <div><strong>Auto-start:</strong> first <code>/api/query</code> call</div>
+            <div><strong>Idle auto-stop:</strong> 120 seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- USER DETAIL MODAL -->
+<div class="modal-overlay" id="userModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeUserModal()">&times;</button>
+    <h2 id="modalUserName">User</h2>
+    <div class="modal-sub" id="modalUserEmail">—</div>
+
+    <div class="detail-grid">
+      <div class="dl">UID</div><div class="dv" id="modalUid">—</div>
+      <div class="dl">Role</div><div class="dv" id="modalRole">—</div>
+      <div class="dl">Plan</div><div class="dv" id="modalPlan">—</div>
+      <div class="dl">Credits</div><div class="dv" id="modalCredits">—</div>
+      <div class="dl">Providers</div><div class="dv" id="modalProviders">—</div>
+      <div class="dl">Joined</div><div class="dv" id="modalJoined">—</div>
+      <div class="dl">Last Login</div><div class="dv" id="modalLastLogin">—</div>
+    </div>
+
+    <div class="detail-section">
+      <h4>Edit User</h4>
+      <div class="edit-row">
+        <label>Plan</label>
+        <select id="editPlan"><option value="free">Free</option><option value="pro">Pro</option><option value="enterprise">Enterprise</option></select>
+      </div>
+      <div class="edit-row">
+        <label>Role</label>
+        <select id="editRole"><option value="user">User</option><option value="admin">Admin</option></select>
+      </div>
+      <div class="edit-row">
+        <label>Credits</label>
+        <input type="number" id="editCredits" value="10000" min="0" style="width:120px">
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:4px">
+        <button class="btn btn-primary btn-sm" onclick="saveUserEdit()">Save Changes</button>
+        <span id="editStatus" style="font-size:.78rem;color:var(--green)"></span>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h4>API Keys</h4>
+      <div id="modalKeys" style="font-size:.8rem;color:var(--text3)">Loading...</div>
+    </div>
+
+    <div class="detail-section">
+      <h4>Recent API Calls</h4>
+      <div id="modalLogs" style="font-size:.8rem;color:var(--text3)">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="firebase-init.js"></script>
+<script type="module">
+const API = (() => {
+  const loc = window.location;
+  if (loc.hostname === 'localhost' || loc.hostname === '127.0.0.1') {
+    return `${loc.protocol}//localhost:3388`;
+  }
+  return loc.origin;
+})();
+let idToken = null;
+let currentUid = null;
+let selectedUserUid = null;
+
+// ─── WAIT FOR AUTH (with timeout) ───────────
+
+function waitForAuth() {
+  return new Promise((resolve, reject) => {
+    if (window.SwarmAuth) return resolve(window.SwarmAuth);
+    let tries = 0;
+    const iv = setInterval(() => {
+      tries++;
+      if (window.SwarmAuth) { clearInterval(iv); resolve(window.SwarmAuth); }
+      if (tries > 200) { clearInterval(iv); reject(new Error('Auth timeout')); }
+    }, 50);
+  });
+}
+
+// ─── NAVIGATION ─────────────────────────────
+
+window.showPanel = function showPanel(name) {
+  document.querySelectorAll('[id^="panel-"]').forEach(p => p.style.display = 'none');
+  const el = document.getElementById('panel-' + name);
+  if (el) el.style.display = 'block';
+  document.querySelectorAll('.sidebar-nav a[data-panel]').forEach(a => a.classList.remove('active'));
+  const link = document.querySelector(`.sidebar-nav a[data-panel="${name}"]`);
+  if (link) link.classList.add('active');
+};
+
+document.querySelectorAll('.sidebar-nav a[data-panel]').forEach(a => {
+  a.addEventListener('click', e => { e.preventDefault(); window.showPanel(a.dataset.panel); });
+});
+
+// ─── API HELPER ─────────────────────────────
+
+async function apiCall(path, method = 'GET', body = null) {
+  const opts = {
+    method,
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${idToken}` },
+  };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(API + '/api' + path, opts);
+  return await res.json();
+}
+
+// ─── INIT: AUTH GATE — redirect non-admin to / immediately ───
+
+(async () => {
+  let SA;
+  try {
+    SA = await waitForAuth();
+  } catch(e) {
+    // Auth SDK failed to load — redirect home
+    window.location.replace('/');
+    return;
+  }
+
+  SA.onAuth(async (user) => {
+    // NOT LOGGED IN → redirect to home (not login — don't reveal admin exists)
+    if (!user) {
+      window.location.replace('/');
+      return;
+    }
+
+    currentUid = user.uid;
+
+    try {
+      idToken = await user.getIdToken();
+    } catch(e) {
+      window.location.replace('/');
+      return;
+    }
+
+    // CHECK ADMIN — if not admin, redirect to home immediately
+    try {
+      const check = await apiCall('/admin/check');
+      if (!check.ok || !check.data?.isAdmin) {
+        window.location.replace('/');
+        return;
+      }
+    } catch(e) {
+      window.location.replace('/');
+      return;
+    }
+
+    // ─── USER IS ADMIN — reveal the admin panel ───
+    document.getElementById('adminGate').style.display = 'none';
+    document.getElementById('adminLayout').style.display = 'grid';
+
+    // Sidebar email
+    document.getElementById('sidebarAdminEmail').textContent = user.email || 'Admin';
+
+    // Welcome
+    document.getElementById('adminWelcome').textContent = `Welcome, ${user.displayName || user.email?.split('@')[0] || 'Admin'}. System overview and recent activity.`;
+
+    // Load all data
+    await Promise.all([loadStats(), loadUsers()]);
+  });
+
+  // Wire logout
+  const logoutLink = document.getElementById('btnLogout');
+  if (logoutLink) logoutLink.addEventListener('click', (e) => { e.preventDefault(); SA.logout(); });
+})();
+
+// ─── LOAD STATS ─────────────────────────────
+
+async function loadStats() {
+  const r = await apiCall('/admin/stats');
+  if (!r.ok) return;
+  const s = r.data;
+
+  document.getElementById('stat-users').textContent = s.totalUsers || 0;
+  document.getElementById('stat-credits-used').textContent = (s.totalCreditsUsed || 0).toLocaleString();
+  document.getElementById('stat-utilization').textContent = `${s.creditUtilization} utilization`;
+
+  // Engine stat card
+  const running = s.engineRunning;
+  const engineEl = document.getElementById('stat-engine');
+  engineEl.textContent = running ? 'Running' : 'Stopped';
+  engineEl.className = 'sc-value ' + (running ? 'green' : 'red');
+  const queueDepth = s.queueDepth ?? 0;
+  document.getElementById('stat-engine-sub').textContent = running
+    ? `${s.engineModel} — round ${s.engineRound} — queue ${queueDepth}`
+    : `Idle (auto-start on /api/query, idle stop ${s.idleAutoStopSec || 120}s)`;
+
+  // Engine panel
+  const dot = document.getElementById('engineDot');
+  dot.className = 'engine-dot ' + (running ? 'running' : 'stopped');
+  document.getElementById('engineStatusText').textContent = running ? 'Running' : 'Stopped';
+  document.getElementById('engineStatusText').style.color = running ? 'var(--green)' : 'var(--red)';
+  document.getElementById('engineModel').textContent = s.engineModel || '—';
+  document.getElementById('engineRound').textContent = s.engineRound || 0;
+  document.getElementById('engineAnts').textContent = s.antCount ?? '—';
+  document.getElementById('engineSignals').textContent = (s.signalCount ?? '—') + ` · queue ${queueDepth}`;
+  const policy = s.runtimePolicy || {};
+  const plan = s.executionPlan || {};
+  const coverage = s.sourceCoverage || {};
+  const lastQueryMeta = s.lastQueryMeta || {};
+  const shardPools = Array.isArray(s.shardPools) ? s.shardPools : [];
+  document.getElementById('engineLifecycle').textContent = `${s.engineLifecycle || 'query-driven'} · idle stop ${s.idleAutoStopSec || 120}s`;
+  document.getElementById('enginePolicy').textContent = `${policy.crawlMode || 'robots-first'} · providers ${(policy.providerKinds || []).join(', ') || '—'} · caps ${policy.maxPagesPerDomainPerQuery || 0}/${policy.maxTotalPagesPerQuery || 0}`;
+  document.getElementById('engineBreeds').textContent = Array.isArray(plan.breedPlan) && plan.breedPlan.length
+    ? plan.breedPlan.map((entry) => `${entry.breedId} x${entry.count}`).join(' | ')
+    : 'No execution plan yet';
+  document.getElementById('engineCoverage').textContent = `topics ${s.topicsTracked || 0} · evidence ${s.evidenceStored || 0} · domains ${coverage.totalDomains || 0} · promoted ${coverage.promotedTopics || 0}`;
+  document.getElementById('engineShards').textContent = shardPools.length
+    ? shardPools.map((pool) => `${pool.modelId}:${pool.shards}/${pool.busyShards} busy q=${pool.queueDepth}`).join(' | ')
+    : 'No active shard pools';
+  document.getElementById('engineTiming').textContent = `first evidence ${lastQueryMeta.performance?.timeToFirstEvidenceMs ?? '—'}ms · first useful ${lastQueryMeta.performance?.timeToFirstUsefulMs ?? '—'}ms`;
+
+  // Plan distribution
+  const pc = s.planCounts || {};
+  document.getElementById('stat-plans').innerHTML =
+    `<span style="color:var(--text3)">Free</span> <strong>${pc.free || 0}</strong><br>` +
+    `<span style="color:#6366f1">Pro</span> <strong>${pc.pro || 0}</strong><br>` +
+    `<span style="color:var(--green)">Enterprise</span> <strong>${pc.enterprise || 0}</strong>`;
+}
+
+// ─── LOAD USERS ─────────────────────────────
+
+async function loadUsers() {
+  const r = await apiCall('/admin/users?limit=200');
+  if (!r.ok) return;
+  const users = r.data.users || [];
+
+  document.getElementById('userCount').textContent = `${users.length} user${users.length !== 1 ? 's' : ''}`;
+
+  const renderFullRow = (u) => {
+    const used = (u.creditsUsed || 0).toLocaleString();
+    const total = (u.creditsTotal || 0).toLocaleString();
+    const lastLogin = u.lastLoginAt ? new Date(u.lastLoginAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—';
+    return `<tr onclick="openUserModal('${u.uid}')">
+      <td style="font-weight:500">${esc(u.email)}</td>
+      <td>${esc(u.displayName || '—')}</td>
+      <td><span class="plan-badge ${u.plan || 'free'}">${u.plan || 'free'}</span></td>
+      <td><span class="role-badge ${u.role || 'user'}">${u.role || 'user'}</span></td>
+      <td>${used}</td>
+      <td>${total}</td>
+      <td>${lastLogin}</td>
+    </tr>`;
+  };
+
+  // Recent signups (overview) — top 5
+  const recentEl = document.getElementById('recentUsers');
+  if (recentEl) {
+    if (users.length === 0) {
+      recentEl.innerHTML = '<tr><td colspan="6" style="color:var(--text3);text-align:center;padding:24px">No users yet</td></tr>';
+    } else {
+      recentEl.innerHTML = users.slice(0, 5).map(u => {
+        const joined = u.createdAt ? new Date(u.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—';
+        const remaining = ((u.creditsTotal || 0) - (u.creditsUsed || 0)).toLocaleString();
+        return `<tr onclick="openUserModal('${u.uid}')">
+          <td style="font-weight:500">${esc(u.email)}</td>
+          <td>${esc(u.displayName || '—')}</td>
+          <td><span class="plan-badge ${u.plan || 'free'}">${u.plan || 'free'}</span></td>
+          <td><span class="role-badge ${u.role || 'user'}">${u.role || 'user'}</span></td>
+          <td>${remaining} left</td>
+          <td>${joined}</td>
+        </tr>`;
+      }).join('');
+    }
+  }
+
+  // All users table
+  const allEl = document.getElementById('allUsers');
+  if (allEl) {
+    if (users.length === 0) {
+      allEl.innerHTML = '<tr><td colspan="7" style="color:var(--text3);text-align:center;padding:24px">No users yet</td></tr>';
+    } else {
+      allEl.innerHTML = users.map(renderFullRow).join('');
+    }
+  }
+}
+
+// ─── USER MODAL ─────────────────────────────
+
+window.openUserModal = async function(uid) {
+  selectedUserUid = uid;
+  document.getElementById('userModal').classList.add('open');
+
+  // Reset
+  document.getElementById('modalUserName').textContent = 'Loading...';
+  document.getElementById('modalUserEmail').textContent = '';
+  document.getElementById('modalKeys').textContent = 'Loading...';
+  document.getElementById('modalLogs').textContent = 'Loading...';
+
+  const r = await apiCall('/admin/users/' + uid);
+  if (!r.ok) { document.getElementById('modalUserName').textContent = 'Error loading user'; return; }
+  const u = r.data;
+
+  document.getElementById('modalUserName').textContent = u.displayName || u.email?.split('@')[0] || 'User';
+  document.getElementById('modalUserEmail').textContent = u.email || '—';
+  document.getElementById('modalUid').textContent = uid;
+  document.getElementById('modalRole').innerHTML = `<span class="role-badge ${u.role || 'user'}">${u.role || 'user'}</span>`;
+  document.getElementById('modalPlan').innerHTML = `<span class="plan-badge ${u.plan || 'free'}">${u.plan || 'free'}</span>`;
+  document.getElementById('modalCredits').textContent = `${(u.creditsUsed || 0).toLocaleString()} / ${(u.creditsTotal || 0).toLocaleString()}`;
+  document.getElementById('modalProviders').textContent = (u.providers || ['email']).join(', ');
+  document.getElementById('modalJoined').textContent = u.createdAt ? new Date(u.createdAt).toLocaleString() : '—';
+  document.getElementById('modalLastLogin').textContent = u.lastLoginAt ? new Date(u.lastLoginAt).toLocaleString() : '—';
+
+  // Pre-fill edit fields
+  document.getElementById('editPlan').value = u.plan || 'free';
+  document.getElementById('editRole').value = u.role || 'user';
+  document.getElementById('editCredits').value = u.creditsTotal || 10000;
+  document.getElementById('editStatus').textContent = '';
+
+  // API Keys
+  const keysEl = document.getElementById('modalKeys');
+  const keys = u.apiKeys || [];
+  if (keys.length === 0) {
+    keysEl.textContent = 'No API keys.';
+  } else {
+    keysEl.innerHTML = keys.map(k =>
+      `<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;font-family:var(--mono);font-size:.78rem">
+        <span style="font-weight:600;color:var(--text)">${esc(k.name)}</span>
+        <span style="color:var(--text3)">${esc(k.prefix)}</span>
+        <span style="font-size:.65rem;font-weight:700;padding:1px 6px;border-radius:3px;
+          ${k.active ? 'background:rgba(34,197,94,.08);color:var(--green)' : 'background:rgba(220,38,38,.08);color:var(--red)'}">
+          ${k.active ? 'ACTIVE' : 'REVOKED'}
+        </span>
+      </div>`
+    ).join('');
+  }
+
+  // Request logs
+  const logsEl = document.getElementById('modalLogs');
+  const logs = u.recentLogs || [];
+  if (logs.length === 0) {
+    logsEl.textContent = 'No API calls recorded.';
+  } else {
+    logsEl.innerHTML = `<table style="width:100%;border-collapse:collapse;font-size:.72rem;font-family:var(--mono)">
+      <thead><tr style="color:var(--text3);border-bottom:1px solid var(--border)"><th style="text-align:left;padding:4px 8px">Time</th><th style="text-align:left;padding:4px 8px">Method</th><th style="text-align:left;padding:4px 8px">Endpoint</th><th style="text-align:left;padding:4px 8px">Status</th><th style="text-align:right;padding:4px 8px">Credits</th></tr></thead>
+      <tbody>${logs.slice(0, 10).map(l => {
+        const time = l.timestamp ? new Date(l.timestamp).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',second:'2-digit'}) : '—';
+        const ok = (l.status || 200) < 400;
+        return `<tr style="border-bottom:1px solid var(--border)">
+          <td style="padding:4px 8px">${time}</td>
+          <td style="padding:4px 8px">${l.method || '—'}</td>
+          <td style="padding:4px 8px">${esc(l.endpoint || '—')}</td>
+          <td style="padding:4px 8px;color:${ok ? 'var(--green)' : 'var(--red)'}">${l.status || '—'}</td>
+          <td style="padding:4px 8px;text-align:right">${l.credits || 0}</td>
+        </tr>`;
+      }).join('')}</tbody>
+    </table>`;
+  }
+};
+
+window.closeUserModal = function() {
+  document.getElementById('userModal').classList.remove('open');
+  selectedUserUid = null;
+};
+
+// Close on overlay click
+document.getElementById('userModal').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) window.closeUserModal();
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && selectedUserUid) window.closeUserModal();
+});
+
+// ─── SAVE USER EDIT ─────────────────────────
+
+window.saveUserEdit = async function() {
+  if (!selectedUserUid) return;
+  const statusEl = document.getElementById('editStatus');
+  statusEl.textContent = 'Saving...';
+  statusEl.style.color = 'var(--text3)';
+
+  const updates = {
+    plan: document.getElementById('editPlan').value,
+    role: document.getElementById('editRole').value,
+    creditsTotal: parseInt(document.getElementById('editCredits').value, 10),
+  };
+
+  const r = await apiCall('/admin/users/' + selectedUserUid, 'PUT', updates);
+  if (r.ok) {
+    statusEl.textContent = 'Saved!';
+    statusEl.style.color = 'var(--green)';
+    setTimeout(() => { statusEl.textContent = ''; }, 2000);
+    await window.openUserModal(selectedUserUid);
+    await loadUsers();
+  } else {
+    statusEl.textContent = r.error || 'Failed to save';
+    statusEl.style.color = 'var(--red)';
+  }
+};
+
+// ─── UTIL ───────────────────────────────────
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+</script>
+</body>
+</html>

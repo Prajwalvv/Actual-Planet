@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "version": "0.1.0",
+  "modelFile": "validator_model.onnx",
+  "agentType": "validator",
+  "inputName": "features",
+  "outputName": "scores",
+  "inputDim": 36,
+  "normalizationFile": "normalization.json"
+}

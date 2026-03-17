@@ -1,0 +1,450 @@
+
+
+===== PAGE 1 =====
+.................... ....................... ...................
+Effective leadership and decision-
+making in animal groups on the move
+Iain D. Couzin1,2, Jens Krause3, Nigel R. Franks4 & Simon A. Levin1
+1Department of Ecology and Evolutionary Biology, Princeton University,
+Princeton, New Jersey 08544, USA
+2Department of Zoology, South Parks Road, University of Oxford, Oxford
+OX1 3PS, UK
+3Centre for Biodiversity and Conservation, School of Biology, University of Leeds,
+Leeds LS2 9JT, UK
+4Centre for Behavioural Biology, School of Biological Sciences, University of
+Bristol, Woodland Road, Bristol BS8 1UG, UK
+.............................................................................................................................................................................
+For animals that forage or travel in groups, making movement
+decisions often depends on social interactions among group
+members1,2. However, in many cases, few individuals have perti-
+nent information, such as knowledge about the location of a food
+source
+3,4, or of a migration route 5–9. Using a simple model we
+show how information can be transferred within groups both
+without signalling and when group members do not know which
+individuals, if any, have information. W e reveal that the larger the
+group the smaller the proportion of informed individuals needed
+to guide the group, and that only a very small proportion of
+informed individuals is required to achieve great accuracy. W e
+also demonstrate how groups can make consensus decisions,
+even though informed individuals do not know whether they are
+in a majority or minority, how the quality of their information
+compares with that of others, or even whether there are any other
+informed individuals. Our model provides new insights into the
+mechanisms of effective leadership and decision-making in
+biological systems.
+Primary questions concerning the mechanism of information
+transfer in groups include how uninformed individuals recognize
+those that are informed, whether such recognition is actually
+necessary, and how groups can come to a collective decision when
+informed individuals differ in preference
+10. It is known that several
+animal species have evolved speciﬁc recruitment signals that help
+guide conspeciﬁcs. Most famous in this context is the waggle-dance
+of the honeybee that recruits hive members to visit food
+sources
+5,7,8,11. Furthermore, valuable experience may be correlated
+with age or dominance 1,2, which can presumably be estimated by
+conspeciﬁcs of some species 12. However, it remains questionable
+whether such explanations hold when migrating groups of ﬁsh,
+ungulates, insects and birds are considered, where crowding limits
+the range over which individuals can detect one another
+1,2.I n
+pelagic ﬁsh schools, for example, individuals are usually less than
+one body-length apart
+13. Although it is likely that some species have
+a genetically determined propensity to migrate in a general direc-
+tion
+14,15, or respond to abiotic cues such as thermal gradients that
+may aid migration16,17, it is likely for many species that experienced
+group members play an important role in guiding those that are less
+experienced or inexperienced. Relatively few informed individuals
+within ﬁsh schools are known to be able to inﬂuence the foraging
+behaviour of the group
+3 and the ability of a school to navigate towards
+a target4. Similarly, very few individuals (approximately 5%) within
+honeybee swarms can guide the group to a new nest site 7.
+Furthermore, for some animal groups such as large insect swarms
+or ﬁsh schools, it may be unreasonable to assume that group
+members have the capacity for individual recognition. Here we
+address two fundamental issues, both occurring in the absence of
+complex signalling mechanisms and when it is not possible for
+group members to establish who has and has not got information.
+First, how information about the location of resources, or of a
+migration route, can be transferred within groups; and second, how
+individuals can achieve a consensus when informed individuals
+differ in their preferences.
+We take into account the ability of grouping individuals to
+modify their motion on the basis of that of local neighbours (social
+interactions)
+2,18,19. Groups are composed of N individuals. Each
+individual with position vector ci(t), direction vector vi(t), and
+speed si, attempts to maintain a minimum distancea between itself
+i and others j at all times by turning away from neighbours within
+that range
+diðt þ DtÞ¼ 2
+j–i
+X cjðtÞ 2ciðtÞ
+jðcjðtÞ 2ciðtÞÞj ð1Þ
+where di represents a desired direction of travel. This simulates
+individuals acting to maintain personal space and to avoid col-
+lisions1,2. Avoidance is the highest priority. If neighbours are not
+detected within this region then the individual will tend to become
+attracted towards, and aligned with 1,2,11,13,18, j neighbours within a
+local interaction range r:
+diðt þ DtÞ¼
+j–i
+X cjðtÞ 2ciðtÞ
+jðcjðtÞ 2ciðtÞÞj þ
+j¼1
+X vjðtÞ
+jvjðtÞj ð2Þ
+Here di(t þ Dt) is converted to the corresponding unit vector ^diðt þ
+DtÞ¼ diðt þ DtÞ=jdiðt þ DtÞj:
+T o incorporate the inﬂuence of informed group members, a
+proportion of the individuals p are given information about a
+preferred direction (simulated as a unit vector g) representing, for
+example, the direction to a known resource, or a segment of a
+migration route. All other individuals are naive and have no
+preference to move in any particular direction, and are also not
+informed as to which individuals within the group have infor-
+mation and which do not. Informed individuals balance the
+inﬂuence of their preferred direction and their social interactions
+with weighting term q, and replacing ^diðt þ DtÞ by di
+0
+ðt þ DtÞ;
+where:
+di
+0
+ðt þ DtÞ¼
+^diðt þ DtÞþ qgi
+j ^diðt þ DtÞþ qgij
+ð3Þ
+If q ¼ 0, vector gi has no inﬂuence and individuals have no desire to
+move in any speciﬁc direction. As q approaches 1, individuals tend
+to balance their preference to move in direction gi with their desire
+to maintain social interactions with group members. Asq exceeds 1,
+individuals are more heavily inﬂuenced by their preferred direction
+gi than by their neighbours (see Methods section for details of the
+model).
+The accuracy of the group, and hence the quality of information
+transfer, can be quantiﬁed as the normalized angular deviation 20 of
+group direction (see Methods) around the preferred direction g,
+with a minimum value of 0 and maximum of 1.
+For a given group size we found that the accuracy of group
+motion (in a preferred direction) increased asymptotically as the
+proportion of informed individuals increased. Furthermore, as
+group size became larger this relationship became increasingly
+nonlinear (Fig. 1a), meaning that the larger the group, the smaller
+the proportion of informed individuals needed to guide the group
+with a given accuracy. Thus for sufﬁciently large groups only a very
+small proportion of informed individuals is needed to achieve close
+to maximal accuracy. For animal groups such as migrating honey-
+bee colonies, there are likely to be costs associated with increasing
+the proportion of scouts (informed individuals) within the colony
+owing to the time taken to recruit others via the waggle-dance
+5–9,11,
+and for scouts to learn essential navigational skills7,8. Thus, we may
+expect colonies to have evolved such that they have effectively
+reached the asymptote of accuracy (Fig. 1a) and we predict that
+they would achieve little beneﬁt in having larger scout populations.
+The inﬂuence of the weighting of preferred direction q was of
+least importance if the proportion of informed individuals is small
+letters to nature
+NATURE | VOL 433 | 3 FEBRUARY 2005 | www.nature.com/nature 513©  2005 Nature Publishing Group 
+ 
+
+===== PAGE 2 =====
+or large (Fig. 2a, c, d). At intermediate values, however, q becomes
+strongly positively correlated with group accuracy (Fig. 2b). This
+corresponds to the region in Fig. 1 where the rate of increase in
+accuracy reaches its asymptote. There is a cost to increasing q for
+these intermediate values ofp, however, because there exists a trade-
+off between the accuracy of group motion and the probability that
+the group will fragment (Fig. 2b). Lack of group cohesion would
+clearly be detrimental to honeybees6–8 or obligate schooling ﬁsh1,2,13
+and there is experimental evidence that such a trade-off also occurs
+in other animal groups where social learning of routes depends on
+the ability of informed individuals to maintain social interactions
+with those that are naive
+4.
+Informed individuals within a group may differ in their preferred
+direction, however, due to differences in experience or moti-
+vation1,5–11 . Groups of animals often have to make collective
+decisions, such as to move together to a speciﬁc resource, such as
+a nest site1,5–9 or food source2,4. The means by which such decisions
+can be made is very poorly understood, especially in the case of large
+groups and when individuals are not capable of knowing whether
+they are in a majority or minority, or how the quality of their
+information compares with that of others, or even whether there are
+any other individuals in the population with information. T o
+investigate this we created two subsets of informed individual,
+each having its own directional preference.
+If the number of individuals that exhibit each preference is equal,
+the direction of group motion depends on the degree to which the
+preferred preferences differ: as this difference increases, groups
+change from moving in the average preferred direction of all
+informed individuals to selecting randomly one of the two preferred
+directions (Fig. 3A, a). If the number of individuals exhibiting one
+of the preferences is increased, however (Fig. 3A, b and c), the group
+will (given the appropriate difference in preference, Fig. 3A, a) select
+collectively the direction preferred by the majority, even if that
+majority is small (Fig. 3A, b).
+This ability of a group to average preferences when differences are
+relatively small
+21 but to achieve a consensus for the majority option
+when differences are large is likely to be important in many animal
+groups, especially if the point at which this transition occurs can be
+tuned. T o achieve this tuning we introduced a simple feedback on
+the weighting of the preferred direction q. If, in a given time step,
+informed individuals ﬁnd themselves moving in a similar direction
+(here within a 20-degree arc) to their preferred direction, q is
+reinforced (by qinc,u pt oam a x i m u m , qmax), otherwise it is
+reduced (by qdec, to a minimum of 0). Such a feedback loop allows
+consensus decisions (as opposed to averaging) for smaller differ-
+ences in preferred direction (Fig. 3B, C). Figure 3B, C shows that the
+transition to consensus decision-making occurs for small changes in
+the number of individuals in each subset and that the inﬂuence of
+the minority subset decreases rapidly as the difference in size of the
+informed subsets increases.
+This decision-making mechanism also allows discrimination
+with respect to quality of information. For example, if there is no
+difference in the size of the two subsets of informed individual, but
+there exists a difference in their ability to correctly determine their
+Figure 1Group accuracy, and shape, as a function of the proportion of informed
+individuals p, for different group sizesN. The initial increase in accuracy as a function ofp
+(a) is associated with the group becoming elongated asp increases (b). Informed
+individuals tend to occupy a frontal position within the group. The elongation of the group
+then decreases asp increases further and an increasingly large proportion of the group
+have knowledge of the directional vectorg. 400 replicates,q ¼ 0.5; a ¼ 1, r ¼ 6,
+g ¼ 0, Dt ¼ 0.2 s,v ¼ 2, s i ¼ a s21 corresponding to ﬁsh2,19.
+Figure 2The inﬂuence of the weighting of preferred direction. The accuracy of group
+motion (black circles) and probability of group fragmentation (red triangles) as a function
+of weighting q and the proportion of informed individualsp. a, p ¼ 0.02 (1 individual);
+b, p ¼ 0.1 (5 individuals);c, p ¼ 0.2 (10 individuals);d, p ¼ 0.5 (25 individuals).
+Parameters as for Fig. 1,N ¼ 50.
+letters to nature
+NATURE | VOL 433 | 3 FEBRUARY 2005 | www.nature.com/nature514 ©  2005 Nature Publishing Group 
+ 
+
+===== PAGE 3 =====
+preferred direction, the group can select collectively the direction
+associated with least error (Fig. 4, see Methods for details).
+Our model demonstrates that efﬁcient transfer of information,
+and decision-making, can occur within animal groups in the
+absence of explicit signals or complex mechanisms for information
+transfer. This means that informed and naive individuals do not
+have to be able to recognize each other and that leadership can
+emerge as a function of information differences among members of
+a population, and is therefore transferable. No inherent differences
+between individuals (such as dominance due to larger body size)
+need to be invoked to explain leadership, although these properties
+can also inﬂuence group motion
+2,18. Furthermore, the mechanism
+of coordination we propose here requires only limited cognitive
+ability, and demonstrates that individuals can respond spon-
+taneously to those that have information. This is important to
+our understanding of group foraging, social learning, migration and
+navigation, and may provide new design protocols for information
+transfer among grouping robots. A
+Methods
+Motion in animals is subject to random inﬂuences (for example, sensory/movement
+error). This is simulated by modifying ^diðt þ DtÞ or di
+0
+ðt þ DtÞ; for uninformed and
+informed individuals, respectively, by rotating it by a random angle taken from a circular-
+wrapped gaussian distribution, centred on 0, with standard deviation j ¼ 0.01 radians
+(see ‘Uncertainty of information’ , below) resulting in vectordi
+00
+ðt þ DtÞ: Individuals can
+turn through an angle of, at most,vDt radians towards their desired direction in timeDt;i f
+the angle between vi(t)a n ddi
+00
+ðt þ DtÞ is less than vDt, they achieve alignment with their
+desired vector, v iðt þ DtÞ¼ di
+00
+ðt þ DtÞ; otherwise they turn vDt towards it. The new
+position vector of individual i is then given byciðt þ DtÞ¼ ciðtÞþ v iðt þ DtÞDtsi; where si
+is the speed of individual i.
+Group size
+Group sizes here are comparable to the size of schools, ﬂocks or herds, of many
+species1–4,13,19, but smaller than large aggregates such as honeybee colonies7,8, owing to the
+nonlinear increase in computer processing time required as N increases. Our results,
+however, are likely to be independent of absolute group size, within the constraints of
+maintaining cohesion of group members 22. T o automatically test whether groups
+remained cohesive we used the equivalence class technique described in refs 18, 19.
+ 
+Figure 3Collective selection of group direction when informed individuals differ in
+preference. Normalized probability distribution (proportion of maximum) of group direction
+for groups containing two subsets (with directional preferencess1 and s2, and of sizesn1
+and n2, respectively) of informed individual within each group, each with its own
+directional preference:s1 ¼ 0 degrees (white dotted line) whereass2 ¼ 0–180 degrees
+(2,000 replicates per 10-degree interval). Total group sizeN ¼ 100 (parameters as for
+Fig. 1;q, q max ¼ 0.4). We show the large inﬂuence of slightly changingn1 and n2 on
+group direction. Ina, the ﬁrst column,n1 ¼ n2 (A, B ¼ 5; C ¼ 10, demonstrating
+consistency at larger values ofp). Inb, the second column,n1 is increased by 1, whereas
+in c, column 3,n1 is increased by 1 andn2 decreased by 1 (to allow direct comparison
+with the ﬁrst column).B and C include feedback.A, a, n1 ¼ 5, n2 ¼ 5; A, b, n1 ¼ 6,
+n2 ¼ 5; A, c, n1 ¼ 6, n2 ¼ 4; B, a–c, n1 and n2 as for A, a–c, respectively.
+C, a, n1 ¼ 10, n2 ¼ 10; C, b, n1 ¼ 11, n2 ¼ 10. C, c, n1 ¼ 11, n2 ¼ 9. ForB and C
+q inc ¼ 0.012, q dec ¼ 0.0008. Solid white lines are for reference only, representing the
+direction of the average vectorg of all informed individuals (with constantq).
+Figure 4Discrimination between two directions (s1 ¼ 0; s2 ¼ 100 degrees) based on
+information quality (x, see Methods). Parameters as for Fig. 3.n1 ¼ 10, n2 ¼ 10.
+Subset 2 has uncertain information whenx . 0.
+letters to nature
+NATURE | VOL 433 | 3 FEBRUARY 2005 | www.nature.com/nature 515©  2005 Nature Publishing Group 
+ 
+
+===== PAGE 4 =====
+Group direction
+T o quantify group directionh we create a vector extending from the group’s centroid
+calculated at time tfDt 2 50Dt to the centroid calculated at tfDt, where tf, the ﬁnal time
+step, is 2,500. In Figs 1 and 2 we calculated the mean angular deviations for 400 replicates,
+equivalent to calculating the linear standard deviation 20, which we normalized so that its
+minimum value is 0, corresponding to no information transfer (groups move in random
+directions), and its maximum value is 1, corresponding to the motion of the simulated
+groups always being exactly aligned with g.
+Elongation
+Elongation was measured by creating a bounding box around the group aligned with the
+direction of travel and calculating the ratio of the length of the axis aligned with the group
+direction, to that perpendicular to group direction. This value is 1 when both axes are
+identical, .1 as the group becomes more elongated in the direction of travel, and,1a si t
+becomes elongated perpendicular to the direction of travel.
+Uncertainty of information
+Individuals may also not have perfect knowledge about their preferred directiong, and this
+can be simulated for each individuali at the start of the simulation by rotating by the same
+type of circular-wrapped gaussian distribution with standard deviationg, resulting in vector
+gi.C h a n g i n gg changes our results quantitatively, but not qualitatively, within the upper
+limits imposed by groups being able to maintain cohesion (see Supplementary Fig. 1).
+To simulate a difference in the ability of informed individuals, within the same group,
+to correctly determine their preferred direction, g is rotated for p/2 individuals (s2)b y
+gaussian-distributed angle, with standard deviation x radians (creating gi, as above) at the
+start of the simulation (see Fig. 4).
+Starting conditions
+Each simulation run was started with randomized individual positions and orientations.
+Received 10 August; accepted 30 November 2004; doi:10.1038/nature03236.
+1. Krause, J. & Ruxton, G. D. Living in Groups 84–85, 137–143 (Oxford Univ. Press, Oxford, 2002).
+2. Couzin, I. D. & Krause, J. Self-organization and collective behaviour in vertebrates. Adv. Study Behav.
+32, 1–75 (2003).
+3. Reebs, S. G. Can a minority of informed leaders determine the foraging movements of a ﬁsh shoal?
+Anim. Behav. 59, 403–409 (2000).
+4. Swaney, W., Kendal, J., Capon, H., Brown, C. & Laland, K. N. Familiarity facilitates social learning of
+foraging behaviour in the guppy. Anim. Behav. 62, 591–598 (2001).
+5. Franks, N. R., Pratt, S. C., Mallon, E. B., Britton, N. F. & Sumpter, D. J. T. Information ﬂow, opinion
+polling and collective intelligence in house-hunting social insects. Phil. Trans. R. Soc. Lond. B 357,
+1567–1583 (2002).
+6. Lindauer, M. Communication in swarm-bees searching for a new home. Nature 179, 63–66 (1957).
+7. Seeley, T. D. Honeybee Ecology: a Study of Adaptation in Social Life 71–74 (Princeton Univ. Press,
+Princeton, 1985).
+8. Seeley, T. D. The Wisdom of the Hive 34–35 (Harvard Univ. Press, Cambridge, 1995).
+9. Seeley, T. D. Consensus building during nest-site selection in honey bee swarms: the expiration of
+dissent. Behav. Ecol. Sociobiol. 53, 417–424 (2003).
+10. Conradt, L. & Roper, T. J. Group decision-making in animals. Nature 421, 155–158 (2003).
+11. von Frisch, K. The Dance Language and Orientation of Bees 28–235 (Harvard Univ. Press, Harvard,
+1967).
+12. Rubenstein, D. I. & Hack, M. Horse signals: the sounds of scents and fury.Evol. Ecol.6, 254–260 (1992).
+13. Partridge, B. L. Structure and function of ﬁsh schools. Sci. Am. 245, 114–123 (1982).
+14. Berthold, P . & Querner, U. Genetic basis of migratory behaviour in European warblers. Science 212,
+77–79 (1981).
+15. Berthold, P ., Helbig, A. J., Mohr, G. & Querner, U. Rapid microevolution of migratory behaviour in a
+wild bird species. Nature 360, 668–670 (1992).
+16. Neill, W. H. Mechanisms of ﬁsh distribution in heterothermal environments. Am. Zool. 19, 305–317
+(1979).
+17. Grunbaum, D. Schooling as a strategy for taxis in a noisy environment.Evol. Ecol. 12, 503–522 (1998).
+18. Couzin, I. D., Krause, J., James, R., Ruxton, G. D. & Franks, N. R. Collective memory and spatial
+sorting in animal groups. J. Theor. Biol. 218, 1–11 (2002).
+19. Hoare, D. J., Couzin, I. D., Godin, J.-G. & Krause, J. Context-dependent group-size choice in ﬁsh.
+Anim. Behav. 67, 155–164 (2004).
+20. Batschelet, E. Circular Statistics in Biology 34–36 (Academic, London, 1981).
+21. Simons, A. M. Many wrongs: the advantage of group navigation.Trends Ecol. Evol.19, 453–455 (2004).
+22. Grego´ ire, G., Chate´, H. & Tu, Y . Moving and staying together without a leader.Physica D 181, 157–170
+(2003).
+Supplementary Informationaccompanies the paper on www.nature.com/nature.
+Acknowledgements I.D.C. thanks the Pew Charitable Trusts, the NSF and the EPSRC for their
+support. I.D.C. and J.K. acknowledge an EPSRC grant and are also grateful for fellowships at the
+Centre for Interdisciplinary Research, University of Bielefeld, where we had the opportunity to
+develop this research. S.A.L. acknowledges support from the NSF and the Andrew W. Mellon
+Foundation, and N.R.F. from the EPSRC and the BBSRC. I.D.C. thanks Balliol College for support
+and S. Pratt, D. Rubenstein, D. James and A. Ward for their input.
+Competing interests statementThe authors declare that they have no competing ﬁnancial
+interests.
+Correspondence and requests for materials should be addressed to I.D.C.
+(iain.couzin@zoo.ox.ac.uk or icouzin@princeton.edu).
+................... ....................... ....................
+Insects breathe discontinuously
+to avoid oxygen toxicity
+Stefan K. Hetz1 & Timothy J. Bradley2
+1Department of Animal Physiology, Humboldt-Universita¨t zu Berlin, Philippstr.
+13, 10115 Berlin, Germany
+2Department of Ecology and Evolutionary Biology, University of California,
+Irvine, California 92697-2525, USA
+.............................................................................................................................................................................
+The respiratory organs of terrestrial insects consist of tracheal
+tubes with external spiracular valves that control gas exchange.
+Despite their relatively high metabolic rate, many insects have
+highly discontinuous patterns of gas exchange, including long
+periods when the spiracles are fully closed. T wo explanations
+have previously been put forward to explain this behaviour: ﬁrst,
+that this pattern serves to reduce respiratory water loss
+1, and
+second, that the pattern may have initially evolved in under-
+ground insects as a way of dealing with hypoxic or hypercapnic
+conditions
+2. Here we propose a third possible explanation based
+on the idea that oxygen is necessary for oxidative metabolism but
+also acts as a toxic chemical that can cause oxidative damage of
+tissues even at relatively low concentrations. At physiologically
+normal partial pressures of CO
+2, the rate of CO 2 diffusion out of
+the insect respiratory system is slower than the rate of O 2 entry;
+this leads to a build-up of intratracheal CO 2. The spiracles must
+therefore be opened at intervals to rid the insect of accumulated
+CO
+2, a process that exposes the tissues to dangerously high levels
+of O 2. W e suggest that the cyclical pattern of open and closed
+spiracles observed in resting insects is a necessary consequence of
+the need to rid the respiratory system of accumulated CO
+2,
+followed by the need to reduce oxygen toxicity.
+The respiratory system of insects consists of a highly branched
+system of cuticle-lined tubes extending throughout the body 3. The
+tubules are ﬁlled with air, which greatly facilitates the transport of
+gases through the body (the diffusion of O
+2 and CO2 is about 10 6
+and 10 4 times faster, respectively, in air than in water, blood or
+tissue)4. The tracheae open to the external atmosphere through
+valve-like spiracles on the surface of the abdomen and thorax.
+Internal to the spiracles are large tracheal trunks and distensible
+air sacs. Smaller tracheae extend from the tracheal trunks in a
+branching, dendritic pattern. The ﬁnest branches at the tips of the
+tracheal system, termed tracheoles, can be less than a micrometre in
+diameter. They lie adjacent to the tissues and serve as the principal
+site for gas exchange.
+Early calculations suggested that passive diffusion of gases in the
+tracheal system of insects should be more than adequate to support
+oxidative metabolism, even in fairly large insects
+4. Observation of
+living insects reveals, however, that they have elaborate processes for
+changing the hydrostatic pressure in the haemocoel, thereby actively
+ventilating the tracheal system
+5–7. Even more surprisingly, many
+insects show highly rhythmic patterns of spiracular control (the
+discontinuous gas exchange cycle, DGC) where the tracheal system
+is periodically completely closed, followed by lengthy periods
+during which respiratory exchange is severely constricted
+8–10.I ti s
+intriguing to insect physiologists that a system which can apparently
+be operated passively instead exhibits a complex system of controls
+that are both metabolically costly and would seem to interfere with,
+rather than foster, respiratory homeostasis.
+The discontinuous gas exchange cycle of insects is characterized
+by a period in which the spiracles are fully closed (the ‘closed phase’ ,
+Fig. 1). During this time, the partial pressure of oxygen (p
+O2) in the
+lumina of the tracheae declines, and the partial pressure of CO 2
+(pCO2) increases. Owing to the high solubility of CO2 in the aqueous
+haemolymph and a respiratory quotient (the amount of CO 2
+letters to nature
+NATURE | VOL 433 | 3 FEBRUARY 2005 | www.nature.com/nature516 ©  2005 Nature Publishing Group 
+ 

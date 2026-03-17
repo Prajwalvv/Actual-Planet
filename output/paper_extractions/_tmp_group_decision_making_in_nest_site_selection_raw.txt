@@ -1,0 +1,1394 @@
+
+
+===== PAGE 1 =====
+101
+Apidologie 35 (2004) 101–116
+© INRA/DIB-AGIB/ EDP Sciences, 2004
+DOI: 10.1051/apido:2004004
+Review article
+Group decision making in nest-site selection by honey bees
+Thomas D. SEELEYa*, P. Kirk VISSCHERb
+a Department of Neurobiology and Behavior, Cornell University, Ithaca, NY 14853, USA
+b Department of Entomology, University of California, Riverside, CA 92521, USA
+(Received 8 August 2003; revised 5 November 2003; accepted 30 November 2003)
+Abstract – In recent years, renewed at tention has been paid to the me chanisms of group decision making
+that underlie the nest-site selection process in honey bees. We review the results of these new investigations
+by discussing how the recent work builds on the earlier descriptive studies of this decision-making process,
+how the decision-making abilities of swarms have been tested, and how the mechanisms of this decision-
+making process have been experimentally analyzed. We conclude by discussing how the scouts in a swarm
+sense when their group decision making is coming to an end and so should begin stimulating their quiescent
+swarm-mates to prepare for the flight to their new home. 
+Apis mellifera / group decision making / honey bee / nest-site selection / swarming / waggle dance
+1. INTRODUCTION
+For centuries, beekeepers have known that
+after a swarm leaves its hive and coalesces into
+a cluster hanging from a tree branch, it
+searches for a home and, if left alone, eventu-
+ally departs for a new abode. Because humans
+usually have hived the bivouacked swarms
+they have found, and so have cut short the
+bees’ process of nest-site selection, it is not
+surprising that this process long remained a
+deep mystery. This si tuation changed in the
+1950’s when Martin Lindauer (1951, 1953,
+1955) published his classic studies of house
+hunting by honey bees. Lindauer discovered
+that the bees seen performing waggle dances
+on the surface of a swarm cluster are scouts
+advertising potential nest sites, not foragers
+announcing rich food sources. He then took
+advantage of Karl von Frisch’s recent success
+in deciphering the waggle dance communica-
+tion system (von Frisch, 1946) to eavesdrop on
+the “deliberations” conducted by a swarm’s
+scouts as they consider a dozen or more possi-
+ble dwelling places and ultimately reach
+agreement on one of them. 
+The next phase in the analysis of the nest-
+site selection process of honey bees came in
+the 1970’s when various investigators turned
+their attention to the actions of scout bees at
+possible nest sites rather than the activities of
+these bees at the swarm cluster. Numerous
+studies were conducted to address the question
+of how scouts judge the quality of a potential
+nest site (reviewed by Seeley, 1985; Witherell,
+1985). For the races of Apis mellifera L. native
+to Europe, it was learned that an attractive nest
+site has a cavity volume greater than 10 liters
+and an entrance hole smaller than 30 cm
+2,
+perched several meters  off the ground, facing
+south, and located at the floor of the cavity.
+Neither cavity shape nor entrance shape is
+important. When insp ecting a site, a scout
+invests much time in walking the inner sur-
+faces of the cavity and her perception of cavity
+volume is linked somehow to how much walk-
+ing she must do to circumnavigate a cavity
+(Seeley, 1977; Franks and Dornhaus, 2003).
+* Corresponding author: tds5@cornell.edu
+
+===== PAGE 2 =====
+102 T.D. Seeley, P.K. Visscher
+This research on the nest-site preferences of
+bees set the stage for the development of effec-
+tive bait hives (Witherell, 1985; Schmidt and
+Thoenes, 1987, 1990), which have proven val-
+uable in various settings, including the moni-
+toring and control of swarms of Africanized
+honey bees in the southwestern US (Schmidt,
+1990).
+Over the last few years, renewed attention
+has been paid to the mechanisms of group
+decision making in honey bee swarms,
+essentially taking up where Lindauer left off in
+the 1950’s. Ever since Lindauer published his
+findings, there has been much speculation
+about the mechanisms of this decision-making
+process (Wilson, 1971; Griffin, 1981, 2001;
+Markl, 1985) and this has made clear the need
+for further analytic work. Moreover, since
+Lindauer’s time, there has been a tremendous
+growth in interest in how animal groups
+function as adaptive units in general (Bourke
+and Franks, 1995; Seeley, 1995; Sober and
+Wilson, 1998) and as decision makers in
+particular (Franks et al., 2002; Conradt and
+Roper, 2003). A swarm of honey bees
+choosing its future home is one of the most
+impressive examples known of an animal
+group functioning as an adaptive decision
+maker. In this paper, we review what has been
+learned lately about the mechanisms of group
+decision making by honey bee swarms.
+Before delving into these mechanisms, we
+wish to draw attention to three requirements
+that a swarm of bees must fulfill to succeed in
+the demanding task of choosing a home. First,
+it must achieve an accurate decision. A col-
+ony’s success depends critically on its occupy-
+ing a cavity that is sufficiently roomy to hold
+the combs the colony will need for rearing its
+brood and storing its honey. At the same time,
+the cavity must be sufficiently tight to provide
+good protection from predators, robbers, and
+harsh weather. Second, it must achieve a
+speedy decision. Every additional hour that a
+swarm spends as an exposed cluster, hanging
+from a tree branch, lowers its energy reserves
+and raises its chances of being soaked by rain.
+And third, it must achieve a unified decision.
+A split decision would lead to swarm fragmen-
+tation, which would be disastrous in most
+cases given that a swarm usually has just one
+queen and so can establish just one fully func-
+tioning colony. Thus th e central question that
+we face is this: how do the bees in a honey bee
+swarm work together to produce an accurate,
+speedy, and unified choice of a home?
+2. RENEWING THE ANALYSIS
+Since Lindauer’s work in the 1950’s, it has
+been clear that only a small minority of the
+bees in a swarm cluster – the scout bees – are
+actively involved in the decision-making proc-
+ess. The vast majority of a swarm’s members
+remain quiescent until a decision has been
+made and it is time to fly to the chosen site. It
+has also been clear that the scout bees search
+the surrounding environment for suitable nest
+sites, advertise their finds by performing wag-
+gle dances, and eventually come to an agree-
+ment on one of these sites. What was not clear
+until recently is how ex actly the scout bees
+behave to produce this agreement. As a first
+step toward solving this puzzle, we repeated
+Lindauer’s observations of the scout bees’
+dances and thus their deliberations, but using
+video equipment to get a more complete pic-
+ture of the scouts’ dancing than was possible
+in the 1950’s (Camazine  et al., 1999; Seeley
+and Buhrman, 1999). Having only pencil and
+paper for recording the scout bees’ behavior,
+Lindauer was greatly limited in the amount of
+dance information he could record. He settled
+on recording only the first dance performed by
+each dancing bee; a paint mark applied to each
+dancer as she performed her first dance ena-
+bled him to distinguish novice dancers
+(unmarked) from repeat dancers (marked).
+Working nearly 50 years later and blessed with
+video technology, we were able to record,
+playback, and analyze every dance performed
+on a swarm. Moreover, by working with small
+swarms of about 4 000 bees, and labeling indi-
+viduals so that they could be identified, we
+were able to attribute each dance to a particu-
+lar scout bee and so were able to determine the
+dance history, and other behaviors, of every
+bee that contributed to a swarm’s decision
+making.
+Figure 1 shows one of the complete dance
+records of a swarm’s decision making. The
+pattern resembles closely what Lindauer
+reported based on his first-dance-only records.
+The entire decision-mak ing process required
+about 16 hours of dance activity by the scouts,
+
+===== PAGE 3 =====
+Decision making by honey bee swarms 103
+spread over 3 days (a period of rain starting
+around noon on day 2 extended the process
+into day 3). We see that during the first half of
+the decision-making process, the scout bees
+reported all 11 of the potential nest sites that
+they would consider. We can also see that dur-
+ing the first half of the process no one site
+dominated the dancing; during the second half,
+however, one of the sites gradually began to be
+advertised much more than the others. Indeed,
+during the last few hours of the decision
+making, the site that had emerged as the front-
+runner (site G) becam e the object of all
+the dances – more than 3000 waggle runs –
+performed on the swarm. By the end, there
+was unanimity among the dancing bees. 
+This initial work confirmed many of the
+features of the swar m bees’ decision-making
+process that had been previously reported by
+Lindauer based on his partial records of the
+dancing on swarms. These features include:
+(1) the scout bees locate potential nest sites in
+all directions and at distances of up to several
+kilometers from the swarm; (2) initially, the
+scout bees advertise a dozen or more potential
+nest sites but eventually they advertise just one
+site; (3) within an hour or so of the appearance
+of unanimity among th e dancers, the swarm
+Figure 1. History of a swarm’s decision-making process from the time that the first potential nest site was
+advertised on the swarm (shortly after 11:00 hours on July 20, 1997) to when it lifted off to fly to its new
+home (at 11:58 hours on July 22, 1997). The circle within each of the panels represents the location of the
+swarm; each arrow pointing out from the circle indicates the distance and direction of a potential nest site;
+the width of each arrow denotes the number of different bees that danced for the site in the time period
+shown. The set of numbers at the tip of each arrow denotes three things: top the number of bees that danced
+for the site, middle the number of waggle runs performed for the site, bottom the mean number of waggle
+runs per dance for the site. The numbers after “bees”, “dances”, and “waggle runs” within each panel denote
+the total number of each (summed over all the potential nest sites) for the time period shown. (From Behav.
+Ecol. Sociobiol. 45, Seeley and Buhrman, 1999, © Springer-Verlag.)
+
+===== PAGE 4 =====
+104 T.D. Seeley, P.K. Visscher
+lifts off; (4) there is a crescendo of dancing just
+before liftoff; and (5) the chosen site is not
+necessarily the one that is first advertised on
+the swarm. Furthermore,  the analysis of the
+dancing records of individual scout bees con-
+firmed something else that Lindauer had sus-
+pected, which is that there is much turnover in
+the dancing bees over the course of a decision-
+making process. Most bees that dance for a site
+cease doing so after a few hours, letting the
+next “generation” of dancers carry on the
+deliberations. Thus it became clear that a
+swarm’s choice of a future home is broadly
+distributed among the scout bees, and that this
+leaderless process of group decision-making
+consists of a friendly competition among the
+different groups of dancers representing the
+different potential nest sites. The groups com-
+pete for additional dancers. Sooner or later,
+one group of dancers grows numerous and
+ultimately excludes its competitors. The site
+whose dancers prevail in this winners-take-all
+contest becomes the swarm’s new home.
+3. TESTING A SW ARM’S
+DECISION-MAKING ABILITY
+Watching the dancing bees on a swarm
+build a consensus for a nest site naturally
+raises the following question: is the site that
+wins in the competition for dancers the best of
+the sites that the scout bees have found? The
+results of a recent study (Seeley and Buhrman,
+2001) indicate that swar ms are indeed gener-
+ally successful in employing the best-of-N
+decision rule: sample  some number (N) of
+alternatives and then select the best one. In this
+study, five swarms of bees were transported
+one at a time to a windswept, brush-covered
+island along the coast of Maine, which had few
+natural nest sites. There each swarm was
+presented with an array of five nest boxes;
+four provided a mediocre but acceptable home
+site – a 15-liter cavity – and one offered an
+excellent home site – a 40-liter cavity. The
+record of each swarm’s search for and choice
+among these five alternative nest sites is
+shown in Figure 2. We see that in each case the
+scout bees discovered one or more of the
+mediocre sites well before they located the
+excellent site, sometimes several hours in
+advance, and that they recruited other bees to
+the mediocre site. However, we also see in
+each case, except trial 4, that as soon as the
+excellent site was discovered the bees
+recruited very strongly to this site and that
+within a few hours the number of scout bees at
+the excellent site greatly exceeded the number
+at any of the mediocre  sites. Ultimately, each
+swarm, except the fourth , lifted off and flew
+toward the excellent site. Thus, in four out of
+five trials, swarms selected the best site, an
+outcome that is ex tremely unlikely ( P =
+0.0064) to have occurred simply by chance.
+4. ANALYZING THE 
+DECISION-MAKING PROCESS
+As mentioned already, a key requirement of
+the decision-making process of honey bee
+swarms is that it produ ces a unified decision,
+for ultimately a swarm will occupy just one
+nest site. It is, theref ore, not surprising that
+before a swarm lifts off to fly to its chosen site,
+almost always the dancers on the swarm have
+reached an agreement su ch that all of their
+dances indicate a single  location. (Below we
+will discuss what happens when a swarm mis-
+takenly lifts off before the dancers have
+reached an agreement,  and what these mis-
+takes reveal about how the bees control their
+preparations fo r liftoff.) Only recently, how-
+ever, have we gained a clear picture of how the
+scouts behave so that eventually all of their
+dances are performed for one of the several
+sites under consideration, usually the best one.
+How do the scouts build a consensus for the
+best site? The descriptive studies discussed
+above indicate that the essence of the nest-site
+selection process is a friendly competition
+among the scouts “committed” to the various
+potential nest sites. Each coalition of scouts
+committed to a particular site competes with
+the other coalitions for additional members
+drawn from the pool of uncommitted scouts.
+For the basic situation of a choice between two
+sites, the swarm bees’ decision-making proc-
+ess can be conceptualized with the simple pair
+of equations that were put forth by Winsor
+(1934) (cited by Hutchinson, 1978) early in
+the history of ecological competition theory:
+dN
+1/dt = r1N1U – a1N1 (1)
+dN2/dt = r2N2U – a2N2 (2)
+
+===== PAGE 5 =====
+Decision making by honey bee swarms 105
+Figure 2. Results of five trials of a test of the ability of swarms to select the best of available nest sites. Five
+nest boxes were arranged in a fan- shaped array with each box 230–250 m from the swarm. One nest box
+was an excellent nest site (40-L cavity) while the othe r four were only mediocre  sites (15-L cavities). A
+count of the number of scout bees visible at each nest box was made every 30 min. In each trial, one or more
+of the mediocre sites was discovered 1–14 hours before the excellent site. Nevertheless, by the end of each
+trial, except the fourth, the swarm chose the 40-L site. Thus we see that most of these swarms were accurate
+decision makers. (From Behav. Ecol. Sociobiol. 49, Seeley and Buhrman, 2001, © Springer-Verlag.)
+
+===== PAGE 6 =====
+106 T.D. Seeley, P.K. Visscher
+Ni is the number of scouts committed to site i,
+U is the number of uncommitted scouts (the
+resource being competed for), r
+i is the
+recruitment (“birth”) rate per scout committed
+to site i, and a i is the abandonment (“death”)
+rate per scout committed to site i. Integrating
+and eliminating U from the two equations
+yields
+.( 3 )
+Thus if the scouts behave with a higher per
+capita rate of recruitment to site 1 than site 2,
+and a higher per capita rate of abandonment of
+site 2 than site 1, then the quantity (r
+1a2 – r2a1)
+has a positive value and the ratio on the left
+side of equation (3) is increasing. This implies
+the gradual elimination of the coalition of
+scouts committed to site 2. In ecological the-
+ory, these equations are useful as perhaps the
+simplest expression of  the principle of com-
+petitive exclusion. They are useful in the
+present context by showing how differences
+in per capita rates of r ecruitment to and aban-
+donment of different potential nest sites are
+sufficient to produce a clear winner in the
+competition among coalitions of scout bees. In
+this model, the competition is for a single
+resource – uncommitted scout bees – and
+occurs purely by exploitation. In principle, the
+competition among coalitions could also
+involve interference, with scouts of a given
+coalition directly inhibiting the growth of the
+other coalitions, and this possibility will be
+considered below.
+There is now solid evidence that scouts do
+adjust their behavior in relation to site quality
+so that the best site has both the highest per
+capita rate of recruitment (r
+i) and the lowest
+per capita rate of abandonment (a i). Lindauer
+(1955) stated that scouts reporting better sites
+perform longer and livelier dances (which
+should result in a higher per capita recruitment
+rate), but his evidence was only anecdotal.
+Seeley and Buhrman (2001) obtained experi-
+mental evidence in support of Lindauer’s
+claim. Their approach was to present a swarm
+with both an excellent (40 L) nest box and a
+mediocre (15 L) nest box, and then to video
+record the scout bees’ dances for the two nest
+boxes as they were performed side-by-side on
+the swarm. This experiment was performed
+with two swarms and in both cases they found
+that the dances for the excellent nest box were
+stronger than those for the mediocre nest box,
+there being on average 36 and 14 waggle runs
+per dance for the excellent and mediocre nest
+boxes, respectively. They also found that
+Lindauer was indeed correct when he stated
+that better sites elicit dances that are both
+longer and livelier than those elicited by
+poorer sites. Specifically, Seeley and Buhrman
+found that a scout bee tunes her dance strength
+by adjusting the number of waggle runs/dance,
+and that she adjusts the number of waggle
+runs/dance (W) by changing both the duration
+(D) and the rate (R) of her waggle-run produc-
+tion (note that W = D × R). Further analysis of
+the video recorded dances revealed that a
+dancing bee adjusts the rate of her waggle-run
+production by changing the mean duration of
+the return-phase portion of her dance circuits.
+Evidently, it was these differences in return-
+phase duration that gave Lindauer (1955) the
+impression that dances differ in liveliness.
+The rate of recruitment by a dance-produc-
+ing scout bee depends not only on how
+strongly she dances (number of waggle runs
+per dance), but also on how the dance-follow-
+ing scouts sample and respond to the various
+dances being performed on the surface of a
+swarm. The simplest possibility is that when a
+scout decides to follow a dance, she chooses a
+dancer at random and heeds her dance. If so,
+then the greater the per capita production of
+waggle runs for a site, the higher will be
+the per capita rate of recruitment to the site.
+Visscher and Camazine (1999) report evi-
+dence that scouts do indeed follow dances cho-
+sen at random. In a dese rt area, they provided
+a swarm with two nest boxes – one east and
+one west of the swarm – and they labeled each
+dancer for individual identification when she
+first danced for one of the nest boxes. They
+also videotaped all dancing and eventual
+dance following by the labeled bees through-
+out the swarm’s deci sion-making process.
+When they examined how much time the
+labeled bees spent following dances for the
+east and west nest boxes, they found that they
+followed dances for each site in proportion to
+the total amount of dancing by other bees for
+the site, as shown in Figure 3. Evidently, when
+the labeled bees switched from dance produc-
+ing to dance following (discussed further
+below), they showed no preference for either
+the dances advertising the site they had already
+N
+1
+r2 N2
+r
+1⁄ Ce r1a2 r2a1–() t=
+
+===== PAGE 7 =====
+Decision making by honey bee swarms 107
+visited or the dances for the other site, and
+instead simply followed dances chosen at
+random.
+So far we have considered only how scout
+bees committed to a site recruit other scouts to
+their site (i.e., what determines r
+i). Let us now
+consider instead how the scout bees commit-
+ted to a site abandon this site, that is, how they
+stop dancing for and stop making visits to the
+site, and so terminate their commitment to the
+site (i.e., what determines a
+i). This is one of the
+most curious features of the decision-making
+process of honey bee swarms. To conceptual-
+ize the matter, it is useful to recognize two
+classes of hypotheses for why a scout aban-
+dons a site: H1, an internal stimulus causes her
+to abandon a site; and H2, an external stimulus
+causes her to abandon a site. (Note: we know
+that scouts do not abandon their sites simply
+because they are dying.  Seeley and Buhrman
+(1999) measured the mortality rate of scout
+bees in 3 swarms and found it to be low, with
+only 6% of the scouts dying over the course of
+the decision-making process.)
+Hypothesis 1 is based upon the observation,
+made repeatedly in the descriptive studies
+(Lindauer, 1955; Camazine et al., 1999;
+Seeley and Buhrman, 1999) that scouts visit-
+ing nest sites rather quickly lose interest in
+their sites. With respect to dancing, for
+example, most scouts s how a statistically sig-
+nificant tapering off over several hours in the
+number of waggle runs performed per dance.
+(Lindauer aptly called this a decline in Tanz-
+lust.) Even scouts that start out visiting the
+ultimately chosen site, which presumably
+remains a high-quality site throughout the
+decision-making proces s, eventually cease
+performing dances for and stop making visits
+to this site. The fact that even scouts commit-
+ted to the chosen site eventually abandon this
+site suggests strongly that the scouts’ loss of
+interest is not the result of an external influ-
+ence associated with being committed to an
+inferior site – for example, experiencing at the
+site a weak buildup of scouts or encountering
+at the swarm a vigorous dance for an alterna-
+tive site – but is instead the result of an inter-
+nally programmed process. One can argue that
+it may be highly adaptive for scouts to be pro-
+grammed to eventually abandon their sites,
+because it could help prevent the decision-
+making process from becoming deadlocked
+due to unyielding scouts dancing for two or
+more sites.
+Hypothesis 2 is based upon the observa-
+tions made by Lindauer (1955) of 3 scout bees
+that stopped visiting one site at about the same
+time they started following dances for and
+began making visits to a second site. Lindauer
+(1971, 1975), Griffin (1992) and Gould and
+Gould (1994) have pointed out that these
+observations suggest that scouts will abandon
+one site only after they have followed dances
+for, inspected, and so gained interest in a supe-
+rior site. “Bees that had visited a cavity of
+mediocre quality sometimes became followers
+of more enthusiastic dances than their own.
+Then some of them visited the better cavity
+they had learned about as followers of vigor-
+ous dances, returned, and danced appropri-
+ately with respect to the superior cavity they
+had now visited” (Griffi n, 1992, p. 193). If
+bees decide to abandon a site only after they
+have learned about a superior site, it would be
+strong support for hypot hesis 2, because it
+would appear that information about a supe-
+rior site (an external stimulus) is what causes a
+scout to abandon a site. However, the temporal
+relationship between abandonment of one site
+and recruitment to a second site was, until
+recently, unclear. It may be that scouts gener-
+ally lose interest in one site even before they
+learn about a second site. If so, then this would
+be evidence against hypothesis 2, because it
+Figure 3. Scout bees that had originally danced for
+one of two available nest boxes (east or west) could
+later follow dances for each site. The expected
+amounts of dance followi ng by each class of bees
+for each site (Exp) were calculated by parceling out
+total time each labeled dancer followed dances
+according to the distribution of dances available for
+her to follow. The actual distribution of dance
+following (Obs) closely ma tched this expectation,
+showing that scouts were not selective either for
+novel or familiar sites. (From Nature 397, Visscher
+and Camazine, 1999, © Nature Publishing Group.)
+
+===== PAGE 8 =====
+108 T.D. Seeley, P.K. Visscher
+would appear that the external stimulus of
+information about a superior site is not needed
+for a scout to abandon a site. It should be noted
+that the “before” scenario is supported by
+Lindauer’s (1955) original observations. Each
+of the 3 scouts that he reported on stopped pro-
+ducing dances for (hence evidently was losing
+interest in) her first site well before she began
+following dances for her second site. 
+A recent study (Seeley, 2003) has add-
+ressed the critical issue of whether scouts
+that abandon a site do so only after they have
+followed dances for and made visits to a supe-
+rior site (as predicted by hypothesis 2), or
+whether they will abandon a site even before
+they have experienced these external stimuli
+(as predicted by hypothesis 1). The behaviors
+of the first few (4–8) bees that performed
+dances in each of 6 sw arms were monitored
+from the start of each bee’s dancing to the end
+of her swarm’s decision making. Because just
+a few scouts were monitored in each swarm, it
+was possible to record each time a focal scout
+left the swarm, return ed to the swarm, pro-
+duced a waggle dance, or followed a waggle
+dance. A total of 37 scout bees were observed,
+and 33 of them abandoned (ceased dancing
+for) the sites that they originally advertised
+with their dances. The critical finding was that
+only one of these 33 abandoners ceased danc-
+ing for her initial site after she began follow-
+ing dances for other sites. Most (32 out of 33)
+of these scouts lost interest in their sites with-
+out being influenced by the dances of other
+scouts, a fact which tends to contradict
+hypothesis 2. Instead, it looks like these bees
+lost on their own (without external influence)
+their motivation to dance for their initial sites.
+A further piece of evid ence that supports the
+internal stimulus hypothesis is the finding that
+the number of waggle runs produced by each
+bee for her initial site declined noticeably over
+her consecutive returns to the swarm and, as is
+shown in Figure 4, the pattern of decline in
+dancing per return to the swarm is strikingly
+linear. This linearity suggests that the pattern
+arises from an intern al, neurophysiological
+process that automatically drives down a
+scout’s motivation to dance for a site. This
+decline of dancing over repeated visits to a
+nest site appears to be a special feature of
+dancing in the context of house hunting; bees
+dancing in the context of nectar foraging do
+not show a decline in dancing over repeated
+visits to a food source (Seeley, 1994, Visscher,
+2003). 
+Another important finding in the Seeley
+(2003) study is that the scout bees showed
+signs of adjusting their per capita rates of
+abandonment in relation to the quality of the
+site that each bee was advertising. Bees that
+performed dances for their swarm’s chosen
+site (presumably a superior site) produced
+strong initial dances (mean number of waggle
+runs: 86.0) and continued producing dances
+over many (5–6) returns to the swarm. In com-
+parison, bees that performed dances for one of
+their swarm’s nonchosen sites (presumably
+sites inferior to the chosen one) produced
+weaker initial dances (mean number of waggle
+runs: 34.8) and danced over fewer (1–5)
+Figure 4. The number of waggle runs danced for a
+given site over consecutive returns to the swarm.
+Each of 37 scouts made 1–6 consecutive returns to
+the swarm with dancing and a final return without
+dancing (= 0 waggle runs /return). Some produced
+such a series for more than one site, so 51 series are
+included. The results show that a scout’s tendency
+to dance for a site decl ines quickly and linearly
+over the course of her succ essive trips to the site.
+(From Behav. Ecol. Soci obiol. 53, Seeley, 2003,
+© Springer-Verlag.)
+
+===== PAGE 9 =====
+Decision making by honey bee swarms 109
+returns to the swarm. On average, therefore,
+nest-site scouts from a chosen site started
+stronger and lasted longer in advertising their
+sites than did scouts from a nonchosen site.
+It appears that scout bees have a behavioral
+“rule” regarding the advertising of nest sites.
+The rule seems to be as follows: upon
+returning to the swarm for the first time after
+visiting a possible nest site, produce a dance
+whose strength (number of waggle runs)
+reflects the quality of the site, and upon
+making subsequent returns to the swarm,
+produce dances whose strength declines by
+about 15 waggle runs per return (see Fig. 4).
+By following this rule, nest-site scouts from
+superior sites will advertise their sites more
+strongly and will abandon their sites more
+slowly than will scouts from inferior sites. As
+a result, the better the site, the higher the per
+capita rate of recruitmen t of additional scouts
+(r
+i) and the lower the per capita rate of
+abandonment of existing scouts (a i). As
+mentioned above, such tuning of the per capita
+rates of recruitment and abandonment in
+relation to site quality is sufficient to explain
+how a consensus among the dancing bees is
+produced.
+We end this section with a bit of specula-
+tion. Winsor’s competition equations (1 and 2)
+refer only to competition by exploitation. Do
+the scouts of differen t coalitions compete
+entirely by mutual exploitation of the pool of
+uncommitted scout bees, or do they also com-
+pete by interference, that is by directly disrupt-
+ing the growth of competing coalitions? The
+evidence presented above (the linear decay in
+dancing) suggests that scout bees are not stop-
+ping their dancing in response to external stim-
+uli, but this may not be the whole story.
+Worker bees can produce a mechanical signal,
+the “stop signal”, that is directed at waggle
+dancers and that causes them to stop dancing
+(Esch, 1964; Nieh, 1993; Kirchner, 1993). So
+far, the only context in which stop signals have
+been studied is in th e hive, when a colony’s
+nectar influx is excessive. In this situation, the
+nectar foragers have difficulty finding receiver
+bees to take their nectar, and these foragers
+produce stop signals (u sually while tremble
+dancing) to inhibit waggle dancing and the
+recruitment of additional foragers (reviewed in
+Seeley, 1995, pp. 162–173). However, in the
+course of our studies, we have heard bees
+producing stop signals in swarms. (Stop sig-
+nals are easily recognized because they are
+extremely brief, lasting just 0.1–0.2 s, in con-
+trast to all the other acoustical signals of
+worker bees which last much longer.) This
+raises the possibility that the scouts in one coa-
+lition could reduce the rate of recruitment of
+scouts in competing coalitions. And if scouts
+in different coalitions do interfere with one
+another, it may happen when a scout has
+switched her commitment from an inferior site
+to a superior site. A scout in this situation
+could contribute to the decision-making proc-
+ess by inhibiting dances representing her
+former, inferior site. It is known that some
+scouts do cross over from inferior to superior
+sites (Lindauer, 1955; Seeley and Buhrman,
+1999; Camazine et al., 1999; Visscher and
+Camazine, 1999). However, no one has looked
+to see if crossover scouts produce stop signals
+directed at dancers adve rtising inferior sites.
+Visscher and Camazine (1999) have tested
+whether the removal of crossover scouts slows
+the decision-making process, as one would
+expect if interference by crossover scouts were
+important. They found no slowing. However,
+in performing their removal experiment,
+Visscher and Camazine used two identical
+nest boxes. Hence their crossover scouts did
+not experience a marked difference in quality
+between the two sites. It may be that direct
+experience with two sites that differ markedly
+in quality is necessary  to induce a scout that
+has switched sites to inhibit dances for the
+inferior site. Clearly, the question of whether
+the decision-making process of honey bee
+swarms involves mechanisms of direct inhibi-
+tion among the coalitions of dancers remains a
+subject for future investigation.
+5. EXPLORING HOW SWARMS 
+PREPARE FOR LIFTOFF
+While the scouts are busy choosing a suita-
+ble nesting cavity, the other 95% of the bees in
+a swarm remain quiescent and conserve the
+swarm’s energy reserve: the 30–40 mg of
+concentrated sugar so lution carried inside
+each bee (Combs, 1972). As was shown by
+Heinrich (1981), the b ees in the core of a
+swarm cluster maintain a 30–40 °C microcli-
+mate, by trapping the metabolic heat produced
+
+===== PAGE 10 =====
+110 T.D. Seeley, P.K. Visscher
+by the resting bees and by adjusting the clus-
+ter’s porosity to control its rate of heat loss.
+Meanwhile, the outermost bees in a cluster
+maintain themselves above a relatively low
+set-point of 15 °C, thus minimizing their
+energy expenditure for heat production but at
+the same time keeping their flight muscles
+warm enough to generate heat by shivering
+(Esch, 1988). In the final 10–30 min before
+liftoff, however, the temperature gradient in a
+swarm cluster becomes abolished such that the
+bees in the cluster’s mantle become as warm
+as those at its core (Heinrich, 1981; Seeley and
+Tautz, 2001). Given that a worker bee needs a
+flight muscle temperature of at least 33–35 °C
+for rapid flight (Esch, 1976; Heinrich, 1979), it
+is not surprising that such a striking warm-up
+phenomenon is observed. Using an infrared
+camera to measure the thoracic (flight muscle)
+temperatures of individual bees on the surface
+of a swarm cluster, Seel ey et al. (2003) found
+that liftoff begins just a few seconds after all
+the surface-layer bees in a swarm cluster have
+their flight muscles warmed to at least 35 °C.
+Swarm liftoff is a dazzling display of coordi-
+nated group behavior. All the bees in the
+swarm cluster launch into flight in about 60 s,
+form a cloud of swirling bees, and begin mov-
+ing off together, with the scouts somehow
+guiding all the others to their new dwelling
+place (Seeley et al., 1979, reviewed by Dyer,
+2000).
+We now understand some of the mecha-
+nisms whereby the bees in a swarm achieve
+such a beautifully coordinated liftoff. One of
+these is the buzz running ( Schwirrlaufen) sig-
+nal. During the final 10 or so minutes before
+liftoff, excited bees force their way through
+the quiet bees in the cluster, running about in a
+zig-zag pattern, butting into the other bees,
+meanwhile buzzing their wings (Lindauer,
+1955; Esch, 1967). Many, perhaps most, of
+these buzz runners are scout bees and their
+actions appear to loosen up the cluster (Seeley
+et al., 1979). Martin (1963) demonstrated,
+with a split-hive experi ment, that only bees
+contacted by buzz runne rs will join the mass
+exodus when a swarm in itially leaves the
+parental hive. A second signal that helps acti-
+vate the quiescent bees in a swarm cluster is
+the shaking signal (also called the vibration
+signal). To produce this signal, one bee grasps
+another and shakes this bee’s body for 1–2 s at
+16–18 Hz (see Fig. 1 in Seeley et al., 1998).
+There is strong evidence that the shaking sig-
+nal acts as a modulatory signal that produces a
+general activation of wo rker bees in swarms
+(Schneider et al., 1998 ; Visscher et al., 1999;
+Lewis and Schneider, 2000; Donahoe et al.,
+2003; reviewed in Schneider and Lewis, 2004)
+and in hives (Schneider  et al., 1986; Nieh,
+1998; Seeley et al.,  1998). However because
+the shaking signal does not occur solely or
+even principally in the last hour before liftoff,
+it seems that the shaking signal is not the sig-
+nal that informs the relatively cool bees in a
+swarm that it is time to warm up for liftoff.
+The principal warm-up signal is evidently
+the high-pitched piping signal that is produced
+during the last hour or so before departure
+(Lindauer, 1955; Seeley et al., 1979;
+Camazine et al., 1999). Seeley and Tautz
+(2001) investigated the origins and effects of
+this signal. They found that each piper is an
+excited bee that scrambles through the swarm
+cluster, pausing every second or so to press her
+thorax against anothe r bee, pull her wings
+together over her abdomen, and activate her
+wing muscles to produce an audible vibration
+(though probably most of the vibrational
+energy is loaded into the contacted bee). Each
+pipe is a pulse of vibration which lasts 0.82 ±
+0.43 s and rises in fundamental frequency
+from 100–200 Hz to 200–250 Hz. Many, if
+not all, of the pipers are scouts. The time-
+course of worker piping matches that of swarm
+warming – both start at a low level about an
+hour before liftoff and both build to a climax at
+liftoff – which suggests that the scouts use this
+signal to stimulate their swarm mates to warm
+up. The results of an exclusion experiment
+also support this view of the function of
+worker piping. When pipers were excluded
+from a subset of bees hanging in the cool, out-
+ermost layer of a swarm cluster, it was found
+that these bees did not  warm up, unlike adja-
+cent bees that were contacted by pipers. It
+should be noted that the form of worker piping
+that occurs in swarms  (“wings-together pip-
+ing”) is distinct from the form of worker pip-
+ing that has been observed in hives (“wings-
+apart piping”) (Ohtani and Kamada, 1980;
+Pratt et al., 1996). The function of the wings-
+apart piping signal remains a challenging
+mystery.
+
+===== PAGE 11 =====
+Decision making by honey bee swarms 111
+How do the scout bees sense when it is
+appropriate for them to begin producing the
+piping signals and so start stimulating their
+swarm-mates to prepare for the flight to their
+new home? Seeley and Visscher (2003) tested
+two hypotheses: “consensus sensing”, the
+scouts noting when all the bees performing
+waggle dances are advertising just one site;
+and “quorum sensing”, the scouts noting when
+one site is being visited by a sufficiently large
+number of scouts. To test these hypotheses,
+they monitored four sw arms as they discov-
+ered, recruited to, and chose between two nest
+boxes and as their scouts started producing
+piping signals. They found that a consensus
+among the dancers was neither necessary nor
+sufficient for the start of worker piping, which
+indicates that the cons ensus-sensing hypothe-
+sis is false. They also found that a buildup of
+10–15 or more bees at one of the nest boxes
+was consistently associ ated with the start of
+worker piping, which in dicates that the quo-
+rum-sensing hypothesis may be true (Fig. 5).
+Recently, they tested experimentally the
+Figure 5. Results from monitoring a swarm as its scout bees chose between two potential nest sites (one a
+nest box and the other a site in an old house) and then began preparing for liftoff, which is indicated by the
+start of worker piping. At the swarm, we recorded the intensity of worker piping every 5 min and the number
+of waggle runs that were produced for each site in 20 min intervals before liftoff. At the potential nest sites,
+we recorded the number of scout bees outside and inside each site every 5 min, except when one of the sites
+was an unidentified location in an old house. Note how every time the number of scouts inside the nest box
+rose well above 10 bees, piping began to be heard at the swarm, and how when the count fell to 10 or fewer
+bees, the piping decreased, usuall y stopping altogether. Note too that  there was a consensus among the
+dancers throughout. (From Behav. Ecol. Sociobiol. 54, Seeley and Visscher, 2003, © Springer-Verlag.)
+
+===== PAGE 12 =====
+112 T.D. Seeley, P.K. Visscher
+quorum-sensing hypothesis by seeing if they
+could delay the start of piping by slowing the
+buildup of scouts (i.e., quorum formation) at
+the chosen site but without disturbing anything
+else about the nest-site selection process
+(Seeley and Visscher, unpublished results). To
+do this, they presented swarms, one at a time,
+with five nest boxes together at one site, and
+they monitored the buildup of scouts at the
+nest boxes and the start of piping at the swarm.
+For comparison, they performed another trial
+with each swarm but with just one nest box at
+a site (different sites were used for the 1-nest-
+box and the 5-nest-box trials; also, the order of
+the 1- and 5-nest-box trials was reversed
+between consecutive swarms). They observed
+that the buildup of scout bees at a nest box was
+slower in the 5-nest-box trials (the recruits
+spread themselves among the nest boxes) than
+in the 1-nest-box trials (the recruits assembled
+at the single nest box), and that the onset of
+piping was much delayed in the 5-nest-box
+trials relative to the 1-nest-box trials. These
+results strongly support the quorum-sensing
+hypothesis, but leave open the question of how
+the scouts are sensing a quorum at the chosen
+site.
+An intriguing question is why the scouts
+don’t use consensus sensing and instead use
+quorum sensing. This question is particularly
+piquant given that a cons ensus, or at least a
+near consensus, among the dancers is required
+for a swarm to execute a successful move to a
+new home site. In three reported instances of a
+swarm lifting off when its dancers were
+strongly split between two sites (the Balcony
+and Moosach swarms of Lindauer, 1955, and
+swarm 3 of Seeley and Visscher, 2003), the
+airborne swarm divided, stalled in its move,
+and resettled. (Note: the occasional occurrence
+of liftoffs without consensus is further support
+for the quorum-sensing hypothesis.) Two of
+these swarms went on to achieve a dance
+consensus and a successful move, but one lost
+its queen when it split itself in midair and so
+experienced a complete failure. One possible
+reason for why the bees use quorum sensing
+is that it would be exceedingly difficult or
+costly for the scouts to sense a consensus
+among themselves as th ey perform dances on
+a swarm, for to do so would presumably
+require that each scout poll the dances by
+traveling over the swarm cluster, reading some
+sample of the dances, and keeping a tally of
+her readings. Another possible reason for
+using quorum sensing is that it provides an
+advantage in the speed of the decision making,
+by enabling the bees to begin preparations for
+liftoff as soon as enough of the scout bees, but
+not all of them, have approved of one of the
+potential nest sites. Presumably the reason that
+most liftoffs occur when there is a consensus
+among the dancers, ev en though a consensus
+is not the trigger for the start of liftoff
+preparations, is because there is the strong
+positive feedback process of vigorous dancing
+for the chosen site, which attracts more and
+more dancing for this superior site. It may be
+too that the quorum size has been tuned by
+natural selection to be sufficiently high to
+ensure that almost always a dance consensus is
+produced for a site shortly after a quorum of
+scouts is reached at this site.
+6. SW ARM SMARTS
+In closing, we draw attention to two fea-
+tures of the group decision-making process
+that we have just discussed, features that con-
+tribute importantly to a swarm’s success in
+choosing a new home. Let us not forget that
+each of these successes is a remarkable
+achievement. For while it is true that a
+swarm’s decision making is simplified by hav-
+ing a clear and stable problem (i.e., find a sin-
+gle, suitable nest site), it is also complicated by
+the realities that the information used in this
+decision making is incomplete (at least early
+on), sometimes inaccurate (as when a scout
+dances weakly for a high-quality site; see
+Swarm 4 in Fig. 2), and steadily changing .
+Such informational messiness makes it diffi-
+cult to apply the classical and powerful
+approach to decision making – identify alter-
+natives, evaluate these options, and choose the
+one with the highest value – but swarms man-
+age to do so. What are their secrets of success?
+One is the use of dozens, if not hundreds, of
+scout bees that independently, widely, and
+simultaneously explore for potential nest sites.
+These scouts bring back to the swarm cluster
+heterogeneous information – knowledge of
+superb, mediocre, and even lousy sites – which
+is then shared with th e other scouts by means
+of waggle dances. The important thing is that
+
+===== PAGE 13 =====
+Decision making by honey bee swarms 113
+all discoveries of acceptable nest sites are
+freely reported; no scout is stifled. Thus a
+swarm takes advantage of its collective nature
+to assemble rather quickly, often in just a few
+hours (see Fig. 1), a large set of alternatives
+from which to choose. The larger this set, the
+more likely it includes a first-rate site.
+A second important f eature of the bee’s
+decision-making process becomes apparent
+when we consider how the scouts solve the
+problem of finding the best of this large set of
+alternatives. At most, any individual has direct
+experience with only a few of these sites, but
+the decision-making process must compare all
+the sites. We have described already how the
+solution to this problem arises through a proc-
+ess of friendly competition among the scouts,
+with the various coalitions of scouts commit-
+ted to different sites vying to attract uncom-
+mitted scouts. We have explained how the
+members of each coalition attract additional
+members by performing waggle dances that
+are graded in strength in relation to site qual-
+ity, so that the higher the site quality, the
+stronger the dance, a nd the greater the stream
+of newcomers to it. Furthermore, the appar-
+ently endogenously programmed extinction of
+Tanzlust helps sharpen the differences in
+recruitment. But what we have not yet pointed
+out is that the bees have an important check on
+the positive feedback that will occur as danc-
+ers beget more dancers: a dance follower does
+not blindly imitate the dancer that she has fol-
+lowed. Instead, she leav es the swarm cluster,
+examines the advertised site, and only if she
+too judges that it is a worthy site does she pro-
+duce a dance for it. In this way the population
+of scouts avoids possible runaway feedback in
+dancing for a poor site that happens to be dis-
+covered quickly. The procedure of inspecting
+a site before advertising it also provides the
+basis for the scouts d eciding when the deci-
+sion-making process has progressed suffi-
+ciently far for them to shift to stimulating
+swarm liftoff.
+These considerations illustrate how the
+story of house hunting by honey bees contains
+valuable lessons about effective decision mak-
+ing by groups. There is no need for any indi-
+vidual to possess a global view of the alterna-
+tives, nor for any mechanism to tally and
+compare “votes” for them . The “smarts” of a
+swarm derives from a combination of many
+individuals working in parallel, each one
+making sophisticated assessments of nest-site
+properties, and a group process of feedback
+in recruitment, modulated by these quality
+assessments and amplified by the house-hunt-
+ing-specific decay of Tanzlust. Together, these
+lead a swarm to an accurate, speedy, and uni-
+fied decision.
+ACKNOWLEDGMENTS
+We are grateful to the National Science Founda-
+tion, the Alexander von Humboldt Foundation, the
+National Geographic Society, and the University of
+California-Riverside Academic Senate. Their finan-
+cial support made possible many of the studies dis-
+cussed in this article.
+Résumé – Prise collective de décision dans le
+choix du site de nidification chez l’Abeille
+domestique. Une attention renouvelée a récem-
+ment été portée aux mécani smes de prise de déci-
+sion collective chez les essaims d’abeilles domesti-
+ques (Apis mellifera L.) en se basant sur les études
+faites par Lindauer dans les années 50. Nous pas-
+sons en revue les connai ssances récentes sur la
+fonction d’un essaim dans la prise de décision.
+Une première étape dans l’étude renouvelée du pro-
+cessus de choix du site de nidification a été de faire
+une description complète, à l’aide d’enregistre-
+ments vidéo, des danses des éclaireuses, et donc de
+leurs délibérations. Ceci a confirmé les traits fonda-
+mentaux du processus de prise de décision : les
+éclaireuses cherchent partout des sites potentiels de
+nidification, elles recrutent d’abord par les danses
+frétillantes pour de nombr eux sites, pui s ne recru-
+tent éventuellement que p our un seul site et, peu
+après l’apparition d’un consensus parmi les danseu-
+ses, l’essaim s’envole vers le site choisi. Ce travail
+a aussi montré le taux élevé de renouvellement des
+danseuses au cours de la prise de décision de
+l’essaim. Les nouvelles ét udes descriptives ont
+généralement confirmé que le choix d’un domicile
+par l’essaim consiste en  une compétition amicale
+pour gagner de nouvelles  danseuses entre groupes
+de danseuses représentant les divers sites potentiels.
+Un test a été réalisé sur la précision de la prise de
+décision par les essaims. Il a montré que les essaims
+réussissent généralement  à présenter un certain
+nombre N d’alternatives et choisissent ensuite la
+meilleure (i.e. ils utilisen t la règle de décision « le
+meilleur de N »).
+De nombreux travaux ont cherché à comprendre
+comment les éclaireuses se comportent pour pro-
+duire finalement une da nse consensuelle pour le
+meilleur site de nidifica tion. En principe cela se
+produit si les éclaireuses agissent de façon à ce que
+le meilleur site ait le plus fort taux de recrutement et
+
+===== PAGE 14 =====
+114 T.D. Seeley, P.K. Visscher
+le plus faible taux d’abandon par tête. On sait main-
+tenant que les éclaireuses qui produisent la danse
+règlent la force de leur danse frétillante ( = nombre
+de trajets frétillants par da nse) selon la qualité du
+site et que celles qui suivent la danse choisissent au
+hasard la danse à suivre. Le taux de recrutement par
+tête est une fonction positive de la qualité du site de
+nidification. On a aussi maintenant la preuve que les
+éclaireuses ajustent le taux d’abandon par tête en
+fonction de la qualité du site. Bien que les éclaireu-
+ses puissent éventuellement abandonner un site
+(cesser de danser pour lui), meilleur est le site, plus
+longtemps l’éclaireuse dansera pour lui.
+Peu avant qu’un essaim s’envole pour son nouveau
+domicile, les abeilles éc hauffent leurs muscles de
+vol jusqu’à atteindre au moins 35 °C. Les éclaireu-
+ses produisent un chant en rassemblant leurs ailes
+pour inciter leurs consoeurs au repos à s’échauffer
+pour l’envol. Les éclaireuses décident curieusement
+du moment où elles se mettent à chanter lorsqu’elles
+sentent la formation d’ un quorum d’éclaireuses
+pour le site choisi et non pas un consensus dans la
+danse sur la grappe de l’essaim. Ce sentiment de
+quorum peut servir à accélé rer la prise de décision
+de l’essaim.
+Apis mellifera / décision collective / choix / site de
+nidification / essaimage / danse frétillante
+Zusammenfassung – Gruppenentscheidung bei
+der Nestsuche der Honigbienen.  In den letzten
+Jahren wurde die Aufm erksamkeit erneut auf
+den Mechanismus der Gruppenentscheidung bei
+Schwärmen der Honigbienen gerichtet, die auf den
+Untersuchungen von Lindauer in den 1950er Jahren
+basieren. Wir geben eine Übersicht über neuere
+Erkenntnisse über die Funktion eines Schwarms bei
+der Fassung von Entscheidungen.
+Ein erster Schritt bei der erneuten Untersuchung
+über den Entscheidungsprozess während der Suche
+nach einer geeigneten Nisthöhle bestand aus Video
+Aufnahmen, die eine vollständige Beschreibung der
+Tänze aller Kundschaf terbienen und damit von
+ihren Beurteilungen ermöglic hte. Hierbei bestätig-
+ten sich die wichtigsten Grundzüge des Ent-
+scheidungsprozesses: Kundschafter suchen überall
+nach Nistmöglichkeiten, anfangs werben sie für
+viele Nistgelegenheiten mit Schwänzeltänzen, aber
+allmählich werben sie nur noch für einen Nistplatz
+und kurz nach der Einigung de r Tänzer fliegt der
+Schwarm zur erwählten Nisthöhle. Di ese Filme
+dokumentieren auch eine hohe Zahl von Umgrup-
+pierungen der Tänzer während des Entscheidungs-
+prozesses des Schwarms . Insgesamt haben die
+neuen Beobachtungen bestätigt, dass die Wahl des
+Schwarmes für eine neue Nisthöhle aus einer fried-
+lichen Konkurrenz bei der Anwerbung von Tänzern
+zwischen den verschiede nen Gruppen ist, die
+Nistmöglichkeiten vorstellen.
+Es wurde ein Test über die Genauigke it der Ent-
+scheidungsfindung im Schwarm durchgeführt.
+Dabei zeigte sich, dass Schwärme im allgemeinen
+erfolgreich eine Anzahl (N) von alternativen
+Nistmöglichkeiten aufzeigen und dann den besten
+auswählen (i.e., Anwendung der “besten–von-N”
+Entscheidungsregel).
+Viele Arbeiten konzentrierten sich auf eine
+Aufklärung des Verhaltens  der Kundschafter, das
+zum Schluss zu einem ei nheitlichen Tanz für die
+beste Nistgelegenheit führt.  Im Prinzip geschieht
+das, wenn es den Kundscha ftern gelingt, die meis-
+ten Einzelbienen (pro Kopf) zu rekrutieren und
+gleichzeitig den gerings ten Verlust zu haben.
+Inzwischen ist bekannt, dass die tanzenden Kund-
+schafterinnen die Stärke ihres Schwänzeltanzes mit
+der Qualität des Nistpl atzes abstimmen (=Anzahl
+von Schwänzelläufen pro Tanz), und dass die
+der Tänzerin nachfolgenden Kundschafterinnen
+zufällig einem Tanz folgen. Eine pro Kopf Rate von
+Neulingen hat eine ei nigende Wirkung und zeigt
+eine positive Reaktion auf der Qualität des Nistplat-
+zes an. Auch gibt es jetzt Befunde, dass Kundschaf-
+terinnen die pro Kopf Rate von den Tanz verlassen-
+den Bienen in Bezug zur Qualität setzen. Obwohl
+alle Kundschafterinnen nach und nach aufhören
+(nicht mehr für den Platz tanzen), tanzen sie doch
+länger, je besser der Platz ist.
+Kurz bevor der Schwar m startet und zu seinem
+neuen Heim fliegt, wärmen  die Bienen ihre Flug-
+muskeln auf mindestens 35 °C auf. Die Kundschaf-
+terinnen erzeugen ein Pi ping Signal durch Zusam-
+menlegung ihrer Flügel , das zur Stimulierung
+ihrer ruhig gebliebenen Schwarmgenossinnen zur
+Aufwärmung für den Abflug führt. Seltsamerweise
+entscheiden die Kundschafterinnen über den Beginn
+des Piping Signals. Sie erkennen die Entscheidung
+einer ausreichenden Zahl an Kundschafterinnen für
+einen Platz, sie messen nicht die Einigung im Tanz
+auf der Traube. Dieses Gefühl für ein Quorum mag
+dazu dienen, die Entscheidungsfindung zu be-
+schleunigen. 
+Apis mellifera  / Findung einer Gruppenent-
+scheidung / Wahl des Nistplatzes / Schwärmen /
+Schwänzeltanz 
+REFERENCES
+Bourke A., Franks N.R. (1 995) Social evolution in
+ants, Princeton University Press, Princeton, New
+Jersey.
+Camazine S., Visscher P.K., Finley J., Vetter R.S.
+(1999) House-hunting by honey bee swarms:
+collective decisions a nd individual behaviors,
+Insectes Soc. 46, 348–360.
+Combs G.F. (1972) The engorgement of swarming
+worker honeybees, J. Apic. Res. 11, 121–128.
+Conradt L., Roper T.J. (2003) Group decision-making
+in animals, Nature 421, 155–158.
+Donahoe K., Lewis L.A., Schneider S.S. (2003) The
+role of the vibration signal in the house-hunting
+
+===== PAGE 15 =====
+Decision making by honey bee swarms 115
+process of honey bee ( Apis mellifera ) swarms,
+Behav. Ecol. Sociobiol. 54, 593–600.
+Dyer F.C. (2000) Group movement and individual
+cognition: lessons from social insects, in: Boinski
+S., Garber P.A. (Eds.), On the move: how and
+why animals travel in groups, University of
+Chicago Press, Chicago, pp. 127–164.
+Esch H. (1964) Beiträge zum Problem der Entfer-
+nungsweisung in den Schwänzeltänzen der
+Honigbiene, Z. Vergl. Physiol. 48, 534–546.
+Esch H. (1967) The sounds produced by swarming
+honey bees, Z. Vergl. Physiol. 56, 408–411.
+Esch H. (1976) Body temperature and flight perform-
+ance of honey bees in a servomechanically con-
+trolled wind tunnel, J. Comp. Physiol. 109, 264–
+277.
+Esch H. (1988) The effect s of temperature on flight
+muscle potentials in honeybees and cuculiinid
+winter moths, J. Exp. Biol. 135, 109–117.
+Franks N.R., Dornhaus A. (2003) How might individ-
+ual honeybees measure massive volumes, Proc.
+R. Soc. London B (Suppl.) 270, S181–S182.
+Franks N.R., Pratt S.C., Mallon E.A.B., Britton N.F.,
+Sumpter D.J.T. (2002) Information flow, opinion
+polling and collective intelligence in house-
+hunting social insects, Philos. Trans. R. Soc.
+London B 337, 1567–1583.
+Frisch K. von (1946) Die Tänze der Bienen, Österr.
+Zool. Z. 1, 1–48.
+Gould J.L., Gould C.G. (1994) The animal mind,
+Scientific American Library, New York.
+Griffin D.R. (1981) The question of animal aware-
+ness, Rockefeller University Press, New York.
+Griffin D.R. (1992) Anim al minds, University of
+Chicago Press, Chicago.
+Griffin D.R. (2001) Animal minds: beyond cognition
+to consciousness, University of Chicago Press,
+Chicago.
+Heinrich B. (1979) Thermoregulation of African and
+European honeybees during foraging, attack, and
+hive exits and returns, J. Exp. Biol. 80, 217–229.
+Heinrich B. (1981) The mechanisms and energetics of
+honeybee swarm temperature regulation, J. Exp.
+Biol. 91, 25–55.
+Hutchinson G.E. (1978) An introduction to popula-
+tion ecology, Yale University Press, New Haven.
+Kirchner W.H. (1993) Vibr ational signals in the
+tremble dance of the honeybee, Apis mellifera,
+Behav. Ecol. Sociobiol. 33, 169–172.
+Lewis L.A., Schneider S.S. (2000) The modulation of
+worker behavior by the vibration signal during
+house hunting in swarms of the honeybee, Apis
+mellifera, Behav. Ecol. Sociobiol. 48, 154–164.
+Lindauer M. (1951) Bienentänze in der Schwarm-
+traube, Naturwissenschaften 38, 509–513.
+Lindauer M. (1953) Bienentänze in der Schwarm-
+traube. II, Naturwissenschaften 40, 379–385.
+Lindauer M. (1955) Schwarmbienen auf Wohnungs-
+suche, Z. Vergl. Physiol. 37, 263–324.
+Lindauer M. (1971) Communication among social
+bees, 2nd ed., Harvard University Press, Cam-
+bridge, Massachusetts.
+Lindauer M. (1975) Verstä ndigung im Bienenstaat,
+Fischer Verlag, Stuttgart.
+Markl H. (1985) Manipulation, modulation, informa-
+tion, cognition: some ri ddles of communication,
+in: Hölldobler B., Lindau er M. (Eds.), Experi-
+mental behavioral ecology and sociobiology,
+Fischer Verlag, Stuttgart, pp. 163–194.
+Martin P. (1963) Die St euerung der Volksteilung
+beim Schwärmen der Bienen. Zugleich ein
+Beitrag zum Problem der Wanderschwärme,
+Insectes Soc. 10, 13–42.
+Nieh J.C. (1993) The stop signal of honey bees:
+reconsidering its message, Behav. Ecol. Socio-
+biol. 33, 51–56.
+Nieh J.C. (1998) The honey bee shaking signal: func-
+tion and design of a modulatory communication
+signal, Behav. Ecol. Sociobiol. 42, 23–36.
+Ohtani T., Kamada T. (1980) ‘Worker piping’: the
+piping sounds produced by laying and guarding
+worker honeybees, J. Apic. Res. 19, 154–163.
+Pratt S.C., Kühnholz S., Seeley T.D., Weidenmuller
+A. (1996) Worker piping associated with foraging
+in undisturbed queenright colonies of honey bees,
+Apidologie 27, 13–20.
+Schmidt J.O. (1990) Swar m traps: an example of
+research and technology transfer, Am. Bee J. 130,
+333–334.
+Schmidt J.O., Thoenes S.C. (1987) Swarm traps for
+survey and control of Africanized honey bees,
+Bull. Entomol. Soc. Am. 33, 155–158. 
+Schmidt J.O., Thoenes S.C. (1990) Honey bee
+(Hymenoptera: Apidae) preferences among artifi-
+cial nest cavities, Ann. Entomol. Soc. Am. 83,
+271–274.
+Schneider S.S., Lewis L.A. (2004) The vibrational sig-
+nal, modulatory communication and the organiza-
+tion of labor in honey bees, Apis mellifera, Apid-
+ologie 35, 117–131.
+Schneider S.S., Stamps J.A ., Gary N.E. (1986) The
+vibration dance of the honey bee. I. Communica-
+tion regulating foraging on two time scales,
+Anim. Behav. 34, 377–385.
+Schneider S.S., Visscher P.K., Camazine S. (1998)
+Vibration signal behavior of waggle-dancers in
+swarms of the honey bee, Apis mellifera
+(Hymenoptera: Apidae), Ethology 104, 963–972.
+Seeley T.D. (1977) Measurement of nest cavity
+volume by the honeybee (Apis mellifera), Behav.
+Ecol. Sociobiol. 2, 201–227.
+Seeley T.D. (1985) Honeybee ecology, Princeton
+University Press, Princeton, New Jersey.
+Seeley T.D. (1994) Honey bee foragers as sensory
+units of their colonies, Behav. Ecol. Sociobiol.
+34, 51–62.
+Seeley T.D. (1995) The wisdom of the hive, Harvard
+University Press, Cambridge, Massachusetts.
+Seeley T.D. (2003) Consen sus building during nest-
+site selection in honey bee swarms: the expiration
+
+===== PAGE 16 =====
+116 T.D. Seeley, P.K. Visscher
+of dissent, Behav. Ecol. Sociobiol. 53, 417–
+424.
+Seeley T.D., Buhrman S.C. (1999) Group decision
+making in swarms of h oney bees, Behav. Ecol.
+Sociobiol. 45, 19–31.
+Seeley T.D., Buhrman S.C. (2001) Nest-site selection
+in honey bees: how well do swarms implement
+the ‘best-of-N’ decisi on rule? Behav. Ecol.
+Sociobiol. 49, 416–427.
+Seeley T.D., Tautz J. (2001) Worker piping in honey
+bee swarms and its role in preparing for Liftoff, J.
+Comp. Physiol. A 187, 667–676.
+Seeley T.D., Visscher P.K. (2003) Choosing a home:
+how the scouts in a honey bee swarm perceive the
+completion of their group decision making,
+Behav. Ecol. Sociobiol. 54, 511–520.
+Seeley T.D., Morse R.A., Visscher P.K. (1979) The
+natural history of the flight of honey bee Swarms,
+Psyche 86, 103–113.
+Seeley T.D., Weidenmüller A., Kühnholz S. (1998)
+The shaking signal of the honey bee informs
+workers to prepare for greater activity, Ethology
+104, 10–26.
+Seeley T.D., Kleinhenz M., Bujok B., Tautz J. (2003)
+Thorough warm-up before take-off in honey bee
+swarms, Naturwissenschaften 90, 256–260.
+Sober E., Wilson D.S. ( 1998) Unto others, Harvard
+University Press, Cambridge, Massachusetts.
+Visscher P.K. (2003) How se lf-organization evolves,
+Nature 421, 799–800.
+Visscher P.K., Camazine S. (1999) Collective
+decisions and cognition in bees, Nature 397,
+400.
+Visscher P.K., Shepardson J., Camazine S. (1999)
+Vibration signal modulates the behavior of
+house-hunting honey bees ( Apis mellifera ),
+Ethology 105, 759–769.
+Wilson E.O. (1971) The insect societies, Harvard
+University Press, Cambridge, Massachusetts.
+Winsor C.P. (1934) Mathematical analysis of growth
+of mixed populations, Cold Spring Harbor Symp.
+Quant. Biol. 2, 181–187.
+Witherell P.C. (1985) A review of the scientific
+literature relating to honey bee bait hives
+and swarm attractants, Am. Bee J. 125, 823–
+829.
+To access this journal online:
+www.edpsciences.org

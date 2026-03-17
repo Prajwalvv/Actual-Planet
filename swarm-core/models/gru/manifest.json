@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "version": "imitation-v1",
+  "modelFile": "gru_scheduler.onnx",
+  "inputName": "observation",
+  "hiddenInputName": "hidden_state",
+  "hiddenOutputName": "next_hidden_state",
+  "roleInputName": "last_role_index",
+  "actionOutputName": "action_logits",
+  "unitsOutputName": "units_logits",
+  "confidenceOutputName": "confidence",
+  "roleEmbeddingDim": 16,
+  "hiddenSize": 96
+}

@@ -1,0 +1,753 @@
+
+
+===== PAGE 1 =====
+A Brief History of Stigmergy Guy Theraulaz
+CNRS - UMR 5550
+Laboratoire d’´ethologie
+et psychologie animale
+Universit´e Paul Sabatier
+118 route de Narbonne
+31062 Toulouse
+France
+theraula@cict.fr
+Eric Bonabeau
+Santa Fe Institute
+1399 Hyde Park Road
+Santa Fe, NM 87501
+bonabeau@santafe.edu
+Keywords
+stigmergy, coordination, social
+insects, self-organization, self-
+assembling
+Abstract Stigmergy is a class of mechanisms that mediate
+animal-animal interactions. Its introduction in 1959 by
+Pierre-Paul Grass´e made it possible to explain what had been
+until then considered paradoxical observations: In an insect
+society individuals work as if they were alone while their
+collective activities appear to be coordinated. In this article
+we describe the history of stigmergy in the context of social
+insects and discuss the general properties of two distinct
+stigmergic mechanisms: quantitative stigmergy and qualitative
+stigmergy.
+1 Introduction
+When the concept of stigmergy was ﬁrst introduced in 1959 by French zoologist Pierre-
+Paul Grass´e, an important step toward understanding the mechanisms underlying the
+emergence, regulation, and control of collective activities in social insects was made
+[26]. Until then two antagonistic theories had been attempting to deal with how in-
+sects coordinate their activities in a social insect colony. Some scientists considered
+that entirely new properties appeared at the level of the society. This level of biolog-
+ical organization, they believed, possesses its own laws and requires its own causal
+system to be understood: From their perspective, it is the “whole” that explains the
+behavior of the parts. At the other extreme, others considered that each individual in
+an insect society behaves as if it were alone: Any collective behavior or division of
+labor that would appear at the colony level was thought to exist only in the eye of
+the beholder. Stigmergy helped researchers understand the connection between the
+level of the individual and the level of colony, showing that an alternative theory could
+explain the “paradox” of coordination in social insects: Although the behavior of the
+colony as a whole looks wonderfully organized and coordinated, it seems that every
+insect is pursuing its own agenda without paying much attention to its nestmates. After
+a brief historical survey of pre-stigmergic theories (Section 2), some of which are still
+alive today in the biology community (see, e.g., [35]), we will show how the concept
+of stigmergy provided an elegant explanation to the coordination paradox. We will
+ﬁnally describe some recent advances in the application of stigmergy to understanding
+social insects (Section 3); in particular, we will introduce a subdivision of stigmergy
+into quantitative stigmergy and qualitative stigmergy. Although our focus will be social
+insects, the scope of stigmergy is clearly immense.
+2 From the Superorganism to Stigmergy
+2.1 Insect Societies as Superorganisms
+The collective behavior of social insects has been a puzzling problem for philosophers
+and scientists for a long time. How is it possible for such simple creatures to coordinate
+c°1999 Massachusetts Institute of Technology Artiﬁcial Life 5: 97–116 (1999)
+
+===== PAGE 2 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+their actions, create complex patterns, and make up such complex “republics” some-
+times held up as examples for human society? For instance, how are myriads of bees
+able to adjust their actions so precisely when they build their hive? How is it possible to
+understand such a coordination? Everything happens for the observer as if there were
+a coordinating agent “virtually” present at the center of the colony. The ﬁrst authors
+who tried to understand this astonishing phenomenon used an organicist metaphor. As
+was put forward by Herbert Spencer during the second part of the 19th century, any
+society is an organism [42]. Between what he called thesocial organism and any other
+living system, Spencer pointed out a whole set of common characteristics: growth,
+progressive and joint differentiation of structures and functions, mutual shaping of the
+parts they are made of, division of labor, and ﬁnally similar properties between the
+social organism and each of its constituent units, with the exception that the former has
+a greater lifetime. In 1877, French scientist and philosopher Alfred Espinas was the ﬁrst
+author to apply this metaphor to describe the behavior of animal societies [20]. He was
+convinced that whatever the level of biological organization considered, living units
+are speciﬁcally charaterized by their tendency to join together into ever bigger units; in
+this way, the formation of societies from individuals appeared just as an extension of
+the natural trend of cells to assemble into multicellular organisms.
+During the 20th century, the organicist metaphor continued to expand in science. In
+1911, American entomologist William Morton Wheeler wrote a famous paper entitled
+The ant colony as an organism, in which he introduced what can be considered as the
+ﬁrst systemic approach to the study of social phenomena in insects [46]:
+An organism is a complex, deﬁnitely coordinated and therefore individualized
+system of activities, which are primarily directed to obtaining and assimilating
+substances from an environment, to producing other systems, known as
+offspring, and to protecting the system itself and usually also its offspring from
+dangers emanating from the environment. The three fundamental activities
+enumerated in this deﬁnition, namely nutrition, reproduction and protection,
+seem to have their inception in what we know, from exclusively subjective
+experience, as feelings of hunger, affection and fear respectively.
+Wheeler justiﬁed his assertions by considering the fact that both a society and a
+single organism share common features. Both behave as a single unit. Both show
+some idiosyncrasies that are peculiar to the species, in behavior, size, and structure,
+and other idiosyncrasies that distinguish one colony from another belonging to the
+same species. Both undergo growth and reproduction cycles that are clearly adaptive.
+Finally, both are differentiated in the same way: Queens and males would appear to
+be the equivalent of a germ plasma while the workers should be equivalent to the
+cellular soma. If these features may easily be dismissed as mere analogies, similar to
+those used by Spencer, they clearly had in Wheeler’s mind a deeper meaning. Indeed,
+Wheeler suggested that there might exist within an insect colony, some functioning
+constraints that allow the whole society to behave as if it were a single and unique
+organism. The organization of a society must therefore be controlled by laws similar
+to those that govern any living organism: This would be sufﬁcient to explain how
+coordination is achieved. Unfortunately, the scientiﬁc tools and concepts available at
+the time were useless in identifying such laws and Wheeler ended its study with the
+following observation [47]:
+[W]e can only regard the organismal character of a colony as a whole, as an
+expression of the fact that it is not equivalent to the sum of its individuals but
+that it represents a different and at present inexplicable emergent level.
+98 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 3 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Wheeler did not use the term superorganism until 1928, when his ideas on that
+matter had somewhat changed. As was underlined by E. O. Wilson [49], the notion
+of superorganism was initially used to describe homeostatic processes: “We have seen
+that the insect colony or society may be regarded as a super-organism and hence as a
+living whole bent on preserving its moving equilibrium and integrity” [48 p. 29].
+In the following years, the notion of a superorganism was revived by another Amer-
+ican entomologist, Alfred E. Emerson, in a series of general papers on social insects in
+which he also emphasized the homeostatic properties resulting from social dynamics
+[14–19]. But for Emerson the supraorganism, as he preferred to call it from 1950 on,
+remained a strict analogy-based concept with the aid of which he hoped to detect the
+similarities that could have appeared in the course of evolution between an insect so-
+ciety and a living organism. In particular, if an insect colony represents a distinct unit
+of selection, strong parallels can be drawn between the adaptive structures that can be
+found within a colony and those that characterize a single organism. Such adaptive
+structures must have evolved in both cases to improve the homeostasis of the whole ma-
+chinery. In this way, the progressive improvements of division of labor, communication
+and trophallactic exchanges between insects, the partition into a soma (the workers) and
+a germen (the reproductive queens and males) are intended to increase the regulatory
+ability of a colony to reach a near-optimal adaptation. Emerson’s attempt put a tempo-
+rary end to the use of the organicist theory. This attractive analogy did not provide any
+insight because it did not have any explanatory value. It thus remained a mere metaphor
+with which it was easy to ﬁnd similar global properties in a society and a single organ-
+ism, yet without providing any information on the underlying mechanisms that induce
+these similarities. Higher-level laws of organization can only be discovered through
+analytical methods that require both a deep understanding of individual insect behav-
+ior and a careful examination of the way in which interactions among and exchanges
+between individuals regulate the collective behavior observed at the level of the colony.
+2.2 Insect Societies as Collections of Independent Individuals
+Since the 1930s the study of individual behavior within a society, which is often as-
+sociated with an analytical approach, has spread rapidly, sometimes at the expense
+of an oversimpliﬁcation of the real nature of social phenomena. The most signiﬁcant
+scientist who used this approach was French biologist Etienne Rabaud, who was suspi-
+cious of any holistic explanation. His fundamental postulate was that the only cause of
+behavior lies within an individual. In his mind any other theory was mere metaphysical
+speculation [37]. His entire work on insect societies was an attempt to demonstrate that
+each individual insect in a society behaves as if it were alone, as it appears in this text
+describing building behavior in paper wasps [38]:
+In this way, each worker is indistinctly in charge of any part of the nest. Is this
+cooperation? In any case, if cooperation occurs it is only by chance and as a
+result of unexpected incidents. Are these building wasps following a general
+plan? When the founding female starts building its nest she decides to place it in
+a certain way. It seems that workers that come after on the nest continue the
+foundress’s work in a well deﬁned direction. In fact, they build cells without
+any regularity, but they build it in the same way the foundress did, in particular
+they enlarge the envelope as the number of cells in the comb increases. All this
+does not involve any prerequisite plan at all. This simply means that both the
+founding female and the workers are responding in the same way and with the
+same reﬂexes to the same stimuli. ::: In fact, whether they are isolated or in
+group, all individuals behave in the same way; whether they carry on their own
+work or that of the others, the entire environmental conditions remain exactly
+Artiﬁcial Life Volume 5, Number 2 99
+
+===== PAGE 4 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+the same; in any case, everything happens as if they were doing their own work,
+without paying attention to their neighbors’ work that exerts in this respect no
+noticeable inﬂuence on them. Apparently, a contradiction is emerging from
+these facts; in appearance only, because nothing in the work resulting from the
+combined efforts by several individuals is different from the work that is done
+by a solitary founding female. Only the speed at which cells are built increases
+because the size of the group is large enough. Thus all these individuals are
+working in the same way and each one is working as if it were alone; the
+“collective” work is only the juxtaposition of individual works. Neither the
+enlargement of the nest, nor the feeding of the larvae require that a whole plan
+has to be executed in such a way that a task performed by an individual induces
+that of his neighbor and conversely: [T]he common work is no more than a side
+effect of interattraction that gather[s] individuals together. (pp. 150–151)
+Rabaud considered that division of labor requires as a precondition that a common
+sign code be used by the members of a society, which, according to him, was quite out
+of the question in the case of insects. Such a dogmatic assertion was unacceptable at the
+time it was put forward and is even less acceptable today, when numerous examples
+of social coordination are clearly established. This theoretical option was motivated by
+a relentless ﬁght against mentalism and anthropomorphism.
+Nevertheless, the anti-organicist controversy in which Rabaud was involved, despite
+its excess, led to the introduction of two concepts that turned out to be of utmost
+importance for understanding collective phenomena.
+The ﬁrst concept is that of interaction. Rabaud claimed that individual behavior was
+the essential drive of any collective action or process. In social animals that constantly
+live next to each other, one individual’s action may inﬂuence another individual, thereby
+modifying its behavior. The term interaction refers to this kind of reciprocal action. Any
+social mechanism might be reduced to a set of elementary interactions. This simple
+idea opened the road for a research program that broke with the organicist theory by
+establishing a bridge between the individual and collective levels instead of considering
+them separately and independently.
+The second concept introduced by Rabaud is interattraction, which he deﬁned as a
+basic social phenomenon: Interattraction refers to the fact that any animal that belongs
+to a social species is attracted in a speciﬁc way by any other animal that belongs to the
+same species [38]. It is a speciﬁc interaction that can be triggered by the stimuli that
+individuals bear. One consequence of these interactions is a nonrandom distribution
+of individuals in the environment. This idea and its main consequences were later
+developed by Grass´e [27]:
+Social groups are above all characterized by the fact that any individual taken
+separately produces a speciﬁc stimulus upon its fellows, while the group (that
+can be reduced to a single fellow) produces in turn a speciﬁc stimulus that will
+inﬂuence the behavior of that animal. (p. 8)
+Rabaud clearly overlooked such consequences, particularly the fact that the emer-
+gence of a collective and coordinated behavior inside a society can be explained by a
+set of speciﬁc interactions among individuals.
+2.3 The Organizing Role of Interactions and Stigmergy
+At the same time Rabaud was conducting his research, a growing number of scientists,
+sometimes with more of a naturalist than a theoretical background, discovered that
+100 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 5 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 1. Pierre-Paul Grass´e (1895–1985) was the coordinator of a masterpiece treatise of zoology and a synthetic
+work on termites. He was also at the origin of the publication of the Bulletin of the International Union for the
+Study of Social Insects that later became the journal Insectes Sociaux.
+speciﬁc interactions among individuals were involved in the genesis of certain collective
+phenomena in insects such as gregariousness in locusts, closure of the colony in many
+ant species, caste regulation in termites, bee dances, and so on. Pierre-Paul Grass´e (see
+Figure 1) and his students were the ﬁrst to provide a synthetic view of such collective
+phenomena that combined both the speciﬁcity of interactions among social individuals
+and organized collective behavior at the colony level. Grass ´e’s basic idea was that
+sociality is not a trivial consequence that results from interattraction, but a biological
+characteristic deeply rooted in the ethological heritage of every species. This becomes
+obvious if one considers the reactions of a social animal in the presence of one of its
+nestmates: Even if this animal is alone its behavior is different from that of a solitary
+animal. A social animal displays what Grass´e called a social appetition that drives it to
+seek its nestmates. Such a social dependence may prevent this animal from behaving
+in a normal way when it is isolated and it may even be unable to survive outside a
+social environment, which is the case, for instance, in bees. Another consequence of
+interindividual stimuli is what has been calledgroup effect [24, 25]. It describes the fact
+that when an animal is submitted in certain conditions to a critical number of speciﬁc
+stimuli from its nestmates, its behavioral state is altered. Group effect not only involves
+a stimulus-response sequence, it also leads to a deep change in the reactional state
+of the animal and sometimes of its whole physiology. One of the most spectacular
+examples of group effect is the gregarious phase of locusts resulting from stimulus
+exchanges [7].
+Moreover, since a critical number of interactions is reached in an animal society,
+integrative and regulatory processes emerge. This idea was developed by Grass´e who
+called social regulation the fact that a society is able to re-establish a population equi-
+librium that has been broken or to coordinate the collective performance of a given
+task through psychophysiological and psychomotor mechanisms. Such a regulation is
+a social property that results from idiosyncratic features of individual behavior. These
+mechanisms rely on stimulus-response sequences in which a stimulus is an action per-
+formed by one individual and the response another action that has been triggered by
+this previous action. Each individual is a direct source of stimuli for the other individu-
+Artiﬁcial Life Volume 5, Number 2 101
+
+===== PAGE 6 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 2. Stimulus-response sequence leading to the construction of the mud funnel in the nest of the Eumenid wasp
+Paralastor sp. Each new building stage n is completed after a stimulus Sn triggers a new ensemble of building actions
+Rn. The completion of each building stage n gives rise to a new stimulusSnC1 that triggers new building actions RnC1
+leading to the construction of the next building stage n C1. When the ﬁfth stage has been completed, there exists
+no more stimulus on the funnel to trigger new building actions and the construction stops.
+als. This mechanism opens the way for an indirect coordination of individual activities.
+The processes that regulate such interactions are not limited to the direct inﬂuence of
+the stimuli produced by individuals. Indeed, each animal’s activity is organizing the
+environment in such a way that stimulating structures are created; these structures can
+in turn direct and trigger a speciﬁc action from any other individual from the same
+species that comes into contact with them. Chemical trails that are produced by some
+ants species [10, 23], muleteer trail networks, and even dirt tracks and trail systems in
+man [31, 32] result from interactions of this kind.
+One of the most interesting examples studied by Grass ´e is the building behavior
+of termites. Stigmergy (from the Greek stigma: sting and ergon: work) was initially
+introduced to explain indirect task coordination and regulation in the context of nest
+reconstruction in termites of the genus Bellicositermes [26, 28]. Grass ´e showed that
+the coordination and regulation of building activities do not depend on the workers
+themselves but are mainly achieved by the nest structure: A stimulating conﬁgura-
+tion triggers a building action of a termite worker, transforming the conﬁguration into
+another conﬁguration that may trigger in turn another (possibly different) action per-
+formed by the same termite or any other worker in the colony. Stigmergy offers an
+elegant and stimulating framework to understand the coordination and regulation of
+collective activities. The main problem is then to determine how stimuli are organized
+(in space and time) to generate robust and coherent patterns: Colonies of a given
+species produce qualitatively similar patterns, be they nest architectures or networks of
+foraging trails and galleries.
+2.4 From Sequential to Stigmergic Activity
+To better understand how multiple, “independent” building actions can be coordinated
+through a stigmergic behavioral algorithm, it is instructive to look at nest construc-
+tion in solitary species. The experiments performed by Smith in 1978 on a solitary
+wasp shed some light on the origin of coordination of building activities and on the
+preadaptation (to sociality) of this behavior [41]. Nest construction in the Eumenid
+wasp Paralastor sp. occurs as a stimulus-response sequence in which the completion
+of one stage provides the stimulus for commencement of the next (see Figure 2). A
+wasp begins with the excavation of a narrow hole, approximately 8 cm in length and
+8 mm in width. When the nest hole has been completely lined with mud, the wasp
+begins the construction of a large and elaborate mud funnel above its entrance. The
+funnel is built in ﬁve distinct stages from a series of mud pellets that are applied in a
+102 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 7 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 3. The construction of an abnormal mud funnel in the nest of the Eumenid wasp Paralastor sp. When the
+funnel is almost completed, a spherical hole (indicated by the arrow) is made. This hole is equivalent to stimulusS1,
+which triggers funnel construction. As a consequence, the wasp builds a second funnel, over the hole and on top of
+the ﬁrst one already built.
+highly stereotyped sequence. Stage 1 involves the building up of the funnel stem by
+application of a series of mud pellets until it reaches a length of 3 cm. At Stage 2 the
+wasp ceases to build uniformly upward, and by adding more mud to one side begins
+the construction of a uniform curve in the stem of the funnel. Once the curve has been
+completed, Stage 3 begins with the formation of a bell with the splaying of the stem to
+form a uniform ﬂange of approximately 2 cm diameter. At Stage 4, the ﬂange is next
+widened more on the side nearest to the stem than elsewhere, thus giving the bell a
+characteristic asymmetry in one direction. Finally at Stage 5, the sides of the bell are
+formed by building uniformly downward from the edge of the ﬂange. At the end of
+each stage of building, the stimuli for the responses that lead to the completion of the
+next stage are those that the animal encounters as a consequence of its earlier behavior.
+What happens when the stimuli that trigger the beginning of a previous building stage
+are encountered by the wasp just as it ﬁnishes the end of a particular stage? Smith
+examined this question in one of his experiments. A spherical hole located in the
+neck of a funnel is made just after Stage 3 has been completed (see Figure 3). After
+examining the damage several times, the wasp begins the construction of a second
+funnel, over the hole and on top of its ﬁrst funnel. This result is extremely important
+for anyone who wants to understand the coordination of building activities in social
+wasps and more generally in social insects. In a solitary species such as Paralastor
+sp., the indirect coordination of its behavior through the previous consequences of its
+building actions results in a sequential-like behavior. There are two consequences to
+this behavior.
+First, the order in which stimuli arise in the course of the construction must follow a
+precise sequence. If by chance a stimulus triggering a set of building actions that gives
+rise to a previous subelement of the architecture is present at a later stage, this will
+automatically lead to a redundant structure and an abnormal nest architecture. This
+observation, as we will see in the next section, has important consequences in the
+coordination of building activity in social wasps.
+Second, if one wasp does not distinguish the product of its own activity from that of
+another wasp, the two wasps can in principle work at completing the same nest struc-
+ture. One wasp could continue the work of the other at whatever stage of construction
+of the nest. Such a mechanism may then in turn be a step toward indirect cooperation
+between individuals. This is precisely the mechanism that Grass ´e had in mind when
+he introduced the concept of stigmergy.
+Artiﬁcial Life Volume 5, Number 2 103
+
+===== PAGE 8 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+3 Stigmergy Revisited
+Stigmergy refers to a class of mechanisms that mediate animal-animal interactions.
+Therefore, it has to be supplemented with an additional mechanism that makes use
+of these interactions to coordinate and regulate collective building in a particular way.
+At least two such mechanisms have been identiﬁed: quantitative stigmergy [1, 9, 11]
+and qualitative stigmergy [43, 44]. With quantitative stigmergy, the stimulus-response
+sequence comprises stimuli that do not differ qualitatively (such as pheromone ﬁelds
+and gradients) and only modify the probability of response of the individuals to these
+stimuli. Qualitative stigmergy differs from quantitative stigmergy in that individuals
+interact through, and respond to, qualitative stimuli.
+3.1 Quantitative Stigmergy and Self-Organized Dynamics
+One of the best examples of quantitative stigmergy is the construction of pillars in ter-
+mites, studied by Grass´e [26, 28]. Workers use soil pellets impregnated with pheromone
+to build pillars. Two successive phases take place [26]. First, the noncoordinated phase
+is characterized by a random deposition of pellets. This phase lasts until one of the
+deposits reaches a critical size. Then, the coordination phase starts if the group of
+builders is sufﬁciently large: Pillars or strips emerge. The existence of an initial de-
+posit of soil pellets stimulates workers to accumulate more material through a positive
+feedback mechanism, since the accumulation of material reinforces the attractiveness
+of deposits through the diffusing pheromone emitted by the pellets ([5]; see Figure 4).
+This autocatalytic, snowball effect leads to the coordinated phase. If the density of
+builders is too small, the pheromone disappears between two successive passages by
+the workers, and the ampliﬁcation mechanism cannot work, which leads to a nonco-
+ordinated phase. The system undergoes a bifurcation at this critical density: No pillar
+emerges below it, but pillars can emerge above it.
+This example illustrates three important properties or signatures of the self-organized
+dynamics associated with quantitative stigmergy [1]: (a) the emergence of spatiotem-
+poral structures in an initially homogeneous medium, that is, a random spatial dis-
+tribution of soil pellets. The basic mechanism that leads to the emergence of these
+structures is positive feedback (the snowball effect); once the structures are created,
+they are stabilized through negative feedback, mainly pheromone decay and compe-
+tition among neighboring pillars. (b) the possible coexistence of several stable states
+(multistability): Structures emerge by ampliﬁcation of random deviations, and any such
+deviation can be ampliﬁed, so that the system converges to one among several possible
+stable states, depending on initial conditions (path dependency). (c) the existence of
+(parameter-driven) bifurcations, where the behavior of a self-organized system changes
+dramatically. In 1977, Deneubourg ([8], see also [2]) designed a chemotaxis-based
+reaction-diffusion model of the emergence of regularly spaced pillars in termites that
+exhibits the desired properties for appropriate parameter values. Figure 5 shows the
+one-dimensional spatial distribution of pillars obtained with his model. In this example,
+coordination between workers and the regularity of the pillars’ distribution emerges out
+of indirect interactions among termites without being coded in an explicit way at the
+level of each insect.
+3.2 Qualitative Stigmergy and Self-Assembling Dynamics
+3.2.1 Qualitative Stigmergy
+Qualitative stigmergy differs from self-organization-based stigmergy in that individuals
+interact through, and respond to, qualitative stimuli. The resulting dynamics is similar
+to that resulting from a self-assembling process. Qualitative stigmergy is based on a
+discrete set of stimulus types: For example, an insect responds to a type-1 stimulus with
+104 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 9 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 4. Schematic representation of quantitative stigmergy illustrated by the successive stages leading to the emer-
+gence of pillars in termite nests. T o build their nest termite workers use soil pellets impregnated with pheromone.
+The existence of an initial deposit of soil pellets stimulates workers to accumulate more material through a positive
+feedback mechanism, since the accumulation of material reinforces the attractiveness of deposits through the diffus-
+ing pheromone emitted by the pellets. Assume that the architecture reaches state S
+0, which triggers response R0
+from workerI. S0 is modiﬁed by the action ofI (e.g., I drops a new soil pellet) and transformed into a new stimulating
+conﬁguration S1, which may in turn trigger a new response R1 from I or any other worker In, and so forth. The
+successive responses R1, R2, Rn may be produced by any worker carrying a soil pellet. Each worker creates new
+stimuli in response to existing stimulating conﬁgurations. In this example, the successive stimuli differ from one
+another only in the quantity of pheromone that is present on the pillar. This example therefore illustrates positive
+feedback in quantitative stigmergy.
+action A and responds to a type-2 stimulus with action B, in the same way that the mud
+wasp Paralastor builds the funnel of its nest. In other words, qualitatively different
+stimuli result in different responses: For example, a type-1 stimulus triggers action A by
+individual I
+1; action A transforms the type-1 stimulus into a type-2 stimulus that triggers
+action B by individual I2. At ﬁrst sight, it is unclear how coordination and regulation
+can be achieved with qualitative stigmergy. Building in social wasps provides a good
+illustration (Figure 6) of how this can work.
+Artiﬁcial Life Volume 5, Number 2 105
+
+===== PAGE 10 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 5. Spatial distribution of soil pellets obtained from Deneubourg’s [8] model in one dimension [2]; x: time, y:
+space, z: quantity of building materials.
+3.2.2 Building in Polistes
+One example is nest building in the primitively eusocial wasp Polistes. The article by
+Karsai in this special issue gives a detailed overview of stigmergic procedures used by
+paper wasps to build their nests. Polistes use long wood ﬁbers and plant hairs that
+are mixed with salivary secretions. The resulting carton is easily shaped and has a
+strong robustness though it is extremely ﬁne and light [29]. A nest consists of a sin-
+gle comb connected to the substrate by a rodlike pedicel [45]. The comb is round
+shaped and mature nests can contain about 150 cells [39]. New cells are added to the
+comb during nest growth and the number of potential sites where a new cell can be
+added increases as construction proceeds. Several building actions may take place in
+parallel. However, this raises the question of where new cells are to be added to get
+a nest architecture that is species-speciﬁc. Due to the possibility of parallel activities,
+another problem arises: Construction may become messy as conﬂicting actions may be
+performed simultaneously.
+These two issues are connected and the architecture itself provides enough con-
+straints to canalize the building activity and prevent its deorganization. Let us consider
+the comb shown in Figure 7, with six cells already built; twelve potential building sites
+can be found on this comb: seven sites with one wall already present (labeled S
+1),
+four sites with two adjacent walls ( S2), and one other site with 3 adjacent walls ( S3).
+Figure 8 shows how the mean number of potential building sites (with either 1, 2, or
+106 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 11 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 6. Schematic representation of qualitative stigmergy illustrated by the successive stages leading to the con-
+struction of a comb in wasps. The wasps use wood pulp to build the various elements of their nest. Here, each
+building stage corresponds to the addition of a new cell to the pre-existing comb. At the beginning (top of the
+ﬁgure) all potential building sites are equivalent. Each one of them (S
+11) has two adjacent walls. No construction is
+observed on the six other sites that have only one wall. The building of the new cell ( R1) by wasp I results in the
+creation of a new potential building site with two walls, but all building sites (S21) remain equivalent from a qualitative
+point of view. The addition of a second cell to the comb ( R2) produces building site ( S32) that has three adjacent
+walls and is qualitatively different from the others ( S31). Each wasp In creates new qualitative stimuli in response
+to existing stimulating conﬁgurations. Successive stimuli differ from one another in their spatial conﬁgurations of
+external walls.Artiﬁcial Life Volume 5, Number 2 107
+
+===== PAGE 12 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 7. Representation of the potential building sites that have one ( S1), two (S2), or three (S3) walls in common
+with the new cell added to the comb.
+3 adjacent walls) varies as a function of the number of cells already built in the comb.
+Since it appears that the growth of the comb is isotropic, that is, it occurs with equal
+probability in all directions of space, the question that arises is: How are cells added
+to ensure that the comb will grow fairly evenly in all directions from the pedicel? Pre-
+vious studies showed that wasps are obviously inﬂuenced by previous construction,
+and that building decisions are made locally on the basis of perceived conﬁgurations
+in a way that possibly constrains the building dynamics (see also the article by Karsai
+in this issue). Cells are not added randomly to the existing structure and wasps have
+a greater probability to add new cells to a corner area where three adjacent walls are
+present than to initiate a new row by adding a cell on the side of an existing row [12,
+34]. One building rule is that wasps tend to ﬁnish a row of cells before initiating a new
+row. Figure 9 shows that the probability to add a cell to a three-wall site is about 10
+times higher than in the case of a two-wall site. What are the consequences of this
+probabilistic stigmergic behavior on the development of the comb structure?
+3.2.3 Lattice Swarms
+In a series of previous articles we introduced a class of models to explore the potential
+of qualitative stigmergy as a model of nest construction [43, 44]. The models are
+based on asynchronous automata that perform random walks in a three-dimensional
+discrete space, have access to local space and time information, and act on a pure
+stimulus-response basis: A set of builders (automata, agents or artiﬁcial wasps) move
+in three dimensions and respond to particular stimuli present on the developing comb
+structure. The three-dimensional space in which the automata move is a discrete cubic
+or hexagonal lattice—hence the name lattice swarms. The deposit of an elementary
+building block, or brick, by an agent depends on the local conﬁguration of bricks in
+the cells surrounding the cell occupied by the agent (see Figure 10). Several types
+of brick can be deposited, and no brick can be removed once it has been deposited.
+Increasing the number of brick types increases the repertoire of local conﬁgurations
+that are perceived by the agents. In the simulations reported below two types of bricks
+were used, which is the minimal number of types with which “complex” patterns can
+be generated. All simulations start with a single initial brick. A microrule is deﬁned
+as the association of a particular stimulating conﬁguration and a brick to be deposited.
+108 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 13 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 8. Mean number of potential building sites with 1, 2, and 3 walls adjacent to the new cell as a function of
+the number of cells already built in the comb in Polistes dominulus. The curve is based on 155 mesures made on 13
+colonies reared in laboratory conditions and observed at various stages of development.
+Two microrules are incompatible if they have the same stimulating conﬁguration but
+command different actions, here the deposits of different bricks. An algorithm is deﬁned
+as any collection of compatible microrules: It consists of a set of if-then rules, in which
+the “if” statement tests for a particular conﬁguration of bricks in the structure, and the
+“then” statement results in the deposition at that site of one of the two types of bricks.
+An algorithm can be characterized by its microrule table, a lookup table comprising
+all its microrules, that is, all stimulating conﬁgurations and associated actions. Finally,
+an algorithm can be deterministic or probabilistic: If it is deterministic any applicable
+Figure 9. Probability of adding a new cell at sites that have 1, 2, and 3 walls adjacent to the potential new cell.
+Artiﬁcial Life Volume 5, Number 2 109
+
+===== PAGE 14 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 10. Schematic representation of an agent’s perception range in a hexagonal lattice. Each one of the 20
+neighboring cells can either be empty or contain either a type-1 brick or a type-2 brick. Each local conﬁguration can
+be associated with a building action, that is, a brick deposit. There exist 3 320
+possible elementary microrules, and
+the building behavior of an agent relies on several microrules.
+microrule is applied with probability 1; in the second case, a probability between 0 and
+1 is assigned to each microrule.
+Lattice swarms can be used to study the dynamics of comb enlargement in Polistes
+wasps. Comb structures produced with deterministic and probabilistic algorithms can
+easily be compared. We shall consider only the two following rules (see Figure 11):
+Rule 1: Add a new cell at a two-wall site location.
+Rule 2: Add a new cell at a three-wall site location.
+In the ﬁrst simulation, both rules are applied every time an agent encounters the right
+stimulating conﬁguration. In the second case, rules are applied with the experimental
+probabilities found in natural Polistes colonies: respectively 0.057 for Rule 1 and 0.55
+for Rule 2. Figure 12a shows a comb that has been obtained using deterministic rules.
+The comb is indented in many places, with several lobes. On the other hand, using
+probabilistic rules leads to the construction of a round-shaped comb similar to what
+is found in natural Polistes nests (Figure 12b). Similar results have been obtained by
+Karsai and P ´enzes [33]. These differences can be simply explained by the fact that
+in the probabilistic rule, three-wall sites trigger cell building with a higher probability;
+this process results in building closely packed parallel rows of cells and the nest grows
+fairly evenly in all directions.
+Using lattice swarm models, it is possible to build much more complex architectures
+[43, 44]. Figure 13 shows a few architectures that have been obtained using determin-
+istic rules in cubic and hexagonal environments. According to their neighborhoods
+and lookup tables, agents may put down two types of brick (type 1 or type 2). Al-
+110 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 15 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 11. T wo local microrules used to build the comb of aPolistes-like nest.
+though the underlying behavioral principle is quite simple, complex architectures can
+form, some of which closely match those found in nature. Future work will be aimed
+at verifying that such complex architectures can still be produced with probabilistic
+algorithms.
+4 Conclusions
+The basic principle of stigmergy is extremely simple: Traces left and modiﬁcations made
+by individuals in their environment may feed back on them. The colony records its
+activity in part in the physical environment and uses this record to organize collective
+behavior. Various forms of storage are used: gradients of pheromones, material struc-
+tures (impregnated or not by chemical compounds), or spatial distribution of colony
+elements. Such structures materialize the dynamics of the colony’s collective behavior
+and constrain the behavior of individuals through a feedback loop. Stigmergy also
+solves the coordination paradox: Individuals do interact to achieve coordination but
+they interact indirectly, so that each insect taken separately does not seem to be in-
+volved in a coordinated, collective behavior.
+As a consequence of the medium used, physical and geometrical constraints inﬂu-
+ence subsequent choices of the colony. It is well known that in ant species using
+mass recruitment, when several food sources are discovered independently, the closest
+source to the nest is selected by the colony [23]. Indeed when the distance between
+a food source and the nest is long, the time interval between the trips of two foragers
+may exceed the evaporation latency of the pheromone and the trail disappears. If the
+path is shorter, the trafﬁc is sufﬁciently intense for the pheromonal trace to remain. This
+dynamic improves the exploitation of the environment by the colony. An interesting
+property of this process is that various organizations may be produced with the same
+individual behavioral algorithms: Several foraging patterns can be produced according
+Artiﬁcial Life Volume 5, Number 2 111
+
+===== PAGE 16 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 12. (a) Comb structure obtained when deterministic rules are used. (b) Comb structure obtained when
+probabilistic rules are used.
+to the distribution of resources, as illustrated by army ants [10]. Similar coupling be-
+tween environmental and social organization may be found in the self-organization of
+brood patterns in bees and ants. In a bee hive (Apis melliﬁca), the comb is organized in
+three concentric regions of cells: a central brood area, a rim of pollen, and a peripheral
+zone of honey. It has been shown using computer simulation that such patterns may
+arise spontaneously from the dynamics of interactions, according to behavioral rules
+bearing only upon local cues [6]. In lepthoracin ants, eggs, larvae, and cocoons are
+sorted out by workers according to their developmental stage. A model worked out
+by Deneubourg et al. [11] showed that this structuration may arise from a tendency
+of workers to deposit brood elements on heaps of the same category, in a positive
+feedback loop similar to those reported in termites.
+Marking the environment with glandular secretions, urine, or feces has been re-
+ported in a number of mammals, the scent-mark of an individual frequently inducing
+remarking by others [4]. Besides the function of advertising conspeciﬁcs, marks may
+help individuals orient themselves in their range [see 3, 22, 30, 40]. Though scent-marks
+can be used as reminders by individuals, they should not be viewed only as landmarks:
+They are actually part of the environmental structure and contribute to its deﬁnition.
+In species forming social groups, marking is a collective affair; chemical signals are de-
+posited throughout the range, their distribution being denser at much-visited sites such
+as junctions, dens, or zones where individuals from other groups may be encountered
+[4]. Group members continuously come across olfactory signals; they obtain informa-
+112 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 17 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Figure 13. Simulations of collective building on a 3D cubic (a) and hexagonal (b to i) lattice. Simulations were run
+with a 40 £40 £40 lattice for architectures a and b; with a 20 £20 £20 lattice for architecture c; and with a
+16 £16 £16 lattice for architectures d to i. These architectures are reminiscent of natural wasp nests and exhibit
+a similar design. For each architecture we give the name of the corresponding natural wasp nest species and in
+brackets the total number of microrules used to build it. (a) Agelaia nest-like architecture (13). (b) Parapolybia
+nest-like architecture (12). (c) Parachartergus nest-like architecture (21). (d) Vespa nest-like architecture (13). (e)
+Same architecture as (d) shown in front section. (f, g)Stelopolybia nest-like architectures (12). (h)Chartergus nest-like
+architecture (39). (i) Same architecture as (h) but a portion of the external envelope has been partly removed to
+show the internal structure of the nest.
+tion about each other’s movements that may improve foraging efﬁciency and maintain
+group cohesion [3, 13, 21].
+Stigmergy also has consequences with respect to the evolution of social life, and the
+route from solitary to social life might not be as complex as one may think. Numerous
+examples of solitary species that use stigmergy are known: Many solitary animals, such
+as spiders [36], are not able to see the differences that exist between the products of their
+own activities and those of conspeciﬁcs. Occasional cooperation between conspeciﬁcs
+may spontaneously emerge in these “preadapted-to-social-life” species if, by accident,
+they ﬁnd themselves in the same location. Of course stigmergy alone is not a sufﬁcient
+condition to develop a truly social life and two additional features are required that are
+closely related, yet not exactly identical: a “preadapted” species must be able to reach
+locally high population density, that is, possess some kind of “homing” mechanism
+or interattraction allowing cluster formation. The second condition is that once many
+individuals have joined to form a group, they must be able to maintain its cohesion
+long enough to beneﬁt from cooperative effects.
+In conclusion, the potential of stigmergy is still largely untapped in the biology
+community, in which it originated. Perhaps, as the other articles in this special issue
+indicate, the sciences of the artiﬁcial will be more open to this potential.
+Artiﬁcial Life Volume 5, Number 2 113
+
+===== PAGE 18 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+Acknowledgments
+E. Bonabeau is supported by the Interval Research Fellowship in Adaptive Computa-
+tion at the Santa Fe Institute. This work was supported in part by a grant from the GIS
+(Groupe d’Int´erˆet Scientiﬁque) Sciences de la Cognition to E. Bonabeau and G. Ther-
+aulaz and a grant from the Conseil R´egional Midi-Pyr´en´ees to G. Theraulaz.
+References
+1. Bonabeau, E., Theraulaz, G., Deneubourg, J.-L., Aron, S., & Camazine, S. (1997).
+Self-organization in social insects. Trends in Ecology and Evolution, 12, 188–193.
+2. Bonabeau, E., Theraulaz, G., Deneubourg, J.-L., Franks, N. R., Rafelsberger, O., Joly, J.-L., &
+Blanco, S. (1998). A model for the emergence of pillars, walls and royal chambers in
+termite nests. Philosophical Transactions of the Royal Society of London B, 353, 1561–1576.
+3. Brown, R. E. (1979). Mammalian social odors: A critical review. Advances in the Study of
+Behavior, 10, 103–162.
+4. Brown, R. E., & MacDonald, D. W. (Eds.). (1985). Social odours in mammals (Vols. 1 and
+2). Oxford: Clarendon Press.
+5. Bruinsma, O. H. (1979). An analysis of building behavior of the termite Macrotemes
+subhyalinus. Unpublished doctoral dissertation, Lanbouwhogeschool te Wageningen, The
+Netherlands.
+6. Camazine, S. (1991). Self-organizing pattern formation on the combs of honeybee colonies.
+Behavioral Ecology and Sociobiology, 28, 61–76.
+7. Chauvin, R. (1941). Contribution `al ’´etude physiologique du Criquet p´elerin et du
+d´eterminisme des ph´enom`enes gr´egaires. Annales de la soci´et´e entomologique de France,
+110, 133–272.
+8. Deneubourg, J.-L. (1977). Application de l’ordre par ﬂuctuations `a la description de
+certaines ´etapes de la construction du nid chez les termites. Insectes Sociaux, 24, 117–130.
+9. Deneubourg, J.-L., & Goss, S. (1989). Collective patterns and decision making. Ethology
+Ecology and Evolution, 1, 295–311.
+10. Deneubourg, J.-L., Goss, S., Franks, N. R., & Pasteels, J. M. (1989). The blind leading the
+blind: Modeling chemically mediated army ant raid patterns, Journal of Insect Behavior, 2,
+719–725.
+11. Deneubourg, J.-L., Goss, S., Franks, N. R., Sendova-Franks, A., Detrain, C., & Chretien, L.
+(1991). The dynamics of collective sorting: Robot-like ant and ant-like robot. In J.-A. Meyer
+& S. W. Wilson (Eds.), Simulation of adaptive behavior: From animals to animats
+(pp. 356–365). Cambridge, MA: MIT Press.
+12. Downing, H. A., & Jeanne, R. L. (1990). The regulation of complex behavior in the paper
+wasp, Polistes fuscatus (Insecta, Hymenoptera, Vespidae). Animal Behaviour, 39, 105–124.
+13. Epple, G. (1985). The primates I: Order Anthropoidea. In R. E. Brown & D. W. MacDonald
+(Eds.), Social odours in mammals (Vol. 2, pp. 739–769). Oxford: Clarendon Press.
+14. Emerson, A. E. (1939). Social coordination and the superorganism. The American Midland
+Naturalist, 21, 182–209.
+15. Emerson, A. E. (1950). Biological sociology. Journal of the Scientiﬁc Laboratories, Denison
+University, 36, 146–155.
+16. Emerson, A. E. (1952). The supraorganismic aspects of the society. In Structure et
+Physiologie des Soci´et´es Animales. Colloques Internationaux du CNRS, Paris Mars 1950
+(pp. 333–353). Paris: Publications du CNRS.
+17. Emerson, A. E. (1954). Dynamic homeostasis: A unifying principle in organic, social, and
+ethical evolution. Scientiﬁc Monthly, 78, 67–85.
+18. Emerson, A. E. (1956). Regenerative behavior and social homeostasis, Ecology, 37, 248–258.
+19. Emerson, A. E. (1958). The evolution of behavior among social insects. In A. Roe &
+114 Artiﬁcial Life Volume 5, Number 2
+
+===== PAGE 19 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+G. G. Simpson (Eds.), Behavior and evolution (pp. 311–335). New Haven, CT: Yale
+University Press.
+20. Espinas, A. (1877). Des Soci´et´es animales—Essais de Psychologie Compar´ee (3rd. ed.). Paris:
+F. Alcan.
+21. Gorman, M. L., & Trowbridge, B. J. (1989). The role of odor in the social lives of
+carnivores. In J. L. Gittleman (Ed.), Carnivore behavior, ecology, and evolution (pp. 79–88).
+London: Chapman and Hall.
+22. Gosling, L. M. (1982). A reassessment of the function of scent marking in territories.
+Zeitschrift für Tierpsychologie , 60, 89–118.
+23. Goss, S., Deneubourg, J.-L., Aron, S., Beckers, R., & Pasteels, J. M. (1990). How trail laying
+and trail following can solve foraging problems for ant colonies. In R. N. Hughes (Ed.),
+Behavioral mechanisms of food selection. NATO ASI Series (Vol. G20, pp. 661–678). Berlin:
+Springer-Verlag.
+24. Grass ´e, P.-P. (1946). Soci´et´es animales et effet de groupe. Experientia, 2, 77–82.
+25. Grass ´e, P.-P. (1958). L’effet de groupe sur l’animal et sur l’homme.Journal de psychologie
+normale et pathologique, 55, 129–150.
+26. Grass ´e, P.-P. (1959). La reconstruction du nid et les coordinations inter-individuelles chez
+Bellicositermes natalensis et Cubitermes sp. La th´eorie de la stigmergie: Essai
+d’interpr´etation du comportement des termites constructeurs. Insectes Sociaux, 6, 41–81.
+27. Grass ´e, P.-P. (1963). Les ph´enom`enes sociaux chez les Animaux. Cahiers de l’Institut de
+Science ´economique appliqu´ee. Suppl. 139, V, 7–23.
+28. Grass ´e, P.-P. (1984).Termitologia, Tome II. Fondation des Soci´et´es. Construction. Paris:
+Masson.
+29. Hansell, M. H. (1984). Animal architecture and building behavior. London: Longman.
+30. Harrington, F. H. (1982). Urine-marking and caching behavior in the wolf. Behavior, 76,
+280–288.
+31. Helbing, D., Keltsch, J., & Moln ´ar, P. (1997). Modeling the evolution of human and trail
+systems. Nature, 388, 47–50.
+32. Helbing, D., Schweitzer, F., Keltsch, J., & Moln´ar, P. (1997). Active walker model for the
+formation of human and animal trail systems. Physical Review E, 56, 2527–2539.
+33. Karsai, I., & P ´enzes, Z. (1993). Comb building in social wasps: Self-organization and
+stigmergic script. Journal of Theoretical Biology, 161, 505–525.
+34. Karsai, I., & Theraulaz, G. (1995). Nest building in a social wasp: Postures and constraints
+(Hymenoptera: Vespidae). Sociobiology, 26, 83–113.
+35. Moritz, R. F. A., & Southwick, E. E. (1992). Bees as superorganisms: An evolutionary reality .
+Berlin: Springer-Verlag.
+36. Peters, P. J. (1970). Orb web construction: Interaction of spider (Araneus diadematus CI.)
+and thread conﬁguration. Animal Behaviour, 18, 478–484.
+37. Rabaud, E. (1934). Ph ´enom`ene social et manifestations collectives. Journal de psychologie
+normale et pathologique, 31, 337–395.
+38. Rabaud, E. (1937). Ph´enom`ene social et soci´et´e animale. Paris: F. Alcan.
+39. Reeves, H. K. (1991). Polistes. In K. G. Ross & R. W. Matthews (Eds.), Social biology of
+wasps (pp. 99–148). Ithaca, NY: Cornell University Press.
+40. Roeder, J. J. (1985). Structures Sociales et Modalit´es de Communication. Comportements
+(Vol. 2). Paris: Editions du CNRS.
+41. Smith, A. P. (1978). An investigation of the mechanisms underlying nest construction in the
+mud wasp Paralastor sp. (Hymenoptera: Eumenidae). Animal Behaviour, 26, 232–240.
+42. Spencer, H. (1882). The principles of sociology. New York.
+Artiﬁcial Life Volume 5, Number 2 115
+
+===== PAGE 20 =====
+G. Theraulaz and E. Bonabeau A Brief History of Stigmergy
+43. Theraulaz, G., & Bonabeau, E. (1995). Modeling the collective building of complex
+architectures in social insects with lattice swarms. Journal of Theoretical Biology, 177,
+381–400.
+44. Theraulaz, G. & Bonabeau, E. (1995). Coordination in distributed building. Science, 269,
+686–688.
+45. Wenzel, J. W. (1991). Evolution of nest architecture. In K. G. Ross & R. W. Matthews (Eds.),
+Social biology of wasps (pp. 480–521). Ithaca, NY: Cornell University Press.
+46. Wheeler, W. M. (1911). The ant colony as an organism.Journal of Morphology, 22, 307–325.
+47. Wheeler, W. M. (1926). Les soci´et´es d’insectes, leur origine, leur ´evolution. Paris: Librairie
+Octave Doin.
+48. Wheeler, W. M. (1928). The social insects. New York: Harcourt and Brace.
+49. Wilson, E. O. (1968). The superorganism concept and beyond. In L’effet de groupe chez les
+animaux, Colloques internationaux du C. N. R. S. No 173, Paris, 21–24 Novembre 1967
+(pp. 77–103). Paris: Editions du C. N. R. S.
+116 Artiﬁcial Life Volume 5, Number 2

@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "version": "1.0.0",
+  "modelFile": "explorer_scorer.onnx",
+  "agentType": "explorer",
+  "inputName": "features",
+  "outputName": "score",
+  "inputDim": 48,
+  "normalizationFile": "normalization.json",
+  "architecture": {
+    "type": "pointwise_scoring_mlp",
+    "hidden1": 64,
+    "hidden2": 32,
+    "dropout": 0.1,
+    "params": 5249
+  },
+  "training": {
+    "mode": "pairwise",
+    "best_epoch": 15,
+    "best_val_loss": 0.1353684961795807,
+    "dataset_stats": {
+      "traces": 140,
+      "candidates": 840,
+      "positive": 63,
+      "negative": 777,
+      "positive_ratio": 0.075,
+      "total_evidence": 63
+    }
+  }
+}

@@ -1,0 +1,1735 @@
+
+
+===== PAGE 1 =====
+communicationsbiology Review article
+A Nature Portfolio journal
+https://doi.org/10.1038/s42003-025-07608-9
+A review of quorum-sensing and its role in
+mediating interkingdom interactions in
+the ocean
+Check for updates
+Megan Coolahan & Kristen E. Whalen
+Quorum sensing,ﬁrst described in marine systemsﬁve decades ago, is a well-characterized chemical
+communication system used to coordinate bacterial gene expression and behavior; however, the impact
+of quorum sensing on interkingdom interactions has been vastly understudied. In this review, we examine
+how these molecules mediate communication between bacteria and marine eukaryotes; inﬂuencing
+processes such as development, disease pathogenesis, and microbiome regulation within marine
+ecosystems. We describe the varied mechanisms eukaryotes have evolved to interfere with bacterial
+quorum sensing signaling, the crucial role these signals play in host-virus interactions, and how their
+exchange may be governed by outer membrane vesicles, prevalent in marine systems. Here, we present a
+dynamic portrayal of the impact of quorum sensing signals beyond bacterial communication, laying the
+groundwork for future investigations on their roles in shaping marineecosystem structure and function.
+Global biogeochemical cycling and marine ecosystem dynamics are dictated
+by molecular-level chemical exchanges between marine organisms1.O f t e n ,
+this chemical communication is orchestrated by bacteria, which secrete
+small diffusible quorum sensing (QS) signals 2 that induce density-depen-
+dent, population-wide changes in microbial behavior and community
+composition
+3. These self-produced chemical signals accumulate locally
+within the environment and attain con centrations that activate the tran-
+scription of genes critical for ﬁtness4. Since the initial observation of cell
+density-dependent luminescence inVibrioﬁscheri over ﬁfty years ago5,o u r
+understanding of the diversity of the q uorum sensing lexicon and factors
+controlling the expression of these molecules has expanded signiﬁcantly. At
+the most rudimentary level, the molecular circuitry of quorum sensing relies
+on one or more synthase genes, which encode the production of the dif-
+fusible signal termed an autoinducer, and one or more receptors, which
+dictate transcription, including the synthesis of the signal itself
+6,7.V a r i o u s
+classes of QS signals have been identi ﬁed in marine bacteria. These signals
+are characterized by their ability to diffuse from the producing cell, be
+recognized by a receiving cell, elicit a response in the receiver that has co-
+evolved alongside signal producti on in the producer, and confer mutual
+beneﬁts to both producer and receiver cells
+4.
+Acyl homoserine lactones (AHLs, au toinducer-1/AI-1), alkylquino-
+lones (AQs), and α-hydroxyketones (cholera autoinducer-1/CAI-1) con-
+stitute the main classes of QS compounds in marine ecosystems 8 (Fig. 1).
+AHLs are the most abundant QS molecules in marine systems, produced by
+Gram-negative bacteria from representatives ofAlpha-, Beta-a n dGamma-
+Proteobacteria. More controversial, however, is the inclusion of furanosyl
+borate diesters (autoinducer-2/AI-2)in this group, as not all bacteria that
+produce AI-2 either have the sensor or trigger a response to AI-2 consistent
+with canonical QS systems
+8. Some believe AI-2 can be at times either a
+signal, a cue, or metabolic byproduct u sed opportunistically for signaling
+depending on the bacterial producer or receiver4,9,10. Similarly, tropodithietic
+acid (TDA) might fall into this autoinducer category as well, possessing
+some, but not all QS signal properties
+11. The production of TDA is density-
+dependent and induces transcription of tda genes which coincide with
+bioﬁlm formation12. Expanding the vocabulary of QS molecules further, one
+could append this list to include the signal peptide arbitrium (Fig. 1). This
+peptide-based communication systemused by viruses that infect bacteria is
+analogous to QS in bacteria13. Arbitrium-based signaling depends on the cell
+density-dependent accumulation of ph age-encoded signaling molecules,
+which regulate host gene expression to promote a shift from lysis to lyso-
+geny, thereby enhancing the long-term survival and propagation of the viral
+population within the host community.
+QS-molecules are widespread among marine bacteria and are struc-
+turally diverse, yet together comprise a “language” allowing bacteria to
+behave collectively as a group. While the role of QS signaling in bacterial
+communication is well-established
+8, the exploration of QS molecules ’
+potential in mediating a wealth of ce llular behaviors at the interkingdom
+level is still in the early stages 14. Intricate recognition mechanisms between
+bacteria and eukaryotic cells may occur when host cells detect bacterial
+signals or when an autoinducer acts on the host cell without regulation
+15.
+Numerous studies in mammalian systems have identi ﬁed targets for QS
+signals including nuclear receptors (aryl hydrocarbon receptor and per-
+oxisome proliferator-activated receptor), G-protein coupled receptors, Toll-
+like receptors, transcription factors (NF-κB), protein kinases (p38 and p42/
+Department of Biology, Haverford College, Haverford, PA, USA.e-mail: kwhalen1@haverford.edu
+Communications Biology|           (2025) 8:179 1
+1234567890():,;
+1234567890():,;
+
+===== PAGE 2 =====
+44 kinases), cytoskeletal protei ns, and cell-surface lipid domains 16.T h e s e
+targets broadly modulate processes like innate immune responses, lipid
+metabolism, inﬂammatory responses, cell structure, and intracellular cal-
+cium (Ca² ⁺) signaling pathways (reviewed in ref. 14). In contrast, fewer
+studies have identiﬁed QS receptors in terrestrial plants. Notably, G-protein
+coupled receptors inArabidopsishave been shown to be activated by AHLs,
+resulting in root elongation
+17,18. These studies in mammalian systems and
+terrestrial plants highlight the co mplexity of interkingdom QS between
+bacteria and eukaryotic host cells, and provide an excellent starting point for
+exploring cognate interkingdom QS receptors and associated regulatory
+pathways in marine eukaryotes. In this review, we examine the ability of
+bacterial QS signals to in ﬂuence marine eukaryotic organisms, providing
+hosts with chemical contextual cues required for initiating developmental or
+physiological changes to enhance hostﬁtness under distinct environmental
+conditions. Furthermore, the presence of QS signals could trigger cross-
+kingdom recognition, thereby allowing eukaryotic hosts to take stock
+of their bacterial consortia and respond by producing their own small
+molecules. The interdependence between hosts and their associated
+bacteria covers a spectrum of ecologica l interactions, from cooperative to
+competitive (Fig. 2). Here, we explore the emerging evidence that QS sig-
+nals play a pivotal role in shaping c o-evolutionary re lationships in
+marine systems.
+Marine ecosystems provide an opportunity to explore the multi-
+faceted roles of QS signals and autoinducers. These molecules act as a
+shared molecular language understood by both bacteria and eukaryotes,
+conveying vital information and directing foundational processes within
+marine environments. In this review, we aim to provide insight into the
+role of QS signals as drivers of eukaryotic ﬁtness and determinates of
+trophic interactions in marine systems. Indeed, the long co-evolutionary
+relationship between microorganisms and their hosts has enabled marine
+eukaryotes to colonize all ocean habitats by forming holobionts
+19— an
+emerging concept that views a eukaryotic host and its associated
+microbes as a single collective organism 20. Given the essential role of the
+holobiont in host biology and the widespread presence of QS signals in
+marine bacteria, the in ﬂuence of interkingdom signaling on host evolu-
+tion merits further exploration.
+Recent advances in our understanding of marine host-bacteria inter-
+actions illustrate how molecules imp licated in bacterial QS contribute to
+disease progression, developmental trajectories, and the modi ﬁcation of
+marine eukaryotic physiology with examples from marine invertebrates
+21,22,
+macroalgae23,24, and phytoplankton25,26. Within marine ecosystems, eukar-
+y o t e sb o t he n g a g ei na n di n t e r f e r ew i t hQS processes, actively participating
+in QS-mediated dialogs by producing compounds or proteins that disrupt
+bacterial QS signaling
+22,27. Mechanisms to disrupt QS systems are classi ﬁed
+as either quorum quenching (QQ) molecules, which enzymatically degrade
+QS signals, or quorum sensing inhibitors (QSI), which interfere with QS
+signaling by competitively binding to QS molecule receptors on the bacterial
+cell surface
+28 or by inactivating autoinducer synthases29. The production of
+these molecules implies that host-driven modulation of bacterial QS signals
+may have evolved as a mechanism for eukaryotes to regulate the compo-
+sition of their associated microbial communities
+22,27.
+Interactions between marine viruses and microbes dictate the ﬂow
+and fate of carbon in marine ecosystems. Viruses are the most abundant
+biological entities in the oceans, outnumbering bacteria by 10-fold, with
+the majority being bacteriophages — viruses that speci ﬁcally target and
+infect bacteria
+30. Emerging research now reveals how QS molecules are
+inﬂuencing bacteriophage success. QS molecules provide critical infor-
+mation about bacterial population size, enabling phages to make lysis-
+lysogeny decisions by monitoring QS molecules. Likewise, viruses are
+responsible for mortality of ~20% of the oceanic photosynthetic biomass
+daily
+31. Recent work has uncovered a novel mechanistic role for a bac-
+terial QS signal in mediating viral success within its phytoplankton host 25,
+offering insight into a complex tri-trophic interaction governed by QS
+compounds.
+The rapid loss of QS compounds from their source due to diffusion or
+ﬂuid ﬂow in the ocean poses a major challenge to maintaining effective
+concentrations. Many chemical-media ted interactions are sustained by
+physical contact between the microbe and host, or in specialized host
+anatomical structures
+32.A d d i t i o n a l l y ,b i oﬁlms produced by bacterial con-
+sortia act as sorptive sponges, trapping and concentrating organic
+molecules
+33. Another important mechanism involves outer membrane
+vesicles (OMVs), which play a critical role in both stimulating and
+H2N
+HO
+O
+N
+H O
+H
+N
+O
+N
+H
+NH
+HN NH 2
+O
+H
+N
+O
+N
+H O
+OH
+Ser-Ala-Ile-Arg-Gly-Ala
+N
+H
+O
+S
+S
+O OH
+O
+O
+B-
+OO
+CH3
+OHHO
+OH
+OH
+O
+OH
+O
+O
+OO
+H
+N
+O
+O
+O
+H
+N
+OH O
+O
+OH
+N
+HHQ
+TDA
+CAI-1
+AI-2
+arbitrium
+3-OH-C14-HSL
+C6-HSL
+3-oxo-C4-HSL
+O
+O
+O
+HO
+H
+N
+p-Coumaroyl-HSL
+Alkylquinolone familyCAI-1 family
+AI-2 family
+Viral peptides
+AHL family
+QS-adjacent
+family
+Fig. 1 | Diversity of autoinducer molecules produced by marine representatives.
+The acylated homoserine lactone (A HL) family of QS signals with repre-
+sentatives including 3-oxo-C4-HSL ( N-3-oxo-butyryl-L-homoserine lactone),
+C6-HSL ( N-hexanoyl-DL-homoserine lactone), 3-OH-C14-HSL ( N-3-hydro-
+xytetradecanoylhomoserine lactone). p-Coumaroyl-homoserine lactone
+(p-coumaroyl-HSL) is a representative aryl-HSL in which the acyl side chain
+is replaced with p-coumaric acid moiety. The cholera autoinducer-1
+(CAI-1, (S)-3-hydroxytridecan-4-one) family is produced only in Vibrio
+species. The autoinducer-2 (AI-2) family containing furanosyl-borate diester.
+The alkylquinolone family of QS signals including 2-heptyl-4-quinolone
+(HHQ). Finally, the QS-adjacent represent atives including tr opodithietic acid
+(TDA) and the viral peptide arbitri um encoded by the phage phi3T which
+infects Bacillus subtilis.
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 2
+
+===== PAGE 3 =====
+distributing QS molecules. The packaging of QS signaling molecules into
+OMVs by Gram-negative bacteria appears to be more widespread in marine
+systems than previously recognized. This delivery system not only preserves
+the integrity of the signal during transport but also enables targeted delivery
+to speciﬁc sites via receptor-mediated processes. Considering the profound
+inﬂuence of QS signals on aquatic ecosystems and the wide range of hosts
+they affect, there is a pressing need for further investigation into how these
+signals shape interkingdom interactions in marine environments.
+QS-mediated interactions between marine inverte-
+brates and their associated bacteria
+Secondary metabolites produced by invertebrates and their associated
+microbes structure marine populations, communities, and ecosystems.
+These chemical cues dictate key processes in the life of an invertebrate,
+including predator-prey interacti ons, habitat selection, and larval
+settlement
+34. Building on the rich body of work dedicated to the chemical
+ecology of marine invertebrates 34,35, new research has revealed that QS
+molecules are an understudied yet essential component of the relationship
+between marine invertebrates and their microbiota
+21,22,27.
+The interplay between QS signaling and QS inhibition is a key deter-
+minant of disease pathogenesis in marine invertebrates 21,36–39.T h e
+ubiquitous detection of QS signals in the microbial consortia of corals
+afﬂicted with Black Band Disease40, suggests QS systems likely play a role in
+Black Band Disease communities41. QS signals alone can induce disease in
+coral by promoting growth of pathogen ic bacteria that overtake the bene-
+ﬁcial coral microbiome 21,42, suggesting that QS compounds are a driving
+factor affecting host microbiome composition. When N-hexanoyl-DL-
+homoserine lactone (AHL), a quor um-sensing molecule produced by
+marineVibriopathogens43, was applied to healthyAcropora cervicorniscoral
+fragments, all samples exhibited tissue loss and died completely within ﬁve
+days21.T h i s ﬁnding suggests that quorum- sensing signals can trigger
+commensal bacteria to become opportunistic pathogens.
+QS-induced diseases can be prevented by exogenous addition of
+QSI36,42 or QQ molecules that inhibit pathogenic growth and induction of
+virulence21,39,44. A growing body of evidence demonstrates invertebrates,
+including sea anemones, holothuria ns, and coral mucus, harbor bacteria
+capable of producing QSI/QQ as defensive agents against pathogen
+colonization45,46. However, pathogens can also use QSIs to disrupt the
+microbiome and induce disease by ob structing the QS signaling mechan-
+isms of bene ﬁcial microbes 41.T h i sp h e n o m e n o ni se x e m p l iﬁed by the
+cyanobacterial pathogen associat ed with coral Black Band Disease.
+Although typically found in low abu ndance in healthy corals, once the
+Viral attachment/entry
+CRISPR-Cas immunity
+Lysis-lysogeny decisions
+Microbiome composition
+Population growth
+Physiological impacts
+Evasion from viral mortality
+QS mimics
+Development
+Disease pathogenesis
+Microbiome composition
+Settlement
+O
+O
+NH
+RO
+Quorum quenchingenzymes
+Arbitrium
+signalin
+g peptides
+O
+O NH
+R
+O
+O
+O
+NH
+R
+O
+O
+O
+Br
+Br
+NH
+O
+HN
+O
+NH
+O
+N
+N
+(1)
+(3)
+(2)
+(4)
+(4)
+(4)
+Disease pathogenesis
+Microbiome composition
+Spore attachment/germination
+Biofilm formation
+QS interference
+Fig. 2 | Overview of chemical cross-talk driven by quorum sensing signals lib-
+erated by bacteria in marine ecosystems.Here, we showcase the diversity of roles
+initiated by QS molecules and the consequences of these chemically-mediated
+interactions on marine invertebrates, macroalgae, phytoplankton, and viruses. For
+example, the quorum sensing alkylquinolone 2-heptyl-4-quinolone (HHQ) (1)
+arrests cell division, targets the inhibition of pyrimidine biosynthesis, and protects
+the coccolithophore Emiliania huxleyifrom virus-induced mortality. Moreover,
+lumichrome (2), a derivative of the vitamin ribo ﬂavin, is a QS mimic whose release
+by exponentially growing E. huxleyiinitiates antibiotic production in commensal
+bacteria, a likely strategy to thwart bacterial invaders. QS molecules can signal an
+impending viral threat to the community and coordinate the reduced expression of
+cell surface receptors critical for viral entry, and the induction of CRISPR-Cas
+systems to acquire immunity during viral invasion. Conversely, the viral peptide
+arbitrium, which is generated by bacteriophages during bacterial host infection,
+serves as a communication signal within the viral population, helping to determine
+the fate of the host cell. In the macroalgae Delisea pulchra, halogenated furanones (3)
+competitively inhibit acyl-homoserine lactone (AHL) (4) signalling, thereby con-
+trolling the bacterial species composition and halting AHL-induced virulence in
+macroalgal pathogens. The interaction between QS signalling and QS inhibition
+plays a crucial role in the progression of development and disease in marine
+invertebrates. Image credit: jenesesimre/ stock.adobe.com.
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 3
+
+===== PAGE 4 =====
+disease takes hold, the cyanobacterialpathogen is thought to actively shape
+the disease community by cultivatin g an environment for opportunistic
+pathogens to attack the coral host. It does so in part by producing the
+secondary metabolite lyngbic acid, which inhibits QS signaling by blocking
+CqsS, the receptor for the hydroxyketone signal CAI-1. This blockade likely
+results in the modi ﬁcation of the microbiome composition
+41.Am e t a g e -
+nomics analysis of bacterial communi ties associated with bleached and
+unbleached corals indicated pathoge nicity-associated QS genes encoding
+for key proteins in bioﬁlm formation, adhesion, and infection, and virulence
+genes were signi ﬁcantly increased in bleached corals 29.F u r t h e r m o r e ,
+researchers discovered that genes encoding molecules involved in
+quenching or inhibiting QS signals, annotated as QQ, decreased in bleached
+corals. These genes were negatively associated with the presence of virulence
+genes, suggesting that the interplay between QS/QQ and virulence could be
+a critical tipping point for the onset of disease in corals
+29.
+These ﬁndings contribute to an ongoing paradigm shift in our
+understanding of disease emergence inmarine holobionts, whereby disease
+is not caused by exposure to a single pathogen but rather an overall
+imbalance, or dysbiosis,in microbiome composition that can be activated by
+QS signaling
+20,47,48. Dysbiosis may result from the QS-mediated activation of
+virulence by commensal bacteria that are usually present in the microbiome
+at low abundances and become opport unistic pathogens when the host
+experiences physiological stress
+21,29. Consequently, native probiotic bacteria
+lose their competitiveness, leading to changes in structure and function of
+complex host-associated communities, opening up the door for disease to
+gain a foothold 29,49. By identifying genes regulated by QS/QQ commu-
+nication systems that drive comple x interactions among the holobiont
+members, potential strategies for interventions can be developed to thwart
+disease establishment in corals. More broadly, understanding QS-mediated
+interactions between invertebrates and their bacterial pathogens is critical to
+monitoring physiological stress in m arine holobionts in the context of a
+changing ocean.
+The impact of QS and QQ signaling o n marine holobionts is further
+exempliﬁed by the emerging role of microbes in invertebrate development
+50.
+The moon jellyAurelia auritamodulates its production of QQ compounds to
+selectively inhibit the QS signaling of bacterial colonizers at different devel-
+opmental timepoints,ﬁnetuning the composition of the microbiome for each
+developmental stage22,51. The jelly’s enhanced QQ defense against bacteria in
+the larval ephyra stage may serve as a protective shield for the offspring,
+preservingﬁtness and ensuring their continued developmental progression to
+reproductive medusa
+22. Furthermore, A. auritapolyps and ephyrae express
+QQ enzymes at different levels in re sponse to commensal and pathogenic
+bacteria, as commensal bacteria induce a decrease in QQ expression while
+pathogenic bacteria lead to activation of the host’sQ Qr e p e r t o i r et oe l i m i n a t e
+the invader. Understanding how conﬂict or cooperation is controlled via QQ
+and QSI strategies in these invertebrate-associated microbiomes can further
+elucidate how microbial taxa drive host development andﬁtness.
+QS-mediated interactions between macroalgae and
+bacteria
+The role of QS signaling in mediating interactions between macroalgae and
+bacteria was ﬁrst established by foundational studies in the red alga Delisea
+pulchra, which produces halogenated furanones that competitively inhibit
+AHL signaling52. Located in vesicles at the algal cell surface 53,h a l o g e n a t e d
+furanones may act as gatekeepers that control which bacterial species can
+colonize the algal cell, allowing the host to determine the composition of its
+associated bacterial community23.S p e c iﬁcally, furanones inhibit signaling
+by covalently modifying and inacti vating the AI-2 producing enzyme
+LuxS52,54,55. This control over microbiome composition enhances algal
+defense against disease by preventing host colonization by opportunistic
+pathogens and inhibiting AHL-induced virulence of resident bacteria23.F o r
+example, halogenated furanones signiﬁcantly reduce algal susceptibility to
+bleaching23, a lethal disease caused by AHL-induced virulence of two bac-
+teria native to the D. pulchra microbiome56,57. By controlling bacterial
+colonization through theinterference with QS systems, algae can ameliorate
+the deleterious effects of bacterial pathogens58.
+The production of QS inhibitory compounds 59–62 or extracts63–68 with
+inhibitory activity has been documented for several other macroalgal spe-
+cies, suggesting that QS inhibitio n is a widespread mechanism used by
+macroalgae to control microbial community composition and evade disease
+by QS-sensing pathogens. The seagrass Halodule pinifolia produces
+4-methoxybenzoic acid which inhibits QS-mediated virulence factor pro-
+duction and suppresses both QS-medi ated virulence gene expression and
+production of extracellular polymeric substances required for bio ﬁlm for-
+mation in the pathogen Pseudomonas aeruginosa
+60. The brown alga
+Laminariaproduces the microbicidal compound hypobromous acid, which
+rapidly and speciﬁcally reacts with acyl homoserine lactones. Deactivation
+of these QS signals inﬂuences bioﬁlm development and may therefore serve
+as an additional strategy fo r controlling biofouling59. The sodium alginate
+oligomer OligoG CF-5/20, produced byLaminaria,a c t sa saQ Sa n t a g o n i s t ,
+leading to the reduction of AHL synthesis via the interference of expression
+of both las and rhl QS systems, resulting in altered bioﬁlm architecture and
+reduced virulence factor production 61. Red algal representatives produce
+betonicine,ﬂoridoside, and isethionic acid believed to inhibit the production
+or reception of AHLs62.B o t hN-benzyl cinnamamide andα-resorcylic acid
+isolated from the red alga Gracilaria ﬁsheri interfere with AI-2 mediated
+bioluminescence in Vibrio harveyi, hypothesized to bind to either the
+receptor or autoinducer of the AI-2 system 69. Polyphenolic phlorotannins,
+derived from brown algae, are most notable for their function as herbivore
+deterrents, digestive inhibitors, and antibacterial agents in marine
+ecosystems
+70. These compounds were also fou nd to inhibit QS activity in
+QS-sensing violacein reporter strains, accompanied by a decrease in viru-
+lence factor production, bioﬁlm formation, and QS molecule production71.
+Production of QS inhibitory compounds is not limited to the macro-
+algal host. Members of the macroalgal holobiont including fungi 24,72 and
+epibiotic bacteria73,74 produce QS-inducing, QQ, and QSI compounds,
+including a recently discovered class of α-hydroxy γ-butenolides that
+structurally resemble host-produced halogenated furanones72.Q S I sf r o m
+t h em a r i n ef u n g u sPenicillium inhibit virulence factors and bio ﬁlm pro-
+duction via competitive binding to receptor proteins including LasR and
+PqsR inP. aeruginosa. This binding likely results in a conformational change
+causing the loss of downstream QS-mediated gene transcription
+75–77.F u n g a l
+production of these QSIs is enhanced by the presence of QS-inhibiting
+bacteria, hinting at layers of chemical complexity underlying the interac-
+tions between macroalgae-associated microbes. QS inhibition by epiphytic
+fungi and bacteria is essential for ho st-microbiota equilibrium and pre-
+vention of dysbiosis leading to macroalgal disease
+24,72.B yr e g u l a t i n g
+microbial community composition within the macroalgal holobiont, QS-
+mediated dialogs maintain the health of coastal marine habitats that depend
+on macroalgae for primary production and habitat formation
+23.
+Bacterial bioﬁlms play a signi ﬁcant role in the development of mac-
+roalgal communities78. The ability of representatives from green and red
+algae to perceive QS signals, albeit through an unknown mechanism, is
+more widespread than previously recognized and could be an important
+trait contributing to their ecological success
+58. Finding the ideal substrate for
+settlement is critical for benthic organisms and this process is often medi-
+ated by infochemicals. Zoospores of the green seaweed Ulva (= Enter-
+omorpha) stimulate attachment only in the presence of bio ﬁlm strains that
+produce AHLs, compared to strains lacking quorum sensing circuits VanIR
+and VanMN
+79. The sensing of AHLs by zoospores results in a calcium inﬂux
+into the cells, reducing their swimmi ng rate and leading to their accumu-
+lation at the bioﬁlm surface for settlement80. Paradoxically, the presence of
+AHLs was demonstrated to reduce Ulva zoospore germination and early
+growth, suggesting that AHLs are a cue to slow growth algal rate lessening
+metabolic burden and thereby enhan cing survival in nutrient limiting
+conditions81. For the red epiphytic alga Acrochaetiumsp., life cycle com-
+pletion strongly depends on AHL-producing bacteria. Spore release was
+stimulated by AHLs in a dose-dependent manner and blocked when using
+AHL-receptor-blocking halofuranones
+82. The molecular mechanisms
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 4
+
+===== PAGE 5 =====
+underlying the reported ecological f unctions of cross-domain signaling
+between bacteria and seaweeds requi res further investigation to fully
+understand the algal receptors and pathways involved in QS molecule
+reception.
+QS-mediated interactions between phytoplankton and
+bacteria
+Interactions between phytoplankton and bacteria have been recognized as
+the foremost interkingdom relatio nship in the marine environment 83,84.
+These interactions propel glo bal biogeochemical cycles 1, structure the
+foundation of marine food webs85, and contribute to the regulation of global
+climate86. Phytoplankton account for nearly half of global photosynthetic
+output87, and as much as half of the carbon they produce is eventually
+consumed by heterotrophic bacteria 88. In exchange for the provision of
+carbon, bacteria provide phytoplankton with essential micronutrients and
+vitamins, while also acting as direct c ompetitors for inorganic nutrients84.
+This dynamic relationship is mediated by chemical signals, which induce
+shifts between mutualism and parasitism based on the physiological state of
+each partner
+89,90. QS signals are emerging as a crucial part of chemically
+mediated microbial interactions that control phytoplankton population
+growth
+25,26. Given the widespread presence of phycosphere isolates from
+phytoplankton blooms with QS-producing capabilities 11,91–93,f u r t h e r
+research is needed to explore how QS compounds can in ﬂuence phyto-
+plankton community dynamics, and, conversely, how algal metabolites can
+impact bacterial QS-mediated signaling.
+Within the phycosphere, a region immediately surrounding individual
+phytoplankton cells where microscale chemical exchanges occur94,Q Ss i g -
+naling drives interkingdom communication between the host and its
+microbial assemblage, ultimately determining the composition of the host’s
+colonizers
+19. QS signals modulate bioﬁlm formation and bacterial motility95,
+both necessary for initial attachment of bacterial cells within the phyco-
+sphere. QS signals produced by phyt oplankton promote a switch from a
+free-living mode to a surface-attached lifestyle, initiating the selective
+colonization of the phycosphere by QS -responsive cells and triggering the
+enhancement of bio ﬁlm formation and reduced motility. Two bacterial
+symbionts adapted to thrive off diatom metabolites, Sulﬁtobacter pseudo-
+nitzschiaeF5 andPhaeobactersp. F10, possess AHL synthesisluxI-like genes
+adjacent to the transcriptional regulator luxR gene. Both species show
+enhanced bioﬁlm formation and reduced mobility in the presence of AHLs
+produced by diatom symbionts. An AHL-induced phenotype supporting
+enhanced attachment effectively retains these bacteria in the phycosphere,
+ensuring their success relative to other competitors
+96.T h er e l i a n c eo nQ S
+molecules of phycosphere residents to initiate a switch from free-living to
+phycosphere-associated is favorable in those species with dependence on
+phytoplankton exudates. Simultaneously, there is growing evidence that
+bacterial density alone is not the sole trigger of QS expression; rather,
+eukaryote metabolites can trigger QS processes
+97,98.E v e na m o n gp h y c o -
+sphere residents that can switch phyt oplankton hosts, the initiation of QS
+production is not universal and is likely the result of a diversity and diver-
+gency in the labile metabolites pro duced by different phytoplankton
+species99. Future studies identifying the phytoplankton metabolites
+orchestrating quorum sensing expression will assist in our understanding of
+co-evolutionary cross-talk and metab olic alliances sustaining bacteria-
+phytoplankton partnerships in the ocean.
+There is also evidence that the diatom hostAsterionellopsis glacialiscan
+release rosmarinic acid, a QS mimic functionally similar to homoserine
+l a c t o n e s .T h i sm o l e c u l em a ys e r v ea sas i g n a lt op r o m o t eal i f e s t y l es h i f tf r o m
+free-living to phycosphere-enabledsymbionts by suppressing motility and
+encouraging the attachme nt of bacterial symbionts
+100. Rosmarinic acid,
+w h i c hi sa l s op r o d u c e db yl a n dp l a n t s ,h a sb e e ns h o w nt ob i n dt oQ S
+regulators101. In vitro assays found rosmarinic acid was capable of binding to
+the QS-regulator RhlR of P. aeruginosa(PAO1), competing with the QS
+signal N-butanoyl-homoserine lactone andactivating RhlR-mediated gene
+transcription. The use of QS mimics that promote attachment of beneﬁcial
+bacteria while simultaneously suppressing opportunists demonstrates an
+innate ability of phytoplankton to cu rate their microbial consortia, with
+parallels seen in higher eukaryotes.
+Quorum sensing bacteria are not restricted to a particular type of
+phytoplankton-bacteria interaction; rather, representatives are ubiquitous
+among phycosphere members11. Metagenomic sequencing across the stages
+of a natural phytoplankton bloom has shed light on QS-mediated dynamics
+of the microbial consortia in associat ion with their phytoplankton hosts.
+During a bloom of the harmful algal species Gymnodinium catenatum,Q Q
+sequences, including lactonases and acylases, were most dominant during
+the peak stage of the bloom, which coincided with the lowest bacterial
+abundance
+92. Further research is needed to determine whether deploying
+QQ at the height of the bloom provides symbiotic bacteria with a compe-
+titive advantage to maintain a foothold within the phycosphere. Additional
+studies using bioreactors to simulate shifts among dominant phytoplankton
+species have shown that phycosphere bacterial communities are dominated
+by QS/QQ-producing members, particularly within the attached microbial
+consortia
+102. Alongside autoinducer production genes, these consortia
+possess functional genes regulated by QS signals, such as those linked to
+antibiotic activity and iron acquisition— traits that impact both bacterial and
+host ﬁtness. Although complex to interpret, further studies employing
+network analysis could uncover patterns of co-variation among autoinducer
+production, regulated functional genes, QQ enzymes, and host responses in
+natural populations, supporting the view that QS systems are integral to
+phytoplankton bloom dynamics and microbial consortia transitions.
+Bacteria also regulate microalgal nutrient acquisition
+103,104 and popu-
+lation size using QS signals. These QS compounds have growth-enhancing
+or -inhibiting effects that can be eliminated by a change in a single functional
+group on the molecule 25,26. Studies of Trichodesmium bacterial consortia
+indicate that QS signals coordinate the acquisition of phosphorus, an
+important nutrient in oligotrophic waters, by regulating alkaline phospha-
+tase activity in Trichodesmiumcolonies
+104. QS molecules also modulate the
+growth and nitrogenase activity of the ﬁlamentous cyanobacteriumAna-
+baena sp., which produces an acylase capa ble of inactivating long-chain
+AHLs as a possible defense strategy against bacteria communication103.Q S
+m o l e c u l e sm e d i a t et h e i re f f e c t st h r o u g hv a r i o u sm e c h a n i s m s .F o re x a m p l e ,
+2-heptyl-4-quinolone (HHQ) induces cellular stasis — meaning neither
+growth nor mortality— in the coccolithophore Emiliania huxleyi
+25.L o n g -
+chained AHLs (C14-HSL) promoted growth in the benthic diatom Semi-
+navis robusta,w h i l eN-3-hydroxytetradecanoyl homoserine lactone (OH-
+C14-HSL) and N-3-oxotetradecanoyl homoserine lactone (oxo-C14-HSL)
+inhibited growth26. The production of dimethysulfoniopropionate (DMSP)
+is associated with the phycosphere of phytoplankton cells, where higher
+nutrient concentrations exist compared to the surrounding water column.
+When grown in the presence of DMSP, an organosulfur osmolyte produced
+by phytoplankton, the bacterium Ruegeria pomeroyiproduces N-(3-oxo-
+tetradecanoyl)-L-homoserine lactone concomitant with differential
+expression of intra- and extracellular metabolites
+105. These DMSP triggered
+QS signal-mediated changes in gene expression lead to the release of
+metabolically high-value biosynthetic intermediates useful in cross-feeding.
+Production of these interme diates is thought to switch R. pomeroyito a
+cooperative lifestyle with other bacteria and phytoplankton. The episodic or
+strategic release of metabolites by p hytoplankton can cue QS-mediated
+changes in bacteria metabolism to allow for scenarios favoring a mutually
+beneﬁcial exchange of high-value metabolites.
+Additionally, QS molecules can activate algicidal activity in commensal
+bacteria that retaliate agai nst their phytoplankton hosts
+106,107.T h i si s
+demonstrated by the phycosphere isolateBacillus subtilis(strain JA) against
+the alga Alexandrium minutum108, and by the bacterium Ponticoccus sp.
+against its host alga Prorocentrum donghaienseas well as two other red tide
+microalgae, Phaeocystis and Alexandrium109. Bacterial production of algi-
+cidal compounds has previously b een described as a response to host
+senescence that allows bacteria to quickly access the carbon produced by the
+dying algae before ﬁnding a new host 90. Speci ﬁcally, Phaeobacter gallae-
+ciensisis able to sense the physiological state ofE. huxleyiby the liberation of
+p-coumaric acid, a degradation productof algal lignin released by senescing
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 5
+
+===== PAGE 6 =====
+cells, and induce the up-regulation of algal degrading roseobacticides90.
+Interestingly,p- c o u m a r i ca c i ds e r v e sa sap r e c u r s o rf o rp-coumaroyl-HSL
+(p-C-HSL) (Fig. 1), a non-fatty acyl homoserine lactone recently identiﬁed
+as a potential quorum sensing signaling molecule 110.T h i sd i s c o v e r y
+broadens the repertoire of QS signals and highlights a potential co-
+evolutionary relationship between the algal host and the p-C-HSL-produ-
+cing bacterium. During E. huxleyi’s exponential phase, Phaeobacter gal-
+laeciencisprovides the alga with growth inducers like auxins and produces
+the potent broad-spectrum aut oinducer antibiotic TDA to ﬁght algal
+pathogens111–113 in return for the sulfur source DMSP114,115.T h ep r o d u c t i o n
+of semiochemicals associated with different life stages of the phytoplankton
+host may convey information about p hycosphere nutrient availability10.
+Therefore, QS signaling or the acquisition of QS-precursors may represent
+another strategy by which bacteria manipulate algal population dynamics to
+maximize access to host-derived nutrients.
+On the cellular and molecular level, QS compounds fundamentally
+restructure phytoplankton morphology and gene expression.E. huxleyicells
+exposed to nanomolar concentrations of the QS molecule HHQ exhibit
+increased lipid storage, nuclear envelope disintegration, and changes in
+chromatin structure. These morphological effects in lipid storage and DNA
+replication parallel the transcript ional changes induced by HHQ, which
+involve differential expression of genes involved in lipid metabolism, DNA
+repair, and cell cycle regulation
+25,26. In our attempts to understand how QS
+molecules are sensed by phytoplankton, the growth promoting molecule
+C14-HSL enhanced the expression of intr acellular signaling transcripts in
+the diatom S. robusta. These transcripts include genes containing motifs
+found in receptor-like kinases, G-protein coupled receptors, receptor-type
+guanylate cyclases, and protein kinase domains — all of which initiate
+eukaryotic signaling networks
+26. Conversely, oxo-C14-HSL exposure in S.
+robusta led to the downregulation of cell cycle genes, induced a switch to
+increased fatty acid degradation, and caused photoprotection mechanisms
+to be induced in concert with the down-r egulation of photosynthetic genes
+involved in light harvesting
+26. These studies offer the ﬁrst look into the
+complex web of molecular interacti ons that QS molecules trigger in phy-
+toplankton, as revealed through the lens of gene transcription. The recent
+discovery that the alkylquinolone, HHQ is a potent inhibitor of dihy-
+droorotate dehydrogenase, an enzyme involved in pyrimidine biosynthesis
+in the coccolithophore Emiliania huxleyi, establishes a novel avenue
+through which QS molecules shape algal physiology and further suggests an
+intimate co-evolutionary relationship between the algal host and QS signal
+producing bacterium
+116. Building on these foundational transcriptomic and
+enzymatic studies, metabolomic proﬁling is poised to reveal whether bac-
+teria use QS signals to induce algal production of speci ﬁc metabolites,
+allowing bacteria to “farm” their phytoplankton hosts.
+Phytoplankton are not only passive r ecipients of bacterial QS signals.
+Globally abundant microalgal species such as Chlamydomonas
+reinhardtii117, Phaeodactylum tricornutum118,a n dE. huxleyi119 are known to
+produce the QS mimic known as lumichrome, which was found to stimulate
+the LasR receptor from P. aeruginosa. Docking studies indicate that lumi-
+chrome and its precursor riboﬂavin are both recognized in the AHL binding
+pocket of LasR 120. Lumichrome induces the production of antibacterial
+compounds by Vibrio spp., thereby protecting the phytoplankton from
+bacterial pathogens119. QS mimics like lumichrome and riboﬂavin therefore
+represent another mechanism by which marine eukaryotes manipulate
+bacterial QS signaling through LasR-like receptors to prevent host disease or
+modulate the phycosphere community. The production of QS mimics is a
+promising yet understudied area of research, and future studies may reveal a
+diversity of currently unknown QS-modulating compounds produced by
+marine phytoplankton.
+Throughout their co-evolutionary history, phytoplankton and their
+bacterial symbionts have likely reliedon mutual exchanges of infochemicals
+to guide their decision-making. Algal metabolites serve as metabolic sign-
+posts, allowing bacteria to assess the host ’s physiological state and trigger
+metabolic shifts that favor mutual nutrient exchange. QS systems evolved to
+detect and respond to phytoplankton cues, altering bacterial gene expression
+to promote a transition from a free-livi ng to a particle-associated lifestyle
+that beneﬁts both partners. In turn, phytopla nkton hosts likely developed
+structural QS mimics to encourage this lifestyle shift, gaining protection
+through the bacterial production of antibiotic compounds that ward off
+pathogens. Other algal metabolites evo lved to silence QS signaling, likely
+fostering speciﬁc mutualistic or commensal rel ationships within the phy-
+cosphere community. Meanwhile, bacteria in ﬂuence host ﬁtness by
+deploying QS signals that activate algicidal activities, enabling them to
+exploit dying phytoplankton. These QS-mediated interactions highlight the
+intricate co-evolutionary complexity of bacteria-phytoplankton relation-
+ships. Future work aimed at identifyi ng key bacterial and algal infochem-
+icals, mapping their regulatory targets with host and QS pathways, and
+elucidating their downstream physiological effects on both bacteria and
+phytoplanktonﬁtness will help decode the molecular circuitry shaping these
+fundamental marine interactions.
+Impacts of QS signaling on host-virus dynamics
+Viral infection of marine microbes drives nutrient cycling and governs
+microbial community composition in the oceans 31. Viruses are the most
+numerous biological entities in the ocean and nearly 20% of primary pro-
+ductivity is turned over daily due to viral infection. While host-virus
+dynamics operate at global scales to in ﬂuence carbon and nutrient cycling,
+recent investigations have highlighted how chemical communication stra-
+tegies operating on the molecular level similar to bacterial QS systems
+inﬂuence viral strategy. These signaling mechanisms allow viruses to
+manipulate host bacterial communi cation pathways to optimize lysis-
+lysogeny strategies
+121,122. Chemical signaling is a pivotal aspect in the con-
+tinuous evolutionary struggle betw een viruses and their bacterial hosts,
+whereby bacteria evolve new antiviral protection methods while viruses
+develop strategies to bypass these defenses
+123. In the course of a billion years
+of evolution, viruses that infect bacteria, termed phage, have developed the
+ability to monitor the number of uninfected bacteria in a population using
+QS signals or similar compounds used in microbial communication. This
+unique capacity gives phage a strateg ic advantage, allowing them to toggle
+their infection trajectory depending on the number of nearby infection
+attempts
+121.
+QS compounds are a signi ﬁcant component of bacterial defenses
+against viral attack. The density-dependent nature of QS signaling provides
+critical information about bacterial population density that allows bacteria
+to weigh the costs and beneﬁts of different antiviral defense strategies
+124.Q S
+molecules can disrupt viral attachmentby downregulating the expression of
+bacterial cell surface receptors used for viral entry124–126.F o re x a m p l e ,E. coli,
+which does not produce AHLs itself, reduces the numbers of LamBλ phage
+cell surface receptors in response to AHLs, resulting in a 2-fold reduction in
+the adsorption of phage. This reduc tion in turn increases the number of
+survivingE. colicells. This protective cascade of events is dependent on the
+presence ofE. coli’s AHL receptor SidA, and not a secondary side effect due
+to the presence of AHLs manipulating the media environment. However,
+downregulation of these receptors is energetically costly since the receptors
+are involved in key cellular functions, such as nutrient acquisition and
+motility
+124. The density-dependence of QS signaling allows bacteria to
+downregulate these critical recepto rs only in high-density populations
+where virions released by infected cells are most likely to infect another
+host
+124. Given that phage, once thought to have narrow host speciﬁcity, can
+adapt to new hosts at high rates, this strategy also beneﬁts those bacteria that
+eavesdrop on QS signals rather thanproducing QS signals themselves127.Q S
+signaling can therefore steer bacterial populations toward the most effective
+antiviral defense strategy and allow populations to adapt to dynamic
+infection landscapes
+126.
+QS molecules also fortify antiviral defenses in bacteria by inducing
+coordinated expression of the CRISPR-Cas immune system, which allows
+bacterial populations to acquire immunity against a diverse range of possible
+invaders
+128,129. This diversity within the collective immune system of a
+population is essential for antivira l defense because viruses can develop
+resistance to CRISPR-Cas through a single point mutation 128,130. However,
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 6
+
+===== PAGE 7 =====
+CRISPR-Cas expression is costly to the host since autoimmunity can cause
+the CRISPR-Cas system to target the host genome itself 128,131,132. Therefore,
+the density-dependent nature of QS signaling again functions to ensure that
+CRISPR-Cas is only triggered in high-density bacterial populations most at
+risk of viral infection128,129,133.
+Viruses have already co-opted nu merous facets of the bacterial QS
+system to gain an advantage in the coevolutionary arms race 122.V i r u s e s
+possess genes encoding bacterial QS molecules 134 as well as membrane
+receptors that bind QS compounds135, suggesting that viruses can listen to
+and participate in QS-mediated bacterial communication. Detection of QS
+signals allows eavesdropping viruses to determine the density of a bacterial
+population, a key factor in ﬂuencing the shift between lysis and
+lysogeny135,136. For example, vibriophages encode a receptor speci ﬁct ot h e
+autoinducer 3,5-dimethylpyrazin-2-ol, a QS compound produced byVibrio
+cholerae135. Binding of 3,5-dimethylpyra zin-2-ol to the v ibriophage-
+encoded QS receptor and transcription factor (VqmA phage)s i g n a l sah i g h
+bacterial-host cell density to the p hage, triggering the lytic pathway 135.
+Presently, the speciﬁc cue that activates vqmAphage expression is unknown.
+However, it is hypothesized that a low-level production of VqmA Phage is
+triggered in response to an environmental stimulus or unstable state. Viral
+recognition of QS compounds may induce either a lytic or lysogenic life
+cycle in different phage-bacteria systems
+135–138, based on the distinct
+advantages provided by lysis versus lysogeny to the virus135,139.A sak e yf o r m
+of information used by viruses in ma king lysis-lysogeny decisions, QS
+molecules are a fundamental determinant of the fate of virally infected
+bacterial populations and, therefore,a central element shaping the structure
+of marine microbial communities.
+Further exemplifying the dynami c coevolutionary relationship
+between viruses and bacteria, phage have developed their own QS-like
+system of small molecule communication, known as arbitrium. This system
+requires three phage genes to produce the signal peptide, serve as a receptor,
+and regulate lysogeny
+13. Arbitrium involves the use of small peptide sig-
+naling molecules released by phage-infected bacteria as a message for future
+phages infecting the same bacterial population. The concentration of these
+peptides indicates the number of previous viral infections in the population,
+and if at sufﬁcient titer, indicates a signiﬁcant number of the host cells in the
+population may already have been lysed. This leaves few remaining hosts for
+new viral progeny released through a l ytic program, and shifts infection
+dynamics to a lysogenic model to avoid the risk of new progeny phage
+lacking a host to infect
+13. Therefore, a high concentration of the signaling
+peptides during later stages of infection increases the probability of lysogeny
+over lysis for a new phage entering the population. When modeled, phage
+using small-molecule signals as deter minates of the switch in lytic versus
+lysogenic lifestyles were found to ou tcompete non-communicating phage,
+particularly when host densities become low
+140. Subsequent to the discovery
+of the ‘arbitrium’QS system, an additional host-derived QS system in the
+Bacillus phage phi3T genome was discove red (Bernard et al. 2021). This
+system downregulates host defense mechanisms during infection when cell
+stress or cell abundance is high and phage titer is low, making it the ﬁrst
+known virus with two communication repertoires141. The evolution of the
+arbitrium system and others demonst rates that phage have not only imi-
+tated but also improved on the bacterial QS model by innovating a mole-
+cular mechanism to facilitate transmission of information across different
+generations about prior infection events
+13.
+Finally, the story of how QS molec ules impact viral success gains
+additional complexity as we investigate tripartite interactions between a
+eukaryotic host, a virus, and bacterially-derived QS signals. Pollara et al.
+2021 demonstrated that the coccolithophore E. huxleyilikely gains pro-
+tection against viral mortality throug h QS signal-mediated physiological
+remodeling of the eukaryotic host. Ph ytoplankton cells exposed to nano-
+molar concentrations of the alkylquinolone HHQ, however, were still sus-
+ceptible to viral infection by E. huxleyivirus, but displayed a signi ﬁcantly
+reduced burst size, or the total number of viral particles release per host cell,
+when compared to controls
+142. Subsequent work identiﬁed HHQ as a potent
+inhibitor of E. huxleyi dihydroorotate dehydrogenase, a fundamental
+enzyme catalyzing the fourth step in pyrimidine biosynthesis and a known
+antiviral drug target 116.T h i s ﬁnding established a novel avenue through
+which a bacterial QS molecule can shape algal physiology and revealed
+fundamental insights into ecologically signiﬁcant tripartite interactions in
+the phycosphere.
+Role of membrane vesicles in transport of QS
+molecules
+Critical to understanding how QS molecules mediate interkingdom com-
+munication is describing the cellula r processes of infochemical exchange
+between organisms. Perhaps most vital is the question of how hydrophobic
+QS molecules are transferred at sufﬁcient concentrations through aqueous
+environments
+143,s u c ha st h eo c e a n .Ac o m p e l l i n gs o l u t i o nt ot h i sp r o b l e mi s
+the transport of QS compounds within lipid-bound outer membrane
+vesicles (OMVs) that shield the h ydrophobic QS compounds from the
+aqueous environment
+143. Gram-negative bacteria securely secrete QS signals
+and other products to their intended targets using OMVs, formed when the
+bacterial outer membrane buds and internalizes cargo
+144. In marine eco-
+systems, the concentration of OMVs in oligotrophic waters are approxi-
+mately 10
+5/mL145. OMVs are widespread throughout marine systems145,a n d
+the transport of QS molecules within OMVs has been reported in marine
+bacteria
+146,147, suggesting that OMVs may be a signi ﬁcant yet understudied
+mechanism of infochemical exchange in the oceans. The transport of QS
+signals within OMVs is dictated by c omplex feedback loops in which QS
+molecules and products of QS-regulat ed pathways are transported within
+OMVs and regulate the formation of the vesicles themselves
+143,148,149.
+Investigating the interconnections between QS signaling and OMVs is a
+promising area of future work that may provide key insights into the
+mechanisms of infochemical exchange in the oceans.
+OMVs as vessels for QS delivery regulate many of the same fundamental
+processes controlled by QS signaling, including bacterial pathogenicity, host-
+virus dynamics
+150, and eukaryotic development151. OMVs are integral to the
+QS-mediated dysbiosis that causes coral disease150,a sc o r a lp a t h o g e n sa r e
+known to produce OMVs containing AHLs and other virulence-related
+proteins
+147. The information-trafﬁcking function of OMVs has also been
+exploited by viruses, using phage receptors and small RNAs as OMV cargo to
+propagate infection in bacterial and eukaryotic host populations 152,153.B y
+facilitating the transfer of phage receptors between cells in a bacterial popu-
+lation, OMVs can induce short-term susceptibility to viral infection in pre-
+viously resistant bact erial subpopulations153.O M V sa l s om e d i a t ev i r a l
+infection of phytoplankton cells, as infected cells release OMVs containing
+small RNAs that extend viral half-life i n the extracellular environment and
+increase the rate of viral infection 152,154. Viruses have therefore evolved the
+ability to hijack the host’s OMV machinery to accelerate viral infection of a
+population150. However, OMVs deliver more than just bad news to eukaryotes,
+as they also function as carriers of critical information required for eukaryotic
+development. For example, the Hawaiian bobtail squid (Euprymna scolopes)
+uses OMVs produced by its symbiotic bacterium Vibrio ﬁscheri as a key
+checkpoint required to indicate successful bacterial colonization before the
+induction of irreversible light organ morphogenesis151. Considering the well-
+established role of QS signals in inducing bioluminescence ofV.ﬁscheriwithin
+the squid light organ 155, the emerging importance of OMVs in this host-
+microbe symbiosis highlights the signiﬁcant interconnection between OMVs
+and QS signals as a key area for future study.
+Summary and outlook
+A vast expansion is underway in our u nderstanding of QS signaling in the
+oceans, revealing that quorum sensi ng is a crucial mechanism of inter-
+kingdom signaling through which bacteria shape eukaryotic development,
+physiology, and ultimately ﬁtness (Fig. 2). In tandem, eukaryotes produce
+metabolites that can be recognized by bacterial QS receptors and serve as
+interkingdom signals. Moreover, euk aryotes have evolved the ability to
+eavesdrop on bacterial QS conversations, and can respond by using QQ and
+QSI compounds to circumvent bacter ial community dynamics and mod-
+ulate the composition of their associated microbiome (Table 1). These
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 7
+
+===== PAGE 8 =====
+Table 1 | Processes mediated by interkingdom QS signaling
+General Process Signal/Molecule Target Organisms and Speci ﬁc Role(s) References
+Development QQ enzymatic degradation of AHL and AI-2 molecules Aurelia aurita(moon jellyﬁsh)
+Regulation of microbiome composition based on
+developmental stage
+22
+AHL Ulva (Enteromorpha) sp. (green alga)
+Spore liberation, attachment, and germination
+80,81,158,159
+Hydroides elegans(marine polychaete) andBalanus
+improvises (barnacle)
+Settlement
+160,161
+Disease pathogenesis or
+interference in QS signaling
+AHL Acropora cervicornis(coral)
+Regulation of microbiome composition– pathogenic vs
+beneﬁcial bacteria
+21,36
+Pocillopora damicornis(coral)
+Regulation of microbiome composition– pathogenic vs
+beneﬁcial bacteria
+42
+QQ degradation of AHL Artemia salina(brine shrimp) andVenerupis philippinarum
+(Manila clam)
+Virulence of pathogenic bacteria
+39
+Production of acylases with QQ activity inAnabaena sp.
+(ﬁlamentous cyanobacterium)
+162
+Nitzschia cf pellucida(diatom)
+Haloperoxidase inactivation of AHLs
+163
+Gymnodinium catenatum(dinoﬂagellate)
+Production of lactonases and acylases
+92
+N-benzyl cinnamamide andα-resorcylic acid (inhibition
+of AI-2 signaling)
+Gracilaria ﬁsheri (red macroalgae)
+Bind to either receptor or autoinducer in AI-2 system
+69
+Lyngbic acid (inhibitor of CAI-1 signaling) Roseoﬁlum reptotaenium(cyanobacteria)
+Inhibition of QS signaling via CqsS receptor in beneﬁcial
+bacteria
+41
+Halogenated furanones (inhibitor of AHLs) Delisea pulchra(red alga)
+Virulence of pathogenic bacteria
+23,56
+4-Methoxybenzoic acid Halodule pinifolia(seagrass)
+Inhibits QS-mediated virulence gene expression, bioﬁlm
+formation and virulence factor production
+60
+Hypobromous acid Laminaria sp. (brown macroalga)
+Deactivates AHLs impacting bioﬁlm formation
+59
+Sodium alginate oligomer OligoG CF-5/20 Laminaria sp. (brown macroalga)
+QS antagonist due to interference with Las and Rhl QS
+systems; reduced bioﬁlm formation and virulence factor
+production
+61
+Betonicine, ﬂoridoside, isethionic acid, and
+phlorotannins
+Various red and brown macroalgal representatives
+Inhibit production or reception of QS signals
+62,71
+Microbial community
+composition
+AI-2 Ascophyllum nodosum, Pelvetia canaliculata, Laminaria
+digitata, and Saccharina latissima(brown algae)
+Regulation of microbiome composition; prevention of
+dysbiosis
+24
+QQ degradation of AHL Hydra vulgaris(hydroid)
+Regulation of microbiome composition
+27
+TDA Phaeobacter gallaeciencis(bacterium) producer as a broad-
+spectrum antibiotic to prevent algal pathogens ofEmiliania
+huxleyi (coccolithophore)
+111–113
+Rosmarinic acid (QS mimic) Asterionellopsis glacialis(diatom)
+Signal to surface-associated lifestyle switch by bacterial
+symbionts
+100
+Lumichrome (QS mimic) Phaeodactylum tricornutum(diatom) andEmiliania huxleyi
+(coccolithophore)
+Recognized by LasR; induces antibiotic production in
+Vibrio spp.
+118–120
+Dimethysulfoniopropionate (DMSP) General organosulfur osmolyte produced by marine
+phytoplankton
+Triggers QS signal-mediated changes in bacteria gene
+expression; switch to cooperative lifestyle
+105
+Population growth & cell
+physiology
+AHL Seminavis robusta(diatom)
+Cell cycle regulation; Lipid metabolism
+26
+104
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 8
+
+===== PAGE 9 =====
+sophisticated interkingdom interactions between bacteria and eukaryotes
+likely have evolved to favor symbiotic exchanges between partners or
+mitigate deleterious interactions with eukaryotic hosts that deploy mimics
+or signal curtailing mechanisms as a defense strategy. With a diversity of key
+players in interkingdom QS signaling now identi ﬁed, interrogating the
+molecular and biochemical mechanismsunderpinning these interactions is
+needed to fully understand the role of QS-mediated communication in the
+marine environment. What speciﬁc biochemical pathways do QS molecules
+target to manipulate eukaryotic met abolism and physiology? What cell
+surface receptors or transcription factors are shared between QS-producing
+bacteria and QQ/QSI-producing eukaryotes that facilitate chemical com-
+munication between these organisms? What are the regulatory mechanisms
+that dictate how QS signals modulate viral reproduction strategies in
+response to host cell density and physiological state? Answering these
+questions will vastly expand our understanding of the microscale cellular
+interactions shaped by QS signaling that dictate marine community
+dynamics.
+A major gap in our current understanding of QS signaling is how
+environmental conditions and host physiological state affect the production
+of QS compounds in natural systems. To provide a complete picture of the
+biotic and abiotic factors that impact QS signaling, future work must expand
+the study of QS signaling beyond the laboratory setting, using novel ﬁeld-
+based methods to accurately probe and quantify the presence of QS com-
+pounds in natural systems. Laboratory studies have placed fundamental
+limits on our understanding of marine QS signaling, as only a small subset of
+marine bacteria are ultimately cultivable in the laboratory setting. Fur-
+thermore, determining ecologically relevant concentrations of QS molecules
+for use in laboratory research is challenging because measurements of bulk
+seawater do not accurately represent the concentration of QS signals in the
+distinct microenvironment surro unding microbial cells or in bio ﬁlms.
+Accurate quantiﬁcation of QS molecules necessitates innovative experi-
+mental methods leveraging emerging technologies, such as live bacterial
+biosensors that use ﬂuorescent reporters to detect QS compounds. These
+approaches can enhance our underst anding of the spatial and physical
+heterogeneity of QS molecule gradients experienced by organisms at the
+microscale. Ultimately, such technologies will help determine the effective
+“range” of infochemicals in situ within marine ecosystems. Additionally,
+the use of micro ﬂuidics can allow us to precisely control ﬂow and QS
+gradients to examine physiological r esponse at the level of single cells
+156.
+Furthermore, while laboratory studies have hinted at the synergistic
+effects of QS-inhibiting signals pro duced by the co-culturing of marine
+microbes, it is essential to prioriti ze examinations of natural systems
+to comprehensively delineate the spectrum of interactions between QS-
+producing marine microorganisms and the biological entities that
+Table 1 (continued) | Processes mediated by interkingdom QS signaling
+General Process Signal/Molecule Target Organisms and Speci ﬁc Role(s) References
+Trichodesmium (cyanobacterium)
+Increase in alkaline phosphatase activity
+Anabaena sp.( ﬁlamentous cyanobacterium)
+Modulating growth and nitrogen metabolism
+103
+Tetramic acids; resulting from the rearrangement via
+Claisen-like condensation reaction of 3-oxo-AHLs
+Phaeodactylum tricornutum(diatom)
+Decrease in photosynthetic efﬁciency; growth inhibition
+164
+2-heptyl-4-quinolone (HHQ) Emiliania huxleyi(coccolithophore)
+Cell cycle regulation; DNA repair; Lipid metabolism; Viral
+mortality; Pyrimidine biosynthesis
+25,116,142
+Phaeodactylum tricornutum(diatom)
+Obstructs photosynthetic electron transport via inhibition of
+cytochrome b
+6f complex; inhibition of mitochondrial
+respiration lowering ATP levels
+165
+Regulation of algicidal
+activity
+AHL Ponticoccus sp. (bacterium) againstProcentrum
+donghaiense (dinoﬂagellate)
+109
+AI-2 Bacillus subtilis(bacterium) againstAlexandrium minutum
+(dinoﬂagellate)
+108
+p-Coumaric acid resulting from algal lignin degradation;
+precursor ofp-coumaroyl-HSL
+Emiliania huxleyi(coccolithophore)
+Stimulation of the production of algaecides (troponoids) by
+Phaeobacter gallaeciencis
+90
+p-Coumaric acid (or other phenylpropanoids) and 3-OH-
+C10-HSL (AHL)
+Emiliania huxleyi(coccolithophore)
+Induction of roseobacticide-speciﬁc genes andtda operon
+to produce algaecides (roseobacticides) byPhaeobacter
+inhibens
+166
+Viral attachment/entry AHL Escherichia coliand phageλ 124
+Vibrio anguillarumand phage KVP40 126
+CAI-1 and AI-2 Vibrio choleraeand associated phages 125
+CRISPR-Cas immunity AHL Pseudomonas aeruginosa 128
+Serratia sp. 129
+QQ degradation of AHL Chromobacterium violaceumand Pseudomonas
+aeruginosa
+133
+Viral hijacking of QS systems 3,5-dimethylpyrazin-2-ol Vibrio choleraeand phage VP882
+Regulation of lysis-lysogeny decisions
+135
+AI-2 Escherichia coliand phage T1
+Regulation of lysis-lysogeny decisions
+137
+AHL Vibrio anguillarumand ϕH20-like phage
+Regulation of lysis-lysogeny decisions
+136
+Phage-produced “arbitrium” signaling peptides Phage of SPbeta group infecting Bacillus subtilis
+Regulation of lysis-lysogeny decisions
+13
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 9
+
+===== PAGE 10 =====
+receive and interpret these signals157. This integrated approach to compre-
+hending marine QS signaling will provide critical insights into the molecular
+interactions that structure marine ecosystems.
+Received: 28 June 2024; Accepted: 27 January 2025;
+References
+1. Azam, F. & Malfatti, F. Microbial structuring of marine ecosystems.
+Nat. Rev. Microbiol5, 782–791 (2007).
+2. Fuqua, W. C., Winans, S. C. & Greenberg, E. P. Quorum sensing in
+bacteria: the LuxR-LuxI family of cell density-responsive
+transcriptional regulators.J. Bacteriol.176, 269–275 (1994).
+3. Abisado, R. G., Benomar, S., Klaus, J. R., Dandekar, A. A. &
+Chandler, J. R. Bacterial Quorum Sensing and Microbial Community
+Interactions. mBio 9, e02331–17 (2018).
+4. Whiteley, M., Diggle, S. P. & Greenberg, E. P. Progress in and promise
+of bacterial quorum sensing research.Nature 551,3 1 3–320 (2017).
+5. Nealson, K. H., Platt, T. & Hastings, J. W. Cellular control of the
+synthesis and activity of the bacterial luminescent system.J.
+Bacteriol. 104, 313–322 (1970).
+6. Dow, L. How Do Quorum-Sensing Signals Mediate Algae–Bacteria
+Interactions? Microorganisms 9, 1391 (2021).
+7. Urvoy, M., Labry, C., L ’Helguen, S. & Lami, R. Quorum Sensing
+Regulates Bacterial Processes That Play a Major Role in Marine
+Biogeochemical Cycles.Front. Mar. Sci.9, 834337 (2022).
+8. Hmelo, L. R. Quorum Sensing in Marine Microbial Environments.
+Ann. Rev. Mar. Sci.9, 257–281 (2017).
+9. Chen, X. et al. Structural identiﬁcation of a bacterial quorum-sensing
+signal containing boron.Nature 415, 545–549 (2002).
+10. Lami, R. Quorum Sensing in Marine Bioﬁlms and Environments. in
+Quorum Sensing55–96 (Elsevier, 2019).https://doi.org/10.1016/
+B978-0-12-814905-8.00003-4.
+11. R o l l a n d ,J .L . ,S t i e n ,D . ,S a n c h e z - F e r a n d i n ,S .&L a m i ,R .Q u o r u mS e n s i n g
+and Quorum Quenching in the Phycosphere of Phytoplankton: a Case of
+Chemical Interactions in Ecology.J. Chem. Ecol.42, 1201–1211 (2016).
+12. Geng, H. & Belas, R. Expression of Tropodithietic Acid Biosynthesis Is
+Controlled by a Novel Autoinducer.J. Bacteriol.192,4 3 7 7–4387 (2010).
+13. Erez, Z. et al. Communication between viruses guides lysis–lysogeny
+decisions. Nature 541,4 8 8–493 (2017).
+14. Fan, Q. et al. Structure and Signal Regulation Mechanism of
+Interspecies and Interkingdom Quorum Sensing System Receptors.
+J. Agric. Food Chem.70
+, 429–445 (2022).
+15. Lowery, C. A., Dickerson, T. J. & Janda, K. D. Interspecies and
+interkingdom communication mediated by bacterial quorum
+sensing. Chem. Soc. Rev.37, 1337 (2008).
+16. Teplitski, M., Mathesius, U. & Rumbaugh, K. P. Perception and
+Degradation ofN -Acyl Homoserine Lactone QuorumSensing Signals
+by Mammalian and Plant Cells.Chem. Rev.111,1 0 0–116 (2011).
+17. Jin, G. et al. Two G-protein-coupled-receptor candidates, Cand2
+and Cand7, are involved inArabidopsis root growth mediated by the
+bacterial quorum-sensing signals N-acyl-homoserine lactones.
+Biochemical Biophysical Res. Commun.417, 991–995 (2012).
+18. Liu, F., Bian, Z., Jia, Z., Zhao, Q. & Song, S. The GCR1 and GPA1
+Participate in Promotion ofArabidopsis Primary Root Elongation
+Induced byN -Acyl-Homoserine Lactones, the Bacterial Quorum-
+Sensing Signals.MPMI 25, 677–683 (2012).
+19. González-Pech, R. A. et al. The Evolution, Assembly, and Dynamics
+of Marine Holobionts.Annu. Rev. Mar. Sci.16, 443–466 (2024).
+20. Egan, S. & Gardiner, M. Microbial Dysbiosis: Rethinking Disease in
+Marine Ecosystems.Front. Microbiol. 7, 991 (2016).
+21. Certner, R. H. & Vollmer, S. V. Evidence for Autoinduction and
+Quorum Sensing in White Band Disease-Causing Microbes on
+Acropora cervicornis. Sci. Rep.5, 11134 (2015).
+22. Weiland-Bräuer, N., Fischer, M. A., Pinnow, N. & Schmitz, R. A.
+Potential role of host-derived quorum quenching in modulating
+bacterial colonization in the moon jellyﬁsh Aurelia aurita. Sci. Rep.9,
+34 (2019).
+23. Longford, S. R. et al. Interactions within the microbiome alter
+microbial interactions with host chemical defences and affect
+disease in a marine holobiont.Sci. Rep.9, 1363 (2019).
+24. Tourneroche, A. et al. Bacterial–Fungal Interactions in the Kelp
+Endomicrobiota Drive Autoinducer-2 Quorum Sensing.Front.
+Microbiol. 10, 1693 (2019).
+25. Pollara, S. B. et al. Bacterial Quorum-Sensing Signal Arrests
+Phytoplankton Cell Division and Impacts Virus-Induced Mortality.
+mSphere 6, https://doi.org/10.1128/msphere.00009-21 (2021).
+26. Stock, F. et al. Distinctive Growth and Transcriptional Changes of the
+Diatom Seminavis robustain Response to Quorum Sensing Related
+Compounds. Front. Microbiol.11, 1240 (2020).
+27. Pietschke, C. et al. Host modiﬁcation of a bacterial quorum-sensing
+signal induces a phenotypic switch in bacterial symbionts.Proc.
+Natl. Acad. Sci. USA. 114, E8488-E8497 (2017).
+28. Borges, A. & Simões, M. Quorum Sensing Inhibition by Marine
+Bacteria. Mar. Drugs17, 427 (2019).
+29. Xu, M. et al. Interactions between quorum sensing/quorum
+quenching and virulence genes may affect coral health by regulating
+symbiotic bacterial community.Environ. Res.238, 117221 (2023).
+30. Breitbart, M., Bonnain, C., Malki, K. & Sawaya, N. A. Phage puppet
+masters of the marine microbial realm.Nat. Microbiol3, 754–766
+(2018).
+31. Suttle, C. A. Marine viruses–major players in the global ecosystem.
+Nat. Rev. Microbiol5, 801–812 (2007).
+32. Martínez ‐Pérez, C., Zweifel, S. T., Pioli, R. & Stocker, R. Space, the
+ﬁnal frontier: The spatial component of phytoplankton–bacterial
+interactions. Mol. Microbiol.122, 331–346 (2024).
+33. Decho, A. W. & Gutierrez, T. Microbial Extracellular Polymeric
+Substances (EPSs) in Ocean Systems.Front. Microbiol.8, 922
+(2017).
+34. Hay, M. E. Marine Chemical Ecology: Chemical Signals and Cues
+Structure Marine Populations, Communities, and Ecosystems.
+Annu. Rev. Mar. Sci.1, 193–212 (2009).
+35. Puglisi, M. P., Sneed, J. M., Ritson-Williams, R. & Young, R. Marine
+chemical ecology in benthic environments.Nat. Prod. Rep.36,
+410–429 (2019).
+36. Certner, R. H. & Vollmer, S. V. Inhibiting bacterial quorum sensing
+arrests coral disease development and disease‐associated
+microbes. Environ. Microbiol.20, 645–657 (2018).
+37. Mohamed, A. R., Ochsenkühn, M. A., Kazlak, A. M., Moustafa, A. &
+Amin, S. A. The coral microbiome: towards an understanding of the
+molecular mechanisms of coral–microbiota interactions.FEMS
+Microbiol. Rev.47, fuad005 (2023).
+38. Peixoto, R. S. et al. Coral Probiotics: Premise, Promise, Prospects.
+Annu. Rev. Anim. Biosci.9, 265–288 (2021).
+39. Torres, M. et al. AHL-lactonase expression in three marine emerging
+pathogenic Vibrio spp. reduces virulence and mortality in brine
+shrimp (Artemia salina) and Manila clam (Venerupis philippinarum).
+PLoS ONE13, e0195176 (2018).
+40. Zimmer, B. L. et al. Quorum Sensing Signal Production and Microbial
+Interactions in a Polymicrobial Disease of Corals and the Coral
+Surface Mucopolysaccharide Layer.PLoS ONE9, e108541 (2014).
+41. Meyer, J. L., Gunasekera, S. P., Scott, R. M., Paul, V. J. & Teplitski, M.
+Microbiome shifts and the inhibition of quorum sensing by Black
+Band Disease cyanobacteria.ISME J.10, 1204–1216 (2016).
+42. Zhou, J. et al. Opportunistic bacteria use quorum sensing to disturb
+coral symbiotic communities and mediate the occurrence of coral
+bleaching. Environ. Microbiol.22, 1944–1962 (2020).
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 10
+
+===== PAGE 11 =====
+43. Tait, K., Hutchison, Z., Thompson, F. L. & Munn, C. B. Quorum
+sensing signal production and inhibition by coral‐associated vibrios.
+Environ. Microbiol Rep.2, 145–150 (2010).
+44. Sun, X. et al. Identiﬁcation of quorum sensing-regulatedVibrio fortis
+as potential pathogenic bacteria for coral bleaching and the effects
+on the microbial shift.Front. Microbiol.14, 1116737 (2023).
+4 5 . K r e d i e t ,C .J . ,R i t c h i e ,K .B . ,P a u l ,V .J .&T e p l i t s k i ,M .C o r a l - a s s o c i a t e d
+micro-organisms and their roles in promoting coral health and thwarting
+diseases.P r o c .R .S o c .B .280, 20122328 (2013).
+46. Reina, J. C., Pérez, P. & Llamas, I. Quorum Quenching Strains
+Isolated from the Microbiota of Sea Anemones and Holothurians
+Attenuate Vibrio corallilyticusVirulence Factors and Reduce
+Mortality inArtemia salina. Microorganisms 10, 631 (2022).
+47. Han, S. et al. AI-2 quorum sensing signal disrupts coral symbiotic
+homeostasis and induces host bleaching.Environ. Int.188, 108768
+(2024).
+48. MacKnight, N. J. et al. Microbial dysbiosis reﬂects disease
+resistance in diverse coral species.Commun. Biol.4, 679 (2021).
+49. Tout, J. et al. Increased seawater temperature increases the
+abundance and alters the structure of naturalVibrio populations
+associated with the coralPocillopora damicornis. Front. Microbiol. 6,
+432 (2015).
+50. Wilkins, L. G. E. et al. Host-associated microbiomes drive structure
+and function of marine ecosystems.PLoS Biol.17, e3000533 (2019).
+51. Weiland-Bräuer, N. et al. The Native Microbiome is Crucial for
+Offspring Generation and Fitness ofAurelia aurita. mBio 11, e02336-
+20 (2020).
+52. Mane ﬁeld, M. et al. Evidence that halogenated furanones from
+Delisea pulchrainhibit acylated homoserine lactone (AHL)-mediated
+gene expression by displacing the AHL signal from its receptor
+protein. Microbiology 145, 283–291 (1999).
+53. Dworjanyn, S. A., De Nys, R. & Steinberg, P. D. Localisation and
+surface quantiﬁcation of secondary metabolites in the red alga
+Delisea pulchra. Mar. Biol.133, 727–736 (1999).
+54. Givskov, M. et al. Eukaryotic interference with homoserine lactone-
+mediated prokaryotic signalling.J. Bacteriol.178,6 6 1 8–6622 (1996).
+55. Zang, T. et al. A naturally occurring brominated furanone covalently
+modiﬁes and inactivates LuxS.Bioorg. Medicinal Chem. Lett.19,
+6200–6204 (2009).
+56. Fernandes, N. et al. Genomes and Virulence Factors of Novel
+Bacterial Pathogens Causing Bleaching Disease in the Marine Red
+Alga Delisea pulchra. PLoS ONE6, e27387 (2011).
+57. Gardiner, M. et al. VarR controls colonization and virulence in the
+marine macroalgal pathogenNautella italicaR11. Front. Microbiol. 6,
+1130 (2015).
+58. Goecke, F., Labes, A., Wiese, J. & Imhoff, J. Chemical interactions
+between marine macroalgae and bacteria.Mar. Ecol. Prog. Ser.409,
+267–299 (2010).
+59. Borchardt, S. A. et al. Reaction of Acylated Homoserine Lactone
+Bacterial Signaling Molecules with Oxidized Halogen Antimicrobials.
+Appl Environ. Microbiol67, 3174–3179 (2001).
+60. Danaraj, J., Mariasingarayan, Y., Ayyappan, S. & Karuppiah, V.
+Seagrass Halodule pinifoliaactive constituent 4-methoxybenzioic
+acid (4-MBA) inhibits quorum sensing mediated virulence
+production ofPseudomonas aeruginosa. Microb. Pathogenesis147,
+104392 (2020).
+61. Jack, A. A. et al. Alginate Oligosaccharide-Induced Modiﬁcation of
+the lasI-lasR and rhlI-rhlR Quorum-Sensing Systems in
+Pseudomonas aeruginosa. Antimicrob. Agents Chemother.62,
+e02318–17 (2018).
+62. Kim, J. S., Kim, Y. H., Seo, Y. W. & Park, S. Quorum sensing inhibitors
+from the red alga,Ahnfeltiopsisﬂabelliformis. Biotechnol. Bioprocess
+Eng. 12,3 0 8–311 (2007).
+63. Batista, D., Carvalho, A. P., Costa, R., Coutinho, R. & Dobretsov, S.
+Extracts of macroalgae from the Brazilian coast inhibit bacterial
+quorum sensing.Botanica Mar.57, 441–447 (2014).
+64. Carvalho, A. P., Batista, D., Dobretsov, S. & Coutinho, R. Extracts of
+seaweeds as potential inhibitors of quorum sensing and bacterial
+growth. J. Appl Phycol.29, 789–797 (2017).
+65. Jha, B., Kavita, K., Westphal, J., Hartmann, A. & Schmitt-Kopplin, P.
+Quorum Sensing Inhibition byAsparagopsis taxiformis, a Marine
+Macro Alga: Separation of the Compound that Interrupts Bacterial
+Communication. Mar. Drugs11, 253
+–265 (2013).
+66. Kulshreshtha, G. et al. Red SeaweedsSarcodiotheca gaudichaudii
+and Chondrus crispusdown Regulate Virulence Factors of
+Salmonella Enteritidis and Induce Immune Responses in
+Caenorhabditis elegans. Front. Microbiol. 7, 421 (2016).
+67. Muthukrishnan, S., Muthar, N. I., Zakaria, M. H., Rukayadi, Y. &
+Natrah, I. Anti-bioﬁlm and Anti-quorum Sensing Activities of the Red
+Seaweed, Gracilaria changiiand its Associated Bacteria.J. Appl
+Phycol. 35, 2555–2566 (2023).
+68. Skindersoe, M. E. et al. Quorum Sensing Antagonism from Marine
+Organisms. Mar. Biotechnol.10,5 6–63 (2008).
+69. Karnjana, K. et al. Puriﬁcation and Evaluation of N-benzyl
+Cinnamamide from Red SeaweedGracilaria ﬁsheri as an Inhibitor of
+Vibrio harveyiAI-2 Quorum Sensing.Mar. Drugs18, 80 (2020).
+70. Targett, N. M. & Arnold, T. M. Minireview - Predicting the effects of
+the brown algal phlorotannins on marine herbivores in tropical and
+temperate oceans.J. Phycol.34, 195–205 (1998).
+71. Tang, J., Wang, W. & Chu, W. Antimicrobial and Anti-Quorum
+Sensing Activities of Phlorotannins From Seaweed (Hizikia
+fusiforme). Front. Cell. Infect. Microbiol.10, 586750 (2020).
+72. Vallet, M. et al. Novelα-Hydroxy γ-Butenolides of Kelp Endophytes
+Disrupt Bacterial Cell-to-Cell Signaling.Front. Mar. Sci.7, 601 (2020).
+73. Blanchet, E. et al. Quorum Sensing and Quorum Quenching in the
+Mediterranean SeagrassPosidonia oceanicaMicrobiota. Front. Mar.
+Sci. 4, 218 (2017).
+74. Kanagasabhapathy, M., Yamazaki, G., Ishida, A., Sasaki, H. &
+Nagata, S. Presence of quorum-sensing inhibitor-like compounds
+from bacteria isolated from the brown algaColpomenia sinuosa.
+Lett. Appl. Microbiol.49, 573–579 (2009).
+75. Chen, J. et al. Quorum Sensing Inhibitors from Marine Microorganisms
+and Their Synthetic Derivatives.Mar. Drugs17, 80 (2019).
+76. Ji, H. et al. Citrinin Is a Potential Quorum Sensing Inhibitor against
+Pseudomonas aeruginosa. Mar. Drugs21, 296 (2023).
+77. Yu, X. et al. A Cyclic Dipeptide from Marine FungusPenicillium
+chrysogenum
+DXY-1 Exhibits Anti-quorum Sensing Activity.ACS
+Omega 6, 7693–7700 (2021).
+78. Singh, R. P. & Reddy, C. R. K. Seaweed-microbial interactions: key
+functions of seaweed-associated bacteria.FEMS Microbiol Ecol.
+88, 213–230 (2014).
+79. Joint, I. et al. Cell-to-Cell Communication Across the Prokaryote-
+Eukaryote Boundary.Science 298, 1207–1207 (2002).
+80. Joint, I., Tait, K. & Wheeler, G. Cross-kingdom signalling:
+exploitation of bacterial quorum sensing molecules by the green
+seaweed Ulva. Philos. Trans. R. Soc. B362, 1223–1233 (2007).
+81. Twigg, M. S., Tait, K., Williams, P., Atkinson, S. & Cámara, M.
+Interference with the germination and growth ofU lvazoospores by
+quorum‐sensing molecules fromUlva ‐associated epiphytic
+bacteria. Environ. Microbiol.16, 445–453 (2014).
+82. Weinberger, F. et al. Spore release inAcrochaetiumsp. (Rhodophyta)
+is bacterially controlled.J. Phycol.43,2 3 5–241 (2007).
+83. Kuhlisch, C., Shemi, A., Barak-Gavish, N., Schatz, D. & Vardi, A. Algal
+blooms in the ocean: hot spots for chemically mediated microbial
+interactions. Nat Rev Microbiolhttps://doi.org/10.1038/s41579-
+023-00975-2 (2023).
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 11
+
+===== PAGE 12 =====
+84. Seymour, J. R., Amin, S. A., Raina, J. B. & Stocker, R. Zooming in on
+the phycosphere: the ecological interface for phytoplankton-
+bacteria relationships.Nat. Microbiol2, 17065 (2017).
+85. Cole, J. J. Interactions between Bacteria and Algae in Aquatic
+Ecosystems. Annu Rev. Ecol. Syst.13, 291–314 (1982).
+86. Yoch, D. C. Dimethylsulfoniopropionate: Its Sources, Role in the
+Marine Food Web, and Biological Degradation to Dimethylsulﬁde.
+Appl Environ. Microbiol68, 5804–5815 (2002).
+87. Falkowski, P. G. The role of phytoplankton photosynthesis in global
+biogeochemical cycles.Photosynth Res39, 235–258 (1994).
+88. Fuhrman, J. A. & Azam, F. Thymidine incorporation as a measure of
+heterotrophic bacterioplankton production in marine surface waters:
+Evaluation andﬁeld results.Mar. Biol.66, 109–120 (1982).
+89. Amin, S. A. et al. Interaction and signalling between a cosmopolitan
+phytoplankton and associated bacteria.Nature 522,9 8–101 (2015).
+90. Seyedsayamdost, M. R., Case, R. J., Kolter, R. & Clardy, J. The
+Jekyll-and-Hyde chemistry ofPhaeobacter gallaeciensis. Nat.
+Chem. 3, 331–335 (2011).
+91. Huang, X., Cai, Z., Lin, G. & Zhou, J. Quorum sensing modulating
+algae–bacteria interactions.Chin. J. Appl. Environ. Biol.22,
+0708–0717 (2016).
+92. Huang, X. et al. Proﬁles of quorum sensing (QS)-related sequences
+in phycospheric microorganisms during a marine dinoﬂagellate
+bloom, as determined by a metagenomic approach.Microbiological
+Res. 217,1 –13 (2018).
+9 3 . Z h o u ,J . ,L y u ,Y . ,R i c h l e n ,M .L . ,A n d e r s o n ,D .M .&C a i ,Z .Q u o r u m
+Sensing Is a Language of Chemical Signals and Plays an Ecological Role
+in Algal-Bacterial Interactions.C r i t .R e v .P l a n tS c i .35,8 1–105 (2016).
+94. Platt, A. J. & Whalen, K. E. Probing the Phycosphere: Techniques to
+Study Bacteria-Phytoplankton Interactions.Integr. Comp. Biol.63,
+1509–1519 (2023).
+95. Waters, C. M. & Bassler, B. L. Quorum sensing: Cell-to-Cell
+Communication in Bacteria.Annu. Rev. Cell Dev. Biol.21, 319–346
+(2005).
+96. Fei, C. et al. Quorum sensing regulates‘swim‐or‐stick’ lifestyle in the
+phycosphere. Environ. Microbiol.22, 4761–4778 (2020).
+97. Natrah, F. M. I. et al. Effects of micro-algae commonly used in
+aquaculture on acyl-homoserine lactone quorum sensing.
+Aquaculture 317,5 3–57 (2011).
+98. Williams, P. Quorum sensing, communication and cross-kingdom
+signalling in the bacterial world.Microbiology153, 3923–3938 (2007).
+99. Landa, M., Burns, A. S., Roth, S. J. & Moran, M. A. Bacterial
+transcriptome remodeling during sequential co-culture with a
+marine dinoﬂagellate and diatom.ISME J.11, 2677–2690 (2017).
+100. Shibl, A. A. et al. Diatom modulation of select bacteria through use of
+two unique secondary metabolites.Proc. Natl Acad. Sci. USA117,
+27445–27455 (2020).
+101. Corral-Lugo, A., Daddaoua, A., Ortega, A., Espinosa-Urgel, M. &
+Krell, T. Rosmarinic acid is a homoserine lactone mimic produced by
+plants that activates a bacterial quorum-sensing regulator.Sci.
+Signal. 9, 409 (2016).
+102. Zhu, J. et al. Dynamic patterns of quorum sensing signals in
+phycospheric microbes during a marine algal bloom.Environ. Res.
+212, 113443 (2022).
+103. Romero, M., Muro-Pastor, A. M. & Otero, A. Quorum sensing
+N-acylhomoserine lactone signals affect nitrogenﬁxation in the
+cyanobacteriumAnabaena sp. PCC7120: AHLs inhibit nitrogen
+ﬁxation in cyanobacteria.FEMS Microbiol. Lett.315,1 0 1–108 (2011).
+104. Van Mooy, B. A. et al. Quorum sensing control of phosphorus
+acquisition inTrichodesmium consortia. ISME J.6, 422–429 (2012).
+105. Johnson, W. M., Kido Soule, M. C. & Kujawinski, E. B. Evidence for
+quorum sensing and differential metabolite production by a marine
+bacterium in response to DMSP.ISME J.10, 2304–2316 (2016).
+106. Nakashima, T. et al. Producing mechanism of an algicidal compound
+against red tide phytoplankton in a marine bacteriumγ-
+proteobacterium. Appl Microbiol Biotechnol.73, 684–690 (2006).
+107. Paul, C. & Pohnert, G. Interactions of the Algicidal BacteriumKordia
+algicida with Diatoms: Regulated Protease Excretion for Speciﬁc
+Algal Lysis.PLoS ONE6, e21032 (2011).
+108. Zhang, S.-J. et al. The complete genome sequence of the algicidal
+bacterium Bacillus subtilisstrain JA and the use of quorum sensing
+to evaluate its antialgal ability.Biotechnol. Rep.25, e00421 (2020).
+109. Chi, W. et al. Quorum sensing of microalgae associated marine
+Ponticoccus sp. PD-2 and its algicidal function regulation.AMB
+Expr. 7, 59 (2017).
+110. Schaefer, A. L. et al. A new class of homoserine lactone quorum-
+sensing signals.Nature 454, 595–599 (2008).
+111. Geng, H., Bruhn, J. B., Nielsen, K. F., Gram, L. & Belas, R. Genetic
+Dissection of Tropodithietic Acid Biosynthesis by Marine
+Roseobacters. Appl Environ. Microbiol74, 1535–1545 (2008).
+112. Greer, E. M., Aebisher, D., Greer, A. & Bentley, R. Computational
+Studies of the Tropone Natural Products, Thiotropocin,
+Tropodithietic Acid, and Troposulfenin. Signiﬁcance of Thiocarbonyl
+−Enol Tautomerism.J. Org. Chem.73, 280–283 (2008).
+113. Thiel, V. et al. Identiﬁcation and biosynthesis of tropone derivatives
+and sulfur volatiles produced by bacteria of the marine Roseobacter
+clade. Org. Biomol. Chem.8, 234–246 (2010).
+114. González, J. M., Kiene, R. P. & Moran, M. A. Transformation of Sulfur
+Compounds by an Abundant Lineage of Marine Bacteria in theα-
+Subclass of the ClassProteobacteria. Appl Environ. Microbiol65,
+3810–3819 (1999).
+115. Newton, R. J. et al. Genome characteristics of a generalist marine
+bacterial lineage.ISME J.4, 784–798 (2010).
+116. Garrett, O. & Whalen, K. E. A bacterial quorum sensing signal is a
+potent inhibitor of de novo pyrimidine biosynthesis in the globally
+abundant Emiliania huxleyi. Front. Microbiol.14, 1266972 (2023).
+117. Teplitski, M. et al.Chlamydomonas reinhardtiiSecretes Compounds
+That Mimic Bacterial Signals and Interfere with Quorum Sensing
+Regulation in Bacteria.Plant Physiol.134, 137–146 (2004).
+118. Brisson, V. et al. Identiﬁcation of Effector Metabolites Using
+Exometabolite Proﬁling of Diverse Microalgae.mSystems
+6,
+e00835-21 (2021).
+119. Mausz, M. A. & Pohnert, G. Phenotypic diversity of diploid and
+haploid Emiliania huxleyicells and of cells in different growth phases
+revealed by comparative metabolomics.J. Plant Physiol.172,
+137–148 (2015).
+120. Rajamani, S. et al. The Vitamin Riboﬂavin and Its Derivative Lumichrome
+Activate the LasR Bacterial Quorum-Sensing Receptor.MPMI 21,
+1184–1192 (2008).
+121. Dahan, Y., Wingreen, N. S. & Meir, Y. The value of information gathering
+in phage–bacteria warfare.PNAS Nexus3, pgad431 (2023).
+122. Duddy, O. P. & Bassler, B. L. Quorum sensing across bacterial and
+viral domains.PLoS Pathog.17, e1009074 (2021).
+123. Golais, F., Hollý, J. & Vítkovská, J. Coevolution of bacteria and their
+viruses. Folia Microbiol58, 177–186 (2013).
+124. Høyland-Kroghsbo, N. M., Mærkedahl, R. B. & Svenningsen, S. L. A
+Quorum-Sensing-Induced Bacteriophage Defense Mechanism.
+mBio 4, e00362–12 (2013).
+125. Hoque, M. M. et al. Quorum Regulated Resistance ofVibrio cholerae
+against Environmental Bacteriophages.Sci. Rep.6, 37956 (2016).
+126. Tan, D., Svenningsen, S. L. & Middelboe, M. Quorum Sensing
+Determines the Choice of Antiphage Defense Strategy inVibrio
+anguillarum. mBio 6, e00627–15 (2015).
+127. Letarov, A. & Kulikov, E. The bacteriophages in human- and animal
+body-associated microbial communities.J. Appl. Microbiol.107,
+1–13 (2009).
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 12
+
+===== PAGE 13 =====
+128. Høyland-Kroghsbo, N. M. et al. Quorum sensing controls the
+Pseudomonas aeruginosaCRISPR-Cas adaptive immune system.
+Proc. Natl Acad. Sci. Usa.114, 131–135 (2017).
+129. Patterson, A. G. et al. Quorum Sensing Controls Adaptive Immunity
+through the Regulation of Multiple CRISPR-Cas Systems.Mol. Cell
+64, 1102–1108 (2016).
+130. Van Houte, S. et al. The diversity-generating beneﬁts of a prokaryotic
+adaptive immune system.Nature 532, 385–388 (2016).
+131. Stern, A., Keren, L., Wurtzel, O., Amitai, G. & Sorek, R. Self-targeting
+by CRISPR: gene regulation or autoimmunity?Trends Genet.26,
+335–340 (2010).
+132. Vercoe, R. B. et al. Cytotoxic Chromosomal Targeting by CRISPR/
+Cas Systems Can Reshape Bacterial Genomes and Expel or
+Remodel Pathogenicity Islands.PLoS Genet9, e1003454 (2013).
+133. Mion, S., Plener, L., Rémy, B., Daudé, D. & Chabrière, É. Lactonase
+SsoPox modulates CRISPR-Cas expression in gram-negative
+proteobacteria using AHL-based quorum sensing systems.Res.
+Microbiol. 170, 296–299 (2019).
+134. Hargreaves, K. R., Kropinski, A. M. & Clokie, M. R. J. What Does the
+Talking?: Quorum Sensing Signalling Genes Discovered in a
+Bacteriophage Genome.PLoS ONE9, e85131 (2014).
+135. Silpe, J. E. & Bassler, B. L. A Host-Produced Quorum-Sensing
+Autoinducer Controls a Phage Lysis-Lysogeny Decision.Cell 176,
+268–280.e13 (2019).
+136. Tan, D. et al. High cell densities favor lysogeny: induction of an H20
+prophage is repressed by quorum sensing and enhances bioﬁlm
+formation inVibrio anguillarum. ISME J.14, 1731–1742 (2020).
+137. Laganenka, L. et al. Quorum Sensing and Metabolic State of the
+Host Control Lysogeny-Lysis Switch of Bacteriophage T1.mBio 10,
+e01884-19 (2019).
+138. Liang, X., Wagner, R. E., Li, B., Zhang, N. & Radosevich, M. Quorum
+Sensing Signals Alter in vitro Soil Virus Abundance and Bacterial
+Community Composition.Front. Microbiol.11, 1287 (2020).
+139. Knowles, B. et al. Lytic to temperate switching of viral communities.
+Nature 531, 466–470 (2016).
+140. Doekes, H. M., Mulder, G. A. & Hermsen, R. Repeated outbreaks
+drive the evolution of bacteriophage communication.eLife 10,
+e58410 (2021).
+141. Bernard, C., Li, Y., Lopez, P. & Bapteste, E. Beyond arbitrium:
+identiﬁcation of a second communication system inBacillus phage
+phi3T that may regulate host defense mechanisms.
+ISME J.15,
+545–549 (2021).
+142. Harvey, E. et al. Quorum sensing signal disrupts viral infection
+dynamics in the coccolithophoreEmiliania huxleyi. Aquat. Microb.
+Ecol. 89,7 5–86 (2023).
+143. Mashburn, L. M. & Whiteley, M. Membrane vesicles trafﬁc signals
+and facilitate group activities in a prokaryote.Nature 437, 422–425
+(2005).
+144. Schwechheimer, C. & Kuehn, M. J. Outer-membrane vesicles from
+Gram-negative bacteria: biogenesis and functions.Nat. Rev.
+Microbiol 13, 605–619 (2015).
+145. Biller, S. J. et al. Bacterial Vesicles in Marine Ecosystems.Science
+343, 183–186 (2014).
+146. Brameyer, S. et al. Outer Membrane Vesicles Facilitate Trafﬁcking of
+the Hydrophobic Signaling Molecule CAI-1 betweenVibrio harveyi
+Cells. J Bacteriol200, https://doi.org/10.1128/jb.00740-17 (2018).
+147. Li, J., Azam, F. & Zhang, S. Outer membrane vesicles containing
+signalling molecules and active hydrolytic enzymes released by a coral
+pathogenVibrio shiloniiAK1.Environ. Microbiol.18, 3850–3866 (2016).
+148. Batista, J. H. et al. Interplay between two quorum sensing‐regulated
+pathways, violacein biosynthesis and
+VACJ /Yrb, dictates outer
+membrane vesicle biogenesis inChromobacterium violaceum.
+Environ. Microbiol.22, 2432–2442 (2020).
+149. Choi, S. Y. et al.Chromobacterium violaceumdelivers violacein, a
+hydrophobic antibiotic, to other microbes in membrane vesicles.
+Environ. Microbiol.22, 705–713 (2020).
+150. Schatz, D. & Vardi, A. Extracellular vesicles— new players in cell–cell
+communication in aquatic environments.Curr. Opin. Microbiol.43,
+148–154 (2018).
+151. Aschtgen, M.-S., Wetzel, K., Goldman, W., McFall-Ngai, M. & Ruby,
+E. Vibrio ﬁscheri -derived outer membrane vesicles trigger host
+development: OMV deliver signals in the squid/vibrio symbiosis.
+Cell. Microbiol.18, 488–499 (2016).
+152. Schatz, D. et al. Ecological signiﬁcance of extracellular vesicles in
+modulating host-virus interactions during algal blooms.ISME J.15,
+3714–3721 (2021).
+153. Tzipilevich, E., Habusha, M. & Ben-Yehuda, S. Acquisition of Phage
+Sensitivity by Bacteria through Exchange of Phage Receptors.Cell
+168, 186–199.e12 (2017).
+154. Schatz, D. et al. Communication via extracellular vesicles enhances viral
+infection of a cosmopolitan alga.Nat. Microbiol2, 1485–1492 (2017).
+155. Verma, S. & Miyashiro, T. Quorum Sensing in the Squid-Vibrio
+Symbiosis. IJMS 14, 16386–16401 (2013).
+156. Cui, Y. et al. SlipO
+2 Chip – single-cell respiration under tuneable
+environments. Lab Chip24, 4786–4797 (2024).
+157. O ’Toole, G. A. We have a community problem.J Bacteriole00073-24
+https://doi.org/10.1128/jb.00073-24 (2024).
+158. Tait, K. et al. Disruption of quorum sensing in seawater abolishes
+attraction of zoospores of the green algaUlva to bacterial bioﬁlms.
+Environ. Microbiol.7, 229–240 (2005).
+159. Wheeler, G. L., Tait, K., Taylor, A., Brownlee, C. & Joint, I. Acyl‐
+homoserine lactones modulate the settlement rate of zoospores of
+the marine algaUlva intestinalisvia a novel chemokinetic
+mechanism. Plant Cell Environ.29, 608–618 (2006).
+160. Huang, Y.-L., Dobretsov, S., Ki, J.-S., Yang, L.-H. & Qian, P.-Y.
+Presence of Acyl-Homoserine Lactone in Subtidal Bioﬁlm and the
+Implication in Larval Behavioral Response in the Polychaete
+Hydroides elegans. Micro. Ecol.54, 384–392 (2007).
+161. Tait, K. & Havenhand, J. Investigating a possible role for the bacterial
+signal molecules N‐acylhomoserine lactones inBalanus improvisus
+cyprid settlement.Mol. Ecol.22, 2588–2602 (2013).
+162. Romero, M., Diggle, S. P., Heeb, S., CÃ¡mara, M. & Otero, A.
+Quorum quenching activity inAnabaena sp. PCC 7120: identiﬁcation
+of AiiC, a novel AHL-acylase.FEMS Microbiol. Lett.280,7 3–80
+(2008).
+163. Syrpas, M. et al. Haloperoxidase Mediated Quorum Quenching by
+Nitzschia cf pellucida: Study of the Metabolization of N-Acyl Homoserine
+Lactones by a Benthic Diatom.Mar. Drugs12,3 5 2–367 (2014).
+164. Stock, F. et al.N -Acyl Homoserine Lactone Derived Tetramic Acids
+Impair Photosynthesis inPhaeodactylum tricornutum. ACS Chem.
+Biol. 14, 198–203 (2019).
+165. Dow, L. et al. The Multifaceted Inhibitory Effects of an Alkylquinolone
+on the DiatomPhaeodactylum tricornutum. ChemBioChem 21,
+1206–1216 (2020).
+166. Wang, R., Gallant, É. & Seyedsayamdost, M. R. Investigation of
+the Genetics and Biochemistry of Roseobacticide Production in
+the Roseobacter Clade Bacterium Phaeobacter inhibens.mBio 7,
+e02118–15 (2016).
+Acknowledgements
+Preparation of this manuscript was funded by NSF IOS 2041748 and by
+the Charles E. Kaufman Foundation Integrated Research Education Grant
+(KA2021-121932) to K.E.W. In addition, M.C. was supported by the
+Arnold and Mable Beckman Fellowship. We would like to acknowledge
+Elizabeth Harvey and Jiahe Wu for their helpful comments on drafts of
+the manuscript.
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 13
+
+===== PAGE 14 =====
+Author contributions
+M.C. developed the outline andﬁrst draft of the manuscript. K.E.W. edited the
+ﬁrst draft. Both authors edited the revised manuscript, which K.E.W.ﬁnalized.
+Competing interests
+The authors declare no competing interests.
+Additional information
+Correspondenceand requests for materials should be addressed to
+Kristen E. Whalen.
+Peer review informationCommunications Biologythanks Jin Zhou, Irene
+Wagner-Döbler and the other, anonymous, reviewer(s) for their contribution to
+the peer review of this work. Primary Handling Editors: Linn Hoffmann and
+David Favero.
+Reprints and permissions informationis available at
+http://www.nature.com/reprints
+Publisher’s noteSpringer Nature remains neutral with regard to jurisdictional
+claims in published maps and institutional afﬁliations.
+Open AccessThis article is licensed under a Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License,
+which permits any non-commercial use, sharing, distribution and
+reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the Creative
+Commons licence, and indicate if you modiﬁed the licensed material. You
+do not have permission under this licence to share adapted material
+derived from this article or parts of it. The images or other third party
+material in this article are included in the article’s Creative Commons
+licence, unless indicated otherwise in a credit line to the material. If material
+is not included in the article’s Creative Commons licence and your intended
+use is not permitted by statutory regulation or exceeds the permitted use,
+you will need to obtain permission directly from the copyright holder. To
+view a copy of this licence, visithttp://creativecommons.org/licenses/by-
+nc-nd/4.0/
+.
+© The Author(s) 2025
+https://doi.org/10.1038/s42003-025-07608-9 Review article
+Communications Biology|           (2025) 8:179 14

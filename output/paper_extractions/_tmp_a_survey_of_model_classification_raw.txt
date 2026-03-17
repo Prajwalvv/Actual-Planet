@@ -1,0 +1,2172 @@
+
+
+===== PAGE 1 =====
+REVIEW
+Swarm intelligence: A survey of model classiﬁcation
+and applications
+Chao WANGa, Shuyuan ZHANGa, Tianhang MAa, Yuetong XIAOa,
+Michael Zhiqiang CHENb, Lei WANGa,*
+a School of Automation Science and Electrical Engineering, Beihang University, Beijing 100191, China
+b School of Automation, Nanjing University of Science and Technology, Nanjing 210094, China
+Received 20 November 2023; revised 28 December 2023; accepted 28 February 2024
+Available online 20 March 2024
+KEYWORDS
+Swarm intelligence;
+Ant colony optimization;
+Self-driven particle models;
+Pheromone communication
+models;
+Leadership decision models;
+Empirical research models
+Abstract Swarm Intelligence (SI) is a collective behavior that emerges from interaction between
+individuals in a group. Typical SI includes ﬁsh schooling, ant foraging, bird migration, and so
+on. A great deal of models have been introduced to characterize the mechanism of SI. This article
+reviews several typical models and classiﬁes them into four categories: self-driven particle models,
+with Boids model as the primary example; pheromone communication models, including the ant
+colony pheromone model which serves as the foundation for ant colony optimization; leadership
+decision models, utilizing the hierarchical dynamics model of pigeon ﬂock as a prime instance;
+empirical research models, which employ the topological rule model of starling ﬂock as a classic
+model. On this basis, each type of model is elaborated upon in terms of its typical model overview,
+applications, and model evaluation. More speciﬁcally, multi-agent swarm control, path optimiza-
+tion and obstacle avoidance, formation and consensus control, trajectory tracking in the dense
+crowd and social networks analysis are surveyed in the application of each category, respectively.
+Furthermore, the more precise and effective modeling techniques for leadership decision and empir-
+ical research models are described. Limitations and potential directions for further exploration in
+the study of SI are presented.
+/C2112024 Production and hosting by Elsevier Ltd. on behalf of Chinese Society of Aeronautics and
+Astronautics. This is an open access article under the CC BY-NC-ND license ( http://creativecommons.org/
+licenses/by-nc-nd/4.0/).
+1. Introduction
+SI has its origin in the observation and study of social behavior
+in gregarious animals. Its distribution, ﬂexibility, and robust-
+ness advantages have provided new solutions to many chal-
+lenging complex problems. Initially proposed by Beni and
+Wang to describe the dynamics of swarm robots, SI has, since
+evolved, been deﬁned in various ways across different ﬁelds.
+1
+* Corresponding author.
+E-mail address: lwang@buaa.edu.cn (L. WANG).
+Peer review under responsibility of Editorial Committee of CJA.
+Production and hosting by Elsevier
+Chinese Journal of Aeronautics, (2025), 38(3): 102982
+Chinese Society of Aeronautics and Astronautics
+& Beihang University
+Chinese Journal of Aeronautics
+cja@buaa.edu.cn
+www.sciencedirect.com
+https://doi.org/10.1016/j.cja.2024.03.019
+1000-9361 /C2112024 Production and hosting by Elsevier Ltd. on behalf of Chinese Society of Aeronautics and Astronautics.
+This is an open access article under the CC BY-NC-ND license ( http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+===== PAGE 2 =====
+In natural science, it is typically deﬁned as a collective
+behavior that emerges from interaction between individuals
+in a group, whether they are animals or cells. SI refers to the
+use of algorithms and techniques that involve multiple intelli-
+gent agents collaborating, such as robots or sensor nodes.
+2
+In social science, it is deﬁned as the intelligent behavior exhib-
+ited by groups of humans through their interactions and
+collaborations.3
+This article primarily focuses on SI within the natural
+sciences, where the intelligence of a group often surpasses that
+of its members. This phenomenon is evident in various biolog-
+ical clusters,
+4,5 such as ﬁsh schooling, 6–8 ant foraging, 9–11 wolf
+predation,12 and bird migration. 13 Despite individual limita-
+tions, these groups demonstrate orderly self-organization and
+coordination behaviors at the group level, displaying traits
+such as distribution, self-organization, cooperation, stability,
+and adaptability.
+14
+Researchers have extensively studied the unique wisdom of
+biological clusters by establishing models, to uncover the inter-
+nal mechanisms of SI through simulating the collective behav-
+iors. One of the earliest models, the Boids model by
+Reynolds,
+15 summarized three fundamental rules governing
+collective behavior. Since then, research has been focused on
+simulating SI by designing group interaction rules over a long
+period. For instance, typical models such as swarm model
+16
+and R-A model 17 were both developed based on Boids model,
+and the well-known Vicsek model 18 was established from a
+physical perspective. In addition to the models established by
+the rules, there are some models based on pheromones, such
+as the ant colony models
+19–21 and bees models. 22 However,
+most of these models were developed in the absence of empir-
+ical data due to the limitations in data collection technology
+over the past decades. Until the development of tracking posi-
+tioning and sonar detection technology, this issue has been
+resolved. This has made it more convenient to observe the
+behavior of biological clusters and gain a deeper understand-
+ing of the spatial aggregation and order of movement of indi-
+viduals in clusters,
+14 for example, the model of starling ﬂocks 23
+and the model of ﬁsh shoals 24. Recently, advancements in
+machine learning have led to increased interest and progress
+in data-driven models that utilize observed data to yield the
+qualitatively same collective behavior as exhibited by real
+swarm.
+25–27 This integration of technology and biological
+insights marks a promising direction for further understanding
+the wisdom of biological clusters and their internal mecha-
+nisms. Since data-driven models are constructed based on
+real-world data, they can be regarded as a speciﬁc category
+of empirical research models.
+Building upon the insights gained from these biological
+cluster behavior models, corresponding algorithms have been
+formalized and are referred to as biology-based algorithms
+28
+in various literature, or simply swarm intelligence algo-
+rithms.29 They can be categorized into six groups based on
+the number of algorithms used and their biological inspiration:
+P-article Swarm Optimization (PSO),
+30 Artiﬁcial Fish Swarm
+(AFS),31 Ant Colony Optimization (ACO), 32 Artiﬁcial Bee
+Colony (ABC), 33 Bacterial Foraging Optimization (BFO), 34
+and other swarm intelligence algorithms. 35,36 These heuristic
+optimization algorithms have gained widespread adoption
+and are employed in diverse applications, including parameter
+optimization,
+37 system identiﬁcation, 38 robots39 and other
+optimization problems of engineering ﬁelds. 40 While our focus
+is primarily on reviewing swarm intelligence models rather
+than the algorithm, we will discuss some of them in subsequent
+content.
+In addition to algorithms inspired by biology, many appli-
+cations are directly derived from animal collective behaviors.
+Unlike the aforementioned algorithm applications in optimiza-
+tion problems, these applications primarily refer to coopera-
+tive unmanned cluster systems, including aerial, ground, and
+marine robotics swarms. In aerial robotics swarm, for exam-
+ple, the task assignment algorithm and interaction mode
+should be carefully designed to support the cooperative
+decision-making process of Unmanned Aerial Vehicle (UAV)
+swarm, which is recently inspired by biological swarm behav-
+iors in various applications.
+41 Besides, UAV swarms take
+actions to carry out assigned tasks through various conﬁgura-
+tions of formation control. There are several key technologies
+necessary for autonomous ﬂight, including formation mainte-
+nance,
+42,43 formation reconﬁguration, 44,45 and obstacle avoid-
+ance.46 In ground robotics swarm, for example, with the
+enhanced development of Unmanned Ground Vehicle
+(UGV) systems, the exploration and veriﬁcation of swarm
+cooperative algorithms have been further deepened. Particle
+robotics are controlled to achieve autonomous locomotion,
+phototaxis, and object transportation through a simple dis-
+tributed algorithm inspired by collective cell migration phe-
+nomena in biology.
+47 In the ﬁeld of marine robotics swarm,
+researchers have conducted extensive research to investigate
+communication technology, 48 navigation, and location tech-
+nology49 inspired by collective behaviors in biology. Particu-
+larly, it should be noted that using the swarm algorithms to
+control robotics is different from simulating a swarm. The for-
+mer aims to achieve a speciﬁc task or goal, while the latter aims
+to understand the mechanisms of collective behavior and inter-
+action. Hence, studying the swarm intelligence models, algo-
+rithms and applications holds immense academic and
+practical value. The hierarchical distribution of swarm intelli-
+gence is shown in Fig. 1 .
+15–21,30–36,41–49
+Several literatures 50–52 have reviewed SI models, algo-
+rithms, and applications because of their excellent perfor-
+mance in various problems. They often reviewed SI models
+from a speciﬁc perspective, such as a physical perspective 53
+or a biological perspective. 54 The reviews about SI algorithms
+and applications usually focus on representative algorithms,
+such as PSO and ACO, and speciﬁc application problems, such
+as Internet of Things (IoT) and features seletion.
+55–58 How-
+ever, there is seldom a timeline or appropriate classiﬁcation
+in the literature reviews regarding models, and there is limited
+exploration and summarization of the underlying models in
+the reviews of algorithms and applications. In other words,
+there is rare research that has reviewed SI algorithms and
+applications based on underlying models, which is the gap that
+this article aims to ﬁll. The main contributions of this article
+are shown as follows:
+(1) This article provides a new categorization of typical
+swarm intelligence models. We organized typical models
+based on their chronological emergence, starting from
+time when the most representative Boids model
+appeared up to the present. Following this, we found
+that the emergence of representative models during dif-
+ferent periods allowed us to divide our focus timeline
+into four distinct periods. We summarized the common
+2 C. WANG et al.
+
+===== PAGE 3 =====
+characteristics of representative models within each per-
+iod and classiﬁed the existing typical models into four
+categories: self-driven particle models, pheromone com-
+munication models, leadership decision models and
+empirical research models.
+(2) Each type of model is elaborated upon its typical model
+overview and applications. In section of self-driven parti-
+cle models, we overview typical models and their applica-
+tions in multi-agent swarm control. Then, we delve into
+PSO, summarize its improvement methods and overview
+its applications in the aerospace area. In section of phero-
+mone communication models, we focus on representative
+ant colony models, summarize ACO and its improved ver-
+sion, and explore its applications in path optimization and
+obstacle avoidance. In section of leadership decision mod-
+els, we introduce typical models and outline methodolo-
+gies for leadership inference, emphasizing their
+application in formation and consensus control. In section
+of empirical research models, we elaborate on small-scale
+and large-scale cluster models. Moreover, we summarize
+techniques for constructing empirical research models
+and survey their applications in trajectory tracking within
+dense crowds, as well as social network analysis.
+The rest of this article is structured as follows: in Section 2 ,
+the concept of SI is introduced, and the existing typical models
+of SI are divided into four categories, including self-driven par-
+ticle models, pheromone communication models, leadership
+decision models and empirical research models. Each type of
+model is elaborated upon in terms of its typical model over-
+view, related applications, and model evaluation from Section 3
+to Section 6 , respectively. The conclusion and future research
+direction are presented in Section 7 .
+2. Classiﬁcation of typical models of SI
+Many social animals, such as ants, birds, and bees, can carry
+out complex tasks through the interaction and coordination
+of many individuals, without the need for a centralized control
+mechanism. Fig. 2 shows the SI of ants, birds and bees. The
+study of SI aims to identify the mechanisms underlying collec-
+tive behaviors and to develop algorithms and techniques that
+can be used to design intelligent, adaptive, and robust systems.
+One of the most important tasks is to establish models to iden-
+tify the mechanisms. A variety of models have been developed
+for SI. It ﬁrst aroused the interest of researchers in the ﬁeld of
+computer graphics,
+15 and subsequently became the subject of a
+great deal of physics research and applied mathematics. 59,60
+The goal of establishing SI models is to clarify how individuals
+form group-level collective behavior through local interac-
+tion.
+61 Because groups involve a large number of discrete indi-
+viduals, many physicists consider it in terms of statistical
+mechanics. This methodology treats SI as an emergent prop-
+erty, resulting from the interactions of numerous individuals
+conceptualized as particles. The primary focus is on construct-
+ing microscopic models to discern the determinants of group-
+level dynamics. This bottom-up approach, emphasizing the
+self-organizing nature of groups, allows for a stable model of
+distributed control, where interactions are limited yet collec-
+tively shape coherent group behaviors. This framework not
+only facilitates nuanced exploration of SI but also aligns with
+principles of self-organization, making it a robust model for
+studying complex systems.
+An alternative approach is top-down modeling, where the
+focus lies in initiating the modeling process with the generation
+of group-level behaviors, proposing simpliﬁed models to repli-
+Fig. 1 Hierarchical distribution of swarm intelligence.
+Fig. 2 SI of ants, birds and bees ( https://lib.ia.ac.cn/news/newsdetail/68504).
+Swarm intelligence: A survey of model classiﬁcation and applications 3
+
+===== PAGE 4 =====
+cate this behavior. Top-down models aim to elucidate the
+workings of a clustered system rather than delving into the
+underlying reasons for its functionality. While theoretical
+models inherently differ from actual systems, requiring simpli-
+ﬁcation compared to natural clusters, their strength lies in the
+ease with which they can be translated into the physical sys-
+tems of practical design. This simpliﬁcation, while departing
+from the intricacies of real-world animal clusters, enhances
+the model’s power, rendering it highly effective for application
+in practical systems.
+As discussed above, the existing models can be divided into
+bottom-up and top-down models. On the macro level, such
+classiﬁcation includes almost all models and is comprehensive.
+On the micro level, however, such classiﬁcation is less speciﬁc.
+Because it just focuses on the modeling method itself and
+ignores the speciﬁc mechanism in the different collective
+behavior, a more detailed classiﬁcation is needed.
+Firstly, we organized typical models based on their chrono-
+logical emergence, starting from time when the most represen-
+tative Boids model appeared up to the present. We found that
+the emergence of representative models during different peri-
+ods allowed us to divide our focus timeline into four distinct
+periods. We summarized the common characteristics of repre-
+sentative models within each period and classiﬁed the existing
+typical models into four categories: models grounded in dis-
+tance rules, models shaped by pheromone interaction, models
+incorporating hierarchical structures, and models stemming
+from empirical research. These categories are named as: self-
+driven particle models, pheromone communication models,
+leadership decision models and empirical research models.
+The categorization is illustrated in Fig. 3 .
+15–19,30,62–71 Unlike
+traditional bottom-up and top-down categorizations, our clas-
+siﬁcation offers a more comprehensive perspective by incorpo-
+rating the chronological sequence of each model type and their
+highlights shared characteristics over different periods.
+3. Self-driven particle models
+Self-driven particle models are the most classic models to
+describe SI. This kind of model simulates the individual in
+the biological cluster as a particle in a computer and realizes
+the movement behavior of a particle swarm by giving the par-
+ticle a certain speed and designing simple local control rules, to
+simulate the simple collective behavior of the real biological
+group. Although this model is simple, many researchers have
+paid attention to it, as it is extremely effective.
+3.1. Typical self-driven particle models
+3.1.1. Boids model
+The earliest and most classic model of self-driven particle mod-
+els is the Boids model built by Reynold
+15 in 1987 to simulate
+the movement of bird ﬂocks on the computer. The most iconic
+feature of this model is that it provides three principles for sim-
+ulating cluster movement: separation, alignment, and cohe-
+sion. The three principles are of decreasing priority.
+Separation means that individuals in a ﬂock should keep a dis-
+tance from their neighbors to avoid collisions. Alignment
+means that the speed of individuals should match the speed
+of individuals in the neighborhood as much as possible. Prox-
+imity means that individuals try to stay close to their neigh-
+bors. Reynold used these three principles, combined with
+distributed control and particle systems, to simulate the ﬂight
+of birds in a computer.
+3.1.2. Swarm model
+Based on Boids model, the randomness of individual particle
+evolution was added to create the swarm model in Ref. 16.
+Particle velocity and acceleration in this model are described as
+V ¼ c
+1V1 þ c2V2 þ c3V3 þ c4V4 þ c5V5 ð1Þ
+A ¼ m
+ 
+V
+Vjj
+!
+ð2Þ
+where ciði ¼ 1; 2; 3; 4; 5Þ is a constant, V1 is the vector away
+from the neighbor within the crowding radius, V2 is a vector
+pointing to the center of the environment, V3 is the average
+neighbor speed of the particle, V4 is the vector pointing to
+the center of mass of all particles, V5 is a random vector, Vjj
+represents the modulus of V, and m is a constant that determi-
+nes the maximum acceleration of the particle. Eq. (2) normal-
+izes the velocity and sets the acceleration of the particle as the
+product of this result and m. By setting different parameters in
+Fig. 3 A categorization of swarm intelligence models and their representative works.
+4 C. WANG et al.
+
+===== PAGE 5 =====
+the swarm model, different forms of swarm formation such as
+ring and ﬁgure-of-eight were identiﬁed in Ref. 72.
+3.1.3. R-A model
+The Boids model and swarm model are the simplest models of
+SI. Although they can simulate the move ment state of a
+swarm, these models cannot fully explain the well-deﬁned col-
+lective behavior seen in many species. Based on the abstract
+description and the Boids model of an obvious aggregation
+tendency in biological systems, a more biologically realistic
+collective behavior model was established in Ref. 17, which
+is called the R-A model. It controls the cluster based on the
+following two rules:
+(1) Individuals in the group try to keep a minimum distance
+from other individuals at all times, and this rule has the
+highest priority;
+(2) If an individual is not equipped to implement rule (1), an
+individual will tend to gravitate toward others and align
+with its neighbors to avoid isolation.
+Based on these two rules, the individual-centered surround-
+ing area is divided into three non-overlapping spatial layers, as
+shown in Fig. 4,
+17 which is a representation of an individual in
+the model centered at the origin: ZOR is the Zone of Repul-
+sion, ZOO is the Zone of Orientation, and ZOA is the Zone
+of Attraction. The possible blind volume behind an individual
+is also shown. a is the ﬁeld of perception.
+R-A model can simulate collective behavior based on the
+above rules. Because the constructed hierarchical space is
+3D, it can also provide some explanation for the collective
+behavior of airborne biological clusters, and it is more realistic
+than the Boids model.
+3.1.4. Vicsek model
+Among the numerous self-driven particle models established
+from a physical perspective, the most representative model is
+Vicsek model developed in 1995.
+18 The velocity of the particles
+in the model is determined by a simple rule and random per-
+turbation. The only rule of the model is that at each time step,
+a given particle moving at a constant absolute velocity, its
+direction of motion is updated to the average direction of its
+neighbors, whose radius is r, and some random perturbation
+is added. In detail, at t ¼ 0, N particles are randomly dis-
+tributed in a square cell with the linear size of L, each particle
+has the same velocity v, but the direction h is randomly dis-
+tributed. The absolute velocity of all particles is measured at
+the same time in each period, and the position of particles is
+changed according to the following formula:
+x
+iðt þ 1Þ¼ xiðtÞþ viðtÞDt ð3Þ
+where xiðtÞ is the position of i at t, viðtÞ is the speed of i at t,
+and Dt is the unit time step. The velocity viðt þ 1Þ of i at
+t þ 1 is constructed as a vector whose absolute magnitude is
+v and whose direction is determined by hðt þ 1Þ, which is
+obtained by
+hðt þ 1Þ¼ hðtÞr þ Dh ð4Þ
+where Dh is the noise that is a random number selected from
+½/C0 g=2; g=2/C138 with uniform probability, g is noise intensity, and
+hðtÞr is the average value of the motion direction of surround-
+ing particles, including the particle, in the neighborhood with a
+radius of r, expressed by an arctangent function:
+hðtÞr ¼ arctan sin ðhðtÞÞr= cosðhðtÞrÞ
+/C2/C3
+ð5Þ
+When v, g and density q ¼ N=L2 are given, the simulation
+of different forms of SI can be realized based on the individual
+velocity and position updating rules. It is not difﬁcult to see
+that this model is also simple, but it has a signiﬁcant difference
+from the Boids model in that there is only one rule in this
+model, namely the alignment rule. The reason why the simula-
+tion of SI can be realized is greatly related to the selection of
+noise. The Vicsek model mimics the movement of a colony
+behavior model based on simple local alignment rules, but a
+theoretical explanation for this model is not provided. To this
+end, Jadbabaie et al.
+73 analyzed the system properties of the
+Vicsek model from the perspectives of control and mathemat-
+ics, gave its theoretical explanation, proved that it is a stable
+linear switching system, and pointed out that as long as the
+interactive network can remain continuous in time, the collec-
+tive behavior can be realized.
+Because of its simplicity and interpretability, the Vicsek
+model has been favored by many researchers, and some
+improved models have been produced. These models not only
+inherit the simple alignment rules but also add some more
+complex functions. For example, phase transitions in the col-
+lective behavior of local interactions of self-driven particles
+with cohesive and non-cohesive group noise were studied,
+and it was found in Ref. 74 that such transitions are always
+discontinuous. Go¨ nci et al.
+75 studied phase transitions in a
+3D Vicsek model and found that the results are similar to those
+in a 2D environment. The 2D and 3D types of the Vicsek
+model were comprehensively studied in Ref. 76.
+3.2. Particle swarm optimization
+The models discussed above, in which the simulation of SI is
+realized, are typical self-driven particle models. In this section,
+PSO inspired by the social behavior of birds ﬂocking or ﬁsh
+schooling, where each individual, called a particle, moves in
+Fig. 4 Spatial stratiﬁcation of R-A model. 17
+Swarm intelligence: A survey of model classiﬁcation and applications 5
+
+===== PAGE 6 =====
+the search space following the best performance of its own and
+its neighbors, will be introduced. The mechanism of PSO is
+derived from the self-driven particle models, i.e., by simulating
+interactions among individuals within the population to opti-
+mize the problem. To some extent, PSO can be considered as
+a particular instance of self-driven particle models primarily
+used for optimization problems. On the other hand, self-
+driven particle models are more versatile and applied to simu-
+late various self-driven systems and complex dynamic systems.
+PSO was proposed by Kennedy and Eberhart
+77 in 1995. In
+PSO, particles are updated iteratively by adjusting their veloc-
+ity based on their own best position and the best position of
+their neighbors:
+v
+tþ1
+i;d ¼ xvt
+i;d þ c1r1ðpbesti;d /C0 xt
+i;dÞþ c2r2ðgbestd /C0 xt
+i;dÞð 6Þ
+where vtþ1
+i;d represents the updated velocity of the i- th particle
+in the d- th dimension; xt
+i;d represents the position of the i-t h
+particle in the d- th dimension; pbesti;d represents the best posi-
+tion of the i- th particle in the d- th dimension; gbestd repre-
+sents the best position of all particles in the d- th dimension;
+x is the inertia weight that controls the inertia of particle
+velocity; c1 and c2 are the learning factors that control the
+inﬂuence of particle’s own and global best solutions; r1 and
+r2 are randomly generated values within the range ½0; 1/C138 that
+are used to increase the randomness and diversity of the
+search.
+In PSO, each particle maintains its current position and
+velocity, and continuously updates them to search for the opti-
+mal solution. The values of inertia weight, learning factors and
+random numbers in the velocity update formula need to be
+adjusted based on the speciﬁc problem. The pseudocode is
+shown as Algorithm 1,
+Algorithm 1.Algorithm 1 PSO
+1. for each particle i
+2. Initialize velocity vi and position xi for particle i
+3. Evaluate particle i and set pBesti = xi
+4. end for
+5. gBest = min ( pBesti)
+6. while not stop
+7. for i =1t o N
+8. Update the velocity and position of particle i
+9. Evaluate particle i
+10. if ﬁt( x
+i) < ﬁt( pBesti)
+11. pBesti = xi;
+12. if ﬁt( pBesti) < ﬁt( gBest)
+13. gBest = pBesti;
+14. end for
+15. end while
+16. print gBest
+where N denotes the number of particles, pbesti denotes the
+best solution of each particle, gBest denotes the global best
+solution, and ﬁt represents ﬁtness.
+There are many enhancement approaches for the PSO algo-
+rithm structure, which can be classiﬁed into 10 main subsec-
+tions shown in Table 1 ,
+78–88 where the approaches in the ﬁrst
+column represent the modifying method and the purpose in
+the second column clariﬁes the desired performance of the
+modiﬁed PSO.
+3.3. Application of self-driven particle models
+The main idea of self-driven particle models is to realize the
+control of collective behavior by using simple local interaction
+rules. Its simplicity and universality have attracted many
+researchers to study its application. Self-driven particle models
+have been widely used in the ﬁelds of robotics,
+89 artiﬁcial intel-
+ligence,62 complex systems 63 and control systems. 64 Then, we
+are focusing on multi-agent swarm control and the application
+of PSO, which can directly reﬂect the intrinsic idea embedded
+within the models.
+3.3.1. Multi-agent swarm control
+Multi-agent swarm control i s to design the optimization
+algorithms to drive the behavior of a group of agents, called
+a swarm, to achieve a speciﬁc goal. Because of the simplicity
+of the three roles of the Boids model and the similarity
+between the swarm of animals and the multi-agent swarm,
+it has a wide range of applicati ons in multi-agent swarm con-
+trol.
+90,91 In Ref. 92, the Boids model was used to character
+the behavior of the agents in the swarm. Speciﬁcally, the
+movement vectors corresponding to the repulsion and attrac-
+tion force in the Boids model were used to design the move-
+ment algorithm of the shepherd, which exerts repulsive
+forces on the agents in the swarm to achieve spatial separa-
+tion of a speciﬁed target agent from all the other agents,
+while maintaining the connectiv ity among the other agents.
+Figs. 5 (a)–(d)
+92 shows that a target sheep loses all the con-
+nections to the other sheep under the control of the
+shepherd.
+Based on the swarm model, the interaction between an
+evolving swarm of birds and an environmental feedback con-
+troller using a simulation model was studied in Ref. 93. The
+simulation involves a ﬂock of birds with localized energy
+sources that provide birds with the energy necessary for their
+survival. The model incorporates natural selection through
+an energy system in which birds die and are replaced by the
+offspring of the remaining population. Behaviors of agents
+evolve over successive generations to favor the most successful.
+However, due to the unicity of swarm model, the application
+of it in swarm control is not extensive.
+The R-A model has a wide range of applications in multi-
+agent swarm control, particularly in ﬂocking control, a subset
+of swarm control. It focuses on the behavior of a group of agents
+that move together in a self-organizing fashion, similar to the
+behavior of ﬂocks of birds or schools of ﬁsh. In Ref. 94,t h e
+authors proposed a modiﬁed version of the R-A model based
+on fuzzy rules. The modiﬁed model improves the convergence
+probability and relative converging size of the ﬂocking behavior.
+By inferring the R-A model, the researchers have developed a
+scheme for autonomous artiﬁcial agents to extract knowledge
+about the interactions within a swarm of interest.
+95 They have
+done this by inﬁltrating the swarm of interest with a monitoring
+robot and constantly measuring the distance between the inﬁltra-
+tor and its nearest neighbor, which allows them to estimate the
+6 C. WANG et al.
+
+===== PAGE 7 =====
+repulsion radius of the swarm age nts. This inferred model could
+then be used to control these swarms, for example, to guide them
+to safe areas. However, it is important to note that this method is
+limited to a speciﬁc model of interaction.
+To achieve accurate UAV swarm navigation when only one
+UAV has predetermined path information, Tang proposed an
+improved Vicsek model with hierarchical weighting in Ref. 96.
+In Ref. 97, the Vicsek model has been used to analyze the
+behavior of swarm robots and establish a model of swarm
+robot synchronization. Self-organization regulations were pro-
+posed to achieve ﬂock centering, direction coincidence, and
+collision avoidance. The simulation experiments showed that
+the proposed strategy can achieve swarm robot
+synchronization.
+The thought of local interaction in self-driven particle
+models promotes the research i n multi-agent swarm control.
+Berlinger et al.
+98 demonstrated 3D collective behaviors with
+a swarm of ﬁsh-inspired mini ature underwater robots that
+use only local interaction. Fig. 6 98 demonstrates self-
+organization in space with (A) a shoal of surgeonﬁsh forag-
+i n gi nar e e fa n d( B )ad i s p e r s e db l a c kr o b o tm a k i n gi t sn e x t
+move (black vector) based on a weighted average of attrac-
+tive (blue) and repulsive (red) forces from nearby robots.
+(C) The inter-robot forces (red) are derived from the
+Lennard- Jones potential (blue) with standard parameters
+a ¼ 12 and b ¼ 6, and a tunable target distance d
+t ¼ 2B L
+(Body Length), which deﬁnes the robot density of the group.
+The forces f depend on the distance d between robots: f ¼ 0
+Table 1 Enhancement approaches for PSO algorithm structure.
+Approach Purpose Reference
+Incorporating the utilization of multi-sub-population
+strategies
+Enhancing diversity and search ability 79
+Enhancing the selection strategy for particle learning objects Accelerating convergence velocity 80
+Modifying particle’s update strategy Preventing entrapment in local optima and enhancing its capability
+to navigate high-dimensional search space
+81
+Modifying velocity update strategy Preserving diversity for comprehensive global search 82
+Adjusting the speed or position constraint method and
+dynamically determining the search space
+Dynamically determine the search space 83
+Combining PSO with other search techniques Increasing the diversity and improving the local search ability 84
+Improving for multi-modal problems Finding several better solutions 85
+Keeping diversity of population Improving the global convergence speed 86
+Discrete PSO algorithm Fitting discrete optimization domains 87
+Multi-objective optimization PSO algorithm Fitting multi-object optimization problems 88
+Fig. 5 A target sheep loses all connections to the other sheep under control from shepherd. 92
+Swarm intelligence: A survey of model classiﬁcation and applications 7
+
+===== PAGE 8 =====
+when d ¼ dt, f /C28 0w h e n d /C28 dt (repulsive), and f > 0w h e n
+d > dt (attractive). (D) shows dis persion (blue markers,
+dt ¼ 2 BL) and aggregation (red markers, dt ¼ 0:75 BL) with
+seven robots. (E) shows the volume of schools in two situa-
+tions. Moreover, based on the di s t r i b u t i o ns t r a t e g yi nb i o t i c
+populations, the synchronizati on in multi-agent systems, as a
+part of swarm control, has been well developed. Ref. 99 over-
+viewed the synchronization in multi-agent system
+comprehensively.
+3.3.2. Applications of PSO
+PSO has been successfully applied to solve a wide range of
+optimization problems in various ﬁelds, especially aerospace
+area. This section focuses on its application in the aerospace
+area, in which aircraft design and ﬂight control will be nar-
+rated. In aircraft design, PSO can be used to optimize aerody-
+namic performance, structural design and weight distribution
+of the airplane to improve ﬂight efﬁciency and economy. For
+example, PSO can be used to design the airfoil,
+99 fuselage pro-
+ﬁle100 and engine layout of anairplane. 101 Especially, In Ref.
+102, a longitudinal parameter identiﬁcation procedure for a
+small UAV through modiﬁed PSO was described. The useful-
+ness of this method was demonstrated by experimental
+validation.
+In ﬂight control of the airplane, it can be applied to the
+parameter adjustment of the ﬂight control system, such as
+PID controller parameter optimization in the autopilot system.
+Besides, it can also be used to complete active disturbance
+rejection control for aircraft anti-skid braking systems. In
+Ref. 103, an improved version of PSO algorithm was used to
+adjust the parameters of the anti-skid braking active distur-
+bance rejection controller, which helps to improve the perfor-
+mance and safety of the aircraft braking system. In addition to
+the above applications, various applications of PSO can be
+found in Ref. 78, which is a comprehensive review of PSO.
+3.4. Evaluation of self-driven particle models
+There is no doubt that the self-driven particle models achieve
+the description of SI through simple local control rules. At pre-
+sent, most of the self-driven particle models focus on the study
+of the same population of organisms, and there are few studies
+on heterogeneous populations. It is a feasible method to model
+the collective behavior of heterogeneous populations by setting
+different types of particles in the system to simulate the collec-
+tive behavior of different populations. Therefore, the future
+research direction of self-driven particle models should focus
+on the research of heterogeneous population collective
+behavior models. Additionally, these models are also unau-
+thentic and cannot character some more basic collective behav-
+iors of organisms in nature because they are too simplistic, for
+example, how ant colonies move food. There is, however, a
+type of model that does a good job of explaining the mecha-
+nism of SI of ant colonies and other similar animals. These
+models model a remarkable feature of these animals: they all
+release pheromones for group communication when they
+cluster.
+4. Pheromone communication models
+Pheromone communication models are a type of model used to
+explain the speciﬁc interaction patterns within certain biologi-
+cal clusters, in which individuals communicate with each other
+through pheromones unique to the species. It should be noted
+that this differs from the Physics-Chemistry-Mathematics-bas
+ed (PCM) algorithms, which typically rely on mathematical,
+physical, or chemical principles to solve problems or model
+natural systems. Pheromone communication models, on the
+other hand, are based on the concept of pheromone communi-
+cation. There are many pheromone communication models,
+such as ant colony models
+19 in which ants ﬁnd the best path
+through pheromone communication, bee colony models 104 in
+which worker bees guide other bees to ﬁnd nectar sources
+through pheromone communication, and bacteria foraging
+models
+34 in which coordination in the search process is
+achieved through pheromone communication. For the sake
+of brevity, this article focuses on representative models of
+pheromones in ant colonies.
+4.1. Typical pheromone communication models
+4.1.1. Ant colony path optimization model based on pheromone
+The research on ant colony collective behavior started from
+human observation that ants can always ﬁnd the shortest path
+Fig. 6 Self-organization in space. 98
+8 C. WANG et al.
+
+===== PAGE 9 =====
+when transporting food. Through the observation of ants
+transporting food, people found that ants would leave
+pheromones on the path, but it was not clear how ants ﬁnd
+the shortest path mechanism. In 1989, by designing a simple
+experiment, Goss et al.
+19 studied the mechanism of ant colony
+to ﬁnd the shortest path through collective cooperation, and
+established model to explain the mechanism of ant colony to
+ﬁnd the shortest path. In this model, ants pass the path shown
+in Fig. 7
+19 every second from each direction and place one
+pheromone unit in each direction. When a choice point
+j ¼ 1; 2 is reached in the model, each ant takes a long or short
+path with a probability of Pl;j and Ps;j, respectively, depending
+on the pheromone content Sj and Lj of the two branches of the
+choice point and then adds a pheromone to the chosen branch.
+Based on their average speed and the length of the short
+branch, those ants that choose the short branch at j ¼ 1 (or
+2) will arrive at the opposite choice point j ¼ 2 (or 1) about sec-
+onds later, and add pheromones there. Those who chose the
+long branch would do the same thing 20 r seconds later, where
+r is the ratio of the length of the long branch to the length of
+the short branch. The timescales of these experiments were on
+the order of magnitude of the average life span of the
+pheromone,
+20 to avoid the error caused by the evaporation
+of the pheromone.
+Therefore, at time t, the average equations of the random
+system are:
+dSj
+dt ¼ Ps;j0ðt /C0 20Þþ Ps;jðtÞ; j ¼ 1; j0¼ 2o r j ¼ 2; j0¼ 1Þð 7Þ
+dLj
+dt ¼ Pl;j0ðt /C0 20rÞþ Pl;jðtÞ; j ¼ 1; j0¼ 2o r j ¼ 2; j0¼ 1 ð8Þ
+Ps;j ¼ ð20 þ SjÞ2
+ð20 þ SjÞ2 þð 20 þ LjÞ2 ; Ps;j þ Pl;j ¼ 1 ð9Þ
+where Eq. (9) is the selection function obtained according to
+the experiment in Ref. 21. As the path would increase gradu-
+ally with time, it was concluded that the ant’s shortest
+path-ﬁnding method is closely related to the pheromone. The
+model is a random system model, which accurately quantiﬁes
+the pheromone and makes the ant’s choice probabilistic.
+Moreover, the model’s explanation of the ant’s ﬁnding the
+optimal path is highly consistent with the observed phe-
+nomenon, which is a simple but effective model.
+4.1.2. Inﬂuence of parameters on pheromone communication
+model
+The foregoing model has fully revealed a mechanism of ants
+choosing the shortest path, which is the result of the continu-
+ous synergistic action of ant colonies. Every ant chooses differ-
+ent branches according to the concentration of pheromones,
+and at the same time leaves new pheromones for the next indi-
+vidual to recognize. In this way, there is a circular interaction
+between the groups, forming a positive feedback effect between
+the groups, and ﬁnally enabling the ant colony to carry food
+along a shorter path. This simple but effective collective behav-
+ior is so impressive that many researchers have been devoted in
+this study to reveal the mechanism of ant colony collective
+behavior, and to study the inﬂuence of speciﬁc parameters in
+the model.
+Focusing on the transition between colony foraging and
+solitary foraging, a track-tracking model that combines biolog-
+ical parameters associated with organisms, tracking markers,
+and populations was established in Ref. 105. Ordinary differ-
+ential equations relate to the density of branches and the num-
+ber of individuals tracked or randomly explored by track-
+tracking. Models reveal that subtle changes in individual
+behavior can lead to large differences in group behavior,
+including the ability to switch from individual actions to orga-
+nized collective behavior. Compared with the models in Ref.
+19, this model paid more attention to the state transition of
+individual ant colonies during the whole foraging process,
+revealing the mechanism of food transport route selection of
+ant colonies in more details. In Ref.
+106–109, the spatial struc-
+ture and colony behavior of ant colonies were simulated. In
+some simulations, deposition and evaporation of pheromones
+affect the ant’s local direction and speed of movement.
+4.2. Ant colony optimization
+The SI of ant colonies seeking the shortest path was cleverly
+exploited by Dorigo.
+110 Based on the mechanism of ﬁnding
+the shortest path in ant colonies, he put forward the ACO,
+which is the basis of the ant colony pheromone model that
+can achieve a wide range of applications. Its pseudocode is
+shown as Algorithm 2.
+Algorithm 2.Algorithm 2 ACO
+1. Initialize ant colony
+2. Initialize pheromone matrix
+3. while (termination not met):
+4. for each ant:
+5. Choose next node
+6. Update pheromone levels
+7. end for
+8. end while
+Fig. 7 Experimental path of ant colony collective behavior. 19
+Swarm intelligence: A survey of model classiﬁcation and applications 9
+
+===== PAGE 10 =====
+In line 5, the next node is chosen by
+pij ¼ sijðtÞ
+/C2/C3 k
+/C2 gij
+/C2/C3 n
+P
+k2allowed sikðtÞ½/C138 k /C2 gik½/C138 n ð10Þ
+where pij represents the transition probability from node i to
+node j; sijðtÞ represents the pheromone concentration on the
+path from node i to node j at time t; gij represents the heuristic
+information from node i to node j; k and n are the importance
+factors of pheromone concentration and heuristic information,
+respectively; Ji represents the set of all unvisited nodes. And at
+line 6, pheromone levels are updated by
+sijðt þ 1Þ¼ð 1 /C0 cÞ/C2 sijðtÞþ
+Xm
+k¼1
+Dsk
+ijðtÞð 11Þ
+where c is the pheromone evaporation factor; Dsk
+ijðtÞ is the
+amount of pheromone released on the path by ant k at time t.
+The essence of ACO is to realize the information interac-
+tion between groups based on pheromone, and then complete
+the search and optimization process. In the following period,
+various improved algorithms appeared one after another,
+which improved the theoretical research of ant colony algo-
+rithm and promoted the corresponding application research,
+including the typical Ant Colony System (ACS)
+111,112 and
+Max-Min Ant System (MMAS). 113,114 The related improved
+algorithms are summarized in Table 2 ,66,67,113,115–121 where
+TSP represents Traveling Salesman Problem.
+4.3. Application of pheromone communication models
+The main applications of pheromone communication models
+are related to ACO. It is a powerful metaheuristic algorithm
+inspired by the foraging behavior of ants. With further
+research, it has been found that ACO has signiﬁcant advan-
+tages in the ﬁeld of path planning and obstacle avoidance.
+On the one hand, these problems themselves are high dimen-
+sional, nonlinear, and highly complex problems, while ACO
+has good search and optimization capabilities, making it
+well-suited to solve these types of problems. On the other
+hand, these problems also have important practical applica-
+tions, such as autonomous driving, drone navigation, and
+robot control, making research in these two application areas
+of practical signiﬁcance. In this article, we will explore the
+applications of ACO in path planning and obstacle avoidance.
+ACO has been used for path planning and obstacle avoid-
+ance, and has demonstrated effective performance in complex
+and dynamic environments. For example, in Ref. 122,a n
+improved ACO by introducing the yaw angle was used to gen-
+erate a path for a UAV in low-altitude penetration. In another
+study in Ref. 123, an improved ACO using the characteristics
+of the A* algorithm and MMAS was applied to optimize the
+path of a mobile robot to avoid obstacles in real time. To
+improve the performance of ACO-based path planning and
+obstacle avoidance, researchers have developed several tech-
+niques, such as an adaptive heuristic function and hybrid algo-
+rithms. An adaptive heuristic function has been proposed to
+address issues like low search efﬁciency, slow convergence
+speed, and getting stuck in the local optimum.
+68 This function
+updates heuristic information based on the shortest actual dis-
+tance that an ant has traveled. Hybrid algorithms that combine
+ACO with other optimization techniques were proposed to
+improve the efﬁciency of the search process.
+124
+Despite the success of ACO-based approaches for path
+planning and obstacle avoidance, there are several challenges
+that must be addressed. One such challenge is dealing with
+dynamic environments, where obstacles may appear or disap-
+pear during the search process. To overcome this challenge,
+researchers have proposed techniques such as dynamic phero-
+mone updating
+125 and moving obstacle avoidance. 126 Another
+challenge is the need to balance exploration and exploitation
+during the search process. To address this, researchers have
+developed techniques such as multi-objective ACO 127 and par-
+allel ACO. 128 Multi-objective optimization seeks to optimize
+multiple objectives simultaneously, while parallel ACO dis-
+tributes the search process among multiple agents to improve
+efﬁciency.
+In particular, the basic ACO does not include the part that
+can make an agent avoid obstacles, so we summarized the
+related modifying method of ACO to avoid obstacles. The
+main method is combining ACO with other strategy. For
+example, in Ref. 129, a dynamic path planning algorithm,
+achieving collision avoidance through fuzzy logic control,
+was proposed. This algorithm enhances the ant colony sys-
+tem’s pheromone update mechanism using a sigmoid gain
+function for efﬁcient exploitation during path planning. In
+Ref. 130, a time taboo-based occupancy grid prediction model
+for handling unknown time-varying dynamic obstacles was
+proposed, which establishes an ant colony information inheri-
+tance mechanism. Another effective method is adding the pen-
+alty term in ﬁtness function or objective function for avoiding
+obstacles, such as Ref. 131.
+In summary, ACO is a promising approach for path plan-
+ning and obstacle avoidance in robotics and autonomous sys-
+tems. With the use of adaptive and hybrid algorithms, as well
+as techniques for dealing with dynamic environments and bal-
+ancing exploration and exploitation, ACO has the potential to
+achieve efﬁcient and effective navigation in complex and
+dynamic environments.
+4.4. Evaluation of pheromone communication models
+The SI model established based on pheromones fully demon-
+strates that the collective behavior ability of a colony can be
+hardwired to the components of the system, in which
+hardwired refers to the real physical medium, pheromone,
+Table 2 Overview of main ACO algorithms for NP-hard
+problems.
+ACO algorithm Reference Year TSP
+Ant system 116 1991 Yes
+Elitist AS 117 1992 Yes
+Ant-Q 118 1995 Yes
+Ant colony system 65 1996 Yes
+MMAS 113 1996 Yes
+Rank-based AS 66 1997 Yes
+ANTS 119 1998 No
+Best-worst AS 67 2000 Yes
+Population-based ACO 120 2002 Yes
+Beam-ACO 121 2004 No
+10 C. WANG et al.
+
+===== PAGE 11 =====
+through which groups interact to realize the movement
+between groups.
+Pheromone communication models are close to nature. If
+the main differential equation of pheromone communication
+models is established properly, and the natural properties of
+network structure, path size, individual heterogeneity and pop-
+ulation are modeled carefully, the model will be more realistic
+for simulating the collective behavior based on the pheromone.
+Although the research on the pheromone communication
+models has been relatively sound, in the speciﬁc application
+ﬁeld, it mainly focuses on the ant colony pheromone model,
+and there is a lack of application research on other SI models.
+Therefore, the future development of pheromone communica-
+tion models should focus on application and explore the appli-
+cation ﬁelds of pheromone models outside ant colonies.
+5. Leadership decision models
+In some biological clusters, individuals interact with each other
+not through distance rules but based on topological rules, such
+as starling ﬂocks. In the actual study, the researchers found
+that they interact not just based on topological rules, but also
+based on hierarchies. For example, in ﬂying of starling ﬂocks,
+they arrange themselves in different formations, and individu-
+als in different positions in the formation have different hierar-
+chies. In fact, hierarchies exist not only among groups of birds,
+but also among groups of other organisms, such as wolves,
+baboons, and sheep. Because of the existence of leadership
+mechanism, the interaction and decision-making between
+groups are no longer based on simple topology or distance
+rules. Therefore, if the established model can simulate and
+explain the collective behavior of these groups well, it is neces-
+sary to establish a model based on the leadership and decision-
+making mechanism, and it is particularly important to discover
+the leadership and decision-making mechanism among biolog-
+ical clusters.
+5.1. Typical leadership decision models
+Group decision-making is a complex and varied process, with
+information sharing ranging from total openness to complete
+secrecy. Figuring out exactly how this process works can be
+tough, but it’s crucial to understand how groups make deci-
+sions based on their leadership structures.
+132 Which part of
+the group or which individual is the leader needs to be deﬁned.
+Only by ﬁnding the leader can we study the decision-making
+process. However, the deﬁnition of a leader generally uses
+the feature of inﬂuence. If an individual’s behavior causes cer-
+tain behavior changes in other individuals in the group, this
+individual has inﬂuence; if an individual has repeated inﬂuence
+on the behavior of other individuals, whether directly or indi-
+rectly caused by the hierarchy, this individual will become a
+leader.
+133
+Based on the deﬁnition of a leader, the researchers studied
+the internal information transfer mechanism and decision-
+making mechanism when a group performs collective behav-
+ior. In Ref. 134, Global Position System (GPS) was used to
+acquire 3D data, the leader–follower hierarchy model of
+pigeon ﬂocks was studied, and the hierarchy dynamics model
+of pigeon ﬂocks was established. Based on the Boids model,
+the mechanism of information transfer and leadership
+decision-making in the biota were studied in Ref. 135. The
+model showed that effective information transfer and
+decision-making can occur in animal groups without a clear
+signal or information transfer mechanism. It has been demon-
+strated in Ref. 136, both theoretically and experimentally, that
+in many cases an opinionated minority of individuals can
+determine group selection, but the presence of ignorant indi-
+viduals will spontaneously inhibit this process, returning con-
+trol to the numerical majority group of individuals. The
+results highlight the role of ignorant individuals in achieving
+democratic consensus in situations of internal group conﬂict
+and information constraints. The study in Ref. 137 tracked
+wild baboons with high-resolution global positioning systems
+and analyzed their relative movements to each other, revealing
+a process of shared decision-making that governs baboon
+movements. Rather than preferentially following the dominant
+individual, baboons are more likely to follow multiple initia-
+tors. When there was a conﬂict in the direction of movement,
+the baboons would choose the direction with the greater angle,
+but they would compromise if the angle was smaller. These
+results are consistent with models of collective movement, sug-
+gesting that democratic collective behavior that emerges from
+simple rules is universal, even in complex, socially stratiﬁed
+societies, which likewise validates the theory in Ref. 137. Thus,
+an individual with a wide range of social connections is more
+likely to inﬂuence group decision-making. Instead, in some
+cases, inﬂuence may be a byproduct of social connections
+rather than a direct consequence.
+Since most animals have visual senses, the communication
+process of decision-making can also be based on it. It was sug-
+gested that an individual’s motor decisions are explicitly based
+on the sensory information available to the organism in Ref.
+138. In other words, they argued that while spatial relation-
+ships do affect interactions between individuals, they do so
+indirectly through the individual’s detection of sensory cues.
+In the experiment, they used the data to reconstruct the visual
+ﬁeld of each individual, based on which they analyzed the
+information transmission mechanism and decision-making
+mechanism of ﬁsh shoals, and explicitly considered that visual
+perception could more accurately predict the propagation pro-
+cess of behavioral change in groups with a leadership hierar-
+chy. Based on the assumption of visual perception,
+Rosenthal et al.
+139 studied the hidden information transmis-
+sion networks in the group, revealed the nature of decision
+transmission, complex and local, by studying these interactive
+networks, and determined that individuals with relatively few
+but closely connected neighbors are both the most socially
+inﬂuential and the most vulnerable to social inﬂuence.
+5.2. Summary of leadership decision models building methods
+The determination of leaders and the decision-making process
+depends on the inﬂuence of individuals on individuals and the
+inﬂuence of individuals on the group. A methodological frame-
+work for group leadership decision-making mechanisms based
+on inﬂuence research was proposed in Ref. 133, which is used
+to guide the acquisition and interpretation of experimental
+data. The framework can be divided into three steps. The ﬁrst
+step, which identiﬁes the situations in which individuals exert
+inﬂuence over the rest of the individuals in one instance, can
+be divided into two small steps. First, the level of individual-
+Swarm intelligence: A survey of model classiﬁcation and applications 11
+
+===== PAGE 12 =====
+to-individual inﬂuence can be studied, i.e., who inﬂuences
+whom in a given group decision-making process, and the
+potential strength of these inﬂuences; second, the impact of
+individuals on the group level is studied, i.e., quantify the over-
+all impact of individuals on the group level. The second step,
+quantifying the overall impact, is to summarize the impact of
+the ﬁrst step through repeated events and quantify the impact
+of the individual on multiple group decisions. The third step,
+judging the consistency of the inﬂuence, is to determine
+whether the inﬂuence of an individual on other individuals in
+the group varies over time or with the decision event.
+With the development of computer technology and track-
+ing techniques, methods of inferring inﬂuence have also been
+adequately developed. Speciﬁcally, these methods can be used
+to sort out the methodological framework of group leadership
+decision-making mechanism based on inﬂuence research,
+which can be summarized as the methods of inferring the
+individual-to-individual inﬂuence in an instance and the
+individual-to-group inﬂuence based on observed data, the
+methods of inferring the overall inﬂuence, and the methods
+of assessing the consistency of inﬂuence. The above methods
+and their advantages and disadvantages are summarized in
+Tables 3–5 .
+69,70,140–149
+5.3. Application of leadership decision models
+This biological cluster with leadership level has a strict hierar-
+chical distribution when producing collective behavior, so the
+establishment of the model is also carried out around the dis-
+covery of the leader in the group. The above framework com-
+pletely describes the basic modeling idea for the behavior of an
+organism cluster with a leadership decision-making mecha-
+nism. Through a variety of model studies, people have become
+more and more clear about the leadership decision-making
+mechanism of SI, and many application examples based on
+this have been produced.
+The application of the leadership decision models is mainly
+realized by the leader–follower strategy. Because the leadership
+decision models are based on the formation phenomenon of
+birds and other biological clusters in motion, the leader–fol-
+lower strategy is mainly used in formation control.
+In formation control, the basic structure of leader–follower
+strategy includes the leader and the follower, and the leader is
+responsible for planning and compiling the team line, where
+the follower maintains an ideal formation by controlling their
+position relative to the leader.
+150 In Ref. 151, an improved lea-
+der–follower formation control algorithm combined with Kal-
+Table 3 Methods for inferring inﬂuence of individuals on individuals and groups.
+Method of inferring eﬀect in
+instance
+Advantage Disadvantage Reference
+Spatial location inference
+method
+Can be directly assessed directly through
+observation
+Assumptions may be invalid. 140
+Initiator-follower identiﬁcation
+method
+Broad applicability Inapplicable when individual distances change 141
+Delay time inference method Robust scalability Unsuitable for non-sustained movement 142
+Entropy measures A solid and widely applicable theoretical
+foundation
+Lacking a basic model when the interpretation
+is low
+143
+Decision result regression
+method
+It is both explanatory and easy to analyze Inapplicable without knowledge of individual
+preferences
+144
+Table 4 Methods of inferring aggregate impact.
+Method of inferring aggregate
+eﬀect
+Advantage Disadvantage Reference
+Inﬂuence Elo method Wide applicability Results lack signiﬁcance with a large number 145
+Social network inference method User-friendly operation Overall situation comprehension is
+challenging
+146
+Maximum entropy model method Suitable for groups with large datasets Computationally burdensome 69
+Model ﬁtting method Applicable at both individual and group
+levels
+Ensuring biological eﬀectiveness is diﬃcult 147
+Table 5 Impact conformance assessment methods.
+Method of assessing impact conformance Advantage Disadvantage Reference
+Standard index method Broad applicability to independent data Inapplicable to non-independent data 70
+Randomity-based modeling Suitable for non-independent data Prone to dimensional disasters 148
+Mantel test method Facilitate hypothesis testing Lack consideration of spatial
+autocorrelation
+149
+Coarse-grained evaluation method Easy to analyze and manipulate Result in low accuracy 142
+12 C. WANG et al.
+
+===== PAGE 13 =====
+man Filtering was proposed to address the problem of multi-
+robot formation control. The algorithm introduces virtual
+robots to assist in the formation and transformation of
+multi-robot and uses laser radar for planning and controlling.
+The leader robot acts as a reference point to guide the forma-
+tion, while the following robot moves to the target through the
+guidance of the virtual navigator, forming the expected combi-
+nation structure.
+The leader–follower strategy was also used to realize forma-
+tion control of UAVs.
+152 Yang et al. 71 proposed a trajectory
+tracking control method for leader–follower quadrotor UAV
+formation, addressing the challenges of external disturbance,
+uncertain aerodynamic parameters, and collisions among for-
+mations. The control strategy utilizes a backstepping adaptive
+control approach for the leader UAV and formation sliding
+mode control for the follower UAVs. The effectiveness of
+the proposed method is demonstrated through simulation
+and experimental platforms, showcasing its potential for
+real-world applications in coordinated ﬂight. The study in
+Ref. 153 addressed the problem that the number of leaders
+in a given position is not signiﬁcant to determine the follower
+position in the traditional leader–follower strategy. Based on
+the motion vector information, the leader–follower strategy
+was improved to solve this problem.
+Since the formation control is generally transformed into a
+consensus control problem, the leader–follower strategy is also
+used for multi-agent consensus control. In terms of multi-agent
+consensus control, the leader is usually independent of the fol-
+lowers, but it will have an impact on the followers. At this
+time, all the agents can be controlled as long as the state of
+the leader is controlled. In the realization of multi-agent con-
+sensus control with leader–follower strategy, the difﬁculty lies
+in the fact that not all followers can directly communicate with
+the leader. Based on the methods to deal with this difﬁculty,
+the existing researches on leader–follower consensus control
+can be roughly divided into three categories:
+154
+(1) The leader’s behavior is determined by a dynamic node
+that is similar to a follower with zero or known
+input.155–159
+(2) Assume that the desired reference locus is linearly
+parameterized, and then all subsystems know the basis
+function vector. 160
+(3) Refer to the time-varying distributed control method
+using a non-smooth sign function, but it is not ideal
+due to the chattering phenomenon. 161
+The research in Ref. 154, aimed at the consensus problem,
+successfully relaxed the previous requirement that the leader’s
+trajectory be linearly parameterized with some known func-
+tions, that is, relaxed the type (2) hypothesis above. In addi-
+tion, the consistency problem of multi-agent systems with
+leaders under two conditions of ﬁxed topology and switching
+topology was studied in Ref. 162, while the leader–follower
+consensus problem of multi-agent systems with invariant linear
+multi-agent systems at ﬁnite data rates was studied in Ref. 154.
+In short, the application of the leadership decision models
+does not directly apply the mechanism similar to the SI, but
+realizes the speciﬁc application based on the idea in it, that
+is, to realize the overall control of the group behavior by con-
+trolling the behavior of a part of individuals. When the model
+is applied to the actual robot crowd, UAV swarm and
+unmanned boat swarm, it can usually play a role in reducing
+the communication consumption and control cost.
+5.4. Evaluation of leadership decision models
+The leadership decision models are established based on the
+hierarchical mechanism between biological clusters. The lead-
+ership hierarchy and decision-making process within the group
+are studied according to the hierarchical mechanism. Most of
+these models are built on the basis of experimental data, so
+the effect of the models is more realistic, and at the application
+level also has a very considerable development prospect. The
+future research direction should focus on applying the leader-
+ship decision mechanism existing in biological clusters to the
+decision planning of unmanned systems.
+6. Empirical research models
+The self-driven particle models are rule-based models, while
+the pheromone communication models are medium-based
+models. However, due to the relative underdevelopment of
+technology, the establishment of these two models lack empir-
+ical research to verify, and the rationality of their models is not
+convincing to some extent. However, since the development of
+advanced testing methods such as camera technology and laser
+radar, researchers have had the conditions for the empirical
+study of biological cluster behavior, and thus the SI has been
+studied at a deeper level. The establishment process of the lead-
+ership decision models above is actually similar to empirical
+research models, which require data-based modeling and anal-
+ysis, involving the steps of data collection, data processing,
+model establishment, and model veriﬁcation, but the analysis
+focuses on ﬁnding the formation mechanism of the leading
+decision in the group. What is introduced in this section is
+empirical research models except the leadership decision mod-
+els. In fact, it is a kind of model based on advanced testing
+means and established through investigation. The ant colony
+model introduced above also relies on part of experimental
+data in the establishment process, but the difﬁculty of data col-
+lection and analysis is relatively low and does not involve the
+measurement of relative distance and the processing of com-
+plex data. Moreover, the experiment is artiﬁcially designed
+and does not occur naturally in biological clusters, so it is
+not the focus discussed in this section. This section mainly dis-
+cusses models related to the behavior of biological clusters,
+which are relatively difﬁcult to measure and calculate with
+actual data.
+6.1. Overview of empirical research models
+6.1.1. Small-scale cluster empirical research models
+Since the model is established based on empirical research, the
+spatial structure it considers must be real 3D space. As long as
+the method adopted can observe and measure the research
+object in an all-round way and the data processing scale is
+within the feasibility, the empirical study of 3D biological clus-
+ter can be realized. To obtain 3D data, the simplest way is to
+use photography technology to obtain the relative position and
+relative distance of objects, and then use the actual acquired
+data for analysis and research. For example, the study on
+the 3D structure of ﬁsh shoals in Ref. 163 is a landmark study
+Swarm intelligence: A survey of model classiﬁcation and applications 13
+
+===== PAGE 14 =====
+on 3D biological clusters. In the study process, the author cre-
+ated the 3D method and the shadow method to measure the
+three-dimensional distance, which set a precedent for empirical
+research on 3D biological clusters. Ref. 164 quantiﬁed the
+three-dimensional trajectory of 8 ﬁsh using stereo photography
+and a computer tracking algorithm and compared the polarity,
+velocity, and average nearest distance of a real shoal with a
+simulated model. In Ref. 24, video recording and image digiti-
+zation techniques were used to observe ﬁsh shoals, and evi-
+dence of attractive and repulsive regions was found. In
+addition, three novel group structure features were also found,
+and the nearest neighbor rule model of the self-driven particle
+models was veriﬁed by the empirical study.
+6.1.2. Large-scale cluster empirical research models
+Foregoing models are all research based on the data obtained
+from experiments. Some of them not only verify the rationality
+of the attraction and exclusion rules in the self-driven particle
+models but also discover new group structure characteristics in
+SI, which greatly promotes the development of the research on
+SI. However, the above-mentioned three models target a small
+population size, the number of individuals only maintained at
+around 10, and the conclusions obtained are not necessarily
+applicable to large-scale groups. This is because the proportion
+of individuals in the periphery of a large group is signiﬁcantly
+lower than that in the center, but this does not happen in small
+groups. Therefore, for large groups, this marginal phe-
+nomenon is signiﬁcant to cause the interaction rules of the
+group to be inconsistent with the three principles of the self-
+driven particle models. Therefore, new methods and tech-
+niques are needed to study the behavior of large-scale biolog-
+ical clusters.
+By recording the whole process of SI of the population with
+the camera, and analyzing the recorded data later, the model
+established will have a higher similarity to the real collective
+behavior of organisms. Photos of hundreds of starlings during
+migration have been taken using high-speed cameras in Ref.
+23. After analyzing the data in the photos, a topological rule
+model of starlings was established. This overturns the previous
+distance measurement rules, and the conclusion shows that the
+interaction between starlings is not based on distance range,
+but based on topological rules, and the speciﬁc number of
+interacting neighbors is 6–7 starlings around each individual.
+The study in Ref. 165 used a maximum entropy model to ana-
+lyze starling ﬂock data. The study found that local, paired
+interactions between birds were signiﬁcant to predict the
+ﬂock’s order spread, and the number of interacting neighbors
+did not depend on population density. This supports the idea
+that interactions are determined by topological distance rather
+than physical distance. Ref. 166 reported a study on a large
+ﬂock of starlings, which found that changes in the behavior
+of one bird affected the behavior of all other birds in the ﬂock,
+regardless of ﬂock size. This scale-free behavioral correlation
+suggests the ﬂock is a critical system with a limit to its response
+to environmental disturbances.
+The work in Refs. 23 and 166 actually relied on a project
+called STARFLAG, which studies the collective behavior of
+large clusters of organisms. The main technical issues in the
+collection of 3D data for large animal populations were
+reviewed in Ref. 167. In particular, it explains how to solve
+the stereoscopic matching problem, which has been a major
+bottleneck in all past 3D studies. It also shows how to avoid
+the pitfalls most common in the quantitative analysis of 3D
+animal populations, paying particular attention to the problem
+of bias introduced by the boundaries of a population, and
+illustrating by example the problem of artifacts resulting from
+ignoring boundary effects when studying the 3D structure of a
+population. In the course of the STARFLAG project, some
+methods are provided for studying the behavior of large clus-
+ters of organisms, and the boundary effect of the mentioned
+large clusters relative to small clusters is also taken into
+account in the study, and the results show that its inﬂuence
+on the behavior of biological clusters is signiﬁcant.
+6.2. Summary of methods for building empirical research models
+New tracking techniques have made it much easier to collect
+data, and vast datasets have been uploaded to the Internet
+for researchers to use. The immediate problem is how to use
+such large data sets to construct more accurate models. Typi-
+cal approaches to solve this problem are the Force Map and
+data-driven modeling methods.
+Since the collected data sets are generally trajectory data
+about time series, which contains the movement direction
+and spatial position of individuals at a certain moment. The
+time difference method can be used to infer the movement
+speed, acceleration, relative position, and relative direction of
+individuals at a certain moment. For groups, the aggregation
+density and degree of polarization between groups can be
+counted to further infer the interaction force between individ-
+uals in the group. Force Map is a method for directly inferring
+the interaction forces between individuals from experimental
+data.
+168,169 This method forms variable space with variables
+such as relative position and the relative direction of move-
+ment between individuals. By drawing the distribution of
+acceleration and angular acceleration in it, it can infer what
+kind of social force exists between individuals, and analyze
+the relationship between social force and relative motion state.
+In Ref. 147, Force Map was applied to analyze the trajectory
+data of golden shiners, and it was found that the social forces
+between individuals showed the effects of repulsion and attrac-
+tion, and the directional alignment was the result of both
+effects. At the same time, the social forces from multiple neigh-
+bors did not act on individuals in an average manner.
+The Force Map method can infer the social forces according
+to the trajectory, which is similar to the self-driven particle
+models, but it is actually verifying the rationality of some rules
+in the self-driven particle. Although simple in nature, it is at the
+cost of sacriﬁcing important constraints and oversimpliﬁcation.
+Four of its most critical constraints were summarized in Ref.
+170. In order to overcome the limitations of the Force Map
+method, a data-driven modeling approach was proposed in
+Ref. 170, which can quantify and map the interaction between
+two individuals, describe how the strength of these interactions
+varies as a function of individual state variables, reconstruct the
+interaction function, and derive a clear and concise mathemat-
+ical model to reproduce the observed behavior.
+6.3. Application of empirical research models
+As mentioned above, the key step of empirical research lies in
+the collection of data, which is most notably reﬂected in the
+14 C. WANG et al.
+
+===== PAGE 15 =====
+data-driven model. The data- driven model not only veriﬁes
+the correctness of the rules of the self-driven particle models,
+but also studies a new SI model on this basis. Nevertheless,
+the key role of empirical research models is to verify the cor-
+rectness of the previously established models, referring to the
+self-driven particle model and other models based on observa-
+tion and simulation. Therefore, the application of the empiri-
+cal research models is mainly reﬂected in the application of
+its research idea, that is, the modeling and prediction of group
+behavior based on a large number of experimental data, or in
+other words, the data-driven application research.
+6.3.1. Trajectory tracking in dense crowd based on data-driven
+method
+The application of the data-driven method which is closely
+related to the behavior of biological clustering is reﬂected in
+the track tracking, among which the track of population trajec-
+tory is the most important application. The tracking of crowd
+trajectory here is for the consideration of public safety, which
+refers to the tracking of crowd trajectory in large and dense
+scenes. The tracking method is a tracking algorithm. The
+designed track tracking algorithm and monitoring system were
+used in Ref. 171 to realize track tracking for multiple individuals
+in a crowd in a large and dense scene. The accuracy of many
+pedestrian tracking algorithms is achieved by predicting pedes-
+trian tracks through crowd motion models. A crowd motion
+model based on the local crowd motion modes in intensive videos
+was pro- posed in Ref. 172. This model encodes the time evolu-
+tion of local motion modes represented by directional statistical
+distribution and then uses this model to estimate the expected
+movement of pedestrians at each spatiotemporal position, thus
+achieving a visual measurement of pedestrian efﬁciency, and
+using this pedestrian efﬁciency to detect abnormal events and
+track individuals in crowded scenes. The crowd motion tracking
+algorithm proposed in Ref. 173 is driven by prior behaviors,
+which are learned from a large number of crowd video databases
+collected from the Internet. Different from Ref. 172, this algo-
+rithm learns crowd motion mode s based on the extracted global
+features. Fig. 8
+173 shows the results of Ref. 173,w h e r e( a )i sa
+busy airport scene, (b) is the Shibuya crosswalk, and (c) is a
+two-way zebra crossing scene. Combining the multi-agent motion
+model based on speed obstacle and high-deﬁnition crowd video
+data set, a real-time tracking algorithm for crowd trajectory
+tracking under medium density was proposed in Ref. 174.
+6.3.2. Social network analysis
+The empirical research models are computational models that
+simulate the behavior of biological swarms and can be used to
+analyze user behavior in social networks. In social network
+analysis, the biological swarm empirical research models can
+be used to simulate social interaction and information dissem-
+ination characteristics of users.
+For example, it can be used to study information dissemi-
+nation in social networks. The model can simulate information
+exchange between different users, as well as the speed and
+scope of information dissemination. In this way, factors inﬂu-
+encing information dissemination can be identiﬁed and the
+most effective information dissemination strategies can be
+determined.
+Additionally, it can be used to analyze users’ social net-
+works. By modeling the interactions and connections between
+users, the relationships between different users in the social
+network can be determined. These relationships can be used
+to predict information dissemination and inﬂuence between
+users. Focusing on identifying potential user groups that
+may play a role in the propagation of misinformation and
+information, Ref. 175 used K-means integrated with bio-
+inspired algorithms to analyze 10,000 users and 555,684 tweets
+to compute eighteen factors based on the tweet and user
+parameters. Factor selection for the ﬁnal analysis identiﬁed
+11 statistically relevant factors. In summary, the empirical
+research models can provide valuable information in social
+network analysis, helping us better understand and manage
+user behavior in social networks.
+6.4. Evaluation of empirical research models
+The empirical research models have been veriﬁed through real-
+world experiments, so compared with the self-driven particle
+models and pheromone communication models, their authen-
+ticity and accuracy are improved to an absolute degree, and
+it is more convincing in revealing the mechanism of SI. As
+can be seen from the above overview, the development of
+empirical research models is actually closely related to the
+development of data collection methods and data processing
+techniques. Therefore, the future development of empirical
+research models depends on the development of advanced data
+collection and processing techniques. At present, the empirical
+research models should be mainly developed with the new gen-
+eration of large-scale data processing technology. For exam-
+ple, deep learning is introduced into the model parameter
+determination to realize the establishment of a large-scale col-
+lective behavior model.
+7. Conclusions
+This article recalled SI models and applications. To provide a
+thorough narrative of SI models, they were divided into four
+categories: self-driven particle models, pheromone communi-
+cation models, empirical research models and leadership deci-
+sion models. The typical models and applications of each
+category of models were reviewed. More speciﬁcally, PSO
+and ASO were summarized in self-driven particle models and
+Fig. 8 Testing videos along with manually annotated ground truth (yellow) and data-driven tracking results (red).
+Swarm intelligence: A survey of model classiﬁcation and applications 15
+
+===== PAGE 16 =====
+pheromone communication models, respectively. Further-
+more, the more precise and effective modeling techniques for
+leadership decisions and empirical research models were
+described.
+The discovery of the mechanism requires rigorous model
+support, and the model is based on the behavior characteristics
+of different organisms and the common among the same spe-
+cies of organisms. The existing SI models effectively capture
+the characteristics of SI and can simulate the collective behav-
+ior resembling real biological clusters. These models have
+demonstrated strong performance at the simulation level. At
+the level of algorithm, SI algorithms perform well in many
+applications. However, they also have some limitations, such
+as issues in stability, parameter tuning, stagnation, the sensitiv-
+ity to the initial conditions and the dependency of the problem.
+The issue of stability arises from the intricate dynamics of
+interactions among individuals within the algorithm, leading
+to unpredictable outcomes. Parameter tuning complexity stems
+from the need to ﬁnd optimal conﬁgurations tailored to the
+unique characteristics of each problem, making it a challenging
+and problem-speciﬁc task. Stagnation poses a signiﬁcant hur-
+dle, limiting the algorithm’s ability to explore and discover glo-
+bal optima, particularly in complex scenarios. Sensitivity to
+initial conditions further complicates matters, introducing an
+element of unpredictability in the algorithm’s behavior. Addi-
+tionally, problem dependency highlights the inconsistency in
+performance across different types of problems, underscoring
+the need for adaptive algorithms. Successfully addressing these
+challenges requires not only a nuanced understanding of algo-
+rithmic intricacies but also the ability to make domain-speciﬁc
+adjustments enhance their robustness and effectiveness. Issues
+in stability, parameter tuning and stagnation have been
+addressed in Ref. 29, while further in-depth study is required
+for the sensitivity to the initial conditions and the dependency
+of the problem.
+Furthermore, we found that there are still many challenges
+in the study of SI models and applications need to be broken
+down in the future, which are summarized as follows.
+(1) Model accuracy evaluation system
+With the improvement of data analysis technology, data-
+driven research has become a hotspot in the study of SI. How-
+ever, the main results of the research are still the simulation
+veriﬁcation based on their own designed methods. There is a
+lack of research on how to quantitatively evaluate the differ-
+ences between the data driven results and the real collective
+behavior of biological populations, and a standardized com-
+prehensive evaluation system is a research direction.
+(2) Application of heterogeneous populations
+The SI has been widely used in intelligent unmanned sys-
+tems. However, the research on cooperative operation of
+heterogeneous populations is not efﬁcient enough to cope with
+the current complex and changeable environment, and the
+future research direction can be developed to multi-
+population cooperative perception, information sharing, task
+allocation, path planning, collaborative decision-making and
+other aspects.
+(3) Unmanned and manned cooperative cluster systems
+The research on autonomous unmanned cluster systems has
+been carried out in many countries, but the research on
+unmanned and manned cooperative cluster systems is still in
+the initial stage. It is a feasible research direction to integrate
+the SI advantage with the system with human participation
+in decision-making.
+CRediT authorship contribution statement
+Chao WANG: Writing – original draft, Writing – review &
+editing. Shuyuan ZHANG: Investigation, Writing – review &
+editing. Tianhang MA: Investigation. Yuetong XIAO: Investi-
+gation. Michael Zhiqiang CHEN: Supervision, Writing –
+review & editing. Lei WANG: Funding acquisition, Supervi-
+sion, Writing – review & editing.
+Declaration of competing interest
+The authors declare that they have no known competing
+ﬁnancial interests or personal relationships that could have
+appeared to inﬂuence the work reported in this paper.
+Acknowledgements
+This study was co-supported by the National Natural Science
+Foundation of China (No. 61873017) and the Academic Excel-
+lence Foundation of Beihang University for PhD Students,
+China.
+References
+1. Beni G, Wang J. Swarm intelligence in cellular robotic systems.
+In: Robots and biological systems: Towards a new bionics?
+Berlin: Springer; 1993. p. 703–12.
+2. Khaldi B, Cherif F. An overview of swarm robotics: Swarm
+intelligence applied to multi-robotics. Int J Comput Appl
+2015;126(2):31–7.
+3. Krause S, James R, Faria JJ, et al. Swarm intelligence in
+humans: Diversity can trump ability. Anim Behav 2011;81
+(5):941–8.
+4. Duan H, Sun CH, Shi YH. Progress in swarm intelligence.
+Communications of CAA2013;34(3):65–74.
+5. Li P, Duan HB. Bio-inspired computation algorithms. In: Bio-
+inspired computation in unmanned aerial vehicles . Berlin:
+Springer; 2014. p. 35–69.
+6. Jolles JW, Boogert NJ, Sridhar VH, et al. Consistent individual
+differences drive collective behavior and group functioning of
+schooling ﬁsh. Curr Biol2017;27(18):2862–8.
+7. Marras S, Killen SS, Lindstro ¨ m J, et al. Fish swimming in
+schools save energy regardless of their spatial position. Behav
+Ecol Sociobiol2015;69:219–26.
+8. Verma S, Novati G, Koumoutsakos P. Efﬁcient collective
+swimming by harnessing vortices through deep reinforcement
+learning. Proc Natl Acad Sci USA2018;115(23):5849–54.
+16 C. WANG et al.
+
+===== PAGE 17 =====
+9. Bockoven AA, Wilder SM, Eubanks MD. Intraspeciﬁc
+variation among social insect colonies: Persistent regional and
+colony-level differences in ﬁre ant foraging behavior. PLoS One
+2015;10(7):e0133868.
+10. Friedman DA, Greene MJ, Gordon DM. The physiology of
+forager hydration and variation among harvester ant
+(Pogonomyrmex barbatus) colonies in collective foraging
+behavior. Sci Rep2019;9:5126.
+11. Kolay S, Boulay R, D’Ettorre P. Regulation of ant foraging: A
+review of the role of information use and personality. Front
+Psychol 2020;11:734.
+12. Pimenta V, Barroso I, Boitani L, et al. Risks a la carte:
+Modelling the occurrence and intensity of wolf predation on
+multiple livestock species. Biol Conserv2018;228:331–42.
+13.
+/C23Akesson S, Helm B. Endogenous programs and ﬂexibility in
+bird migration. Front Ecol Evol2020;8:78.
+14. Duan HB, Li P. Autonomous control for unmanned aerial
+vehicle swarms based on biological collective behaviors. Sci
+Technol Rev2017;35(7):17–25 [Chinese] .
+15. Reynolds CW. Flocks, herds and schools: A distributed
+behavioral model. In: Proceedings of the 14th annual
+conference on computer graphics and interactive techniques .
+New York: ACM; 1987. p. 25–34.
+16. Spector L, Klein J. Evolutionary dynamics discovered via
+visualization in the breve simulation environment. In:
+Workshop Proc. of ALife VIII.Sydney: UNSW Press; 2002. p.
+163–70.
+17. Couzin ID, Krause J, James R, et al. Collective memory and
+spatial sorting in animal groups. J Theor Biol2002;218(1):1–11.
+18. Vicsek T, Cziro ´ k A, Ben-Jacob E, et al. Novel type of phase
+transition in a system of self-driven particles. Phys Rev Lett
+1995;75(6):1226–9.
+19. Goss S, Aron S, Deneubourg JL, et al. Self-organized shortcuts
+in the Argentine ant. Naturwissenschaften 1989;76(12):579–81.
+20. Van Vorhis Key SE, Baker TC. Trail-following responses of the
+Argentine ant, Iridomyrmex humilis (Mayr), to a synthetic trail
+pheromone component and analogs. J Chem Ecol 1982;8
+(1):3–14.
+21. Beckers R, Goss S, Deneubourg JL, et al. Colony size,
+communication and ant foraging strategy. Psyche A J
+Entomol 1989;96(3–4):239–56.
+22. Karaboga D, Akay B. A comparative study of artiﬁcial bee
+colony algorithm. Appl Math Comput2009;214(1):108–32.
+23. Ballerini M, Cabibbo N, Candelier R, et al. Interaction ruling
+animal collective behavior depends on topological rather than
+metric distance: Evidence from a ﬁeld study. Proc Natl Acad Sci
+USA 2008;105(4):1232–7.
+24. Tien JH, Levin SA, Rubenstein DI. Dynamics of ﬁsh shoals:
+identifying key decision rules. Evol Ecol Res2004;6(4):555–65.
+25. Ha S, Jeong H. Towards automated statistical physics: Data-
+driven modeling of complex systems with deep learning. arXiv
+preprint: 2001.02539; 2020.
+26. Ha S, Jeong H. Unraveling hidden interactions in complex
+systems with deep learning. Sci Rep2021;11(1):12804.
+27. Guo WC, Ai BQ, He L. Reveal ﬂocking of birds ﬂying in fog by
+machine learning. arXiv preprint: 2005.10505, 2020.
+28. Tang J, Liu G, Pan QT. A review on representative swarm
+intelligence algorithms for solving optimization problems:
+Applications and trends. IEEE/CAA J Autom Sin 2021;8
+(10):1627–43
+.
+29. Selvaraj S, Choi E. Survey of swarm intelligence algorithms. In:
+Proceedings of the 3rd international conference on software
+engineering and information management. New York: ACM;
+2020. p. 69–73.
+30. Gad AG. Particle swarm optimization algorithm and its
+applications: a systematic review. Arch Comput Meth Eng
+2022;29(5):2531–61.
+31. Pourpanah F, Wang R, Lim CP, et al. A review of artiﬁcial ﬁsh
+swarm algorithms: recent advances and applications. Artif Intell
+Rev 2023;56(3):1867–903.
+32. Rokbani N, Kumar R, Abraham A, et al. Bi-heuristic ant
+colony optimization-based approaches for traveling salesman
+problem. Soft Comput A Fusion Found Methodol Appl2021;25
+(5):3775–94
+.
+33. Kaya E, Gorkemli B, Akay B, et al. A review on the studies
+employing artiﬁcial bee colony algorithm to solve
+combinatorial optimization problems. Eng Appl Artif Intell
+2022;115:105311.
+34. Guo C, Tang H, Niu B, et al. A survey of bacterial foraging
+optimization. Neurocomputing 2021;452:728–46.
+35. Chen X, Cheng F, Liu C, et al. An improved Wolf pack
+algorithm for optimization problems: Design and evaluation.
+PLoS One2021;16(8):e0254239.
+36. Alazzam H, Sharieh A, Sabri KE. A feature selection algorithm
+for intrusion detection system based on pigeon inspired
+optimizer. Expert Syst Appl2020;148:113249.
+37. Zhou XB, Ma HJ, Gu JG, et al. Parameter adaptation-based
+ant colony optimization with dynamic hybrid mechanism. Eng
+Appl Artif Intell2022;114:105139.
+38. Mao WL, Hung CW, Huang HY. Modiﬁed PSO algorithm on
+recurrent fuzzy neural network for system identiﬁcation. Intell
+Autom Soft Comput2019;25(2):329–41.
+39. Liu Y, Zhang XJ, Zhang Y, et al. Collision free 4D path
+planning for multiple UAVs based on spatial reﬁned voting
+mechanism and PSO approach. Chin J Aeronaut 2019;32
+(6):1504–19
+.
+40. Chen JQ, Tang YF, Ge R, et al. Reliability design optimization
+of composite structures based on PSO together with FEA. Chin
+J Aeronaut2013;26(2):343–9.
+41. Duan HB, Zhang DF. A binary tree based coordination scheme
+for target enclosing with micro aerial vehicles. IEEE/ASME
+Trans Mechatron2021;26(1):458–68.
+42. Yu X, Xu X, Liu L, et al. Circular formation of networked
+dynamic unicycles by a distributed dynamic control law.
+Automatica 2018;89:1–7.
+43. Yao WR, Chen Y, Tian HY, et al. Multi-UAV synchronous
+approaching using homotopy-based trajectory planning. Guid
+Navigat Control2022;2(2):2250012.
+44. Feng Q, Hai XS, Sun B, et al. Resilience optimization for multi-
+UAV formation reconﬁguration via enhanced pigeon-inspired
+optimization. Chin J Aeronaut2022;35(1):110–23.
+45. Liao F, Teo R, Wang JL, et al. Distributed formation and
+reconﬁguration control of VTOL UAVs. IEEE Trans Contr
+Syst Technol2017;25(1):270–7.
+46. Chen L, Duan HB. Collision-free formation-containment
+control for a group of UAVs with unknown disturbances.
+Aerosp Sci Technol2022;126:107618.
+47. Li SG, Batra R, Brown D, et al. Particle robotics based on
+statistical mechanics of loosely coupled components. Nature
+2019;567(7748):361–5.
+48. Elege N, Solapurkar S, Joordens M. Eye sensor for swarm
+robotic ﬁsh. In: 2017 12th system of systems engineering
+conference (SoSE). Piscataway: IEEE Press; 2017. p. 1–6.
+49. Yu JZ, Wang C, Xie GM. Coordination of multiple robotic ﬁsh
+with applications to underwater robot competition. IEEE Trans
+Ind Electron2016;63(2):1280–8.
+50. Kaloop MR, Bardhan A, Kardani N, et al. Novel application
+of adaptive swarm intelligence techniques coupled with
+adaptive network-based fuzzy inference system in predicting
+photovoltaic power. Renew Sustain Energy Rev
+2021;148:111315.
+51. Wei D, Wang ZB, Si L, et al. Preaching-inspired swarm
+intelligence algorithm and its applications. Knowl Based Syst
+2021;211:106552.
+Swarm intelligence: A survey of model classiﬁcation and applications 17
+
+===== PAGE 18 =====
+52. Schranz M, Di Caro GA, Schmickl T, et al. Swarm Intelligence
+and cyber-physical systems: Concepts, challenges and future
+trends. Swarm Evol Comput2021;60:100762.
+53. Ouellette NT. A physics perspective on collective animal
+behavior. Phys Biol2022;19(2):021004.
+54. Berdahl AM, Kao AB, Flack A, et al. Collective animal
+navigation and migratory culture: from theoretical models to
+empirical evidence. Phil Trans R Soc B 2018;373
+(1746):20170009
+.
+55. Sun WF, Tang M, Zhang LJ, et al. A survey of using swarm
+intelligence algorithms in IoT. Sensors 2020;20(5):1420.
+56. Rostami M, Berahmand K, Nasiri E, et al. Review of swarm
+intelligence-based feature selection methods. Eng Appl Artif
+Intell 2021;100:104210.
+57. Shaikh PW, El-Abd M, Khanafer M, et al. A review on swarm
+intelligence and evolutionary algorithms for solving the trafﬁc
+signal control problem. IEEE Trans Intell Transp Syst2022;23
+(1):48–63
+.
+58. Zemmal N, Azizi N, Sellami M, et al. Particle swarm
+optimization based swarm intelligence for active learning
+improvement: application on medical data classiﬁcation. Cogn
+Comput 2020;12(5):991–1010.
+59. Topaz CM, Bertozzi AL. Swarming patterns in a two-
+dimensional kinematic model for biological groups. SIAM J
+Appl Math2004;65(1):152–74.
+60. Vicsek T, Zafeiris A. Collective motion. Phys Rep2012;517(3–
+4):71–140
+.
+61. Ouellette NT, Gordon DM. Goals and limitations of modeling
+collective behavior in biological systems. Front Phys
+2021;9:687823.
+62. Krzywanski J. A general approach in optimization of heat
+exchangers by bio-inspired artiﬁcial intelligence methods.
+Energies 2019;12(23):4441.
+63. Drozda M, Bate I, Timmis J. Bio-inspired error detection for
+complex systems. In: 2011 IEEE 17th paciﬁc rim international
+symposium on dependable computing.Piscataway: IEEE Press;
+2011. p. 154–63.
+64. Uleru GI, Hulea M, Burlacu A. Bio-inspired control system for
+ﬁngers actuated by multiple SMA actuators. Biomimetics
+2022;7(2):62.
+65. Gambardella LM, Dorigo M. Solving symmetric and
+asymmetric TSPs by ant colonies. In: Proceedings of IEEE
+international conference on evolutionary computation.
+Piscataway: IEEE Press; 2002. p. 622–7.
+66. Bullnheimer B. A new rank based version of the ant system: a
+computational study. Central Eur J Oper Res Econ
+1999;7:25–38.
+67. Cordon O, Fernandez I, Herrera F, et al. A new ACO model
+integrating evolutionary computation concepts: the best-worst
+ant system. Proc. ANTS2000;2000:22–9.
+68. Zheng Y, Luo Q, Wang HB, et al. Path planning of mobile
+robot based on adaptive ant colony algorithm. J Intell Fuzzy
+Syst 2020;39(4):5329–38.
+69. Katz Y, Tunstrøm K, Ioannou CC, et al. Inferring the structure
+and dynamics of interactions in schooling ﬁsh. Proc Natl Acad
+Sci USA2011;108(46):18720–5.
+70. Nakagawa S, Schielzeth H. Repeatability for Gaussian and
+non-Gaussian data: a practical guide for biologists. Biol Rev
+Camb Philos Soc2010;85(4):935–56.
+71. Yang KB, Dong WH, Tong YY, et al. Leader-follower
+formation consensus of quadrotor UAVs based on prescribed
+performance adaptive constrained backstepping control. Int J
+Contr Autom Syst2022;20(10):3138–54.
+72. Gambardella LM, Dorigo M. Solving symmetric and
+asymmetric TSPs by ant colonies. In: Proceedings of IEEE
+international conference on evolutionary computation.
+Piscataway: IEEE Press; 2002. p. 622–7.
+73. Jadbabaie A, Lin J, Morse AS. Coordination of groups of
+mobile autonomous agents using nearest neighbor rules. IEEE
+Trans Autom Contr2003;48(6):988–1001.
+74. Gre´ goire G, Chate´ H. Onset of collective and cohesive motion.
+Phys Rev Lett2004;92(2):025702.
+75. Go¨ nci B, Nagy M, Vicsek T. Phase transition in the scalar noise
+model of collective motion in three dimensions. Eur Phys J Spec
+Top 2008;157(1):53–9.
+76. Chate´ H, Ginelli F, Gre´ goire G, et al. Collective motion of self-
+propelled particles interacting without cohesion. Phys Rev E
+2008;77(4):046113.
+77. Kennedy J, Eberhart R. Particle swarm optimization.
+Proceedings of ICNN’95 - International conference on neural
+networks. Piscataway: IEEE Press; 2002. p. 1942–8 .
+78. Wang DS, Tan DP, Liu L. Particle swarm optimization
+algorithm: an overview. Soft Comput A Fusion Found
+Methodol Appl2018;22(2):387–408.
+79. Tanweer MR, Suresh S, Sundararajan N. Dynamic mentoring
+and self-regulation based particle swarm optimization
+algorithm for solving complex real-world optimization
+problems. Inf Sci2016;326:1–24.
+80. Leontitsis A, Kontogiorgos D, Pagge J. Repel the swarm to the
+optimum! Appl Math Comput2006;173(1):265–72.
+81. Tatsumi K, Ibuki T, Tanino T. A chaotic particle swarm
+optimization exploiting a virtual quartic objective function
+based on the personal and global best solutions. Appl Math
+Comput 2013;219(17):8991–9011.
+82. Ardizzon G, Cavazzini G, Pavesi G. Adaptive acceleration
+coefﬁcients for a new search dive r s i ﬁ c a t i o ns t r a t e g yi np a r t i c l e
+swarm optimization algorithms.Inf Sci Int J2015;299(C):337–78.
+83. Barisal AK. Dynamic search space squeezing strategy based
+intelligent algorithm solutions to economic dispatch with
+multiple fuels. Int J Electr Power Energy Syst2013;45(1):50–9
+.
+84. Vlachogiannis JG, Lee KY. Economic load dispatch—A
+comparative study on heuristic optimization techniques with
+an improved coordinated aggregation-based PSO. IEEE Trans
+Power Syst2009;24(2):991–1001.
+85. Bird S, Li XD. Adaptively choosing niching parameters in a
+PSO. In: Proceedings of the 8th annual conference on genetic and
+evolutionary computation. New York: ACM; 2006. p. 3–10.
+86. Fang W, Sun J, Chen HH, et al. A decentralized quantum-
+inspired particle swarm optimization algorithm with cellular
+structured population. Inf Sci Int J2016;330(C):19–48.
+87. Lu Y, Zeng NY, Liu YR, et al. A hybrid wavelet neural
+network and switching particle swarm optimization algorithm
+for face direction recognition. Neurocomputing 2015;155
+(C):219–24
+.
+88. Liu TY, Jiao LC, Ma WP, et al. A new quantum-behaved
+particle swarm optimization based on cultural evolution
+mechanism for multiobjective problems. Knowl Based Syst
+2016;101(C):90–9.
+89. Petra´ cˇ ek P, Walter V, Ba ´ cˇ a T, et al. Bio-inspired compact
+swarms of unmanned aerial vehicles without communication
+and external localization. Bioinspir Biomim2020;16(2):026009.
+90. Tan Y. Swarm robotics: Collective behavior inspired by nature.
+J Comput Sci Syst Biol2013;6(6):e106.
+91. Duarte M, Costa V, Gomes J, et al. Evolution of collective
+behaviors for a real swarm of aquatic surface robots. PLoS One
+2016;11(3):e0151834.
+92. Deng YS, Ogura M, Li AY, et al. Shepherding control for
+separating a single agent from a swarm. IFAC-Papers on Line
+2022;55(40):217–22.
+93. Gold J, Wang A, Harrington K. Feedback Control of Evolving
+Swarms. In: ALIFE 14: The fourteenth international conference
+on the synthesis and simulation of living systems. Pasadena: MIT
+Press; 2014. p. 884–91.
+18 C. WANG et al.
+
+===== PAGE 19 =====
+94. Dong HR, Zhao Y, Gao SG. A fuzzy-rule-based Couzin model.
+J Contr Theory Appl2013;11(2):311–5.
+95. Ruangdech S, Hauert S, Homer M. Inferring swarm models
+using a single monitoring robot. ALIFE 2019: The 2019
+conference on artiﬁcial life . 2019, MIT Press; Pasadena,
+278–9.
+96. Liu XY, Xiang XJ, Chang Y, et al. Hierarchical weighting
+vicsek model for ﬂocking navigation of drones. Drones 2021;5
+(3):74.
+97. Yang M, Tian YT, Qi XY. Behavior analysis of swarm robot
+systems based on vicsek model. In: 2008 fourth international
+conference on natural computation. Piscataway: IEEE Press;
+2008. p. 594–8.
+98. Berlinger F, Gauci M, Nagpal R. Implicit coordination for 3D
+underwater collective behaviors in a ﬁsh-inspired robot swarm.
+Sci Robot2021;6(50):eabd8668.
+99. Arenas A, Dı ´az-Guilera A, Kurths J, et al. Synchronization in
+complex networks. Phys Rep2008;469(3):93–153.
+100. Chiba K, Makino Y, Takatoya T. PSO/GA hybrid method and
+its application to supersonic-transport wing design. J Comput
+Sci Technol2008;2(1):268–80.
+101. Mi BG, Cheng SX, Luo Y, et al. A new many-objective
+aerodynamic optimization method for symmetrical elliptic
+airfoils by PSO and direct-manipulation-based parametric
+mesh deformation. Aerosp Sci Technol2022;120:107296.
+102. Jiang TY, Li J, Huang KW. Longitudinal parameter
+identiﬁcation of a small unmanned aerial vehicle based on
+modiﬁed particle swarm optimization. Chin J Aeronaut2015;28
+(3):865–73
+.
+103. Xu FR, Chen MQ, Liang XL, et al. PSO optimized active
+disturbance rejection control for aircraft anti-skid braking
+system. Algorithms 2022;15(5):158.
+104. Koreanschi A, Sugar Gabor O, Acotto J, et al. Optimization
+and design of an aircraft’s morphing wing-tip demonstrator for
+drag reduction at low speed, Part I-Aerodynamic optimization
+using genetic, bee colony and gradient descent algorithms. Chin
+J Aeronaut2017;30(1):149–63.
+105. Edelstein-Keshet L. Simple models for trail-following
+behaviour; Trunk trails versus individual foragers. J Math
+Biol 1994;32(4):303–28.
+106. Deneubourg JL, Aron S, Goss S, et al. The self-organizing
+exploratory pattern of the Argentine ant. J Insect Behav1990;3
+(2):159–68
+.
+107. Deneubourg JL, Goss S, Franks N, et al. The blind leading the
+blind: Modeling chemically mediated army ant raid patterns. J
+Insect Behav1989;2(5):719–25.
+108. Franks NR. Army Ants: a collective intelligence: A neural
+network seems an apt analogy as a colony of army ants
+navigates the tropical rain forest. Am Sci1989;77(2):138–45.
+109. Aron S, Pasteels J, Deneubourg J. Trail-laying behaviour
+during exploratory recruitment in the Argentine ant:
+Iridomyrmex humilis (Mayr). Biol Behav1989;14:207–17.
+110. Dorigo M. Positive feedback as a search strategy. Tech. Rep
+1991;91–16.
+111. Dorigo M, Gambardella LM. Ant colonies for the travelling
+salesman problem. Biosystems 1997;43(2):73–81.
+112. Dorigo M, Gambardella LM. Ant colony system: A
+cooperative learning approach to the traveling salesman
+problem. IEEE Trans Evol Comput1997;1(1):53–66.
+113. Stu¨ tzle T, Hoos H H. Improving the Ant System: A detailed
+report on the MAX–MIN Ant System. Darmstadt: Darmstadt
+University of Technology, Computer Science Department;
+1996. Report No.: AIDA–96–12.
+114. Sttzle TG. Local search algorithms for combinatorial problems:
+Analysis, improvements, and new applications [dissertation].
+Darmstadt: Darmstadt University of Technology; 1998.
+115. Dorigo M, Stu ¨ tzle T. Ant colony optimization: Overview and
+recent advances. Handbook of metaheuristics. Cham: Springer;
+2019. p. 311–51 .
+116. Dorigo M, Maniezzo V, Colorni A. The ant system: An
+autocatalytic optimizing process. Milano: Politecnico di
+Milano; 1991. Report No.: 91-016.
+117. Dorigo M. Optimization, learning and natural algorithms
+[dissertation]. Milano: Politecnico di Milano; 1992.
+118.
+Gambardella LM, Dorigo M. Ant-Q: A reinforcement learning
+approach to the traveling salesman problem. Machine learning
+proceedings 1995. Amsterdam: Elsevier; 1995. p. 252–60 .
+119. Maniezzo V. Exact and approximate nondeterministic tree-
+search procedures for the quadratic assignment problem. Inf J
+Comput 1999;11(4):358–69.
+120. Guntsch M, Middendorf M. A population based approach for
+ACO. In: Applications of evolutionary computing:
+EvoWorkshops 2002: EvoCOP, EvoIASP, EvoSTIM/
+EvoPLAN Kinsale.Berlin: Springer; 2002. p. 72–81.
+121. Blum C. Theoretical and practical aspects of ant colony
+optimization. Amsterdam: IOS press; 2004. p. 10–7 .
+122. Deng T, Xiong ZM, Liu YJ, et al. Research on 3D route
+planning for UAV in low-altitude penetration based on
+improved ant colony algorithm. Appl Mech Mater
+2013;442:556–61.
+123. Dai XL, Long S, Zhang ZW, et al. Mobile robot path planning
+based on ant colony algorithm with A* heuristic method. Front
+Neurorobot 2019;13:15.
+124. Chaˆ ari I, Koubaˆ a A, Bennaceur H, et al. smartPATH: A hybrid
+ACO-GA algorithm for robot path planning. Piscataay: IEEE
+Press; 2012. p. 1–8
+.
+125. Zhu QB, Yang ZJ. An ant colony optimization algorithm based
+on mutation and dynamic pheromone updating. J Softw
+2004;15(2):185–92 [Chinese] .
+126. Sangeetha V, Krishankumar R, Ravichandran KS, et al.
+Energy-efﬁcient green ant colony optimization for path
+planning in dynamic 3D environments. Soft Comput A Fusion
+Found Methodol Appl2021;25(6):4749–69.
+127. Oleiwi BK, Roth H, Kazem BI. A hybrid approach based on
+ACO and Ga for multi objective mobile robot path planning.
+Appl Mech Mater2014;527:203–12.
+128. Cekmez U, Ozsiginan M, Sahingoz OK. A UAV path planning
+with parallel ACO algorithm on CUDA platform. In: 2014
+international conference on unmanned aircraft systems
+(ICUAS). Piscataay: IEEE Press; 2014. p. 347–54.
+129. Sangeetha V, Krishankumar R, Ravichandran KS, et al. A
+fuzzy gain-based dynamic ant colony optimization for path
+planning in dynamic environments. Symmetry 2021;13
+(2):280–301
+.
+130. Xiong N, Zhou XZ, Yang XQ, et al. Mobile robot path
+planning based on time taboo ant colony optimization in
+dynamic environment. Front Neurorobot2021;15:642733.
+131. Ajeil FH, Ibraheem IK, Azar AT, et al. Grid-based mobile
+robot path planning using aging-based ant colony optimization
+algorithm in static and dynamic environments. Sensors 2020;20
+(7):1880
+.
+132. Conradt L, Roper TJ. Conﬂicts of interest and the evolution of
+decision sharing. Philos Trans R Soc Lond B Biol Sci2009;364
+(1518):807–19
+.
+133. Strandburg-Peshkin A, Papageorgiou D, Crofoot MC, et al.
+Inferring inﬂuence and leadership in moving animal groups.
+Phil Trans R Soc B2018;373(1746):20170006.
+134. Nagy M, Akos Z, Biro D, et al. Hierarchical group dynamics in
+pigeon ﬂocks. Nature 2010;464(7290):890–3.
+135. Couzin ID, Krause J, Franks NR, et al. Effective leadership
+and decision-making in animal groups on the move. Nature
+2005;433(7025):513–6.
+Swarm intelligence: A survey of model classiﬁcation and applications 19
+
+===== PAGE 20 =====
+136. Couzin ID, Ioannou CC, Demirel G, et al. Uninformed
+individuals promote democratic consensus in animal groups.
+Science 2011;334(6062):1578–80.
+137. Strandburg-Peshkin A, Farine DR, Couzin ID, et al. Shared
+decision-making drives collective movement in wild baboons.
+Science 2015;348(6241):1358–61.
+138. Strandburg-Peshkin A, Twomey CR, Bode NWF, et al. Visual
+sensory networks and effective information transfer in animal
+groups. Curr Biol2013;23(17):R709–11.
+139. Rosenthal SB, Twomey CR, Hartnett AT, et al. Revealing the
+hidden networks of interaction in mobile animal groups allows
+prediction of complex behavioral contagion. Proc Natl Acad
+Sci USA2015;112(15):4690–5.
+140. Smith JE, Estrada JR, Richards HR, et al. Collective
+movements, leadership and consensus costs at reunions in
+spotted hyaenas. Anim Behav2015;105:187–200.
+141. Tokuyama N, Furuichi T. Leadership of old females in
+collective departures in wild bonobos (Pan paniscus) at
+Wamba. Behav Ecol Sociobiol2017;71(3):55.
+142. Nagy M, Va ´ sa´ rhelyi G, Pettit B, et al. Context-dependent
+hierarchies in pigeons. Proc Natl Acad Sci USA 2013;110
+(32):13049–54
+.
+143. Butail S, Mwaffo V, Porﬁri M. Model-free information-
+theoretic approach to infer leadership in pairs of zebraﬁsh.
+Phys Rev E2016;93:042411.
+144. King AJ, Douglas CMS, Huchard E, et al. Dominance and
+afﬁliation mediate despotism in a social primate. Curr Biol
+2008;18(23):1833–8.
+145. Sa´ nchez-To´ jar A, Schroeder J, Farine DR. A practical guide for
+inferring reliable dominance hierarchies and estimating their
+uncertainty. J Anim Ecol2018;87(3):594–608.
+146. Farine DR, Whitehead H. Constructing, conducting and
+interpreting animal social network analysis. J Anim Ecol
+2015;84(5):1144–63.
+147. Bonnell TR, Henzi SP, Barrett L. Direction matching for sparse
+movement data sets: Determining interaction rules in social
+groups. Behav Ecol2017;28(1):193–203.
+148. Farine DR. A guide to null models for animal social network
+analysis. Methods Ecol Evol2017;8(10):1309–20.
+149. Aplin LM, Firth JA, Farine DR, et al. Consistent individual
+differences in the social phenotypes of wild great tits. Parus
+major. Anim Behav2015;108:117–27.
+150. Peng ZH, Wang D, Chen ZY, et al. Adaptive dynamic surface
+control for formations of autonomous surface vehicles with
+uncertain dynamics. IEEE Trans Contr Syst Technol2013;21
+(2):513–20
+.
+151. Xiao J, Huang MX, Wu D, et al., A multi-robot formation
+control method based on an improved leader-following
+algorithm, In: Chinese intelligent systems conference , 2020,
+Singapore; Springer Singapore. p. 558–71.
+152. Chen H, Wang XK, Shen LC, et al. Formation ﬂight of ﬁxed-
+wing UAV swarms: a group-based hierarchical approach. Chin
+J Aeronaut2021;34(2):504–15.
+153. Zhu XD, Lai JZ, Chen S. Cooperative location method for
+leader-follower UAV formation based on follower UAV’s
+moving vector. Sensors 2022;22(19):7125.
+154. Huang JS, Wang W, Wen CY, et al. Distributed adaptive
+leader–follower and leaderless consensus control of a class of
+strict-feedback nonlinear systems: a uniﬁed approach.
+Automatica 2020;118:109021.
+155. Zhang XF, Liu L, Feng G. Leader-follower consensus of time-
+varying nonlinear multi-agent systems. Autom J IFAC2015;52
+(C):8–14.
+156. Wang L, Dai HP, Dong H, et al. Adaptive synchronization of
+weighted complex dynamical networks through pinning. Eur
+Phys J B2008;61(3):335–42.
+157. Zhang SY, Song SZ, Wang L, et al. Stability veriﬁcation for
+heterogeneous complex networks via iterative SOS
+programming. IEEE Contr Syst Lett2022;7:559–64.
+158. Wang L, Chen MZQ, Wang QG. Bounded synchronization of a
+heterogeneous complex switched network. Autom J IFAC
+2015;56(C):19–24.
+159. Zhang SY, Wang L, Xue B, et al. Consensus veriﬁcation for
+heterogeneous polynomial networked systems. J Frankl Inst
+2023;360(17):12878–91.
+160. Bai H, Arcak M, Wen JT. Adaptive motion coordination:
+Using relative velocity feedback to track a reference velocity.
+Automatica 2009;45(4):1020–5.
+161. Dong WJ. Adaptive consensus seeking of multiple nonlinear
+systems. Adapt Control Sig2012;26(5):419–34.
+162. Homayouni SM, Tang SH, Ismail N, et al. A hybrid genetic-
+heuristic algorithm for scheduling of automated guided vehicles
+and quay cranes in automated container terminals. In: 2009
+international conference on computers & industrial engineering.
+Piscataay: IEEE Press; 2009. p. 96–101.
+163. Ame´ JM, Halloy J, Rivault C, et al. Collegial decision making
+based on social ampliﬁcation leads to optimal group formation.
+Proc Natl Acad Sci USA2006;103(15):5835–40.
+164. Viscido SV, Parrish JK, Gru ¨ nbaum D. Individual behavior and
+emergent properties of ﬁsh schools: A comparison of
+observation and theory. Mar Ecol Prog Ser 2004;273:
+239–49
+.
+165. Bialek W, Cavagna A, Giardina I, et al. Statistical mechanics
+for natural ﬂocks of birds. Proc Natl Acad Sci USA2012;109
+(13):4786–91
+.
+166. Cavagna A, Cimarelli A, Giardina I, et al. Scale-free
+correlations in starling ﬂocks. Proc Natl Acad Sci USA
+2010;107(26):11865–70.
+167. Cavagna A, Giardina I, Orlandi A, et al. The STARFLAG
+handbook on collective animal behaviour: Part I, empirical
+methods. arXiv preprint: 0802.1668; 2008.
+168. Toner J, Tu YH. Flocks, herds, and schools: A quantitative
+theory of ﬂocking. Phys Rev E1998;58(4):4828–58.
+169. Zienkiewicz AK, Ladu F, Barton DAW, et al. Data-driven
+modelling of social forces and collective behaviour in zebraﬁsh.
+J Theor Biol2018;443:39–51.
+170. Escobedo R, Lecheval V, Papaspyros V, et al. A data-driven
+method for reconstructing and modelling social interactions in
+moving animal groups. Philos Trans R Soc Lond B Biol Sci
+1807;2020(375):20190380.
+171. Song X, Shao XW, Zhang QS, et al. A fully online and
+unsupervised system for large and high-density area
+surveillance: Tracking, semantic scene learning and
+abnormality detection. ACM Trans Intell Syst Technol2013;4
+(2):35
+.
+172. Kratz L, Nishino K. Going with the ﬂow: Pedestrian efﬁciency
+in crowded scenes. In: Computer vision – ECCV 2012. Berlin:
+Springer; 2012. p. 558–72.
+173. Rodriguez M, Sivic J, Laptev I, et al. Data-driven crowd
+analysis in videos. In: 2011 international conference on computer
+vision. Piscataay: IEEE Press; 2011. p. 1235–42.
+174. Bera A, Manocha D. Realtime multilevel crowd tracking using
+reciprocal velocity obstacles. In: 2014 22nd international
+conference on pattern recognition. Piscataay: IEEE Press;
+2014. p. 4164–9.
+175. Kar AK, Aswani R. How to differentiate propagators of
+information and misinformation–Insights from social media
+analytics based on bio-inspired computing. J Inf Optim Sci
+2021;42(6):1307–35.
+20 C. WANG et al.

@@ -1,0 +1,2126 @@
+
+
+===== PAGE 1 =====
+Collective behavior in biophysical
+systems
+From patterns in non-equilibrium protein systems to
+growth dynamics of cell populations
+Jonas Sebastian Denk
+Munich 2018
+
+===== PAGE 2 =====
+©2018 Jonas Sebastian Denk
+
+===== PAGE 3 =====
+Collective behavior in biophysical
+systems
+From patterns in non-equilibrium protein systems to
+growth dynamics of cell populations
+Jonas Sebastian Denk
+A dissertation submitted
+to the Faculty of Physics at the
+Ludwig–Maximilians–Universität München
+for the degree of
+Doctor rerum naturalium
+Munich, 8th September 2018
+
+===== PAGE 4 =====
+First referee: Prof. Dr. Erwin Frey
+Second referee: Prof. Dr. Ulrich Gerland
+Day of the oral examination: 22nd October 2018
+
+===== PAGE 5 =====
+Zusammenfassung (Summary in German)
+Meine Doktorarbeit behandelt kollektive Phänomene in drei unterschiedlichen Berei-
+chen der Nichtgleichgewichts-Biophysik. Diese Bereiche sind Reaktions-Diﬀusions
+Systeme, Aktive Systeme und bakterielle Ökosysteme. Durch eine ständige Energie-
+zufuhr in Form von ATP, GTP oder Nährstoﬀen sind die Bestandteile der jeweiligen
+Systeme dauerhaft im Nichtgleichgewicht. Durch diese Energiezufuhr können die
+Bestandteile molekulare Reaktionen ausführen, sich gerichtet bewegen oder wach-
+sen. Außerdem unterscheiden sich die behandelten Systeme durch die Art und
+Längenskalen der auftretenden Interaktionen. Dies führt zu einem breiten Spektrum
+kollektiver Phänomene, welche auf unterschiedlichen Mechanismen basieren.
+I Musterbildung in Reaktions-Diﬀusions-Systemen
+mit Jacob Halatek, Simon Kretschmer, Fridtjof Brauns, Caroline Hartl, Korbinian
+Pöppel, Petra Schwille und Erwin Frey.
+Der erste Teil meiner Arbeit befasst sich mit Musterbildung der sogenannten
+Min Proteine. Das Min System ist maßgebend beteiligt an der Positionierung des
+kontraktilen Ringes in Bakterien und ist beispielhaft für musterbildende Reaktions-
+Diﬀusions-Systeme in der Zelle. Es umfasst die Proteine MinC, MinD und MinE,
+welche im Zytosol diﬀundieren, oder an die Membran binden und dort molekulare
+Reaktionen ausführen können. Im ersten Projekt kollaborierten wir mit Simon
+Kretschmer und Petra Schwille des MPI für Biochemie (Martinsried) und zeigten,
+dass ein gegenseitiger ‘Switch’ molekularer Konformationen in Proteinen essenti-
+ell ist für die robuste Bildung von Proteinmustern. Die Ergebnisse dieser Studie
+wurden veröﬀentlicht in “MinE conformational switching confers robustness on
+self-organized Min protein patterns”, Proc. Natl. Acad. Sci. (2018), (abgedruckt im
+Unterkapitel I.2). In einem weiteren Projekt untersuchten wir Musterselektion in
+einem räumlich reduzierten mathematischen Modell des Min Systems. Hier identiﬁ-
+zierten wir einen Übergang von regelmäßigen zu turbulenten Mustern basierend auf
+einer Ein-Moden-Instabilität (Unterkapitel I.3).
+II Selbstorganisation in aktiven Systemen
+mit Lorenz Huber, Emanuel Reithmann, Timo Krüger und Erwin Frey.
+Im zweiten Teil meiner Doktorarbeit liegt der Fokus auf kollektivem Verhalten
+in Systemen aktiver Teilchen, d.h. Teilchen, welche interne Energie oder Energie
+aus ihrer Umgebung in gerichtete Bewegung umwandeln. Das erste Projekt dieses
+Kapitels ist motiviert durch beobachtete Ringmuster in Rekonstitutionsexperimenten
+mit FtsZ-Polymeren. FtsZ Polymere sind Hauptbestandteile des kontraktilen Ringes
+
+===== PAGE 6 =====
+vi
+in Bakterien und damit zentral für die Zellteilung. Wir untersuchten das kollektive
+Verhalten von aktiven, gekrümmten Polymeren mathematisch und identiﬁzierten
+eine Phase von Vortexmustern für mittlere Polymerdichten. Die Ergebnisse dieser
+Studie wurden veröﬀentlicht in “Active Curved Polymers Form Vortex Patterns on
+Membranes”, Phys. Rev. Lett. 116, 178301 (2016), (abgedruckt im Unterkapitel II.2).
+In einem weiteren Projekt (Unterkapitel II.3), entwickelten wir eine allgemeinere
+BeschreibungaktiverSystememitgemischterInteraktionssymmetrie.Hierfandenwir
+eine interessante Rückkopplung zwischen Musterbildung und Symmetriebrechung,
+welche zur Koexistenz verschiedener Symmetrien führen kann.
+III Ökologischer Selbstmord in Mikroben
+mit Christoph Ratzke und Jeﬀ Gore.
+Das letzte Projekt meiner Doktorarbeit behandelt kollektive Phänomene in bak-
+teriellen Ökosystemen. Diese Studie begann während meines dreimonatigen For-
+schungsaufenthaltes in der Gruppe von Jeﬀ Gore am MIT (Cambridge, USA), wo
+ich hauptsächlich Experimente an räumlich gemischten Kulturen von Bodenbak-
+terien durchführte. Wir fanden, dass manche Bakterienpopulation während ihres
+Wachstums den pH-Wert ihrer Umgebung so verändern, dass es nachteilig für sie
+ist und sogar zum Aussterben der Population führen kann. Wir zeigten weiter, dass
+dieses selbst-verschuldete Aussterben zu einigen interessanten und auch überra-
+schenden kollektiven Eﬀekten führt. Zum Beispiel fanden wir Oszillationen in der
+Populationsgröße und einen Rettungsmechanismus von bakteriellen Populationen
+durch für Bakterien schädliche Substanzen wie s.B. Antibiotika. Die Ergebnisse
+dieser Studie wurden veröﬀentlicht in “Ecological suicide in microbes”, Nat. Ecol.
+Evol., 2(2018) 867, (abgedruckt im Unterkapitel III.2)
+
+===== PAGE 7 =====
+Overview of the thesis
+My thesis deals with collective behavior in three prototypic ﬁelds of nonequilibrium
+biophysics. These are reaction-diﬀusion systems, active matter systems and ecolo-
+gical networks. All of the studied systems are driven out of equilibrium due to a
+constant energy supply in the form of ATP, GTP, or nutrients. This energy supply
+enables the constituents of the studied systems to undergo molecular reactions,
+propel themselves, or grow, respectively. Furthermore, interactions in these systems
+diﬀer and act on diﬀerent lengthscales. This leads to a wide range of collective
+phenonema that base on diﬀerent interesting mechanisms.
+I Pattern formation in reaction-diﬀusion systems
+with Jacob Halatek, Simon Kretschmer, Fridtjof Brauns, Caroline Hartl, Korbinian
+Pöppel, Petra Schwille, and Erwin Frey.
+The ﬁrst part of my thesis is concerned with pattern formation in the Min protein
+system. The Min system is central for positioning of the bacterial contractile ring
+during cell division and constitutes a stereotypical example for pattern forming
+reaction-diﬀusion systems in the cell. Here, the proteins MinC, MinD and MinE
+diﬀuse in the cytosol and attach to the membrane, where they undergo molecular
+reactions. In the ﬁrst project, together with our experimental collaborators Simon
+Kretschmer and Petra Schwille from the MPI of Biochemistry (Martinsried), we
+showed that a mutual switch of the proteins MinD and MinE is essential for
+robust protein pattern formation. The results of this study are published in “MinE
+conformational switching confers robustness on self-organized Min protein patterns”,
+Proc. Natl. Acad. Sci. (2018), (reprinted in section I.2). In another project
+(section I.3), we investigated pattern selection in a spatially-reduced mathematical
+model for the Min system. Here, we identiﬁed a transition from regular to turbulent
+protein patterns based on a single-mode instability.
+II Self-organization in active matter systems
+with Lorenz Huber, Emanuel Reithmann, Timo Krüger, and Erwin Frey.
+In the second part of my thesis, the focus will be on collective behavior in systems
+of active entities, i.e. entities that can transduce internal or ambient energy into
+directed motion. The ﬁrst project was motivated by ring patterns in reconstitution
+experiments of the bacterial FtsZ-polymers, which are key constituents of the
+bacterial contractile ring and thus central for cell division. We theoretically studied
+the collective behavior of active curved polymers and identiﬁed a phase of vortex
+patterns for intermediate polymer densities. The results of this work are published
+
+===== PAGE 8 =====
+viii
+in “Active Curved Polymers Form Vortex Patterns on Membranes”, Phys. Rev. Lett.
+116, 178301 (2016), (reprinted in section II.2). In another project (section II.3),
+we developed a more general theoretical description of active systems with mixed
+interaction symmetry. Here, we found an interesting feedback mechanism between
+pattern formation and symmetry breaking which can lead to coexisting symmetries.
+III Ecological suicide in microbes
+with Christoph Ratzke and Jeﬀ Gore.
+The last project of my thesis deals with collective phenomena in bacterial ecosystems.
+This work was initiated during my three-month research stay in the group of Jeﬀ
+Gore at MIT (Cambridge, USA), where I mostly performed growth experiments
+on well-mixed cultures of soil bacteria in the laboratory. When growing certain
+soil bacteria in a nutrient rich environment, we found that some bacteria alter
+their ambient pH in a way that is detrimental for them and that can even lead to
+extinction of the whole population. We showed that this self-inﬂicted death lead to
+several interesting and possibly counter-intuitive collective eﬀects. For instance,
+our results indicate oscillatory dynamics of the population size and reveal a rescue
+mechanism of bacterial populations by substances usually considered harmful for
+bacteria, such as antibiotics. The results of this study are published in “Ecological
+suicide in microbes”, Nat. Ecol. Evol., 2(2018) 867, (reprinted in section III.2).
+
+===== PAGE 9 =====
+Abstracts of the projects
+Collective (or emergent) behavior is widespread in physics and often appears in
+the context of large-scale phenomena such as phase transitions or condensation
+eﬀects. The term is used whenever interactions between individual entities lead to
+large-scale properties and dynamics of their collective, which fundamentally diﬀer
+from the behavior of the isolated constituents. Collective behavior is not restricted
+to physical phenomena but can be found in various ﬁelds of daily life including
+information spread in social networks, the dynamics of ﬁnancial markets or herding
+of animals. In particular, biological systems provide prime examples that show
+collective behavior on vastly diﬀerent lengthscales.
+During my doctoral studies, I worked on collective behavior of three diﬀerent
+bacterial systems on respectively diﬀerent lengthscales. In particular, I investigated
+protein pattern formation in reaction-diﬀusion networks, self-organization of active
+entities such as active polymers, and collective growth dynamics of well-mixed
+bacterial populations. Based on the diﬀerent interactions in each system, I identiﬁed
+diﬀerent collective phenomena and investigated their underlying mechanisms.
+In my ﬁrst project (section I.2), we worked on a mathematical description of the Min
+protein system. The Min system is critical for proper cell division in the bacterium
+Escherichia coli and forms a prototypical example of protein pattern formation [1].
+To investigate the underlying mechanisms for pattern formation, Jacob Halatek,
+Erwin Frey and I studied theoretical models based on reaction-diﬀusion networks
+for the involved proteins MinD and MinE. In close collaboration, Simon Kretschmer
+and Petra Schwille from the Max Planck Institute for Biochemistry in Martinsried,
+Germany, performedin vitroexperiments using various MinE mutants. Our com-
+bined research showed that a mutual switch between MinD and MinE is essential
+for the formation of protein patterns in a wide range of protein concentrations
+including the physiological range.
+The experiments performed by Simon Kretschmer and Petra Schwille as well as
+previous theoretical studies by Jacob Halatek suggest the emergence of turbulent
+dynamics at the onset of pattern formation. To focus on this phenomenon,
+we developed a spatially-reduced mathematical model for the Min system, which
+preserves the pattern phenomenology of previous, less accessible models (section I.3).
+On the basis of this model, we pinpoint and investigate a novel mechanism for
+turbulence induced by a single-mode instability.
+The second part of my doctoral studies was concerned with pattern formation
+in systems of self-propelled entities. Motivated by experimentally observed ring
+
+===== PAGE 10 =====
+x
+patterns of the bacterial FtsZ polymers [2], we studied the collective behavior of
+self-propelled, curved polymers on a ﬂat membrane (section II.2). We found that
+propulsion on circular tracks in combination with steric repulsion between polymers
+lead to pattern formation at intermediate polymer densities. Here, polymers
+assemble into dynamic vortex patterns reminiscent to the experimentally observed
+structures.
+In this system, the polar symmetry of polymer interactions is directly translated to
+the formation of macroscopic polar order. In contrast, recent observations in active
+polymer systems [3] give hint to emergent macroscopic symmetries that are not
+obvious from the microscopic interactions of its constituents. To investigate the
+collective behavior of active entities with more general interaction symmetry, we
+studied a system with mixed polar and nematic particle alignment (section II.3).
+For a moderate bias of polar alignment, we found a novel type of dynamic pattern
+transition where nematic bands can induce polar traveling wave patterns.
+In my last project, I worked on collective behavior of bacterial populations in the
+groupofJeﬀGoreatMITinCambridge, USA(sectionIII.2). Whereasintheprevious
+projects I employed theoretical approaches, here I mostly performed experiments and
+complemented these studies by mathematical modeling. In particular, we revealed a
+negative feedback between population growth and a change in the environmental pH
+which can lead to a self-inﬂicted death of the bacterial population. Our experiments
+show interesting non-monotonous growth dynamics and several, possibly counter-
+intuitive phenomena such as the rescue of bacteria by substances that are usually
+considered harmful for them.
+I MinE conformational switching confers robustness on self-organized Min
+protein patterns
+with Jacob Halatek, Simon Kretschmer, Caroline Hartl, Petra Schwille, and Erwin
+Frey.
+Summary
+In the ﬁrst project of my doctoral studies, I investigated the reaction-diﬀusion net-
+work that underlies protein pattern formation in the bacterial Min system. Whereas
+previous mathematical models [4, 5] were able to reproduce the experimentally
+observed pattern phenomenology, the concentration range of patterns in experi-
+ments is signiﬁcantly larger than predicted by these theories. In particular, previous
+theory predicted that pattern formation is only possible when MinD exceeds MinE
+in concentration; however, this is in stark contrast to experimentally observed Min
+patterns also for MinE being much more abundant than MinD [6].
+Based on recent experimental evidence [7], we extended a previous mathematical
+model [4, 5] by a fast molecular switch of MinE. More speciﬁcally, in the extended
+model MinE undergoes a MinD-induced conformational switch from a state of low
+
+===== PAGE 11 =====
+Abstracts of the projects xi
+to a state of high MinD binding aﬃnity. By combining linear stability analyses and
+numerical simulations, we theoretically studied the concentration regime compatible
+with pattern formation. Our analyses suggest that the included switch of MinE
+dramaticallyincreasestheMinEconcentrationrangeofpatternformation. Especially,
+it also enables patterns when MinE is much more abundant than MinD.
+Our collaborators Simon Kretschmer and Petra Schwille from the Max-Planck
+institute for biochemistry in Martinsried were able to test our theoretical predictions
+in reconstitution experiments with MinE mutants. In agreement with our theory,
+they ﬁnd that when disabling MinE’s conformational switch, the MinE concentration
+range in which patterns form is drastically reduced and falls to values much lower
+than the MinD concentration.
+Given the ubiquity of molecular switches in protein networks [8, 9], our study
+suggests that mutual switching between proteins constitutes a common design
+principle to ensure robustness of patterns with vital function in the cell.
+Background
+Bacterial cell division is coordinated by a large set of proteins. The tubulin
+homologue FtsZ plays a prominent role, as it forms the Z-ring at the future division
+site [10, 11]. The Z-ring recruits further cell division proteins and thereby initiates
+the formation of a division septum and facilitates cell constriction. Placement of
+the Z-ring at midcell is important for cell division into two equally sized daughter
+cells. While the proteins of the cell division machinery are largely conserved across
+various bacteria, the proteins that are involved in the positioning of the Z-ring are
+not [12, 13]. InEscherichia coli, placement of the Z-ring is coordinated by the Min
+system which consists of the proteins MinC, MinD, and MinE [1]. Here, MinD
+and MinE self-organize into pole-to-pole oscillations that establish a time-averaged
+concentration minimum of MinC at midcell. Since MinC acts as an inhibitor of
+FtsZ, the Min system thereby conﬁnes the division machinery to mid-cell. The
+self-organization of MinD and MinE into protein patterns has not only been observed
+in the cell, but could also be reconstituted on ﬂat supported lipid bilayers [6].
+Experimental as well as theoretical studies have helped to gain insights into the
+reaction network underlying this self-organization process [1]. MinD is an ATPase
+that dimerizes in the presence of ATP and then binds to the plasma membrane
+where it can recruit further MinD. Membrane-bound MinD also recruits its ATPase-
+activating protein MinE, which then form membrane-bound MinDE complexes. In
+the complex, MinE induces ATP hydrolysis by MinD followed by desintegration of
+the MinDE complex and release of MinE and ADP-bound MinD into the bulk. There,
+MinD exchanges ADP for ATP before it can rebind to the membrane. Mathematical
+models centered around this reaction network [4, 5, 14], which we will refer to as
+
+===== PAGE 12 =====
+xii
+skeleton network, were capable of reproducing the pattern phenomenology observed
+in vivo as well asin vitro. However, whereas theoretical studies allow patterns
+only if MinE is less abundant than MinD,in vitroexperiments show patterns for
+MinE/MinD ratios ranging between0.125 and 5 [6, 15, 16]. This contradiction
+prompts a shortcoming of the above simpliﬁed view on the Min system.
+Furthermore, recent experiments suggest an extension of the skeleton reaction
+network in terms of a revised MinE dynamics. More speciﬁcally, structural biological
+experiments [7, 17, 18] indicate that upon interaction with membrane-bound MinD,
+MinE changes from a six to a four-strandedβ sheet structure. The remaining two
+sheets are tranformed into MinD interaction helices which enable strong MinD
+binding. In addition, experiments [7, 18] indicate direct membrane interactions of
+MinE through its membrane targeting sequences.
+Motivation and research question
+The ﬁrst goal of this project was to ﬁnd a simple and meaningful extension of the
+previously studied skeleton network that can resolve the discrepancy in pattern
+robustness between this network and experiments. Given the experimental evidence
+of a conformational switch in MinE, we further wanted to elucidate the role of
+mutual switches in spatially extended protein networks. Eventually, the theoretical
+predictions of our extended network should be testable by controlled experiments.
+Here, we strongly proﬁtted from a close collaboration with Simon Kretschmer and
+Petra Schwille.
+Summary of results
+A MinD-induced switch in MinE’s binding aﬃnity to MinD enables pattern formation
+in a broad and physiological range of concentration ratios.First, we developed a
+mathematical reaction-diﬀusion network that accounts for a conformational switch
+in MinE as revealed in recent structural biology experiments. Here, MinE can be
+present in two diﬀerent modes of action. In its native, cytosolic form, MinE has a
+very low binding aﬃnity to membrane-bound MinD. However, upon interaction with
+membrane-bound MinD, MinE switches to a reactive form, which then strongly
+binds to MinD and forms a MinDE complex on the membrane. After MinE-induced
+desintegration of the MinDE complex into the bulk, we assume that relaxation of
+reactive to latent MinE happens fast but not instantaneously. Thus, there is a ﬁnite
+(albeit very short) time after desintegration in which MinE stays in its reactive
+form with a high binding aﬃnity to membrane-bound MinD. The rapid decay of
+reactive MinE into its latent form creates a spatial gradient with predominantly
+reactive MinE at the membrane and predominantly latent MinE further away from
+the membrane. This spatial separation of MinE’s two modes of action leads to an
+
+===== PAGE 13 =====
+Abstracts of the projects xiii
+interesting mechanism for pattern robustness: In membrane regions depleted of
+Min proteins, cooperative binding of MinD ﬁrst facilitates accumulation of MinD
+on the membrane (formation of a MinD zone). Importantly, a MinD zone can
+also form when MinE exceeds MinD in concentration, since recruitment of latent
+MinE is very weak. If MinE was only present in its latent conformation, MinD
+accumulation would always dominate and the dynamics would cease. However,
+after desintegration of MinDE complexes, MinE remains in its reactive form for a
+ﬁnite time. Since reactive MinE binds stronger to membrane-bound MinD than
+MinD itself, recruitment of reactive MinE is prefered over recruitment of MinD. As
+MinE’s reactive state is short-lived, it is eﬀectively restricted to a thin boundary
+layer close to the MinD zone. This thin layer of reactive MinE can then successively
+deplete the MinD zone on the membrane while a new MinD zone can build up
+at a distant region on the membrane where reactive MinE is absent. In a model
+with only one (reactive) MinE conformation, such as the original skeleton model,
+initial accumulation of MinD on the membrane is only possible when MinD is more
+abundant than MinE.
+Employing linear stabilty analyses and ﬁnite element simulations of reaction networks
+with and without MinE’s conformational switch, we could conﬁrm this intuitive
+picture. We ﬁnd that the regime of MinE/MinD concentration ratios compatible
+with pattern formation can be increased by about two orders of magnitude when
+including a conformational switch of MinE. In particular, patterns also form when
+MinE exceeds MinD in its overall concentration. Interestingly, depending on the
+recruitment rates of MinE, this is also true when the switch of MinE is so rapid
+that the cytosol layer of reactive MinE appears negligibly small as compared to the
+total extension of the cytosol. Thus, even very rapid conformational switches can
+be important for pattern forming systems since they spatially separate diﬀerent
+modes of action.
+To test our theoretical predictions, we collaborated with Simon Kretschmer and
+Petra Schwille, who were able to reconstitute various MinE variants on lipid bilayer
+assays. More speciﬁcally, they inserted point muations L3E, I24N as well as the
+double mutation L3E/I24N into wildtype (WT) MinE and studied the ability of these
+variants to form patterns together with MinD. Comparing, variants which feature a
+conformational switch (WT & MinE L3E) to mutants where this switch is disabled
+(MinE I24N & MinE L3E/I24N), we found excellent agreement with our theoretical
+predictions: whereas WT MinE and MinE L3E show patterns for a wide range of
+MinE/MinD concentration ratios, this range is dramatically decreased for MinE
+I24N and MinE L3E/I24N and falls to values much lower than one. Remarkably,
+the range of MinE/MinD concentration ratios compatible with pattern formation
+for MinE I24N and MinE L3E/I24N is below the physiological range. This suggests
+a critical role of MinE’s conformational switch even in the cell.
+
+===== PAGE 14 =====
+xiv
+Direct MinE membrane interactions do not markedly aﬀect the concentration
+range of pattern formation.Recent studies suggest that even in the absence of
+MinD, MinE can directly bind to the membrane through its membrane targeting
+sequences. While the relation between MinE-membrane interactions and MinE’s
+conformational switch is unclear, MinE-membrane interactions could in principle also
+aﬀect the robustness of patterns. Therefore, we also studied direct MinE-membrane
+interactions in our theoretical reaction-network as well as in suitable reconstitution
+experiments. Our theoretical approach shows that, in principle, direct membrane
+interactions of MinE could de- or increase the range of MinE/MinD concentration
+ratios compatible with pattern formation, depending on the choice of reaction rates.
+In vitroexperiments by Simon Kretschmer and Petra Schwille eventually showed,
+that membrane interactions do not markedly aﬀect this concentration range: MinE
+variants with possible direct membrane interactions (WT & MinE I24N) displayed
+patterns in the same range of MinE/MinD concentration ratios as their respective
+counterparts with disabled membrane interactions (MinE L3E & MinE L3E/I24N).
+In terms of our mathematical models, this suggests that direct MinE-membrane
+interactions do not have to be taken into account to observe pattern formation in
+a broad range of protein concentrations.
+The skeleton network serves as useful basis for studying pattern formation in the Min
+system. In the MinE L3E/I24N double mutant, both, membrane interactions and
+the MinE-MinD interaction switch, are disabled. This variant thus closely emulates
+the MinE dynamics in the original skeleton network. This mutant still self-organizes
+into dynamic protein patterns, albeit only in a narrow range of MinE/MinD ratios.
+In particular, we observe patterns only when MinD exceeds MinE in concentration,
+conﬁrming previous theoretical predictions based on the skeleton network [5]. This
+agreement between theory and experiment, consolidates the skeleton network as
+suitable and useful basis to theoretically study Min pattern formation at least for a
+suitable choice of low MinE/MinD concentration ratios.
+Relevance and outlook
+The Min protein system forms a prototypical example of intracellular pattern
+formation [13]. While previous studies mostly focused on the switch of MinD’s
+nucleotide state, our work emphasizes the critical role of MinE’s functional switch
+for pattern robustness. In fact, functional switches are ubiquitous in pattern
+forming protein networks. They appear in the form of nucleoside triphosphatases
+(NTPases) [8, 19], which are involved in ﬂagellar patterning, chemotaxis arrays or
+even in eukaryotic cells in the polarization of budding yeast. But they have also
+gained recent attention in the form of metamorphic proteins [9], which can reversibly
+switch between alternative conformations with distinct functions. Prominent
+examples for metamorphic proteins include KaiB, which plays an important role in
+
+===== PAGE 15 =====
+Abstracts of the projects xv
+the KaiABC system, a prominent protein oscillator that serves as a circadian clock
+in cyanobacteria [20].
+Our work suggests, that mutual switching of proteins is critical to enable pattern
+formation in a wide range of protein concentrations. A large concentration regime
+of patterns could allow the system to adjust certain features of patterns such as the
+wavelength or period by changing protein concentrations respectively. Furthermore,
+in the course of evolution the ability to form patterns in a large range of protein
+concentrations is essential to allow for protein mutations while the key functions of
+the organism, such as protein patterning, remain intact.
+While our work identiﬁed the critical role of the MinE dynamics, a better understand-
+ing of the MinD dynamics based on controlled (reconstitution) experiments remains
+a major challenge for future research. Furthermore, a quantitative comparison of
+in vitroand in silicopattern phenomenology including standing waves, traveling
+waves or also more irregular patterns would yield insights into the key mechanisms
+that underly pattern selection.
+The results from this project were published in “MinE conformational switching
+confers robustness on self-organized Min protein patterns”, Proc. Natl. Acad. Sci.
+(2018), and are reprinted in section I.2.
+II Single-mode turbulence and a spatially-reduced model for intracellular
+pattern formation
+with Jacob Halatek, Fridtjof Brauns, Korbinian Pöppel and Erwin Frey.
+Summary
+The second project of my doctoral studies deals with pattern selection in thein
+vitro Min system. Here, we developed a spatially simpliﬁed reaction-diﬀusion model
+of the above-mentioned skeleton network. In this model, the complete vertical bulk
+extension is reduced to a bulk layer further away from the membrane coupled to
+a bulk-membrane layer close to the membrane. Thistwo-layer modelrepresents
+a dramatic reduction of the original skeleton model in terms of complexity and
+numerical eﬀort; nevertheless, it reproduces the full pattern phenomenology of
+the original skeleton model. On the basis of this simpliﬁed model, we focused on
+the onset of pattern formation, i.e. on protein densities close to their threshold
+value beyond which proteins self-organize into patterns. Combining linear stability
+analyses with ﬁnite element simulations, we ﬁnd that close above the onset of
+pattern formation the system approaches a turbulent state induced by a‘single-
+mode instability’. By varying the system length, we identify a transition between
+regular standing wave patterns and turbulent dynamics. Finally, we explore a further
+reduced model with discretized lateral extension and show that the signature of
+this transition is retained even for a very coarse discretizaton.
+
+===== PAGE 16 =====
+xvi
+Background
+Previous experimental [21, 22] as well as theoretical [23] studies on the Min
+system inin vitrogeometry observed a rich pattern phenomenology when varying
+parameters such as protein densities or the system height. Especially, at the onset
+of pattern formation, the Min system displays irregular protein patterns on the
+membrane, which are replaced by more regular patterns further away from the
+onset [22, 23]. This is in contrast to the conventional notion of pattern formation,
+where irregular patterns are explained on the basis of a nonlinear coupling of many
+unstable modes far beyond the onset of patterns [24, 25]. While irregular protein
+patterns in the Min system have been repeatedly reported in theory and experiments,
+their underlying mechanism is largely elusive.
+Motivation and research question
+In this project we asked what mechanisms determine protein pattern formation and
+selection in the Min system, especially at the onset of pattern formation. More
+speciﬁcally, we wanted to understand how complex patterns such as turbulence
+emerge and if they can be related to analytically accessible properties of the system
+such as dispersion relations.
+Summary of results
+The spatially extended Min skeleton model can be reduced to a two-layer model.
+Experimental and theoretical studies suggest that the relevant protein dynamics in
+the bulk happens within a layer very close to the membrane; however, neglecting
+the bulk extension does not provide a meaningful description of the membrane-bulk
+ﬂux [26]. In this project, we showed that the protein ﬂux between a reactive
+membrane and an extended bulk can be reduced to a single bulk layer further away
+from the membrane, coupled to a bulk-membrane layer close to the membrane. For
+a suitable choice of the thicknesses of the these two layers, we identify regimes of
+diﬀerent patterns as a function of protein concentrations. In detail, we ﬁnd regimes
+of standing wave patterns, traveling wave patterns, homogeneous oscillations, as
+well as more irregular, turbulent dynamics in very well agreement with the original,
+spatially extended Min skeleton model.
+A single-mode instability can induce chemical turbulence and explain a transition
+between regular and turbulent patterns.In agreement with previous experimental
+observations as well as theoretical studies, our spatially-reduced two-layer model
+displays turbulent protein patterns close to the onset of pattern formation. By
+linear stability analyses, we show that the emergence of turbulent dynamics is
+induced by a single-mode instability on the largest lengthscale of the (periodic)
+system. In other words, only the ﬁrst mode of a wave-like perturbation in the
+
+===== PAGE 17 =====
+Abstracts of the projects xvii
+membrane protein density has a positive growth rate. A systematic variation of this
+lengthscale by varying the system’s lateral extension reveals a transition between
+regular standing wave patterns and turbulence. We ﬁnd turbulence whenever the
+wavelength with the largest (positive) growth rate is smaller than the length of the
+system. Otherwise, i.e. when this wavelength is larger than the system length, the
+protein densities on the membrane assume regular standing wave patterns. The
+transition between regular and turbulent patterns thus critically depends on the
+wavelength with the maximal growth rate, albeit this wavelength might not obey
+the (periodic) boundary conditions of the system. To investigate the role of the
+lateral extension in the two-layer model, we also employed a lateral discretization.
+Our results suggest that while a coarse discretization may not be able to resolve the
+resulting regular or turbulent patterns, the transition between diﬀerent lengthscales
+of patterns based on a single-mode instability is preserved even for a very coarse
+discretization.
+Relevance and outlook
+The spatial reduction of the Min skeleton network provides a numerically feasible
+and meaningful basis to study pattern formation in systems where a reactive surface
+is coupled to a diﬀusive bulk. Such systems are not only ubiquitous in intracellular
+pattern forming systems [8, 13], but can also be found in more general model
+networks such as in the catalytic carbon monoxide oxidation on platinum [27, 28].
+Our observation of turbulence at a single-mode instability hints towards a necessary
+rethinking of conventional theories of nonlinear systems where turbulence typically
+involves the coupling of multiple unstable modes on various lengthscales. Further-
+more, our work sheds new light on the important role of the dispersion relation for
+pattern selection.
+III Active polymers form vortex patterns on membranes
+with Lorenz Huber, Emanuel Reithmann, and Erwin Frey.
+Summary
+In the next project of my doctoral studies, I theoretically investigated the collective
+motion and pattern forming behavior of curved, self-propelled polymers on a ﬂat
+membrane. This project was largely motivated by recentin vitroexperiments where
+Loose and Mitchison found dynamic ring patterns of treadmilling FtsZ polymers on
+a supported lipid bilayer [2].
+We addressed the dynamics of curved, active polymers on microscopic and meso-
+scopic length scales by employing Brownian dynamics simulations and a kinetic
+Boltzmann approach, respectively. In our Brownian dynamics simulations, we
+
+===== PAGE 18 =====
+xviii
+assumed elastic polymers with ﬁxed intrinsic curvature that move with a constant
+tangential velocity. The polymers are assumed to interact only through steric
+repulsion. We complemented this microscopic analysis with a kinetic approach, in
+which the we treated point-like particles that move clockwise on circular paths and
+undergo diﬀusion and binary collisions. Here, collisions were assumed to have polar
+symmetry, i.e. two interacting particles fully line up along their average propulsion
+direction (half-angle alignment). In both approaches, we identiﬁed diﬀerent regimes
+of collective behavior depending on the particle density and noise level. In particular,
+we ﬁnd a regime of dynamic vortex patterns for intermediate density and noise
+values. In this regime, our Brownian dynamics simulations display rotating ring
+patterns reminiscent to the experimentally observed ring patterns of FtsZ polymers.
+In addition to our Brownian dynamics and kinetic approaches, we derived a hydro-
+dynamic theory for the density and the polar order ﬁeld. Interestingly, the equation
+for the polar order constitutes a generalization of the complex Ginzburg-Landau
+equation, which is prominent for its rich pattern phenomenology.
+Background
+As mentioned in the context of my ﬁrst project, intracellular pattern formation of
+the Min proteins is important to guide the Z-ring and the cell division machinery to
+midcell. Yet, Z-ring formation and cell constriction are poorly understood, especially
+since no FtsZ-associated motor proteins are known [29] and lateral interactions
+are weak [30]. Experiments have shown that FtsZ polymerizes into ﬁlaments
+whose intrinsic curvature may depend on FtsZ’s nucleotide state [31]; moreover,
+FtsZ polymers exhibit treadmilling dynamics upon ATP consumption [2, 32]. To
+gain insight into the formation of the Z-ring, Loose and Mitchison [2] recently
+investigated a reconstitutedin vitromodel system. Here, FtsA and ZipA, the key
+anchor proteins for FtsZ, were used to recruit FtsZ from solution to a supported
+lipid membrane where FtsZ form curved polymers. Due to treadmilling and the
+anchoring process, these polymers move clockwise on circular paths. Moreover,
+depending on the anchor concentration, FtsZ polymers assemble into a variety of
+dynamic patterns including rings or vortices and dense jammed bundles. In our work,
+we contributed to the theoretical understanding of these collective phenomena.
+Motivation and research question
+Intrigued by the dynamic ring patterns of FtsZ polymers, observed by Loose and
+Mitchison, we asked how such collective behavior can emerge in spite of the
+absence of attractive interactions between the polymers. What are the underlying
+mechanisms that lead to ring patterns for some conditions and diﬀerent patterns
+such as jammed bundles for altered conditions?
+
+===== PAGE 19 =====
+Abstracts of the projects xix
+Summary of results
+Vortex patterns form for intermediate polymer densities and noise levels.In our
+Brownian dynamics simulations, we ﬁxed the details of polymers such as their
+length and curvature to values consistent with experiments. Then, the only relevant
+parameters are polymer density and the level of (stochastic) noise in the polymers’
+propulsion. By varying these two parameters, we could identify three diﬀerent
+regimes with qualitatively diﬀerent behavior. For low densities or strong noise, the
+polymers hardly interact and the system resembles an ideal gas of polymers that
+move along isolated, circular tracks. For intermediate densities and noise values,
+polymers start to cluster and assemble into rotating ring-like structures seperated by
+regions where polymers are sparse. For very high densities or weak noise, polymers
+still cluster; however, the clusters are very short-lived. They rapidly decay and
+rearrange, and do not show any macroscopic structure when averaged over time.
+We complemented our Brownian dynamics simulations by a more coarse-grained
+approach in terms of a kinetic Boltzmann equation suited to our system of propelled
+particles on circular tracks. Based on linear analyses as well as numerical simulations,
+we derived a phase diagram in terms of the overall particle density and the noise
+level. For low densities or large noise values, the disordered state is stable and
+the system does not show macroscopic order nor patterns. For very high densities
+or low noise values, the system approaches a state of homogeneous polar order
+which rotates at the frequency of a single particle. Interestingly, for intermediate
+densities and noise values, we ﬁnd dynamic vortex patterns. Here, high-density polar
+ﬂocks move along circular tracks and are separated by a low-density, disordered
+background. Thus, though our two approaches involve diﬀerent levels of description
+(agent-based vs. ﬁeld based) on diﬀerent lengthscales, they both feature a phase of
+vortex patterns. Furthermore, vortex patterns are restricted to a parameter regime
+of intermediate densities and noise levels. Too low and too high densities lead to a
+disordered gas-like state and a state without macroscopic structure, respectively.
+Extended polymers assemble into closed rings, reminiscent to experimental ob-
+servations. While both of our approaches yield vortex patterns for intermediate
+densities and noise values, the structure of these vortex patterns diﬀer. In the
+kinetic Boltzmann approach for pointlike particles, we observe circling high-density
+ﬂocks. In contrast, our Brownian dynamics simulations for extended polymers
+display rotating ring-structures. Here, we found that the polymer length and
+curvature in combination with the persistence length is critical for the structure
+of patterns. For instance, for very short polymers we observe ﬂocks that move on
+circular tracks; thus the formation of closed rings is lost. For polymer lengths and
+curvatures similar to those reported by Loose and Mitchison, we ﬁnd closed ring
+patterns reminiscent to the FtsZ-polymer rings in their experiments.
+
+===== PAGE 20 =====
+xx
+A generalized ﬁeld decription connects active matter theories to the complex
+Ginzburg-Landau equation. On the basis of the kinetic Boltzmann equation, we
+derived a hydrodynamic theory for the density and the polar order ﬁeld close to the
+onset of macroscopic order. The circular motion of the particles is inherited into
+the equation for the polar order ﬁeld in terms of complex coupling coeﬃcients. In
+detail, the equation for the polar order ﬁeld contains convective terms resulting from
+particle propulsion as well as terms also present in the complex Ginzburg-Landau
+equation [33]. Our hydrodynamic equations thus couple previous active matter
+theories, where coupling coeﬃcients were real, to the well-studied complex Ginzburg-
+Landau equation, which is prominent for its rich pattern phenomenology. Numerical
+solutions of the derived hydrodynamic equations reveal dynamic vortex patterns
+consistent with the observation of vortex patters in our Brownian dynamics and
+kinetic Boltmann approaches. Furthermore, these numeric solutions hint towards
+more complex patterns including irregular, turbulent dynamics.
+Relevance and outlook
+In combination, our Brownian dynamics and kinetic approaches strongly suggest that
+a phase of vortex structures at intermediate densities is a generic feature in systems
+of circling entities. The critical role of polymer density is especially interesting from
+a biological perspective, since protein densities are typically dynamically regulated
+in the cell. Indeed, very recent experimental reconstitution experiments on systems
+of FtsZ polymers conﬁrm our theoretical prediction and found that the formation
+of vortex structures is restricted to a narrow regime of intermediate densities [34].
+Furthermore, our study sheds light on the relation between microscopic particle
+shape as well as their interaction to the macroscopic structure of emergent patterns.
+In particular, we found closed ring structures only for a suitable combination of
+polymer length and bending stiﬀness; a prediction that should be testable in future
+experiments.
+In a broader context, our hydrodynamic description combines active convection
+terms with the complex Ginzburg-Landau equation and thereby bridges the gap
+between active matter theories of straight-moving particles and theories of nonlinear
+oscillators. Preliminary numerical solutions of our hydrodynamic equations suggest
+interesting novel phenomena including vortex patterns and turbulent dynamics. A
+more detailed analysis of these equations poses an interesting challenge for future
+research.
+The results from this project were published in “Active Curved Polymers Form
+Vortex Patterns on Membranes”, Phys. Rev. Lett. 116, 178301 (2016), and are
+reprinted in section II.2.
+
+===== PAGE 21 =====
+Abstracts of the projects xxi
+IV Coexisting symmetries in active matter systems
+with Lorenz Huber, Timo Krüger, and Erwin Frey.
+Summary
+This project of my doctoral thesis deals with systems of self-propelled particles
+with mixed collision symmetry. Motivated by recent experimental and numerical
+studies by Lorenz Huber, Timo Krüger, Erwin Frey, and collaborators [3], we
+theoretically studied systems of propelled particles that align their orientation with
+a small, tunable bias to polar (i.e. head-to-head) alignment. We implemented such
+alignment rule in a kinetic Boltzmann approach and studied the respective kinetic
+Boltzmann equation by means of stability analyses as well as numerical simulations.
+For small and large polar bias, we recover the well-studied scenarios of purely
+nematic and polar symmetry, respectively. In particular, above a critical density
+the systems forms macroscopic nematic or polar order for small or large polar bias,
+respectively. For intermediate polar bias, our analyses reveal a second transition
+density, beyond the onset density to macroscopic nematic order. For densities above
+this second transition, the system forms macroscopic polar order. Interestingly,
+between the two transition densities, our study reveals dynamic transitions from
+nematic to polar patterns and even features patterns of alternating polar and nematic
+symmetry. Based on the notion of local instabilities in the nonlinear dynamics, we
+propose a hydrodynamic description for the polar, and the nematic order ﬁelds.
+These hydrodynamic equations reproduce the pattern phenomenology of our kinetic
+Boltzmann approach and also capture the more complex phenomenology observed
+in [3].
+Background
+Whenever energy is consumed and transduced into local mechanical forces, a system
+is called active [35]. Thus, active matter constitutes a major part of biological
+systems and can be found on various lengthscales ranging from the cytoskeletal
+network, to bacterial colonies and even to herds of animals [36]. The interactions
+between individual entities of an active system can lead to intriguing collective
+eﬀects. When the entities transduce their available energy into directed motion,
+aligning interactions among the individuals can lead to phenomena such as ﬂocking
+or collective motion. While theories of propelled agents yielded important insights
+into these large-scale phenomena [37], they were mostly based onad hocsymmetry
+assumptions regarding the agents’ interactions. Such assumptions are, however,
+hard to test in a real biological system where the constituents may undergo intricate
+interactions which (possibly) defy simple interaction rules. Recent experimental
+studies on an actomyosin motility assay [3] indeed showed that the symmetry of
+emergent patterns may not be evident from simple symmetry arguments but can
+
+===== PAGE 22 =====
+xxii
+be a dynamic and emergent property of the system. Here, together with their
+collaborators, Lorenz Huber, Timo Krüger and Erwin Frey observed coexistence as
+well as dynamic transitions between patterns of diﬀerent symmetries.
+Motivation and research question
+How does the system choose between diﬀerent symmetries, when interactions allow
+more than one symmetry? Can the symmetry of macroscopic patterns diﬀer from
+the symmetry of the underlying interactions on the microscale? Intrigued by these
+questions and the recently observed coexistence of polar and nematic patterns [3],
+we wanted to understand the mechanisms of pattern formation and selection when
+the symmetry of a system depends on the systems’ dynamics.
+Summary of results
+A mixed collision rule enables a transition from nematic to polar symmetry.The
+studies by Huber et al. [3] suggest that even a small bias towards polar alignment
+can lead to interesting new dynamics as compared to unbiased, nematic alignment.
+Motivated by this ﬁnding, we employed a kinetic Boltzmann ansatz where particles
+undergo binary nematic alignment with a small (tunable) polar bias. Based on
+linear stability analyses, we identiﬁed diﬀerent phases of collective behavior as a
+function of density and polar bias. Consistent with previous studies [36], our phase
+diagram suggests nematic and polar patterns for respectively small and large polar
+bias at intermediate densities. For large densities, these patterns are replaced by
+respectively homogeneous nematic and polar order. For moderate polar bias we ﬁnd
+another critical density above which purely nematic order is linearly unstable and
+polar order is predicted to grow. Indeed, by numerical solutions of the homogeneous
+Boltzmann equation, we conﬁrm this transition from nematic to polar order for
+intermediate polar bias.
+Pattern formation enables dynamic transitions between states of diﬀerent sym-
+metries. To gain insights into the nonlinear dynamics especially in the regime
+where linear stability predicts density patterns, we numerically solved the kinetic
+Boltzmann equation for diﬀerent polar bias and average densities. For small and
+large polar bias, we recover the well-studied nematic band patterns and traveling
+wave solutions, respectively. Remarkably, in the nematic phase and for intermediate
+polar bias we observe a dynamic transition from nematic band patterns to polar
+patterns: First, the system forms high-density nematic bands as for small polar
+bias. After some time, polar order forms within these bands and leads to polar
+traveling patterns along the band orientation. Depending on the system size and
+the initial conditions, this dynamic transition can lead to a total replacement of
+nematic bands by polar traveling waves, dynamic rearrangements of bands or even
+alternating local dominance of polar and nematic patterns.
+
+===== PAGE 23 =====
+Abstracts of the projects xxiii
+A hydrodynamic approach consolidates the notion of a dynamic pattern transition
+based on a local destabilization.Our numerical solutions of the kinetic Boltzmann
+equation suggest that dynamic transitions from nematic to polar patterns are
+induced by local destabilizations of nematic bands. In detail, although the average
+density of the system lies in the purely nematic phase, the density distribution into
+nematic bands can locally push the density beyond the transition to polar order
+and thereby induce local growth of polar order. Based on this notion and previous
+hydrodynamic desriptions of purely nematic systems, we propose hydrodynamic
+equations for the polar and the nematic order ﬁelds with variable coupling strength
+between these ﬁelds. Interestingly, these equations yield a phase diagram in terms of
+this coupling strength and density which closely resembles the phase diagram of the
+kinetic Boltzmann equation with mixed colllsion symmetry. Numerical integration
+of the hydrodynamic equations reveals dynamic pattern transitions akin to the ones
+observed in our kinetic Boltzmann approach. Moreover, for large systems, we ﬁnd
+more complex dynamics reminiscent to the experimental and numerical observations
+by Huber et al. [3]. In detail, we ﬁnd dynamic bands that buckle, merge, decay
+and coexist with polar waves, which themselves rearrange, splay and interact with
+bands and among each other.
+Relevance and outlook
+In the context of symmetry breaking in active matter, our results show that the
+symmetry of macroscopic patterns can critically depend on the dynamics of the
+system. This reveals a novelmutual feedback mechanism between pattern formation
+and symmetry breaking. We argue that this feedback can be understood at the level
+of stability of local steady states. This notion, which was recently also proposed
+for reaction-diﬀusion systems [23], should be testable by a systematic manipulation
+of local densities in controlled experiments and numerical simulations.
+V Ecological suicide in microbes
+with Christoph Ratzke and Jeﬀ Gore.
+Summary
+In the last project of my doctoral studies I investigated the collective behavior in
+bacterial populations. Unlike in the other projects, I mostly performed experiments
+in the laboratory and employed theory only to test and consolidate our intuition
+gained from these experiments. This project was initiated during my three-month
+research stay in the group of Jeﬀ Gore at MIT in Cambridge, USA.
+Here, we studied the collective growth dynamics of soil bacteria in well-mixed
+culture experiments. Consistent with previous studies by Christoph Ratzke and
+
+===== PAGE 24 =====
+xxiv
+Jeﬀ Gore, we found that for some soil bacteria, population growth resulted in
+a severe change in the pH of their medium. This pH change can in turn feed
+back onto bacterial growth. In particular, we identiﬁed a negative feedback where
+population growth is followed by a fatal acidiﬁcation of the medium, which in turn
+can cause extinction of the population. We studied this self-inﬂicted death, which
+we also refer to asecological suicide, in controlled growth experiments and dynamic
+measurements of population size and pH. We ﬁnd that ecological suicide can lead
+to interesting, possibly counter-intuitive collective phenomena such as oscillations
+during daily dilution experiments and a possible rescue of bacterial populations by
+substances that are usually considered harmful for bacteria.
+Background
+Organisms inﬂuence each other by changing the environment they live in [38,
+39]. These environmental modiﬁcations can be positive for the organisms, like in
+the cooperative breakdown of complex nutrients in microbes, the construction of
+complex architectures of coral reefs, ant colonies or even human cities – where
+the individual proﬁts from the collective actions of her peers. There is a long
+tradition of research probing cooperative interactions between organisms and its
+large number of eﬀects in ecosystems [38, 40]. However, organisms can also change
+the environment in ways that are bad for them e.g. by resource depletion or the
+production of toxic byproducts. Recent experiments by Christoph Ratzke and Jeﬀ
+Gore focused on the collective growth behavior in soil bacteria [41]. Here, bacteria
+interact by modifying and reacting to the environmental pH which can lead to
+cooperative as well as growth-inhibiting eﬀects.
+Motivation and research question
+In this project we wanted to better understand the collective growth behavior of
+bacterial populations that alter their environment in a way that is detrimental for
+them. In particular, we were intrigued by the phenomenon of self-inﬂicted death
+observed inPaenibacillus sp.(most similar toPaenibacillus tundrae) and wanted
+to ﬁnd its underlying dynamics and ways of manipulation.
+Summary of results
+Bacteria can change their environmental pH and thereby cause their own extinction.
+Previous well-mixed growth experiments by Christoph Ratzke and Jeﬀ Gore showed
+that various soil bacteria can change their environmental pH, which in turn can
+eﬀect their population growth [41]. In this project of my doctoral studies, I mostly
+used the soil bacteriumPaenibacillus sp. and studied its population growth in the
+presence of glucose as main carbon source and at initially neutral pH. In dynamic
+
+===== PAGE 25 =====
+Abstracts of the projects xxv
+measurements of the population size and the pH, we ﬁnd an initial population
+growth followed by a strong acidiﬁcation in the medium. After this sudden drop in
+pH, the bacteria started to die, resulting in extinction of the whole population after
+24 hours. We were able to manipulate this non-monotonous growth of population
+size by changing the buﬀer concentration in the medium: For suﬃciently high buﬀer
+concentrations, the pH hardly changes and the bacterial population grows until it
+eventually reaches its carrying capacity and saturates.
+Ecological suicide can cause oscillations in the population size over time.Since Paen-
+ibacillus sp. change their environmental pH collectively, a higher initial population
+size should lead to a stronger acidiﬁcation and thereby to a lower ﬁnal population
+size. We conﬁrmed this reciprocal relation between initial and ﬁnal population size
+in culture growth experiments with diﬀerent initial bacterial densities. To study
+long-term eﬀects, we used daily dilution experiments, where in the course of11
+days, every day we diluted the bacteria from the end of the previous day to fresh
+medium with neutral pH. We did this for media with diﬀerent buﬀer concentrations
+and ﬁnd that for very low and high buﬀer concentrations, the bacterial population
+respectively goes extinct or saturates after the ﬁrst day already. For intermediate
+buﬀer concentrations, we observe oscillations in the population size that can span
+over ﬁve orders of magnitude. Employing ﬂuorescent nanobeads to track the pH
+dynamics, we ﬁnd that these oscillations are accompanied by oscillations in the
+acidiﬁcation time, i.e. the time when acidiﬁcation is strongest.
+Inhibiting growth of the bacteria can save the population.When bacterial growth
+leads to self-conﬂicted death, inhibiting growth might prevent this death. We tested
+this intuition by adding diﬀerent amounts of harmful, growth-inhibiting substances
+like salt, alcohol and antibiotics. Indeed, for moderate amounts, these substances
+were able to rescue bacteria from ecological suicide. In contrast, too low or too high
+amounts of the substances lead to ecological suicide or kill the bacteria, respectively.
+Ecological suicide is a common phenomenon in bacteria.Although we focused on
+Paenibacillus sp.in our study, many microbes are known to alter their environmental
+pH by metabolic activities [41, 42]. In24-hours growth experiments, we studied
+the pH change and population growth of119 isolated soil bacteria and identiﬁed
+the 21 species with the largest change in pH (irrespective of in- or decrease). We
+let grow these21 species in the presence of low and high buﬀer concentrations
+and found that among these species, ﬁve show ecological suicide, while another
+four at least inhibit their own growth by changing their ambient pH. The remaining
+species either change their pH in a way that promotes their growth or do not show
+an impact of their environmental pH on population growth.
+
+===== PAGE 26 =====
+xxvi
+Relevance and outlook
+Our study highlights the important role of the dynamics of the environment in which
+bacterial communities live. The mutual feedback between population growth and a
+change in the environment can lead to interesting dynamics such as monotonous
+growth and oscillations, albeit often neglected in traditional conceptions of bacterial
+growth. Our work shows that ecological suicide is in many ways a mirror image of
+prominent, well-studied cooperative interactions. We therefore think that it will be
+of similar interest especially in the context of microbial ecology and communities.
+The results from this project were published in “Ecological suicide in microbes”,
+Nat. Ecol. Evol., 2(2018) 867, and are reprinted in section III.2.
+
+===== PAGE 27 =====
+Contents
+Zusammenfassung (Summary in German) v
+Overview of the thesis vii
+Abstracts of the projects ix
+I Pattern formation in the Min protein system 1
+I.1 The Min protein system in Escherichia coli . . . . . . . . . . . . . 1
+I.2 Publication inPNAS (2018): MinEconformational switching confers
+robustness on self-organized Min protein patterns,
+J. Denk, S. Kretschmer, J. Halatek, C. Hartl, P. Schwille, and E. Frey5
+I.3 Single-mode turbulence and a spatially-reduced model for protein
+pattern formation . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+I.3.1 Spatial reduction of the Min skeleton model . . . . . . . . 64
+I.3.2 Phase diagram and pattern phenomenology of thetwo-layer
+model . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+I.3.2a Numerical solutions . . . . . . . . . . . . . . . . 70
+I.3.2b Regimes of dispersion relations . . . . . . . . . . 73
+I.3.3 The onset of pattern formation: single-mode instabilities
+and turbulence . . . . . . . . . . . . . . . . . . . . . . . . 78
+I.3.4 Towards a minimal model of protein pattern formation and
+a fully discretized Min model . . . . . . . . . . . . . . . . 81
+I.3.5 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+I.4 Conclusion and outlook . . . . . . . . . . . . . . . . . . . . . . . 86
+II Pattern formation in active systems 91
+II.1 Introduction: symmetries and order in active matter . . . . . . . . 91
+II.2 The bacterial Z-ring and FtsZ polymer self-organization
+Publication in PRL (2016): Active curved polymers form vortex
+patterns on membranes,
+J. Denk, L. Huber, E. Reithmann, and E. Frey . . . . . . . . . . . 97
+II.3 Coexisting symmetries in active matter systems . . . . . . . . . . . 127
+II.3.1 The kinetic Boltzmann equation for a collision rule with
+mixed symmetries . . . . . . . . . . . . . . . . . . . . . . 128
+II.3.1a Phase diagram . . . . . . . . . . . . . . . . . . . 129
+II.3.1b Pattern formation and dynamic transitions . . . . 136
+
+===== PAGE 28 =====
+xxviii
+II.3.2 Coexisting symmetries in active matter ﬁeld equations . . . 141
+II.3.2a Hydrodynamic equations based on the kinetic
+Boltzmann equation . . . . . . . . . . . . . . . . 141
+II.3.2b Towards minimal ﬁeld equations for coexisting
+nematic and polar patterns . . . . . . . . . . . . 144
+II.3.3 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+II.4 Conclusion and outlook . . . . . . . . . . . . . . . . . . . . . . . 153
+III Collective behavior in ecological systems 157
+III.1 Collective eﬀects in microbial games . . . . . . . . . . . . . . . . . 157
+III.2 Publication Nature Ecology and Evolution (2018): Ecological suicide
+in microbes,
+C. Ratzke, J. Denk, and J. Gore . . . . . . . . . . . . . . . . . . . 160
+III.3 Conclusion and Outlook . . . . . . . . . . . . . . . . . . . . . . . 212
+Bibliography 213
+Acknowledgements 229
+
+===== PAGE 29 =====
+I Pattern formation in the Min protein
+system
+I.1 The Min protein system inEscherichia coli
+Correct and robust positioning of proteins is crucial at many stages of bacterial
+cell division, including chromosome segregation [43, 44], midcell localization [1,
+45], and cell wall synthesis [46, 47]. Protein positioning is typically based on the
+self-organization of protein systems [13], which can lead to intriguing intracellular
+patterns such as protein accumulation at the cell poles [13, 43], pole-to-pole
+oscillations [48, 49] (ﬁg. I.1(a)) and dynamic ring patterns [1, 32] (ﬁg. I.1(b)).
+In particular, the Min system, which consists of the proteins MinC, MinD and
+MinE, has been identiﬁed as a key component of cell division inEscherichia coli[1].
+MinC, MinD, and MinE self-organize into pole-to-pole oscillations and thereby
+establish a time-averaged concentration minimum of MinC at midcell [48, 49]. MinC
+is an inhibitor of the cell division protein FtsZ, which initiates cell wall synthesis by
+recruiting the cell division machinery [32, 50, 51]. The pole-to-pole oscillations of
+the Min proteins thus guide the cell division machinery to midcell and ensure division
+into equally sized daughter cells. Variousin vivoexperiments have shown that a
+manipulation of the Min self-organization process by mutations [7, 48, 49, 52, 53],
+protein overexpression [7, 48, 52], or changes in the cell geometry [48, 54, 55] can
+alter the pole-to-pole oscillations and lead to a variety of protein patterns including
+multiple MinC concentration minima [48], traveling wave patterns [52](ﬁg. I.1(c)),
+short axis oscillations, and circular waves [54, 55]. More recent studies even suggest
+multistability of these patterns [55].
+The ﬁrst reconstitution of the Min proteins was achieved by Loose et al. [6]
+in a lipid bilayer assay. Here, in the presence of ATP, the authors observed self-
+organization of MinD and MinE into robust surface waves on a ﬂat, supported bilayer
+(ﬁg. I.1(d)). In vitroexperiments enabled a controlled variation of parameters such
+as protein densities [15, 57, 58] and the enclosing geometry [16, 59], and gave
+access to several characteristic properties of Min patterns including wavelengths
+and velocities of patterns [15, 21, 58], and their concentration proﬁles on the mem-
+brane [15, 21]. Furthermore, these experiments have revealed interesting patterns
+such as standing, traveling and circular waves in conﬁned geometries [16, 60], as
+well as more irregular patterns [56, 57](ﬁg. I.1(e)) such as chemical turbulence [57]
+(ﬁg. I.1(f)).
+
+===== PAGE 30 =====
+2 Pattern formation in the Min protein system
+(a) (b) (c) (d)
+(e) (f) (g)
+Figure I.1Examples of protein pattern formation in the cell, in reconstitution experiments,
+and in simulations, adapted from respective publications.(a) in E. coli, the Min system
+organizes into pole-to-pole oscillations (MinD-GFP is shown) [48] (the arrow is added
+to indicate oscillations).(b) Top view of dense ring patterns formed by FtsZ polymers,
+initiating cell wall synthesis ofE. coli at midcell [51].(c) In the absence of FtsZ,E. coli
+grows into ﬁlamentous cell which lead to traveling waves (MinE-GFP is shown) [52].(d)
+In vitroMinD and MinE self-organize into spiral waves on the supported lipid bilayer (MinE
+is shown) [6].(e) Irregular “burst”-patterns observed in anin vitro ﬂowcell [56] (MinE is
+shown). (f) Chemical turbulence for small MinE concentrations at the onset of pattern
+formation (MinD is shown, see section I.2, [57])(g) Simulation results of a mathematical
+reaction-diﬀusion model for the Min system in an emulatedin vitro geometry [23].
+
+===== PAGE 31 =====
+I.1 The Min protein system inEscherichia coli 3
+Both, in vivo and in vitro experiments have yielded important insights into
+the reaction-diﬀusion network underlying the Min self-organization process [13,
+61]. MinD is an ATPase, which diﬀuses in the cytosol and can attach to the
+plasma membrane, depending on its nucleotide state [8, 13]. More speciﬁcally,
+ATP-bound MinD dimerizes and binds to the membrane [13, 62, 63], where it
+recruits further MinD as well as its cognate ATPase-activating protein MinE, which
+together form membrane-bound MinDE complexes [62]. In the complex, MinE
+stimulates ATP hydrolysis by MinD, which leads to dissociation of the MinDE
+complex and release of MinE and ADP-bound MinD into the cytosol. After exchange
+of ADP for ATP, MinD can reattach to the membrane and the cycle starts anew.
+The apparent simplicity of this ATP-driven reaction cycle together with the rich
+pattern phenomenology, has motivated numerous theoretical approaches to the
+Min system [4–6, 14, 23, 55, 64–66]. Based on the above reaction scheme, these
+theoretical descriptions were able of recapitulating various aspects of the Min
+systems such as pole-to-pole oscillations [4, 5, 14], geometry sensing [26, 54, 55]
+and the formation of various patterns inin vitro-like geometries including spiral
+waves (ﬁg. I.1(g)) and turbulent dynamics [23].
+Despite the important advances in the ﬁeld of Min pattern formation over the
+last 15 years, there are still several open questions regarding the microscopic reaction
+network of MinD and MinE, as well as the formation of large-scale protein patterns.
+For instance, recent structural biology experiments [7, 17, 18] pointed towards a
+neccessary reﬁnement of the MinE dynamics in the above reaction-diﬀusion protein
+network. In particular, the results by Park et al. [7] strongly suggest that MinE can
+switch between two diﬀerent conformational states, depending on interaction with
+MinD. While native MinE is present in a six-strandedβ sheet structure, interactions
+with membrane-bound MinD induce a conformational change in MinE to a four-
+stranded β sheet structure. The remaining two sheets are converted intoα helices,
+which serve as interaction regions with MinD. Structural biology experiments [7, 17,
+18] suggest that this conformational switch is critical for MinE’s interaction aﬃnity
+with MinD as well as the membrane; however, the role of MinE’s conformational
+switch in protein pattern formation has been unaddressed.
+In the ﬁrst section of this chapter (section I.2), we discuss the eﬀect of a
+conformational switch of MinE suggested by [7, 17, 18] on pattern formation. Here,
+in cooperation with our experimental collaborators Simon Kretschmer and Petra
+Schwille from the Max Planck Institute of Biochemistry in Martinsried, Germany,
+we extended a previous mathematical reaction-diﬀusion model of the Min system [4,
+5] by a conformational switch of MinE. We emulated the conformational switch
+suggested by [7, 17, 18] by a change in MinE’s recruitment rate to membrane-bound
+MinD upon MinE recruitment. On the basis of linear stability analyses and ﬁnite
+element simulations, our results predict that a MinD-dependent switch of MinE
+between diﬀerent MinD binding aﬃnities is central for protein pattern formation in a
+
+===== PAGE 32 =====
+4 Pattern formation in the Min protein system
+broad and physiological range of protein concentrations. This prediction is conﬁrmed
+by in vitroexperiments with suitable MinE mutuants. Here, Simon Kretschmer and
+Petra Schwille found that MinE mutants lacking a conformational switch display
+patterns in a dramatically reduced range of protein concentrations as compared to
+MinE variants capable of conformational switching. In particular, surface patterns
+could only be found when MinD exceeds MinE in overall concentration. This
+conﬁrms previous theoretical studies lacking a conformational switch of MinE [4,
+14, 23], which predicted protein patterns only when MinD is more abundant than
+MinE. Our combined results thus strongly suggest that a mutual switch between
+MinD and MinE is essential for robust Min pattern formation. The results from
+this project were published in “MinE conformational switching confers robustness
+on self-organized Min protein patterns”, Proc. Natl. Acad. Sci. (2018), and are
+reprinted in section I.2.
+On the basis of the original reaction-diﬀusion system presented above (without
+conformational switching of MinE), a recent theoretical study by Halatek et al. [23]
+was able to reproduce a variety of surface protein patterns previously observed in
+reconstitution experiments [6, 56]. In particular, Halatek et al. [23] report the
+formation of standing wave patterns, spiral waves (ﬁg. I.1(g)) as well as chemical
+turbulence as a function of the bulk height in an emulatedin vitro geometry.
+Remarkably, turbulence is observed right at the onset of pattern formation, in
+contrast to previous conceptions of pattern formation, where turbulence is typically
+induced by the nonlinear coupling of multiple unstable modes far beyond the onset
+of pattern formation [24, 25]. The observation of turbulence at the onset of pattern
+formation in [23] is consistent with our experimental observations discussed in
+section I.2 [57], where we ﬁnd turbulent surface patterns for MinE concentrations
+close to the threshold to pattern formation (ﬁg. I.1(f)). The critical role of the
+vertical bulk extension and the observation of turbulence at the onset of pattern
+formation were leading the way for the second project of this chapter, described in
+section I.3. Here, we developed a spatial reduction of the mathematical reaction-
+diﬀusion model used in [23], where the complete vertical bulk extension is reduced
+to two layers: a ‘reactive layer’ close to the membrane, which accounts for the rapid
+protein ﬂux between the bulk and the membrane, and a ‘reservoir layer’ further
+away from the membrane, which accounts for the lateral diﬀusion in the bulk.
+Employing linear stability analyses and ﬁnite element simulations, we show that
+this two-layer model reproduces the full pattern phenomenology of the original
+reaction-diﬀusion model; in particular, we identify a phase of turbulent patterns at
+the onset of pattern formation. On the basis of the two-layer model, we investigate
+the mechanisms underlying pattern selection and suggest an unprecedented route
+to turbulence based on a single-mode instability.
+
+===== PAGE 33 =====
+I.2 Publication inPNAS (2018): MinE conformational switching confers
+robustness on self-organized Min protein patterns,
+J. Denk, S. Kretschmer, J. Halatek, C. Hartl, P. Schwille, and E. Frey
+5
+I.2 Publication
+MinE conformational switching confers
+robustness on self-organized Min
+protein patterns
+by
+J. Denk1,*, S. Kretschmer2,*, J. Halatek1,*, C. Hartl1, P. Schwille2, and
+E. Frey1
+1 Arnold Sommerfeld Center for Theoretical Physics (ASC) and Center for
+NanoScience (CeNS), Department of Physics, Ludwig-Maximilians-Universität
+München, Theresienstrasse 37, D-80333 München, Germany
+2 Max-Planck-Institute of Biochemistry, Am Klopferspitz 18, D-82152 Martinsried,
+Germany
+* These authors contributed equally
+Reprinted on pages 7–33
+Published inProceedings of the National Academy of Sciences, (2018),
+DOI: 10.1073/pnas.1719801115,
+The supplemental material is reprinted on pages 34–62.
+
+===== PAGE 34 =====
+
+
+===== PAGE 35 =====
+MinE conformational switching confers robustness on self-organized Min protein patterns  Short Title: MinE fold switching makes Min patterns robust Authors:  Jonas Denk1,†, Simon Kretschmer2,†, Jacob Halatek1,†, Caroline Hartl1, Petra Schwille2,*, and Erwin Frey1,*,# 
+Affiliations: 1Arnold-Sommerfeld-Center for Theoretical Physics and Center for NanoScience, Ludwig-Maximilians-Universität München, Theresienstraße 37, D-80333 München, Germany.  2Max-Planck-Institute of Biochemistry, Am Klopferspitz 18, D-82152 Martinsried, Germany. †These authors contributed equally. *Correspondence to: schwille@biochem.mpg.de (P.S.), frey@lmu.de (E.F.) #Lead Contact.  Major Categories: Physical Sciences, Biological Sciences  Minor Categories: Biophysics and Computational Biology  Keywords: Min system, pattern formation, protein reaction-diffusion networks, conformational switching, in vitro reconstitution   
+
+===== PAGE 36 =====
+ 2 
+Abstract:  Protein patterning is vital for many fundamental cellular processes. This raises two intriguing questions: Can such intrinsically complex processes be reduced to certain core principles and, if so, what roles do the molecular details play in individual systems? A prototypical example for protein patterning is the bacterial Min system, in which self-organized pole-to-pole oscillations of MinCDE proteins guide the cell division machinery to midcell. These oscillations are based on cycling of the ATPase MinD and its activating protein MinE between the membrane and the cytoplasm. Recent biochemical evidence suggests that MinE undergoes a reversible, MinD-dependent conformational switch from a latent to a reactive state. However, the functional relevance of this switch for the Min network and pattern formation remains unclear. By combining mathematical modeling and in vitro reconstitution of mutant proteins, we dissect the two aspects of MinE's switch, persistent membrane binding and a change in MinE's affinity for MinD. Our study shows that the MinD-dependent change in MinE's binding affinity for MinD is essential for patterns to emerge over a broad and physiological range of protein concentrations. Mechanistically, our results suggest that conformational switching of an ATPase-activating protein can lead to the spatial separation of its distinct functional states and thereby confer robustness on an intracellular protein network with vital roles in bacterial cell division.       
+
+===== PAGE 37 =====
+ 3 
+Significance Statement:  Many fundamental cellular processes are spatially regulated by self-organized protein patterns, which are often based on nucleotide-binding proteins that switch their nucleotide state upon interaction with a second, activating protein. For reliable function, these protein patterns must be robust against parameter changes, although the basis for such robustness is generally elusive. Here we take a combined theoretical and experimental approach to the E. coli Min system, a paradigmatic system for protein self-organization. By mathematical modeling and in vitro reconstitution of mutant proteins, we demonstrate that the robustness of pattern formation is dramatically enhanced by an interlinked functional switching of both proteins, rather than one. Such interlinked functional switching could be a generic means of obtaining robustness in biological pattern-forming systems.          
+
+===== PAGE 38 =====
+ 4 
+Introduction:  Self-organized pattern formation by proteins is vital for many fundamental cellular processes, ranging from cell division (1) and chromosome segregation (2) to chemotaxis (3). To what extent then do these intrinsically complex processes depend on common, core principles and, conversely, what role do specific molecular details play in these biochemical reaction networks? In this context, it is particularly interesting to ask how robust network function is against changes in network structure, and system parameters such as protein concentrations. Among intracellular pattern-forming networks, the E. coli Min system has become a paradigmatic model for both experimental (4-9) and theoretical (4, 6, 10-16) studies of protein pattern formation over the last 15 years.  Here, MinD and MinE self-organize to generate pole-to-pole oscillations that establish a time-averaged concentration minimum of MinC at midcell. Since MinC acts as an inhibitor of the cell division protein FtsZ, the Min system thereby confines the division machinery to mid-cell to ensure division into equally sized daughter cells (17). The Min system is a particularly instructive example, because its components are well characterized and it can be reconstituted in lipid bilayer assays in vitro (1, 4, 5). In the presence of ATP, MinD and MinE self-organize into surface waves on a flat, supported membrane (4). Experimental (4, 5, 9, 18) and theoretical (4, 6, 10-16) studies have yielded insights into the reaction network underlying this self-organization process. However, the relationships between pattern formation and the molecular properties of the proteins involved are a matter of ongoing interest, as they bridge the molecular and cellular scales.    
+
+===== PAGE 39 =====
+ 5 
+The oscillatory dynamics of the Min system are driven by the stimulation of MinD’s ATPase activity by MinE. ATP-bound MinD dimerizes and binds to the plasma membrane (9, 19, 20). It then recruits further MinD-ATP, as well as its ATPase-activating protein MinE, which together form membrane-bound MinDE complexes (19). MinE stimulates MinD’s ATPase activity, thereby initiating disintegration of MinDE complexes and subsequent release of MinE and ADP-bound MinD into the cytosol (19, 21). After detachment, MinD exchanges ADP for ATP, before the ATP-bound form rebinds to the membrane (19, 20). This biochemical reaction network, which we refer to as the skeleton network (Fig. 1A), is in agreement with various experimental studies (4, 5, 18, 22) and has formed the basis for a number of theoretical models (10, 11, 13) that recapitulate various aspects of Min pattern formation.   Experimental studies have established the crucial role of MinE's stimulation of MinD’s ATPase activity in Min protein pattern formation (4, 21). Moreover, mathematical models centered around the conversion of MinD from the ADP- to the ATP-bound state suggest that this step is critical for efficient localization of the FtsZ ring to mid-cell (11), formation of multistable patterns, and adaptation to cell geometry (6, 11, 23). Recently, it has been shown that the skeleton network captures the in vitro phenomenology of Min protein patterns on flat lipid bilayers (16). The theory predicts chemical turbulence (spatiotemporal chaos) at the onset of the pattern forming instability, e.g. at low MinE/MinD ratios. Moreover, previous theoretical analyses (10, 11, 13), based solely on the interactions in the skeleton network, found that patterns can form only if MinE is less abundant than MinD (SI Note 3). However, reconstitution experiments clearly show that patterns emerge for MinE/MinD ratios ranging between 0.125 and 5 (4, 7, 24-26). This contradiction prompts a reconsideration of the current perspective on the 
+
+===== PAGE 40 =====
+ 6 
+Min reaction network, and raises the general question of how pattern-forming networks become robust against variations in protein concentrations. Furthermore, over the course of evolution, the robustness of a network's function, such as protein patterning, against alterations in protein number is essential to enable the system’s characteristics to adapt without disrupting its core function.  Indeed, recent biochemical findings (27, 28) suggest a possible extension of the skeleton network. In addition to the MinE-induced switch in MinD’s nucleotide state, MinE itself is now believed to undergo a MinD-dependent conformational switch. This conformational switch causes cytosolic MinE to unmask its buried MinD- and membrane-interacting regions, i.e. its anti-MinCD helix and membrane-targeting sequence (MTS), respectively (Fig. 1B) (27). Importantly, in order to expose its anti-MinCD helix, MinE must first “sense” membrane-bound MinD (27), a process that was proposed to involve formation of an “encounter complex” of MinE with MinD, which then triggers the conformational change (28, 29). Once the anti-MinCD domain is released, MinE is assumed to form a tighter complex with membrane-bound MinD and stimulate its ATPase activity (27-29). In addition, after dissociation of the MinDE complex and the release of MinD-ADP into the cytosol, MinE’s MTS enables it to remain bound to the membrane, and the protein may reassociate repeatedly with other membrane-bound MinD molecules or (eventually) return to the cytosol (5, 27, 28). This membrane-bound cycling of MinE has been dubbed the “Tarzan of the Jungle” mechanism (27) or persistent MinE membrane binding (24) in the literature. Upon detachment from the membrane, MinE quickly reassumes its latent conformation with its MinD- and membrane-interaction regions buried (Fig. 1B). In vivo studies have suggested that the MinD-dependent conformational switch of MinE is important for 
+
+===== PAGE 41 =====
+ 7 
+correct cell division, as a mutation that locks MinE into the reactive state was not able to restore the WT phenotype when expressed with MinC and MinD in a Δmin strain of E. coli (30). Despite recent experimental research on the molecular interaction steps involved in this switch (28, 29), the functional role of MinE’s conformational switch in the Min reaction-diffusion network and its effect on pattern formation remains unclear. In vivo, this question is difficult to address systematically due to the disruptive effects on cell morphology and viability caused by mutations and changes in protein concentration (27, 31). In contrast, in silico and in vitro approaches both allow highly comparable conditions and the precise variation of parameters. Therefore, we addressed the function of MinE’s conformational switch in pattern formation by combining mathematical modeling and cell-free reconstitution experiments.  The two novel properties of MinE’s reactive conformation – facilitation of the MinE-MinD interaction and persistent membrane binding of MinE – could independently affect the formation of patterns. To disentangle these two aspects and analyze their respective impacts on pattern robustness to variations in the MinE/MinD ratio, we first numerically studied the dynamics of reaction-diffusion networks that exhibit either aspect of the switch by a linear stability analysis, which predicts the parameter regime within which patterns form (SI Note 1). Then we tested the theoretical predictions by reconstituting the networks using suitable MinE mutants (see Methods and SI Note 2). Our combined theoretical and experimental results demonstrate that the MinE-MinD interaction switch of MinE is critical for the emergence of patterns over a broad and physiological range of protein concentrations.  Furthermore, we experimentally show that, unlike the MinE-MinD interaction switch, persistent membrane binding of MinE does not markedly affect the protein concentration range compatible with pattern formation. 
+
+===== PAGE 42 =====
+ 8 
+Results  The MinE-MinD interaction switch is critical for the robustness of Min patterns against variations in protein concentration. First, we addressed the functional relevance of the MinD-induced exposure of MinE’s buried MinD interaction region alone. Upon recruitment of MinE by MinD, a membrane-bound MinDE complex is formed, in which MinE is assumed to be present in its reactive state. After disintegration of a MinDE complex, both partners are released into the cytosol. We assume that switching of reactive MinE to its latent form occurs rapidly, but not simultaneously with the disintegration of a MinDE complex and release of MinE into the cytosol (SI Note 6). The time scale for reversion of reactive MinE to its latent conformation is taken to be of the order of 0.01s, the upper bound for a typical conformational switch (32). To account for the alternative conformations of MinE, we extended the skeleton network (11, 13) to include both a latent MinE conformation and a reactive form with recruitment rates to membrane-bound MinD, 𝑘!"! and 𝑘!"!, respectively (Fig. 1C). Reactive MinE no longer requires the MinD-dependent release of its anti-MinCD helix, as this structure is already exposed. Thus, it is reasonable to assume the recruitment rate of reactive MinE to be higher than that of latent MinE. Note, that for equal recruitment rates, i.e. 𝑘!"!=𝑘!"!, the two MinE conformations are identical and the original skeleton network with only one MinE recruitment rate is recovered.    Our mathematical analysis shows that, in a broad regime of low 𝑘!"! and high 𝑘!"!, patterns are formed over a wide range of MinE/MinD ratios, including those where MinE is present in excess (Figs. 2A, B). To test these theoretical predictions experimentally, we made use of the MinE L3E mutant, which is impaired in membrane interaction (27). It should therefore be capable of 
+
+===== PAGE 43 =====
+ 9 
+undergoing the MinD-induced interaction switch, but unable to remain attached to the membrane in the absence of MinD (see SI Note 2). Thus, we expect this mutant to mimic MinE in our extended model that includes a MinE-MinD interaction switch without persistent membrane binding (Fig.1C, SI Note 2). When reconstituted together with MinD on flat membranes, MinE L3E promoted pattern formation over a wide range of MinE/MinD ratios, just like wild-type MinE (Fig. 3). In agreement with our theoretical predictions (Fig. 2A, B), experiments showed that patterns formed even when MinE was present in excess over MinD (Fig.  3).  Based on our theoretical observations, which showed a strong increase in pattern robustness upon incorporation of a MinE-MinD interaction switch, we propose that MinE’s ability to switch between conformations with high or low affinity for MinD is responsible for the experimental observation that high MinE/MinD concentration ratios are compatible with Min protein patterns. If this hypothesis is true, experiments with MinE mutants that lack the ability to switch between a reactive and a latent state should display a strongly decreased maximal MinE/MinD concentration ratio compatible with patterns. To test this hypothesis, we took advantage of the I24N mutation, which was previously shown to lock MinE into the reactive state ((27), SI Note 2). Strikingly, introducing this mutation into either WT MinE or MinE L3E dramatically reduced the concentration range within which protein patterns formed (Figs. 3, 4). Indeed, in agreement with the above hypothesis based on our theory (11), patterns only prevailed in a very narrow range and only for MinE/MinD concentration ratios far below one (Figs. 3, 4). In particular, MinE I24N formed patterns only outside the physiological concentration range (33). This is consistent with in vivo experiments in which the I24N mutant failed to restore mid-cell division when expressed together with MinD and MinC in an E. coli Δmin strain (30), most probably due 
+
+===== PAGE 44 =====
+ 10 
+to the fact that MinC is not recruited to the membrane by MinD. This agrees with our observations that (i) MinD cannot effectively accumulate on the membrane to initiate pattern formation above a certain threshold MinE/MinD ratio, and (ii) that this threshold is strongly decreased for MinE I24N relative to WT MinE (Fig. 3). In summary, our analyses demonstrate that mutually interlinked protein switching is critical for the robustness of an exemplary pattern-forming system against variations in protein concentrations.  The relationship between the MinE/MinD ratio and the ability to generate patterns can be understood by considering the roles of the two proteins in the establishment of Min oscillations. Min oscillations are essentially the result of alternating dominance of MinE and MinD (11, 24). In membrane regions depleted of Min proteins, cooperative binding of MinD first facilitates its own accumulation on the membrane (MinD dominance). Then, recruitment of MinE and MinE-induced detachment of MinD together outpace further MinD accumulation, and progressively deplete the latter from the membrane (MinE dominance). But MinE-induced detachment can only outpace MinD accumulation if the released MinE is recruited more rapidly to membrane-bound MinD than is MinD itself. Thus, the rate of recruitment of MinE must be higher than that of MinD. Since the skeleton network incorporates only a single, rapidly recruited MinE conformation, initial dominance of MinD accumulation is feasible only if MinD exceeds MinE in concentration. In contrast, if MinE can exist in both a latent and a reactive conformation, dominance of MinD over MinE becomes possible even if MinE exceeds MinD in concentration (Fig. 2C). This is because initially most MinE is in the latent form, whose recruitment rate is low. If MinE was always present in its latent form only, MinD would accumulate on the membrane and Min dynamics would cease, because the recruitment of latent MinE will never 
+
+===== PAGE 45 =====
+ 11 
+dominate MinD recruitment. However, after inducing ATP hydrolysis by MinD, MinE is assumed to be released into the cytosol in its reactive conformation. As this state is short-lived, the reactive species is effectively restricted to a thin boundary layer close to the membrane (Fig.2C, indicated by red shaded region), and will be preferentially recruited (over cytosolic MinD) to membrane-bound MinD. Once the membrane is depleted of MinD, reactive MinE cannot rebind promptly and rapidly switches to its latent cytosolic form. This enables a transient dominance of MinE, which displaces MinD from the membrane. Remarkably, our theoretical analysis predicts an extended range of MinE/MinD ratios that support patterns even for very rapid MinE switching, i.e. when the layer of reactive MinE (~ 0.7 µm) is orders of magnitude thinner than the depth of the cytosol (~ 5,000 µm)  (SI Note 5). Note that any effective ad hoc reduction of the cytosol to two dimensions would, by neglecting the protein distribution perpendicular to the membrane (34, 35), fail to uncover such subtle but crucial effects, as the emergence of the thin layer of reactive MinE would be entirely lost. This further emphasizes the importance of accounting for the extended bulk in (3D) quantitative theoretical models (11, 16, 36).   Persistent MinE membrane binding is not a major determinant of the concentration range of Min patterns. As MinE’s conformational switch affects its affinity for both MinD and the membrane (27), we independently explored the impact of persistent MinE membrane binding mediated by its MTS (Fig.1D, SI Notes 1, 7, 8). This was previously shown to influence Min patterns (22, 24, 25, 35, 37), and was implied to be required for Min protein pattern formation per se (35), although the validity of the underlying theoretical analysis (35) is controversial (36). 
+
+===== PAGE 46 =====
+ 12 
+Recent experimental studies have confirmed that Min protein patterns can indeed form without direct MinE membrane interaction, although with altered in vitro characteristics (22, 25).  As hypothesized previously (11), persistent membrane binding might also affect the concentration range compatible with pattern formation. Assume that “free” membrane-bound MinE has a weak affinity for membrane-bound MinD, such that membrane-bound MinE is more likely to detach after lingering on the membrane than to reassociate with membrane-bound MinD. Then persistent MinE membrane binding will reduce the overall efficacy of MinE-mediated removal of MinD from the membrane, because free MinE lingering on the membrane does not participate in the depletion process. As a consequence, the maximal MinE/MinD concentration ratio compatible with patterns should increase in this case. On the other hand, if free membrane-bound MinE interacts very strongly with membrane-bound MinD – hypothetically even more strongly than the MinE in the bulk – persistent MinE membrane binding will enhance MinD depletion and patterns should form for even lower MinE/MinD concentration ratios.   We quantitatively studied a reaction network in which MinE can persistently bind to the membrane but is permanently locked into its reactive state (Fig. 1D). We expect this model to be best realized by our experiments with the I24N mutant, which lacks the MinE-MinD interaction switch while retaining the ability to bind persistently to the membrane (SI Note 2). With this mathematical model, we were able to confirm the above intuition regarding the two theoretical scenarios involving weak and strong interaction between free MinE and MinD on the membrane (SI Notes 7, 8, Figs. S4, S5). As reported above, our reconstitution experiments with MinE 
+
+===== PAGE 47 =====
+ 13 
+mutants that lack the ability to persistently bind to the membrane show no change in the range of MinE/MinD concentrations permissive for patterns when compared to experiments with the respective MinE types without this mutation. In summary, we infer that, unlike the MinE-MinD switch, persistent membrane binding does not markedly affect the range of concentrations compatible with in vitro Min patterns (Figs. 3, 4).  The skeleton network suffices to reproduce in vitro Min patterns. In the MinE L3E/I24N double mutant, both membrane interactions and the MinE-MinD interaction switch are disabled, mimicking the MinE dynamics in the original skeleton network (11, 13). This mutant still self-organized into dynamic protein patterns, albeit only in a narrow range of MinE/MinD ratios (Fig. 3, 4), and – notably – only if MinD exceeds MinE in concentration, confirming previous theoretical predictions ((11), SI Note 3). This result shows that, given a suitable choice of low MinE/MinD ratios, neither persistent membrane binding nor the MinE-MinD switch is required to generate patterns, and it confirms the skeleton network as a valid and useful basis for the investigation of pattern-forming mechanisms in the Min system. A recent theoretical analysis of in vitro Min protein pattern formation based on the skeleton model (16) predicted chemical turbulence (disordered patterns) at the onset of instability (low MinE/MinD ratios). Interestingly, our experiments confirm this prediction (see Fig. 3) and show that this characteristic is preserved for all mutants.      
+
+===== PAGE 48 =====
+ 14 
+Discussion  Based on recent experimental insights into the molecular structure of MinE and its ability to undergo MinD-dependent conformational changes (27-29), we studied the role of this conformational switch in the context of the Min reaction network. Our combined theoretical and experimental investigation reveals that this switch is essential for the robustness of the key function of the Min reaction network - the formation of spatio-temporal protein patterns.  Previous experiments (27, 28) strongly suggested that the different conformations of MinE are not in chemical equilibrium with each other, i.e. MinE does not switch between the two states independently of external triggers. Instead, MinE’s conformational switch from latent to reactive critically depends on the “sensing” of membrane-bound MinD (27). In the context of a reaction-diffusion network, the spatial confinement of MinE's switched state to the immediate vicinity of membrane-bound MinD leads to a spatial separation of reactive MinE close to the membrane and latent MinE in the bulk. With regard to the change in MinE's binding affinity for MinD, this spatial separation provides for dynamic control of MinE's two distinct modes of action: in its latent form, MinE allows MinD to accumulate on the membrane even if the total MinE concentration exceeds that of MinD. Accumulation of MinD on the membrane in turn facilitates the formation of a thin reactive layer of MinE above the membrane, which eventually depletes MinD from the membrane (Fig. 2C). In contrast to networks with only one MinE conformation (10, 11, 13), the dynamic switching of MinE enables patterns to form even when MinE is much more abundant than MinD.    
+
+===== PAGE 49 =====
+ 15 
+Furthermore, it was proposed that the exposure of MinE’s MTS not only leads to persistent membrane binding of MinE but might even enable direct attachment of MinE to the membrane (25, 28), the stabilization of MinD by membrane-bound MinE (25), and might also be involved in the release of the anti-MinCD helix (28, 29). While MinE membrane interaction is evidently relevant for regulating the detailed characteristics of Min patterns, such as the wavelength (Fig. 3, (22, 25)) and proper function of the Min system in vivo (27, 38), our analyses show that the concentration range of Min patterns is not markedly affected by this factor, either in terms of persistent membrane binding or direct MinE attachment to the membrane (Fig. 3, SI Note 8). Instead, this concentration range is primarily determined by the MinD-dependent switch in MinE's affinity for MinD. This emphasizes that interlinked switching of the mutual binding affinities of MinD and MinE plays an important role in regulating the ability to form patterns.  The bacterial Min system is a prominent example for a class of intracellular pattern-forming networks that are based on the self-organization of nucleoside triphosphatases (NTPases). NTPases function as molecular switches, which upon interaction with a cognate NTPase activating protein transition from an NTP-bound to a nucleoside diphosphate (NDP)-bound form. In the context of network motifs, we identify a reciprocal switch – triggered in the ATPase-activating protein MinE by the cognate ATPase MinD – as a critical factor in the robustness of patterns over a broad range of protein concentrations. In view of the ubiquity of structurally switchable proteins, including NTPases and possibly further NTPase-activating proteins (39, 40), our study highlights the role of alternative conformations and mutual switches for robust pattern formation.  
+
+===== PAGE 50 =====
+ 16 
+From a structural perspective, MinE can be seen as a “metamorphic” protein, a type of protein that can reversibly switch between alternative conformations with distinct functions (41). Among various examples for such proteins (41, 42), it has recently been discovered that fold switching of the metamorphic protein KaiB plays an important role in the KaiABC system, a prototypical protein oscillator that serves as a circadian clock in cyanobacteria (43-45). The observation of fold switching for both KaiB and MinE suggests that metamorphic proteins may be widespread in dynamical systems with important roles in cell physiology.  Intracellular pattern-forming systems are often based on reaction-diffusion networks (46, 47). Their underlying nonlinearities render these networks sensitive to even small variations in system parameters, such as reaction rates and the (approximately constant) concentrations. However, such sensitivity can also provide evolutionary benefits, as changes in protein concentrations can be harnessed to adjust features of the patterns, such as the oscillation period or characteristic wavelength (22). In this context, it is essential that the ability to generate patterns in the first place (regardless of their quantitative characteristics) is robust against variations in the concentrations of the relevant components. This provides a large parameter regime within which pattern formation is possible, thus facilitating the emergence of patterns with different spatiotemporal characteristics that may lead to evolutionary adaptations in cell morphology or other favorable phenotypic features. Furthermore, retention of the ability to form patterns in the face of alterations in protein numbers is essential for evolution, since this allows for protein mutations while the key functions of the organism, such as protein patterning, remain intact (48).  
+
+===== PAGE 51 =====
+ 17 
+We propose that mutually interlinked switching is likely to be a general design principle that enhances the robustness of important regulatory patterns to variations in protein concentrations in many biological reaction-diffusion systems.  In particular, interlinked switches have been reported for the widely conserved F1hF-F1hG circuit (39, 49), which is essential for flagellar patterning (39). Pattern robustness due to functional switching may also be relevant in other pattern-forming systems, such as for chemotaxis patterns (3), or chromosome segregation (2), and may even play a major role in eukaryotic systems, for instance in the process of cell polarization in budding yeast (50).               
+
+===== PAGE 52 =====
+ 18 
+Materials and Methods: 
+Theoretical prediction of MinE/MinD ratios that permit the formation of patterns 
+Our theoretical analyses are based on different biochemical reaction networks that incorporate either a MinE-MinD interaction switch or persistent MinE membrane binding. These networks extend a previous theoretical model (11, 13) for the Min system, which accounts for the molecular interactions that are believed to be essential for Min protein dynamics, to include a MinE-MinD interaction switch and persistent MinE membrane binding, respectively, as additional features (SI Note 1). The data presented in Figs. 2A, and B and S2-S5 has been obtained numerically by performing stability analyses over an extensive range of reaction rates and protein contentrations (SI Note 1).  
+Protein purification  Expression and purification of His-MinD, His-eGFP-MinD as well as WT and mutant His-MinE were performed as described previously (4, 22).  Self-organization assays  Self-organization assays on flat supported lipid bilayers were performed essentially as described previously (4, 22). Briefly, SLBs composed of E. coli polar lipids (Avanti Polar Lipids, Alabaster, AL, USA) were prepared on glass as described in (22). Then, 1 µM MinD incl. 20% eGFP-MinD, 2.5 mM ATP (F. Hoffmann-La Roche AG, Basel, Switzerland) and MinE of varying concentration were added to Min buffer (25 mM Tris-HCl pH 7.5, 150 mM KCl, 5 mM MgCl2) in a total volume of 200 µL. The samples were then incubated for several hours to provide ample time for protein patterns to form. The concentration ranges compatible with 
+
+===== PAGE 53 =====
+ 19 
+pattern formation reported here were consistently observed in at least three independent experiments. For 0.3 µM MinE L3E/I24N, patterns were observed in only 50% of experiments. We therefore categorized this concentration as being incapable of reliable pattern formation.  Microscopy and image processing Fluorescence imaging was performed with a ZEISS LSM780 confocal laser scanning microscope equipped with a Zeiss C-Apochromat 40x/1.20 water-immersion objective (Carl Zeiss AG, Oberkochen, Germany). Image processing was performed with Fiji (51). As fluorescence intensities were low around the upper bounds in MinE concentration compatible with pattern formation, we adjusted the brightness and contrast levels to better visualize the transition. As, for consistency, the same adjustments were equally made for all images, the intensities in the micrographs can be displayed outside the dynamic range. 
+          
+
+===== PAGE 54 =====
+ 20 
+Data availability All relevant data are within the paper and its Supporting Information files.  Acknowledgments: We thank Laeschkir Hassan, Fridtjof Brauns, and Philipp Glock for discussions, and the MPI-B Core Facility for help with protein purification. E.F acknowledges support from the DFG via project B02 and P.S. via the project A09 within SFB 1032 and the German Excellence Initiatives via the ‘NanoSystems Initiative Munich  (NIM)’. J.D. and S.K. are supported by a DFG fellowship through the Graduate School of Quantitative Biosciences Munich  (QBM).  Author contributions: J.H., J.D., S.K., P.S., and E.F. designed the research.  J.D., J.H, C.H., and E.F. designed the theoretical models and performed the mathematical analyses.  S.K. and P.S. designed and carried out the experiments. J.D., S.K., J.H., P.S., and E.F. discussed and interpreted the results, and wrote the manuscript.   Competing financial interest: The authors declare no competing financial interest.      
+
+===== PAGE 55 =====
+ 21 
+References: 1. Kretschmer S & Schwille P (2016) Pattern formation on membranes and its role in bacterial cell division. Curr Opin Cell Biol 38:52-59. 2. Schofield WB, Lim HC, & Jacobs-Wagner C (2010) Cell cycle coordination and regulation of bacterial chromosome segregation dynamics by polarly localized proteins. EMBO J 29(18):3068-3081. 3. Sourjik V & Wingreen NS (2012) Responding to chemical gradients: bacterial chemotaxis. Curr Opin Cell Biol 24(2):262-268. 4. Loose M, Fischer-Friedrich E, Ries J, Kruse K, & Schwille P (2008) Spatial regulators for bacterial cell division self-organize into surface waves in vitro. Science 320(5877):789-792. 5. Vecchiarelli AG, Li M, Mizuuchi M, & Mizuuchi K (2014) Differential affinities of MinD and MinE to anionic phospholipid influence Min patterning dynamics in vitro. Mol Microbiol 93(3):453-463. 6. Wu F, et al. (2016) Multistability and dynamic transitions of intracellular Min protein patterns. Mol Syst Biol 12(6):873. 7. Caspi Y & Dekker C (2016) Mapping out Min protein patterns in fully confined fluidic chambers. Elife 5. 8. Raskin DM & de Boer PA (1999) Rapid pole-to-pole oscillation of a protein required for directing division to the middle of Escherichia coli. Proc Natl Acad Sci U S A 96(9):4971-4976. 9. Lutkenhaus J (2012) The ParA/MinD family puts things in their place. Trends Microbiol 20(9):411-418. 10. Fange D & Elf J (2006) Noise-induced Min phenotypes in E. coli. PLoS Comput Biol 2(6):e80. 11. Halatek J & Frey E (2012) Highly canalized MinD transfer and MinE sequestration explain the origin of robust MinCDE-protein dynamics. Cell Rep 1(6):741-752. 12. Howard M, Rutenberg AD, & de Vet S (2001) Dynamic compartmentalization of bacteria: accurate division in E. coli. Phys Rev Lett 87(27 Pt 1):278102. 13. Huang KC, Meir Y, & Wingreen NS (2003) Dynamic structures in Escherichia coli: spontaneous formation of MinE rings and MinD polar zones. Proc Natl Acad Sci U S A 100(22):12724-12728. 14. Kruse K (2002) A dynamic model for determining the middle of Escherichia coli. Biophys J 82(2):618-627. 15. Meinhardt H & de Boer PA (2001) Pattern formation in Escherichia coli: a model for the pole-to-pole oscillations of Min proteins and the localization of the division site. Proc Natl Acad Sci U S A 98(25):14202-14207. 16. Halatek J & Frey E (2018) Rethinking pattern formation in reaction-diffusion systems. Nature Physics. 17. Lutkenhaus J (2007) Assembly dynamics of the bacterial MinCDE system and spatial regulation of the Z ring. Annu Rev Biochem 76:539-562. 18. Wu F, van Schie BG, Keymer JE, & Dekker C (2015) Symmetry and scale orient Min protein patterns in shaped bacterial sculptures. Nat Nanotechnol 10(8):719-726. 19. Hu Z, Gogol EP, & Lutkenhaus J (2002) Dynamic assembly of MinD on phospholipid vesicles regulated by ATP and MinE. Proc Natl Acad Sci U S A 99(10):6761-6766. 
+
+===== PAGE 56 =====
+ 22 
+20. Lackner LL, Raskin DM, & de Boer PA (2003) ATP-dependent interactions between Escherichia coli Min proteins and the phospholipid membrane in vitro. J Bacteriol 185(3):735-749. 21. Hu Z & Lutkenhaus J (2001) Topological regulation of cell division in E. coli. spatiotemporal oscillation of MinD requires stimulation of its ATPase by MinE and phospholipid. Mol Cell 7(6):1337-1343. 22. Kretschmer S, Zieske K, & Schwille P (2017) Large-scale modulation of reconstituted Min protein patterns and gradients by defined mutations in MinE's membrane targeting sequence. PLoS One 12(6):e0179582. 23. Thalmeier D, Halatek J, & Frey E (2016) Geometry-induced protein pattern formation. Proc Natl Acad Sci U S A 113(3):548-553. 24. Loose M, Fischer-Friedrich E, Herold C, Kruse K, & Schwille P (2011) Min protein patterns emerge from rapid rebinding and membrane interaction of MinE. Nat Struct Mol Biol 18(5):577-583. 25. Vecchiarelli AG, et al. (2016) Membrane-bound MinDE complex acts as a toggle switch that drives Min oscillation coupled to cytoplasmic depletion of MinD. Proc Natl Acad Sci U S A 113(11):E1479-1488. 26. Zieske K & Schwille P (2014) Reconstitution of self-organizing protein gradients as spatial cues in cell-free systems. Elife 3. 27. Park KT, et al. (2011) The Min oscillator uses MinD-dependent conformational changes in MinE to spatially regulate cytokinesis. Cell 146(3):396-407. 28. Park KT, Villar MT, Artigues A, & Lutkenhaus J (2017) MinE conformational dynamics regulate membrane binding, MinD interaction, and Min oscillation. Proc Natl Acad Sci U S A 114(29):7497-7504. 29. Ayed SH, et al. (2017) Dissecting the role of conformational change and membrane binding by the bacterial cell division regulator MinE in the stimulation of MinD ATPase activity. J Biol Chem 292(50):20732-20743. 30. Zheng M, et al. (2014) Self-assembly of MinE on the membrane underlies formation of the MinE ring to sustain function of the Escherichia coli Min system. J Biol Chem 289(31):21252-21266. 31. Hale CA, Meinhardt H, & de Boer PA (2001) Dynamic localization cycle of the cell division regulator MinE in Escherichia coli. EMBO J 20(7):1563-1572. 32. Shamir M, Bar-On Y, Phillips R, & Milo R (2016) SnapShot: Timescales in Cell Biology. Cell 164(6):1302-1302 e1301. 33. Shih YL, Fu X, King GF, Le T, & Rothfield L (2002) Division site placement in E.coli: mutations that prevent formation of the MinE ring lead to loss of the normal midcell arrest of growth of polar MinD membrane domains. EMBO J 21(13):3347-3357. 34. Bonny M, Fischer-Friedrich E, Loose M, Schwille P, & Kruse K (2013) Membrane binding of MinE allows for a comprehensive description of Min-protein pattern formation. PLoS Comput Biol 9(12):e1003347. 35. Schweizer J, et al. (2012) Geometry sensing by self-organized protein patterns. Proc Natl Acad Sci U S A 109(38):15283-15288. 36. Halatek J & Frey E (2014) Effective 2D model does not account for geometry sensing by self-organized proteins patterns. Proc Natl Acad Sci U S A 111(18):E1817. 
+
+===== PAGE 57 =====
+ 23 
+37. Arjunan SN & Tomita M (2010) A new multicompartmental reaction-diffusion modeling method links transient membrane attachment of E. coli MinE to E-ring formation. Syst Synth Biol 4(1):35-53. 38. Hsieh CW, et al. (2010) Direct MinE-membrane interaction contributes to the proper localization of MinDE in E. coli. Mol Microbiol 75(2):499-512. 39. Bange G & Sinning I (2013) SIMIBI twins in protein targeting and localization. Nat Struct Mol Biol 20(7):776-780. 40. Leipe DD, Wolf YI, Koonin EV, & Aravind L (2002) Classification and evolution of P-loop GTPases and related ATPases. J Mol Biol 317(1):41-72. 41. Murzin AG (2008) Biochemistry. Metamorphic proteins. Science 320(5884):1725-1726. 42. Goodchild SC, Curmi PMG, & Brown LJ (2011) Structural gymnastics of multifunctional metamorphic proteins. Biophys Rev 3(3):143. 43. Chang YG, et al. (2015) Circadian rhythms. A protein fold switch joins the circadian oscillator to clock output in cyanobacteria. Science 349(6245):324-328. 44. Snijder J, et al. (2017) Structures of the cyanobacterial circadian oscillator frozen in a fully assembled state. Science 355(6330):1181-1184. 45. Tseng R, et al. (2017) Structural basis of the day-night transition in a bacterial circadian clock. Science 355(6330):1174-1180. 46. Frey E, Halatek J, Kretschmer S, & Schwille P (2017) Protein Pattern Formation. Physics of Biological Membranes, eds Bassereau P & Sens PCA (Springer-Verlag GmbH, Heidelberg). 47. Halatek J, Brauns F, & Frey E (2018) Self-organization principles of intracellular pattern formation. Philosophical Transactions B  48. Laan L, Koschwanez JH, & Murray AW (2015) Evolutionary adaptation after crippling cell polarization follows reproducible trajectories. Elife 4. 49. Schuhmacher JS, Thormann KM, & Bange G (2015) How bacteria maintain location and number of flagella? FEMS Microbiol Rev 39(6):812-822. 50. Klunder B, Freisinger T, Wedlich-Soldner R, & Frey E (2013) GDI-mediated cell polarization in yeast provides precise spatial and temporal control of Cdc42 signaling. PLoS Comput Biol 9(12):e1003396. 51. Schindelin J, et al. (2012) Fiji: an open-source platform for biological-image analysis. Nat Methods 9(7):676-682. 52. Ghasriani H, et al. (2010) Appropriation of the MinD protein-interaction motif by the dimeric interface of the bacterial cell division regulator MinE. Proc Natl Acad Sci U S A 107(43):18416-18421. 53. Wu W, Park KT, Holyoak T, & Lutkenhaus J (2011) Determination of the structure of the MinD-ATP complex reveals the orientation of MinD on the membrane and the relative location of the binding sites for MinE and MinC. Mol Microbiol 79(6):1515-1528.     
+
+===== PAGE 58 =====
+ 24 
+Figure Legends: 
+ Figure 1. MinE’s conformational switch suggests distinct ways to form MinDE complexes. (A) The skeleton model only accounts for one MinE conformation. (B) Scheme of interlinked MinDE protein switches: While reactive MinE is known to trigger MinD’s ATPase activity, membrane-bound (active) MinD induces the switching of MinE from a latent to a reactive state in which the previously inaccessible MinD interaction region (yellow) and membrane-targeting sequence (purple) are exposed (PDB files 3R9J (27), 2KXO (52) and 3Q9L (53) are used to illustrate reactive and latent MinE and MinD, respectively). (C) The extension to the skeleton network includes a MinE-MinD interaction switch for interconversion between latent and reactive states of MinE, which are weakly or strongly recruited to MinD with rates 𝑘!"! or 𝑘!"!, respectively. (D) Persistent MinE membrane binding allows MinDE complexes to form either by recruitment of cytosolic MinE or reassociation of already membrane-bound MinE with membrane-bound MinD. For both extensions the MinD reaction dynamics remains unchanged.   
+B
+   D C
+: reassociation
+: strong recruitment
+: weak recruitment
+: recruitment
+A           Skeleton network 
+MinD-ATP MinD-ADP
++ MinE-MinD interaction switch + Persistent membrane binding
+reactive MinElatent MinE
+MinD-ADP
+(inactive)
+MinD-ATP
+(active)
+reactive
+MinE
+latent
+MinE
+x 2
+OFF
+ON
+OFF
+ON
+
+===== PAGE 59 =====
+ 25 
+ Figure 2. The MinE-MinD interaction switch is essential for the robustness of Min patterns in silico. (A) For high 𝑘!"! and low 𝑘!"! (compared to the MinD recruitment rate 𝑘!"), linear stability analysis predicts an increase in the maximal MinE concentration compatible with patterns ([MinE]max) relative to the skeleton network where 𝑘!"!=𝑘!"! (the case 𝑘!"!=𝑘!"!=1.25 𝑘!", indicated by S, is given as an example). [MinD] is fixed at 1 µM. (B) Along the arrow in (A) the range of [MinE] compatible with patterns dramatically increases with 𝑘!"! / 𝑘!"!. For 𝑘!"! close to zero, MinE eventually ceases to cycle between the bulk and the membrane, and pattern formation is suppressed (SI Note 4). (C) MinD-induced switching of MinE facilitates alternation of MinD accumulation and MinD depletion on the membrane. For kinetic rates see Table S1.   
+2 4 6 8 10
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+2 4 6 10
+0.2
+1.2
+1.0
+2.0
+0.4
+1.4
+2
+0
+0 21
+Patterns
+3
+B       A  
+I
+in µM
+8
+0.8
+1.8
+1.0
+0.6
+S
+4
+6
+8
+10
+12
+4
+patterns
+homogeneous 
+state
+5
+[MinE] in µM
+  MinD accumulation
+C
+0.6
+0.4
+[MinE]max
+    Fast MinD depletion
+S
+MinD-ATP
+latent MinE
+   MinE activation
+reactive MinE
+   MinE deactivation 
+patterns
+no
+
+===== PAGE 60 =====
+ 26 
+ Figure 3. Impairment of MinE’s MinE-MinD interaction switch dramatically decreases the robustness of Min protein patterns in vitro. Reconstitution assays were performed on flat supported lipid bilayers in the presence of 1 µM MinD with 20 % eGFP-MinD. The L3E 
+
+
+===== PAGE 61 =====
+ 27 
+mutation, which impairs MinE membrane binding, permits pattern formation (blue background) over a similar range of MinE concentrations as WT MinE. In contrast, the I24N mutation, which locks MinE into its reactive conformation, dramatically decreases the maximal MinE concentration at which patterns can form. Scale bar: 50 µm.    
+ Figure 4. Mutually interlinked switching dramatically increases the robustness of protein pattern formation. (A) The MinE variants in which the MinE-MinD interaction switch is disabled (I24N and L3E/I24N) display patterns only within a narrow range (blue region) of MinE/MinD ratios below one (dotted line). (B) In contrast, variants that retain the interaction switch (WT and L3E) also form patterns even when MinE is present in great excess. The schematic networks highlight the roles of MinE and MinD in dynamically switching the activity of their respective interaction partner. 
+
+
+===== PAGE 62 =====
+MinE conformational switching confers
+robustness on self-organized Min protein
+patterns
+Supplemental Information
+J. Denk1,∗, S. Kretschmer2,∗
+, J. Halatek1,∗
+, C. Hartl 1, P. Schwille2,
+and E. Frey1
+1Arnold-Sommerfeld-Center for Theoretical Physics and Center for NanoScience,
+Department of Physics, Ludwig-Maximilians-Universität München, Theresienstraße 37,
+D-80333 München, Germany
+2Max-Planck-Institute of Biochemistry, Am Klopferspitz 18, D-82152 Martinsried,
+Germany
+∗These authors contributed equally
+1
+
+===== PAGE 63 =====
+Note 1: Reaction-diffusion equations accounting for a MinD-
+dependent switch of MinE
+Reaction-diffusion equations including a MinE-MinD interac-
+tion switch
+We base our mathematical models on previous models [1, 2, 3] for the Min system
+that account for the molecular interactions that are taken to be essential for the
+Min protein dynamics. This model, which we referred to as skeleton networkin
+the manuscript, includes the following set of biochemical reactions (Fig. S1A):
+1. The attachment of MinD-ATP from the bulk, uDT , to the membrane with
+rate constant kD.
+2. The recruitment of bulk MinD-ATP, uDT , to the membrane by membrane-
+bound MinD, ud, with rate constant kdD.
+3. The formation of membrane bound MinDE complexes, ude, through the
+recruitment of bulk MinE.
+4. The disintegration and detachment of membrane bound MinDE complexes,
+ude, into bulk MinD-ADP,uDD, and bulk MinE with rate kde.
+5. The reactivation of bulk MinD-ADP,uDD, by nucleotide exchange to MinD-
+ATP,uDT , with rate λ.
+To incorporate a MinE-MinD interaction switch of MinE we extend this skeleton
+network by the following reactions (Fig. S1B):
+1. MinE exists in a latent and a reactive conformation, uE,l and uE,r, respec-
+tively. The recruitment rates of latent and reactive MinE, kl
+dE and kr
+dE ,
+respectively, can be different while the skeleton network is recovered for
+kr
+dE = kl
+dE , i.e. if there is only one MinE conformation.
+2. Recruitment of latent or reactive MinE leads to the formation of MinDE
+complexes, in which MinE exists in its reactive form. After disintegration
+and detachment of membrane-bound MinDE complexes bulk MinE persists
+in its reactive form for a very short time before it undergoes a conforma-
+tional switch to latent MinE with a rate µ.
+2
+
+===== PAGE 64 =====
+For a detailed discussion of our assumption that after dissociation from MinD
+reactive MinE shortly persists in its reactive form please refer to supplemental
+Note 6.
+All components are able to diffuse in their respective domains (bulk or mem-
+brane). Since only the distinction between bulk and membrane diffusion is im-
+portant for the dynamics, and since the diffusion coefﬁcients with a domain (bulk
+or membrane) are very similar for different proteins, we only distinguish between
+bulk and membrane diffusion with diffusion constants Dc for the bulk and Dm for
+the membrane, respectively.
+In coordinate-free form (with indexc or m denoting that an operator acts in the
+bulk or at the membrane, respectively) the ensuing system of partial differential
+equations for a model with MinE-MinD interaction switch reads:
+∂tuDD = Dc∇2
+cuDD −λuDD , (1a)
+∂tuDT = Dc∇2
+cuDT +λuDD , (1b)
+∂tuE,r = Dc∇2
+cuE,r −µuE,r , (1c)
+∂tuE,l = Dc∇2
+cuE,l + µuE,r , (1d)
+∂tud = Dm∇2
+mud + fd(ud, ˜uDT , ˜uE,r, ˜uE,l), (1e)
+∂tude = Dm∇2
+mude + fde(ude,ud, ˜uE,r, ˜uE,l), (1f)
+where the biochemical reactions on the membrane are given by the nonlinear
+functions
+fd(ud, ˜uDT , ˜uE,r, ˜uE,l) := (kD +kdDud) ˜uDT −ud (kl
+dE ˜uE,l +kr
+dE ˜uE,r), (2a)
+fde(ude,ud, ˜uE,r, ˜uE,l) := ud (kl
+dE ˜uE,l +kr
+dE ˜uE,r)−kde ude , (2b)
+with ˜ui denoting the respective bulk densities right at the membrane. These equa-
+tions are complemented by nonlinear reactive boundary conditions at the mem-
+brane surface stating that the biochemical reactions involving both membrane-
+bound and bulk proteins equal the diffusive ﬂux onto and off the membrane (the
+index n denoting the outward normal vector at the boundary)
+Dc∇nuDD|m = kde ude =: fDD , (3a)
+Dc∇nuDT |m = −(kD +kdDud) ˜uDT =: fDT , (3b)
+Dc∇nuE,r|m = kde ude −kr
+dE ud ˜uE,r =: fE,r , (3c)
+Dc∇nuE,l
+⏐⏐
+m = −kl
+dE ud ˜uE,l =: fE,l . (3d)
+3
+
+===== PAGE 65 =====
+For all other boundaries, we employed periodic boundary conditions or no-
+ﬂux boundary conditions (Fig. S1B) (the surface is denoted by s)
+Dc∇nuDD|s = 0, (4a)
+Dc∇nuDT |s = 0, (4b)
+Dc∇nuE,r|s = 0. (4c)
+Dc∇nuE,l
+⏐⏐
+s = 0. (4d)
+The above set of reaction-diffusion equations locally conserves the total mass
+of MinD as well as MinE. This implies that the spatial averages, [MinD] and
+[MinE], of the total densities of MinD and MinE obey the relation
+[MinD]Ω =
+∫
+Ω
+dc (uDD +uDT )+
+∫
+δΩ
+dm (ud +ude) , (5a)
+[MinE]Ω =
+∫
+Ω
+dc (uE,r +uE,l)+
+∫
+δΩ
+dm ude , (5b)
+where
+∫
+Ωdc and
+∫
+δΩdm signify integration over the whole bulk volume Ω and
+membrane surface δΩ, respectively. In order to study the robustness of patterns
+against variations in protein concentrations we performed extensive parameter
+scans in [MinE] and [MinD]. We found that changing the total protein concentra-
+tion [MinE] +[MinD] only yields small changes in the robustness. We therefore
+focused on varying [MinE] while ﬁxing [MinD] to the experimental concentration
+of 1 µM.
+The advantage of such a general (coordinate-free) model deﬁnition is that it
+can be adjusted to any system geometry, allowing one to consistently use the same
+model for different experimental setups. For thein vitroexperiments a simple box
+geometry is typically used, where the lipid bilayer (membrane) is located at the
+bottom of the box and the bulk extends into the vertical direction. Since the lateral
+extension of in vitrobox geometries is typically very large O(103 µm) compared
+to the wavelength of the patterns O(10 µm), we perform our analyses in a two-
+dimensional box of length L = 250 µm and employ periodic boundary conditions
+on the two sides. The bottom of the box represents the membrane with reactive
+boundary conditions and we assume no-ﬂux boundary conditions on the top of the
+box (Fig. S1C). The height h of the experimental box geometry is similarly very
+large O(103 µm) such that the dynamics perpendicular to the membrane can, in
+principle, not be neglected [4].
+4
+
+===== PAGE 66 =====
+Reaction-diffusion equations including persistent membrane bind-
+ing of MinE
+In addition to the biochemical reactions of the skeleton network, we included
+the following biochemical reactions to allow for persistent membrane binding of
+MinE (Fig. S1D):
+1. MinE exists in only one conformation, uE, and is recruited by membrane-
+bound MinD, ud to the membrane with a rate kdE , which leads to the for-
+mation of MinDE complexes, ude. Membrane-bound MinDE complexes
+disintegrate with a rate kde whereupon MinD-ADP detaches into the bulk
+and MinE remains membrane-bound.
+2. Free, membrane-bound MinE, ue, reassociates with membrane-bound MinD,
+ud, with a rate ked or detaches from the membrane with a rate ke.
+In coordinate-free form (with indexc or m denoting that an operator acts in the
+bulk or at the membrane, respectively) the ensuing system of partial differential
+equations for a model accounting for persistent membrane binding of MinE reads:
+∂tuDD = Dc∇2
+cuDD −λuDD , (6a)
+∂tuDT = Dc∇2
+cuDT +λuDD , (6b)
+∂tuE = Dc∇2
+cuE , (6c)
+∂tud = Dm∇2
+mud + fd(ud,ue, ˜uDT , ˜uE), (6d)
+∂tude = Dm∇2
+mude + fde(ude,ud,ue, ˜uE), (6e)
+∂tue = Dm∇2
+mue + fe(ude,ud,ue), (6f)
+where the biochemical reactions on the membrane are given by the nonlinear func-
+tions
+fd(ud,ue, ˜uDT , ˜uE) := (kD +kdDud) ˜uDT −ud (kdE ˜uE +kedue), (7a)
+fde(ude,ud,ue, ˜uE) := ud (kdE ˜uE +kedue)−kde ude , (7b)
+fe(ude,ud,ue) := kde ude −ud kedue −keue , (7c)
+with ˜ui denoting the respective bulk densities right at the membrane. The reactive
+5
+
+===== PAGE 67 =====
+boundary conditions at the membrane surface read:
+Dc∇nuDD|m = kde ude =: fDD , (8a)
+Dc∇nuDT |m = −(kD +kdDud) ˜uDT =: fDT , (8b)
+Dc∇nuE|m = ke ue −kdE ud ˜uE =: fE , (8c)
+and no-ﬂux boundary condition at the top of the box geometry (denoted by the
+index s)
+Dc∇nuDD|s = 0, (9a)
+Dc∇nuDT |s = 0, (9b)
+Dc∇nuE|s = 0. (9c)
+In analogy to our model including the MinE-MinD interaction switch we perform
+our analyses in a two-dimensional box of lengthL = 250 µm and employ periodic
+boundary conditions on the two sides (Fig. 1C).
+The spatial averages, [MinD] and [MinE], of the total densities of MinD and
+MinE obey the relation
+[MinD]Ω =
+∫
+Ω
+dc (uDD +uDT )+
+∫
+δΩ
+dm (ud +ude +ue) , (10a)
+[MinE]Ω =
+∫
+Ω
+dc uE +
+∫
+δΩ
+dm (ude +ue), (10b)
+Again, to study the robustness of patterns against variations in protein concen-
+trations we performed extensive parameter scans in [MinE] and [MinD] and then
+ﬁxed [MinD] to 1 µM while varying [MinE].
+6
+
+===== PAGE 68 =====
+Linear stability analysis in a box geometry
+In order to make predictions about the stability of steady solutions, we performed
+linear stability analyses of the sets of equations (1)–(9). The starting point of a
+linear stability analysis is the computation of a steady state around which the sys-
+tem can be linearised. In the box geometry under consideration the steady state
+is spatially uniform along the membrane (in the lateral direction). Along the ver-
+tical direction, however, the nucleotide exchange and the MinE-MinD interaction
+switch in the bulk induce density gradients even for the steady state. Here, one
+considers the time evolution of small perturbations with respect to the respec-
+tive steady states. When the (exponential) growth rate of these perturbations is
+positive, these perturbations grow and will eventually lead to spatial or temporal
+patterns. In contrast, for negative growth rates perturbations decay and the system
+will eventually relax to a stable steady state, which is uniform on the membrane.
+Calculating the growth rates of small perturbations for different rate constants and
+protein concentrations thus yields the regimes in terms of these parameters where
+patterns are predicted or where uniform protein concentrations on the membrane
+prevail.
+In the following we will focus on the linear stability analysis of the network
+including a MinE-MinD interaction switch. The stability analysis for the net-
+work with persistent MinE membrane binding is carried out analogously. In the
+following we consider a 2D slice geometry as described above, with the lateral
+dimension x and the extended bulk dimension z. A spatially uniform state at the
+membrane means that ∇xui =0 for all protein densities. Using the network with a
+MinE-MinD interaction switch, eqs.(1),(3)–(4), the stationary density proﬁles in
+the bulk are then given by
+uDD(z) =˜u∗
+DD
+cosh((h −z)/ℓD)
+cosh(h/ℓD) , (11a)
+uDT (z) =˜u∗
+DT + ˜u∗
+DD
+(
+1 −cosh((h −z)/ℓD)
+cosh(h/ℓD)
+)
+, (11b)
+uE,r(z) =˜u∗
+E,r
+cosh((h −z)/ℓE)
+cosh(h/ℓE) , (11c)
+uE,l(z) =˜u∗
+E,l + ˜u∗
+E,r
+(
+1 −cosh((h −z)/ℓE)
+cosh(h/ℓE)
+)
+, (11d)
+(11e)
+where ˜u∗
+i denote the spatially uniform stationary bulk densities at the mem-
+7
+
+===== PAGE 69 =====
+brane, and ℓD =
+√
+Dc/λ and ℓE =
+√
+Dc/µ give the penetration depth of respec-
+tively MinD-ADP and reactive MinE into the bulk; note that the correspond-
+ing stationary proﬁles of the total mass densities, uE(z) =uE,r(z) +uE,l(z) and
+uD(z)= uDD(z) +uDT (z), are spatially uniform in the bulk. Upon inserting all
+these stationary bulk density proﬁles into the reactive boundary conditions at the
+membrane, (3), one ﬁnds
+ℓD ˜u∗
+DD tanh(h/ℓD) =fDD(u∗
+de)/λ , (12a)
+−ℓD ˜u∗
+DD tanh(h/ℓD) =fDT ( ˜u∗
+DT ,u∗
+d)/λ , (12b)
+ℓE ˜u∗
+E,r tanh(h/ℓE) =fE,r(u∗
+de,u∗
+d, ˜u∗
+E,r)/µ , (12c)
+−ℓE ˜u∗
+E,l tanh(h/ℓE) =fE,r( ˜u∗
+E,l,u∗
+d)/µ , (12d)
+(12e)
+which are complemented by the stationarity conditions for the membrane dynam-
+ics, Eq. (1d)-(1e),
+0 = fd(ud, ˜uDT , ˜uE,r, ˜uE,l), (13a)
+0 = fde(ude,ud, ˜uE,r, ˜uE,l). (13b)
+Moreover, the stationary states have to satisfy global mass conservation
+[MinD] =˜u∗
+DD + ˜u∗
+DT +(u∗
+d +u∗
+de)/h, (14a)
+[MinE] =˜u∗
+E,r + ˜u∗
+E,l +u∗
+de/h. (14b)
+In a linear stability analysis one considers the time evolution of small pertur-
+bations with respect to these stationary states, i.e. ui(x,z,t)= u∗
+i (z) +δui(x,z,t)
+(where membrane densities lack the dependence on the z-coordinate). Expanding
+8
+
+===== PAGE 70 =====
+the dynamics of the small perturbations in terms of Fourier modes
+δuDD(x,z,t) =∑
+q
+eσqt cos(qx)ζDD(z;q), (15a)
+δuDT (x,z,t) =∑
+q
+eσqt cos(qx)ζDT (z;q), (15b)
+δuE,r(x,z,t) =∑
+q
+eσqt cos(qx)ζE,r(z;q), (15c)
+δuE,l(x,z,t) =∑
+q
+eσqt cos(qx)ζE,l(z;q), (15d)
+δud(x,t) =∑
+q
+eσqt cos(qx)δ ˜uq
+d , (15e)
+δude(x,t) =∑
+q
+eσqt cos(qx)δ ˜uq
+de , (15f)
+and inserting ui(x,z,t)= u∗
+i (z) +δui(x,z,t) into the (linear) bulk diffusion equa-
+tions (Eq. 1a-1c) and taking the boundary conditions (Eq. 3a-4b) into account,
+the corresponding bulk functions ζi(z;q) are obtained analytically as
+ζDD(z;q) =δ ˜uq
+DD
+cosh
+(
+h−z
+ℓq(λ+σq)
+)
+cosh
+(
+h
+ℓq(λ+σq)
+), (16a)
+ζDT (z;q) = (δ ˜uq
+DT +δ ˜uq
+DD)
+cosh
+(
+h−z
+ℓq(σq)
+)
+cosh
+(
+h
+ℓq(σq)
+)−δ ˜uq
+DD
+cosh
+(
+h−z
+ℓq(λ+σq)
+)
+cosh
+(
+h
+ℓq(λ+σq)
+), (16b)
+ζE,r(z;q) =δ ˜uq
+E,r
+cosh
+(
+h−z
+ℓq(µ+σq)
+)
+cosh
+(
+h
+ℓq(µ+σq)
+), (16c)
+ζE,l(z;q) = (δ ˜uq
+E,r +δ ˜uq
+E,l)
+cosh
+(
+h−z
+ℓq(σq)
+)
+cosh
+(
+h
+ℓq(σq)
+)−δ ˜uq
+E,r
+cosh
+(
+h−z
+ℓq(µ+σq)
+)
+cosh
+(
+h
+ℓq(µ+σq)
+), (16d)
+(16e)
+where we have deﬁned
+ℓq(χq) :=
+√
+Dc
+χq +Dcq2 , (17)
+generalizing the penetration depthsℓD and ℓE to wave vector dependent quantities.
+δ ˜uq
+i are Fourier coefﬁcients that depend on the wavenumber q.
+9
+
+===== PAGE 71 =====
+Using the shorthand notation for a term describing the coupling between the
+membrane concentrations and the density proﬁles in the bulk
+Γq(χq) = Dc
+ℓq(χq) tanh
+( h
+ℓq(χq)
+)
+, (18)
+and the ﬁrst Taylor coefﬁcient for the reaction terms
+f i
+j = ∂ f j(u)
+∂ui
+⏐⏐⏐⏐
+u=u∗
+, (19)
+the linear system readsLq δ ˜uq =0, for eachδ ˜uq =
+[δ ˜uq
+DD,δ ˜uq
+DT ,δ ˜uq
+E,r,δ ˜uq
+E,l,δ ˜uq
+d,δ ˜uq
+de
+]T
+,
+where Lq is given by
+Lq =
+
+
+f DD
+DD −Γq(σq+λ) f DT
+DD f E,r
+DD
+f DD
+DT +Γq(σq+λ)−Γq(σq) f DT
+DT −Γq(σq) f Eo
+DT
+f DD
+E,r f DT
+E,r f E,r
+E,r −Γq(σq+µ)
+f DD
+E,l f DT
+E,l f E,r
+E,l +Γq(σq+µ)−Γq(σq)
+f DD
+d f DT
+d f E,r
+d
+f DD
+de f DT
+de f E,r
+de
+f E,l
+DD f d
+DD f de
+DD
+f E,l
+DT f d
+DT f de
+DT
+f E,l
+E,r f d
+E,r f de
+E,r
+f E,l
+E,l −Γq(σq) f d
+E,l f de
+E,l
+f d
+d −σq−Dmq2 f de
+d
+f E,l
+de f d
+de f de
+de −σq−Dmq2
+
+
+(20)
+The ﬁrst four rows of Lq are the linearisation of the reactive boundaries
+Eq. (3), and the last two rows are the linearisation of the membrane dynamics
+Eq. (1d)-(1e).
+The dispersion relation as a function of q ist then given by the maximum of
+Re[σq] (i.e. the fastest growth rates of each wavenumber q) are then obtained as
+solutions of
+detLq = 0. (21)
+10
+
+===== PAGE 72 =====
+Since Lq is non-algebraic in σq, solutions can only be obtained numerically. For
+this purpose we use the iterative solver FindRoot[] provided by Wolfram Math-
+ematica 11 to compute the linear stability of stationary solutions for the extended
+models including a MinE-MinD interaction switch or persistent membrane bind-
+ing of MinE.
+For Figs. 2A, B and S2-S5, we numerically determined the linear stability
+of the stationary solutions for MinE protein concentration between 0 .0001 µM
+and 20 µM for a ﬁxed MinD protein concentration of 1 µM. The reaction rates
+for the extended models with either MinE-MinD interaction switch or persistent
+membrane binding of MinE were ﬁxed as detailed in Tables S1 and S2, repec-
+tively. To cover the lengthscale of experimentally observed patterns we deter-
+mined the linear stability against perturbations of wavelengths in a range of ap-
+prox. 5 −250 µm. In Figs. 2A, B, and S2-S5 we identiﬁed the regimes of MinE
+protein concentrations in which perturbations with respect to the steady state grow
+and patterns are predicted. In Figs. 2A, S3 and S4A, the maximal MinE con-
+centrations are plotted for different recruitment rates of latent and reactive MinE
+(Figs. 2A and S3) or different reassociation rates and MinE detachment rates
+(Fig. S4A), respectively. The parameter regime where linear stability analysis
+predicts the steady state to be linearly stable over the whole range of tested MinE
+concentrations (i.e. between 0 .0001 µM and 20 µM) is denoted as regime of ‘no
+patterns’ in Figs. 2A, S3, and S4A. In addition to the reaction rates shown in Ta-
+ble S1 and S2, we carried out an extensive survey of different reaction rates for
+both presented models, and obtained qualitatively similar results for the respective
+models.
+11
+
+===== PAGE 73 =====
+Note 2: Relation of MinE mutant proteins to model extensions
+Here, we discuss how the biochemical characteristics of the tested MinE variants
+(Fig. 3) relate to our reaction networks (Figs. 1A, C, and D).
+WT MinE
+As stated in the main text, MinE is recruited to membrane-bound MinD, where-
+upon it forms a MinDE complex in its reactive conformation. Upon stimulation
+of MinD’s ATPase activity, disintegration of the complex and MinD detachment,
+MinE can stay attached to the membrane, a behavior termed persistent binding. In
+the persistently membrane-bound state, MinE can either reassociate with another
+MinD on the membrane or detach from the membrane and quickly revert to its la-
+tent state in the bulk phase. It is assumed to then again be recruited to membrane-
+bound MinD either in the short-lived reactive or, after conformational switching,
+in the latent state. Experiments [5, 6, 7] suggest that attachment of MinE to the
+membrane depends on prior interaction with membrane-bound MinD [5, 6, 7].
+Very recent studies [8, 9] also suggest the possibility of direct, MinD-independent
+MinE membrane interactions. In any case, we argue that direct membrane binding
+is not responsible for the observed robustness of Min patterns, as detailed below
+(see Note 8).
+MinE L3E
+The L3 residue lies on the hydrophobic face of MinE’s amphipathic membrane
+targeting sequence and is inserted into the lipid bilayer during membrane interac-
+tion [7, 10]. Thus, substitution with a polar residue is expected to impair mem-
+brane binding. In agreement with this, in vivo experiments conﬁrmed that this
+mutation perturbs membrane interaction [7]. In these experiments, the L3E mu-
+tation was introduced on top of the I25R or I24N mutation, both of which release
+the MTS [7]. As the I24N mutation locks MinE in its reactive conformation with
+exposed MTS [7], this state also represents the conformation of MinE that would
+persist on the membrane after MinD detachment. As the L3E mutation disrupts
+membrane interaction of MinE I24N [7], we reason that it also abolishes persis-
+tent membrane interaction of WT MinE. In conclusion, these observations indicate
+that MinE L3E can neither bind to, nor persist on the membrane in the absence of
+MinD.
+12
+
+===== PAGE 74 =====
+We note that Park et al. [7] suggested that the L3E mutation also interferes
+with MinE’s sensing of MinD, i.e. the MinD-dependent conversion of MinE from
+the latent to the reactive state. However, there is no experimental evidence for this
+notion, which was based on the observation that the L3E mutation resulted in a
+defect in cell division and colony growthin vivo[7]. In principle, it would be pos-
+sible that the L3E mutation slows down recruitment of MinE to MinD. However,
+it is impossible that the mutant is completely deﬁcient in binding to MinD, as this
+would impair its ability to form patterns and stimulate MinD’s ATPase activity. In
+contrast, we observe pattern formation with the L3E mutant and even in a similar
+range as for WT MinE (Fig. 3).
+In summary, the L3E mutation is a suitable means to impair persistent MinE
+membrane binding without disabling MinE’s conformational switch. Therefore,
+it emulates our model extension with MinE-MinD interaction switch but without
+MinE membrane interaction.
+MinE I24N
+As noted above, the I24N mutation locks MinE in its membrane- and MinD-
+interactive conformation [7]. In this state, the β1 strand of each MinE subunit in
+the dimer is converted to a contact helix that interacts with MinD in the membrane-
+bound MinDE complex [7]. The reactive state of MinE is expected to have a
+higher afﬁnity to MinD than the latent form, which is incorporated as fast and
+slow recruitment in our model, respectively. Thus, locking MinE in the reactive
+conformation through the I24N mutation prevents switching to the latent form,
+resulting in an overall higher afﬁnity and faster recruitment to membrane-bound
+MinD.
+Like the WT, MinE I24N would be expected to persist on the membrane even
+in the absence of MinD. In conclusion, the I24N mutation disrupts reversion of
+MinE from the reactive to the latent state, without disabling persistent MinE mem-
+brane binding.
+We note that, due to its constitutively exposed MTS, MinE I24N is expected
+to have a higher effective membrane afﬁnity than the WT and was shown to bind
+the membrane independently of MinD in vivo [7]. Again, we argue that direct
+membrane binding is not responsible for the observed change in robustness for
+MinE I24N, as detailed below (see Note 8).
+13
+
+===== PAGE 75 =====
+MinE L3E/I24N
+This double mutant combines the effects of the I24N and L3E mutations. Conse-
+quently, the mutant cannot undergo switching from the reactive to the latent form.
+Furthermore, even though the MTS is exposed, the L3E mutation prevents the
+mutant from binding the membrane directly or persistently [7]. Due to these deﬁ-
+ciencies in switching and membrane interaction, MinE L3E/I24N closely mimics
+MinE in the skeleton network [1, 2] (Fig. 1A).
+Notably, while the skeleton model is a good approximation of the L3E/I24N
+mutant, it also represents a suitable network conﬁguration for a peptide compris-
+ing just the anti-MinCD domain of MinE. Analogously to MinE L3E/I24N, such
+a peptide can bind and stimulate the ATPase activity of MinD, but neither switch
+from the reactive to the latent state, nor bind the membrane. However, in con-
+trast to the dimeric full-length protein, an anti-MinCD peptide is monomeric as it
+lacks MinE’s C-terminal topological speciﬁcity domain, which serves to dimerize
+MinE [11] and sequester the anti-MinCD domain in the latent state [7].
+Interestingly, reconstitution experiments with an anti-MinCD peptide (MinE13−31)
+did not show pattern formation [12], whereas we observe pattern formation with
+MinE L3E/I24N (Fig. 3). Although both variants are captured by the conﬁgu-
+ration of interactions in the skeleton network, they are not identical from a bio-
+chemical point-of-view, which also impacts the choice of modeling parameters.
+In particular, the simultaneous presence of two anti-MinCD domains in a MinE
+dimer would be expected to result in different interaction rates with MinD com-
+pared to a single peptide. Accordingly, we observe that for a certain choice of
+recruitment rates of MinE to membrane-bound MinD (Fig. S2) the model does
+not support pattern formation, as observed for MinE 13−31 [12]. Furthermore, it
+has been proposed that MinE’s topological speciﬁcity domain is involved in po-
+tential intermolecular interactions of MinE [13], which could also impact pattern
+formation.
+In summary, it is not inconsistent to observe differences in pattern formation
+for a full-length MinE variant and an anti-MinCD peptide. Rather, our results
+motivate future experimental and theoretical studies that focus in-depth on the
+underlying differences between full-length WT and mutant Min proteins as well
+as short peptides.
+14
+
+===== PAGE 76 =====
+Note 3: The skeleton model cannot explain pattern formation
+when MinE excedes MinD in concentration
+As stated in the main text, previous models based on the skeleton network [2, 1,
+14] suggest that patterns can form only if MinE is less abundant than MinD. Re-
+call from Note 1, that the skeleton model is recovered from the model including
+a MinE-MinD interaction switch by setting kl
+dE = kr
+dE . We performed extensive
+parameter sweeps in the skeleton model (i.e. kl
+dE = kr
+dE ) over all remaining reac-
+tion rates and found that the homogeneous state can only get unstable when the
+MinD concentration exceeds the MinE concentration. Fig. S2 shows a parameter
+sweep for different recruitment rates of MinE to membrane-bound MinD. Since
+for the skeleton model kl
+dE = kr
+dE , we denote the recruitment rate of MinE as kdE .
+Also note that, in agreement with previous studies [1] patterns can only be found
+when the recruitment rate of MinE to membrane-bound MinD is higher than the
+recruitment rate of MinD to membrane-bound MinD (Fig. S2).
+Note 4: In the limit case of vanishing recruitment of latent MinE
+by membrane-bound MinD, the ability to form patterns is lost
+Fig. 2A shows that there is a regime of low kl
+dE and high kr
+dE for which patterns
+are predicted for MinE/MinD concentration ratios much larger than one. Yet,
+in the limiting case of vanishing recruitment of latent MinE to membrane-bound
+MinD (i.e. kl
+dE →0) one would expect, that the cycling of MinE between bulk
+and membrane ceases, MinE remains in its latent conformation in the bulk for all
+times and patterns are suppressed. In analogy to Fig. 2, Fig. S2 depicts the range
+of MinE/MinD concentration ratios in a window of very low recruitment of latent
+MinE kl
+dE . In the limiting case kl
+dE = 0, patterns are suppressed for all values of
+kr
+dE. Note that in the stationary state of kl
+dE = 0, all MinE is present in its latent
+form and uniformly distributed in the bulk, while all MinD is membrane-bound
+and also uniformly distributed over the membrane. In agreement with our intu-
+ition, for a ﬁnite, ﬁxedkr
+dE , the range of MinE concentrations compatible with pat-
+terns eventually decreases for kl
+dE approaching zero until patterns are suppressed
+for all MinE concentrations.
+15
+
+===== PAGE 77 =====
+Note 5: Thickness of reactive MinE layer
+In the network with MinE-MinD interaction switch, after detachment of MinE
+from the membrane MinE remains in its reactive state until it quickly reassumes
+its latent form of low MinD binding afﬁnity at a rate µ. Thus, the region in
+which reactive MinE exists is limited by the region it can diffuse through before it
+changes its conformation. The extension of this region into the bulk is given by the
+penetration depth of reactive MinE, ℓE =
+√
+Dc/µ. For our analyses we assumed
+Dc = 60 µm2s−1 and µ = 100s−1 such that ℓE =
+√
+0.6 µm ≈0.77 µm. The vertical
+extension of the box geometry used in our analyses is assumed to be 5000 µm
+which is a good approximate of the bulk height in our in vitroexperiments. This
+means that a bulk layer of reactive MinE that is three orders of magnitude thinner
+than the total bulk is sufﬁcient to dramatically increase the robustness of patterns
+as shown in Figs. 2A and B in the main text.
+Note 6: On the assumption of dissociation of reactive MinE from
+MinD and its switch to latent MinE as a two-step process
+The precise sequence of events during MinE’s dissociation from MinD and switch-
+ing to the latent form is still unclear. In our study, we assume that after dissociation
+of MinD, reactive MinE quickly switches to its latent form at a certain (large) rate
+µ. In principle, this switch could also precede and initiate dissociation of MinE
+from MinD. Although this cannot be ruled out, we think that it is unlikely for the
+following reason.
+MinE L3E/I24N is a mutant that can neither bind the membrane nor switch to
+the latent form. This mutant still supported pattern formation, which is indicative
+of MinE cycling between membrane-bound MinD and the bulk. Hence, the con-
+formational switch is not required to initiate dissociation of MinE from MinD and
+it appears likely that MinE mutants that retain the ability of switching will change
+conformation (shortly) after dissociation from MinD.
+Based on this assumption, our results (Fig. 2) strongly suggest that treating
+reactive MinE’s dissociation from MinD and its transition to a latent state as a
+two-step process is essential in order to understand the origin of pattern robust-
+ness. When the lifetime of reactive MinE is changed, the thickness of the reactive
+MinE layer above the membrane (illustrated by the red shaded region in Fig. 2C)
+is altered (revised SI Note 5). When changing the lifetime of reactive MinE (1/µ)
+we found that increasing/decreasing reactive MinE’s lifetime has an effect similar
+16
+
+===== PAGE 78 =====
+to that of increasing/decreasing its recruitment rate to membrane-bound MinD.
+Thus, when the lifetime of reactive MinE is reduced, the broad concentration
+range of MinE compatible with patterns as shown in Fig. 2A and B is restored
+when the recruitment rate of reactive MinE to membrane-bound MinD is simul-
+taneously increased. This is reasonable, since one may expect both processes
+(changing reactive MinE’s lifetime or its recruitment rate) to have similar effects
+on the total afﬁnity of reactive MinE for a region of membrane-bound MinD. We
+note here that, in our model, the wide range of MinE concentrations permissive
+for pattern formation exists even for an arbitrarily short lifetime (as long as it is
+larger than zero). Hence, treating dissociation of reactive MinE from MinD and
+switching to its latent form as two non-simultaneous steps is crucial to explain the
+wide protein concentration range compatible with pattern formation. More gener-
+ally, our results highlight the importance of two-step processes in pattern-forming
+systems even when these steps occur in very rapid succession.
+Note 7: Effect of persistent MinE membrane binding on the con-
+centration range of pattern formation
+To determine the impact of persistent membrane binding on the concentration
+range of pattern formation we studied a reaction network in which MinE remains
+on the membrane after detachment of MinD (Fig. 1D, Fig. S1D). Membrane-
+bound MinE can either detach at a rateke or reassociate at a rateked with membrane-
+bound MinD to form a new MinDE complex. We ﬁnd that this model exhibits two
+qualitatively different regimes (Fig S2), depending on whether reassociation with
+MinD or detachment of MinE is the faster process. If MinE detachment is domi-
+nant, the range of MinE/MinD ratios that allows pattern formation increases as the
+minimal residence time of free MinE on the membrane is increased, as previously
+suggested [1] (Fig. S4B, the x-axes of Fig. S4B and C show the minimal residence
+time of MinE on the membrane with persistent membrane binding (1/ked +1/ke)
+as compared to the residence time without persistent membrane binding (1/ked)).
+Conversely, if reassociation is favored, the maximal MinE/MinD ratio compati-
+ble with pattern formation decreases as the residence time of free MinE on the
+membrane is increased (Fig. S4C).
+In analogy to the case with MinE-MinD interaction switch the change in ro-
+bustness can be understood by considering the opposing roles of MinE and MinD
+in the establishment of Min oscillations.
+For ‘slow’ reassociation, i.e. when reassociation of membrane-bound MinE
+17
+
+===== PAGE 79 =====
+with membrane-bound MinD is slower than detachment of free MinE from the
+membrane, the maximal MinE/MinD ratio compatible with pattern formation in-
+creases as the residence time of free MinE on the membrane is increased (Fig.
+S4B). As previously suggested [1], in this case, persistent membrane binding
+would partially sequester MinE on the membrane where it hardly contributes to
+the formation of MinDE complexes. This sequestration partially disables MinE in
+its action to deplete MinD on the membrane and thereby enables MinD accumu-
+lation for an increased MinE/MinD ratio.
+For ‘fast‘ reassociation, i.e. when reassociation of free membrane-bound MinE
+with membrane-bound MinD is faster than detachment of free MinE from the
+membrane, the maximal MinE/MinD ratio compatible with pattern formation de-
+creases as the residence time of free MinE on the membrane is increased (Fig.
+S4C). We argue, that for fast reassociation, the overall binding of free MinE to
+MinD on the membrane is ampliﬁed with respect to the skeleton network, which
+in turn favors depletion over accumulation of MinD on the membrane. As a
+consequence, initial MinD accumulation and subsequent patterns require lower
+MinE/MinD concentration ratios than without persistent membrane binding.
+These predictions can be tested with the MinE I24N mutant, which is capa-
+ble of persistent membrane binding but defective in the MinE-MinD interaction
+switch as discussed in the main text (see also SI Note 2). For MinE I24N pat-
+terns only form in a very narrow range of MinE/MinD concentration ratios far
+below one (Figs. 3 and 4). This demonstrates that, unlike the MinE-MinD switch,
+persistent MinE membrane binding cannot explain the robustness of in vitroMin
+patterns.
+Note 8: Direct attachment of MinE to the membrane does not
+affect the MinE concentration range compatible with pattern
+formation
+In SI Note 7, we addressed membrane interactions of MinE by theoretically study-
+ing a reaction network that includes persistent MinE membrane binding in the
+absence of a MinE-MinD interaction switch. To test our theory regarding this re-
+action network, we employed the MinE I24N mutant. The MinE I24N mutant is
+deﬁcient in conformational switching while retaining the ability to independently
+bind to the membrane [7]. In addition to the persistent MinE membrane binding
+included in our mathematical approach (SI Note 7), MinE I24N is able to directly
+bind to the membrane even in the absence of MinD due to its permanently exposed
+18
+
+===== PAGE 80 =====
+MinD binding region and membrane targeting sequence [7]. Furthermore, recent
+studies [9, 12] suggest weak MinD-independent membrane interactions of MinE,
+even in WT MinE, that may allow MinE attachment to the membrane independent
+of MinD [9] or stabilization of MinD by membrane-bound MinE [12]. To rule out
+that the observed change in robustness for MinE I24N (Fig. 3) is due to stronger
+direct, MinD-independent attachment of MinE to the membrane, we included an
+extra term in the equations (6)–(9) which enables direct attachment of MinE to
+the membrane with a rate kE. The terms fe and fE introduced in eq. 6 and eq. 8
+then read:
+fE := ke ue −kdE ud ˜uE −kE ˜uE (22)
+fe := kE ˜uE +kde ude −ud kedue −keue . (23)
+We performed a parameter scan in the attachment ratekE of MinE to the mem-
+brane. For low values of kE the effect of persistent MinE membrane binding on
+the range of MinE/MinD concentration ratios compatible with pattern formation
+is unchanged and independent of whether or not direct attachment of MinE to the
+membrane is included (Fig. S5). In particular, in Fig. S5A, the maximal MinE
+concentration compatible with patterns increases when increasing the minimal
+persistence time of free MinE on the membrane (going from left to right on the x-
+axis of Fig. S5A). In Fig. S5B the maximal MinE concentration compatible with
+patterns decreases when increasing the minimal persistence time of free MinE on
+the membrane. Only for very high kE, when attachment of MinE is more than two
+orders of magnitude faster than attachment of MinD ( kE ≳ 316kD), the maximal
+MinE concentration where patterns are predicted decreases for slow (Fig. S5A) as
+well as for fast (Fig. S5B) reassociation. This is likely because for very high kE
+MinE is so abundant on the membrane that reassociation of free MinE and MinD
+on the membrane becomes more likely than MinE sequestration.
+However, we note that the physiological rate of the direct membrane attach-
+ment of MinE I24N is very likely of the same order as the MinD attachment rate or
+even smaller considering the approximately equal lengths of MinD’s and MinE’s
+amphipathic membrane targeting sequences [7]. Thus, our theory suggests, that
+direct, MinD-independent attachment of MinE does not change the effect of per-
+sistent membrane binding on the range of MinE/MinD concentration ratios com-
+patible with patterns (Fig. S5, small kE).
+Furthermore, as discussed in the main text (Fig. 3), introducing a L3E mutation–
+and thereby disabling possible MinD-independent membrane interactions of MinE–
+does not affect the MinE concentration range compatible with patterns. This
+19

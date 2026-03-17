@@ -1,0 +1,1449 @@
+
+
+===== PAGE 1 =====
+RESEA RCH ARTICL E
+Photosensing and quorum sensing are
+integrated to control Pseudomonas aeruginosa
+collective behaviors
+Sampriti Mukherjee
+ID
+1
+, Matthew Jemielita
+ID
+1
+, Vasiliki Stergioula
+1
+, Mikhail Tikhonov
+ID
+2
+,
+Bonnie L. Bassler
+ID
+1,3
+*
+1 Department of Molecular Biology , Princeton University , Princeton, New Jersey, United States of America,
+2 Physics Department, Washingto n University in St. Louis, St. Louis, Missouri, United States of America,
+3 Howard Hughes Medical Institute, Chevy Chase, Maryland , United States of America
+* bbassler@ princeton.edu
+Abstract
+Bacteria convert changes in sensory inputs into alterations in gene expression, behavior,
+and lifestyles. A common lifestyle choice that bacteria make is whether to exhibit individual
+behavior and exist in the free-living planktonic state or to engage in collective behavior and
+form sessile communitie s called biofilms. Transitions between individual and collective
+behaviors are controlled by the chemical cell-to-cell communicat ion process called quorum
+sensing. Here, we show that quorum sensing represses Pseudomonas aeruginosa
+biofilm formation and virulence by activating expression of genes encoding the KinB–AlgB
+two-component system (TCS). Phospho-AlgB represses biofilm and virulence genes,
+while KinB dephosphorylates and thereby inactivates AlgB. We discover that the photore-
+ceptor BphP is the kinase that, in response to light, phosphorylates and activates AlgB.
+Indeed, exposing P. aeruginosa to light represses biofilm formation and virulence gene
+expression. To our knowledge, P. aeruginosa was not previously known to detect and
+respond to light. The KinB–AlgB–B phP module is present in all pseudomonad s, and we
+demonstrate that AlgB is the partner response regulator for BphP in diverse bacterial
+phyla. We propose that in the KinB–AlgB–Bph P system, AlgB functions as the node at
+which varied sensory information is integrated. This network architecture provides a mech-
+anism enabling bacteria to integrate at least two different sensory inputs, quorum sensing
+(via RhlR-driven activation of algB) and light (via BphP–AlgB) , into the control of
+collective behaviors. This study sets the stage for light-mediated control of P. aeruginosa
+infectivity.
+Introduction
+Bacterial responses to self-generated and exogenous stimuli influence their survival, persis-
+tence in particular niches, and lifestyle transitions such as alterations between being free-
+swimming or existing as a member of a biofilm. Biofilms are three-dimensional structured
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 1 / 26
+a1111111111
+a1111111111
+a1111111111
+a1111111111
+a1111111111
+OPEN ACCESS
+Citation: Mukherjee S, Jemielita M, Stergioula V,
+Tikhonov M, Bassler BL (2019) Photosensin g and
+quorum sensing are integrated to control
+Pseudomon as aeruginosa collective behaviors.
+PLoS Biol 17(12): e3000579. https://d oi.org/
+10.1371/ journal.pbio.3000 579
+Academic Editor: Michael T. Laub, HHMI,
+Massachu setts Institute of Technology , UNITED
+STATES
+Received: September 10, 2019
+Accepted: November 26, 2019
+Published: December 12, 2019
+Peer Review History: PLOS recognize s the
+benefits of transpar ency in the peer review
+process; therefore, we enable the publication of
+all of the content of peer review and author
+response s alongside final, published articles. The
+editorial history of this article is available here:
+https://doi.o rg/10.1371/jo urnal.pbio.3 000579
+Copyright: © 2019 Mukherjee et al. This is an open
+access article distributed under the terms of the
+Creative Commons Attribution License, which
+permits unrestricte d use, distribu tion, and
+reproduction in any medium, provided the original
+author and source are credited.
+Data Availabilit y Statement: All relevant data are
+within the paper and its Support ing Information
+files.
+
+===== PAGE 2 =====
+communities of bacterial cells encased in an extracellular matrix [1,2]. Bacteria living in
+biofilms exhibit superior resilience to environmental stresses such as antimicrobials and
+host immune responses [2,3]. Frequently, biofilm formation is governed by intracellular sig-
+naling molecules such as cyclic di-guanosine monophosphate [4,5] and extracellular signal-
+ing molecules such as quorum-sensing autoinducers [6,7]. Quorum sensing is a cell-to-cell
+communication process that relies on the production, release, and population-wide detection
+of autoinducers [8,9]. Quorum sensing allows groups of bacteria to synchronously alter
+behavior in response to changes in the population density and species composition of the vic-
+inal community. Many pathogenic bacteria, including the global pathogen P. aeruginosa,
+require quorum sensing to establish successful infections [10]. Here, we show that quorum-
+sensing signaling converges with the detection of and response to another sensory cue, light,
+to control biofilm formation and virulence factor production in P. aeruginosa. We define the
+pathway connecting the light and quorum-sensing inputs to the virulence and biofilm
+outputs.
+Light is a common environmental cue that is detected by photoreceptors present in all
+domains of life [11,12]. Particular photoreceptor photosensory domains are activated by
+specific wavelengths of light [13]. Photoreceptors fall into 7 families depending on the struc-
+ture of the light-absorbing chromophore: rhodopsins, xanthopsins, cryptochromes, light–
+oxygen–voltage (LOV)-domain–containing phototropins, blue-light sensing using flavin
+(BLUF)-domain proteins, cobalamin (Vitamin B12)-binding proteins, and phytochromes
+[12–15]. In bacteria, the most abundant photoreceptors are phytochromes [16], typically pos-
+sessing an amino-terminal chromophore-binding domain and a carboxy-terminal histidine
+kinase (HK) domain. Bacteriophytochromes assemble with the chromophore called biliverdin
+(BV) [17]. Surprisingly, very few bacteria encode a partner response regulator (RR) in close
+proximity to the gene specifying the bacteriophytochrome [18], leaving the systems mostly
+undefined.
+In the human pathogen P. aeruginosa, LuxR-type quorum-sensing receptors, which func-
+tion as transcriptional activators when they are bound to their partner autoinducers, are
+required for virulence and biofilm formation [19,20]. In this study, we examine the mechanism
+by which the P. aeruginosa LuxR-type quorum-sensing receptor called RhlR represses biofilm
+formation [21,22]. A genetic screen reveals that RhlR activates the expression of the algB–kinB
+operon (Fig 1). KinB and AlgB are a TCS sensor HK and partner RR, respectively [23,24].
+KinB is required for acute infection in zebrafish embryos, in which it controls production of
+virulence factors such as pyocyanin and promotes motility [24,25]. In the context of our
+screen, we find that phospho-AlgB (AlgB-P) is a repressor of biofilm formation and KinB is a
+phosphatase that dephosphorylates and thereby inactivates AlgB. Using genetic suppressor
+analysis and in vitro phosphorylation assays, we discover that BphP is the HK that phosphory-
+lates and activates AlgB, enabling AlgB to repress biofilm formation and genes encoding viru-
+lence factors (Fig 1). BphP is a far-red-light–sens ing bacteriophytochrome [26], and indeed,
+we demonstrate that P. aeruginosa biofilm formation and virulence gene expression are
+repressed by far-red light. Phylogenetic analyses show that the KinB–AlgB–BphP module is
+conserved in all pseudomonads, and moreover, AlgB is present in the majority of bacteria that
+possess BphP orthologs. This final finding suggests that the BphP–AlgB interaction is wide-
+spread. As proof of this notion, we show that P. aeruginosa BphP can phosphorylate AlgB
+orthologs from α-, β-, and γ-Proteobacteria. Thus, we propose that AlgB functions as an inte-
+grator that conveys multiple environmental cues, including those specifying population den-
+sity and the presence or absence of light into the regulation of collective behaviors (Fig 1). We
+further predict that AlgB functions as the partner RR for BphP in all bacteria that possess
+BphP as an orphan HK. The downstream signal transduction components and the outputs of
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 2 / 26
+Funding: This work was supported by the
+Howard Hughes Medical Institute, NIH Grant
+5R37GM0 65859, and National Science foundation
+Grant MCB-17 13731 to BLB, and NIH Grant
+1K99GM12 9424-01 to SM. The funders had no
+role in study design, data collection and analysis,
+decision to publish, or preparation of the
+manuscript.
+Competing interests : The authors have declared
+that no competing interests exist.
+Abbreviati ons: AU, arbitrary unit; BLUF, blue-light
+sensing using flavin; BV, biliverdin; ESKAPE,
+Enterococcu s faecium, Staphylococc us aureus,
+Klebsiella pneumonia e, Acinetob acter baumannii,
+Pseudomon as aeruginosa, and Enterobacter spp.;
+HK, histidine kinase; LB, lysogeny broth; LED, light-
+emitting diode; LOV, light–oxygen –voltage; PF,
+Pass-Filte r; qRT-PCR, quantitative Reverse
+Transcripta se-Polymer ase Chain Reaction; rpm,
+rotations per minute; RR, response regulator; SEM,
+standard error of the mean; SSA, solid-sur face–
+associated; TB, Tryptone broth; TCS, two-
+componen t system; WT, wild type.
+
+===== PAGE 3 =====
+photosensory cascades are not known in the majority of nonphotosynthetic bacteria that pos-
+sess them, making their physiological roles difficult to discern. This study provides the entire
+cascade—light as the input, BphP as the detector, AlgB as the signal transducer, and biofilm
+formation and virulence factor production as the outputs—enabling insight into light-driven
+control of bacterial behaviors.
+Fig 1. Model for P. aeruginosa integration of quorum-sens ing and photosen sing inform ation into the control of
+virulence and biofilm developm ent. The RhlR quorum- sensing receptor binds its partner AI produced by either the
+RhlI or PqsE autoinducer synthase (black circles) at high cell density [22]. The RhlR–AI complex represses biofilm
+formatio n and virulence gene expression by activating transcrip tion of the algB–kinB operon encoding the KinB HK
+and the AlgB RR, the latter an indirect represso r of biofilm formatio n. KinB antagonize s AlgB by dephospho rylation.
+The stimulus (blue hexago n) for KinB is unknow n. In the presence of this putative stimulus, the hypothesis is that
+KinB functions as a kinase for AlgB (dashed arrow). Photosensi ng stimulates the BphP HK to autophospho rylate and
+subsequentl y transfer the phosphoryl group to AlgB to activate AlgB. AlgB-P activates transcription of genes required
+for repression of group behavior s such as biofilm formation and virulence. A “P” in a circle denotes addition or
+removal of a phospha te moiety (dotted line). X denotes that the genes functioning downstream of AlgB in the process
+are not known. The RhlR–AI complex directly activates virulence gene expression and also repres ses biofilm formation
+by addition al unknow n mechanisms (dashed T-bar). AI, autoinducer ; HK, histidine kinase; RR, response regulator.
+https://d oi.org/10.1371/j ournal.pbio. 3000579.g001
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 3 / 26
+
+===== PAGE 4 =====
+Results
+KinB activates and AlgB represses RhlR-dependent group behaviors
+We recently discovered that the P. aeruginosa quorum-sensing receptor RhlR represses biofilm
+formation [21,22]. Specifically, on Congo red agar biofilm medium, wild-type (WT) P. aerugi-
+nosa UCBPP-PA14 (hereafter called PA14) exhibits a rugose-center/smooth-perip hery colony
+biofilm phenotype, while the ΔrhlR mutant forms a larger hyper-rugose colony biofilm (Fig
+2A). To determine the mechanism by which RhlR impedes colony biofilm formation, we ran-
+domly mutagenized the ΔrhlR strain using the transposon Tn5 IS50L derivative ISlacZ/hah
+[27] and screened for colonies exhibiting either a WT or a smooth colony biofilm phenotype.
+Our rationale was that inactivation of a gene encoding a component that functions down-
+stream of RhlR in biofilm formation would sever the connection between RhlR and repression
+of colony biofilm formation. We screened 5,000 transposon insertion mutants. Strains harbor-
+ing insertions located in genes encoding hypothetical proteins, proteins involved in twitching
+motility, and proteins required for Pel polysaccharide synthesis all produced smooth colony
+biofilms (S1 Table). Most of these genes were already known to play roles in P. aeruginosa bio-
+film formation [28]. Here, we focus on one transposon insertion mutant that exhibited a
+smooth colony biofilm phenotype that mapped to the gene PA14_72390 encoding the KinB
+transmembrane HK (Fig 2A) [23,24,25]. kinB is located immediately downstream of algB in a
+dicistron that is conserved in all sequenced pseudomonads (S1A Fig; www.pseudomonas.
+com). To verify that KinB plays a role in colony biofilm formation, we generated an in-frame
+markerless deletion of kinB in the chromosomes of the WT and ΔrhlR strains. Both the ΔkinB
+single and ΔrhlR ΔkinB double mutants failed to form colony biofilms and instead exhibited
+smooth colony phenotypes (Fig 2A). Introduction of a plasmid carrying the kinB gene con-
+ferred a hyper-rugose phenotype to the WT and restored colony biofilm formation to the
+ΔkinB and ΔrhlR ΔkinB mutants (Fig 2A). By contrast, introduction of a plasmid carrying rhlR
+did not alter the smooth biofilm phenotype of the ΔrhlR ΔkinB double mutant (Fig 2A). We
+conclude that in P. aeruginosa, KinB is essential for biofilm formation, KinB is an activator of
+biofilm formation, and KinB functions downstream of RhlR in the biofilm formation process.
+PA14 requires Pel, the primary biofilm matrix exopolysaccharide for biofilm formation
+[29] (Note: PA14 does not produce the Psl exopolysaccharide, and alginate does not contribute
+significantly to the PA14 biofilm matrix, unlike in P. aeruginosa PAO1 [30]). To examine
+whether the mechanism by which KinB alters biofilm formation is by changing Pel produc-
+tion, we performed quantitative RT-PCR analyses on WT and ΔkinB colony biofilms, probing
+for the expression of the housekeeping gene rpoD as a control and the Pel biosynthetic gene
+pelA (Fig 2B). Expression of rpoD did not change between the WT and the ΔkinB mutant,
+while transcription of pelA was approximately 14-fold lower in the ΔkinB strain than in the
+WT. We conclude that KinB activates Pel production, which is why KinB is required for PA14
+biofilm formation.
+KinB is a transmembrane HK that undergoes autophosphorylat ion and then transfers the
+phosphate to its partner RR AlgB [23]. To determine whether AlgB functions downstream of
+KinB to control colony biofilm formation, we introduced a stop codon in place of the codon
+specifying residue 10 in the algB gene to obtain an algB
+STOP
+mutant. We note that the algB
+STOP
+mutation does not alter kinB expression (S1B Fig). The algB
+STOP
+mutant had a colony biofilm
+phenotype indistinguishable from the WT (Fig 2A). However, introduction of the algB
+STOP
+mutation into the ΔkinB strain restored colony biofilm formation (Fig 2A). Furthermore, over-
+expression of algB repressed colony biofilm formation in the WT, as evidenced by the resulting
+smooth colony biofilm phenotype (Fig 2A). Overexpression of algB also repressed colony
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 4 / 26
+
+===== PAGE 5 =====
+Fig 2. RhlR represses biofilm formation via KinB. (A) Colony biofilm phenoty pes of WT PA14 and the designate d
+mutants on Congo red agar medium after 72 h of growth. kinB::Tn refers to a mutant identified in a genetic screen
+harborin g a transposon insertion in kinB. pkinB, prhlR, and palgB refer to kinB, rhlR, and algB, respectively, under the
+P
+lac
+promoter on pUCP18. Scale bar for all images is 2 mm. (B) Relative expression levels of rpoD and pelA measured
+by qRT-PC R in WT and ΔkinB mutant colony biofilm s grown as in (A). The pelABCDEFG operon encodes proteins
+required for the productio n of the Pel polysacchar ide, which is essential for the formatio n of pellicles, SSA biofilm s,
+and colony biofilms [29]. (C) Phos-ta g western blot analysis of the indicated strains probed for 3xFLAG -AlgB. (D)
+Relative algB transcript levels measured by qRT-PCR in WT PA14 and the ΔrhlR mutant grown planktoni cally to
+OD
+600
+= 1.0. (E) Relative rhlR transcrip t levels measured by qRT-PCR in WT PA14 and the ΔkinB mutant grown
+planktoni cally to OD
+600
+= 1.0. (F) Pyocyani n production (OD
+695
+) was measured in WT PA14 and the designated
+mutants. Production from the WT was set to 100%. (G) Relativ e expression of rpoD, hsiC2, hcnA, lecA, and lecB
+measured by qRT-PCR in WT PA14 and the designate d mutants grown planktoni cally to OD
+600
+= 1.0. rpoD is used as
+the control for comparison . For panels B, D, E, and G, data were normalized to 16S RNA levels, and the WT levels
+were set to 1.0. For data in panels B, D, E, F, and G, error bars represent SEM for 3 biological replicates. Data for panels
+B, D, E, F, and G can be found in supplemental file S1 Data. The original western blot showing the data for panel C is
+availabl e in supplemental file S2 Data. AU, arbitrary unit; OD, optical density; qRT-PCR, quantitative Reverse
+Transcrip tase-Polyme rase Chain Reaction; SEM, standard error of the mean; SSA, solid-surf ace–associate d; WT, wild
+type.
+https://d oi.org/10.1371/j ournal.pbio. 3000579.g002
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 5 / 26
+
+===== PAGE 6 =====
+biofilm formation in the algB
+STOP
+and ΔrhlR strains (Fig 2A). Thus, these data suggest that
+KinB activates while AlgB represses biofilm development.
+AlgB has an amino-terminal domain containing the site of phosphorylation (residue D59),
+a central ATP-binding domain, and a carboxy-terminal helix-turn-helix motif for binding
+DNA (S1C and S2 Figs) [23,31]. AlgB is a member of the NtrC subfamily of RRs, and it
+possesses the hallmark GAFTGA motif required for interaction with RpoN (σ
+54
+) [32]. Typi-
+cally, NtrC-type RRs act as transcriptional activators when they are phosphorylated [33]. To
+investigate whether phosphorylation of AlgB is required for the repression of colony biofilm
+formation, we substituted the aspartate at residue 59 with an asparagine residue to preclude
+phosphorylation [32]. We overexpressed the algB
+D59N
+allele in the PA14 strain carrying the
+algB
+STOP
+mutation. Unlike WT AlgB, AlgB
+D59N
+failed to repress colony biofilm formation (Fig
+2A, S3A, S3B and S4A Figs). To ensure the validity of this result, we generated amino-terminal
+3xFLAG-tagged algB and algB
+D59N
+fusions and expressed them from a plasmid in the algB
+STOP
+mutant. A western blot showed that both proteins are produced at similar levels (S3A Fig).
+We also introduced the algB
+D59N
+mutation into the algB gene in the chromosome of WT PA14
+and the ΔkinB mutant. Identical to the results from the plasmid-based experiment, both the
+algB
+D59N
+single and the ΔkinB algB
+D59N
+double mutants produced colony biofilms (S3B Fig).
+We conclude that the phosphorylated form of AlgB is active and is required for AlgB-mediated
+repression of biofilm development. We presume that AlgB-P functions indirectly as a tran-
+scriptional activator to promote the expression of a gene encoding a negative regulator of bio-
+film formation (Fig 1).
+Our results show that AlgB functions downstream of KinB and that KinB and AlgB have
+opposing activities with respect to PA14 biofilm formation. In vitro, KinB possesses both
+kinase and phosphatase activities [25]. One mechanism by which KinB could antagonize AlgB
+function is by acting as a phosphatase that dephosphorylates AlgB, rendering it inactive. To
+test this possibility, we integrated the 3xFLAG-tagged algB allele at the native algB locus in
+the chromosomes of WT PA14 and the ΔkinB mutant. Colony biofilm analyses show that
+3xFLAG-AlgB is functional (S3B Fig). Next, we assessed the phosphorylation status of
+3xFLAG-AlgB in vivo. Fig 2C shows that AlgB-P accumulates in the ΔkinB mutant compared
+to in the WT. To verify these claims regarding the signal transduction mechanism, we engi-
+neered a missense mutation into KinB at a conserved proline (P390) that is required for phos-
+phatase activity [25]. Specifically, we generated both kinB-SNAP and kinB
+P390S
+-SNAP fusions
+and introduced these alleles at the native kinB locus on the chromosome of PA14. Carboxy-
+terminal tagging of KinB with SNAP does not interfere with its function because the strain car-
+rying kinB-SNAP forms biofilms that are indistinguishable from those of WT PA14 (S3C and
+S3D Fig). The KinB
+P390S
+-SNAP protein is also produced and stable (S3C Fig); however, identi-
+cal to the ΔkinB mutant, the strain carrying kinB
+P390S
+-SNAP fails to form colony biofilms (S3D
+Fig). These data demonstrate that KinB acts as a phosphatase to inhibit AlgB function in vivo.
+We therefore hypothesize—and we come back to this point below—that some other HK must
+phosphorylate AlgB to activate it and enable it to function as a repressor of biofilm
+development.
+Our data show that the KinB–AlgB TCS functions downstream of RhlR to repress biofilm
+formation. An obvious mechanism by which RhlR could influence KinB–AlgB activity is by
+activating transcription of the algB–kinB operon. Indeed, RT-PCR shows that algB transcript
+levels are approximately 4-fold higher in the WT than in the ΔrhlR mutant (Fig 2D). Thus,
+RhlR activates expression of the algB–kinB operon. By contrast, deletion of kinB has no effect
+on rhlR transcript levels (Fig 2E), confirming their epistatic relationship.
+KinB has been reported to be required for pyocyanin production [25]. Pyocyanin is a
+RhlR-dependent virulence factor [21,34]. Our findings of a regulatory connection between
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 6 / 26
+
+===== PAGE 7 =====
+KinB and RhlR suggest that KinB and RhlR could jointly regulate pyocyanin production. To
+test this idea, we measured pyocyanin production in planktonic cultures of WT, ΔrhlR, ΔkinB,
+and ΔrhlR ΔkinB strains. Similar to what has been reported previously, deletion of rhlR and/or
+kinB abolished pyocyanin production (Fig 2F). Overexpression of rhlR in the ΔrhlR strain and
+overproduction of kinB in the ΔkinB strain restored pyocyanin production, demonstrating
+that our expression constructs are functional (Fig 2F). By contrast, overexpression of either
+rhlR or kinB in the ΔrhlR ΔkinB double mutant failed to rescue pyocyanin production (Fig 2F).
+Thus, RhlR and KinB are both required activators of pyocyanin production in PA14. Consis-
+tent with AlgB functioning as the RR for KinB, inactivation of AlgB (i.e., algB
+STOP
+) in the
+ΔkinB background restored WT levels of pyocyanin production, while overexpression of algB
+in the WT and the algB
+STOP
+mutant reduced pyocyanin levels (Fig 2F). Lastly, unlike overex-
+pression of algB, overexpression of algB
+D59N
+failed to repress pyocyanin production, suggesting
+that phosphorylation of AlgB is required for AlgB activity (Fig 2F).
+To further explore the role of the KinB–AlgB TCS on RhlR-driven gene expression, we
+quantified expression of 4 other RhlR-activated genes [21]—hsiC2 (type-VI secretion), hcnA
+(hydrogen cyanide synthase), lecA (galactose-binding lectin), and lecB (fucose-binding lectin),
+all encoding virulence factors—in the WT and the ΔkinB mutant. Expression of all 4 genes was
+lower in the ΔkinB mutant than in the WT (Fig 2G). Introduction of the algB
+STOP
+mutation
+into the ΔkinB mutant restored expression of all 4 virulence genes to WT levels (Fig 2G). Thus,
+both RhlR and KinB activate virulence gene expression in P. aeruginosa. Moreover, we con-
+clude that AlgB is epistatic to KinB for all the phenotypes tested here, and thus, KinB and AlgB
+function in the same pathway, albeit in opposing manners, to control biofilm formation and
+virulence factor production.
+The bacteriophytochrome BphP is the HK required to activate AlgB to
+mediate repression of quorum-sensing–con trolled behaviors
+We have invoked the existence of a putative HK to activate AlgB via phosphorylation. To iden-
+tify this component, we used genetic suppressor analysis, reasoning that mutants with defects
+in the upstream component required to phosphorylate AlgB would render AlgB nonfunc-
+tional. We further reasoned that such suppressor mutants would transform the ΔkinB smooth
+colony biofilm phenotype back to the rugose phenotype because in such mutants, AlgB could
+not act as a repressor of biofilm formation. We isolated 12 spontaneously arising rugose
+mutants from ΔkinB smooth colony biofilms and analyzed them by whole-genome sequencing
+(Fig 3A). Eight suppressors contained deletions or missense mutations in the algB gene, while
+the remaining 4 suppressors harbored mutations in the bphP gene (Fig 3B, S2 Table). bphP is
+located in a dicistron immediately downstream of bphO (Fig 3B, S1 Fig) [35]. We discuss bphO
+below; here we focus on bphP. Exactly analogous to mutation of algB, mutation of bphP was
+epistatic to kinB for all of the phenotypes tested. Specifically, engineering a stop codon in place
+of the codon specifying residue 50 in the bphP gene showed no effect in WT PA14, but it
+restored colony biofilm formation, pyocyanin production, and virulence gene expression to
+the ΔkinB mutant (Figs 3C–3D and 2G). Consistent with BphP being required to activate
+AlgB, unlike in the WT, in the bphP
+STOP
+mutant, overexpression of algB failed to repress col-
+ony biofilm formation and pyocyanin production (Fig 3C and 3D). Furthermore, while over-
+expression of bphP in the WT reduced pyocyanin production to the levels of the ΔkinB
+mutant, overexpression of bphP had no effect in the algB
+STOP
+mutant (Fig 3D). There is a
+severe growth defect associated with the overexpression of bphP. For this reason, in Fig 3D,
+rather than using plasmid pUCP18, we expressed bphP from the low-copy–number plasmid
+pBBR1-MCS5. Unfortunately, the presence of the empty pBBR-MCS5 plasmid in WT and
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 7 / 26
+
+===== PAGE 8 =====
+Fig 3. BphP and AlgB are a two-compon ent HK–RR pair. (A) Shown is a representati ve isolation of a suppres sor
+mutation of the ΔkinB smooth colony biofilm phenotype . The white arrow in the left panel indicates a region of rugose
+sectorin g in the ΔkinB smooth colony biofilm that is diagnostic of the emergenc e of a suppressor mutation. The right
+panel shows the colony biofilm phenotype of a mutant followi ng isolation . (B) Chromosoma l arrangem ents of the algB
+(red), kinB (blue), bphO (yellow), and bphP (green) genes. Large white arrows represent open reading frames (lengths
+not to scale), black bent arrows indicate promoters, and black circles indicate the locations of suppressor mutations .
+(C) Colony biofilm phenot ypes of WT PA14 and the designated mutants on Congo red agar medium after 72 h of
+growth. palgB refers to algB under the P
+lac
+promoter on the pUCP18 plasmid. Scale bar is 2 mm for all images. (D)
+Pyocyani n production (OD
+695
+) was measu red in WT PA14 and the designate d mutants. pbphP refers to bphP
+under the P
+lac
+promoter on the pBBR-MCS5 plasmid. Error bars represent SEM for 3 biological replicates. (E)
+Autopho sphorylation of BphP–BV and phosphotrans fer to AlgB. (Left) Autopho sphorylation of BphP– BV was carried
+out for 30 min and samples were removed at the indicated times for electropho resis. (Right) An equim olar amount of
+AlgB was added to phosph o-BphP-BV for 30 min and samples were removed at the indicated times for electropho resis.
+(F) Dephosphoryl ation of AlgB-P by KinB or KinB
+P390S
+. Phosphotra nsfer to AlgB from phospho-Bp hP-BV was carried
+out for 30 min. ATP was removed from the reaction, and either KinB or KinB
+P390S
+was added. Samples were removed
+at the indicated times for electropho resis. The top panel shows repres entative images of gels. The bottom graph shows
+percent AlgB-P levels at each time point with SEM for 3 independen t replicates. Band intensities for AlgB-P when
+KinB was added (circles) and when KinB
+P390S
+was added (squares) were normalized to the levels at time 0. To assess
+the quality of protein preparations used in panels E and F, see S4B Fig. Data for the graphs in panels D and F can be
+found in supplem ental file S1 Data. The original autorad iographs with the data for panels E and F are availabl e in
+supplem ental file S2 Data. BV, biliverdin ; OD, optical density; SEM, standard error of the mean; WT, wild type.
+https://d oi.org/10.1371/j ournal.pbio. 3000579.g003
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 8 / 26
+
+===== PAGE 9 =====
+mutant PA14 strains abrogates colony biofilm formation, so we could not perform the com-
+panion colony biofilm assay to test overexpression of bphP. Nonetheless, we can conclude
+from Fig 3C and 3D that BphP is necessary and sufficient to activate AlgB.
+BphP is a bacteriophytochrome that assembles with its chromophore BV, which is pro-
+duced by the heme oxygenase BphO (Fig 3B, S1A and S1D Fig) to generate a photosensing HK
+that is activated by light [35]. P. aeruginosa BphP contains the HDLRNPL motif, which often
+contains the histidine residue that undergoes autophosphorylation in transmembrane HKs
+[36]. In P. aeruginosa BphP, this histidine is residue 513 (S1D Fig). To determine whether
+BphP kinase activity is required for AlgB activation, we generated the bphP
+H513A
+mutation,
+fused it to 3xFLAG, and introduced it onto the chromosome of the ΔkinB mutant. The
+BphP
+H513A
+-3xFLAG protein is produced and stable (S3E Fig), and identically to the bphP
+STOP
+allele, the bphP
+H513A
+mutation restored colony biofilm formation and pyocyanin production
+to the ΔkinB mutant (Fig 3C and 3D). Moreover, overexpression of algB in the bphP
+H513A
+mutant failed to repress colony biofilm formation and pyocyanin production (Fig 3C and 3D).
+These results show that BphP H513 and AlgB D59 are required for signal transmission, and
+the signal is presumably phosphorylation.
+To assess phosphorelay between BphP and AlgB, we used our 3xFLAG-AlgB in vivo con-
+struct. In addition to introducing it into the chromosome of WT PA14, we engineered it onto
+the chromosome of the bphP
+STOP
+mutant. Consistent with BphP being the kinase for AlgB, Fig
+2C shows that the ΔkinB bphP
+STOP
+mutant lacks the band corresponding to AlgB-P. These
+data suggest that BphP transfers phosphate to AlgB. To verify this finding, we performed in
+vitro phosphotransfer assays. We purified recombinant BphP and formed a complex with it
+and commercially available BV to obtain the BphP–BV chromoprotein. Upon incubation with
+radiolabeled ATP under ambient light, BphP–BV underwent autophosphorylation (Fig 3E).
+BphP–BV readily transferred radiolabeled phosphate to purified AlgB but not to AlgB
+D59N
+(Fig 3E, S4A Fig). Purified apo-BphP and purified apo-BphP
+H513A
+complexed with BV both
+failed to autophosphorylate and thus could not transfer phosphate to AlgB (S4A Fig).
+Together, these data show that BphP–BV phosphorylates and thereby activates AlgB.
+Our data suggest that KinB dephosphorylates AlgB, while BphP phosphorylates AlgB. To
+directly test this hypothesis, we reconstituted the BphP–AlgB–KinB phosphorelay in vitro. We
+purified the recombinant KinB and KinB
+P390S
+proteins and added them separately, at equimo-
+lar concentration, to AlgB-P prephosphorylated by BphP–BV. Fig 3F shows that over time,
+KinB dephosphorylates AlgB while AlgB-P levels remain unchanged in the presence of
+KinB
+P390S
+. As control experiments, we added either KinB or KinB
+P390S
+to AlgB in the presence
+of ATP but in the absence of BphP–BV. Both KinB and KinB
+P390S
+underwent autophosphory-
+lation and transferred phosphate to AlgB in vitro, but only WT KinB acted as a phosphatase to
+dephosphorylate AlgB (S5A–S5D Fig). Although our findings show that KinB is a dual kinase/
+phosphatase, under our in vivo conditions, only KinB phosphatase activity was detected. Per-
+haps KinB can function as a kinase for AlgB when its stimulus is present (Fig 1). Identifying
+the natural signal that drives the KinB kinase activity is the subject of our future work. We con-
+clude that BphP–AlgB–KinB forms a regulatory module in which the RR AlgB is activated by
+the kinase activity of the HK BphP and inhibited by the phosphatase activity of the HK KinB.
+BphP-mediated photosensing represses P. aeruginosa quorum-sensing–
+controlled behaviors
+The P. aeruginosa BphP bacteriophytochrome has been studied in vitro, and its kinase activity
+is reported to be activated by light [35]. To explore whether BphP photosensing has any effect
+on AlgB-controlled group behaviors in vivo, we compared colony biofilm formation by WT,
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 9 / 26
+
+===== PAGE 10 =====
+ΔkinB, ΔkinB bphP
+STOP
+, and ΔkinB algB
+STOP
+PA14 strains in the dark and under different light
+conditions. We note that all of the colony biofilm experiments in the previous sections were
+performed under ambient light. First, we consider WT PA14 and the ΔkinB mutant in the no
+light condition. Fig 4A shows that in the dark, both strains formed colony biofilms that were
+indistinguishable from one another. We interpret these results to mean that in the absence of
+light, the BphP kinase is inactive in both WT PA14 and the ΔkinB mutant, and AlgB is not
+phosphorylated, so it too is inactive. Thus, no repression of colony biofilm formation occurs
+(Fig 1). Now, we address the results under ambient light. WT PA14 formed colony biofilms,
+but the ΔkinB strain did not (Fig 4A). Our interpretation is that in the WT, ambient light acti-
+vates the BphP kinase, and phosphotransfer to AlgB occurs. However, the opposing KinB
+phosphatase activity strips the phosphate from AlgB, thereby eliminating AlgB-dependent
+repression of colony biofilm formation. Thus, WT PA14 forms colony biofilms under ambient
+light. In the case of the ΔkinB mutant, since there is no KinB phosphatase present, ambient
+light is sufficient to drive BphP-mediated phosphorylation of AlgB, AlgB-P accumulates, and it
+represses colony biofilm formation. Based on these results, we infer that the presence or
+absence of light can alter group behaviors such as colony biofilm formation in P. aeruginosa.
+Ambient light is a composite of different wavelengths of light. The PA14 BphP bacteriophy-
+tochrome is reported to be a far-red-light–sensing HK in vitro [26]. We wondered whether a
+particular wavelength of light could maximally activate the BphP kinase activity in vivo, and if
+so, perhaps, under that condition, the BphP kinase activity could override the KinB phospha-
+tase, enabling light to repress biofilm formation in WT PA14. To test this notion, we exposed
+PA14 strains to blue, red, and far-red light and monitored colony biofilm formation. In con-
+trast to WT PA14, the ΔkinB mutant failed to form colony biofilms under blue, red, and far-
+red light, suggesting that BphP is a promiscuous photoreceptor that is activated by far-red light
+and also by blue and red light (Fig 4A). Indeed, BphP phosphorylates AlgB in vitro under
+ambient (as above), blue, red, and far-red light, but it does not do so in the absence of light
+(Fig 4B). Importantly, when WT PA14 was exposed to far-red light, it failed to make colony
+biofilms, but rather, exhibited the smooth colony phenotype, identical to the ΔkinB mutant
+(Fig 4A). We conclude that far-red light is the preferred wavelength for BphP and is sufficient
+to repress biofilm formation in WT P. aeruginosa. Finally, we show that light-mediated
+repression of biofilm formation requires functional BphP and AlgB because the bphP
+STOP
+and
+algB
+STOP
+single mutants and the ΔkinB bphP
+STOP
+and ΔkinB algB
+STOP
+double mutants did not
+repress colony biofilm formation under the conditions tested (Fig 4A, S6A Fig). To extend our
+results concerning light-mediated repression of biofiolm formation, we assessed the effects
+of light on solid-surface–associated (SSA) biofilm formation [29] by the WT, ΔkinB, ΔkinB
+algB
+STOP
+, and ΔkinB bphP
+STOP
+PA14 strains (S6B Fig). The results exactly mirror our findings
+for colony biofilms: far-red light repressed SSA biofilm formation in the WT. The ΔkinB
+mutant exhibited a severe decrease in SSA biofilm formation under ambient and far-red light,
+but it produced SSA biofilms in the dark. Lastly, both the ΔkinB algB
+STOP
+and ΔkinB bphP
+STOP
+mutants formed SSA biofilms under all conditions.
+One mechanism by which light could suppress biofilm formation via BphP–AlgB is by
+decreasing the production of the Pel exopolysaccharide. To quantify the effect of light on pel
+expression and, in turn, on biofilm formation, we measured pelA transcript levels using quan-
+titative RT-PCR analyses of WT, ΔkinB, ΔkinB algB
+STOP
+, and ΔkinB bphP
+STOP
+colony biofilms
+in darkness and under ambient and far-red light (Fig 4C). We used rpoD transcription as the
+control. Expression of rpoD did not change under any condition tested. Regarding pelA, analo-
+gous to what occurred for colony biofilm formation, there was no significant difference in
+pelA expression between the WT and the ΔkinB strains in the dark, whereas transcription of
+pelA was approximately 14-fold lower in the ΔkinB strain than in the WT under ambient light.
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 10 / 26
+
+===== PAGE 11 =====
+Fig 4. Photosensin g, via the BphP–AlgB phospho relay, represses group behaviors in P. aeruginosa. (A) Colony
+biofilm phenot ypes are shown for WT PA14 and the designated mutants on Congo red agar medium after 72 h of
+growth under the indicated light conditions . Scale bar is 2 mm for all images. (B) Autopho sphorylation of the BphP–
+BV complex was carried out for 30 min (left lane in each pair), followed by addition of AlgB (right lane in each pair)
+for an additiona l 30 min under the indica ted light conditions . (C) Relative expression of rpoD and pelA as measured by
+qRT-PC R in WT PA14 and the designated mutant strains grown as colony biofilms as in (A) in darkness, ambient
+light, and far-red light. (D) Relative expression of hsiC2, hcnA, lecA, and lecB measured by qRT-PCR in WT PA14 and
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 11 / 26
+
+===== PAGE 12 =====
+Repression of pelA expression depended on functional BphP and AlgB because the ΔkinB
+bphP
+STOP
+and ΔkinB algB
+STOP
+mutants transcribed pelA at high levels under both conditions.
+We conclude that dephosphorylation of AlgB does not occur in the ΔkinB mutant under
+ambient light. In this condition, BphP phosphorylates AlgB, and AlgB-P represses colony bio-
+film formation via down-regulation of pelA expression. Lastly, in the WT, pelA transcript levels
+were approximately 4-fold lower under far-red light than in darkness. Therefore, far-red light
+is the strongest activator of BphP such that under far-red light, but not ambient light, the
+kinase activity of BphP overrides the phosphatase activity of KinB in the WT to drive AlgB-P
+accumulation, repression of pelA expression, and consequently, repression of biofilm
+formation.
+In Fig 2, we showed that BphP is required for AlgB-dependent repression of virulence gene
+expression. Our results in Fig 4 suggest that light, by controlling BphP-dependent phosphory-
+lation of AlgB, could control virulence in P. aeruginosa. To explore this idea further, we quan-
+tified the expression of the virulence-associated genes hsiC2, hcnA, lecA, and lecB in colony
+biofilms of WT PA14 and in the ΔkinB, ΔkinB algB
+STOP
+, and ΔkinB bphP
+STOP
+strains under
+darkness, ambient light, and far-red light. The results mimic those for biofilm formation and
+pelA transcription. Only in the absence of the opposing KinB phosphatase activity is ambient
+light sufficient to activate BphP, whereas far-red-light–driven BphP kinase activity can over-
+ride the KinB phosphatase activity, allowing accumulation of AlgB-P to levels that repress viru-
+lence gene expression. Again, light-mediated repression of virulence genes requires functional
+BphP and AlgB (Fig 4D). We conclude that BphP-dependent photosensing represses virulence
+gene expression in P. aeruginosa.
+Light possesses both color (wavelength) and intensity properties. Above, we demonstrated
+that BphP can detect blue, red, and far-red light. To explore the possibility that P. aeruginosa
+BphP is also capable of detecting light intensity, we varied the intensity of far-red light since it
+has the most dramatic effect on PA14 phenotypes. We used repression of colony biofilm for-
+mation as the readout. Colony biofilm formation decreased with increasing intensity of far-red
+light in the WT and ΔkinB mutant but remained unaltered in the bphP
+STOP
+mutant (Fig 5A).
+The highest intensity of light we tested (bottom-most panel in Fig 5A) is similar to that present
+in natural sunlight (5.5 W/m
+2
+in a 5-nm window around 730 nm; ASTM G173-03 Reference
+Solar Spectra, www.astm.org). At this intensity, WT colony biofilm formation was maximally
+repressed, showing that BphP kinase dominates over KinB phosphatase. The ΔkinB mutant
+generates suppressor flares under this condition, suggesting that one role of the KinB phospha-
+tase is to keep the BphP kinase activity in check. To verify that far-red light specifically altered
+colony biofilm behavior without affecting general physiology, we quantified rpoD and pelA
+transcript levels in the WT and bphP
+STOP
+mutant colony biofilm samples grown under the dif-
+ferent light intensities (Fig 5B). Expression of rpoD did not change under any condition tested,
+while transcription of pelA decreased progressively in the WT with increasing intensity of far-
+red light. At the highest intensity of far-red light tested, expression of pelA was approximately
+12-fold lower than that in the bphP
+STOP
+mutant that cannot convey the light cue internally to
+AlgB. These results demonstrate that P. aeruginosa colony biofilm formation can be modulated
+simply by tuning the intensity of far-red light in which the strain is grown.
+the designated mutants grown as colony biofilms as in (A) and light conditions as in (B). For panels B and C, data were
+normalized to 16S RNA levels, and the WT levels were set to 1.0. Error bars represent SEM for 3 biological replicates.
+Data for panels C and D can be found in supplem ental file S1 Data. The original autorad iograph with the data for panel
+B is available in supplem ental file S2 Data. AU, arbitrary unit; BV, biliverdin; qRT-PCR, quantitat ive Reverse
+Transcrip tase-Polyme rase Chain Reaction; SEM, standard error of the mean; WT, wild type.
+https://d oi.org/10.1371/j ournal.pbio. 3000579.g004
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 12 / 26
+
+===== PAGE 13 =====
+Fig 5. Far-red light intensity controls biofilm formation . (A) Colony biofilm phenotypes are shown for WT PA14
+and the designate d mutants on Congo red agar mediu m after 72 h of growth under the indicated far-red light
+intensiti es. Scale bar is 2 mm for all images. (B) Relativ e expression of rpoD (squares) and pelA (circles) measured by
+qRT-PC R in WT PA14 (black) and in the bphP
+STOP
+mutant (green) grown as colony biofilm s as in (A). Data were
+normalized to 16S RNA levels, and the WT levels at 0 mW/m
+2
+far-red light were set to 1.0. Error bars represent SEM
+for 3 biological replicates. Data for panel B can be found in supplemental file S1 Data. AU, arbitrary unit; qRT-PCR,
+quantita tive Reverse Transcrip tase-Polyme rase Chain Reaction; SEM, standard error of the mean; WT, wild type.
+https://d oi.org/10.1371/j ournal.pbio. 3000579.g005
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 13 / 26
+
+===== PAGE 14 =====
+The BphP–AlgB phosphorelay is conserved in diverse bacteria
+BphP bacteriophytochromes are a major class of photoreceptors widely distributed in nonpho-
+tosynthetic bacteria [16]. These BphP HKs either lack a partner RR or, when they are co-tran-
+scribed with a partner RR gene, the physiological output of the circuit is unknown. Thus, the
+downstream signaling components and consequences of photosensing in nonphotosynthetic
+bacteria are not understood. Our discovery of AlgB as the partner RR for the orphan light-
+sensing BphP HK in a nonphotosynthetic bacterium, coupled with our demonstration of the
+biofilm and virulence outputs of photosensing, puts us in a position to test the generality of
+our findings. As a first step, we generated a phylogenetic tree containing 150 BphP orthologs
+that are the closest homologs to P. aeruginosa BphP (Fig 6A, S7 Fig). The majority of these
+BphP orthologs are present in nonphotosynthetic bacteria from diverse phyla. The pseudomo-
+nads fall into discrete clusters, hinting at acquisition of BphP via horizontal gene transfer.
+Fig 6. The BphP–AlgB phosphotrans fer relay is conserved in diverse bacteria. (A) Maximum likelihood based phylogen etic tree for BphP showing
+the 150 closest orthologs to P. aeruginosa BphP. Co-occurr ences of AlgB and KinB are depicted in red and blue, respective ly. BphR is shown in purple.
+The other colors indicate bacteria l phyla. The black square indicates Arabidopsis thaliana as the root of the tree. (B) In vitro phosph orylation of AlgB
+orthologs from the α-Proteo bacterium Rce, the β-Proteobac terium Axy, and the γ-Proteobac terium Ppu by P. aeruginosa BphP–BV that had been
+autophospho rylated for 30 min. The bottom panel shows that phosphotransf er from P. aeruginosa phospho-Bp hP-BV to P. aeruginosa NtrC does not
+occur. To assess the quality of the protein preparati ons used in panel B, see S4B Fig. The original autoradiograp hs with the data for panel B are available
+in supplem ental file S2 Data. Axy, Achromobacter xylosocidans; BV, biliverdin; Ppu, P. putida; Rce, Rhodospirillum centenum.
+https://doi.o rg/10.1371/j ournal.pbio.30 00579.g006
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 14 / 26
+
+===== PAGE 15 =====
+With respect to AlgB and KinB, we find that while KinB is present only in the pseudomonads,
+Acinetobacter baumannii, and Enterobacter cloacae (Fig 6A, S1 and S7 Figs), AlgB is present in
+approximately 93% of the bacterial species in our BphP-based phylogenetic tree (Fig 6A, S7
+Fig). We note that in all of the bacteria that do not encode AlgB, for example, Deinococcus
+spp., BphR is the partner RR for BphP (Fig 6A, S1, S2 and S7 Figs; [35]). None of these bphP-
+encoding bacteria possess both BphR and AlgB. Therefore, the pattern that emerges is that
+BphB is widely distributed in nonphotosynthetic bacteria and the partner RR is either AlgB or
+BphR.
+To test whether BphP can interact with and phosphorylate AlgB in bacteria other than
+P. aeruginosa, we purified AlgB orthologs from diverse Proteobacteria: Rhodospirillum cente-
+num (α), Achromobacter xylosoxidans (β), and P. putida (γ) (S2 Fig). We incubated these AlgB
+proteins with an equimolar concentration of autophosphorylated P. aeruginosa BphP–BV.
+Phosphotransfer from BphP–BV to the AlgB orthologs occurred in all cases, albeit to varying
+degrees (Fig 6B). To eliminate the possibility that phospho-BphP-BV is a promiscuous kinase
+for NtrC family RRs, we purified NtrC from PA14 and incubated it with autophosphorylat ed
+BphP–BV. Phospho-BphP-BV failed to phosphorylate NtrC (Fig 6B). We conclude that BphP
+is the specific HK for AlgB, and AlgB appears to have a conserved function in photosensory
+signal transduction in diverse bacteria.
+Discussion
+Our study reveals that the nonphotosynthetic pathogenic bacterium P. aeruginosa detects and
+responds to light to repress group behaviors, including virulence factor production and biofilm
+formation. The photoreceptor BphP functions as a light-activated HK that phosphorylates the
+AlgB RR. AlgB-P represses group behaviors but is antagonized by its partner HK KinB. Specifi-
+cally, KinB dephosphorylates AlgB, and thus, KinB functions as an activator of group behav-
+iors. Our work shows that AlgB functions as a hub protein that has 3 inputs—quorum sensing
+via RhlR, photosensing via BphP, and an unknown signal via KinB. We note that bphP expres-
+sion has been reported to be controlled by LasR-LasI quorum sensing and the stationary-phase
+alternative sigma factor RpoS [37], suggesting that other sensory cues can be integrated into
+the AlgB–KinB–BphP circuit. While quorum sensing activates algB expression, photosensing
+activates AlgB function, and thus, the presence or absence of light can override the quorum-
+sensing input from RhlR. We reason that at high cell density, RhlR will drive AlgB production.
+However, if there is no light, BphP will not phosphorylate and activate AlgB. In turn, AlgB will
+not repress group behaviors. To our knowledge, the BphP–AlgB photosensory signal transduc-
+tion cascade represents the first example of light-mediated control of group behaviors in the
+global pathogen P. aeruginosa.
+Light is a ubiquitous source of energy that drives the anabolic process of photosynthesis in
+photosynthetic organisms. However, the wide distribution of photoreceptors in all domains of
+life suggests roles for photosensing in behaviors far beyond photosynthesis. Plants, for exam-
+ple, use light cues to regulate activities such as seed germination [38], stomatal opening [39],
+and defenses against microbes [40–42]. Furthermore, plant vascular systems can function as
+bundles of optical fibers to efficiently transmit light, particularly far-red light, that is not
+absorbed by plant pigments, allowing opportunities for photosensing in roots and possibly in
+the rhizosphere [43]. Many of the bphP-encoding bacteria from the phylogenetic tree in Fig
+6A that also possess AlgB are members of the rhizosphere microbiome [44]. Perhaps these
+nonphotosynthetic bacteria exploit light cues to colonize and/or to fine-tune their mutualistic
+or pathogenic interactions with their plant hosts as well as adjust their physiology in the rhizo-
+sphere. While we do not know the evolutionary forces that drove P. aeruginosa to become a
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 15 / 26
+
+===== PAGE 16 =====
+photosensing bacterium, we speculate below on possible advantages P. aeruginosa could accrue
+by detecting light in the environment and in the human host.
+Light provides spatial and temporal information to higher organisms. Does light serve a
+similar purpose in bacteria? Recent studies have reported that BphP plays a role in multiple
+stages of infection by the foliar plant pathogens Xanthomonas campestris pv. campestris and P.
+syringae pv. syringae [45,46], in each case via an unknown but putative downstream RR. Based
+on our phylogenetic analysis, we speculate that AlgB fulfils this role. We further speculate that
+P. aeruginosa, which is a plant pathogen [47], responds to light cues via the BphP–AlgB TCS to
+appropriately modulate its biofilm and virulence programs, particularly to inhibit virulence
+during daylight, enabling avoidance of plant defense mechanisms. For instance, during the
+day, chlorophyll in leaves removes most of the red wavelength from sunlight but little of the
+far-red spectrum [48]. Thus, far-red light is readily available, and based on our work here,
+could signal to P. aeruginosa to tamp down virulence factor production and biofilm formation,
+allowing it to optimize those programs in line with host conditions because shaded leaves are
+more susceptible to infection than leaves exposed to direct light [49]. In the same vein, our
+work suggests the possibility that inside the mammalian host, the lack of light would drive P.
+aeruginosa to form biofilms and produce virulence factors because, in the absence of light,
+BphP–AlgB-mediated repression of biofilms and virulence would not occur.
+In addition to providing spatial and temporal information, light can also reveal other key
+parameters to which bacteria respond. Detection of blue light via LOV- and BLUF-domain
+proteins modulates general stress responses in some nonphotosynthetic bacteria such as Bacil-
+lus subtilis and Caulobacter crescentus [50,51]. Light, through the LOV-HK of the mammalian
+pathogen Brucella abortus, is crucial for virulence in a macrophage infection model, although
+the components connecting light to the virulence response remain undefined. It is also pro-
+posed that B. abortus uses light as an indicator of whether it is inside or outside of its animal
+host [52]. The P. aeruginosa genome does not encode LOV or BLUF domain proteins [11]. P.
+aeruginosa possesses only one identifiable photoreceptor, BphP. Nonetheless, we showed that
+P. aeruginosa is capable of detecting blue, red, and far-red light via BphP (Fig 4A and 4B). Per-
+haps an advantage of BphP promiscuity is that it enables detection of higher energy and there-
+fore phototoxic blue light, in addition to the lower-energy but highly penetrative far-red light.
+Such a scenario would endow P. aeruginosa with the plasticity to diversify its physiological out-
+puts in response to particular wavelengths of light without the necessity of a distinct photore-
+ceptor for each wavelength.
+Bacteriophytochro mes are thought to function as reversible photoswitches that convert
+between red-absorbing and far-red–absorbing states [17]. The P. aeruginosa BphP kinase has
+been reported to be activated by far-red light in vitro [26]. Interestingly, however, the pub-
+lished BV absorption spectrum possesses peaks at blue, red, and far-red light [53], hinting at
+promiscuity in light detection. Based on our in vitro and in vivo data, we suggest that P. aerugi-
+nosa BphP is active as a kinase in both the red and far-red states as well as under blue light. We
+are currently investigating the mechanism by which the BphP–BV holocomplex is activated by
+different wavelengths of light.
+An advantage P. aeruginosa could gain by sensing light on or within a mammalian host
+would be the ability to tune into the host circadian rhythm and its associated responses. Circa-
+dian clocks influence various aspects of health and disease such as sleep/wake cycles and
+metabolism [54,55]. Disruption of circadian rhythms are associated with fitness costs [55]. In
+mammals, both innate and adaptive immune responses are controlled by the circadian clock
+such that the immune system is primed to combat pathogens during the host active phase
+while immune functions undergo regeneration and repair during the resting phase of the daily
+cycle. Parasites such as Plasmodium spp., which cause malaria, synchronize their replication
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 16 / 26
+
+===== PAGE 17 =====
+cycle with host circadian rhythms for optimized infection and dissemination [56]. Likewise,
+viruses such as herpes and influenza A have been shown to exploit the mammalian circadian
+clock for their own gain, i.e., to successfully avoid host immune responses, enabling maximal
+replication [57,58]. Perhaps P. aeruginosa uses light as a signal that reveals when the host
+immune response is at peak function, and accordingly, at that time, P. aeruginosa represses
+biofilm formation and virulence factor expression as a mechanism that enhances evasion of
+host defenses. If so, a human host infected with P. aeruginosa during the night would be colo-
+nized to higher levels compared to a host acquiring an infection during the day. Synchronizing
+infectivity with light/dark cues to enable optimal infection could be a common feature of non-
+photosynthetic photoreceptor-harboring pathogens.
+P. aeruginosa is a priority pathogen on the Centers for Disease Control and Prevention
+(CDC) ESKAPE pathogen list (a set of bacteria including Enterococcus faecium, Staphylococcus
+aureus, Klebsiella pneumoniae, A. baumannii, P. aeruginosa, and Enterobacter spp. that are des-
+ignated as multidrug-resistant pathogens requiring new antimicrobials for treatment) and a
+critical pathogen on the World Health Organization (WHO) priority list [59,60]. Our phyloge-
+netic analysis suggests that the KinB–AlgB–BphP module is conserved in the genomes of A.
+baumannii and E. cloacae, perhaps acquired from P. aeruginosa via horizontal gene transfer
+because the AlgB primary sequence is nearly identical between the 3 species. We speculate that
+beyond P. aeruginosa, BphP–AlgB-dependent photosensing also affects the physiology and
+possibly the virulence of these ESKAPE pathogens. Collectively, the results from this study
+provide unanticipated insight into P. aeruginosa physiology and a surprising possibility for
+therapeutic intervention—shining light on a deadly and actively studied pathogen, P. aerugi-
+nosa, to attenuate virulence and biofilm formation. One can imagine such a strategy could be
+deployed in external infections such as burns, which are highly susceptible to P. aeruginosa
+and could, moreover, be subjected to precise light regimes.
+Materials and methods
+Bacterial strains and growth conditions
+All strains and plasmids used in this study are listed in S3 and S4 Tables, respectively. P. aerugi-
+nosa PA14 and mutants were grown at 37 ˚C in lysogeny broth (LB) (10 g tryptone, 5 g yeast
+extract, 5 g NaCl per L), in 1% Tryptone broth (TB) (10 g tryptone per L), or on LB plates forti-
+fied with 1.5% Bacto agar. When appropriate, antimicrobials were included at the following
+concentrations: 400 μg/mL carbenicillin, 30 μg/mL gentamycin, and 100 μg/mL irgasan.
+Escherichia coli was grown at 37 ˚C in LB or on LB plates fortified with 1.5% Bacto agar and
+the following concentrations of antimicrobials as appropriate: 15 μg/mL gentamycin, 50 μg/
+mL kanamycin, and 100 μg/mL ampicillin. IPTG (Sigma-Aldrich, St. Louis, MO, USA) was
+added to the medium at the indicated concentrations when appropriate.
+Mutant strain and plasmid construction
+Strains and plasmids were constructed as described previously [22]. Briefly, to construct mar-
+kerless in-frame chromosomal deletions and substitutions in PA14, DNA fragments flanking
+the gene of interest were amplified, assembled by the Gibson method [61], and cloned into sui-
+cide vector pEXG2 [62]. The resulting plasmids were used to transform E. coli SM10λpir and
+subsequently mobilized into PA14 strains via biparental mating. Exconjugants were selected
+on LB containing gentamycin and irgasan, followed by recovery of deletion mutants on LB
+medium containing 5% sucrose. Candidate mutants were confirmed by PCR and Sanger
+sequencing. Transposon insertions in the PA14 chromosome were generated by mating the
+PA14 ΔrhlR parent strain with E. coli SM10λpir harboring pIT2 (ISlacZ/hah) [27]. Insertion
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 17 / 26
+
+===== PAGE 18 =====
+mutants were selected on LB agar containing 60 μg/mL tetracycline, and 100 μg/mL irgasan
+was included in the agar to counterselect against the E. coli donor. Transposon insertion loca-
+tions were determined by arbitrary PCR and sequencing as described previously [27].
+Protein production constructs were generated by amplifying the algB, kinB, and bphP cod-
+ing regions and cloning them in pET28b or pET21b expression vectors (Addgene, Watertown,
+MA, USA) to obtain pET28b-His6-AlgB, pET21b-KinB-His6, and pET21b-BphP-His6, respec-
+tively. To generate the AlgB
+D59N
+, KinB
+P390S
+, and BphP
+H513A
+variants, the corresponding muta-
+tions were engineered onto the pET28b-His6-AlgB, pET21b-KinB-His6, and pET21b-BphP-
+His6 plasmids, respectively, via Gibson assembly. AlgB orthologs from R. centenum and A.
+xylosoxidans were amplified from gene fragments obtained from Integrated DNA Technolo-
+gies (Coralville, IA, USA), and that from P. putida was amplified from the P. putida KT2440
+genome. All of the gene orthologs were cloned into the pET28b plasmid.
+Pyocyanin assay
+PA14 strains were grown overnight in LB liquid medium at 37 ˚C with shaking at 250 rotations
+per minute (rpm). The cells were pelleted by centrifugation at 21,130 × g for 2 min, and the
+clarified supernatants were passed through 0.22-μm filters (Millipore, Burlington, MA, USA)
+into clear plastic cuvettes. The OD
+695
+of each sample was measured on a spectrophotometer
+(Beckman Coulter DV 730; Brea, CA, USA) and normalized to the culture cell density, which
+was determined by OD
+600
+.
+Colony biofilm assay
+The procedure for establishing colony biofilms has been described [22]. Briefly, 1 μL of over-
+night cultures of PA14 strains were spotted onto 60 × 15 mm Petri plates containing 10 mL 1%
+TB medium fortified with 40 mg/L Congo red and 20 mg/L Coomassie brilliant blue dyes and
+solidified with 1% agar. Colony biofilms were grown at 25 ˚C for 72 h in an incubator (Bench-
+mark Scientific, Sayreville, NJ, USA), and images were acquired using a Leica stereomicro-
+scope M125 (Wetzlar, Germany) mounted with a Leica MC170 HD camera at 7.78× zoom.
+For colony biofilms exposed to specific wavelengths of light, the following light-emitting
+diodes (LEDs) were used: blue, 430 nm (Diffused RGB LED, #159; Adafruit, New York, NY,
+USA); red, 630 nm (Diffused RGB LED, #159; Adafruit); and far-red, 730 nm (LST1-01G01-
+FRD1-00; Opulent Americas, Raleigh, NC, USA). Ambient light exposure refers to biofilms
+grown under laboratory light conditions. For the colony biofilms shown in Fig 4A, light inten-
+sity was normalized by photon flux, and the following intensities were used: blue (0.7 W/m
+2
+),
+red (1 W/m
+2
+), and far-red (1.1 W/m
+2
+). Light intensity was calibrated using a laser power meter
+(Ophir, North Logan, UT, USA) in a 5-nm window at the appropriate wavelength. Colony bio-
+film samples were grown in custom laser-cut acrylic chambers. Each chamber housed a single
+LED light source and an individual Petri plate containing 4 technical replicates. Samples
+exposed to darkness were housed in the same chambers as the light-exposed samples, but with
+no current applied to the LEDs.
+SSA biofilm formation assay
+The procedure for establishing SSA biofilms has been described [29]. Briefly, overnight cultures
+of PA14 strains were diluted to a final OD
+600
+of 0.01 in 1% TB. These samples were used to make
+standing 3-mL cultures in 18 × 150 mm borosilicate glass tubes that were incubated (Benchmark
+Scientific) at 25 ˚C for 72 h under the light conditions described above for the colony biofilm
+assay. The cultures were poured out of the tubes, and the tubes were washed vigorously with tap
+water. The remaining biofilms were stained by the addition of 5 mL 0.1% crystal violet solution
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 18 / 26
+
+===== PAGE 19 =====
+into each tube. After 30 min, tubes were washed twice with tap water and left to dry overnight.
+Subsequently, 5 mL 33% glacial acetic acid solution was added to each tube. The crystal violet
+stain was quantified at OD
+550
+using a spectrophotometer (Beckman Coulter DV 730).
+qRT-PCR
+WT PA14 and mutant strains were harvested from planktonic cultures (OD
+600
+= 1.0) or from
+colony biofilms grown for 72 h. RNA was purified using the Zymo Research kit, and the prepa-
+rations were subsequently treated with DNAse (TURBO DNA-free; Thermo Fisher Scientific,
+Waltham, MA, USA). cDNA was synthesized using SuperScript III Reverse Transcriptase
+(Invitrogen, Carlsbad, CA, USA) and quantified using PerfeCTa SYBR Green FastMix Low
+ROX (Quanta Biosciences, Beverly, MA, USA).
+Protein purification
+His6-AlgB. The pET28b-His6-AlgB protein production vector was transformed into E. coli
+BL21 (DE3) and the culture grown to approximately 0.8 OD
+600
+in 1 L of LB supplemented
+with 50 μg/mL kanamycin at 37 ˚C with shaking at 220 rpm. Protein production was induced
+by the addition of 1 mM IPTG, followed by incubation of the culture for another 3 h at 25 ˚C
+with shaking. The cells were pelleted by centrifugation at 16,100 × g for 20 min and resus-
+pended in AlgB-lysis buffer (50 mM NaH
+2
+PO
+4
+[pH 8.0], 300 mM NaCl, 1 mM MgCl
+2
+, 1 mM
+DTT, 5% glycerol, 0.1% Triton X-100, 10 mM imidazole, and protease inhibitor cocktail
+[Roche, Basel, Switzerland]). The preparation was frozen at −80 ˚C overnight. The frozen cell
+pellet was thawed on ice, and the cells were lysed by sonication (1-s pulses for 15 s). The sample
+was subjected to centrifugation at 32,000 × g for 30 min at 4 ˚C. The resulting clarified super-
+natant was combined with Ni-NTA resin (Novagen) and incubated for 3 h at 4 ˚C. The bead/
+lysate mixture was loaded onto a 1-cm separation column (Bio-Rad, Hercules, CA, USA), the
+resin was allowed to pack, and then it was washed with AlgB-wash buffer (50 mM NaH
+2
+PO
+4
+[pH 8.0], 300 mM NaCl, 1 mM MgCl
+2
+, 1 mM DTT, 5% glycerol, 0.1% Triton X-100, 30 mM
+imidazole, and protease inhibitor cocktail [Roche]). Resin-bound His6-AlgB was eluted twice
+with 1 mL AlgB-wash buffer containing 250 mM imidazole. Fractions were analyzed by
+SDS-PAGE, and the gel was stained with Coomassie brilliant blue to assess His6-AlgB purity.
+Purified protein was dialyzed in AlgB-storage buffer (50 mM NaH
+2
+PO
+4
+[pH 8.0], 300 mM
+NaCl, 1 mM MgCl
+2
+, 1 mM DTT, 5% glycerol, and 0.1% Triton X-100) and stored at −80 ˚C.
+BphP-His6. The pET21b-BphP-His6 protein production vector was transformed into E. coli
+BL21-CodonPlus (DE3)-RIPL (Agilent Technologies, Santa Clara, CA, USA). BphP-His6 was
+purified as described for His6-AlgB with the following changes in buffers: BphP-lysis buffer
+(50 mM NaH
+2
+PO
+4
+[pH 8.0], 300 mM NaCl, 1% Triton X-100, 0.1% β-mercaptoethanol, 10
+mM imidazole, and protease inhibitor cocktail [Roche]), BphP-wash buffer (50 mM NaH
+2
+PO
+4
+[pH 8.0], 300 mM NaCl, 1% Triton X-100, 0.1% β-mercaptoethanol, 30 mM imidazole, and
+protease inhibitor cocktail [Roche]), and BphP-storage buffer (50 mM NaH
+2
+PO
+4
+[pH 8.0], 300
+mM NaCl, 1% Triton X-100, 0.1% β-mercaptoethanol, 5% glycerol).
+KinB-His6. The pET21b-KinB-His6 protein production vector was transformed into E. coli
+BL21 (DE3). KinB-His6 protein was purified exactly as described above for BphP-His6.
+Phosphorylation assays
+Autophosphorylation assays were performed with purified WT BphP and the BphP
+H513A
+vari-
+ant or with KinB and the KinB
+P390S
+variant. 100 μM BphP or BphP
+H513A
+was incubated under
+ambient light with 10-fold molar excess of BV (Sigma-Aldrich) for 1 h prior to the assay to
+form the light-activated BphP–BV stocks. Reactions were carried out in phosphorylation
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 19 / 26
+
+===== PAGE 20 =====
+buffer (50 mM Tris [pH 8.0], 100 mM KCl, 5 mM MgCl
+2
+, and 10% (v/v) glycerol) and were
+initiated with the addition of 100 μM ATP and 2 μCi [γ-
+32
+P]-ATP (PerkinElmer, Waltham,
+MA, USA). Reactions were incubated at room temperature and terminated by the addition of
+SDS-PAGE loading buffer. Reaction products were separated using SDS-PAGE. Gels were
+dried at 80 ˚C on filter paper under vacuum, exposed to a phosphoscreen overnight, and sub-
+sequently analyzed using a Typhoon 9400 scanner (GE Healthcare, Chicago, IL, USA) and
+ImageQuant software. For phosphotransfer to AlgB, an equimolar concentration of AlgB was
+added to the phosphorylated BphP–BV or phosphorylated KinB proteins (all proteins assayed
+at 5 μM). Reactions were incubated at room temperature for the indicated times and termi-
+nated by the addition of SDS-PAGE loading buffer. For the BphP–AlgB phosphorelay shown
+in S4B Fig, BphP–BV was incubated under specific light wavelengths using the same devices as
+described above for colony biofilm assay.
+Dephosphorylat ion of AlgB-P: 10 μM AlgB was phosphorylated for 30 min in reactions
+containing 10 μM BphP–BV, 100 μM ATP, and 2 μCi [γ-
+32
+P]-ATP in phosphorylation buffer.
+Subsequently, the reactions containing AlgB-P were applied to gel filtration spin columns
+(Probe Quant G-50, GE Healthcare) to remove ATP. Dephosphorylation reactions were initi-
+ated by adding 10 μM KinB or KinB
+P390S
+. Aliquots were taken at the indicated times and ana-
+lyzed as described above.
+Phos-tag SDS-PAGE and western blotting
+WT PA14 and mutant strains were harvested from planktonic cultures (OD
+600
+= 1.0). Cells
+were resuspended in 100 μl of ice-cold BugBuster reagent (Novagen) containing EDTA-free
+Protease Inhibitor Cocktail (Roche), followed by end-over-end rotation on a nutator at room
+temperature for 30 min. Cell debris was removed by centrifugation (4 ˚C at 10,000 rpm for 1
+min). 50 μL 4× SDS-PAGE loading buffer (Thermo Fisher Scientific) containing 15% β-mer-
+captoethanol was combined with 50 μL of the sample supernatant. Ten μL samples were loaded
+onto a 12.5% SuperSepTM Phos-tag gel (Wako Pure Chemical Industries, Osaka, Japan). Sam-
+ples were subjected to electrophoresis at 4 ˚C for 3 h. Gels were incubated for 20 min on a
+shaking platform in 1× transfer buffer containing 1 mM EDTA and re-equilibrated for 20 min
+in 1× transfer buffer lacking EDTA. Proteins were transferred to nitrocellulose membranes,
+blocked with 5% skim milk in TBS at room temperature for 1 h, and incubated with primary
+anti-FLAG antibody (Sigma-Aldrich) at 1:5,000 dilution in 5% skim milk in TBS overnight at
+4 ˚C on a rocking platform. Membranes were washed 3 times with TBS-Tween 20 at room
+temperature for 10 min on a rocking platform and subsequently developed with a SuperSignal
+West Femto Kit (Thermo Scientific) and captured with an LAS-4000 Imager (GE Healthcare).
+Whole-genome sequencing
+P. aeruginosa strains were harvested from planktonic cultures (OD
+600
+= 2.0), and DNA was
+purified using DNeasy Blood & Tissue kit (Qiagen, Hilden, Germany). The Nextera DNA
+Library Prep kit (Illumina, San Diego, CA, USA) was employed with 2 ng of genomic DNA to
+prepare the library. Unique barcodes were added to each sample to enable multiplexing. The
+libraries were examined for quality using Bioanalyzer DNA High Sensitivity chips (Agilent
+Technologies) and quantified using a Qubit fluorometer (Invitrogen). DNA libraries from the
+different strains were pooled at equal molar amounts and sequenced using an Illumina MiSeq
+as pair-end 2 × 100 nt reads. Only the Pass-Filter (PF) reads were used for further analysis.
+Whole-genome sequencing data were processed with breseq version 0.33.2 to identify muta-
+tions relative to the reference P. aeruginosa UCBPP-PA14 genome (www.pseudomonas.com;
+[63]). All high-confidence and putative SNPs and deletion events were confirmed by a manual
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 20 / 26
+
+===== PAGE 21 =====
+examination of the read pileups with GenomeViewer IGV 2.4.8. A sample collected prior to
+the suppressor mutation screen was aligned against the reference genome of PA14, yielding a
+manually curated list of 25 differences acquired by our laboratory strain prior to the experi-
+ment (19 SNPs, 6 single-nucleotide indels). Applying these differences to PA14 using gdtools
+(part of the breseq package) yielded an updated reference genome against which all other sam-
+ples were compared. S2 Table reports all high-confidence mutations identified in this analysis.
+Phylogenetic analysis
+The maximum likelihood tree for BphP orthologs was generated using MEGA-X software as
+described previously [64].
+Supporting information
+S1 Fig. Gene conservation for KinB, AlgB, BphO, and BphP; kinB expression analysis; and
+domain architectures of the AlgB and BphP proteins. (A) The genes flanking kinB, algB,
+bphO, and bphP are diagrammed for the indicated genomes. The relative gene positions and
+orientations are accurate, but gene lengths are not to scale. (B) Relative expression of kinB
+measured by qRT-PCR in WT PA14 and the algB
+STOP
+mutant grown planktonically to
+OD
+600
+= 1.0. Data were normalized to 16S RNA levels, and the WT levels were set to 1.0. Error
+bars represent SEM for 3 biological replicates. (C) The domain architecture of the AlgB mono-
+mer is shown. Residue 59 is required for phosphorylation; the GAFTGA motif, indicated by
+the magenta shading, is required for interaction with σ
+54
+; and HTH refers to the helix-turn-
+helix DNA binding domain. Adapted from [31]. (D) Domain organization of the BphP mono-
+mer consisting of the PAS, GAF, PHY, and HK domains is shown. BV binds to the GAF
+domain, and residue H513 is required for autophosphorylation. Adapted from [17]. Data for
+panel B can be found in supplemental file S1 Data. AU, arbitrary unit; BV, biliverdin; GAF,
+cGMP-specific phosphodiesterases , adenylate cyclases, and FhlA; HK, histidine kinase; PAS,
+Per-Arnt-Sim; PHY, phytochrome; qRT-PCR, quantitative Reverse Transcriptase-Polymerase
+Chain Reaction; SEM, standard error of the mean.
+(TIF)
+S2 Fig. Multiple sequence alignment for AlgB orthologs. Primary sequence alignment of
+NtrC (first line) and AlgB (second line) from Pae and AlgB orthologs (third through twelfth
+lines) from Pfl, Psy, Ppr, Pst, Pen, Ppu, Aba, Ecl, Axy, Rce, and BphR (thirteenth line) from
+Deinococcus radiodurans. Highly conserved amino acids are highlighted in black. Residue 59 is
+shown by the green asterisk. The GAFTGA motif required for interaction with σ
+54
+is indicated
+by the magenta line. Aba, Acinetobacter baumanii; Axy, Achromobacter xylosoxidans; Ecl,
+E. cloacae; Pae, P. aeruginosa; Pen, P. entomophila; Pfl, P. fluorescens; Ppr, P. protegens; Ppu,
+P. putida; Pst, P. stutzeri; Psy, P. syringae; Rce, R. centenum.
+(TIF)
+S3 Fig. AlgB
+D59N
+, KinB
+P390S
+, and BphP
+H513A
+are produced and stable in P. aeruginosa.
+(A) Western blot analysis of whole cell lysates from the indicated strains, all of which have the
+algB
+STOP
+allele at the native locus in the genome and carry an empty vector or 3xFLAG-algB or
+3xFLAG-algB
+D59N
+on the pBBR1-MCS5 plasmid under the P
+lac
+promoter. The same cell lysates
+were probed for RNAP as the loading control. (B) Colony biofilm phenotypes of WT PA14
+and the designated mutants. Scale bar is 2 mm. (C) SDS-PAGE analysis of whole cell lysates
+from the indicated strains. The gel was stained for SNAP using SNAP-Cell 647-SiR fluorescent
+substrate (New England Biolabs, Ipswich, MA, USA). Lysozyme was added as the loading con-
+trol. (D) Colony biofilm phenotypes of the kinB-SNAP and kinB
+P390S
+-SNAP strains. Scale bar
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 21 / 26
+
+===== PAGE 22 =====
+is 2 mm. (E) Western blot analysis of whole cell lysates from the indicated strains. The same
+cell lysates were probed for RNAP as the loading control. The original western blots showing
+the data for panels A, C, and E are available in supplemental file S2 Data. RNAP, RNA Poly-
+merase; WT, wild type.
+(TIF)
+S4 Fig. Phosphotransfer from BphP to AlgB in vitro. (A) Autophosphorylation of the
+BphP–BV complex was carried out for 30 min (leftmost lane), followed by addition of AlgB
+(second lane) or AlgB
+D59N
+(third lane) for an additional 30 min. The kinase-defective
+BphP
+H513A
+-BV complex was incubated with radiolabeled ATP for 30 min (fourth lane), fol-
+lowed by addition of AlgB (fifth lane) for an additional 30 min. The apo-BphP protein was
+incubated with radiolabeled ATP for 30 min (sixth lane). (B) SDS-PAGE gel stained with Coo-
+massie brilliant blue showing the indicated purified proteins. Ten μL of a 20 μM stock of each
+protein was loaded. The original autoradiograph showing the data for panel A is available in
+the supplemental file S2 Data. BV, biliverdin.
+(TIF)
+S5 Fig. KinB and KinB
+P390S
+can phosphorylate AlgB in vitro. (A) Autophosphorylation of
+KinB was carried out for 30 min, and samples were removed at the indicated times. (B) An
+equimolar amount of AlgB was added to KinB that had been autophosphorylated for 30 min as
+in (A). Samples were taken at the indicated times. (C and D) As in A and B, respectively, but
+for the phosphatase-deficient protein KinB
+P390S
+. The original autoradiographs with the data
+for this figure are available in supplemental file S2 Data.
+(TIF)
+S6 Fig. Photosensing represses P. aeruginosa colony biofilm formation and SSA biofilm
+formation. (A) Colony biofilm phenotypes are shown for WT PA14 and the designated
+mutants on Congo red agar medium after 72 h of growth under the indicated light conditions.
+Scale bar is 2 mm for all images. (B) SSA biofilm phenotypes assessed by crystal violet staining
+are shown for WT PA14 and the designated mutants after 72 h of growth under the indicated
+light conditions. Data can be found in supplemental file S1 Data. SSA, solid-surface–associ-
+ated; WT, wild type.
+(TIF)
+S7 Fig. The BphP–AlgB module is conserved in diverse bacteria. Enlarged maximum-likeli-
+hood–based phylogenetic tree for BphP from Fig 6A showing the 150 closest orthologs to P.
+aeruginosa BphP. Co-occurrences of AlgB and KinB are depicted using red and blue dots,
+respectively. The presence of BphR is shown by purple dots. The colored squares indicate the
+corresponding bacterial phyla. The black square indicates A. thaliana as the root of the tree.
+(TIF)
+S1 Table. Transposon insertion locations.
+(DOCX)
+S2 Table. Suppressor mutations of the ΔkinB smooth colony biofilm phenotype.
+(DOCX)
+S3 Table. Bacterial strains used in this study.
+(DOCX)
+S4 Table. Plasmids used in this study.
+(DOCX)
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 22 / 26
+
+===== PAGE 23 =====
+S1 Data. Excel file containing numerical data for all main and supplemental figures.
+(XLSX)
+S2 Data. PDF file containing original autoradiographs, gels, and western blots.
+(PDF)
+Acknowledgmen ts
+We thank Wei Wang and the Genomics Core Facility at Princeton University for help with
+whole-genome sequencing. We thank Ned Wingreen, Anne-Florence Bitbol, Joseph E. Sanfil-
+lipo, and all members of the Bassler group for thoughtful discussions.
+Author Contributions
+Conceptualization: Sampriti Mukherjee, Bonnie L. Bassler.
+Formal analysis: Sampriti Mukherjee, Bonnie L. Bassler.
+Funding acquisition: Sampriti Mukherjee, Bonnie L. Bassler.
+Investigation: Sampriti Mukherjee, Bonnie L. Bassler.
+Methodology: Sampriti Mukherjee, Matthew Jemielita, Mikhail Tikhonov.
+Project administration: Bonnie L. Bassler.
+Resources: Sampriti Mukherjee, Matthew Jemielita, Vasiliki Stergioula, Bonnie L. Bassler.
+Supervision: Bonnie L. Bassler.
+Validation: Sampriti Mukherjee, Bonnie L. Bassler.
+Writing – original draft: Sampriti Mukherjee, Matthew Jemielita, Mikhail Tikhonov, Bonnie
+L. Bassler.
+Writing – review & editing: Sampriti Mukherjee, Mikhail Tikhonov, Bonnie L. Bassler.
+References
+1. Flemming H, Wingender J. The biofilm matrix. Nat Rev Microbiol . 2010; 8: 623–33 . https://doi.or g/10.
+1038/nrm icro2415 PMID: 2067614 5
+2. Flemming HC, Wingen der J, Szewzyk U, Steinberg P, Rice SA, Kjelleberg S. Biofilms: An emergent
+form of bacterial life. Nat Rev Microbiol. 2016; 14: 563–575. https:// doi.org/10.10 38/nrmicr o.2016.94
+PMID: 275108 63
+3. Koo H, Allan RN, Howlin RP, Stoodley P, Hall-Sto odley L. Targeting microbial biofilms: Current and pro-
+spective therapeu tic strategie s. Nat Rev Microbiol. 2017; 15: 740–755. https:// doi.org/10.10 38/nrmicr o.
+2017.99 PMID: 28944770
+4. Dahlstrom KM, O’Toole GA. A Symphony of Cyclases: Specificity in Diguany late Cyclase Signaling.
+Annu Rev Microbiol . 2017; 71: 179–195. https://doi.or g/10.1146/ annurev-mic ro-090816 -093325 PMID:
+28645224
+5. Giacalone D, Smith TJ, Collins AJ, Sonderm ann H, Koziol LJ, O’Toole GA. Ligand-m ediated biofilm for-
+mation via enhance d physical interaction between a diguany late cyclase and its receptor. MBio. 2018;
+9: e01254–18 . https://doi.or g/10.1128/ mBio.01254-1 8 PMID: 29991582
+6. Hammer BK, Bassler BL. Quorum sensing controls biofilm formation in Vibrio cholera e. Mol Microbiol .
+2003; 50: 101–11 4. https://doi.or g/10.104 6/j.1365-295 8.2003.0 3688.x PMID: 14507367
+7. Mukherje e S, Bassler BL. Bacteri al quorum sensing in complex and dynamically changing environ -
+ments. Nat Rev Microbiol . 2019; 17: 371–382. https://doi.or g/10.1038/s 41579-019- 0186-5 PMID:
+30944413
+8. Papenfort K, Bassler BL. Quorum sensing signal-respon se systems in Gram-nega tive bacteria . Nat
+Rev Microbiol . 2016; 14: 576–88. https://doi.or g/10.1038/n rmicro.2016.8 9 PMID: 27510864
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 23 / 26
+
+===== PAGE 24 =====
+9. Miller MB, Skorupski K, Lenz DH, Taylor RK, Bassler BL. Parallel quorum sensing systems converge to
+regulate virulence in Vibrio cholera e. Cell. 2002; 110: 303–314. https://do i.org/10.1016 /s0092-8 674(02)
+00829-2 PMID: 121763 18
+10. Rutherfor d ST, Bassler BL. Bacterial Quorum Sensing: Its Role in Virulence and Possibili ties for Its Con-
+trol. Cold Spring Harb Perspect Med. 2012; 2: a012427. https://doi.o rg/10.1101/cs hperspec t.a012427
+PMID: 231252 05
+11. Van Der Horst MA, Key J, Hellingwer f KJ. Photosen sing in chemotrop hic, non-phototr ophic bacteria : let
+there be light sensing too. Trends Microbiol. 2007; 15: 554–562. https:/ /doi.org/10.10 16/j.tim.200 7.09.
+009 PMID: 180241 31
+12. Kottke T, Xie A, Larsen DS, Hoff WD. Photorec eptors Take Charge: Emergi ng Principles for Light Sens-
+ing. Annu Rev Biophys. 2018; 47: 291–31 3.
+13. Shcherbak ova DM, Shemeto v AA, Kaberniuk AA, Verkhusha V V. Natural Photoreceptor s as a Source
+of Fluoresce nt Proteins , Biosensors , and Optogenetic Tools. Annu Rev Biochem. 2015; 84: 519–50.
+https://doi.or g/10.114 6/annurev-bi ochem-06 0614-03441 1 PMID: 25706899
+14. Cheng Z, Yamamoto H, Bauer CE. Cobalam in’s (Vitamin B12) Surprising Function as a Photorec eptor.
+Trends Biochem Sci. 2016; 41(8):647– 650. https://d oi.org/10.101 6/j.tibs.201 6.05.002 PMID: 27217104
+15. Yamamoto H, Fang M, Dragnea V, Bauer CE. Differing isoforms of the cobalamin binding photorec eptor
+AerR oppositel y regulate photosys tem expression . Elife. 2018; 7: e39028. https://doi.or g/10.7554/e Life.
+39028 PMID: 302810 22
+16. Gomelsky M, Hoff WD. Light helps bacteria make important lifestyle decisions . Trends Microbiol . 2011;
+19: 441–448. https://doi.or g/10.1016/ j.tim.2011.0 5.002 PMID: 216648 20
+17. Gourinchas G, Etzl S, Winkler A. Bacteri ophytochro mes–from informati ve model systems of phyto-
+chrome function to powerful tools in cell biology. Curr Opin Struct Biol. 2019; 57: 72–83. https://doi.or g/
+10.1016/ j.sbi.2019.02 .005 PMID: 30878713
+18. Beattie GA, Hatfield BM, Dong H, McGrane RS. Seeing the Light: The Roles of Red- and Blue-Light
+Sensing in Plant Microbes. Annu Rev Phytopathol. 2018; 56: 41–66. https://d oi.org/10.114 6/annurev -
+phyto-08 0417-04593 1 PMID: 29768135
+19. Davies DG, Parsek MR, Pearson JP, Iglewski BH, Costerton JW, Greenber g EP. The Involvem ent of
+Cell-to-Ce ll Signals in the Developm ent of a Bacterial Biofilm. Science. 1998; 280: 295–298 . https://doi.
+org/10.1126/ science.280.5 361.295 PMID: 9535661
+20. Rumbaugh KP, Griswold JA, Hamood AN. The role of quorum sensing in the in vivo virulen ce of Pseu-
+domonas aeruginosa. Microbes Infect. 2000; 2: 1721–1731. https://doi.or g/10.1016/ s1286-4579( 00)
+01327-7 PMID: 111370 45
+21. Mukherje e S, Moustafa D, Smith CD, Goldberg JB, Bassler BL. The RhlR quorum-sen sing receptor
+controls Pseudomo nas aeruginos a pathogenesis and biofilm develop ment indepe ndently of its canoni-
+cal homoseri ne lactone autoinducer. PLoS Pathog . 2017; 13(7): e1006504. https://d oi.org/10.137 1/
+journal.ppa t.100650 4 PMID: 28715477
+22. Mukherje e S, Moustafa DA, Stergioula V, Smith CD, Goldberg JB. The PqsE and RhlR protein s are an
+autoinduc er synthase–re ceptor pair that control virulence and biofilm developme nt in Pseudo monas
+aeruginosa. Proc Natl Acad Sci U S A. 2018; 115: E9411–E94 18. https://do i.org/10.1073 /pnas.
+1814023115 PMID: 30224496
+23. Ma S, Wozniak DJ, Ohman DE. Identificati on of the histidine protein kinase KinB in Pseudo monas aeru-
+ginosa and its phospho rylation of the alginate regulato r AlgB. J Biol. Chem. 1997; 272: 17952– 17960.
+https://doi.or g/10.107 4/jbc.272.2 9.17952 PMID: 921842 0
+24. Chand NS, Lee JSW, Clatwort hy AE, Golas AJ, Smith RS, Hung DT. The sensor kinase KinB regulates
+virulence in acute Pseudo monas aeruginosa infection. J Bacteriol. 2011; 193: 2989–2999. https:/ /doi.
+org/10.1128/ JB.01546-10 PMID: 215157 73
+25. Chand NS, Clatwor thy AE, Hung DT. The two-comp onent sensor KinB acts as a phosphatas e to regu-
+late Pseudo monas aeruginosa Virulence. J Bacteriol. 2012; 194: 6537–6 547. https://doi.or g/10.112 8/
+JB.01168 -12 PMID: 23024348
+26. Tasler R, Moises T, Frankenberg- Dinkel N. Biochemica l and spectroscop ic characteriz ation of the bac-
+terial phytochro me of Pseudo monas aeruginosa. FEBS J. 2005; 272: 1927–1 936. https://doi.or g/10.
+1111/j.174 2-4658.2005 .04623.x PMID: 15819886
+27. Jacobs MA, Alwood A, Thaipisutti kul I, Spence r D, Haugen E, Ernst S, et al. Comp rehensive transposo n
+mutant library of Pseudomo nas aeruginos a. Proc Natl Acad Sci U S A. 2003; 100: 14339– 14344.
+https://doi.or g/10.107 3/pnas.20 36282100 PMID: 146177 78
+28. Fazli M, Almblad H, Rybtke ML, Givskov M, Eberl L, Tolker-Nie lsen T. Regulation of biofilm formation in
+Pseudomo nas and Burkholder ia species.Envir on Microbiol . 2014; 16(7):1961 –81. https:// doi.org/10.
+1111/1462-2 920.124 48 PMID: 24592823
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 24 / 26
+
+===== PAGE 25 =====
+29. Friedman L, Kolter R. Genes involved in matrix formation in Pseudomo nas aeruginosa PA14 biofilms.
+Mol Microbiol . 2004; 51: 675–690. https://doi.or g/10.104 6/j.1365-295 8.2003.0 3877.x PMID: 14731271
+30. Wozniak D, Wyckoff T, Starkey M, Keyser R, Azadi P, O’Toole G, et al. Alginate is not a significant com-
+ponent of the extracellular polysacc haride matrix of PA14 and PAO1 Pseudo monas aeruginosa bio-
+films. Proc Natl Acad Sci U S A. 2003; 100: 7907–1 2. https://doi.or g/10.107 3/pnas.1231 792100 PMID:
+12810959
+31. Ma S, Selvaraj U, Ohman DE, Quarless R, Hassett DJ, Wozniak DJ. Phosph orylation-ind ependent
+activity of the response regulators AlgB and AlgR in promoting algina te biosynthesis in mucoid Pseudo -
+monas aeruginosa. J Bacteriol. 1998; 180: 956–968. PMID: 947305 3
+32. Wozniak DJ, Ohman DE. Pseudo monas aeruginosa AlgB, a Two-Com ponent Respons e Regulator of
+the NtrC Family, Is Required for algD Transcrip tion. J Bacteri ol. 1991; 173: 1406–14 13. https://doi.or g/
+10.1128/ jb.173.4.1406- 1413.19 91 PMID: 1899859
+33. Bush M, Dixon R. The Role of Bacterial Enhancer Binding Proteins as Specialized Activators of σ
+54
+-
+Dependen t Transcrip tion. Microbiol Mol Biol Rev. 2012; 76: 497–52 9. https://doi.or g/10.112 8/MMBR.
+00006-12 PMID: 229335 58
+34. Brint JM, Ohman DE. Synthesis of Multiple Exoproduct s in Pseudomo nas aeruginos a Is under the Con-
+trol of RhlR-Rh lI, Another Set of Regulator s in Strain PAO1 with Homo logy to the Autoinduc er-Respo n-
+sive LuxR-LuxI Family. J Bacteriol. 1995; 177: 7155–7 163. https://doi.or g/10.112 8/jb.177.24. 7155-
+7163.1995 PMID: 8522523
+35. Bhoo SH, Davis SJ, Walker J, Karniol B, Vierstra RD. Bacteri ophytochr omes are photochr omic histidine
+kinases using a biliverdin chromopho re. Nature. 2001; 414: 776–779. https://do i.org/10.1038 /414776a
+PMID: 117424 06
+36. Bhate MP, Molnar KS, Goulian M, Degrado WF. Signal Transductio n in Histidine Kinases: Insights from
+New Structur es. Struct Des. 2015; 23: 981–994. https:// doi.org/10.10 16/j.str.20 15.04.00 2 PMID:
+25982528
+37. Barkovits K, Schubert B, Heine S, Scheer M, Frankenb erg-Dinkel N. Function of the bacterio phyto-
+chrome BphP in the RpoS/Las quorum-s ensing network of Pseudo monas aeruginosa. Microbiol ogy.
+2011; 157(Pt 6):1651–6 4. https://doi.or g/10.1099 /mic.0.04900 7-0 PMID: 21415115
+38. Mathews S. Phytochro me-mediat ed developme nt in land plants: red light sensing evolves to meet the
+challenges of changin g light environment s. Mol Ecol. 2006; 3483–350 3. https://doi.or g/10.1111/ j.1365-
+294X.2006. 03051.x PMID: 170322 52
+39. Shimazaki K, Doi M, Assman n SM, Kinoshita T. Light Regulatio n of Stomatal Movement. Annu Rev
+Plant Biol. 2007; 58: 219–47 . https://doi.or g/10.114 6/annurev.arp lant.57.0 32905.105434 PMID:
+17209798
+40. Bhardwa j V, Meier S, Petersen LN, Ingle RA, Roden LC. Defence Respo nses of Arabidopsis thaliana to
+Infection by Pseudo monas syringae Are Regulated by the Circadian Clock. PLoS ONE. 2011; 6(10):
+e26968. https:// doi.org/10.13 71/journal.p one.002 6968 PMID: 2206602 1
+41. Neukermans J, Li S, Aro E, Noctor G, Kangasja S. Photosynth esis, photores piration, and light signalli ng
+in defence responses. J Exp Bot. 2012; 63:1619–16 36. https://doi.or g/10.109 3/jxb/err402 PMID:
+22282535
+42. Roden LC, Ingle RA. Lights, Rhythms, Infection: The Role of Light and the Circadian Clock in Determin-
+ing the Outcome of Plant–Path ogen Interactions . Plant Cell. 2009; 21: 2546–2552. https://doi.or g/10.
+1105/tpc.10 9.06992 2 PMID: 19789275
+43. Lee HJ, Park CM, Oh KH, Shin K, Choi HK, Hyeon T, et al. Stem-piped light activates phytochro me B to
+trigger light response s in Arabidopsis thalian a roots. Sci Signal. 2016; 9: ra106. https://doi.or g/10.112 6/
+scisignal.aa f6530 PMID: 27803284
+44. Duran P, Thiergart T, Garrido-ot er R, Agler M, Kemen E, Schulze-lef ert P, et al. Microbial Interking dom
+Interactio ns in Roots Promote Arabidopsis Survival . Cell. 2018; 973–983. https://doi.or g/10.101 6/j.cell.
+2018.10. 020 PMID: 30388454
+45. Bonomi HR, Toum L, Sycz G, Sieira R, Toscani AM, Gudesblat GE, et al. Xanthom onas campes tris
+attenuate s virulence by sensing light through a bacterioph ytochrome photorecept or. EMBO Rep. 2016;
+17: 1565–157 7. https://doi.or g/10.1525 2/embr.201541 691 PMID: 27621284
+46. Wu L, McGrane RS, Beattie GA. Light Regulatio n of Swarming Motility in Pseudomo nas syringae Inte-
+grates Signaling Pathway s Mediated by a Bacteriophy tochrome and a LOV Protein. MBio. 2013; 4:
+e00334–13. https:/ /doi.org/10.11 28/mBio.0 0334-13 PMID: 237604 65
+47. Starkey M, Rahme LG. Modelin g Pseudomo nas aeruginos a pathogenes is in plant hosts. Nat Protoc.
+2009; 4: 117–12 4. https://doi.or g/10.103 8/nprot.2008.2 24 PMID: 19180083
+48. Smith H. Phytochro mes and light signal percepti on by plants—a n emerging synthes is. Nature. 2000;
+407: 585–591 . https://doi.or g/10.1038/ 35036500 PMID: 1103420 0
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 25 / 26
+
+===== PAGE 26 =====
+49. de Wit M, Spoel SH, Sanchez-Per ez GF, Gommers CM, Pieterse CMJ, Voesenek LACJ, et. al. Percep-
+tion of low red: far-red ratio comprom ises both salicylic acid- and jasmonic acid-de pendent pathogen
+defences in Arabidopsis . Plant J. 2013; 90–103. https://doi.or g/10.111 1/tpj.12203 PMID: 23578319
+50. A
+´
+vila-Pe ´ rez Marcela, Hellingwer f KJ, Kort R. Blue Light Activates the σB-Depende nt Stress Response
+of Bacillus subtilis via YtvA. J Bacteriol. 2006; 188: 6411–6 414. https://doi.or g/10.112 8/JB.0071 6-06
+PMID: 169239 09
+51. Purcell EB, Siegal-G askins D, Rawlin g DC, Fiebig A, Crosson S. A photosen sory two-componen t sys-
+tem regulates bacteria l cell attachment. Proc Natl Acad Sci. 2007; 104: 18241– 18246. https://doi.or g/
+10.1073/ pnas.0705887 104 PMID: 17986614
+52. Swartz TE, Tseng T, Frederic kson MA, Paris G, Comerci DJ, Rajashek ara G, et al. Blue-Light –Acti-
+vated Histidine Kinases: Two-Co mponent Sensors in Bacteria. Science. 2007; 317: 1090–1094. https:/ /
+doi.org/10.11 26/science.11 44306 PMID: 17717187
+53. Yang X, Kuk J, Moffat K. Crystal structure of Pseudomo nas aeruginos a bacteriophy tochrome: photo-
+conversion and signal transductio n. Proc Natl Acad Sci U S A. 2008; 105(38):14 715–20. https://doi. org/
+10.1073/ pnas.0806718 105 PMID: 18799746
+54. Curtis AM, Bellet MM, Sassone- corsi P, Neill LAJO. Review Circadian Clock Proteins and Immun ity.
+Immunity . 2014; 40: 178–186 .
+55. Scheierm ann C, Kunisaki Y, Frenette PS. Circadian control of the immune system. Nat Rev Immunol.
+2013; 13: 190–19 8. https://doi.or g/10.103 8/nri3386 PMID: 23391992
+56. Donnell AJO, Schneider P, Mcwatter s HG, Reece SE. Fitness costs of disruptin g circadian rhythms in
+malaria parasite s. Proc Biol Sci. 2011; 2429–2436. https://do i.org/10.1098 /rspb.201 0.2457 PMID:
+21208950
+57. Edgar RS, Stangh erlin A, Nagy AD, Nicoll MP, Efstathiou S, O’Neill JS, et al. Cell autonomou s regula-
+tion of herpes and influenza virus infection by the circadian clock. Proc Natl Acad Sci. 2016; 113:
+10085–10090 . https://doi.or g/10.1073/ pnas.1601895 113 PMID: 27528682
+58. Sundar IK, Ahmad T, Yao H, Hwang J, Gerloff J, Lawrence BP, et al. Influenza A virus-depende nt
+remodeling of pulmonary clock function in a mouse model of COPD. Sci Rep. 2015; 5: 1–14. https:// doi.
+org/10.1038/ srep09927 PMID: 259234 74
+59. Rice LB. Federal Funding for the Study of Antimicro bial Resistanc e in Nosocomi al Pathogens: No
+ESKAPE . J Infect Dis. 2008; 197: 1079–1 081. https://doi.or g/10.108 6/533452 PMID: 184195 25
+60. Tacconelli E, Carmell Y, Harbarth S, Kahlme ter G, Kluytmans J, Mendelson M, et al. Global priority list
+of antibiotic -resistant bacteria to guide research , discovery, and develop ment of new antibio tics. WHO
+Press Releas e [Internet]. 2017 [cited 2019 May 28]. https:/ /www.who.int /medicines/pu blication s/global-
+priority-list- antibiotic -resistant-bac teria/en/.
+61. Gibson DG, Young L, Chuang R-Y, Venter JC, Hutchiso n C a, Smith HO, et al. Enzymatic assemb ly of
+DNA molecules up to several hundred kilobases. Nat Methods. 2009; 6: 343–5. https://doi. org/10.1038/
+nmeth.131 8 PMID: 193634 95
+62. Hmelo LR, Borlee BR, Almblad H, Love ME, Randall TE, Tseng BS, et al. Precisio n-engineering the
+Pseudomo nas aeruginos a genome with two-step allelic exchange . Nat Protoc. 2015; 10: 1820–4 1.
+https://doi.or g/10.103 8/nprot.2015. 115 PMID: 26492139
+63. Winsor GL, Griffiths EJ, Lo R, Dhillon BK, Shay JA, Brinkman FSL. Enhanc ed annotations and features
+for comparin g thousand s of Pseudomo nas genomes in the Pseudomo nas genome database. Nucleic
+Acids Res. 2016; 44: D646–D 653. https://doi.or g/10.109 3/nar/gkv12 27 PMID: 26578582
+64. Kumar S, Stecher G, Li M, Knyaz C, Tamura K. MEGA X: Molecular Evolution ary Genetics Analysis
+across Computing Platform s. Mol. Biol. Evol. 2018; 35:1547 –1549. https://do i.org/10.1093 /molbev/
+msy096 PMID: 29722887
+Photosen sing and quorum sensing converge to control bacterial group behavio rs
+PLOS Biology | https://doi.or g/10.137 1/journal.pb io.3000579 Decemb er 12, 2019 26 / 26

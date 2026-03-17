@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "version": "0.1.0",
+  "modelFile": "synthesizer_model.onnx",
+  "agentType": "synthesizer",
+  "inputName": "features",
+  "outputName": "scores",
+  "inputDim": 40,
+  "normalizationFile": "normalization.json"
+}

@@ -1,0 +1,777 @@
+
+
+===== PAGE 1 =====
+Behavioral Ecology
+doi:10.1093/beheco/arq218
+Advance Access publication 25 February 2011
+Original Article
+Colony variation in the collective regulation of
+foraging by harvester ants
+Deborah M. Gordon,a Adam Guetz,b Michael J. Greene,c and Susan Holmesb
+aDepartment of Biology, Stanford University,bDepartment of Statistics, Stanford University, Stanford, CA
+94305, and cDepartment of Integrative Biology, University of Colorado at Denver and Health Sciences
+Center, P.O. Box 173364, Campus Box 171, Denver, CO 80211, USA
+This study investigates variation in collective behavior in a natural population of colonies of the harvester ant, Pogonomyrmex
+barbatus. Harvester ant colonies regulate foraging activity to adjust to current food availability; the rate at which inactive foragers
+leave the nest on the next trip depends on the rate at which successful foragers return with food. This study investigates
+differences among colonies in foraging activity and how these differences are associated with variation among colonies in the
+regulation of foraging. Colonies differ in the baseline rate at which patrollers leave the nest, without stimulation from returning
+ants. This baseline rate predicts a colony’s foraging activity, suggesting there is a colony-speciﬁc activity level that inﬂuences how
+quickly any ant leaves the nest. When a colony’s foraging activity is high, the colony is more likely to regulate foraging. Moreover,
+colonies differ in the propensity to adjust the rate of outgoing foragers to the rate of forager return. Naturally occurring variation
+in the regulation of foraging may lead to variation in colony survival and reproductive success. Key words: behavioral reaction
+norm, behavioral syndrome, individual variation. [Behav Ecol 22:429–435 (2011)]
+A
+ﬁrst step in understanding the evolution of behavior is to
+investigate variation among individuals in their responses
+to changing conditions ( Sih et al. 2004 ; Dingemanse et al.
+2009). Many social animals engage in collective decision mak-
+ing (Conradt et al. 2009 ). In social insect colonies, individual
+workers, using local information, perform and regulate col-
+ony tasks collectively (e.g., Pratt and Sumpter 2006 ; Gordon
+2010). Because social insect colonies produce new colonies,
+the colony can be considered to be a reproductive individual.
+Ant colonies vary in the distribution of worker sizes (e.g.,
+Beshers and Traniello 1994 ; Powell 2008 ), and differences
+among colonies in genetic diversity or number of patrilines
+(e.g., Sundstrom 1993 ; Ross and Keller 1995 ; Crozier and
+Pamilo 1996; DeHeer and Herbers 2004 ) are associated with
+differences in behavior ( Snyder 1993 ; Wiernasz et al. 2008 ).
+However, little is known about differences among colonies in
+collective behavior, such as foraging.
+How ant colonies regulate foraging varies among species,
+depending on the kind of food a species collects. When food
+sources are large or clumped, so that many ants are needed to
+retrieve the food, the problem for the colony is to direct the
+appropriate number of ants to the location with the richest
+food supply. For example, elegant laboratory experiments and
+models show how trail-laying species such as Lasius niger or
+Tetramorium caespitum solve this problem (e.g., Beckers et al.
+1990, 1993; Collignon and Detrain 2010). The number of ants
+laying trail pheromone is related to the quality of food en-
+countered; this sets the probability that inactive foragers will
+encounter pheromone and be recruited to the food ( Detrain
+and Deneubourg 2008 ). Leaf-cutter ants, which forage for
+leaves to feed the fungus that they consume, regulate foraging
+using the quality of leaves found ( Saverschek et al. 2010) and
+the interactions on the trail ( Burd 2000 ; Farji-Brener et al.
+2010).
+By contrast, ant species that forage for scattered food sour-
+ces, each of which can be retrieved by a single ant, face a dif-
+ferent problem. The colony obtains more food not by
+directing more ants to the best food sources but by covering
+more ground with ants searching individually. For example,
+the red harvester ant ( Pogonomyrmex barbatus ), common in
+arid chaparral habitats in the southwestern US and Mexico,
+f o r a g e sf o rs e e d sw i d e l ys c a t t e r e db yw i n da n dﬂ o o d i n g
+(Gordon 1993 ) and does not lay pheromone trails to partic-
+ular food sources. Colonies store food inside the nest for
+many months ( Gordon 1992 , 1993). The colony must
+balance the costs of desiccation while foraging and the need
+to claim foraging area in competition with neighboring
+colonies ( Adler and Gordon 2003 ). Ants foraging in hot
+dry conditions lose water, but obtain water from metaboliz-
+i n gf a t si nt h es e e d st h a tt h e ye a t(Lighton and Bartholomew
+1988; Lighton and Feener 1989 ). Thus, ants must spend
+water to get water. But if a colony’s foraging area is not
+occupied by its foragers, a neighboring colony is likely to
+use it ( Gordon 1992 ; Gordon and Kulig 1996 ), and intra-
+speciﬁc competition is more intense in dry conditions
+(Sanders and Gordon 2004 ).
+Here we examine, in a ﬁeld study, variation among har-
+vester ant colonies in the minute-to-minute regulation of for-
+aging behavior in response to current food availability. An
+inactive forager is stimulated to leave the nest on its next trip
+by the return of foragers with food ( Schafer et al. 2006 ;
+Gordon et al. 2008 ). Each forager travels quickly for up to
+20 m from the nest in a stream of foragers, then searches
+individually, and returns directly to the nest as soon as it ﬁnds
+food ( Gordon and Kulig 1996 ). The duration of a foraging
+trip depends on search time, not on the distance traveled
+(Beverly et al. 2009). The more food is available, the less time
+is needed to search and the more quickly a forager returns
+with food. Thus, the overall rate of return of successful for-
+agers reﬂects the availability of food on that day. This system
+Address correspondence to D.M. Gordon. E-mail: dmgordon
+@stanford.edu.
+Received 28 June 2010; revised 1 December 2010; accepted 14
+December 2010.
+/C211 The Author 2011. Published by Oxford University Press on behalf of
+the International Society for Behavioral Ecology. All rights reserved.
+For permissions, please e-mail: journals.permissions@oup.com
+
+===== PAGE 2 =====
+produces recruitment without any speciﬁed location. Each
+forager returns to the same site on successive trips ( Beverly
+et al. 2009 ), and the return of foragers with food from one
+direction can stimulate other foragers to search in other
+directions.
+Colonies of P. barbatus show consistent differences in how
+much they forage. No colony forages every day, but some colo-
+nies tend to forage on more days than others, and these differ-
+ences persist from year to year (Gordon 1991). In several species
+in this genus, there is variation among colonies in the times that
+foraging activity begins and ends ( Gordon 1984 ; Cole et al.
+2010); in P. occidentalis, the timing of foraging activity is associ-
+ated with genetic diversity (Wiernasz et al. 2008).
+Differences among colonies in foraging activity may arise in
+part from differences in how soon a forager leaves the nest on
+its next trip once foraging is underway. Two processes may inﬂu-
+encehowquicklyaforagerleavesthenestonitsnexttrip.First,we
+hypothesize that there is a baseline rate at which a forager leaves
+the nest, independently of encounters with returning foragers.
+Second, as previous work shows, when a forager leaves the nest
+depends on its recent rate of encounter with incoming ants
+(Greene and Gordon 2003; Schafer et al. 2006).
+Differences among colonies in the baseline rate at which
+ants leave the nest, and in the response to returning foragers,
+could lead to variation among colonies in how closely the col-
+ony adjusts to changing food availability. The more quickly
+each forager in a colony is likely to leave the nest on its next
+trip, independently of the rate at which others return, the
+higher the colony’s foraging activity. In turn, a colony’s level
+of foraging activity could inﬂuence how closely it adjusts the
+numbers foraging from minute to minute. The more ants are
+returning to the nest, and the more that inactive foragers
+respond to the return of foragers with food by going out to
+forage, the more the rate of outgoing foragers will reﬂect
+changes in the rate of forager return.
+Here, we consider how colonies differ in foraging activity
+and in the propensity to regulate foraging. We ask:
+1. Do colonies differ in the baseline probability that an ant
+will leave the nest? We measured the rate at which pa-
+trollers emerge in the absence of any stimulation from
+returning ants. Patrollers are a group of ants (about 50
+in a mature colony), distinct from the foragers ( Gordon
+1989), that are the ﬁrst to emerge in the morning
+(Gordon 1991 ). They leave the nest, walk around the
+foraging area, and then return to the nest. Encounters
+with returning patrollers stimulate the foragers to leave
+the nest on the ﬁrst trip of the day ( Greene and Gordon
+2003, 2007). Such encounters do not provide informa-
+tion about food supply; glass beads with the odor of
+patrollers are sufﬁcient to stimulate foraging. Here, we
+captured returning patrollers and measured the rate at
+which more patrollers continued to leave the nest.
+2. Is variation among colonies in the baseline rate at which
+patrollers emerge associated with variation in foraging
+activity? We consider whether there may be a colony-
+speciﬁc baseline rate at which both patrollers and for-
+agers leave the nest, independently of the return of
+other ants. To do this, we examined the association
+between the rate at which patrollers leave the nest early
+in the morning and the rate at which foragers leave the
+nest later in the day.
+3. Do colonies differ in their propensity to regulate forag-
+ing? We examined variation among colonies in whether
+they adjust the rate of outgoing foragers in response to an
+experimentally induced change in the forager return rate.
+4. Does the current rate of foraging inﬂuence the response
+to a change in forager return rate? We asked if the rate
+of foraging before an experimentally induced change in
+forager return rate predicts whether the colony re-
+sponds by adjusting the rate of outgoing foragers.
+METHODS
+The study was performed in August 2008 at a site near Rodeo,
+NM, USA, with a population of about 300 P. barbatuscolonies
+that have been the subject of a long-term behavioral and
+demographic study. An annual census of the population
+(Gordon and Kulig 1996 ) makes it possible to identify the
+ages of all colonies on the site.
+Do colonies differ in the baseline probability that an ant will
+leave the nest?
+We measured the rate at which ants emerge in the absence of
+any stimulation from returning ants. We could not measure
+this with foragers because if all foragers are experimentally
+prevented from returning to the nest for more than about
+20 min, foragers stop leaving the nest altogether ( Gordon
+2002). Instead, we measured the baseline probability that pa-
+trollers leave the nest.
+When patrollers are prevented from returning to the nest,
+more continue to leave over the course of 20–60 min. Patrol-
+lers almost always emerge in groups or bursts of 2–6 ants. This
+suggests that patrollers stimulate each other to leave the nest,
+but we do not know how. We calculated the interval elapsed
+between the emergence of groups of patrollers and the num-
+ber of patrollers in each group that left the nest.
+Five trials, each on a different day, were performed for each
+of 14 mature colonies, ages 5 or older, from 8 August to 18
+August 2008. Each trial began between 05:45 and 06:15 AM
+when patrollers were just beginning to emerge. For 1 h, the
+observer collected all patrollers that emerged from the nest
+and prevented them from returning by placing them in a plas-
+tic box. The highest mean rate at which a new burst of pa-
+trollers left the nest, when all were prevented from returning,
+was about 1 burst per 5 min. At 1- to 3-min intervals, the
+observer recorded whether a new burst of patrollers had
+emerged and the number of patrollers that had left the nest
+since the last count. At the end of the trial, the patrollers that
+had been collected were released, and those that were still out
+returned to the nest undisturbed. Once patrollers were al-
+lowed to return to the nest, foraging began as usual, and there
+was no apparent effect of the experiment on subsequent for-
+aging activity.
+We used Kruskal–Wallis nonparametric analysies of varian-
+ces (ANOVAs) to test whether the number of patrollers in
+a group leaving the nest or the interval between the emer-
+gence of successive groups of patrollers differed among colo-
+nies or days.
+Is variation among colonies in the baseline rate at which
+patrollers emerge associated with variation in foraging
+activity?
+We tested whether a colony’s baseline rate at which groups of
+patrollers leave the nest, independently of any returning ants,
+is associated with that colony’s average intensity of foraging.
+Foraging activity was recorded, in the 14 colonies in which
+patroller departure rate was measured, as the numbers of
+foragers leaving the nest in 30 s in 1 direction. We measured
+foraging activity during the peak of foraging, at least 30 min
+after foraging began. Counts were made of foragers in the
+direction with the highest rate of foraging if foragers were
+traveling in more than 1 direction that day. Usually foraging
+430 Behavioral Ecology
+
+===== PAGE 3 =====
+is most active in one direction or equal in all directions
+(Gordon 1995), so in either case, the rate of foraging in the
+direction with the highest rate is representative of foraging
+activity. Counts were made for all 14 colonies for 11 days from
+8 to 18 August 2008. Patroller removals were conducted for 5
+of the 11 days on all 14 colonies; colonies differed in which 5
+days those were. On each of the 11 days, 3 30-s counts of
+foraging rate were made over the course of about 2 min for
+each colony, and the average count per day was used in sub-
+sequent data analysis. Because foraging intensity changes over
+time during the foraging period (Gordon 1984), the sequence
+in which colonies were visited was changed from day to day.
+We tested for an association between the baseline rate at
+which patrollers leave the nest and the rate at which foragers
+of the same colony leave the nest later on in the day. We used
+a Kruskal–Wallis nonparametric ANOVA to test for an effect of
+the number of patrollers per group to leave the nest on the
+foraging activity of the same colony.
+Do colonies differ in their propensity to regulate foraging?
+We examined differences among colonies in the foraging re-
+sponse to the removal of returning foragers. We performed
+5 trials for each of 24 mature colonies over the course of 11
+days from 7 to 19 August 2008, for a total of 120 trials. A
+colony was tested once on a given day. Fourteen of the 24
+colonies were used in the patroller removal experiments de-
+scribed above, but patroller and forager removals were not
+done on the same day.
+We designed the trials to minimize the extent to which the
+effects of the weather on a given day, and the age or size of the
+colony, would inﬂuence the detection of differences among col-
+onies. The 24 colonies were grouped into 12 pairs. Previous work
+showed that colony response to the removal of returning foragers
+depends on the day (Gordon et al. 2008), apparently due to day-
+to-day variation in humidity. To reduce the effects of day on the
+results, both members of each pair of colonies were always tested
+on the same day. At least 5 pairs of colonies were tested on each
+day of the 11 days, with different pairs on each day.
+We attempted to match the 12 pairs of colonies by size. It is
+not possible to measure colony size directly without destroying
+the colony. A colony is founded by a single queen and lives
+about 25 years ( Gordon 1991 ). Excavations of colonies of
+known age indicate that once a colony reaches the age of
+5 years, when it begins to reproduce ( Gordon 1995), its size
+ranges from 10 000 to 12 000 ants ( Gordon 1992). It appears
+that once a colony reaches reproductive age, its size does not
+change much and it maintains its characteristic foraging be-
+havior for the rest of its life ( Gordon 1991 , 1992). The 24
+colonies were all of reproductive age, ranging from 6 to 21
+years old, and the 12 pairs were matched by age; 5 pairs dif-
+fered in age by 1 year, 2 by 2 years, 4 by 3 years, and 1 by
+5 years. The 12 pairs of colonies were also each matched as
+closely as possible in apparent numbers of foragers, although
+for all colonies, these numbers varied greatly among days.
+In each trial, the colony was observed for 15 min. Returning
+foragers were removed for 3 min, using the same methods as
+in Gordon et al. (2008) : During minutes 4–7 of the 15-min
+trial, beginning 240–260 s after the trial began, a third person
+standing at least 1 m from the nest entrance, outside the edge
+of the nest mound, removed all foragers returning to the nest
+with food. Once removals ended, returning foragers were al-
+lowed to go back to the nest undisturbed. The foragers we
+collected were placed in a plastic box and released near the
+nest entrance after the trial ended.
+One observer counted the foragers leaving the nest, and
+a second observer counted the foragers returning to the nest
+with food. Observers used Nokia cell phones, programmed to
+record the time at which a key was pressed. Counts were made
+by recording the time every ﬁfth ant was observed because the
+ants sometimes left the nest too fast to be counted individu-
+ally; the cell phone could not record more often than about
+1 item per second. Foraging rate was measured as the number
+of counts of 5 ants either leaving or returning to the nest
+during a given interval.
+We created an index of response using the ratio of foraging
+rate after-to-before removals (seeFigure 1). We chose the inter-
+vals over which we measured the rates for ‘ ‘before’’ and ‘ ‘after’’
+to encompass the times at which a response clearly occurred in
+some of the trials reported here, as well as in previous work
+(Gordon et al. 2008). The rate of outgoing foragers decreased
+about 2–3 min after removals and lasted for about 5 min after
+removals ended. We chose 100–350 s as the interval before re-
+movals. All removals began by 260 s, but we allowed an addi-
+tional 90 s for the before period to allow for the time it would
+Figure 1
+Response to change in forager return rate. Shown are smoothed
+results for 2 trials, each for 1 colony on 1 day. Rates of foraging were
+smoothed using a Gaussian kernel. Dotted line, returning foragers
+per second; solid line, outgoing foragers per second. Returning
+foragers were removed for 3 min beginning at the time indicated by
+the vertical dotted line. Foraging rates before removals were
+calculated from 100–350 s, including the time it would have taken for
+removed ants to return to the nest. Foraging rates after removals
+were calculated from 350–590 s. (A) Example of a trial with no
+response; foraging did not change in response to the removal of
+returning foragers. (B) Example of a trial in which the colony
+responded to the removal of returning foragers by decreasing the
+rate of outgoing foragers.
+Gordon et al.
+• Colony variation in the collective regulation of foraging 431
+
+===== PAGE 4 =====
+have taken for removed ants to get back into the nest. We chose
+350–590 s as the interval after removals.
+Theindexofresponsetoremovals,comparingforagingafterto
+foraging before removals, was calculated as the base-2 log of the
+ratio of the rate of returning foragers after removals (350–590 s)
+to the rate of returning foragers before removals (100–350 s).
+The same ratio was calculated for outgoing foragers. Because the
+log after-to-before ratio was inﬁnite when there were 0 ants for-
+aging before removals, we omitted trials from the analysis in
+which foraging was very low. We omitted a total of 26 trials from
+the analysis, including trials with such low foraging activity that
+the average rate of returning foragers plus the average rate of
+outgoing foragers was less than 0.8 ants per second, and trials in
+which there were 0 ants foraging before removals. There re-
+mained a total of 94 trials.
+We divided the results for all trials into 2 sets, one for trials
+in which the colony responded to removals with a decrease in
+the rate of foraging and one for trials in which the colony did
+not respond. Figure 1 shows an example of one trial in which
+the colony responded and one trial in which the colony did
+not respond. We chose to deﬁne colony response as a binary
+variable so as to use the simplest possible measure. We did this
+because many factors probably determine the response to re-
+movals, both the decline in the rate of outgoing foraging and
+its recovery after removals end, and we do not know how these
+factors covary. The greater the response to the decline in
+forager return rate due to removals, the lower the index of
+response, because the index is a log of the ratio. We classiﬁed
+each trial according to whether foraging decreased more than
+a threshold value. We ﬁrst used the median ratio as the thresh-
+old, giving 29 trials that showed a response and 65 that did
+not. We then used the 30th percentile as threshold, chosen
+arbitrarily as a less stringent criterion, giving 52 trials that
+showed a response and 42 that did not.
+We tested whether response to removals differed among col-
+onies, using analysis of deviance to test for the effect of colony
+on response to removals (response or no response).
+Does the current rate of foraging inﬂuence the response to
+a change in forager return rate?
+We examined whether the rate of forager return before
+removals inﬂuences whether a colony responds to removals.
+For the rate of forager return before removals, we used foraging
+rate between 60 and 260 s when removals began. We used
+ANOVA to test whether the rate of returning foragers before
+removals differed among colonies. We used analysis of devi-
+ance to test for an effect of rate of forager return before remov-
+als on response to removals (response or no response). We also
+compared foraging activity before removals, both the rate of
+outgoing and the rate of incoming foragers between 60 and
+260 s, in the 2 sets of trials (response or no response), using
+t-tests.
+RESULTS
+Baseline probability of leaving the nest and foraging activity
+Colonies differ in the baseline rate at which bursts of patrollers
+emerge from the nest in the absence of stimulation from return-
+ing ants. There were signiﬁcant effects of colony on the interval
+between the emergence of successive bursts of patrollers (Krus-
+kal–Wallis, degrees of freedom [df] 13, P , 0.001) and on the
+number of patrollers that emerged per burst (Kruskal–Wallis, df
+13, P , 0.02). The mean (standard deviation [SD]) bursts per
+minute ranged among colonies from 0.06 (0.006) to 0.24
+(0.06). The mean (SD) number of ants per burst ranged among
+colonies from 1.34 (0.16) to 7.23 (3.83). Colony differences
+were stronger than differences among days. There was no sig-
+niﬁcant day effect for the interval between the emergence of
+successive patrollers or the number of patrollers that emerged
+(Kruskal–Wallis, bursts per minute, df 10,F 1.93, P ¼0.21, num-
+ber of patrollers, df 10,F 0.20, P ¼ 0.66). The mean (SD) bursts
+per minute ranged among days from 0.12 (0.06) to 0.18 (0.12),
+and the mean number of ants per burst ranged among days
+from 2.96 (2.84) to 5.89 (5.84).
+Relation of baseline rate of patroller emergence and rate of
+foraging
+The baseline rate at which a colony’s patrollers leave the nest
+early in the morning predicts that colony’s average level of
+foraging activity ( Figure 2 ). Small differences in the rate at
+which patrollers emerge early in the morning, ranging from
+about 2 to 7 ants per minute, were associated with large differ-
+ences in the mean rate at which foragers leave the nest during
+the peak of foraging hours later, ranging from about 20 to 50
+ants per minute. There was a signiﬁcant effect of the mean
+number of patrollers per group that left the nest on the mean
+foraging activity of the same colony (Kruskal–Wallis, df 12,
+F 11.88, P , 0.005). There was no signiﬁcant effect of the
+colony-speciﬁc interval between bursts of patrollers on forag-
+ing activity (Kruskal–Wallis, df 12, F 3.23, P ¼ 0.09) and no
+signiﬁcant interaction of the mean interval between successive
+groups of patrollers leaving the nest and the number of
+patrollers in each group (Kruskal–Wallis, df 12,F 0.03, P ¼ 0.86).
+Colony differences in response to removals
+Colonies differ in their propensity to adjust the rate of outgoing
+foragers to changes in forager return rate ( Figures 3 and 4).
+When trials were grouped by colony, colonies differed in
+whether they responded to removals (analysis of deviance, 23
+df, deviance 37.2, chi square 93, P , 0.03).
+Effect of overall foraging activity on response to change in
+forager return rate
+In general, when foraging activity is high, colonies were more
+likely to respond to a decrease in forager return rate by adjust-
+ing the rate of outgoing foragers. However, colonies varied
+greatly in the magnitude of foraging activity required to re-
+spond to removals ( Figure 4 ). Colonies differed in foraging
+Figure 2
+Foraging activity and patroller burst size, by colony. Each point shows
+the average number of patrollers that left the nest per min and the
+average numbers of outgoing foragers per 30 s for the same colony.
+432 Behavioral Ecology
+
+===== PAGE 5 =====
+rate before removals (ANOVA, 23 df, F 2.86, P , 0.0004).
+Whether colonies responded to removals depended on forag-
+ing rate before removals (analysis of deviance, 1 df, deviance
+6.9, chi square 122.3, P , 0.008). Using the median ratio of
+foraging rate after-to-before removals as the threshold for
+whether a colony responded in a given trial, foraging rate
+before removals was higher in the trials showing a response
+to removals (Table 1) than in the trials in which there was no
+response to removals. Using the less stringent criterion for
+response that a change in foraging rate was stronger than
+the 30th percentile, the results were similar: Foraging rate
+before removals was signiﬁcantly higher in the trials showing
+a response to removals ( Table 1) than in the trials in which
+there was no response to removals.
+DISCUSSION
+Our results show that harvester ant colonies vary in the regula-
+tion of collective behavior. Colonies differ in the baseline rate at
+which ants leave the nest, in foraging activity, and in how closely
+they adjust foraging to changes in the rate of forager return. This
+variation among colonies produces reaction norms that may
+inﬂuence the evolution of collective behavior ( Dingemanse
+et al. 2009). The regulation of foraging is ecologically important
+because it determines how a colony manages the trade-off be-
+tween the risk of water loss when foraging and the risk of losing
+foraging area to a neighboring colony when not foraging (Adler
+and Gordon 2003). However, in some conditions, competition
+among neighboring colonies is intense ( Sanders and Gordon
+2004), and it may be worthwhile to scour the desert for any seed
+at all, despite the cost in desiccation.
+We found that harvester ant colonies differ in the way that for-
+aging activity responds to current conditions. First, some colo-
+nies are more likely than others to send out foragers. For
+example, the spread of points on the y axis of Figure 2 shows
+the variation among 14 colonies in average rates of outgoing
+foragers. Figure 4 shows differences among 24 colonies in the
+average rates of returning foragers. It is well known that ants
+within colonies differ in activity level (e.g., Jaisson et al. 1988);
+our results here show that colonies differ in activity level. Sec-
+ond, colonies also differ in the propensity to regulate foraging
+activity in response to a change in forager return rate (Figure 3).
+This propensity is related to overall foraging level.
+One source of colony differences in foraging activity appears
+to be a colony-speciﬁc trait that sets the interval that any ant waits
+before it goes out, independently of stimulation from returning
+ants. The association between the rate at which patrollers
+emerge, even when no ants return, in a given colony, and the
+average rate at which foragers leave the nest in the same colony,
+suggests that both patrollers and foragers have in common
+a baseline rate of activity. It is unlikely that the rate at which
+patrollers emerge depends on colony size; young colonies and
+mature ones, ranging in size by a factor of 5 from 2000 to
+10 000 ants, have about the same numbers of patrollers,
+30–50 ( Gordon 1989 ). Moreover, very small differences in
+the numbers of patrollers that emerge in each burst predict
+much larger differences in the numbers of ants foraging per
+minute ( Figure 2 ). It is also unlikely that the rate at which
+patrollers emerge directly determines the rate of foraging later
+on. Patrollers initiate foraging when they return to the nest
+(Greene and Gordon 2003 , 2007), and once foraging begins,
+the patrollers are no longer active. We do not know whether the
+number of patrollers active inﬂuences how many foragers ﬁrst
+leave the nest. In any case, there is no evidence that the day’s
+foraging activity is determined by the initial number of forag-
+ers. Further work is needed to understand what produces col-
+ony differences in the activity of patrollers and foragers.
+In many ant species, foraging is regulated by a nonlinear pro-
+cess that links numbers of foragers to the quality or quantity of
+food (Sumpter and Beekman 2003 ; Detrain and Deneubourg
+2008). It seems that harvester ants, using encounter rate rather
+than pheromone trails, regulate foraging using a process that is
+also nonlinear. We found that aP. barbatuscolony is more likely
+to respond to a decrease in forager return rate when the initial
+rate of foraging is high. The following scenario might explain
+why. When the rate of foraging is low, foragers leave the nest at
+a rate set by a baseline probability that is independent of the rate
+of forager return. When food is abundant and the rate of for-
+ager return is high, foragers respond to returning foragers. Re-
+moving returning foragers artiﬁcially brings the rate of forager
+return down to the low rate at which outgoing foraging depends
+only on the baseline rate. When we stop preventing the return
+of foragers, the rate of forager return increases (seeFigure 1B)
+and inactive foragers begin to respond to returning foragers
+again, which brings the rate of outgoing foraging back up. How-
+ever, on days when the foraging activity is initially very low, re-
+movals have no effect because the rate of outgoing foragers
+depends only on the baseline probability that is independent
+of the rate of foraging return.
+Itcouldbethatforagersarelesslikelytorespondtoachangein
+the rate of forager return when rates are low because a change in
+Figure 4
+Foraging activity when undisturbed and response to decrease in
+forager return rate. Each point shows the mean foraging activity for 3
+min before forager return rate was experimentally decreased. Open
+circles, trials in which the colony responded by decreasing foraging.
+Filled triangles, trials with no response.
+Figure 3
+Frequency of colony response to decrease in forager return. Each bar
+shows the number of colonies that responded to a decrease in
+foraging return rate the indicated number of times, out of 5 trials, by
+changing the rate of outgoing foragers.
+Gordon et al.
+• Colony variation in the collective regulation of foraging 433
+
+===== PAGE 6 =====
+a low rate is difﬁcult to assess. The lower the rate of forager
+return, the fewer incoming ants each inactive forager encoun-
+ters, and a small sample has a higher variance than a large
+one. Like the ants, it is difﬁcult for us to detect a change in
+the rate of foraging when it is low ( Figure 1A). The lower the
+rate of foraging, the higher the variation in the rate. This leads
+to a smaller apparent decrease in forager return rate, measured
+as the ratio of foraging rate after to rate before removals.
+However, it is clear that the ants can respond to a change in
+forager return rate even when rates are low. The rate of outgo-
+ing foragers changed in response to removals at a wide range of
+levels of foraging activity, including some trials in which forag-
+ing rates were quite low. For example, Figure 4 shows that
+foraging changed in response to removals at low levels of
+foraging for colony 452 and foraging did not change in re-
+sponse to removals at high levels of foraging for colony 15.
+Thus, the association we found between response to removals
+and high foraging activity cannot be solely due either to the
+ants’ difﬁculty in detecting a change in return rate or to our
+difﬁculty in detecting a relative change in the rate of outgoing
+foragers, when foraging activity is low.
+In general, colonies are more likely to adjust to changes in
+forager return rate when foraging rate is high. Thus, colony
+differences in the level of foraging activity lead to variation in
+the propensity to regulate foraging. But even taking foraging
+rate into account, there were still differences among colonies
+in the probability that they responded to removals ( Figure 3).
+It appears that in addition to overall level of foraging activity,
+some other factors inﬂuence how closely a colony regulates
+foraging. These other factors may explain why, in a previous
+study with a much smaller sample of colonies ( Gordon et al.
+2008), we did not ﬁnd signiﬁcant differences among colonies
+in response to removals. Some possibilities include the
+amount of stored food and the current need to feed larvae
+(Dussutour and Simpson 2009 ; Mailleux et al. 2010 ). Excava-
+tions show that colonies store food for many months (Gordon
+1993) and differ greatly in the amount of stored food
+(Gordon 1992). We do not know how the amount of stored
+food inﬂuences the minute-to-minute regulation of foraging,
+and it is not possible to measure this amount directly in the
+ﬁeld without destroying the nest.
+We do not know what causes the differences among colonies
+in foraging behavior that we report here. Colony behavior
+depends on colony size in many ant species (e.g., Tschinkel
+1993; Bourke 1999; Thomas and Elgar 2003 ; Gordon 2010).
+In P. barbatus, task allocation ( Gordon 1987 ) and relations
+with neighbors ( Gordon 1992 ; Gordon and Kulig 1996 )
+change as a colony grows older and larger. However, although
+colony size inﬂuences colony behavior, it does not fully de-
+termine the numbers actively foraging at any moment. In
+P. barbatus, as in many social insect species, the moment-to-
+moment rate of foraging depends on factors other than colony
+size, such as the rate of food intake (e.g.,Fernandez et al. 2003
+for honey bees;O’Donnell 2001for wasps). At most about 20%
+of the workers in a mature colony engage in foraging at any
+time (Adler and Gordon 2003 ), but on the year-to-year scale,
+the number that forage is not a simple linear function of col-
+ony size, as the numbers foraging change by a factor of 2 from
+ages 2 to 5 years ( Gordon and Kulig 1996; Adler and Gordon
+2003), while overall colony size changes by a factor of 5 during
+those years (Gordon 1992). On the day-to-day scale, ants from
+all other exterior task groups switch tasks to foraging when more
+foragers are needed (Gordon 1989), and foragers can be active
+on 1 day and revert to inactivity the next day (Gordon 1991).
+Colonydifferencesinresponseto changing conditionsprovide
+the variation that underlies the evolution of collective behavior.
+Further workisneededtodetermineifthedifferencesshownhere
+account for the long-term year-to-year differences among colo-
+nies in foraging behavior observed previously ( Gordon 1991).
+Then, to investigate the evolution of the regulation of foraging,
+the next question is how variation among colonies in the regu-
+lation of foraging affects colony growth, survival, and reproduc-
+tive success.
+FUNDING
+National Science Foundation (IBN 0718631) to D.M.G.; Na-
+tional Institute of Health (R01GM086884) to S.H.
+We are very grateful to Daniel Fisher for helpful discussions and ideas
+and to LeAnn Howard, Mattias Lanas, Julie Miller, Ruth Percino,
+Shelby Sturgis, and Doan Lam Tran for their invaluable assistance
+in the ﬁeld. Many thanks to Bjoern Hartmann for programming
+the cell phones to be data collection devices. Noa Pinter-Wollmann,
+Shelby Sturgis, and Katherine Fitzgerald provided valuable comments
+on the manuscript.
+REFERENCES
+Adler FR, Gordon DM. 2003. Optimization, conﬂict, and nonoverlap-
+ping foraging ranges in ants. Am Nat. 162:529–543.
+Beckers R, Deneubourg JL, Goss S. 1993. Modulation of trail laying in
+the ant Lasius niger (Hymenoptera:Formicidae) and its role in the
+collective selection of a food source. J Insect Behav. 6:751–759.
+Beckers R, Deneubourg JL, Goss S, Pasteels JM. 1990. Collective de-
+cision making through food recruitment. Insectes Soc. 37:258–267.
+Beshers SN, Traniello JFA. 1994. The adaptiveness of worker demog-
+raphy in the attine ant Trachymyrmex septentrionalis. Ecology. 75:
+763–775.
+Beverly B, McLendon H, Nacu S, Holmes S, Gordon DM. 2009. How
+site ﬁdelity leads to individual differences in the foraging activity of
+harvester ants. Behav Ecol. 20:633–638.
+Table 1
+Foraging activity and response to decrease in forager return rate
+Variable
+Median 30th percentile
+Response No response tP Response No response tP
+Rate of incoming
+foragers
+1.19 (0.52) 0.98 (0.58) 1.79 0.001 1.18 (0.58) 0.89 (0.52) 2.59 0.01
+Rate of outgoing
+foragers
+1.04 (0.37) 0.89 (0.45) 1.64 0.05 1.02 (0.39) 0.85 (0.47) 1.91 0.01
+Shown are comparisons of foraging rates before removals when the rate of outgoing foragers decreased in response to removals, and when the
+rate of outgoing foragers did not decrease. Numbers are mean number of foragers per sec (SD). Values are shown for two criteria for foraging
+response, median and the 30th percentile. For median criterion: responded n¼ 29, no response n ¼ 65. For 30th percentile criterion, responded
+n ¼ 42, no response n ¼ 52.
+434 Behavioral Ecology
+
+===== PAGE 7 =====
+Bourke AFG. 1999. Colony size, social complexity and reproductive
+conﬂict in social insects. J Evol Biol. 12:245–257.
+Burd M. 2000. Foraging behaviour of Atta cephalotes(leaf-cutting ants):
+an examination of two predictions for load selection. Anim Behav.
+60:781–788.
+Cole BJ, Smit AA, Huber ZJ, Wiernasz D. 2010. The structure of for-
+aging activity in colonies of the harvester ant Pogonomyrmex occiden-
+talis. Behav Ecol. 21:337–342.
+Collignon B, Detrain C. 2010. Distributed leadership and adaptive
+decision-making in the ant Tetramorium caespitum. Proc R Soc B
+Biol Sci. 277:1267–1273.
+Conradt L, Krause J, Couzin ID, Roper TJ. 2009. ‘ ‘Leading according
+to need’ ’ in self-organizing groups. Am Nat. 173:304–312.
+Crozier RH, Pamilo P . 1996. Evolution of social insect colonies. Oxford:
+Oxford University Press.
+DeHeer CJ, Herbers JM. 2004. Population genetics of the socially
+polymorphic ant Formica podzolica. Insectes Soc. 51:309–316.
+Detrain C, Deneubourg JL. 2008. Collective decision-making and forag-
+ing patterns in ants and honeybees. In: Simpson SJ, editor. Advances
+in insect physiology, vol. 3. New York: Academic Press. p. 123–173.
+Dingemanse NJ, Kazem AJN, Reale D, Wright J. 2009. Behavioural
+reaction norms: animal personality meets individual plasticity.
+Trends Ecol Evol. 25:81–89.
+Dussutour A, Simpson SJ. 2009. Communal nutrition in ants. Curr
+Biol. 19:740–744.
+Farji-Brener AG, Amador-Vargas S, Chinchilla F, Escobar S, Cabrera S,
+Herrera MI, Sandoval C. 2010. Information transfer in head-on
+encounters between leaf-cutting ant workers: food, trail condition
+or orientation cues? Anim Behav. 79:343–349.
+Fernandez PC, Gil M, Farina WM. 2003. Reward rate and forager
+activation in honeybees: recruiting mechanisms and temporal dis-
+tribution of arrivals. Behav Ecol Sociobiol. 54:80–87.
+Gordon DM. 1984. Speciﬁc patterns in the social activities of harvester
+ant colonies. Insectes Soc. 31:74–86.
+Gordon DM. 1987. Group-level dynamics in harvester ants: young
+colonies and the role of patrolling. Anim Behav. 35:833–843.
+Gordon DM. 1989. Dynamics of task switching in harvester ants. Anim
+Behav. 38:194–204.
+Gordon DM. 1991. Behavioral ﬂexibility and the foraging ecology of
+seed-eating ants. Am Nat. 138:379–411.
+Gordon DM. 1992. How colony growth affects forager intrusion in
+neighboring harvester ant colonies. Behav Ecol Sociobiol. 31:
+417–427.
+Gordon DM. 1993. The spatial scale of seed collection by harvester
+ants. Oecologia. 95:479–487.
+Gordon DM. 1995. The development of an ant colony’s foraging
+range. Anim Behav. 49:649–659.
+Gordon DM. 2002. The regulation of foraging activity in red harvester
+ant colonies. Am Nat. 159:509–518.
+Gordon DM. 2010. Ant encounters: interaction networks and colony
+behavior. Primers in complex systems. Princeton (NJ): Princeton
+University Press.
+Gordon DM, Holldobler B. 1987. Worker longevity in harvester ants.
+Psyche. 94:341–346.
+Gordon DM, Holmes S, Nacu S. 2008. The short-term regulation of
+foraging in harvester ants. Behav Ecol. 19:217–222.
+Gordon DM, Kulig A. 1996. Founding, foraging and ﬁghting: colony
+size and the spatial distribution of harvester ant nests. Ecology. 77:
+2393–2409.
+Greene MJ, Gordon DM. 2003. Cuticular hydrocarbons inform task
+decisions. Nature. 423:32.
+Greene MJ, Gordon DM. 2007. Interaction rate informs harvester ant
+task decisions. Behav Ecol. 18:451–455.
+Jaisson P, Fresneau D, Lachaud JP. 1988. Individual traits of social
+behavior in ants. In: Jeanne RL, editor. Interindividual behavioral
+variability in social insects. Boulder (CO): Westview Press. p. 1–51.
+Lighton JRB, Bartholomew GA. 1988. Standard energy metabolism of
+a desert harvester ant Pogonomyrmex rugosus: effects of temperature,
+body mass, group size and humidity. Proc Natl Acad Sci U S A. 85:
+4765–4769.
+Lighton JRB, Feener DH Jr. 1989. Water-loss rate and cuticular per-
+meability in foragers of the desert ant Pogonomyrmex rugosus. Physiol
+Zool. 62(6):1232–1256.
+Mailleux A-C, Bufﬁn A, Detrain C, Deneubourg J-L. 2010. Recruiter or
+recruit: who boosts the recruitment in starved nests in mass forag-
+ing ants? Anim Behav. 79:31–35.
+O’Donnell S. 2001. Worker biting interactions and task performance
+in a swarm-founding eusocial wasp ( Polybia occidentalis, Hymenop-
+tera: Vespidae). Behav Ecol. 12:353–359.
+Powell S. 2008. Ecological specialization and the evolution of a special-
+ized caste in Cephalotes ants. Funct Ecol. 22:902–911.
+Pratt SC, Sumpter DJT. 2006. A tunable algorithm for collective
+decision-making. Proc Natl Acad Sci U S A. 103(43):15906–15910.
+Ross KG, Keller L. 1995. Ecology and evolution of social organization:
+insights from ﬁre ants and other highly eusocial insects. Annu Rev
+Ecol Syst. 26:631–656.
+Sanders NJ, Gordon DM. 2004. The interactive effects of climate and
+interspeciﬁc neighbours on mortality of red harvester ants. Ecol
+Entomol. 29:632–637.
+Saverschek N, Herz H, Wagner M, Roces F. 2010. Avoiding plants
+unsuitable for the symbiotic fungus: learning and long-term mem-
+ory in leaf-cutting ants. Anim Behav. 79:689–698.
+Schafer RJ, Holmes S, Gordon DM. 2006. Forager activation and food
+availability in harvester ants. Anim Behav. 71:815–822.
+Sih A, Bell AM, Johnson JC. 2004. Behavioral syndromes: an integra-
+tive overview. Q Rev Biol. 79:241–277.
+Snyder LE. 1993. Nonrandom behavioral interactions among genetic
+subgroups in a polygynous ant. Anim Behav. 46:431–439.
+Sumpter D, Beekman M. 2003. From nonlinearity to optimality: pher-
+omone trail foraging by ants. Anim Behav. 66:273–280.
+Sundstrom L. 1993. Genetic population structure and sociogenetic
+organization in Formica truncorum (Hymenoptera, Formicidae). Be-
+hav Ecol Sociobiol. 33:345–354.
+Thomas M, Elgar MA. 2003. Colony size affects division of labour in
+the ponerine ant Rhytidoponera metallica. Naturwissenschaften. 90:
+88–92.
+Tschinkel W. 1993. Sociometry and sociogenesis of colonies of the ﬁre
+ant Solenopsis invicta during one annual cycle. Ecol Monogr. 63:
+425–457.
+Wiernasz DC, Hines J, Parker D, Cole BJ. 2008. Mating for variety
+increases colony activity in the harvester ant, Pogonomyrmex occiden-
+talis. Mol Ecol. 17:1137–1144.
+Gordon et al.
+• Colony variation in the collective regulation of foraging 435

@@ -1,0 +1,11 @@
+node_modules
+dist
+.DS_Store
+*.md
+.git
+.gitignore
+.firebaserc
+firebase.json
+firestore.rules
+firestore.indexes.json
+*-adminsdk-*.json

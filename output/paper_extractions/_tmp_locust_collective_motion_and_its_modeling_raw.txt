@@ -1,0 +1,1231 @@
+
+
+===== PAGE 1 =====
+REVIEW
+Locust Collective Motion and Its Modeling
+Gil Ariel1*, Amir Ayali2*
+1 Department of Mathematics, Bar Ilan University, Ramat-Gan, Israel,2 Department of Zoology, Faculty of
+Life Sciences, and Sagol School of Neuroscience, Tel Aviv University, Tel Aviv, Israel
+* arielg@math.biu.ac.il (GA); ayali@post.tau.ac.il (AA)
+Abstract
+Over the past decade, technological advances in experimental and animal tracking tech-
+niques have motivated a renewed theoretical interest in animal collective motion and, in par-
+ticular, locust swarming. This review offers a comprehensive biological background
+followed by comparative analysis of recent models of locust collective motion, in particular
+locust marching, their settings, and underlying assumptions. We describe a wide range of
+recent modeling and simulation approaches, from discrete agent-based models of self-pro-
+pelled particles to continuous models of integro-differential equations, aimed at describing
+and analyzing the fascinating phenomenon of locust collective motion. These modeling
+efforts have a dual role: The first views locusts as a quintessential example of animal collec-
+tive motion. As such, they aim at abstraction and coarse-graining, often utilizing the tools of
+statistical physics. The second, which originates from a more biological perspective, views
+locust swarming as a scientific problem of its own exceptional merit. The main goal should,
+thus, be the analysis and prediction of natural swarm dynamics. We discuss the properties
+of swarm dynamics using the tools of statistical physics, as well as the implications for labo-
+ratory experiments and natural swarms. Finally, we stress the importance of a combined-
+interdisciplinary, biological-theoretical effort in successfully confronting the challenges that
+locusts pose at both the theoretical and practical levels.
+Introduction—Why Locusts?
+“The locusts have no king, yet go they forth all of them by bands” (Proverbs 30:27,The Holy
+Bible, King James Version. Cambridge Edition. 1611). The Old Testament, like other ancient
+scripts, has several references to locusts and their behavior, specifically to the spectacular phe-
+nomenon of marching locust hopper bands. Part of our fascination with locust swarms is due
+to the fact that they always have been and still are a major threat to agriculture (e.g., [1,2]).
+Locusts are described as a pest of unusually destructive powers: A desert locust adult can con-
+sume roughly its own weight, i.e., about two grams, in fresh food per day [3]. The notorious
+1915 locust attack in the Middle East, for example, resulted in wiping out a largely underesti-
+mated 536,000 tons of food [4]. According to the Food and Agriculture Organization of the
+United Nations, in modern days, e.g., during the 2003–2004 locust invasions, this translated to
+around US$30 million spent by a typical African nation in anti-locust campaigns [5].
+The coordinated activity of crowds consisting of millions of individuals, while not unique to
+locusts, has been and still is a challenge to laymen and scientists alike. Despite considerable
+progress in understanding the mechanisms underlying the emergence and synchronization
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 1 / 25
+OPEN ACCESS
+Citation: Ariel G, Ayali A (2015) Locust Collective
+Motion and Its Modeling. PLoS Comput Biol 11(12):
+e1004522. doi:10.1371/journal.pcbi.1004522
+Editor: Frederick R. Adler, University of Utah,
+UNITED STATES
+Published: December 10, 2015
+Copyright: © 2015 Ariel, Ayali. This is an open
+access article distributed under the terms of the
+Creative Commons Attribution License, which permits
+unrestricted use, distribution, and reproduction in any
+medium, provided the original author and source are
+credited.
+Funding: GA’s research has been partially supported
+by an EU Marie-Curie IRG grant. AA’s research has
+been supported by grant no. 891-0277-13 from
+Israel’s Ministry of Agriculture. The funders had no
+role in study design, data collection and analysis,
+decision to publish, or preparation of the manuscript.
+Competing Interests:The authors have declared
+that no competing interests exist.
+
+===== PAGE 2 =====
+among moving crowds of animals as well as humans, locust swarming still presents several fun-
+damental open questions. These include key questions regarding locust biology as well as more
+theoretical aspects. Some of the open, or far from fully answered, questions include:
+ What are the principle interactions between conspecifics in a swarm?
+ What is the effect of the environment on the swarm and vice versa?
+ What are the functional and evolutionary advantages to swarming?
+ How do local dynamics within a swarm translate to macroscopic dynamics of large swarms
+consisting of millions of individuals?
+ Do order and disorder in locust swarms constitute a phase transition in the sense of statistical
+physics, or are there metastable states of the dynamics?
+ Are there quantifiable traits unique to locust swarms in respect to other animal crowds (fish,
+birds, humans, etc.)?
+In the hope of encouraging more research into the above, as well as to provide a showcase of
+current knowledge, in this review, we summarize the different attempts to describe or capture
+locust collective behavior by way of theoretical modeling. As presented below, some of these
+efforts are heavily rooted in biological data and observations, while others offer a more mathe-
+matical or physical perspective. Some are specifically tailored and aimed toward explaining
+locust behavior; others are more general descriptions of collective motion, adapted to the locust
+case. The emphasis of the review is on marching locust nymphs. From the biological point of
+view, this is the critical stage during which the phenomenon of locust aggregation begins.
+Accordingly, recent years have seen several theoretical and modeling attempts to explain the
+emergence and maintenance of order in marching locust nymphs.
+We start with the biological background: locusts, density-dependent phases in locusts,
+swarming, and collective movement (marching and flying). We then move on to present some
+of the attempts to model locust collective behavior, from the early models of Self-Propelled
+Particles (SPPs) to our own recent attempt based on intermittent pause-and-go motion. Mod-
+els of flying swarms, locust phase change, and evolutionary models are also briefly surveyed.
+We conclude with a discussion of the success (or failure) of theoretical models in addressing
+the key questions presented above, as well as the benefits of such models in dealing with the
+locust problem.
+Biological Background
+Locust and locust density-dependent phase polyphenism
+Locusts are short-horned grasshoppers that exhibit density-dependent phase-polymorphism
+or polyphenism (the phenomenon in which two or more distinct phenotypes are produced by
+the same genotype). They appear in two forms or phases [6]: crowding induces the gregarious
+phase, most notorious for its tendency to aggregate and form massive swarms; while isolation
+leads to the solitary phase, in which individuals actively avoid other locusts. The differences
+between the gregarious and solitary phases are collectively termed phase characteristics,
+extending from behavior and ecology, through morphology and anatomy, to physiology and
+biochemistry (see recent reviews in [7,8]). Locust phase polyphenism is continuous, and many
+intermediate forms can be found between the extreme gregarious and solitary phases. The
+phase transformation, i.e., the response to changes in population density, is reversible and not
+developmental-stage- or age-specific. Some phase characteristics, especially behavioral pat-
+terns, respond rapidly within the same instar (larval stage). Other characteristics, for example,
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 2 / 25
+
+===== PAGE 3 =====
+color changes, only show an overt response in the next or subsequent instars. Parental density
+affects the color of the hatchlings and may have some behavioral and further effects on the
+next generation ([9–12], and see [13] for a review). Full-scale phase transformation takes sev-
+eral generations, and presumably occurs only in the field. In the laboratory, locusts kept either
+under crowding or under isolation, respectively approach the characteristics of the gregarious
+and the solitary phases [8].
+Some 15 locust species, belonging to several, sometimes distant, phylogenetic groups, are
+considered true locusts, i.e., they express density-dependent polyphenism, swarming, and
+migration (see [6,8,14] and references within). Most notorious (and, thus, most studied) is the
+desert locust (Schistocerca gregaria), which inhabits dry grasslands and deserts and has threat-
+ened agricultural production in Africa, the Middle East, and Asia for centuries. Hereon, unless
+explicitly noted, we will mostly refer to the desert locust, as this is the most investigated species
+and a major part of our knowledge is based on it. The range of the migratory locust (Locusta
+migratoria) is wider than that of any other. It is found in grasslands throughout Africa, major
+parts of Eurasia, the East Indies, tropical Australia, and New Zealand. The Australian plague
+locust (Chortoicetes terminifera) is the most important pest species of locust in Australia, due to
+the large areas infested, the frequency of outbreaks, and its ability to produce several generations
+in a year. These, as well as other, less prominent locust species, may differ in their ability to
+express the phase phenomenon in its entirety, in the dynamics and magnitude of their response
+to changes in population density [8,14,15]. This important point has been largely overlooked by
+biologists and even more by theoreticians, tempted to generalize from a single-species study to
+all locusts. As our knowledge of diverse species increases, we may be introduced to key species-
+specific differences in the dynamics of the phase phenomenon [6,8–10]. The intricate phylogeny
+of locusts also offers a challenge to any attempt at explaining the evolution of the locust phe-
+nomenon (see the section“Evolution of the Locust Phenomenon” below).
+As mentioned, locust behavior is a prominent phase characteristic. The importance of the
+change in behavior is that it precedes and facilitates all other phase changes. The major behav-
+ioral characteristic of locusts in the gregarious phase is their strong attraction to their conspe-
+cifics, which translates to active aggregation behavior (Fig 1A)[ 6,16,17]. Gregarious locusts are
+also generally more active, including their strong propensity to march in huge bands of hop-
+pers or to form flying swarms as adults. In contrast, solitary-reared locusts actively avoid con-
+tact with other locusts [18–20]. They are more sedentary and cryptic in behavior, do not
+march, and fly less. The behavioral phase transformation is a positive-feedback process. Soli-
+tary-reared locusts have been reported to acquire most of the behavioral characteristics of the
+gregarious phase within 4–8 hours of crowding, including the propensity to aggregate, and
+thus reinforce the gregarizing stimuli provided by other locusts [19]. Recently, it has been
+shown that even a 30-minute exposure of a solitary-reared nymph to a small crowd of locusts
+is sufficient for the induced change in behavior to persist, even after re-isolation of the locust
+for 24–72 hours [20]. Details of the dynamics of phase transformation and its interactions with
+the environment are still far from being fully resolved [8].
+Locust swarming and coordinated movement
+As mentioned, swarming is a hallmark of locust behavior. Swarming per se is a result of the
+attraction and aggregation tendency of locusts in the gregarious phase. Locust-coordinated
+mass movement includes the flight of adult swarms, but even more conspicuous is the march-
+ing of nymphs or hopper bands. It should be noted, however, that the formation of dense
+bands of hoppers is independent of the marching behavior: the multitude of different behav-
+ioral patterns of the bands include other, relatively quiescent, states, such as basking, perching,
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 3 / 25
+
+===== PAGE 4 =====
+Fig 1. (A) A major behavioral characteristic of locusts in the gregarious phase is their strong propensity to form mass aggregations, as demonstrated by
+these desert locust nymphs. (B) Both swarming and marching start very early, already a few days after hatching, as demonstrated by these first larval instar
+desert locusts. (C) The endless marching bands of locust nymphs exemplify extreme coordination in their movement vectors during collective motion.(D)
+Road kills (nymphs hit by passing cars while the swarm crosses a road) will be immediately cannibalized by others (arrows). Locusts stopped in the midsto f
+the swarm to feed on the cadavers will be totally ignored by others. Continuous and careful monitoring of individuals within a crowd in controlled lab
+experiments (E and F) have enhanced the development of quantitative analysis and theoretical modeling of individual dynamics and interactions, leading to
+various models of coordinated collective behavior.
+doi:10.1371/journal.pcbi.1004522.g001
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 4 / 25
+
+===== PAGE 5 =====
+sheltering, and, of course, feeding. Hopper densities in quiescent bands are extremely high (Fig
+1A), and the area that a quiescent band covers can be 2–4-fold smaller than that covered by the
+same band when marching, as reported for desert locusts by Ashall and Ellis [21,22], with even
+greater differences reported for other locusts ([23] and references therein).
+Both swarming and marching start very early on, at the first larval instar, a few days after
+hatching (Fig 1B). Desert locust nymphs (as well as other locusts) have a diurnal pattern of
+behavior (e.g., [24,25]). The locust bands will normally have one period of marching in the
+forenoon and another in the afternoon, strongly dependent on weather conditions such as tem-
+perature, but also on clouds obscuring the sun, as well as on rain or cold wind [23]. In our own
+observations of the desert locust (Fig 1; Negev desert, Israel, spring of 2013; Ayali unpublished),
+marching usually took place from just before noon to two hours before sunset. The marching
+hopper bands can cover very different areas, from a few hundred square meters up to several
+kilometers. As reported for different locust species, their shape can also vary, ranging from
+columnar to frontal structures [23,25]. During marching of the hoppers, bands may meet,
+merge, or fuse, and the coordinated movement will thereby further enhance the swarming (this
+is also true for the flying swarms).
+Undisturbed nymphs within marching bands will advance predominantly by very consis-
+tent walking rather than by jumping or hopping (the latter are aversive reactions, most com-
+monly demonstrated in response to danger or threat [26–29]). This behavior is most typical to
+the desert and migratory locusts and may be less so in other species. Regarding the speed of
+marching, Uvarov [23] had already noted that“the actual speed of individual hoppers bears
+only a remote and uncertain relation (by a factor of 3–4) to the marching rate of the bands.”
+The reason for this is that the proportion of hoppers marching at any given moment can be as
+low as 10%. This has been confirmed by others (cited therein, and see also [24]) and by our
+own observations: individual marching locusts very often stop for periods of various durations.
+Of special interest is the behavior of hoppers at the edges of the marching band. Again, accord-
+ing to Uvarov ([23], and references within), hoppers advancing beyond the edge of a marching
+band frequently stop or even turn back to rejoin it. Similar observations were reported by Ellis
+and Ashall [24]. In their detailed description of marching bands of the Australian plague locust,
+Buhl et al. [30] refer specifically to the front edge of the band, finding that locusts at the front
+will slow down or simply turn more often, reducing their net displacement in comparison to
+those behind (as also reported for fish schools [31,32]). These behaviors will serve to maintain
+the integrity of the marching bands. They often result in bands comprising an extremely dense
+front followed by an exponential decay of density, with a consequent loss of cohesion toward
+the back [30]. What the major factors are that affect the direction of marching is still an open
+question.
+The cannibalistic propensity of locusts has been recently associated with marching behav-
+iour and was even suggested as a major driving force for the formation of collective motion in
+locust nymphs [33–35]. The controlled experiments and intriguing results of Bazazi et al. (e.g.,
+[33]) indicate reduced marching of nymphs in an experimental arena following manipulation
+of sensory inputs from behind (visual and/or tactile). These reports are a good example of
+experimental results directly motivating a modeling approach, as discussed in the section
+“Escape and pursuit” below. They also underlie a putative theory for the evolution of phase
+polyphenism (see“Evolution of the Locust Phenomenon”). Cannibalism is very well docu-
+mented in locusts (and other grasshoppers), e.g., [22,36–38]. However, it is accepted by most
+authors that cannibalism is mainly directed toward hatchlings [22,39], freshly molted [40],
+injured, or dead animals [37], and is rarely directed toward active, healthy individuals. More-
+over, the documented dynamics within the marching band as described above (pauses of varied
+length, behavior at the band edges, etc.) are not consistent with the nymphs escaping predation
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 5 / 25
+
+===== PAGE 6 =====
+or trying to cannibalize on their marching companions. The results of Bazazi et al. [33] may
+also be interpreted as merely supporting an instrumental role of visual inputs in the local inter-
+actions among locusts (see also 3.2 below), as well as confirming the cannibalistic tendency
+toward unhealthy individuals (surgically manipulated in this case).
+While Uvarov [3] goes as far as to categorically reject any connection between ground
+movement and hunger (page 83 therein), it is well established that the nutritional state of the
+hoppers does have an important impact on the amount of marching, its speed, and the distance
+travelled [34,41]. Hence, it may be suggested that in addition to possible species-specific differ-
+ences, different interactions among locust nymphs may occur at different behavioral contexts,
+and maybe also at different times of the day (e.g., some effect of a cannibalistic drive during the
+onset of marching in the morning, but non-cannibalistic interactions when marching is estab-
+lished or during high-density aggregation in vegetation during the hottest period of the day,
+etc.).
+Flying swarms of adult locusts will migrate predominantly downwind. There are very few
+studies focusing on local dynamics within the flying swarm. Within a given section of the
+swarm, locusts were observed to generally fly with their bodies parallel, separated by as little as
+10 cm [42–45]. Camhi et al. [46] even reported wing-beat coupling among pairs of locusts fly-
+ing in tandem. Although aligned with their neighbors, locust groups within the body of the
+swarm head in random directions [43]. The integrity of the swarm is maintained by the fact
+that, similar to the marching hoppers, upon reaching the edges of the swarm locusts will turn
+back to re-join it. Hence, in the flying swarms, it is not clear whether and how local interactions
+and dynamics translate to coordinated swarm locomotion.
+Experimental approaches to the study of locust swarming
+Traditionally, studies of locust behavior have been limited to field observations during locust
+outbreaks in the affected African regions. Such reports include the pioneering work of Uvarov
+[6,23,47], Kennedy [48,49], and others. These efforts have been aided by the development of
+techniques that enabled the investigation of particular aspects of the behavior of individual
+locust hoppers in bands (e.g., the photographic techniques of Stower [50]). A crucial step
+towards a more advanced understanding of coordinated behavioral mechanism in locusts was
+made by the first laboratory experiments, including the generation of marching behavior in
+closed circular arenas and the experimental manipulation of locust density [16,17,51–53].
+These early reports already identified the strong attraction of gregarious locusts to conspecifics,
+which translates into active aggregation behavior; and, furthermore, already suggested that
+locust collective movement is highly dependent on the density of animals in the group.
+Behavioral experiments were supplemented by extensive literature on locust physiology and
+neurobiology (e.g., [54], and references within). Most significant were advances in describing
+neurobiological correlates to locust phase polyphenism (starting with [55,56]), as well as
+attempts at identifying the neurobiological-related mechanisms of the phase change (reviewed
+in [57]). These have disclosed relevant sensory modalities that may be important in the com-
+plex interactions between individuals within a locust swarm.
+Using modern computer-vision tracking methods (Fig 1E and 1F), locust marching behav-
+ior in the controlled environment of the lab has lent itself easily to continuous and careful
+monitoring of the crowd and the individuals, and to quantitative analysis. In the experiments
+by Buhl et al. [58], groups of up to 120 insects were placed in a ring-shaped arena with an exter-
+nal diameter of 80 cm. Locusts were allowed to march freely for several hours, monitored by a
+video camera. The films were later analyzed to produce individual trajectories, allowing a
+detailed quantitative analysis of the swarm dynamics. Recently, Ariel et al. [59] used similar
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 6 / 25
+
+===== PAGE 7 =====
+experiments to investigate the animal–animal interaction in order to reveal some of the micro-
+scopic details of locust motion within a crowd— when does it walk, pause, or turn? A surge in
+such quantitative studies of locust coordinated behavior in the past decade or two (see below)
+have kept locust studies up-to-date and relevant and ensured their place at the forefront of the
+interdisciplinary efforts to unravel the secrets behind collective animal behavior.
+Modeling Marching Locust Nymphs
+The past years have witnessed ample theoretical work on collective motion. A large number of
+recent reviews describe a wide range of theoretical approaches, suggesting explanations for the
+emergence of collective motion in animals (e.g., [60–67]). In general, modeling approaches can
+be categorized as either continuous models, written in terms of integro-differential equations,
+or discrete agent-based models.
+Continuous models typically describe the coarse-grained density of animals and other sys-
+tem constituents as continuous fields, for example, by coupled reaction-diffusion equations or,
+following a kinetic approach, by hydrodynamic or Boltzmann equations [60–68]. One of the
+main drawbacks of continuous models is the difficultly of relating actual properties of individ-
+ual animals (e.g., body shape and size, hunger, and other internal states) to specific details of
+the model [60]. This is one of the reasons why most of the current theoretical work on locust
+collective motion comprises agent-based simulations, which are useful for describing the
+dynamics from the point of view of the individual animal (“Umwelt” in biology [69], or
+“Lagrangian description” in physics [60]). The dynamics in agent-based models, also known as
+SPPs, are given by specifying the internal state of each animal, its interaction with others (con-
+specifics), and its interactions with the environment. However, such models are limited by the
+number of agents that can be simulated (very far, for example, from the millions of individuals
+comprising a locust swarm). In addition, they do not provide a macroscopic, or coarse-grained,
+description of the swarm dynamics as a whole, and additional mathematical tools may be
+needed to interpret the results [70,71].
+Attempts to capture the individual dynamics leading to locust swarming behavior can be
+categorized into four major directions. The first is largely based on or derived from the work of
+Czirók et al. [72]; the second is our own recent attempt, emphasizing an intermittent pause-
+and-go motion pattern locust exhibit. In the following, we describe a general framework that
+allows a quantitative comparison between the different models in these two categories, their
+predictions as to order-disorder transitions, as well as their success in describing experiments.
+The third approach is derived from the widely-used three-zone, or Avoidance–Alignment–
+Attraction (AAA), model. The fourth approach, referred to as“escape and pursuit” (E&P) [73],
+is based on a theory of cannibalism being a dominant trait in locust behavior. We critically and
+comparatively describe these modeling approaches below.
+Locusts as self-propelled particles
+The experiments by Buhl et al. [58] of locust marching in a circular arena motivated increased
+theoretical interest in the field. One of the main conclusions of this work was that the“swarm”
+synchronizes in either clockwise (CW) or counter-clockwise (CCW) movement. Furthermore,
+the time spent in an ordered state (a synchronized direction) increased with the number of ani-
+mals, as switching from CW to CCW and vice-versa become rare events. The ring-shaped
+arena and directional switching motivated Buhl et al. to suggest a one-dimensional (1D) model
+(referred to hereafter as the Buhl model) adapted from Czirók et al. ([72]; referred to hereafter
+as the Czirók model). The applicability of a relatively simple 1D model to a real-life experiment
+quickly attracted interest by the theoretical community.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 7 / 25
+
+===== PAGE 8 =====
+The Czirók model is essentially a 1D version of the well-known 2D Scalar Noise Model
+(SNM) of Viscek et al. [74]. We begin here with a description of the model that is continuous
+in time. ConsiderN particles with positionsx(t)=( x1(t),... ,xN(t)) and dimensionless velocities
+u(t)=( u1(t),... ,uN(t)) moving along a line of lengthL with periodic boundaries. In order to
+facilitate comparison between the model and its many variants, we write the dynamics as a sys-
+tem of Stochastic Differential Equations (SDEs),
+_xi ¼ vui
+_ui ¼½ GðhuðtÞiiÞ/C0 ui/C138þs _Wi;
+ð1Þ
+where, _Wi is white noise (independent for eachi), v parameterizes the speed of particles, andσ
+is the standard deviation of external noise. The interaction of a focal particlei with its conspe-
+ciﬁcs is assumed to depend only on the local average direction within an interaction distanceΔ,
+huðtÞii ¼
+1
+niðtÞ
+X
+j2AiðtÞujðtÞ niðtÞ/C211
+0 niðtÞ¼ 0;
+8
+<
+:
+where Ai(t) denotes the set of neighbors of particlei at timet up to an interaction distanceΔ,
+Ai(t)={ j:|xi(t)-xj(t)|/C20Δ} andni(t)=| Ai(t)| is the number of neighbors. In the Czirók model, as
+in most later variations of this model, the functionG(/C1) is taken to be an odd, piece-wise con-
+tinuous function,
+GðuÞ¼
+1
+2 ½u þ signðuÞ/C138 u 6¼ 0
+0 u ¼ 0:
+8
+<
+:
+Discretizing (Eq 1) using Euler-Maruyama with step-sizeΔt,
+xiðt þ DtÞ¼ xiðtÞþ vuiðtÞDt
+uiðt þ DtÞ¼ uiðtÞþ½ GðhuðtÞiiÞ/C0 uiðtÞ/C138Dt þ
+ﬃﬃﬃﬃﬃ
+Dt
+p
+xiðtÞ;
+ð2Þ
+where ξi(t) are independent random variables with zero mean and varianceσ2. Taking uni-
+formly distributed noise,ξi(t)~U[-η/2,η/2], Z ¼ s2=
+ﬃﬃﬃﬃﬃ
+12
+p
+yields the model described by Yates
+et al. [75]. TakingΔt = 1 yields the discrete Czirók model,
+xiðt þ 1Þ¼ xiðtÞþ vuiðtÞ
+uiðt þ 1Þ¼ GðhuðtÞiiÞþ xiðtÞ:
+In order to analyze and quantify order in the system, consider an order parameterϕ(t)
+defined as
+/C30ðtÞ¼ 1
+N
+X
+i
+uiðtÞ:
+Fig 2Adepicts two sample trajectories ofϕ(t) at different concentrations ofρ = N / L. In the
+following, simulation results are presented with the parametersN = 100,η =2 ,Δ = 1, and
+v = 0.1, unless specified otherwise. At low concentrations, the system is disordered andϕ(t)
+fluctuates around zero. However, at higher concentrations,ϕ(t) fluctuates around one of two
+metastable states located at +1 and -1, with occasional rapid transitions between them. This
+suggests that, when order is high, the system admits a coarse-grained description as a two-state
+continuous time Markov chain (CTMC).S1A Figshows the distribution of waiting times
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 8 / 25
+
+===== PAGE 9 =====
+between transitions, which is approximately exponential, as expected for a CTMC. In simula-
+tions, metastable states were defined using a cutoff forϕ(t), A+ ={ ϕ(t)>p}, andA- ={ ϕ(t)< -p},
+where p = 0.7.Fig 2Cshows the average transition rate between the two metastable states for
+fixed noiseη = 2 and varyingρ (see alsoS2 Fig). Interestingly, the switching rate shows a pla-
+teau for a wide range of concentrations. The length of the plateau seems to grow withN, sug-
+gesting a limiting equilibrium rate at the thermodynamic limit (N!1 at constantρ and η),
+which is the biologically relevant limit for natural large locust swarms.
+The main significance of the Czirók model and its 2D predecessor [74] is the understanding
+that the two types of behaviors— fluctuating aroundϕ =0o r ϕ =± 1— can be thought of as
+phases in the sense of statistical physics. Consider the average order parameter
+/C30 ¼h j/C30ðtÞji;
+Fig 2. (A) Sample trajectories for the Czirók model. Blue curve:ρ = 0.1. Red curve:ρ = 3.2. (B) Sample trajectories with individual-choice (I-C) interactions.
+Blue curve:ρ = 0.2. Red curve:ρ = 3.2. Note that the time scale between two models differs by a factor of ten. (C) Mean transition rates as a function ofρ. (D)
+The average order parameter as a function ofρ.
+doi:10.1371/journal.pcbi.1004522.g002
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 9 / 25
+
+===== PAGE 10 =====
+where brackets denote averaging over all time steps and initial conditions.Fig 2Dshows the
+average order parameter in the Czirók model (blue lines) as a function ofρ for ﬁxed noiseη.
+The ﬁgure suggests that for largeN, the curve becomes singular at a critical densityρc. In statis-
+tical physics, this type of behavior is called a phase transition (not to be confused with the soli-
+tarious-gregarious transition discussed above) [62,64,65,74]. If the functionϕ(ρ)i s
+discontinuous atρ
+c, then the transition is aﬁrst order transition, similar to the solid/liquid/gas
+transition in solid state physics. However, ifϕ(ρ) is continuous atρc, but not differentiable,
+then the transition is called a second order transition, similar to the transition from a paramag-
+net to a ferromagnet in iron (a ferromagnet can remain magnetized after an external magnetic
+ﬁeld is switched off, while a paramagnet cannot). Similar behavior is observed at constantρ
+and variableη, indicating thatη is analogues to temperature. See [76] for a discussion of tem-
+perature in Viscek-type models. The type of transition, critical concentrations, critical noise,
+and exponents in SPP models are studied numerically [65,72,74,77].
+The significance of the observation that the Czirók model undergoes a phase transition is in
+understanding that order and disorder can be characterized as two distinct phases. Switching
+between the phases requires some external change in the system parameters, such as concentra-
+tion or the amount of noise.
+Individual-choice model. O'Loan and Evans [78] introduced an assumption that at every
+simulation stepΔt, animals make a decision as to whether to persist with their own velocityu
+i
+or to align with the local order<ui(t)>. This is implemented as a random choice: at every time
+step, a particle retains its velocity with probabilityα. Otherwise, it aligns with neighbors
+according to the interaction rule described inEq 2.
+Fig 2Bshows two typical trajectories at low and high concentrations in the individual-choice
+model with an interaction rule, following O'Loan and Evans. Althoughϕ(t) is qualitatively sim-
+ilar to that of Czirók et al. [72], transition rates are higher by a factor of 10 (seeFig 2D). Note
+that neither Czirók et al. [72] nor O'Loan and Evans [78], which predate the experimental
+results of Buhl et al. [58], engaged with transition rates.
+While the individual-choice model does present a phase transition, it does so in a different
+range of parameters.Fig 2Cshows the average order parameter as a function ofρ for fixed
+noise, η = 2. The change from disordered (smallϕ) to ordered (largeϕ) behavior is smooth,
+and it is not clear whether a phase transition exists.
+The view of the system dynamics as a sequence of discrete decisions is also at the heart of our
+model, discussed in the section“Individual pause-and-go movement” below. See also [79] for a
+general discussion of the importance of the decision-making process in collective movement.
+Internal versus external noise.The Gaussian white noise inEq 1can be considered as an
+external source of noise since it is explicitly added to the equations of motion. In particular, ifσ
+= 0, then the dynamics is deterministic. On the other hand, the random individual-choice
+noted above is best described as internal noise. In [78], two other sources of internal noise are
+studied:
+ Asynchronous updating: At every simulation step,N particles are chosen at random (with
+repetitions) and updated sequentially.
+ Alignment with a single neighboring particle chosen randomly instead of the local average
+<u(t)>_i.
+See also [77,80,81]. Neither mechanism seems to have a significant effect on the dynamics.
+Placing more emphasis on the individual animal.Motivated by their laboratory experi-
+ments with marching locusts in a circular arena, Buhl et al. [58] suggested a modified version
+of previous models and introduced the biologically reasonable assumption that animals weight
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 10 / 25
+
+===== PAGE 11 =====
+their own direction separately to that of their conspecifics. Accordingly, the dynamics forui in
+Eq 2is taken to be
+uiðt þ 1Þ¼ aui þð 1 /C0 aÞGðhuðtÞii/C0 Þþ xiðtÞ; ð3Þ
+where 0/C20α/C201 describes the propensity of an individual to persist with its own velocity rather
+than adapt to the swarm (in simulations, they setα = 0.66), and
+huðtÞii/C0 ¼
+1
+niðtÞ/C0 1
+X
+j2AiðtÞ;j6¼iujðtÞ niðtÞ/C212
+0 niðtÞ¼ 1
+ð4Þ
+8
+<
+:
+is the local average direction around particlei, excludingi itself. See also [82] for a later 2D
+model.
+The role of the parameterα can be described from two points of view. The first is an aver-
+aged (and, therefore, deterministic) implementation of the intrinsic noise suggested by O'Loan
+and Evans [78]. Indeed, for large swarms (N>100), the average order parameter in the two
+models [58,78] is practically the same, while transition rates with Buhl are typically higher (S3
+Fig). On the other hand, the introduction of the parameterα is similar to using a smaller step
+size Δt and rescaling noise. Indeed, takingα =1 -Δt, yields an equation of the form ofEq 2with
+a rescaled parameterη.
+Removing the effect of particlei itself from the local averagehu(t)ii has a subtle effect on the
+dynamics, which is similar to adding a friction term with a coefficient that decreases with the
+number of neighbors. In particular, the dynamics of an independent particle in the absence of
+neighbors changes drastically. UnderEq 2, the dimensionless velocity of an independent particle
+satisfies _u
+i ¼/C0 ð ui /C7 1Þ=2 þ s _Wi, which is an Ornstein-Uhlenbeck process. The equilibrium
+distribution of the process has a mean of +1 or -1 and a varianceσ2. On the other hand, using
+hu(t)ii- instead ofhu(t)ii in Eq 2, a particle with no neighbors satisﬁes _ui ¼/C0 ui þ s _Wi.T h i si s
+again an Ornstein-Uhlenbeck process, with the same equilibrium variance, but zero mean. In
+other words, the velocityﬂuctuates around zero. In this respect, particles are not“self-propelled.”
+As explained above, the main purpose of the Buhl model was to interpret the experimental
+results obtained with locusts in a circular arena. Accordingly, it considers mostly systems with
+a relatively small number of particles (N/C20100) in an arena with a fixed length (L = const). In
+this setting, it is found that the rate of switching betweenA
++ and A- decays exponentially with
+the number of particlesN (compare S1B Figwith the relatively constant transition rate at large
+N depicted inFig 2D). In addition, switching rates depend significantly on the influence of con-
+specifics on the individual, which is specified by the parameterα (S1C Fig). All other parame-
+ters correspond to the experimental conditions, as described by Buhl et al. [58]. The
+dependency onα is non-monotonic and varies by three orders of magnitude. In the Czirók
+model [72], rates are at least 4–5 orders of magnitude smaller than in the Buhl model. In this
+respect, the Czirók model fails to describe the dynamics observed in the experiments.
+Individual pause-and-go movement
+Following their own experimental observations of locusts marching in a ring-shaped arena,
+Ariel et al. [59] suggested a modified model, based on the biological paradigm that animal deci-
+sions constitute a sequence of discrete events— when to stop, walk, or turn, rather than a con-
+tinuous process. The main observation underlying the model is that the locusts follow an
+intermittent motion pattern that is composed of interchanging walking and standing periods
+(see also [23,24]; details in the above section,“Locust swarming and coordinated movement”).
+Pause-and-go motion was previously observed by [83] in an arena housing a single locust. In
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 11 / 25
+
+===== PAGE 12 =====
+the Ariel et al. pause-and-go model [59], a particle is either standing (v = 0) or moving. Stand-
+ing particles "do not participate in the game," i.e., they are ignored by moving particles and are
+not taken into account in calculating local averages. Similarly, the local average velocity and the
+order parameter are defined in terms of only moving particles, for example,
+huðtÞi
+i;moving ¼
+1
+ni;movingðtÞ
+X
+j2Ai;movingðtÞujðtÞ ni;movingðtÞ/C211
+0 ni;movingðtÞ¼ 0;
+8
+><
+>:
+and
+/C30movingðtÞ¼ 1
+NmovingðtÞ
+X
+i is moving
+uiðtÞ:
+Ariel et al. [59] studied a pause-and-go model based on first-principle interactions as
+obtained from experiments. Here, we present a modified version of the model, which is easier
+to compare with the models discussed above:
+1. A walking particle moves with a fixed velocityvui for a duration that is exponentially dis-
+tributed with ratekwalk.
+2. A standing particle starts moving with ratekstand that depends on the number of walking
+neighbors. The functionkstand(ni,moving) is increasing inni,moving, i.e., local movement
+increases the probability of standing animals to start walking. For simplicity, we take
+k
+stand(ni,moving(t)) to be a step function that jumps from a low ratekstand,0 to a higher one
+kstand,1 if ni,moving(t) is above a thresholdnc,moving.
+When a particle starts walking (i.e., changes from a standing to a walking state) it has a
+probability α to align with the local order among moving individuals, plus the usual noise
+term, uiðt þ DtÞ¼ uiðtÞþ½ GðhuðtÞii;movingÞ/C0 uiðtÞ/C138Dt þ
+ﬃﬃﬃﬃﬃ
+Dt
+p
+xiðtÞ. However, the probabilityα
+depends on the local orderhu(t)ii,moving. For simplicity, we assume that \alpha(x) is a linear,
+increasing function. This dependence implies that animals have a higher tendency to align with
+ordered crowds than with disordered ones.
+S4 Figshows the global order parameter as a function of concentration for the pause-and-
+go model described above. The model suggests some qualitative predictions on the global prop-
+erties or coarse-grained dynamics of the swarm, as discussed in the section“Coarse-Graining
+and Macroscopic Observables” below.
+Three-zone models
+One of the first modeling approaches for collective motion, proposed in the early 1980s by Akoi
+[84] and independently by Reynolds [85], is the widely used three-zone, or Avoidance–Align-
+ment–Attraction (AAA), model. The model, popular with biologists for its intuitive assump-
+tions, but less so with theoreticians for its difficult analysis, assumes that the interaction between
+conspecifics can be divided into the zones defined by three characteristic lengths, as follows.
+ Individuals are repelled from conspecifics that are closer than a distancer1.
+ If no conspecifics are present up to distancer1, then an individual aligns its movement direc-
+tion with conspecifics that are closer than a distancer2>r1.
+ If no conspecifics are present up to distancer2, then an individual is attracted to conspecifics
+that are closer than a distanceΔ>r2.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 12 / 25
+
+===== PAGE 13 =====
+A 1D version of the model was studied in the context of locust swarming by Bode et al. [80].
+The algorithmic implementation of their model, which assumes asynchronous dynamics, is as
+follows. For every time stepΔt repeat N times:
+1. Choose an individuali at random.
+2. If i has neighbors (up to distanceΔ), choose a neighbork at random and updateui according
+to
+ui ¼
+GðukÞj xi /C0 xjj/C20 r2
+G sgnðxk /C0 xiÞ jxk /C0 xij
+D /C0 r2
+þ 1
+/C18/C19/C18/C19
+r2 < jxi /C0 xjj/C20 D
+:
+8
+><
+>:
+3. Advance: xi = xi+vuiΔt.
+Note that the model does not include avoidance interactions, which, as far as locusts in a cir-
+cular arena are concerned, do not make sense in 1D. Bode et al. [80] analyzed the dynamics
+under their model using coarse-grained variables, as described in the section“Coarse-Graining
+and Macroscopic Observables” below.
+Escape and pursuit
+Recently, a new paradigm that strives to give a comprehensive answer to several aspects of the
+locust phenomenon focused on cannibalism as a dominant feature of locust behavior and inter-
+actions ([33–35], and see 2.2 above). Building on this idea, Romanczuk et al. [63] suggested a
+modeling approach termed“escape and pursuit” (E&P). In this model, animals are continu-
+ously escaping from conspecifics behind them in order to avoid being eaten, while at the same
+time pursuing other animals in front, attempting to eat them.
+The E&P model is a 2D SPP model. As an extension of the approaches described in the sec-
+tion “Locusts as self-propelled particles,” above, neighbors of a focal particle are categorized
+into four types: either at the front or behind, and either approaching or receding. Here, conspe-
+cifics that are either approaching from the front or receding from the back are ignored. Each of
+the two remaining types is averaged and weighted separately.
+To be precise, the model assumes that individuals follow Langevin dynamics of the form
+_x ¼ vui
+_ui ¼/C0 gui þ FS
+i þ
+ﬃﬃﬃﬃﬃﬃ
+2D
+p _Wt;
+where γ and D are the friction and diffusion coefﬁcients, respectively, andFS
+i describes the
+effective social force on particlei, which is given by
+FS
+i ¼ f e
+i þ f
+p
+i
+f k
+i ¼ wk
+Nk
+X
+jDujiHðR /C0 rjiÞHðskui^rjiÞHðskuji^rjiÞ:
+Here, k = e,p is the effective escape (e) and pursuit (p) response. The heaviside function is
+denoted byH(/C1), andDuji ¼ð uji^rjiÞrji is the relative dimensionless velocity of particlej with
+respect toi, whereuji = uj-ui, rji = rj-ri, and^rji ¼ rji=jrjij. In addition,χk are interaction
+strengths, andNk the number of particlesi is pursuing or escaping. See [63] for details.
+Unfortunately, a 1D version of the E&P model is problematic because, depending only on
+the initial condition, animals split into CW and CCW moving groups that do not interact. This
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 13 / 25
+
+===== PAGE 14 =====
+observation is not consistent with our own experimental observations [59] indicating that one
+of the principle sources of synchronization in marching nymphs is that of animals turning to
+join a crowd moving in the opposite direction.
+While offering a very attractive mechanism, the E&P model is somewhat inconsistent with
+various biological observations. As noted above, individuals in a marching band will very often
+stop for periods of various durations (see also [23,24]); when encountering a standing hopper,
+the marching ones will ignore it (Fig 1D). Furthermore, as noted in the section“Locust swarm-
+ing and coordinated movement” above, locust marching behavior is mostly very different from
+escape or aversive reactions [27], which usually involve escape jumps [26,28]. Undisturbed
+marching desert locusts are very rarely seen hopping or jumping [29]. Also inconsistent with
+E&P is the behavior of hoppers at the front and side edges (e.g., the tendency of leading locusts
+to slow down or even turn around to join the bulk of the swarm [23,24,27,30]; detailed in the
+section “Locust swarming and coordinated movement”). According to the E&P model, locusts
+will chase receding conspecifics in front of them, escape conspecifics approaching from behind,
+and ignore others (approaching from the front or receding at the back). Therefore, under the
+rules of E&P, a nymph moving beyond the front of the swarm will not turn around but, rather,
+keep escaping the approaching swarm at its back.
+Buhl et al. [86] reported their findings in a study of the Australian plague locust specifically
+aimed at analysing the spatial distribution of locusts within naturally occurring locust bands
+and inferring on the interactions within the band. These authors reported a tendency for
+locusts to interact with neighbours all around them, rather than a bias toward pursuing indi-
+viduals ahead or escaping from the ones following behind. The E&P model may account for
+the collective behavior of locust nymphs under certain conditions and circumstances, in accor-
+dance with the context- and time-dependent role of cannibalism suggested in the section
+“Locust swarming and coordinated movement.”
+Interim summary
+Most of the models presented above share a common assumption regarding the animal’s calcu-
+lation of a local average (or weighted average) that serves as the main influence of conspecifics
+on the individual. From a biological perspective, this assumption is not realistic, as insects and
+other animals are often more sensitive to extremal statistics, such as abrupt or unexpected
+changes (in the behavior of others or in the environment). In this sense, the pause-and-go
+model, in which the probability of an animal to start marching depends on the visual flux
+around it, more precisely on the number of walking neighbors exceeding a threshold, may be
+more realistic.
+The next section further compares the different models in terms of the macroscopic dynam-
+ics of the entire swarm.
+Coarse-Graining and Macroscopic Observables
+In order to quantify and analyze metastability in the dynamics of the order parameter, Yates
+et al. [75] suggested fitting the dynamics to a diffusion equation of the form
+_/C30t ¼ Fð/C30Þþ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2Dð/C30Þ
+p _Wt; ð5Þ
+where, F(ϕ) andD(ϕ) are effective drift and diffusion functions. See also [59,70,71,80]. Similar
+derivations can be obtained byﬁtting to an effective Fokker-Plank equation for the time-
+dependent probability density forϕ, f(ϕ,t), which is also the Kolmogorov forward equation for
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 14 / 25
+
+===== PAGE 15 =====
+Eq 5,
+@f
+@t ¼ @2ðDð/C30Þf Þ
+@/C302 /C0 @ðFð/C30Þf Þ
+@/C30 :
+The effective drift and diffusion functions can be approximated from the dynamics as
+Fð/C30Þ¼ 1
+Dt h/C30tþDt /C0 /C30ti/C30
+Dð/C30Þ¼ 1
+2Dt Var/C30 ½ð/C30tþDt /C0 /C30tÞ
+2
+/C138¼ 1
+2Dt ½h/C302
+tþDti/C30 /C0h /C30tþDti
+2
+/C30 /C138;
+ð6Þ
+where brackets denote averaging over all instances in which the order parameter is within
+some range aroundϕ and Δt is a small time segment. The choice ofΔt is critical and is closely
+related to the different time scales that appear in the dynamics. In [70,75,80], the second
+moment ofϕt+Δt-ϕt is used instead of the variance. In the limit ofΔt!0, hϕt+Δt-ϕtiϕ is of order
+Δt, and the two expressions are the same. However, as discussed below, this is not necessarily
+the biologically relevant limit.
+The main advantage of approximating the dynamics ofϕt as a diffusion process lies in pro-
+viding a low-dimensional, coarse-grained description, which may assist us in gaining insight
+into the dynamics of the entire swarm. Accordingly, the evolution ofϕ
+t occurs on a time scale
+comparable to experiments— from several minutes to hours. On this relatively long time scale,
+locusts can circle the arena hundreds of times, which means that during the experimental time,
+the coarse-grained dynamics includes both spatial averaging over all animals and temporal
+averaging. This suggests thatΔt should be on the scale ofL / v~1min. A detailed discussion on
+the choice ofΔt, including a thorough comparison betweenEq 6and the methods presented in
+[70,75,80], is included in the Supporting Information.
+The coarse-grained analysis offers an accessible interpretation of the macroscopic dynamics
+of the swarm. The effective drift function describes the average rate of change in the order
+parameter. A positive value ofF(ϕ) implies that when the order parameter is around the value
+ϕ, then it will (on average) increase. Similarly, negativeF(ϕ) implies that the order will
+decrease. Thus, zeros ofF indicate fixed points for the average. Fixed points can be categorized
+as either stable or unstable, depending on whether by changingϕ by a small value, the order
+parameter will tend to go back to the fixed point or not. In other words, close to a stable point
+ϕ
+/C3 ,i fϕ increases (ϕ>ϕ/C3 ), F(ϕ) is negative, which means that on average,ϕ will decrease back to
+ϕ/C3 . On the other hand, ifϕ decreases (ϕ<ϕ/C3 ), F(ϕ) is positive andϕ will increase. Therefore,
+the metastable states of the system are characterized by stable zeros ofF(ϕ). Similarly, the effec-
+tive diffusion functionD(ϕ) roughly describes the amount of noise in the system, where large
+D(ϕ) implies high noise.
+Fig 3compares F(ϕ) andD(ϕ) as obtained in simulations of the Czirók, Buhl, and pause-
+and-go models at different particle densities. At low concentrations, the only stable state for all
+three models is disordered,ϕ>ϕ = 0. However, at higher concentrations, the pause-and-go
+model behaves qualitatively differently to the other two. In both the Czirók and Buhl models,
+the system has two stable fixed points close toϕ = ±1, whileϕ = 0 is unstable. In contrast, with
+pause-and-go, all three states are stable, indicating that the disordered state is also a metastable
+state of the system. However, the residence time in the disordered state is significantly lower.
+All models agree that noise, as described by the effective diffusion functionD(ϕ), has a local
+maximum atϕ = 0. However, the pause-and-go model also shows large noise for |ϕ|>1. Com-
+pare also with experimental results adapted from [59], depicted inS5 Fig. Note the difference
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 15 / 25
+
+===== PAGE 16 =====
+Fig 3. Coarse grained dynamics.Left: the effective driftF(ϕ). Right: The effective diffusionD(ϕ). Top: for Czirók model. Middle: Buhl model. Bottom: Pause-
+and-go model. In both the Czirók and Buhl models, depending on concentration, eitherϕ =0o rϕ =~ ±1 are stable, but not both. However, in the pause-and-
+go model, all three states are stable at sufficiently high concentrations.
+doi:10.1371/journal.pcbi.1004522.g003
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 16 / 25
+
+===== PAGE 17 =====
+in the effective diffusion compared to the results of [75] due to a different choice ofΔt. See Sup-
+porting Information for details.
+Some Further Modeling Challenges: Continuous Models
+As discussed above, continuous models are particularly useful in describing global properties
+of large, many-particle systems. To the best of our knowledge, only three such models have
+been developed, none of which relate to the phenomenon of marching locusts. The first model,
+suggested by Edelstein-Keshet et al. [87], concerns flying locust swarms. The other two models,
+Feistel and Feistel [88] and Topaz et al. [89], focus on the transformation from the solitary to
+the gregarious behavioral phase.
+Modeling adult locust flying swarms
+The model of Edelstein-Keshet et al. [87] studies the swarming behavior of locusts, focusing on
+the long-distance migratory swarms of flying adults. The main objective of this work was to
+investigate the issue of maintaining swarm cohesion; specifically, to find traveling wave solu-
+tions, which are particular solutions that have a fixed shape and move at constant speed. The
+model is given in terms of partial differential equations (PDEs) describing the time evolution
+of the continuous density of flying locusts,f(x,t), and stationary locusts (those on the ground),
+s(x,t). In this respect, the swarm exhibits intermittent motion reminiscent of the pause-and-go
+model. However, the latter includes a mechanism for turning and choice of direction that is
+missing here. In addition, there are no periodic boundary conditions. For simplicity, the swarm
+is considered as 1D. The dynamics is given by
+@s
+@t ¼/C0 Rðs; f Þs þ Gðs; f Þf
+@f
+@t ¼ Dfxx /C0 Ufx þ Rðs; f Þs /C0 Gðs; f Þf ;
+where, R(s,t) is the take-off rate,G(s,f) the landing rate,D describes random motion (whenﬂy-
+ing), andU describes theﬂying velocity (wind speed and self-propulsion). More elaborate
+models that take into account additional effects, such as dependence ofD and U on the local
+densities, slow motion on the ground, and density-dependent turning, are also considered. The
+main conclusion of the paper is that traveling waves, representing cohesively moving swarms,
+cannot exist unless non-local interactions, i.e., global interaction between animals within the
+entire swarm, are allowed. Even then,“traveling wave solutions seem to bear some unrealistic
+properties.” See [87] for details.
+Modeling locust phase transformation
+Feistel and Feistel [88] approach the question of locust phase polyphenism and the concentra-
+tion-dependent transition from the point of view of statistical physics. Assuming a homoge-
+nous, well-mixed population, they consider a biologically realistic mean-field model that
+describes the time evolution of four parameters: (i) External mechanical stress that increases
+production of (ii) a stress hormone. The latter affects individual behavior by reducing the (iii)
+average local concentration, increasing (iv) the rate of collective interactions. Increased collec-
+tive interaction increases the external mechanical stress, thus creating a positive feedback loop.
+It is shown that, depending on model parameters, the dynamics undergoes a bifurcation, and
+the population can be classified into three phases: solitary, gregarious, and unstable. Transi-
+tions are analogous to either first- or second- order phase transitions in statistical physical,
+depending on parameters, such as the stress hormone production rate.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 17 / 25
+
+===== PAGE 18 =====
+The model of Topaz et al. [89] studies the phenomenon of locust outbreak, which is charac-
+terized by rapid large-scale transitions between scattered populations of solitary animals to
+densely-packed gregarious swarms (see also [90]). The Topaz model is given in terms of inte-
+gro-differential equations that describe the time evolution of a two-dimensional density of soli-
+tary animals,s(x,t), moving at velocityv
+s(x,t), and the density of gregarious animals,g(x,t),
+moving at velocityvg(x,t). Densities satisfy the continuity equation (conservation of mass)
+@s
+@t þr/C1ðvssÞ¼/C0 ks!g ðs þ gÞs þ kg!sðs þ gÞg
+@g
+@t þr/C1ðvg gÞ¼ ks!g ðs þ gÞs /C0 kg!sðs þ gÞg;
+where ks!g(ρ) andkg!s(ρ) are the rate of transition from solitary to gregarious and vice versa,
+at a total local concentrationρ = s+g. It is assumed that gregarious animals are attracted to con-
+speciﬁcs while solitary animals are repelled. The strength of the interaction decreases exponen-
+tially with distance,
+vk ¼ /C0rð Qk /C3ð s þ tÞÞ
+Qkðx /C0 x0Þ ¼ Rkþe/C0j x/C0 x0j=rkþ /C0 Rk/C0 e/C0j x/C0 x0j=rk/C0 ;
+where /C3 denotes convolution andRk±,rk± are parameters,k = g or s. Numerical solutions as
+well as stability analysis reveal conditions for outbreaks.
+It should be noted that our current understanding of questions related to solitary locust
+ecology and population dynamics, such as competition over resources, sexual selection and
+mate finding, habitat range, displacement, and more, is very limited, as most research focus has
+naturally been placed on the gregarious phase.
+The work of Topaz et al. [89] strongly suggests the need to integrate the complex effects of
+density, as well as the dynamics of phase transformation, in the models of marching behavior
+(“Modeling Marching Locust Nymphs,” above). This model stands out in making an attempt
+to bridge different scales, from the large scale dynamics accompanying the emergence of
+swarms of gregarious locusts from scattered solitary populations, to the more local scale of the
+mechanisms inducing coordinated motion of the swarms.
+The Evolution of the Locust Phenomenon
+Although it is beyond the scope of the present review, it should be added here that, to the best of
+our knowledge, there have been surprisingly few attempts at explaining the very puzzling question
+of the evolution of phase transformation and swarming within the group comprising grasshop-
+pers and locusts, by way of mathematical or theoretical modeling. As mentioned earlier, our
+understanding of the evolution of locust phase polyphenism is hindered by the complexity of the
+phenomenon: (i) Locusts do not necessarily form a monophyletic group (a group containing an
+ancestor and all of its direct descendants), but rather belong to at least six separate subfamilies [8].
+Hence, locusts have independently evolved more than once, or several times. (ii) Locust phase
+polyphenism is a composite character, consisting of numerous density-dependent phenotypically
+plastic traits [6,7,8], which, most importantly, may have followed different evolutionary trajecto-
+ries. (iii) Different locust species (and, to an extent, other grasshoppers as well) differ in their abil-
+ity to express the phenomenon in its entirety— i.e., in the magnitude of their response to changes
+in population density [9,10]. Therefore, a single unifying explanation or theory is unlikely.
+Nonetheless, several attempts in this direction have been reported, typically extending the per-
+spective beyond locusts per se, for example, by looking at polyphenism and phenotypic plasticity
+in general (in insects and beyond); i.e., explaining the functional relationship between genetic,
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 18 / 25
+
+===== PAGE 19 =====
+morphological, physiological, and environmental variables, and how changes may accumulate
+and stabilize over generations. Beldade et al. [91] include locusts in describing mechanisms
+inducing adaptive developmental plasticity, from the genetic and molecular to the environmen-
+tal. Others have used a more mathematical framework to explain the evolution of dispersal and
+migration in nature. In a recent example, Gueijman et al. [92] demonstrate that stable variations
+in the tendency to disperse (such as the difference between gregarious and solitary locusts) can
+evolve by introducing a model of Fitness-Associated Dispersal, or FAD (see [92] and references
+therein for a discussion of different models explaining the evolution of plasticity in dispersal). In
+another example, Berdahl et al. [93] explore the interactions of dispersal and local adaptation as
+major drivers of population structure, finding that environmental conditions may lead to either a
+polymorphic population or a monomorphic population of highly dispersing individuals. Moving
+to the evolution of collective migration, Guttal and Couzin [94] offer an individual-based, spa-
+tially explicit model demonstrating that collective migratory strategies evolve under a wide range
+of ecological scenarios, and introducing the importance of social interactions.
+Two theoretical studies, by Reynolds et al. [95] and Guttal et al. [96], attempt to provide a
+plausible model for the evolution of polyphenism in locusts. The first focuses on the interac-
+tions between locusts and their predators. Loosely speaking, assume that locusts live within iso-
+lated food patches of variable size. Also assume that a patch with a sufficiently high
+concentration of locusts will attract a predator. The network of patches is modeled as a graph
+in which different patches are nodes. Nodes connected by an edge are those between which the
+predator can traverse while still finding locusts in sufficiently high abundance. The question
+thus becomes: is it better for locusts to disperse between patches or to aggregate in a small area?
+The answer, according to Reynolds et al. [95], depends on locust density. If the number of
+locusts is low, it is better for them to disperse between patches (a solitary behavior), as most
+feeding locations will then have a low concentration, making them unfavorable to predators.
+As the number of locusts increases, more and more locations will become favorable to preda-
+tors. Furthermore, percolation theory predicts that at sufficiently high concentrations, a giant
+(or infinite) cluster appears, in which predators will have an infinite connected network of
+favorable patches. At this stage, it is advantageous for the locusts to aggregate into a smaller
+number of highly populated patches (a gregarious behavior), in order to break the connectivity
+of the giant cluster. We find that the main advantage of this model lies in its simplicity. How-
+ever, it ignores the collective motion phenomenon, which, as far as locusts are concerned, is a
+dominant feature of the gregarious behavior.
+The second approach, by Guttal et al. [96], is based on the suggested instrumental role of
+cannibalism in locust marching behavior, reviewed in the section“Escape and pursuit.” Using
+an individual-based evolutionary model, they suggest that cannibalism could have been a key
+factor in the evolution of behavioral-phase polyphenism in locusts. Accordingly, the authors
+suggest an E&P model in which interactions are updated using an evolutionary algorithm. The
+main result is that, at low locust concentrations, the insects can minimize the risk associated
+with cannibalistic interactions by keeping their distance from conspecifics. However, at higher
+concentrations, this strategy is no longer favorable, and it is preferable to stay in an ordered,
+cohesively moving swarm. These results can be interpreted as a combination of the order-dis-
+order phase transition in the SNM of Viscek et al. [74], and the solitary–gregarious phase tran-
+sition described by Feistel and Feistel [88].
+Concluding Remarks
+Modeling and understanding locust swarming has a dual role, or presents two approaches. The
+first views locusts as a quintessential example of animal collective motion. As such, due to
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 19 / 25
+
+===== PAGE 20 =====
+major advances in experimental and animal tracking technologies, it allows the testing and
+evaluation of theories regarding the onset and maintenance of order and synchronization in
+moving swarms. Indeed, most of the models presented above take this approach, as they aim at
+abstraction rather than analysis and prediction of natural swarm dynamics. These models cor-
+respond to the general literature on collective motion, at the risk of failing to capture features
+unique to the locust swarms.
+Locusts have much to offer with respect to our general understanding of coordinated move-
+ment in nature. Similarly, we can take advantage of successful modeling efforts in other organ-
+isms in order to explain the locust phenomena. Indeed, one of the major remaining challenges
+in the growing field of collective animal movement lies in relating the similarities and differ-
+ences between the mechanistic and behavioral modes of motion of different organisms to the
+observed large-scale coordinated behavior they exhibit.
+The second approach views locust swarming as a scientific problem of its own merit. From
+this more biological perspective, the main goal will be to use experiments in order to identify
+the principal interactions between animals and apply them in agent-based models. Our own
+work in [59] offers an initial step in deriving a simplified model based on first principle dynam-
+ics. In particular, all parameters used are fitted from experiments. The successful use of model-
+ing efforts in describing and, moreover, in predicting the dynamics of real-life locust swarms
+crucially depends on taking into account many aspects and details of locust movement known
+to have a pivotal impact on their behavior: for example, the effect of temperature, the choice of
+direction, daily behavioral patterns, differences between marching and flight, etc.
+The locust phenomenon comprises different spatial and temporal scales, ranging from the
+individual (centimeters and minutes) all the way to vast, natural swarms consisting of mil-
+lions of insects (kilometers and hours). Currently, there is a gap between the individual-
+based approaches presented early in this review (the section“Modeling Marching Locust
+Nymphs”) and the later-discussed continuous models (the two last sections). A key direction
+for future work will be to employ realistic and biologically accurate models to drive coarse-
+grained continuous models in order to understand the dynamics of entire swarms. The dis-
+cussion on time scales in the related section above (“Coarse-Graining and Macroscopic
+Observables”) is an example of the intricate manner in which the local and global dynamics
+are connected. From the point of view of spatial scales, additional experimental and theoreti-
+cal work is needed in order to understand the effects of the environment, e.g., climate, topog-
+raphy, etc. The major effects of anthropogenic factors, before and mainly during outbreaks
+(e.g., the efficiency of pesticides in containing outbreaks), should also be considered. We
+should also attempt to include global population dynamics in addition to local ones— can we
+treat a species’entire global population as one?. Some hints for future work may come from
+genetic analyses of divergence among locust populations (e.g., [97–99]). However, this direc-
+tion still awaits interpretation by way of solid theoretical models.
+Another significant gap in our understanding is related to the role of learning and memory-
+related mechanisms in the different aspects of locust behavior. Geva et al. [20] have made an
+important step in this direction by introducing a role for long-term memory in phase transfor-
+mation. This should be extended to include a role for learning and memory in locust swarming
+and coordinated marching.
+With the increasing accumulation of biological knowledge, it is becoming clear that only a
+combined-interdisciplinary, biological-theoretical effort can advance our understanding of the
+locust phenomenon in general and of locust collective movement in particular. There is great
+importance in performing further controlled empirical experiments to test the hypotheses gen-
+erated by the various models and the predictions resulting from them.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 20 / 25
+
+===== PAGE 21 =====
+Supporting Information
+S1 Text. The time scale of the effective diffusion.
+(DOCX)
+S1 Fig.(A) Waiting time between switching orientations in the individual-choice model. The
+red curve shows the maximum likelihood fit to an exponential distribution, implying that wait-
+ing times are uncorrelated. (B) Transition rates for small swarms as a function ofN. (C) Transi-
+tion rates as a function ofα with N = 10.
+(TIF)
+S2 Fig. Mean transition rates as a function ofρ for different system sizesN. Left: Czirók
+model. Right: The individual choice model.Blue: N = 20, Black:N = 50, Magenta:N = 100,
+Green: N = 200, Orange:N = 1000, Red:N = 2000.
+(TIF)
+S3 Fig. Comparison of random and deterministic weighing of individual preferences.In
+the model of O`Loan and Evans [78] (blue lines), an animal makes a random choice whether
+to persist with its own speed or align with conspecifics. In the model of Buhl et al. [58] (red
+lines), individuals weigh their own speed separately with all others. Taking all other interac-
+tions and parameters to be the same, the two models result in practically the same average
+order parameter (left plot). Transition rates (right plot) with Buhl’s model are typically higher.
+N = 1000; all other parameters are the same as inFig 2.
+(TIF)
+S4 Fig. The average order parameter as a function of concentration for the stop-and-go
+model. (all) The order parameter is calculated using all particlesϕ = h|(1 /N)S
+iui|i. (moving)
+The order parameter is calculated using only moving particlesϕ = h(1 /Nmoving)Si is movinguii.
+(TIF)
+S5 Fig. The effective drift and diffusion as obtained in experiments.Adapted from [59]. The
+number of zeros ofF(ϕ), corresponding to the metastable states of the system, is difficult to
+evaluate due to large statistical errors.
+(TIF)
+S6 Fig. The effective drift (left) and diffusion (right) functions for the Czirók model using
+different time stepΔt = 1 (black), 0.2 (red), 0.04 (blue), and 0.008 (magenta).Solid line:
+using Eq 6. Dotted line: replacing the variance with the second moment.
+(TIF)
+S7 Fig. Comparing the effective drift and diffusion functions using a single long (solid line,
+T =1 0
+5) and many (105) short (dotted line,T = Δt) sample trajectories.Red: Δt = 0.008,
+blue: Δt = 1. With very smallΔt, the two sample methods yield practically the same effective
+diffusion but slightly different drift. However, with largerΔt, both the drift and diffusion func-
+tions are different.
+(TIF)
+Acknowledgments
+We are very grateful to Ofer Feinerman for his valuable input on an early version of the
+manuscript.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 21 / 25
+
+===== PAGE 22 =====
+References
+1. Bullen FT (1966) Locusts and grasshoppers as pests of crops and pasture-a preliminary economic
+approach. Journal of Applied Ecology, 3: 147–168.
+2. Lomer CJ, Bateman RP, Johnson DL. Langewald J, Thomas M (2001) Biological control of locusts and
+grasshoppers. Annual review of entomology, 46(1): 667–702.
+3. Uvarov B (1928) Locusts and grasshoppers. A handbook for their study and control. Imperial Bureau of
+Entomology, London.
+4. Foster ZJ (2014). The 1915 Locust Attack in Syria and Palestine and its Role in the Famine During the
+First World War. Middle Eastern Studies, 51:3, 370–394.
+5. The Food and Agriculture Organization of the United Nations (2004) Hunger in their wake: inside the
+battle against the desert locust.http://www.fao.org/Newsroom/en/focus/2004/51040/index.html.
+Accessed May 2015.
+6. Uvarov B (1966) Grasshoppers and Locusts, Vol. 1. Cambridge University Press, Cambridge, UK.
+7. Verlinden H, Badisco L, Marchal E, Van Wielendaele P, Vanden Broeck J (2009) Endocrinology of
+reproduction and phase transition in locusts. General and comparative endocrinology, 162(1): 79–92.
+doi: 10.1016/j.ygcen.2008.11.016 PMID: 19084019
+8. Pener M, Simpson S (2009) Advances in Insect Physiology: Locust Phase Polyphenism: An Update
+(Vol. 36). Academic Press.
+9. Islam MS, Roessingh P, Simpson SJ, McCaffery AR, (1994a) Effects of population density experienced
+by parents during mating and oviposition on the phase of hatchling desert locusts,Schistocerca gre-
+garia. Proceedings of the Royal Society of London B, Bological Sciences 257: 93–98.
+10. Islam MS, Roessingh P, Simpson SJ, McCaffery AR, (1994b) Parental effects on the behaviour and col-
+ouration of nymphs of the desert locust,Schistocerca gregaria. Journal of Insect Physiology 40: 173–
+181
+11. Bouaïchi A, Roessingh P, Simpson SJ (1995) An analysis of the behavioural effects of crowding and
+re-isolation on solitary-reared adult desert locusts (Schistocerca gregaria) and their offspring. Physio-
+logical Entomology, 20:199–208
+12. Elliot SL, Blanford S, Horton CM, Thomas MB (2003) Fever and phenotype: transgenerational effect of
+disease on desert locust phase state. Ecology Letters, 6(9): 830–836.
+13. Simpson SJ, Miller GA (2007) Maternal effects on phase characteristics in the desert locust,Schisto-
+cerca gregaria: A review of current understanding. Journal of Insect Physiology, 53(9): 869–876.
+PMID: 17624367
+14. Song H (2005) Phylogenetic perspectives on the evolution of locust phase polyphenism. Journal of
+orthoptera research. 14: 235–245.
+15. Song H (2010) Density-dependent phase polyphenism in nonmodel Locusts: a minireview. Psyche: A
+Journal of Entomology, 2011: Article ID 741769, 16 pages, doi:10.1155/2011/741769
+16. Ellis PE (1959) Learning and social aggregation in locust hoppers. Animal Behaviour, 7(1), 91–106.
+17. Ellis PE (1963) Changes in the social aggregation of locust hoppers with changes in rearing conditions.
+Animal Behaviour, 11(1): 152–160.
+18. Roessingh P, Simpson SJ, James S (1993) Analysis of phase-related changes in behaviour of desert
+locust nymphs. Proceedings of the Royal Society of London. Series B: Biological Sciences, 252(1333):
+43–49.
+19. Simpson SJ, McCaffery AR, Hägele BF (1999) A behavioural analysis of phase change in the desert
+locust. Biological Reviews 74: 461–480
+20. Geva N, Guershon M, Orlova M, Ayali A (2010) Memoirs of a locust: Density-dependent behavioral
+change as a model for learning and memory. Neurobiology of Learning and Memory 93:175–182 doi:
+10.1016/j.nlm.2009.09.008 PMID: 19766727
+21. Ashall C, Ellis PE (1953) Report of field work carried out by Desert Locust Survey. Research Project
+10.
+22. Ashall C, Ellis PE (1962) Studies on numbers and mortality in field populations of the desert locust
+(Schistocerca gregaria Forskål). Anti-Locust Bulletin 38: 1–59
+23. Uvarov B. (1977) Grasshoppers and locusts. A handbook of general acridology. Volume 2. Behaviour,
+ecology, biogeography, population dynamics. Centre for Overseas Pest Research.
+24. Ellis PE and Ashall C (1957) Field studies on diurnal behaviour, movement and aggregation in the Des-
+ert Locust (Schistocerca gregariaForskål) Anti-Locust Bulletin, 25: 1–94.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 22 / 25
+
+===== PAGE 23 =====
+25. Hunter DM, McCulloch L, Spurgin PA (2008). Aerial detection of nymphal bands of the Australian
+plague locust (Chortoicetes terminifera(Walker)(Orthoptera: Acrididae). Crop Protection, 27(1):118–
+123.
+26. Pearson KG, O’Shea M (1984) Escape behavior in the locust. The neural basis of startle behavior. Ple-
+num, New York, 163–177.
+27. Hassenstein B, Hustert R (1999) Hiding responses of locusts to approaching objects. Journal of Experi-
+mental Biology 202(12): 1701–1710.
+28. Santer RD, Yamawaki Y, Rind FC, Simmons PJ (2008) Preparing for escape: an examination of the
+role of the DCMD neuron in locust escape jumps. Journal of Comparative Physiology A, 194(1): 69–
+77.
+29. Maeno KO, Piou C, Ely SO, Babah MAO, Pélissié B, Jaavar MEH, et al. (2013) Plant Size-dependent
+Escaping Behavior of Gregarious Nymphs of the Desert Locust,Schistocerca gregaria. Journal Insect
+Behavior 26: 1–11.
+30. Buhl J, Sword GA, Clissold FJ, Simpson SJ (2011) Group structure in locust migratory bands. Behav-
+ioral Ecology and Sociobiology 65(2): 265–273
+31. Hemelrijk CK, Kunz H (2005) Density distribution and size sorting in fish schools: an individual-based
+model. Behavioral Ecology. 16: 178–187.
+32. Hemelrijk CK, Hildenbrandt H (2008) Self-organized shape and frontal density of fish schools. Ethology.
+114: 245–254
+33. Bazazi S, Buhl J, Hale JJ, Anstey ML, Sword GA, Simpson SJ, Couzin ID (2008) Collective motion and
+cannibalism in locust migratory bands. Current Biology 18(10): 735–739 doi:10.1016/j.cub.2008.04.
+035 PMID: 18472424
+34. Bazazi S, Romanczuk P, Thomas S, Schimansky-Geier L, Hale JJ, Miller GA, Sword GA, Simpson SJ,
+Couzin ID (2011) Nutritional state and collective motion: from individuals to mass migration. Proceed-
+ings of the Royal Society of London B: Biological Sciences 278(1704): 356–363
+35. Hansen MJ, Buhl J, Bazazi S, Simpson SJ, Sword GA (2011) Cannibalism in the lifeboat— collective
+movement in Australian plague locusts. Behavioral Ecology and Socioboilogy 65(9): 1715–1720
+36. Bhatia DR and Singh C (1959) Cannibalism in locusts. Indian Journal of Entomology 21: 210–213
+37. Lockwood JA (1989) Ontogeny of cannibalism in rangeland grasshoppers (Orthoptera: Acrididae).
+Journal of the Kansas Entomological Society 62: 534–541.
+38. Richardson ML, Mitchell RF, Reagel PF, Hanks LM (2010) Causes and consequences of cannibalism
+in noncarnivorous insects. Annual review of entomology, 55: 39–53. doi:10.1146/annurev-ento-
+112408-085314 PMID: 19961322
+39. Nikolsky VV (1925) The asiatic locust locusta migratoria L. A Monograph, Trudy Otdela Prikladnoi Ento-
+mogii 12(2): 1–332 (in Russian).
+40. Haroon Khan M (1945) Some field observations on the present cycle of desert locust (Schistocerca gre-
+garia Forsk.) in Sind. Indian Journal of Agricultural Sciences 15(5): 270–274.
+41. Simpson SJ, Raubenheimer D (2000) The hungry locust. Advances in the study of behavior, 29: 1–44.
+42. Gunn DL, Perry FC, Seymour WG, Telford JM, E. N. Wright EN (1948) Behaviour of the Desert Locust
+(Schistocerca gregaria Forskål) in Kenya in relation to aircraft spraying. Anti-Locust Bulletin 3: 1–20
+43. Rainey RC (1976) Insect flight. Blackwell Scientific Publications.
+44. Rainey RC (1989) Migration and meteorology. Clarendon, Oxford
+45. Baker PS, Gewecke M, Cooter RJ (1984) Flight orientation of swarming Locusta migratoria. Physiologi-
+cal entomology, 9(3): 247–252.
+46. Camhi J, Sumbre G, Wendler G (1995) Wing-beat coupling between flying locust pairs: preferred
+phase and lift enhancement. The Journal of experimental biology, 198(4): 1051–1063.
+47. Uvarov B, Zolotarevsky BN (1929). Phases of locusts and their interrelations. Bulletin of Entomological
+Research, 20(03): 261–265.
+48. Kennedy JS (1939) The behaviour of the Desert Locust (Schistocerca gregaria(Forsk.))(Orthopt.) in an
+outbreak centre. Transactions of the Royal Entomological Society of London, 89(10): 385–542.
+49. Kennedy JS (1951) The migration of the Desert Locust (Schistocerca gregariaForsk.). I. The behaviour
+of swarms. II. A theory of long-range migrations. Philosophical Transactions of the Royal Society of
+London. Series B, Biological Sciences, 235: 163–290. PMID:24541037
+50. Stower WJ (1963) Photographic techniques for the analysis of locust“hopper”behaviour. Animal
+Behaviour, 11(1): 198–205.
+51. Ellis PE (1951). The Marching Behaviour of Hoppers of the African Migratory Locust (Locusta migra-
+toria migratorioidesR. & F.) in the Laboratory. Anti-Locust Bull., (7: ): 1–46.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 23 / 25
+
+===== PAGE 24 =====
+52. Ellis PE (1953) Social aggregation and gregarious behaviour in hoppers of Locusta migratoria migrator-
+ioides (R. & F.) Behaviour, 5: 225–260.
+53. Gillett SD (1973) Social determinants of aggregation behaviour in adults of the desert locust. Animal
+Behaviour, 21(3): 599–606.
+54. Ayali A and Yerushalmi Y (2010) Locust research in the age of model organisms. Journal of Insect
+Physiology 56: 831–833. doi:10.1016/j.jinsphys.2010.05.010 PMID: 20471387
+55. Fuchs E, Kutsch W, Ayali A (2003) Neural correlates to flight-related density-dependent phase poly-
+morphism in locusts. Journal of Neurobiology 57: 152–162. PMID:14556281
+56. Matheson T, Rogers SM, Krapp HG (2004) Plasticity in the visual system is correlated with a change in
+lifestyle of solitarious and gregarious locusts. Journal of neurophysiology, 91(1): 1–12. PMID:
+13679397
+57. Rogers SM (2014) The Neurobiology of a Transformation from Asocial to Social Life During Swarm For-
+mation in Desert Locusts. In New Frontiers in Social Neuroscience (pp. 11–31). Springer International
+Publishing.
+58. Buhl J, Sumpter DJT, Couzin ID, Hale JJ, Despland E, Miller ER, Simpson SJ (2006) From disorder to
+order in marching locusts. Science 312(5778): 1402–1406 PMID:16741126
+59. Ariel G, Ophir Y, Levi S, Ben-Jacob E and Ayali A (2014) Individuals’intermittent motion is instrumental
+to the formation and maintenance of swarms of marching locust nymphs. PLoS ONE 9(7): e101636
+doi: 10.1371/journal.pone.0101636 PMID: 24988464
+60. Edelstein-Keshet L (2001). Mathematical models of swarming and social aggregation. In Proceedings
+of the 2001 International Symposium on Nonlinear Theory and Its Applications, Miyagi, Japan (pp. 1–
+7).
+61. Eftimie R (2012). Hyperbolic and kinetic models for self-organized biological aggregations and move-
+ment: a brief review. J. Math. Biol. 65 (1) 35–75. doi:10.1007/s00285-011-0452-2 PMID: 21720963
+62. Giardina I (2008). Collective behavior in animal groups: theoretical models and empirical studies.
+HFSP Journal 2 (4) 205–219. doi:10.2976/1.2961038 PMID: 19404431
+63. Romanczuk P., Bar M, Ebeling W., Linder B., Schimansky-Geier L. (2012). Active Brownian particles
+from individuals to collective stochastic dynamics. European Physical Journal-Special Topics I 202 (1):
+1–162.
+64. Toner J, Tu Y and Ramaswamy S, Hydrodynamics and phases of flocks. Annals of Physics 318 (2005)
+170–244.
+65. Vicsek T, Zafeiris A (2012) Collective motion. Physics Rep, 517(3):71–140.
+66. Ben-Jacob E, Cohen I, Levine H (2000). Cooperative self-organization of microorganisms. Advances in
+Physics, 49(4): 395–554.
+67. Méhes E and Vicsek T (2014) Collective motion of cells: from experiments to models. Integrative Biol-
+ogy 6: 831–854. doi:10.1039/c4ib00115j PMID: 25056221
+68. Toner J and Tu Y, Flocks, herds, and schools: A quantitative theory of flocking, Phys. Rev. E, vol. 58,
+no. 4, pp. 4828–4858, Oct. 1998.
+69. Von Uexküll J (1992) A stroll through the worlds of animals and men: A picture book of invisible worlds.
+Semiotica, 89(4): 319–391
+70. Koplas A, Moehlis J and Kevrekidis IG (2007). Coarse-grained analysis of stochasticity-induced switch-
+ing between collective motion states. Proceedings of the National Academy of Sciences, 104(14),
+5931–5935
+71. Escudero C, Yates CA, Buhl J, Couzin ID, Erban R Kevrekidis IG, Maini PK (2010) Ergodic directional
+switching in mobile insect groups. arXiv: 1008.0209v1
+72. Czirók A, Barabasi AL, Vicsek T (1999). Collective motion of self-propelled particles: kinetic phase tran-
+sition in one dimension. Phys. Rev. Lett. 82, 209
+73. Romanczuk P., Couzin I.D. and Schimansky-Geier L. (2009). Collective motion due to individual
+escape and pursuit response. Physical. Reviews. Letters, 102: 010602.
+74. Vicsek T, Czirók A, Ben-Jacob E, Cohen I, Shochet O (1995) Novel type of phase transition in a system
+of self-driven particles. Physical Rev Letters 75(6):1226.
+75. Yates CA, Erban R, Escudero C, Couzin ID, Buhl J, Kevrekidis IG, and Sumpter DJ (2009). Inherent
+noise can facilitate coherence in collective swarm motion. Proceedings of the National Academy of Sci-
+ences, 106(14), 5464–5469.
+76. Ariel G, Rimer O, Ben-Jacob E (2015). Order–Disorder Phase Transition in Heterogeneous Populations
+of Self-propelled Particles. Journal of Statistical Physics, 158(3), 579–588.
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 24 / 25
+
+===== PAGE 25 =====
+77. Chate H, Ginelli F, Gregoire G, Peruani F and Raynaud F, (2008) Modeling collective motion: variations
+on the Vicsek model. European Physical Journal B 64: 451–456.
+78. O'Loan OJ and Evans MR (1999) Alternating steady state in one-dimensional flocking. J. Phys. A:
+Math. Gen. 32: L99–L105.
+79. Petit O, Bon R (2010) Decision-Making processes: the case of collective movements. Behavioural Pro-
+cesses, 84: 635–647. doi:10.1016/j.beproc.2010.04.009 PMID: 20435103
+80. Bode NW, Franks DW and Jamie Wood A (2010). Making noise: emergent stochasticity in collective
+motion. Journal of theoretical biology, 267(3): 292–299. doi:10.1016/j.jtbi.2010.08.034 PMID:
+20816990
+81. Raymond JR and Evans MR (2006) Flocking regimes in a simple lattice model. Physical Review E, 73
+(3): 036112.
+82. Shklarsh A, Ariel G, Schneidman E. and Ben-Jacob E, Smart Swarms of Bacteria-Inspired Agents with
+Performance Adaptable Interactions, PLoS Comput Biol. 7, 1002177 (2011).
+83. Bazazi S, Bartumeus F, Hale JJ, Couzin ID (2012) Intermittent motion in desert locusts: behavioral
+complexity in simple environments. PLoS Comput Biol 8(5): e1002498 doi:10.1371/journal.pcbi.
+1002498 PMID: 22589707
+84. Aoki I (1982) A simulation study on the schooling mechanism in fish Bulletin of the Japanese Society of
+Scientific Fisheries, 48 (8): 1081–1088.
+85. Reynolds CW (1987) Flocks, Herds, and Schools: A Distributed Behavioral Model, ACM SIGGRAPH
+Computer Graphics 21(4): 25–34.
+86. Buhl J, Sword GA, Simpson SJ (2012). Using field data to test locust migratory band collective move-
+ment models. Interface Focus, rsfs20120024.
+87. Edelstein-Keshet L, Watmough J, Grunbaum D (1998) Do travelling band solutions describe cohesive
+swarms? An investigation for migratory locusts. Journal of mathematical biology, 36(6):515–549
+88. Feisel R, Feistel S (2012) Locust phase transitions.http://www.researchgate.net/profile/Rainer_Feistel/
+publication/274893472_Locust_Phase_Transitions/links/552bd3ae0cf2e089a3aa8260.pdf. Accessed
+May 2015
+89. Topaz C. M., D'Orsogna M. R., Edelstein-Keshet L., & Bernoff A. J. (2012). Locust dynamics: behav-
+ioral phase change and swarming. PLoS Comput Biol, 8(8), e1002642. doi:10.1371/journal.pcbi.
+1002642 PMID: 22916003
+90. Hassanali A, Bashir MO, Njagi PG and Ely SO (2005). Desert locust gregarization: a conceptual kinetic
+model. Journal of Orthoptera Research, 14(2), 223–226.
+91. Beldade P, Mateus ARA, Keller RA (2011) Evolution and molecular mechanisms of adaptive develop-
+mental plasticity. Molecular Ecology, 20(7): 1347–1363. doi:10.1111/j.1365-294X.2011.05016.x
+PMID: 21342300
+92. Gueijman A, Ayali A, Ram Y, Hadany L (2013) Dispersing away from bad genotypes: the evolution of
+Fitness-Associated Dispersal (FAD) in homogeneous environments. BMC evolutionary biology, 13(1):
+125.
+93. Berdahl A, Torney CJ, Schertzer E, Levin SA (2015) On the evolutionary interplay between dispersal
+and local adaptation in heterogeneous environments. Evolution. doi:10.1111/evo.12664
+94. Guttal V, Romanczuk P, Simpson SJ, Sword GA, Couzin ID (2012) Cannibalism can drive the evolution
+of behavioural phase polyphenism in locusts. Ecology letters, 15(10): 1158–1166. doi:10.1111/j.1461-
+0248.2012.01840.x PMID: 22882379
+95. Reynolds AM, Sword GA, Simpson SJ, Reynolds DR (2009) Predator percolation, insect outbreaks,
+and phase polyphenism. Current biology, 19(1): 20–24. doi:10.1016/j.cub.2008.10.070 PMID:
+19097898
+96. Guttal V, Couzin ID (2010) Social interactions, information use, and the evolution of collective migration.
+Proceedings of the national academy of sciences, 107(37): 16172–16177.
+97. Hapuis M.-P, Loiseau A, Michalakis Y, Lecoq M, Franc A, Estoup A (2009) Outbreaks, gene flow and
+effective population size in the migratory locust,Locusta migratoria: a regional-scale comparative sur-
+vey. Molecular Ecology, 18: 792–800. doi:10.1111/j.1365-294X.2008.04072.x PMID: 19207256
+98. Ibrahim KM (2001) Plague dynamics and population genetics of the desert locust: can turnover during
+recession maintain population genetic structure? Molecular Ecology 10: 581–591. PMID:11298970
+99. Ibrahim KM, Sourrouille P, Hewitt GM (2000) Are recession populations of the desert locust (Schisto-
+cerca gregaria) remnants of past swarms? Molecular Ecology 9: 783–791. PMID:10849294
+PLOS Computational Biology | DOI:10.1371/journal.pcbi.1004522 December 10, 2015 25 / 25

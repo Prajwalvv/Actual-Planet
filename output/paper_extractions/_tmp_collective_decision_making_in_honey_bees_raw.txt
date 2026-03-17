@@ -1,0 +1,1560 @@
+
+
+===== PAGE 1 =====
+Behav Ecol Sociobiol (1991) 28:277-290 Behavioral Ecology 
+and Sociobiology 
+© Springer-Verlag 1991 
+Collective decision-making in honey bees: 
+how colonles choose among nectar sources 
+Thomas D. Seeley 1, Scott Camazine 1, and James Sneyd 2. 
+t Section of Neurobiology and Behavior, Mudd Hall, Cornell University, Ithaca, NY 14853, USA 
+2 Centre for Mathematical Biology, Mathematical Institute, 24-29 St. Giles', Oxford OX1 3LB, UK 
+Received April 3, 1990 / Accepted September 30, 1990 
+Summary. A honey bee colony can skillfully choose 
+among nectar sources. It will selectively exploit the most 
+profitable source in an array and will rapidly shift its 
+foraging efforts following changes in the array. How 
+does this colony-level ability emerge from the behavior 
+of individual bees ? The answer lies in understanding how 
+bees modulate their colony's rates of recruitment and 
+abandonment for nectar sources in accordance with the 
+profitability of each source. A forager modulates its be- 
+havior in relation to nectar source profitability: as prof- 
+itability increases, the tempo of foraging increases, the 
+intensity of dancing increases, and the probability of 
+abandoning the source decreases. How does a forager 
+assess the profitability of its nectar source? Bees ac- 
+complish this without making comparisons among nec- 
+tar sources. Neither do the foragers compare different 
+nectar sources to determine the relative profitability of 
+any one source, nor do the food storers compare differ- 
+ent nectar loads and indicate the relative profitability 
+of each load to the foragers. Instead, each forager knows 
+only about its particular nectar source and independent- 
+ly calculates the absolute profitability of its source. Even 
+though each of a colony's foragers operates with ex- 
+tremely limited information about the colony's food 
+sources, together they will generate a coherent colony- 
+level response to different food sources in which better 
+ones are heavily exploited and poorer ones are aban- 
+doned. This is shown by a computer simulation of nec- 
+tar-source selection by a colony in which foragers behave 
+as described above. Nectar-source selection by honey 
+bee colonies is a process of natural selection among alter- 
+native nectar sources as foragers from more profitable 
+sources "survive" (continue visiting their source) longer 
+and °' reproduce" (recruit other foragers) better than do 
+foragers from less profitable sources. Hence this colonial 
+decision-making is based on decentralized control. We 
+* Present address." Department of Biomathematics, UCLA School 
+of Medicine, 10833 La Conte Avenue, Los Angeles, CA 90024, 
+USA 
+Offprint requests to : T.D. Seeley 
+suggest that honey bee colonies possess decentralized 
+decisi0n-making because it combines effectiveness with 
+simplicity of communication and computation within a 
+colony. 
+Introduction 
+Recently, numerous authors have noted that colonies 
+of advanced social insects constitute higher-order cogni- 
+tive entities, that is, supraorganismal systems capable 
+of evaluating situations and producing adaptive solu- 
+tions to problems (Hofstadter 1979; Markl 1985; Seeley 
+and Levien 1987; Wilson and H611dobler 1988; Franks 
+1989). Examples of this colony-level problem-solving in- 
+clude a swarm of honey bees selecting the best nest site 
+from a dozen or more possibilities (Lindauer 1955; See- 
+ley 1982), a colony of honeypot ants assessing the 
+strength of a neighboring colony and deciding accord- 
+ingly whether or not to attack (H611dobler 1981 ; Lums- 
+den and H611dobler 1983), and a colony of army ants 
+choosing a bearing for each day's swarm raid so as to 
+avoid the previous day's foraging zone (Franks and 
+Fletcher 1983; Deneubourg et al. 1989). All such ensem- 
+ble cognitive performances present us with the puzzle 
+of how the problem-solving abilities of a colony arise 
+from the actions and interactions of the insects compos- 
+ing the colony. 
+We address this mystery in the context of honey bee 
+colonies choosing among patches of flowers, selectively 
+exploiting the most profitable ones. The ecology of this 
+decision-making can be summarized as follows (reviewed 
+in Seeley 1985). Each year a colony of bees consumes 
+considerable food, approximately 20 kg of pollen and 
+60 kg of honey. The thousands of foragers in a colony 
+laboriously gather this food from the flower patches dot- 
+ting the countryside around the colony's hive. Typically 
+a colony will know each day about a dozen or more 
+potential food sources, each with its own level of profit- 
+
+
+===== PAGE 2 =====
+278 
+ability, determined by such variables as the distance 
+from the hive and the abundance and quality of the 
+food. To gather its food efficiently, a colony must deploy 
+its foragers among the flower patches in accordance with 
+their profitabilities. 
+We begin by documenting the skill with which a col- 
+ony chooses among nectar sources so that most of its 
+nectar comes always from the richest sources. Then we 
+show how this selective exploitation arises through pre- 
+cise modulation of the rates of recruitment and abandon- 
+ment for different nectar sources in relation to their pro- 
+fitabilities. This points out the crucial question: how 
+are the rates of these two processes adaptively regulated ? 
+After describing the multidimensional modulation of 
+foraging behavior in relation to nectar source profitabili- 
+ty, we experimentally analyze how each forager assesses 
+nectar source profitability. The two principal competing 
+hypotheses are that each forager judges by itself the pro- 
+fitability of its nectar source, or that each forager is 
+given this information by the food storer bees in the 
+hive. Next we check our understanding of how the joint 
+actions of a colony's foragers result in producing colony- 
+level decision-making by formulating a mathematical 
+model of this process and comparing the decision-mak- 
+ing patterns of simulated and real colonies. We end by 
+discussing the general implications of our investigation. 
+Methods 
+1. Colony-level analysis: selective exploitation of nectar 
+sources 
+A colony composed of individually identifiable bees was presented 
+with two nectar sources with different profitabilities. The colony's 
+differential exploitation of the two sources was measured by deter- 
+mining the total number of different individuals visiting each food 
+source. Also, the different rates of recruitment and abandonment 
+for the two feeders, which ultimately generated the exploitation 
+difference between the two food sources, were determined from 
+records of each bee's visits to the feeders. 
+Study site. All observations were made at the Cranberry Lake Bio- 
+logical Station (44009 ' N, 74°48 ' W) in northern New York State. 
+This site is surrounded by forests, bogs, and lakes for more than 
+20 km in all directions, hence forage for bees is extremely sparse 
+and no native honey bees survive there. A full-size colony, kept 
+on platform scales, lost weight (0.50_+0.30 kg) on 15 days and 
+gained weight (0.15 kg) on just 1 day during the 16-day study 
+period in June 1989. The scarcity of food enabled us to control 
+the forage collected by our study colony even though its foragers 
+flew freely from the hive. 
+Study colony. We assembled a colony of individually identifiable 
+bees over a 2-day period, 1-2 June 1989, in Ithaca, as follows. 
+First, at the beginning of each day, approximately 2500 worker 
+bees from a colony of Italian honey bees (Apis mellifera ligustica) 
+were shaken into a wire cage. From this, we periodically shook 
+groups of approximately 50 bees into plastic bags and placed them 
+in a refrigerator to immobilize them. After at least 15 min of cool- 
+ing, the bees in a bag were removed from the refrigerator and 
+poured onto a container of "blue ice", where they stayed chilled 
+during the labelling operation. A bee tag (Opalithpl/ittchen; with 
+500 number and color combinations) was glued on the thorax of 
+each bee, and a dot of one of eight different colors of paint was 
+applied to its abdomen. Finally, the bees were gently poured into 
+a cage containing a sugar water feeder and the mother queen. 
+This procedure was repeated several times a day for 2 days until 
+4000 bees were labelled. 
+At the end of the second day, the labelled workers and their 
+queen were transferred to a two-frame observation hive identical 
+to the one described in Seeley (1989). The bottom frame contained 
+a mixture of brood (eggs and larvae), honey, and pollen, and the 
+top frame was empty except for a few cells of pollen. On 4 June 
+the colony was moved to Cranberry Lake and left undisturbed 
+for 4 more days, though bees were trained to the feeders to set 
+up the experimental array and to provide food for the colony. 
+On the evening of 8 June, the colony's population was censused 
+by counting the number of bees inside 10 randomly selected 2.5 x 
+2.5 cm grid squares on each side of the observation hive: the colony 
+contained approximately 3450 bees. Rainy weather prevailed for 
+the next 10 days, during which all we could do was provide food 
+at the feeders whenever the bees could fly. This kept the colony 
+fed and ensured that the dozen or so bees trained to each feeder 
+would continue visiting the feeders. By the time the weather cleared 
+(19 June) the colony had grown noticeably; fortunately the foragers 
+were still all labelled bees. A census on the evening of 19 June 
+indicated a population of approximately 4200 bees. 
+Feeders and experimental layout. The feeders were pneumatic feed- 
+ing dishes identical to those described in a previous paper (Seeley 
+1989). The observation hive and the two feeders were placed in 
+an approximately linear arrangement, with the hive in the center 
+and the feeders 400 m to the north and south, in sinai1 clearings. 
+Both food sources contained the scent anise in a vented reservoir 
+beneath the feeder and also in the sucrose solution (60 gl of anise 
+extract per liter). 
+Measuring forager group size, and recruitment and abandonment 
+rates. We recorded which bees visited each food source during 
+every half-hour period throughout two 8-h sets of observations. 
+We accomplished this using roll call sheets listing the identification 
+codes of all 4000 bees and crossing off the identification codes 
+of all bees seen at a feeder during each half hour. Each sheet 
+therefore showed which individuals visited a particular feeder at 
+least once during a 30-rain period, and how many in total did 
+so. This number we call the "forager group size." Comparisons 
+between roll call sheets for a feeder also revealed when (to the 
+nearest 30 rain) individuals were first sighted at (i.e., were recently 
+recruited to) the feeder or were last sighted at (i.e., were soon 
+to abandon) the feeder. From these data we calculated the per 
+capita recruitment rate or abandonment rate for each feeder for 
+each half hour by dividing the number of recruits or deserters 
+counted during that half hour by the forager group size for the 
+previous half hour. 
+2. Individual-level analysis: behavior modulation 
+in relation to nectar source profitability 
+Two colonies were established in adjacent observation hives and 
+30 bees from each colony were trained to visit separate feeders 
+at the same distance from the hives. The profitability of one (the 
+experinaental) colony's feeder was systematical(y changed during 
+the day and the behavioral adjustments of its foragers were re- 
+corded. MeanwNle, the profitability of the other (the control) col- 
+ony's feeder was left unchanged and the behaviors of its foragers 
+were recorded as a check for possible confounding changes in the 
+ambient conditions. 
+Study site, bees, experimental layout, and feeders. This experiment 
+was conducted in July 1987 in connection with other experiments 
+already published (Seeley 1989). It involved the same study site, 
+the same two colonies in observation hives, the same experimental 
+layout, and the same feeders as were described in the prior report. 
+
+
+===== PAGE 3 =====
+279 
+The only difference between the present experiment and the one 
+reported in Fig. 2 of Seeley 1989 was that, in the present case, 
+the fullness of the experimental colony's honey combs was kept 
+constant and the profitability of it's feeder was varied, whereas, 
+before, the fullness of the experimental colony's honey combs was 
+varied and the profitability of it's feeder was kept constant. 
+Measuring recruitment and recording the behaviors of foragers. Re- 
+cruitment from each colony was measured by training 30 bees 
+to a feeder using standard techniques (von Frisch 1967), labeling 
+these bees (the recruiters) with individually identifiable paint 
+marks, and counting the number of unlabeled bees (the recruits) 
+appearing at the feeder every 15 rain. Each recruit was captured 
+in a plastic bag (to minimize release of alarm pheromone) shortly 
+after its arrival at the feeder, and was frozen at the end of the 
+day. 
+Roll calls of the labeled bees at 30-min intervals indicated the 
+number of recruiters at each feeder; this number dropped below 
+30 for the experimental colony when the profitability of its feeder 
+was lowered and some bees abandoned it. The probability of visit- 
+ing the feeder was calculated by dividing the number of labeled 
+bees visiting the feeder by 30, that is, the number of labeled bees 
+that visited the feeder when all did so. 
+Measurements were also made of several variables of the in- 
+hive behavior of the labelled bees from the experimental colony. 
+This involved following one (randomly selected) labelled bee at 
+a time from when it entered the hive to when it exited it. One 
+variable was the "time to start of unloading," which is the time 
+interval between entering the hive and beginning to transfer nectar 
+to a food storer bee. The "time to end of unloading" is the time 
+interval between entering the hive and completing the transfer of 
+nectar to food storers. The "time in hive after unloading" is the 
+time interval between finishing unloading nectar and leaving the 
+hive. Another variable was "dance circuits per bee per return to 
+the hive," which was measured by counting the dance circuits each 
+bee performed during its time inside the hive. The "probability 
+of dancing" was calculated by dividing the number of bees that 
+danced by the total number of bees that were followed (i.e., sample 
+size). Finall¢, the "foraging tempo," measured in units of trips 
+to the feeder per bee per 30 min, was calculated by first dividing 
+the number of labelled bees visiting the feeder by the number of 
+labelled bees entering the hive per rain (measured with ten l-rain 
+counts of labelled bees coming in the entrance). This quotient indi- 
+cates the average time per roundtrip to the feeder. Next, 30 min 
+was divided by the roundtrip time to determine the number of 
+trips to the feeder that each bee was making in 30 rain. 
+Statistical test. A single classification ANOVA (Sokal and Rohlf 
+1981) was performed for each variable for which there was an 
+estimate of the mean and variance, i.e., all variables except for 
+the probability of visiting the feeder, the probability of dancing, 
+and foraging tempo. 
+3. Individual-level analysis: assessing nectar source 
+profitability 
+Two feeders were established, one with a relatively dilute sugar 
+solution but located near the hive, and the other with a more 
+concentrated sugar solution but positioned far from the hive. Bees 
+were trained to forage from each feeder, and their behaviors inside 
+the hive, especially the strength of their recruitment dances, were 
+monitored to determine which feeder was judged more profitable. 
+The answer reveals whether it is the food storers or the foragers 
+that assess nectar source profitability. 
+Study site, bees, experimental layout, and feeders. This experiment 
+was performed in Ithaca, New York, using a small colony of Italian 
+honey bees in a two-frame observation hive housed inside a labora- 
+tory building. The hive and feeders were identical to those described 
+in a previous study (Seeley 1989). Both feeders were positioned 
+along a rarely used road (one 50 m and the other 1250 m from 
+the hive) that traverses flat, treeless agricultural fields; hence, both 
+feeders had virtually identical exposure to wind and sun. Fifteen 
+bees were trained to each feeder using standard techniques (von 
+Frisch 1967). Each bee was labeled with paint marks coding indi- 
+vidual identity and which feeder she was visiting. Recruits to each 
+feeder were captured in plastic bags to prevent forager build-up 
+at the feeders. 
+Recording the behaviors of foragers. Labelled foragers were fol- 
+lowed one at a time inside the observation hive from time of arrival 
+to departure. Measurements were made, as previously described, 
+of the time to start of unloading, the dance circuits per bee per 
+return to the hive, and the probability of dancing. 
+Statistical tests. We used t-tests, either Student's or the test for 
+equality of two proportions using arcsine transformations (Sokal 
+and Rohlf 1981). 
+Results 
+1. Colony-level analysis 
+Pattern: selective exploitation of nectar sources. Figure 1 
+shows that when a colony was given a series of choices 
+between two feeders with different profitabilities, it con- 
+sistently focused its collection efforts on the m o r e  profit- 
+able feeder. The net result was that the colony steadily 
+tracked the richest source of nectar in the changing ar- 
+ray. Note that the measure of foraging effort shown 
+in Fig. 1 - the total number of different individuals visit- 
+ing the feeder in a half hour - underestimates the col- 
+ony's response differential to the two feeders. This is 
+because the poorer feeder (0.75 mol/1), relative to the 
+richer feeder (2.50 tool/l), was not only visited by fewer 
+bees, but also was visited at a lower rate by each bee 
+(see data on foraging tempo in Table 1). 
+Process: tuning the rates of recruitment and abandon- 
+ment. Because the size of a group is determined by the 
+history of additions to and subtractions from the group, 
+it was clear a priori that the changes in forager group 
+size shown in Fig. 1 reflect changes in the rates of recruit- 
+ment (additions) and abandonment (subtractions) for 
+each feeder. The complete picture of the r e c r u i t m e n t  a n d  
+abandonment dynamics for the two feeders is shown 
+in Fig. 2. On the morning of 19 June, there was essential- 
+ly no recruitment to or abandonment of the north feeder 
+(1.00 mol/1), and the forager group size here rose only 
+to 12 bees, namely the ones that had foraged here the 
+previous day. At the south feeder (2.50 mol/1), however, 
+there was strong recruitment, especially early in the 
+morning when the feeder was still lightly exploited, and 
+little abandonment, so the forager group size increased 
+dramatically, rising from 0 to 91 bees in 4 hours. Then 
+in the afternoon, the south feeder (now 0.75 tool/l) re- 
+ceived negligible recruitment but intense abandonment, 
+so that its forager group size fell back to just 10 bees 
+by the end of the afternoon. Meanwhile, the north feeder 
+(now 2.50 tool/l) had become the target of strong recruit- 
+ment but little abandonment, with the net result that 
+
+
+===== PAGE 4 =====
+280 
+LU 
+Z 
+-~ 
+8 AM 
+1.00 M 
+Noon 
+North Feeder Hive 
+• 
+T 
+(9 
+South Feeder 
+T 
+® 
+...: ::... 
+T 
+® 
+2.50 M ••:o ..'. . . . .  : : . .  
+o • oOo• eO o• o o~°• ° 
+• oOo°•• • • eeee• ooe @ • ~ oeOOo • • • eoe • • • ooeo • o oO• ° °oooooe 000 00 eel looooe • •0••o • oo•eeo 
+• o~ • TO•O • 
+l 
+4 PM 
+2.50 M 
+® 
+::::: 
+G T 
+® 
+0.75 M 
+unexpectedly large forager group size - as many as 32 
+bees - for the poorer (south, 0.75 mol/1) feeder on the 
+morning of 20 June. This morning surge in foragers to 
+the poorer feeder arose because bees that had foraged 
+here the previous morning came out to reconnoitre the 
+site of their prior success, not because bees were recruit- 
+ing nestmates to the 0.75 re•l/1 solution at this feeder. 
+Virtually all of the bees (46 out of 48) that visited the 
+south feeder on the morning of 20 June had foraged 
+there the previous morning. Also many (18 out of 48) 
+of these bees ceased visiting the feeder within an hour 
+of their first visit, so that the bees were actually abandon- 
+ing this feeder at a rather high rate from 9:30 a.m. to 
+12 noon (see Fig. 2). 
+These results indicate that colonies are highly skilled 
+at adjusting the rates of recruitment and abandonment 
+for each nectar source in relation to its profitability, 
+and that it is the precise modulation of these rates which 
+generates a colony's selective exploitation of superior 
+nectar sources. This raises the next question: what do 
+individual bees do to produce this adaptive tuning of 
+their colony's rates of recruitment and abandonment? 
+8 AM 
+• • 
+T f~ T 
+(9 (9 
+2.50 M 
+... 
+LU 
+z T (3 T 
+~ Noon .-~ 
+® ® 
+0.75 M 
+0.75 M 2.50 M 
+y t3 Y 4 PM 
+® 
+Fig. 1. The basic decision-making phenomenon. When given a 
+choice between two food sources with different profitabilities, the 
+colony consistently directed most of its foraging effort onto the 
+richer one. The number of dots above each feeder denotes the 
+forager group size for that feeder, i.e., the number of different 
+bees that visited the feeder in the half hour preceding the time 
+shown on the left. For several days prior to the start of observa- 
+tions, a small group of bees was trained to each feeder (12 and 
+15 bees for the north and south feeders, respectively), thus on 
+the morning of 19 June, the two feeders had essentially equivalent 
+histories of low-level exploitation. The feeders were located 400 m 
+from the hive and were identical except for the concentration of 
+the sugar solution 
+the forager group size here rose from 12 to 121 bees. 
+Similar patterns of reciprocal recruitment and abandon- 
+ment, in accordance with food source profitability, were 
+recorded on the second day as well. One difference be- 
+tween the data for 19 and 20 June, however, was an 
+2. Individual-level analysis 
+Pattern: behavior modulation in relation to nectar source 
+profitability. The data presented in Table 1 illustrate the 
+ability of bees to finely adjust several components of 
+their foraging behavior in accordance with nectar source 
+quality. On the one hand, when the quality was high 
+(as when the feeder was loaded with the 2.0 re•l/1 sucrose 
+solution), the bees continued visiting the food source, 
+worked quickly, and danced vigorously, thereby bring- 
+ing additional nestmates to help exploit their rich find. 
+On the other hand, when the nectar source quality was 
+low (0.5 mol/1 solution, or less), the bees tended to aban- 
+don the source or, if they did continue foraging there, 
+they behaved relatively slowly and did not perform re- 
+cruitment dances. This set of responses resulted in a 
+drop in the number of bees at the feeder. Setting the 
+feeder at intermediate levels of quality elicited behavioral 
+responses of intermediate strength, with correspondingly 
+intermediate rates of recruitment to or abandonment of 
+the feeder. Note that simultaneous measurements of re- 
+cruitment rate for a control colony showed no significant 
+changes, which implies that the ambient conditions were 
+stable during the observations and, therefore, that the 
+behavioral changes documented in Table 1 were solely 
+in response to changes in food source profitability. 
+Process: assessing nectar source profitability. How does 
+a forager assess the profitability of its nectar source? 
+Three hypotheses come to mind. First, each forager 
+might acquire this information by making direct com- 
+parisons of nectar sources. This would require that a 
+forager visit several nectar sources to judge the relative 
+value of the source from which it is foraging. Second, 
+each forager might rely instead upon indirect compari- 
+sons made by the food storer bees inside the hive. Each 
+
+
+===== PAGE 5 =====
+NORTH FEEDER 1 
+sucrose sol'n: 
+(rnol / L) 
+~- 
+& 100 
+-N 
+~. 
+o~ 50 
+o 
+Ia_ 
+E 0.5 ~ 
+.13 
+,.5 
+~i N 1.0 
+~' 0.5 
+1.00 
+I SOUTH FEEDER I 
+sucrose sol'n: 
+(rnol / L) 
+-- 
+,-~ 
+~ 100 
+-~ 
+# 
+o 
+B~ 5O 
+$ 
+o IJ. 
+1.0 
+E 0.5 ..g~ 
+~'~21 ~ O~.~3 
+~ 
+~.13~ 
+E~ ~ .~ 1.5 
+0.5 
+2.50 0.75 
+v 
+10 12 2 
+2.50 0.75 
+[m~ 
+4 8 10 12 
+I I 
+2 4 
+m 
+8 10 
+2.50 
+I I I 
+m m 
+I__ I .,_1 
+12 
+19 June 
+I I__J 1__/, 
+2 4 8 
+TIME OF DAY 
+10 12 
+20 June 
+2 4 
+281 
+Fig. 2. The colony's responses to 
+the two nectar sources in detail. 
+Values of forager group size 
+denote the number of different 
+individuals that visited each 
+feeder during the previous half 
+hour. Per capita rates of 
+recruitment or abandonment 
+represent the number of recruits 
+or deserters recorded for a 30- 
+min interval divided by the 
+forager group size for the start of 
+the interval. At the start of the 
+observations, 12 and 15 bees had 
+experience at the north and south 
+feeders, respectively, and so 
+provided an initial link between 
+the colony and each feeder. These 
+bees returned to their respective 
+feeders on the morning of 19 
+June, but were not counted as 
+recruits. Likewise, any bee that 
+had visited a feeder during the 
+afternoon of 19 June was not 
+counted as a recruit if it appeared 
+at the same feeder on the 
+morning of 20 June, hence the 
+increase in forager group size at 
+the two feeders without strong 
+recruitment on the morning of 20 
+June. This figure illustrates the 
+precise regulation of a colony's 
+recruitment and abandonment 
+rates in relation to nectar source 
+profitability, with the result that 
+the colony's foraging efforts 
+tracked the richer nectar source 
+food storer bee unloads foragers from various nectar 
+sources, and ithas been suggested (Boch 1956; Lindauer 
+1961, 1975) that food storers compare the nectar loads 
+they receive and preferentially unload foragers bearing 
+the most profitable nectar. A forager's ease in getting 
+unloaded would, according to this hypothesis, inform 
+it of the relative quality of its nectar source. A third 
+possibility is that no comparisons are made, neither by 
+foragers nor by food storers; instead, each forager 
+knows only about its particular nectar source, and its 
+nervous system can calculate the absolute quality of its 
+source. This hypothesis is closely analogous to Lin- 
+dauer's (1955) idea that a scout bee, without previous 
+experience in house-hunting, can assess the quality of 
+a nest site through reference to an "angeborenes Schema 
+eines Nistplatzes." [Note that in the case of foraging, 
+food source quality is not the sole factor influencing 
+a bee's behavior. Other factors, such as the colony's 
+need for food and the seasonal availability of forage, 
+determine the levels of food source quality that are the 
+
+
+===== PAGE 6 =====
+282 
+Table 1. Information on the protocol, ambient conditions, and results of the experiment documenting the modulation of foraging behavior 
+in relation to nectar source profitability 
+Time period (hours) 0915-1045 1100-1230 1 2 4 5 - 1 4 1 5  1 4 3 0 - 1 6 0 0  Significance 
+Experimental colony 
+Sucrose solution (tool/l) 2.00 1.50 1.00 0.50 
+Probability of visiting feeder 1.00 1.00 1.00 0.60 
+Foraging tempo (trips/bee/30 min) 6.1 6.2 6.0 3.9 
+Probability of dancing 0.80 0.59 0.26 0.00 
+Dance circuits/bee/return to hive 9.8 _+ 15.4 5.4_+ 4.9 1.6 _+ 3.9 0.0 
+Recruitment to feeder (bees/15 min) 10.3 _+ 5.4 5.6 _+ 4.0 2.2 _+ 1.6 0.0 
+Time to start of unloading (s) 13 _+ 7 12 + 6 14 _+ 7 28 _+ 30 
+Time to end of unloading (s) 68 _+ 39 50 _+ 16 46 _+ 11 64_+ 24 
+Time in hive after unloading (s) 23 _+ 18 20 _+ 20 22 _+ 15 51 _+ 32 
+Sample size (bees followed) 25 30 34 25 
+Control colony 
+Sucrose solution (mol/1) 1.50 1.50 1.50 1.50 
+Recruitment to feeder (bees/15 min) 8.0 _+ 1.5 7.5 + 3.6 7.7_ 3.6 7.3 _+ 1.9 
+Ambient conditions 
+Temperature (°C) 25.0-28.0 28.0-29.0 27.5-28.5 27.5-28.0 
+<0.001 
+<0.001 
+<0.01 
+<0.05 
+< 0.01 
+>0.75 
+thresholds for such behaviors as returning to and danc- 
+ing for a food source (Lindauer 1948; Seeley 1986, 1989). 
+Hence a given level of nectar source quality will elicit 
+different behavioral responses under different condi- 
+tions.] 
+Which of these three possible mechanisms operates 
+in the bee hive? The first proposed mechanism (HI: 
+direct comparisons hypothesis) is rendered highly im- 
+probable by the following observations from the begin- 
+ning of the experiment depicted in Figs. 1 and 2. On 
+the morning of 19 June, the bees from the south feeder 
+recruited strongly to their feeder with its 2.50 mol/1 su- 
+crose solution while the bees from the north feeder 
+scarcely recruited at all to their feeder with its 1.00 mol/1 
+solution. Clearly, the foragers working these two feeders 
+had correctly assessed the profitability of each food 
+source. But did the assessment process depend upon bees 
+making direct comparisons of these two food sources? 
+Evidently not. The records of which individuals visited 
+which feeder reveal that of the 117 bees total that visited 
+the two feeders during the morning of 19 June, only 
+two of them visited both feeders. These two bees both 
+switched from the poorer feeder (north) to the richer 
+feeder (south) late in the morning (see Fig. 2). Hence 
+only a tiny minority of the foragers had knowledge of 
+both feeders; the vast majority must have arrived at 
+an assessment of the profitability of these feeders with- 
+out making direct comparisons between them. (It should 
+be noted that the two feeders were essentially the only 
+two nectar sources available to the bees in the study 
+colony. One indication of this is that on 19 June the 
+scale hive colony lost 0.50 kg, which is virtually the same 
+weight loss recorded for the previous 3 days (0.45, 0.55, 
+0.60 kg) when the weather was cold and rainy and the 
+bees could not even fly from the hive.) 
+To distinguish between the second hypothesis (H2: 
+indirect comparisons mediated by food storer bees) and 
+third hypothesis (H3: no comparisons), we compared 
+the responses of foragers to two feeders that were ar- 
+ranged so that the two hypotheses gave opposite predic- 
+tions about which feeder the bees would judge more 
+profitable. To understand the design of this experimental 
+layout, we must focus on a critical feature of H2, namely 
+its implication that a nectar source's profitability is eval- 
+uated simply as a function of the sugar concentration 
+of its nectar. This follows from the basic premise of 
+H2 that it is the food storer bees that make the evalua- 
+tions, coupled with the reasonable assumption that the 
+only variable affecting a nectar source's profitability that 
+food storer bees might know about is the sugar concen- 
+tration of its nectar. We feel that this assumption is valid 
+because whereas it is clear that food storer bees can 
+easily acquire information about the sugar concentration 
+of a source's nectar, simply by tasting the nectar as they 
+receive it from a forager, there is no evidence that food 
+storer bees acquire information about the other variables 
+influencing the energetic profitability of a nectar source 
+- including distance from hive to source, abundance of 
+nectar at the source, difficulty of feeding at the source, 
+direction in relation to the wind, and wind speed. For 
+example, although a food storer bee could conceivably 
+acquire information about the distance between the hive 
+and a forager's nectar source (by following dances per- 
+formed by the forager), it is clear that this happens rare- 
+ly, if at all. Food storer bees almost never attempt to 
+follow dances performed by foragers they have unloaded 
+(e.g., see Fig. 6 in Seeley 1989). Moreover, a forager 
+rarely even provides the food storer that has unloaded 
+it with any dances to follow; 58 different foragers gather- 
+ing nectar and pollen from natural flower patches were 
+observed making a total of 153 returns to the hive with 
+forage, and in only 11 (7%) of these returns were dances 
+performed (data from bees followed in the study Seeley 
+and Visscher (1988)). Likewise, there are no signs that 
+
+
+===== PAGE 7 =====
+50 m 1250 rn 
+0.75 mol/L 1.00 or 2.50 mol/L 
+Variable 
+T 
+I I I 
+Time to start of 11 + 4 a 37 + 26 b 12 + 4 a 
+unloading (s) 
+Probability of 0.50 a 0.10 b 0.73 a 
+dancing 
+Dance circuits per 4.5+6.3 a 0.6 +0.3 b 14.6 + 19.6 c 
+bee per return to 
+hive 
+Sample size 22 20 
+(bees followed) 
+22 
+Fig. 3. Experimental design and results of the test for how foragers 
+assess the profitability of a nectar source. Fifteen bees were trained 
+to forage at each of the two feeders, and their responses to these 
+feeders were observed. The bees from the 50-m, 0.75-mol/1 feeder 
+unloaded their nectar more quickly and danced more strongly than 
+did those from the 1250-m, ~.00-mol/1 feeder. This implies that 
+assessments of nectar source profitability are made by the forager 
+bees, which have knowledge of the many variables affecting the 
+energetic profitability of a nectar source, rather than by the food 
+storer bees, which know only one variable, the sugar concentration 
+of the nectar 
+283 
+strongly than did the bees from the 1250-m, 1.00-tool/1 
+feeder. These results strongly contradict H2. 
+This rejection of H2 is reinforced by the average 
+times to start unloading for the different forager groups. 
+First, note that the bees from the 1250-m, 1.00-mol/1 
+feeder took more time to begin unloading than did the 
+bees from the 50-m, 0.75-mol/1 feeder. This runs con- 
+trary to H2, which assumes that food storer bees prefer- 
+entially unload foragers bringing in more concentrated 
+nectar. Second, note that foragers from the 50-m, 0.75- 
+tool/1 feeder and the 1250-m feeder, when reloaded with 
+a 2.50-moi/1 solution, began unloading equally quickly, 
+despite the huge difference in concentration between 
+their sugar solutions. This too contradicts the basic as- 
+sumption of H2. However, both of these patterns in un- 
+loading times are consistent with H3. The first pattern 
+evidently is the result of the foragers from the 1250-m, 
+1.00-tool/1 feeder concluding that their feeder's profit- 
+ability was low and slowing their foraging tempo (see 
+Table 1), in part by not seeking to unload their nectar 
+immediately upon entering the hive. The second pattern 
+apparently reflects the bees from both the 50-m, 0.75- 
+tool/1 feeder and the 1250-m, 2.50-mol/1 feeder judging 
+that their feeder was high in profitability and deciding 
+to forage with high tempo, which included seeking to 
+unload nectar immediately upon entering the hive. 
+food storer bees acquire information about the other 
+variables influencing the energetic profitability of a nec- 
+tar source such as nectar abundance, direction in rela- 
+tion to the wind, and wind speed since food storers 
+remain inside the hive where they have no direct access 
+to information about these variables, and they have no 
+known means of gaining information about these vari- 
+ables indirectly from the foragers. 
+In contrast to H2, H3 implies that a nectar source's 
+profitability is assessed as a function of many variables. 
+This is because this hypothesis assumes that the foragers 
+are making the assessments, and foragers of course have 
+direct access to information about the multiple variables 
+affecting the energetic profitability of a nectar source. 
+The experimental layout shown in Fig. 3 is such that 
+H2 and H3 give opposite predictions about the relative 
+profitabilities (as judged by the bees) of the two feeders, 
+and hence about the bees' relative responses to these 
+feeders. Consider what each hypothesis predicts about 
+the bees' responses to the 50-m, 0.75-mol/1 feeder relative 
+to those for the 1250-m, 1.00-tool/1 feeder. H2 predicts 
+that the bees foraging from the 50-m, 0.75-mol/1 feeder 
+will assess its profitability as relatively low because its 
+sugar concentration is relatively low, and thus predicts 
+that these bees will dance relatively little. H3, however, 
+predicts that the bees visiting the 50-m, 0.75-mol/1 feeder 
+will assess its profitability as relatively high because its 
+much shorter distance from the hive will more than com- 
+pensate for its lower sugar concentration, and therefore 
+predicts that these bees should dance relatively strongly. 
+Which prediction is correct? As we see in Fig. 3, the 
+bees from the 50-m, 0.75-mol/1 feeder danced much more 
+3. Model of collective decision-making 
+We now formulate a mathematical model of nectar- 
+source selection by honey bee colonies, based on the 
+empirical work just presented. The model enables us to 
+see more clearly the colony-level consequences of the 
+individual-level behavior patterns described above. It 
+therefore provides a test of the idea that the colony-level 
+decision-making can be accounted for simply in terms 
+of an assemblage of bees, in which each bee independent- 
+ly modulates its behavior in accordance with the profit- 
+ability of its nectar source. We check the validity of the 
+ideas expressed in the model by comparing the pattern 
+of exploitation of two unequal nectar sources that is 
+predicted by this model with the pattern of exploitation 
+that was actually observed. 
+Biological basis of the model. We will start with a pool 
+of foragers that are not yet committed to one of the 
+nectar sources available outside the hive. Each of these 
+uncommitted bees (hereafter called "follower bees ") lo- 
+cates a nectar source by following the recruitment dances 
+of a nestmate that is already committed to a patch of 
+flowers. Now consider the behavior of one follower bee 
+as it begins its day by following dances (Fig. 4). Within 
+the dance floor region of the hive are bees dancing for 
+two nectar sources (A and B). Our bee follows a dancer 
+for nectar source A and is recruited to this source. Hav- 
+ing located source A, it gathers a load of nectar and 
+returns to the hive. After unloading its nectar to a food 
+storer bee, the forager proceeds with one of three op- 
+tions, illustrated by the arrows after the two branch 
+points (diamonds). The first is (1) to abandon the nectar 
+
+
+===== PAGE 8 =====
+( 
+284 
+At hive unloading | 
+nectar from A 
+) (HA) 
+P3 t Pl 
+1- fx A 
+fd A (1- fx A) ,~ 
+(1-fd A) (1- fx A) 
+P2 
+fx B 
+for B (DB) 
+fl B 
+I At hive unloading 1 
+nectar from B 
+(HB) 
+L 
+P5 P7 
+~- 
+1- fx ~3 
+i:~' ~, ~, 
+(1-fd B ) (f- fx g) 
+i 1 
+nectar source A nectar source B 
+(A) (B) 
+Fig. 4. Graphical representation of the mathematical model of how 
+honey bee colonies choose between two nectar sources (A and B). 
+The model is based on the following empirically determined cycle 
+of foraging behavior. A bee begins foraging by following nestmates 
+performing recruitment dances, then arrives at a food source and 
+gathers a load of nectar, and finally returns to the hive and unloads 
+the nectar. At this point it repeats the cycle, though now with 
+the option of continuing to forage from its current nectar source 
+(and perhaps even dancing for this source), rather than following 
+dances to locate a new source. The black diamonds along the arrows 
+denote decision points. The grey circle represents the dance floor 
+area inside the hive. At any given moment, each forager is in one 
+of the seven compartments shown (HA, HB, F, etc. denote both 
+the respective compartments and the number of foragers in these 
+compartments). The model predicts a distribution of the foragers 
+among the seven compartments over time as a function of the 
+rate constant (p~) associated with each compartment and the proba- 
+bilities (f~A, fx B, etc.) associated with each of the five branch points. 
+Empirical studies have revealed the behaviors of individual bees. 
+A computer simulation of this model enables us to see the colony- 
+level implications of these individual-level behavior patterns and 
+thereby test our understanding of the way that these behavior pat- 
+terns combine to produce a colony's ability to choose among nectar 
+sources 
+source and return to the pool of follower bees. If, how- 
+ever, she elects to continue with her nectar source, then 
+she has two other options, either (2) to perform recruit- 
+ment dances before heading back to the flowers, or (3) 
+to return to the flowers directly without attempting to 
+recruit nestmates. Many variables of nectar sources - 
+including nectar sweetness, nectar abundance, nectar ac- 
+cessibility, and distance from the hive (Seeley 1986 and 
+references therein) - influence foragers as they choose 
+among these options. But in this model, as in the study 
+of behavioral modulation above, we will work with nec- 
+tar sources that differ only in their sugar concentration. 
+Note too that this model does not consider changes in 
+the response thresholds of the foragers in relation to 
+changes in foraging conditions (Lindauer 1948; Seeley 
+1986, 1989); hence, it represents the process of nectar- 
+source selection under a fixed set of foraging conditions 
+(weather, forage abundance, colony need, etc.). 
+Mathematical structure of the model. The essential fea- 
+tures of the biology just described can be incorporated 
+in a mathematical model of a colony choosing between 
+two nectar sources as follows. First, we assume that at 
+any moment each forager must be in one of the seven 
+compartments shown in Fig. 4. These compartments 
+are: 
+1. HA : unloading nectar from nectar source A 
+2. HB: unloading nectar from nectar source B 
+3. DA: dancing for nectar source A 
+4. DB: dancing for nectar source B 
+5. A : foraging at nectar source A 
+6. B: foraging at nectar source B 
+7. F: following a dancer 
+More formally, a bee is considered in one of these seven 
+compartments until the moment she enters her next com- 
+partment. Thus, for example, the time spent in DA in- 
+cludes both the time spent dancing for anc't the time 
+needed to return to nectar source A. Note that the dance 
+floor (shaded area in Fig. 4) holds three compartments, 
+one (DA) containing bees dancing for source A, one (DB) 
+containing bees dancing for source B, and one (F) hold- 
+ing bees following a dancer. Note too that Fig. 4 consists 
+of two separate cycles, one for each food source, with 
+the follower compartment (F) the only intersection point 
+for the two cycles. Thus bees from one nectar source 
+can switch over to the other source only by passing 
+through the dance floor and following a dancer for the 
+other nectar source. Figure 4 suggests that the dance 
+floor lies at the heart of the decision-making process. 
+Whatever information transfer occurs among the for- 
+agers is assumed to happen here. 
+Two variables affect the proportion of the total for- 
+ager force that is in each of the seven compartments: 
+(1) the rate at which individual foragers move from one 
+compartment to another and (2) the probability that 
+a forager takes one or the other fork at the five branch 
+points (diamonds) in Fig. 4). The fraction of bees leaving 
+a compartment in a given time interval~ is denoted by 
+the appropriate rate constant Pi. For example, the rate 
+constant for bees leaving compartment A is P3 and the 
+fraction of the bees at nectar source A that leave in 
+a time interval At is equal to p3At. The values of the 
+rate constants pi will be calculated from experimental 
+data in the next section. 
+Now let us consider what determines the probabilities 
+of the different behaviors at each of the five branch 
+points in Fig. 4. The first branch point occurs after a 
+bee has unloaded her nectar in the hive. At this point 
+
+
+===== PAGE 9 =====
+Table 2. Parameter values for the model of a colony choosing between two nectar sources, 
+to the 2.50-mol/1 and the 0.75-mol/1 feeders, respectively. For full definitions of the parameters, 
+285 
+as shown in Fig. 1. A and B correspond 
+see the text and Fig. 4 
+Parameter: definition Value Reference 
+T1 : time from start of unloading to start of following, dancing, or foraging, A foragers 1.0 min 
+T2 : time from start of dancing to start of foraging, A foragers 1.5 rain 
+T~ : time from start of foraging to start of unloading, A foragers 2.5 min 
+T~ : time from start of following dancers to start of foraging, A and B foragers 60 rain 
+Ts : time from start of unloading to start of following, dancing, or foraging, B foragers 3.0 min 
+T6 : time from start of dancing to start of foraging, B foragers 2.0 rain 
+T~ : time from start of foraging to start of unloading, B foragers 3.5 min 
+f~ : probability of abandoning A, per foraging trip 0.00 
+f~: probability of abandoning B, per foraging trip 0.04 
+fd A : probability of dancing for A 1.00 
+fe~: probability of dancing for B 0.I5 
+Table 1" 
+Table 1 
+Table 1 
+Seeley and Visscher 1988 b 
+Table 1 ~ 
+Table 1 
+Table 1 
+Table 1 
+Table 1 ~ 
+Table 1 
+Table 1 
+a Since the probability of dancing upon return from A is 1.00, T1 can be more precisely defined as the time from start of unloading 
+to start of dancing. Conversely, since the probability of dancing upon return from B is near zero, Ts can be defined as essentially 
+the time from start of unloading to start of following or foraging 
+b This paper reports that in order to find a rich patch of flowers by following dances, on average a bee spends a total of 121 rain 
+outside the hive searching for targets indicated by dances. The total time spent inside and outside the hive will be somewhat greater 
+still. The value given here, 60 rain, is less than these estimates because in the Fig. 1 experiment the recruitment targets (feeders) were 
+only 400 m from the hive, whereas in Seeley and Visscher (1988) the recruitment targets (natural flower patches) were on average 
+1600 m from the hive 
+c fx for the 0.75-mol/1 feeder was calculated as follows. Table I shows that a bee's probability of continuing to visit (=not abandoning) 
+a 0.75-mol/1 feeder after 30 rain was approximately 0.80. Because each forager made approximately 5 trips to the feeder in 30 min, 
+this implies that (I -p)S= 0.80, where p = the probability of abandoning the feeder per trip. Solving this equation yields p = 0.04 
+she m a y  a b a n d o n  the nectar source and return to the 
+dance floor to follow another dancer. The probability 
+that a bee does so is denoted by the function fx, which 
+we call the abandoning function. In general, the value 
+offx will depend on the profitability of the nectar source; 
+thus, fx A denotes the probability that a bee leaving HA 
+will abandon nectar source A and become a follower 
+bee (F). Abandonment diminishes the number of bees 
+committed to a nectar source and provides a pool of 
+uncommitted bees that follow dancers for one nectar 
+source or the other. 
+The second branch point applies to bees that did 
+not abandon their nectar source. It determines what pro- 
+portion of these bees will dance for their nectar source. 
+Although at this branch point there is no filtering of 
+bees away from nectar sources, the outcome of this 
+branch point affects the probability of a follower bee 
+following dances for each nectar source, as described 
+hereafter. The probability that a bee becomes a dancer 
+for her nectar source is denoted by the function re. The 
+function fd is called the dancing function and, as with 
+the abandoning function, its value for a given bee de- 
+pends on the profitability of the bee's nectar source, 
+with feA denoting the probability of dancing by a bee 
+foraging at nectar source A. 
+The third,branch point arises when bees follow 
+dancers for one or another nectar source. The probabili- 
+ty of a follower bee following dances for nectar source 
+A or B is denoted by the functionf~ A or fl ~, respectively, 
+which we call the following function. A recent study 
+(Seeley and Towne, in preparation) has shown that fol- 
+lower bees simply follow the first dancer they encounter 
+and that encounters occur at random. Hence, in the situ- 
+ation of just two nectar sources, A and B, the likelihood 
+of encountering and following a dancer for nectar source 
+A (fl A) at any particular moment can be roughly estimat- 
+ed by DA/(DA + De). However, because Di includes both 
+bees dancing for i and bees that have ceased dancing 
+but are still in the dancing compartment, the ratio DA/ 
+(DA + D~) will often be a poor estimate off1A. For exam- 
+ple, if nectar source A is scarcely danced for but its 
+foragers linger in the hive without dancing, then the 
+ratio DA/(DA+D~) will greatly overestimate the likeli- 
+hood of encountering a dancer for A. It can be much 
+improved by multiplying each Di in the ratio by the 
+proportion of time that foragers in the dancing compart- 
+ment i are actually dancing, which we will denote as 
+"~i' 
+For simplicity in making calculations with the model, 
+we make three further assumptions: (1) the total number 
+of bees foraging is fixed, (2) all bees begin foraging si- 
+multaneously, and (3) all the foragers go to either one 
+of two nectar sources. In the appendix we present the 
+set of differential equations that describes this model 
+of colony-level decision-making. 
+Model parameters. We now calculate estimates of the 
+model's parameters for the situation shown in Fig. 1, 
+namely a colony choosing between two equidistant su- 
+crose solution feeders that are identical, except that one 
+contains a 0.75-mol/1 solution and the other contains 
+a 2.50-mol/1 solution. Let us first consider the rate con- 
+stants. These can be calculated from the time required 
+for a bee to get from one compartment to another (i.e., 
+the time spent in the compartment plus the time to get 
+to the next compartment). Each rate constant, p~, is 
+equal to l/T,., where each T; is the time required to get 
+from the relevant compartment to next. Values of T~ 
+
+
+===== PAGE 10 =====
+286 
+appropriate to the foraging situation shown in Fig. 1 
+are given in Table 2. 
+The abandoning function (fx) and the dancing func- 
+tion (fe) include many variables - such as the profitability 
+of the nectar source, the colony's need for nectar, and 
+the weather conditions - hence it is difficult to give a 
+general description of these functions. However, the 
+values of these functions have been measured (see Ta- 
+ble 1) for a set of conditions virtually identical to those 
+under which the Fig. 1 data were recorded: feeders 
+400 m from the hive, high colony need for nectar, sparse 
+ambient forage, and fair weather. We used the data in 
+Table 1 (with appropriate interpolations and extrapola- 
+tions) to determine the values offx andfe that are appro- 
+priate to simulating the colony's choice between 2.50- 
+tool/1 and 0.75-mol/1 nectar sources as shown in Fig. 1 
+(see Table 2). 
+Values of the following function, fl, were calculated 
+for the two nectar sources using the more accurate of 
+the two methods just described. Thus, each Di was first 
+discounted by the factor % the proportion of time in 
+Di that was actually spent in dancing. Each q was calcu- 
+lated by taking the product of the average number of 
+dance circuits and the average circuit time, and dividing 
+it by the total time a bee is in the compartment D~ (T~ 
+and T6 for compartments DA and D,, respectively). Gi- 
+ven that the bees from the 2.50-mol/1 and 0.75-mol/1 
+feeders danced on average 14 and 1 circuits, respectively 
+(see Table 1), and each dance circuit for a 400-m target 
+requires approximately 2.4 s (von Frisch 1967), and gi- 
+ven values of Tz=90 s and T6 = 120 s (see Table 2), this 
+yields values of ZA=0.38 and z,=0.02, where A and 
+B represent the 2.50- and 0.75-mol/1 feeders. 
+Results of the model. Figure 5 shows the pattern of simu- 
+lated colonial decision-making obtained by numerical 
+integration of the model's equations with the following 
+starting conditions: A and B= 11, DA and DB= 1, HA 
+and HB = 0, and F= 101. These values correspond closely 
+to the starting conditions for the experiment shown in 
+Figs. 1 and 2 in that at 8 : 00 a.m. on 19 June there were 
+approximately 12 bees committed to each feeder, and 
+during the course of the day a total of approximately 
+125 different bees visited the two feeders. The pattern 
+generated by the model closely resembles the one gener- 
+ated by the colony of bees; compare Fig. 5 with Fig. 2. 
+As in the case of the experimental data, the plot of the 
+model's results shows consistent increases in the number 
+of foragers on whichever feeder provided a 2.50-mol/1 
+sugar solution, and consistent decreases at the 0.75-mol/1 
+feeder. What is especially important is the comparison 
+between the experimental data and the model's predic- 
+tions for the afternoon of 19 June. This is because the 
+starting conditions were nearly matched for the field 
+and the model for this time period - 12 and 3 bees 
+committed to the real and simulated north feeder 
+(2.50 mol/1), and 90 and 119 bees committed to the real 
+and simulated south feeder (0.75 mol/1). As the after- 
+noon progressed, both in the field and in the computer, 
+the number of bees foraging from the north feeder in- 
+North: 0.75 mol/L 2.50 mol/L 
+South: 2.50 mol/L 0.75 mol/I_ 
+~ 100 North feeder bees & 
+R ._ co 
+o_ 
+,o 50 
+ob 
+~_ 
+10 12 2 4 
+Time of day 
+Fig. 5. An example of the nectar-source selection by honey bee 
+colonies predicted by the model shown in Fig. 4. For this simula- 
+tion the modeI's parameters were adjusted to correspond to the 
+situation shown in Figs. 1 and 2, namely a colony choosing between 
+two equidistant (400-m) feeders offering either a 0.75 or a 2.50-mol/ 
+1 sucrose solution ad libitum. The forager group size for each feeder 
+equals the sum of the bees dancing for the feeder (DA or De), 
+the bees at the feeder (A or B), and the bees unloading nectar 
+from the feeder (HA or H,). In this simulation, as in reality, the 
+colony always focused the vast majority of its foraging effort on 
+the richer feeder, and was able to respond rapidly to a reversal 
+in the location of the richer feeder. This result supports the model 
+of colony-level decision-making shown in Fig. 4 
+Follower bees 
+South feeder bees 
+creased sigmoidally while those foraging from the south 
+feeder decreased exponentially. The maximum rates of 
+increase at the north feeder were 34 and 18 bees/30 min 
+for the experimental and simulation results, respectively, 
+and the corresponding maximum rates of decrease at 
+the south feeder were -19 and -30 bees/30 min. The two 
+sets of results show a less close match in the morning. 
+This is because in the field the north feeder was loaded 
+with a 1.00 rather than a 0.75-mol/1 solution, in order 
+to prevent total abandonment of the north feeder, 
+whereas in the simulation the north feeder was loaded 
+with a 0.75-mol/1 solution, in order to keep the simula- 
+tion simple. Also, in the field the bees did not begin 
+foraging simultaneously, whereas in the simulation they 
+all began at 8:00 a.m. sharp. 
+Discussion 
+How does the ability of a honey bee colony to choose 
+among nectar sources emerge from the behaviors of 
+thousands of bees? This question, which is the heart 
+of this study, is just one form of the general question 
+of self-organization in biology (Pattee 1976; Nicolis and 
+Prigogine 1977; Haken 1978): how does the adaptive 
+structure and functioning of a living system arise out 
+of the joint actions of its subsystems? Colonies of the 
+advanced social insects express this puzzle especially 
+strongly since they present a clear juxtaposition of two 
+levels of adaptive organization, the colony and the or- 
+ganism, yet it is rarely obvious how the properties of 
+a colony emerge from the collective activities of its con- 
+stituent insects. Fortunately, colonies of social insects 
+
+
+===== PAGE 11 =====
+287 
+are unusually favorable subjects for studies of self-orga- 
+nization because, compared with organisms or cells, their 
+dissection and experimental analysis is relatively easy. 
+Nearly 20 years ago Wilson (1971, p 227) identified the 
+special challenge and opportunity that the social insects 
+offer to understanding biological organization when he 
+wrote "the reconstruction of mass behavior from a 
+knowledge of the behavior of single colony members 
+is the central problem of insect sociology." 
+1. Synthesis of the analysis 
+This investigation began with careful documentation of 
+the adaptive functioning of the whole system, i.e., nectar- 
+source selection by honey bee colonies. Previous studies 
+(Darwin 1877; Butler 1945; Weaver 1979; Visscher and 
+Seeley 1982) had suggested that colonies can selectively 
+exploit rich food sources and can rapidly shift foragers 
+among food sources following changes in the food 
+source array. The present findings strongly confirm these 
+ideas. Even a cursory glance at the exploitation patterns 
+shown in Figs. 1 and 2 reveals these skills. 
+The next step was to explain these colonial foraging 
+patterns in terms of the behaviors of individual bees. 
+Fortunately, these two levels of description are directly 
+bridged by the fact that the colony-level patterns 
+(numbers of foragers allocated to each food source) are 
+a direct result of two processes (recruitment to and aban- 
+donment of food sources) that are rather easily under- 
+stood in terms of bee-level behavior patterns. Hence the 
+key to linking the colonial and organismal descriptions 
+of nectar-source selection was understanding how indi- 
+vidual bees modulate their colony's rates of recruitment 
+and abandonment to different nectar sources in accor- 
+dance with their different levels of profitability. 
+By recording the behaviors of bees visiting a feeder, 
+and periodically changing the profitability of the feeder, 
+we were able to assemble a detailed picture of the multi- 
+dimensional modulation of foraging behavior in relation 
+to nectar source profitability (Table 1). Behaviors that 
+the bees vary include the strength of waggle dancing, 
+the tempo of visits to the food source, and the likelihood 
+of returning to the food source. Other investigators (von 
+Frisch 1967, p 45; Nunez 1966, 1970, 1982) have ana- 
+lyzed subsets of these behavioral variables in a similar 
+fashion and have reported comparable patterns of be- 
+havior modulation in accordance with food source prof- 
+itability. Therefore, we feel that the patterns shown in 
+Table 1 are general for bees. In broad terms, as food 
+source profitability increases, the duration of dancing 
+increases, the tempo of foraging increases, and the prob- 
+ability of abandoning the food source decreases. 
+This begs the question: how does a forager assess 
+the profitability of its nectar source? Three hypotheses 
+(H1-H3) were examined. The first (H1) is that each bee 
+makes this assessment by visiting several nectar sources 
+and directly comparing its nectar source with others to 
+estimate its relative profitability. A priori this seems im- 
+probable because in nature the flower patches exploited 
+by a colony are widely scattered over an area extending 
+several kilometers from the hive (Visscher and Seeley 
+1982) and are not easily located, even by bees that are 
+directed to the patches by recruitment dances (Esch and 
+Bastian 1970; Mautz 1971; Seeley and Visscher 1988). 
+More importantly, our data contradict HI, at least as 
+a mechanism commonly used by bees. Of 117 bees in- 
+volved in generating the pattern of selective exploitation 
+on the morning of 19 June (see Figs. 1 and 2), only 
+2 visited more than one nectar source. 
+What about the second hypothesis (H2), that the 
+food storer bees compare the profitabilities of different 
+nectar loads and indicate (by the willingness to accept 
+nectar) to each forager the relative profitability of its 
+forage? According to this hypothesis, nectar source qual- 
+ity is assessed by bees simply as a function of the sugar 
+concentration of the nectar, since this is evidently all 
+that a food storer bee knows about a nectar source. 
+But as the experiment reported here (Fig. 3) has shown, 
+bees evaluate nectar source profitability as a function 
+of variables besides sugar concentration, such as distance 
+from the hive. This result falsifies H2. This conclusion 
+is reinforced by the reports of Boch (1956) and Wad- 
+dington (1982, 1985) that foragers adjust the strength 
+of dancing in response to multiple variables affecting 
+the energetic profitability of a nectar source - such as 
+distance from the hive, difficulty of obtaining the nectar, 
+and nectar abundance - not just sugar concentration. 
+By process of elimination, our results support the 
+third hypothesis (H3) that each forager independently 
+assesses the profitability of its nectar source and does 
+so without reference to other nectar sources. This infor- 
+mation processing evidently works as follows. In visiting 
+a flower patch, a nectar forager takes in information 
+about the energetic gains and costs associated with for- 
+aging at the patch - as determined by such variables 
+as the distance from the hive, sugar concentration of 
+the nectar, and nectar abundance - and integrates this 
+information to arrive at an estimate of the overall ener- 
+getic profitability of its patch. Each forager's nervous 
+system is evidently calibrated so that it knows whether 
+this level of profitability is low, high, or some point 
+in between. Nectar sources that rank low will generally 
+elicit abandoment of the source, and nectar sources that 
+rank high will generally elicit recruitment to the source, 
+though the precise levels of profitability that are the 
+thresholds for abandonment and recruitment are ad- 
+justed by the foragers as a function of other variables 
+independent of any one nectar source, such as the col- 
+ony's nutritional status (Lindauer 1948; Seeley 1989), 
+the seasonal forage availability (Lindauer 1948; Seeley 
+1986), and the weather conditions (Schufi 1952; Boch 
+1956). If all the foragers in a colony have shared rules 
+for determining the profitability of nectar sources and 
+for adjusting the response thresholds, then even though 
+the foragers operate independently and with limited in- 
+formation, they will generate a coherent colony-level re- 
+sponse to different food sources, wherein better food 
+sources are recruited to and heavily exploited while 
+poorer ones are abandoned. To be sure, the details re- 
+main obscure about the information processing inside 
+a bee as it assesses the profitability of a nectar source, 
+
+
+===== PAGE 12 =====
+288 
+especially how this calculation is performed by the cen- 
+tral nervous system; however, what is now clear is that 
+each nectar forager makes its own, independent assess- 
+ment of the profitability of its nectar source and that 
+it makes this assessment based only on local information 
+from her particular nectar source. Hence, paradoxically, 
+global order emerges from the actions of many indepen- 
+dent actors, and moreover, none of the actors possesses 
+an overview of the total operation (though they do pos- 
+sess shared information about the rules for assessing nec- 
+tar source profitability and about such variables as the 
+colony's nutritional state and the weather). 
+We now know a good deal about how bees modulate 
+their behavior in relation to nectar source profitability, 
+but is this behavioral modulation, performed by all the 
+foragers in a colony, really sufficient to account for the 
+nectar-source selection ability of the colony as a whole? 
+Evidently it is. The computer simulation of decision- 
+making by a colony wherein each forager simply adjusts 
+her behavior according to the profitability of her nectar 
+source and, when being recruited to a new nectar source, 
+follows a dancer chosen at random from among the 
+dancing foragers, yields patterns of nectar source exploi- 
+tation that are remarkably similar to what was observed 
+experimentally (Figs. 2 and 5). This does not imply that 
+the rather simple model (Fig. 4) underlying these simula- 
+tions contains a complete description of the decision- 
+making process. Nevertheless, the match between the 
+model's predictions and reality certainly suggests that 
+this model captures the essence of the decision-making 
+process. This can be thought of as a kind of natural 
+selection among alternative nectar sources as foragers 
+from higher profitability sources "survive" (continue 
+visiting their source) longer and "reproduce" (recruit 
+other foragers) better than do foragers from lower prof- 
+itability sources. The net result is that the percentage 
+of a colony's forager population associated with a nectar 
+source will automatically increase if the profitability of 
+the nectar source is relatively high, and will inevitably 
+decrease if its profitability is relatively low. Hence, inside 
+a bee hive, as in the natural world in general, the blind 
+process of natural selection generates impressive order, 
+and we need not invoke any higher-level decision-maker 
+(no overseer) to explain this order. 
+2. The rationale for decentralized control 
+This conclusion is important, for it points out that the 
+control of a colony's foraging behavior is highly decen- 
+tralized. Indeed, it seems clear that it is distributed 
+among all of the foragers in the colony, with each bee 
+independently adjusting its behavior to what is appro- 
+priate to its own food source, and the colony-level de- 
+cision-making arising automatically out of the resultant 
+dynamics in recruitment and abandonment. Decentral- 
+ized control of colony functioning has been reported 
+in a number of contexts, including recruitment to food 
+sources in fire ants (Wilson 1962), queen rearing and 
+thermoregulation in honey bees (Baird and Seeley 1983; 
+Heinrich 1985), nest building in polybiine wasps (Jeanne 
+1986), food-source selection in pavement ants (Pasteels 
+et al. 1987a, b), and raiding in army ants (Deneubourg 
+et al. 1989; Franks 1989), to cite just a handful of exam- 
+ples. It seems that distributed control will prove the rule, 
+at least in the advanced eusocial species where colony 
+populations are generally on the order of l03 or larger 
+[there is good evidence of centralized control in the pri- 
+mitively eusocial insects such as paper ~asps, Polistes, 
+where colonies usually contain less than 102 individuals 
+(Reeve and Gamboa 1983)]. Why might this be? 
+More precisely, what factors have favored or disfa- 
+vored the evolution of decentralized control for large 
+societies? Considering first the reasons that would seem 
+to disfavor decentralized control, there is no question 
+that omitting a central authority leaves a group prone 
+to conflicting actions among its members as individuals 
+respond to their different, local situations rather than 
+the shared, global condition of the group as a whole. 
+Colonies of social insects frequently demonstrate this 
+problem, for example, when an ant colony changes nest 
+sites and some workers carry brood out of the old site 
+while others carry them back in again (Wilson 1971, 
+p 224). Also, without anyone supervising a group, redun- 
+dancies within the group are likely to arise, especially 
+for any activity that requires a long time to produce 
+negative feedback effects to regulate the number of indi- 
+viduals undertaking the activity. Furthermore, the ab- 
+sence of a strong central authority within a group prob- 
+ably hampers its ability to amount a rapid, global re- 
+sponse to a critical stress, such as an attack by a preda- 
+tor. On the other hand, distributing the control of a 
+group widely among its members almost certainly en- 
+hances its ability to make a rapid, local response to a 
+stress because it eliminates the need for time-consuming 
+communication between the peripheral sensor/effector 
+individuals and the central decision-making individuals. 
+Also, distributing the control may often make the group 
+less prone to incapacitating damage since the group's 
+functioning will not depend critically on the status of 
+a small subset of supervisory individuals. 
+We suspect, however, that the principal reason that 
+decentralized control has evolved in colonies of ad- 
+vanced social insects is that it is a means for a society 
+to achieve a high degree of organization without highly 
+sophisticated communication and computation devices 
+(Hayek 1945; Simon 1981). If the large colonies of social 
+insects were run by a central authority, then each colony 
+would have to possess an elaborate communication net- 
+work so that information about the entire colony could 
+flow adequately to the central planners, and so that 
+orders from the central planners could be transmitted 
+back to the appropriate members of the colony. Equally 
+importantly, the central planning body would have to 
+possess extremely sophisticated information-processing 
+abilities to perform the difficult calculations needed to 
+integrate information about the entire colony and pro- 
+duce orders that would result in a rational allocation 
+of the colony's resources. Both of these complex devices 
+
+
+===== PAGE 13 =====
+289 
+of social coordination are avoided in colonies with de- 
+centralized control wherein individuals make relatively 
+simple decisions using information that is directly at 
+hand. A l t h o u g h  this may seem like a decidedly crude 
+way to build a well organized society, this study of the 
+honey bee society illustrates that it can be remarkably 
+effective. 
+Acknowledgements. This project has been supported by the U.S. 
+National Science Foundation, through grants BNS-8606778 and 
+BNS-8916006 to Tom Seeiey and through a graduate fellowship 
+to Scott Camazir~e-i and by the U.S. Department of Agriculture, 
+through Hatch grant NY(C)-191407. We gratefully acknowledge 
+this support. We also thank Dr. Wolfgang Kirchner (University 
+of Wiirzburg) for suggesting the design of the experiment that 
+tests whether or not food storer bees preferentially unload foragers 
+bearing nectar loads of high sugar concentration (H2). Bill Shields, 
+Director of the Cranberry Lake Biological Station, and everyone 
+else at the CLBS, deserve our deepest gratitude for providing us 
+with a field setting for the experiments that was ideal, both ecologi- 
+cally and psychologically. Finally, one of us (T.D.S) wants especial- 
+ly to thank Mary Eickwort, Oliver Habicht, Scott Kelley, and Sa- 
+mantha Sonnak, who steadfastly tended the feeders during the 
+experiments, despite the heavy attacks by blackflies, and Robin 
+Hadlock Seeley, who made it possible for T.D.S. to go to Cranberry 
+Lake and perform the critical study with the colony of labelled 
+bees despite pressing needs at home. 
+References 
+Baird DH, Seeley TD (1983) An equilibrium theory of queen pro- 
+duction in honeybee colonies preparing to swarm. Behav Ecol 
+Sociobiol 13 : 221-228 
+Boch R (1956) Die Tfinze der Bienen bei nahen und fernen Tracht- 
+quellen. Z Vergl Physiol 38:136-167 
+Butler CG (1.945) The influence of various physical and biological 
+factors of the environment on honeybee activity. An examina- 
+tion of the relationship between activity and nectar concentra- 
+tion and abundance. J Exp Biol 21:5 12 
+Camazine S, Sneyd J (1991) A mathematical model of colony-level 
+nectar source selection by honey bees: self-organization 
+through simple individual rules. J Theor Biol (in press) 
+Darwin CR (1877) The effects of cross and self fertilization in 
+the vegetable kingdom. Appleton, New York 
+Deneubourg JL, Goss S, Franks N, Pasteels JM (1989) The blind 
+leading the blind: modelling chemically mediated army ant raid 
+patterns. J Insect Behav 2:719-725 
+Esch HA, Bastian JA (1970) How do newly recruited honey bees 
+approach a food site ? Z Vergl Physiol 68:175-i 81 
+Franks NR (1989) Army ants: a collective intelligence. Am Sci 
+77:138-145 
+Franks NR, Fletcher CR (1983) Spatial patterns in army ant forag- 
+ing and migration: Eciton burehelli on Barro Colorado Island, 
+Panama. Behav Ecol Sociobiol 12:261-270 
+Frisch K yon (1967) The dance language and orientation of bees. 
+Harvard University Press, Cambridge 
+Haken H (1978) Synergetics an introduction. Springer, New York 
+Berlin Heidelberg 
+Hayek FA (1945) The use of knowledge in society. Am Econ Rev 
+35 : 519-530 
+Heinrich B (1985) The social physiology of temperature regulation 
+in honeybees. Fortschr Zool 31:393~406 
+Hofstadter DR (1979) G6del, Escher, Bach: an eternal golden 
+braid. Basic Books, New York 
+H611dobler B (1981) Foraging and spatiotemporal territories in the 
+honey ant Myrmecocystus mimicus Wheeler (Hymenoptera: 
+Formicidae). Behav Ecol Sociobiol 9 : 301-314 
+Jeanne RL (1986) The organization of work in Polybia occidentalis: 
+costs and benefits of specialization in a social wasp. Behav 
+Ecol Sociobiol 19:333-341 
+Lindauer M (1948) Qber die Einwirkung yon Duft- und Ge- 
+schmacksstoffen sowie anderer Faktoren auf die Tfinze der 
+Bienen. Z Vergl Physiol 31:348~412 
+Lindauer M (1955) Schwarmbienen auf Wohnungssuche. Z Vergl 
+Physiol 37 : 263-324 
+Lindauer M (1961) Communication among social bees. Harvard 
+University Press, Cambridge 
+Lindauer M (1975) Verstfindigung im Bienenstaat. Fischer, Stutt- 
+gart New York 
+Lumsden CJ, H611dobler B (1983) Ritualized combat and intercol- 
+ony communication in ants. J Theor Biol 100:81-98 
+Markl H (1985) Manipulation, modulation, information, cogni- 
+tion: some of the riddles of communication. Fortschr Zool 
+31 : 163-194 
+Mautz D (1971) Der Kommunikationseffekt der Schw~inzelt~inze 
+bei Apis mell~'ca carnica (Pollm.). Z Vergl Physiol 72:192220 
+Nicolis G, Prigogine I (1977) Self-organization in nonequilibrium 
+systems. Wiley, New York 
+Nfifiez JA (1966) Quantitative Beziehungen zwischen den Eigen- 
+schaften yon Futterquellen und dem Verhalten von Sammel- 
+bienen. Z Vergl Physiol 53:142-164 
+Ntifiez JA (1970) The relationship between sugar flow and foraging 
+and recruiting behaviour of honey bees (Apis mellifera L.) Anim 
+Behav 18:527-538 
+Nfifiez JA (1982) Honeybee foraging strategies at a food source 
+in relation to its distance from the hive and the rate of sugar 
+flow. J Apic Res 21:139 150 
+Pasteels JM, Deneubourg J-L, Goss S (1987a) Self-organization 
+mechanisms in ant societies (I): Trail recruitment to newly dis- 
+covered food sources. In: Pasteels JM, Deneubourg J-L (eds) 
+From individual to collective behavior in social insects. Birk- 
+h/iuser, Basel, pp 155-175 
+Pasteels JM, Deneubourg J-L, Goss S (1987b) Transmission and 
+amplification of information in a changing environment: the 
+case of insect societies. In: Prigogine I, Sanglier M (eds) Law 
+of nature and human conduct. G.O.R.D.E.S., Bruxelles, pp 
+129-156 
+Pattee HH (1976) Physical theories of biological co-ordination. 
+In: Grene M, Mendelsohn E (eds) Topics in the philosophy 
+of biology, vol 27. Boston studies in philosophy of science. 
+Reidel, Boston, pp 153-173 
+Reeve HK, Gamboa GJ (1983) Colony activity integration in pri- 
+mitively eusocial wasps: the role of the queen (Polistesfuseatus, 
+Hymenoptera: Vespidae). Behav Ecol Sociobiol 13:63 74 
+Schufi L (1952) Untersuchungen fiber die Einflul3 meteorologische 
+Elemente auf das Verhalten der Bienen. Z Vergl Physio134:258- 
+277 
+Seeley TD (1982) How honeybees find a home. Sci Am 
+247 (Oct): 158-168 
+Seeley TD (1985) Honeybee ecology. Princeton University Press, 
+Princeton 
+Seeley TD (1986) Social foraging by honeybees: how colonies allo- 
+cate foragers among patches of flowers. Behav Ecol Sociobiol 
+19: 343-354 
+Seeley TD (1989) Social foraging in honey bees: how nectar for- 
+agers assess their colony's nutritional status. Behav Ecol Socio- 
+biol 24:181-199 
+Seeley TD, Levien RA (1987) A colony of mind. The beehive as 
+thinking machine. The Sciences 27: 38-43 
+Seeley TD, Visscher PK (1988) Assessing the benefits of coopera- 
+tion in honeybee foraging: search costs, forage quality, and 
+competitive ability. Behav Ecol Sociobiol 22:229-237 
+Simon HA (1981) The sciences of the artificial, 2nd edn. MIT 
+Press, Cambridge 
+Sokal RR, Rohlf FJ (1981) Biometry, 2nd edn. Freeman, San Fran- 
+cisco 
+Visscher PK, Seeley TD (1982) Foraging strategy of honeybee colo- 
+nies in a temperate deciduous forest. Ecology 63:179(~1801 
+
+
+===== PAGE 14 =====
+290 
+Waddington KD (1982) Honey bee foraging profitability and round 
+dance correlates. J Comp Physiol 148 : 297-301 
+Waddington KD (1985) Cost-intake information used in foraging. 
+J Insect Physiol 31:891-897 
+Weaver N (1979) Possible recruitment of foraging honeybees to 
+high-reward areas of the same plant species. J Apic Res 18 : 179- 
+183 
+Wilson EO (1962) Chemical communication among workers of 
+the fire ant Solenopsis saevissima (Fr. Smith). 1. The organiza- 
+tion of mass-foraging. Anim Behav 10:134-147 
+Wilson EO (1971) The insect societies. Harvard University Press, 
+Cambridge 
+Wilson EO, H611dobler B (1988) Dense heterarchies and mass com- 
+munication as the basis of organization in ant colonies. Trends 
+Ecol Evol 3: 65-68 
+Appendix 
+This section presents the set of differential equations that describe 
+the rate of change of the number of bees in each compartment 
+shown in Fig. 4 over time. The symbols in these equations are 
+defined in the text accompanying Fig. 4. For a more detailed discus- 
+sion of the model represented by these equations, see Camazine 
+and Sneyd (1991). 
+dA/dt = (1 -fe~) (1 -f~) p~H~ +p~D~ +f~ Ap~F--paA 
+dDA/dt =f~A(1 --f~) p~H~ --p~D~ 
+dHA/dt=paA -p~Ha 
+dF/dt=f.~ap~HA+ffpsH~-p~F 
+dB/dt = (1 -fe~)(1 -fx ~) p~H~ +p6D~ +f, ~p4F-p,B 
+dDn/dt =fe~(~l -f~n) psHn--p6Dn 
+dHn/dt =pTB-psHn 

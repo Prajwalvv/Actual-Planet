@@ -1,0 +1,244 @@
+
+
+===== PAGE 1 =====
+Title
+Physarum solver : A biologically inspired method of road-network navigation
+Author(s)
+Tero, Atsushi; Kobayashi, Ryo; Nakagaki, Toshiyuki
+Description
+http://www.elsevier.com/wps/find/journaldescription.cws_home/505702/description
+Citation
+Physica A Statistical Mechanics and its Applications, 363(1), 115-119
+https://doi.org/10.1016/j.physa.2006.01.053
+Issue Date
+2006-04-15
+Doc URL
+https://hdl.handle.net/2115/28042
+Type
+journal article
+File Information
+PASMA363-1.pdf
+Hokkaido University Collection of Scholarly and Academic Papers : HUSCAP
+
+===== PAGE 2 =====
+Physarum solver:
+- a biologically inspired method of
+road-network navigation -
+Atsushi Teroa , Ryo Kobayashia , Toshiyuki Nakagakib
+a Department of Mathematical and Life Sciences,
+Hiroshima University, Higashi-Hiroshima 739-8626, Japan
+b Research Institute for Electronic Science,
+Hokkaido University, Sapporo, 060-0812, Japan
+Creative Research Initiative (SOUSEI),
+Hokkaido University, Sapporo, 001-0021, Japan
+Abstract
+We have proposed a mathematical model for the adaptive dynamics of the transport
+network in an amoeba-like organism, the true slime moldPhysarum polycephalum.
+The model is based on physiological observations of this species, but can also be
+used for path-ﬁnding in the complicated networks of mazes and road maps. In this
+paper, we describe the physiological basis and the formulation of the model, as
+well as the results of simulations of some complicated networks. The path-ﬁnding
+method used byPhysarum is a good example of cellular computation.
+Key words: amoeboid movement, navigation algorithm,Physarum polycephalum,
+path-ﬁnding
+PACS: 87.17.Aa, 89.75.Hc, 89.65.Lm, 89.40.-a,
+1 Introduction
+Technologies capable of navigating complex networks such as road traﬃc or
+Internet systems are fundamental to modern society. The most popular tech-
+nique for solving shortest path problems is Dijkstra’s algorithm, which is based
+on combinatorial optimization. Although this method is capable of correctly
+identifying the shortest route, its disadvantage lies in the fact that with an in-
+creasing number of nodes the required computational time becomes excessive.
+To overcome this diﬃculty, two biologically-inspired methods, genetic algo-
+rithm and ant algorithm, have been proposed[1]. However, neither method is
+Preprint submitted to Elsevier Science 21 November 2005
+
+===== PAGE 3 =====
+guaranteed to ﬁnd the shortest route, as both are based on stochastic pro-
+cesses.
+Another requirement for navigation algorithms is that of ﬂexible adaptability
+and re-routing, for example during traﬃc congestion or following accidents.
+The challenge is therefore to develop a method that meets all three require-
+ments of swiftly determining all possible paths, ﬁnding the shortest route,
+and adaptable re-routing. A completely new method that fulﬁlls these crite-
+ria is demonstrated using a mathematical path-ﬁnding model derived from
+observation of an amoeboid organism, the true slime mold.
+The plasmodium of true slime moldPhysarum polycephalumcan tackle a maze
+and some other types of geometrical puzzle, and can successfully optimize
+survival tasks[2–6].The challenge is to extract a mathematical algorithm for
+this natural computation.
+The body of the plasmodium contains a network of tubes, which enables nu-
+trients and chemical signals to circulate through the organism. When food
+sources are presented to a starved plasmodium that has spread over the en-
+tire surface of an agar plate, parts of the organism concentrate over the food
+sources and are connected by only a few tubes. The path connecting these
+parts of the plasmodium is the shortest possible, even in a maze [2,4].
+The physiological mechanism of tube formation has been established: tubes
+thicken in a given direction when shuttle streaming of the protoplasm persists
+in that direction for a certain time [7]. This implies positive feedback between
+ﬂux and tube thickness, as the conductance of the sol is greater in a thicker
+channel. Here we propose a mathematical model for this mechanism.
+Past experiments have revealed two empirical rules describing the changes in
+the tubular structure of the plasmodium: ﬁrst, open-ended tubes are likely to
+disappear; and second, when two or more tubes connect the same two food
+sources, the longer tube tends to disappear [4]. The mathematical model men-
+tioned above has to reproduce these phenomenological rules. After discussing
+the validity of the model, we apply it to the navigation problems posed by a
+complicated road map or large labyrinth.
+2 Mathematical modeling of maze-solving byPhysarum
+Let us describe the nature of the model using the maze illustrated in Fig.
+1. This set-up was used in a maze-solving experiment withPhysarum [2].
+Each segment in the diagram represents a section of tube. Two special nodes,
+corresponding to the food sources, are namedN1 and N2, and the other nodes
+2
+
+===== PAGE 4 =====
+are denoted asN3, N4, N5, and so forth. One of the food source nodes (N1)
+always acts as a source and the other (N2) acts as a sink. The section of tube
+between Ni and Nj is denoted asMij. If several tubes connect the same pair of
+nodes, we place nodes in the centre of the tubes to guarantee the uniqueness
+of the connecting segments.
+Fig. 1. Expression of the maze by graph. Ordinary nodes are indicated by squares
+and the nodes corresponding the food sources are given by circles.
+The variableQij is the ﬂux throughMij from Ni to Nj. Assuming an approx-
+imately Poiseuille ﬂow, the ﬂuxQij is given by:
+Qij = Dij
+Lij
+(pi − pj), (1)
+where pi is a pressure at the nodeNi, Lij is a length of the segmentMij and
+Dij is its conductivity (the reciprocal of its resistance per unit length). By
+considering Kirchhoﬀ’s law at each node, we have:
+∑
+i
+Qij = 0 ( j ̸= 1, 2). (2)
+For the source nodeN1 and the sink nodeN2, the following two equations
+hold:
+∑
+i
+Qi1 + I0 = 0,
+∑
+i
+Qi2 − I0 = 0, (3)
+where I0 is the ﬂux from the source node. It should be noted thatI0 is a
+constant in our model.
+In order to describe the adaptation of tubular thickness, we assume that the
+conductivity Dij changes in time according to the ﬂuxQij as follows:
+3
+
+===== PAGE 5 =====
+d
+dtDij = f(|Qij|) − rDij,
+where f(Q) is a increasing function withf(0) = 0. This equation implies
+that conductivity tends to decline exponentially, but is enhanced by the ﬂux
+through the segment. In this article, we adopt the functional formf(Q) =
+α|Q|. Hence, the adaptation equation is simply expressed by:
+d
+dtDij = α|Qij| −rDij. (4)
+Note that the edge lengthLij’s are kept constant throughout the adaptation
+process. The network Poisson equation for the pressure is derived from the
+equations (1), (2), and (3) as follows:
+∑
+i
+Dij
+Lij
+(pi − pj) =
+
+
+
+−I0 for j = 1,
+I0 for j = 2,
+0 otherwise .
+(5)
+By setting p2 = 0 as a basic pressure level, allpi’s can be determined by
+solving equation system (5), and eachQij = Dij
+Lij
+(pi − pj) is also obtained.
+It should be noted that the variableDij evolves according to the adaptation
+equation (4) while variables such aspi and Qij are determined by solving the
+network Poisson equation (5) deﬁned by theDij’s (andLij’s)at each instant.
+As conductivity is closely related to tube thickness, the disappearance of tubes
+is expressed by zero conductivity of the corresponding tube segment.
+We present one simulation outcome in Fig. 2, which shows the process of
+maze solving by our model. Three groups of dots can be seen in the left upper
+panel. The left group corresponds to segments of dead-end paths, the right
+group corresponds to segments that are deﬁnitely included in the solution
+path, and the central group corresponds to segments that are ’competing’.
+The left group of dots withdraws to the origin, while the right group rises to
+the top right corner, as shown in the central upper panel. The central group
+of dots is in the process of diﬀerentiating into a ’winning’ group and a ’losing’
+group.
+Finally, all the dots (segments) fall into two groups, and the segments belong-
+ing to the ’winning’ group deﬁne the ’solution’.
+4
+
+===== PAGE 6 =====
+Fig. 2. Sequence of maze solving byPhysarum model. The thicknesses of the lines
+in the lower panels represent the conductivities of the corresponding segments of
+tube. The dots in the upper panels represent the values of the pair (|Qij|, Dij) of
+the corresponding segmentMij. The parameters are set atI0 = 1,α = 1 andr = 1.
+3 Application to navigation of road map
+We now demonstrate the application of our model to road navigation. Fig. 3(a)
+) shows the network of US interstate highways. In this case, we assume that we
+are planning a car trip from Seattle to Houston using interstate highways and
+the task is to ﬁnd the shortest route; thePhysarum road navigation system
+will provide the answer. To do so, it is necessary to possess the node data,
+in which each node corresponds to a junction in the highway network, and
+the node connection data that correspond to the distances between connected
+nodes. Once the data are set by selecting the source node (Seattle) and the
+sink node (Houston), it is easy to obtain the shortest path usingPhysarum
+solver. The result is shown in Fig. 3(d). Fig. 3(b) and (c) show that the more
+promising paths tend to survive longer in the path ﬁnding process.
+Suppose that when we drive near Salt Lake City, we are informed that the
+highway between Oklahoma City and Dallas is unavailable because of an acci-
+dent, and rapid recovery cannot be expected, as indicated in 4(a). To take this
+into account, we can again consult thePhysarum road-navigation system. We
+simply need to terminate the path segment corresponding to the unavailable
+highway, reset the source node to Salt Lake City and run the solver again.
+This will yield the optimum path at that point, as shown in Fig. 4(b).
+5
+
+===== PAGE 7 =====
+Fig. 3. (a) The network of US interstate highway is expressed by the thick black
+lines. The starting point (Seattle) and the goal (Houston) are indicated by black
+and white stars, respectively. (b) and (c) The intermediate stages of the solving
+process. (d) The shortest path is obtained.
+Fig. 4. Dynamic determination of the shortest path. (a) The location of the accident
+is marked by a white cross. The network and the source (starting) node are reset,
+maintaining theDij’s values at that time. (b) The shortest path that bypasses the
+location of the accident is obtained.
+6
+
+===== PAGE 8 =====
+4 Summary
+In this article, we have demonstrated a simple mathematical model of path-
+ﬁnding by Physarum, with the ability to solve even a complex maze. The
+model reproduces two steps of tube selection: dead-end cutting and selection
+of the shortest path from among the competing connections. The behaviour of
+this solver depends on the choice of the form of the functionf(Q): a detailed
+analysis of this matter will be presented elsewhere.
+We have also presented an application to road navigation with relatively
+straightforward implementation. This is one simple usage of thePhysarum
+system. In future, we will describe further applications to path-ﬁnding prob-
+lems in other networks.
+Acknowledgments
+RK is supported by Grant-in-aid for Scientiﬁc Research NO. 16654017 of the
+Japan Society for the Promotion of Science. TN is supported by Grant-in-aid
+for Scientiﬁc Research NO. 15300098 of the Japan Society for the Promotion
+of Science.
+References
+[1] E. Bonabeau, M. Dorigo, G. Theraulaz, Swarm Intelligence, Oxford University
+Press (1999).
+[2] T. Nakagaki, H. Yamada, & A. T´oth, Maze-solving by an amoeboid organism,
+Nature 407, 470 (2000).
+[3] T. Nakagaki, Smart behavior of true slime mold in labyrinth, Res. Microbiol.
+152, 767-770 (2001).
+[4] T. Nakagaki, H. Yamada and A. T´oth, Path ﬁnding by tube morphogenesis in
+an amoeboid organism, Biophys. Chem.92, 47-52 (2001).
+[5] T. Nakagaki, H. Yamada and M. Hara, Smart network solution by an amoeboid
+organism, Biophys. Chem.107, 1-5 (2004).
+[6] T. Nakagaki, R. Kobayashi, Y. Nishiura and T. Ueda, Obtaining multiple
+separate food sources: behavioural intelligence in thePhysarum plasmodium,
+Proc. R. Soc. Lond. B271, 2305-2310 (2004).
+[7] T. Nakagaki, H. Yamada and T. Ueda, Interaction between cell shape and
+contraction pattern, Biophys. Chem.84, 195-204 (2000).
+7

@@ -1,0 +1,28 @@
+rules_version = '2';
+
+// ═══════════════════════════════════════════════════════
+// RYLVO Storage Security Rules
+// All storage writes go through the server (Admin SDK).
+// ═══════════════════════════════════════════════════════
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // User avatars — read: public, write: server-only
+    match /avatars/{userId}/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Reports / exports — read: authenticated, write: server-only
+    match /reports/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    // Deny everything else
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

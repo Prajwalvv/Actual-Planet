@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation — Rylvo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ─── DOCS LAYOUT ─────────────────────────── */
+.docs-layout {
+  display: flex;
+  max-width: var(--maxW);
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.docs-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px; /* aligns with pt-nav */
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding-bottom: 40px;
+  border-right: 1px solid var(--border);
+}
+.docs-nav-group {
+  margin-bottom: 32px;
+}
+.docs-nav-title {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text3);
+  margin-bottom: 12px;
+  padding: 0 32px;
+}
+.docs-nav-link {
+  display: block;
+  padding: 8px 32px;
+  font-size: .95rem;
+  color: var(--text2);
+  transition: all var(--transition);
+}
+.docs-nav-link:hover {
+  color: var(--text);
+  background: var(--surface2);
+}
+.docs-nav-link.active {
+  color: var(--text);
+  background: var(--surface2);
+  font-weight: 500;
+  border-right: 3px solid var(--text);
+}
+
+.docs-main-wrapper {
+  flex-grow: 1;
+  min-width: 0;
+  padding: 0 48px;
+}
+.docs-main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+.docs-main h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+.docs-main h2 {
+  font-size: 2rem;
+  margin: 60px 0 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.docs-main h3 {
+  font-size: 1.4rem;
+  margin: 40px 0 16px;
+}
+.docs-main p {
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+.docs-main ul {
+  margin-bottom: 24px;
+  padding-left: 24px;
+  color: var(--text2);
+  font-size: 1.1rem;
+}
+.docs-main li {
+  margin-bottom: 8px;
+}
+
+.endpoint {
+  margin: 24px 0 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+.endpoint > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+  min-height: 56px;
+}
+.endpoint-method {
+  font-family: var(--mono);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .4px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.endpoint-method.get {
+  background: rgba(8,145,178,.1);
+  color: var(--cyan);
+}
+.endpoint-method.post {
+  background: rgba(22,163,74,.1);
+  color: var(--green);
+}
+.endpoint-path {
+  font-family: var(--mono);
+  font-size: .95rem;
+  color: var(--text);
+  word-break: break-word;
+}
+.endpoint-desc {
+  padding: 16px 20px 18px;
+  font-size: .98rem;
+  line-height: 1.6;
+  color: var(--text2);
+}
+.endpoint-params {
+  padding: 0 20px 8px;
+}
+.endpoint-params table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.endpoint-params th {
+  text-align: left;
+  padding: 10px 10px 10px 0;
+  color: var(--text3);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .9px;
+  border-bottom: 1px solid var(--border);
+}
+.endpoint-params td {
+  padding: 12px 10px 12px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  font-size: .92rem;
+  color: var(--text2);
+}
+.endpoint-params td:first-child,
+.endpoint-params td:nth-child(2) {
+  font-family: var(--mono);
+  color: var(--text);
+}
+.docs-main .code-block {
+  position: relative;
+  background: #f8f8fb;
+  border: 1px solid #e8e8ef;
+  border-radius: 14px;
+  padding: 18px 20px;
+  font-family: var(--mono);
+  font-size: .95rem;
+  line-height: 1.65;
+  white-space: pre;
+  overflow-x: auto;
+  color: #2b2e3a;
+}
+.docs-main .code-block code {
+  white-space: pre;
+}
+.docs-main .code-copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #dddfea;
+  background: #fff;
+  color: #3d4354;
+  font-family: var(--mono);
+  font-size: .72rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .18s ease;
+}
+.docs-main .code-copy:hover {
+  border-color: #bfc4d8;
+}
+.docs-main .code-copy.copied {
+  border-color: #16a34a;
+  color: #166534;
+}
+
+.param-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+.param-table th {
+  text-align: left;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text3);
+  padding: 16px;
+  border-bottom: 1px solid var(--border2);
+}
+.param-table td {
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.param-name {
+  font-family: var(--mono);
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.param-type {
+  font-family: var(--mono);
+  font-size: .85rem;
+  color: var(--text3);
+  margin-left: 12px;
+}
+.param-desc {
+  font-size: 1rem;
+  color: var(--text2);
+  margin-top: 8px;
+}
+
+.param-tag {
+  font-family: var(--mono);
+  font-size: .75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--accentBg);
+  color: var(--text);
+}
+
+@media(max-width: 1024px) {
+  .docs-main-wrapper {
+    padding: 0 28px;
+  }
+}
+
+@media(max-width: 768px) {
+  .docs-layout {
+    flex-direction: column;
+  }
+  .docs-sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .docs-main-wrapper {
+    padding: 0 16px;
+  }
+  .docs-main {
+    max-width: 100%;
+  }
+  .endpoint > div:first-child {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .docs-main .code-block {
+    font-size: .86rem;
+    line-height: 1.55;
+    padding: 14px 14px;
+  }
+}
+</style>
+</head>
+<body class="pt-nav">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" style="display: flex; align-items: center; gap: 10px;">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+        <circle cx="8" cy="10" r="1.8" fill="currentColor" opacity="0.7"/>
+        <circle cx="24" cy="10" r="1.8" fill="currentColor" opacity="0.7"/>
+        <circle cx="8" cy="22" r="1.8" fill="currentColor" opacity="0.7"/>
+        <circle cx="24" cy="22" r="1.8" fill="currentColor" opacity="0.7"/>
+        <circle cx="16" cy="6" r="1.8" fill="currentColor" opacity="0.7"/>
+        <circle cx="16" cy="26" r="1.8" fill="currentColor" opacity="0.7"/>
+        <line x1="16" y1="16" x2="8" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="16" y1="16" x2="24" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="16" y1="16" x2="8" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="16" y1="16" x2="24" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="16" y1="16" x2="16" y2="6" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="16" y1="16" x2="16" y2="26" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="8" y1="10" x2="16" y2="6" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+        <line x1="24" y1="10" x2="16" y2="6" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+        <line x1="8" y1="22" x2="16" y2="26" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+        <line x1="24" y1="22" x2="16" y2="26" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+      </svg>
+      <span style="font-weight: 700; font-size: 1.3rem; letter-spacing: 0.5px;">RYLVO</span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Product</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/docs" class="active">Docs</a>
+    </div>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <button class="burger-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Product</a>
+  <a href="/pricing">Pricing</a>
+  <a href="/docs" class="active">Docs</a>
+  <div class="mobile-menu-cta">
+    <a href="/login" class="btn btn-ghost">Log in</a>
+    <a href="/signup" class="btn btn-primary">Get Started</a>
+  </div>
+</div>
+
+<div class="docs-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="docs-sidebar">
+    <div class="docs-nav-group">
+      <div class="docs-nav-title">Getting Started</div>
+      <a href="#overview" class="docs-nav-link">Overview</a>
+      <a href="#auth" class="docs-nav-link">Authentication</a>
+      <a href="#quickstart" class="docs-nav-link">Quick Start</a>
+      <a href="#models" class="docs-nav-link">Models</a>
+    </div>
+    <div class="docs-nav-group">
+      <div class="docs-nav-title">Endpoints</div>
+      <a href="#query" class="docs-nav-link">POST /api/query</a>
+      <a href="#analyze" class="docs-nav-link">GET /api/analyze/:id</a>
+      <a href="#discover" class="docs-nav-link">GET /api/discover</a>
+      <a href="#reports" class="docs-nav-link">GET /api/reports</a>
+      <a href="#correlate" class="docs-nav-link">GET /api/correlate</a>
+      <a href="#health" class="docs-nav-link">GET /api/health</a>
+    </div>
+    <div class="docs-nav-group">
+      <div class="docs-nav-title">Advanced</div>
+      <a href="#websocket" class="docs-nav-link">WebSocket Stream</a>
+      <a href="#tool-calling" class="docs-nav-link">LLM Tool Calling</a>
+      <a href="#errors" class="docs-nav-link">Error Codes</a>
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <div class="docs-main-wrapper">
+    <main class="docs-main">
+
+      <h1 id="overview">API Documentation</h1>
+      <p class="text-muted" style="margin-bottom:32px">Everything you need to integrate real-time swarm intelligence into your application.</p>
+
+    <p>Rylvo exposes a REST API that lets you query a live colony of autonomous agents. Each query deploys thousands of specialized ants that discover, validate, and cross-reference data from multiple sources — then returns structured intelligence with conviction scores.</p>
+
+    <div style="margin:24px 0">
+      <span class="badge badge-accent">Base URL</span>
+      <div class="code-block" style="margin-top:16px;font-size:1rem">https://api.rylvo.dev/api</div>
+    </div>
+
+    <!-- AUTH -->
+    <h2 id="auth">Authentication</h2>
+    <p>All requests require an API key. Include it in the <code style="color:var(--accent2)">Authorization</code> header:</p>
+    <div class="code-block">
+<span class="keyword">Authorization</span>: <span class="string">Bearer sk_live_your_api_key_here</span>
+    </div>
+    <p>Generate your API key from the <a href="/console">Developer Console</a>. Keep it secret — it grants full access to your account's credits.</p>
+
+    <!-- QUICKSTART -->
+    <h2 id="quickstart">Quick Start</h2>
+    <p>Query the swarm in one API call. Runtime is query-driven: the engine auto-starts for <code>/api/query</code> and auto-stops after 120s idle.</p>
+    <div class="code-block">
+<span class="comment">// Node.js / TypeScript</span>
+<span class="keyword">const</span> res = <span class="keyword">await</span> fetch(<span class="string">'https://api.rylvo.dev/api/query'</span>, {
+  method: <span class="string">'POST'</span>,
+  headers: {
+    <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span>,
+    <span class="string">'Authorization'</span>: <span class="string">`Bearer ${process.env.SWARM_API_KEY}`</span>
+  },
+  body: JSON.stringify({
+    query: <span class="string">"What entities are showing unusual activity?"</span>,
+    model: <span class="string">"discover"</span>
+  })
+});
+
+<span class="keyword">const</span> data = <span class="keyword">await</span> res.json();
+console.log(data.data.topReports);
+    </div>
+
+    <h3>Python</h3>
+    <div class="code-block">
+<span class="keyword">import</span> requests
+
+res = requests.post(
+    <span class="string">"https://api.rylvo.dev/api/query"</span>,
+    headers={<span class="string">"Authorization"</span>: <span class="string">f"Bearer {API_KEY}"</span>},
+    json={<span class="string">"query"</span>: <span class="string">"What's trending right now?"</span>, <span class="string">"model"</span>: <span class="string">"full"</span>}
+)
+
+<span class="keyword">for</span> report <span class="keyword">in</span> res.json()[<span class="string">"data"</span>][<span class="string">"topReports"</span>]:
+    print(f<span class="string">"{report['locationId']}: {report['polarity']} ({report['conviction']:.2f})"</span>)
+    </div>
+
+    <!-- MODELS -->
+    <h2 id="models">Models</h2>
+    <p>Each model biases the adaptive planner toward different discovery/corroboration strategies. Choose based on your use case:</p>
+    <table class="table" style="margin:16px 0">
+      <thead><tr><th>Model</th><th>Credits</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><td><code style="color:var(--accent2)">discover</code></td><td>1</td><td>Broad exploration, trending entities, new sources</td></tr>
+        <tr><td><code style="color:var(--accent2)">precise</code></td><td>3</td><td>Deep, cross-validated analysis on specific entities</td></tr>
+        <tr><td><code style="color:var(--accent2)">correlate</code></td><td>3</td><td>Cross-entity pattern detection, convergences</td></tr>
+        <tr><td><code style="color:var(--accent2)">sentiment</code></td><td>1</td><td>Social signals, crowd mood, opinion mining</td></tr>
+        <tr><td><code style="color:var(--accent2)">full</code></td><td>5</td><td>All castes at max. Discovery + precision + correlation</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Model Wait Limits</h3>
+    <p><code>timeout</code> is validated per model. If timeout is out of range, the API returns <code>400</code> with model-specific bounds.</p>
+    <table class="table" style="margin:16px 0">
+      <thead><tr><th>Model</th><th>Min (s)</th><th>Default (s)</th><th>Max (s)</th></tr></thead>
+      <tbody>
+        <tr><td><code style="color:var(--accent2)">discover</code></td><td>20</td><td>45</td><td>120</td></tr>
+        <tr><td><code style="color:var(--accent2)">precise</code></td><td>15</td><td>35</td><td>90</td></tr>
+        <tr><td><code style="color:var(--accent2)">correlate</code></td><td>20</td><td>45</td><td>120</td></tr>
+        <tr><td><code style="color:var(--accent2)">sentiment</code></td><td>10</td><td>25</td><td>60</td></tr>
+        <tr><td><code style="color:var(--accent2)">full</code></td><td>20</td><td>45</td><td>120</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ENDPOINTS -->
+    <h2 id="query">POST /api/query</h2>
+    <p>The primary endpoint. Query the swarm with natural language and/or specific topics/entities. Runtime is query-driven with per-model shard pools: shards auto-start on demand, route by load, and auto-stop after idle.</p>
+    <div class="endpoint">
+      <div><span class="endpoint-method post">POST</span><span class="endpoint-path">/api/query</span></div>
+      <div class="endpoint-desc">Returns topic resolutions, evidence, execution planning, source coverage, and runtime metadata for your query.</div>
+      <div class="endpoint-params">
+        <table>
+          <thead><tr><th>Parameter</th><th>Type</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>query</td><td>string</td><td>Natural language query. E.g. "What's showing unusual activity?"</td></tr>
+            <tr><td>symbols</td><td>string[]</td><td>Specific topics/entities/phrases to resolve. E.g. ["smart drugs", "India", "AI chip export controls"]</td></tr>
+            <tr><td>model</td><td>string</td><td>Swarm model to use for this query. If omitted: running model (if allowed) else plan default (<code style="color:var(--accent2)">discover</code> on free, <code style="color:var(--accent2)">full</code> on paid plans).</td></tr>
+            <tr><td>depth</td><td>string</td><td><code style="color:var(--accent2)">quick</code> | <code style="color:var(--accent2)">standard</code> | <code style="color:var(--accent2)">deep</code></td></tr>
+            <tr><td>timeout</td><td>number</td><td>How long the client can wait (seconds). Must be within model-specific min/max bounds.</td></tr>
+            <tr><td>stream</td><td>boolean</td><td>If <code>true</code> or <code>Accept: text/event-stream</code> is used, the server emits lifecycle/evidence SSE events until final output.</td></tr>
+            <tr><td>terrainHints</td><td>string[]</td><td>Optional terrain planner hints: <code>news</code>, <code>forum</code>, <code>docs</code>, <code>academic</code>, <code>company</code>, <code>general-web</code>, <code>social-signal</code>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Query Response Contract</h3>
+    <p><code>POST /api/query</code> returns structured topic resolutions, evidence, execution planning, and coverage metadata so LLM clients can reason about value even when exact symbols are missing.</p>
+    <table class="table" style="margin:16px 0">
+      <thead><tr><th>Field</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><code>data.topicResolutions[]</code></td><td>Primary per-input topic resolution with <code>status</code> in <code>exact</code> | <code>phrase_match</code> | <code>alias_match</code> | <code>fuzzy_match</code> | <code>related_only</code> | <code>not_found</code>, plus evidence ids, alternatives, and next actions.</td></tr>
+        <tr><td><code>data.evidence[]</code></td><td>Normalized evidence extracted from public-web sources. Includes domain, terrain, entities, phrases, claims, freshness, and confidence.</td></tr>
+        <tr><td><code>data.executionPlan</code></td><td>Terrain plan, provider allocation, breed mix, and phase budgets chosen for this query.</td></tr>
+        <tr><td><code>data.sourceCoverage</code></td><td>How much of the public web was covered: evidence count, domain count, blocked URLs, provider hits, terrain hits, and promoted topics.</td></tr>
+        <tr><td><code>data.queryMeta.coverage</code></td><td>Coverage KPI block: <code>requestedSymbols</code>, <code>exactCount</code>, <code>resolvedCount</code>, <code>relatedOnlyCount</code>, <code>notFoundCount</code>, <code>coverageRatio</code>, <code>usefulnessScore</code>.</td></tr>
+        <tr><td><code>data.queryMeta</code></td><td>Runtime metadata: model requested/used, timeout requested/accepted/bounds, queue position/wait, auto-start/cold-start, elapsed time, ISO responded timestamp, partial flag, corroboration totals, and streaming stats.</td></tr>
+      </tbody>
+    </table>
+    <div class="code-block">
+{<br/>
+  <span class="string">"ok"</span>: <span class="keyword">true</span>,<br/>
+  <span class="string">"data"</span>: {<br/>
+    &nbsp;&nbsp;<span class="string">"topicResolutions"</span>: [<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;{ <span class="string">"input"</span>: <span class="string">"smart drugs"</span>, <span class="string">"status"</span>: <span class="string">"related_only"</span>, <span class="string">"alternatives"</span>: [...] }<br/>
+    &nbsp;&nbsp;],<br/>
+    &nbsp;&nbsp;<span class="string">"evidence"</span>: [ { <span class="string">"domain"</span>: <span class="string">"news.ycombinator.com"</span>, <span class="string">"terrain"</span>: <span class="string">"forum"</span> } ],<br/>
+    &nbsp;&nbsp;<span class="string">"executionPlan"</span>: { <span class="string">"terrains"</span>: [...], <span class="string">"breedPlan"</span>: [...] },<br/>
+    &nbsp;&nbsp;<span class="string">"queryMeta"</span>: {<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"modelUsed"</span>: <span class="string">"discover"</span>,<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"queuePosition"</span>: <span class="number">1</span>,<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"coverage"</span>: { <span class="string">"coverageRatio"</span>: <span class="number">0.75</span>, <span class="string">"usefulnessScore"</span>: <span class="number">0.68</span> },<br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"streaming"</span>: { <span class="string">"enabled"</span>: <span class="keyword">true</span>, <span class="string">"eventCount"</span>: <span class="number">7</span> }<br/>
+    &nbsp;&nbsp;}<br/>
+  }<br/>
+}
+    </div>
+
+    <h2 id="analyze">GET /api/analyze/:locationId</h2>
+    <p>Deep analysis on a single entity. Returns a full <code style="color:var(--accent2)">IntelligenceReport</code> with signals, correlations, and quality assessment.</p>
+    <div class="endpoint">
+      <div><span class="endpoint-method get">GET</span><span class="endpoint-path">/api/analyze/Tesla</span></div>
+      <div class="endpoint-desc">Returns polarity, conviction, confidence, signals, correlations, data quality for one entity.</div>
+    </div>
+
+    <h2 id="discover">GET /api/discover</h2>
+    <div class="endpoint">
+      <div><span class="endpoint-method get">GET</span><span class="endpoint-path">/api/discover?limit=20</span></div>
+      <div class="endpoint-desc">Returns recently discovered entities and their latest reports, sorted by activity.</div>
+    </div>
+
+    <h2 id="reports">GET /api/reports</h2>
+    <div class="endpoint">
+      <div><span class="endpoint-method get">GET</span><span class="endpoint-path">/api/reports?polarity=negative&amp;minConviction=0.5&amp;limit=10</span></div>
+      <div class="endpoint-desc">Returns all intelligence reports. Filterable by polarity, minimum conviction, and limit.</div>
+    </div>
+
+    <h2 id="correlate">GET /api/correlate</h2>
+    <div class="endpoint">
+      <div><span class="endpoint-method get">GET</span><span class="endpoint-path">/api/correlate</span></div>
+      <div class="endpoint-desc">Returns cross-entity correlations: convergences, divergences, cascades detected by the swarm.</div>
+    </div>
+
+    <h2 id="health">GET /api/health</h2>
+    <div class="endpoint">
+      <div><span class="endpoint-method get">GET</span><span class="endpoint-path">/api/health</span></div>
+      <div class="endpoint-desc">Colony health report: health score, signal-to-noise ratio, stale locations, active locations.</div>
+    </div>
+
+    <!-- WEBSOCKET -->
+    <h2 id="websocket">WebSocket Stream</h2>
+    <p>Connect to the real-time event stream for live updates:</p>
+    <div class="code-block">
+<span class="keyword">const</span> ws = <span class="keyword">new</span> WebSocket(<span class="string">'wss://api.rylvo.dev/ws'</span>);
+
+ws.onmessage = (event) => {
+  <span class="keyword">const</span> msg = JSON.parse(event.data);
+  <span class="comment">// msg.type: 'tick' | 'discovery' | 'emergence' | 'info' | 'error'</span>
+  console.log(msg.type, msg.data);
+};
+    </div>
+
+    <!-- TOOL CALLING -->
+    <h2 id="tool-calling">LLM Tool Calling</h2>
+    <p>Register <code style="color:var(--accent2)">swarm_query</code> as a tool in your LLM to give it real-time awareness:</p>
+    <div class="code-block">
+<span class="comment">// OpenAI function calling format</span>
+{
+  <span class="string">"name"</span>: <span class="string">"swarm_query"</span>,
+  <span class="string">"description"</span>: <span class="string">"Query the open-web adaptive swarm for evidence-ranked topic intelligence under a strict timeout budget"</span>,
+  <span class="string">"parameters"</span>: {
+    <span class="string">"type"</span>: <span class="string">"object"</span>,
+    <span class="string">"properties"</span>: {
+      <span class="string">"query"</span>: { <span class="string">"type"</span>: <span class="string">"string"</span> },
+      <span class="string">"symbols"</span>: { <span class="string">"type"</span>: <span class="string">"array"</span>, <span class="string">"items"</span>: { <span class="string">"type"</span>: <span class="string">"string"</span> } },
+      <span class="string">"model"</span>: { <span class="string">"type"</span>: <span class="string">"string"</span>, <span class="string">"enum"</span>: [<span class="string">"discover"</span>,<span class="string">"precise"</span>,<span class="string">"correlate"</span>,<span class="string">"sentiment"</span>,<span class="string">"full"</span>] },
+      <span class="string">"timeout"</span>: { <span class="string">"type"</span>: <span class="string">"number"</span>, <span class="string">"description"</span>: <span class="string">"Client wait budget in seconds (model-specific bounds)"</span> },
+      <span class="string">"stream"</span>: { <span class="string">"type"</span>: <span class="string">"boolean"</span> },
+      <span class="string">"terrainHints"</span>: { <span class="string">"type"</span>: <span class="string">"array"</span>, <span class="string">"items"</span>: { <span class="string">"type"</span>: <span class="string">"string"</span> } }
+    }
+  }
+}
+    </div>
+    <p>Fetch the full schema programmatically: <code style="color:var(--accent2)">GET /api/tool-definition</code></p>
+
+    <!-- ERRORS -->
+    <h2 id="errors">Error Codes</h2>
+    <table class="table" style="margin:16px 0">
+      <thead><tr><th>Status</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><code>200</code></td><td>Success</td></tr>
+        <tr><td><code>400</code></td><td>Bad request — missing or invalid parameters</td></tr>
+        <tr><td><code>401</code></td><td>Unauthorized — invalid or missing API key</td></tr>
+        <tr><td><code>404</code></td><td>Entity not found — swarm hasn't discovered this entity yet</td></tr>
+        <tr><td><code>429</code></td><td>Rate limited, out of credits, or runtime backpressure (queue saturation with retry hint)</td></tr>
+        <tr><td><code>503</code></td><td>Runtime unavailable for non-query endpoints (engine will auto-start on next <code>/api/query</code>)</td></tr>
+      </tbody>
+    </table>
+
+    <p>All error responses follow the format:</p>
+    <div class="code-block">
+{ <span class="string">"ok"</span>: <span class="keyword">false</span>, <span class="string">"error"</span>: <span class="string">"Description of what went wrong"</span> }
+    </div>
+
+    <div style="height:80px"></div>
+    </main>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="font-size:1.4rem; display: flex; align-items: center; gap: 12px;">
+          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+            <circle cx="8" cy="10" r="1.8" fill="currentColor" opacity="0.7"/>
+            <circle cx="24" cy="10" r="1.8" fill="currentColor" opacity="0.7"/>
+            <circle cx="8" cy="22" r="1.8" fill="currentColor" opacity="0.7"/>
+            <circle cx="24" cy="22" r="1.8" fill="currentColor" opacity="0.7"/>
+            <circle cx="16" cy="6" r="1.8" fill="currentColor" opacity="0.7"/>
+            <circle cx="16" cy="26" r="1.8" fill="currentColor" opacity="0.7"/>
+            <line x1="16" y1="16" x2="8" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+            <line x1="16" y1="16" x2="24" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+            <line x1="16" y1="16" x2="8" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+            <line x1="16" y1="16" x2="24" y2="22" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+            <line x1="16" y1="16" x2="16" y2="6" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+            <line x1="16" y1="16" x2="16" y2="26" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+            <line x1="8" y1="10" x2="16" y2="6" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="24" y1="10" x2="16" y2="6" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="8" y1="22" x2="16" y2="26" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="24" y1="22" x2="16" y2="26" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+          </svg>
+          <span>RYLVO</span>
+        </div>
+        <p>Stigmergic intelligence infrastructure. Real-time, cross-validated data for AI systems.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/">Overview</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/docs">Documentation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rylvo Inc. All rights reserved.</span>
+      <span>Built with swarm intelligence.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.burger-btn');
+    const isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('active', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+</script>
+<script type="module" src="auth-nav.js"></script>
+<script>
+  (() => {
+    const sidebarLinks = document.querySelectorAll('.docs-nav-link');
+    const sections = [];
+
+    sidebarLinks.forEach(link => {
+      const id = link.getAttribute('href')?.replace('#', '');
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (el) sections.push({ id, el, link });
+    });
+
+    function updateActive() {
+      let current = sections[0];
+      const offset = 140;
+
+      for (const section of sections) {
+        if (section.el.getBoundingClientRect().top <= offset) {
+          current = section;
+        }
+      }
+
+      sidebarLinks.forEach(l => l.classList.remove('active'));
+      if (current) {
+        current.link.classList.add('active');
+        current.link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+    }
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href')?.replace('#', '');
+        const target = id && document.getElementById(id);
+        if (target) {
+          window.scrollTo({ top: target.offsetTop - 120, behavior: 'smooth' });
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  (() => {
+    const blocks = document.querySelectorAll('.docs-main .code-block');
+    blocks.forEach((block) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'code-copy';
+      btn.textContent = 'Copy';
+      btn.setAttribute('aria-label', 'Copy code block');
+
+      btn.addEventListener('click', async () => {
+        const clone = block.cloneNode(true);
+        const cloneBtn = clone.querySelector('.code-copy');
+        if (cloneBtn) cloneBtn.remove();
+        const text = clone.innerText.replace(/^\s+|\s+$/g, '');
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.textContent = 'Copied';
+          btn.classList.add('copied');
+          setTimeout(() => {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+          }, 1200);
+        } catch {
+          btn.textContent = 'Failed';
+          setTimeout(() => {
+            btn.textContent = 'Copy';
+          }, 1200);
+        }
+      });
+
+      block.appendChild(btn);
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,638 @@
+
+
+===== PAGE 1 =====
+APPLIED PHYSICAL
+SCIENCES
+ECOLOGY
+Morphogenesis of termite mounds
+Samuel A. Ockoa,1, Alexander Heydeb,1, and L. Mahadevanb,c,d,e,2
+aDepartment of Applied Physics, Stanford University, Stanford, CA 94305; bDepartment of Organismic and Evolutionary Biology, Harvard University,
+Cambridge, MA 02138; cPaulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138; dDepartment of Physics, Harvard
+University, Cambridge, MA 02138; and eKavli Institute for Bionano Science and Technology, Harvard University, Cambridge, MA 02138
+Edited by Simon A. Levin, Princeton University, Princeton, NJ, and approved December 17, 2018 (received for review November 7, 2018)
+Several species of millimetric-sized termites across Africa, Asia,
+Australia, and South America collectively construct large, meter-
+sized, porous mound structures that serve to regulate mound tem-
+perature, humidity, and gas concentrations. These mounds display
+varied yet distinctive morphologies that range widely in size and
+shape. To explain this morphological diversity, we introduce a
+mathematical model that couples environmental physics to insect
+behavior: The advection and diffusion of heat and pheromones
+through a porous medium are modiﬁed by the mound geometry
+and, in turn, modify that geometry through a minimal charac-
+terization of termite behavior. Our model captures the range of
+naturally observed mound shapes in terms of a minimal set of
+dimensionless parameters and makes testable hypotheses for the
+response of mound morphology to external temperature oscilla-
+tions and internal odors. Our approach also suggests mechanisms
+by which evolutionary changes in odor production rate and con-
+struction behavior coupled to simple physical laws can alter the
+characteristic mound morphology of termites.
+termite mound |animal architecture |niche construction |convection |
+porous media
+T
+ermites are highly eusocial insects, and the large, often elab-
+orate mounds of mound-building termite species protect the
+colony and internal nest, while providing responsive control over
+their microenvironment (1, 2). The complex, porous networks
+that colonies construct within termite mounds help to regulate
+gas ﬂow, pheromone dispersion, and humidity, which need to be
+maintained for the specialized purposes of brooding and culti-
+vating the fungal species on which they feed (3, 4). The sculpted
+morphology of a termite mound is frequently characteristic of
+the species or genus, being generally conserved within a given
+species and geography, but strikingly variable across species and
+environments (Fig. 1) (1). For example, the genus Amitermes
+builds colossal wedge-shaped mounds with a primary axis ori-
+ented north–south, a consistent directionality that gives them
+the common name “compass termites,” allowing the internal
+mound temperature to rapidly increase in the morning but avoid
+overheating at midday (5). In contrast, the mounds of Cubiter-
+mes are tall and narrow, while the mounds of Cornitermes are
+small and compact (6). It is thought that these dramatically dif-
+ferent mound sizes and shapes allow termites to adapt to their
+particular environments, but there has been little in terms of
+quantitative evidence to corroborate this.
+Part of the reason for this may be that the physiological ram-
+iﬁcations of termite mounds have only recently been clariﬁed.
+Direct measurement of diurnal variations in ﬂow through the
+mounds of Odontotermes obesus and Macrotermes michaelseni
+shows that a simple combination of geometry, porosity, and
+heterogeneous thermal mass allows mounds to use diurnal ther-
+mal oscillations for another purpose: ventilation, to remove
+humidity and carbon dioxide from the nest (7, 8). To ensure
+successful ventilation in different environments, it is crucial
+that termites construct their mounds in coordination with their
+surrounding conditions. Even between colonies of the same
+species, some termites can adapt the morphology of their mound
+to ﬁt the local environment; Macrotermes bellicosus constructs
+thin-walled, cathedral-shaped mounds in open savannas, for
+example, but thick-walled, dome-shaped mounds in forested
+areas (2).
+Altogether, the impressive scale and adaptability of termite
+mounds begs the question of the mechanism by which they are
+created and maintained. In the absence of a centralized control
+system or coordinating individual, these elaborate but conserved
+mound morphologies result from the collective behavior of ter-
+mites acting only on their perception of local conditions within
+the mound (9). Mound morphogenesis is thus an extreme exem-
+plar of self-organized animal architecture, where global-scale
+collective patterns emerge from locally driven individual behav-
+iors, termed “stigmergy” (10–12). Attempts to quantify these
+processes typically focus on microscopic agent-based models that
+simulate the behavior of a multitude of organisms computation-
+ally (12–16). But since environmental factors, such as temper-
+ature and humidity, and sensory stimuli, including pheromone
+concentrations, vary over slow time scales but long length
+scales, a natural question is that of an effective description on
+these scales.
+The precise biological mechanism by which termite construc-
+tion behavior and mound morphology are coupled is not yet
+fully understood, but a sizable literature of past work typi-
+cally assumes the existence of some information-carrying ﬁeld
+of odor particles, such as secreted pheromones or metabolic
+gases. Proposed mechanisms can be roughly divided into two
+broad categories: the secretion of a templating odor at the nest
+that undergoes diffusion and advection globally throughout the
+mound, and the local deposition of a building pheromone in
+deposited soil pellets that promote further deposition nearby
+(17–19). Templating can assist in the formation of large-scale
+structures, and there exists some experimental evidence that
+construction of the royal chamber is controlled by a pheromone
+Signiﬁcance
+Termite mounds are the result of the collective behavior of ter-
+mites working to modify their physical environment, which in
+turn affects their behavior. During mound construction, envi-
+ronmental factors such as heat ﬂow and gas exchange affect
+the building behavior of termites, and the resulting change in
+mound geometry in turn modiﬁes the response of the inter-
+nal mound environment to external thermal oscillations. Our
+study highlights the principles of self-organized animal archi-
+tecture driven by the coupling of environmental physics to
+organismal behavior and might serve as a natural inspiration
+for the design of sustainable human architectures.
+Author contributions: S.A.O., A.H., and L.M. designed research, performed research,
+analyzed data, and wrote the paper.y
+The authors declare no conﬂict of interest. y
+This article is a PNAS Direct Submission.y
+Published under thePNAS license .y
+1 S.A.O. and A.H. contributed equally to this work.y
+2 To whom correspondence should be addressed. Email: lmahadev@g.harvard.edu.y
+This article contains supporting information online atwww.pnas.org/lookup/suppl/doi:10.
+1073/pnas.1818759116/-/DCSupplemental.y
+Published online February 11, 2019.
+www.pnas.org/cgi/doi/10.1073/pnas.1818759116 PNAS | February 26, 2019 | vol. 116 | no. 9 | 3379–3384
+
+===== PAGE 2 =====
+Fig. 1. Variation in natural termite mound morphologies. Photographs
+show a sample of termite mounds representative of those constructed by
+ﬁve millimetric fungus-harvesting species, labeled at the bottom. Corniter-
+mes cumulans and Cubitermes funifaber images courtesy of Christian Jost
+(Centre de Biologie Int ´egrative, Toulouse, France). Apicotermes lamaniand
+Procornitermes araujoiimages reprinted with permission from ref. 29.
+ﬁeld emitted by the queen, such as chambers and overall mound
+shape (20). At a similarly large scale, carbon dioxide gradi-
+ents may be used as templates in nest construction (21). There
+is, however, only scarce evidence that building pheromones
+are relevant outside of their inﬂuence on the construction of
+smaller-scale structures including pillars and walls (22).
+Here, we present a model for termite mound morphogen-
+esis that results only from the collective behavior of termites
+acting on local information, yet generates distinctive morpholo-
+gies resulting from the interplay of physical and behavioral
+parameters. Our model allows us to explore the potential range
+of mature mound morphology in terms of a limited number
+of parameters and also yields simple scaling relationships for
+mound size, shape, and construction time. Using numerical
+simulations of the governing equations over a wide range of fea-
+sible natural conditions, we follow the geometric variation in
+mound shapes and see that they are consistent with our scal-
+ing predictions as well as naturally observed variation in mound
+morphology.
+Mathematical Model of Mound Morphogenesis
+Our fundamental premise is that the shape of a mound results
+from the collective behavior of termites simultaneously acting
+on and modifying locally changing information. We characterize
+this process as a simple feedback loop of physical and behav-
+ioral dynamics (Fig. 2), an elaboration of the qualitative theories
+of past work (20, 23). An incipient developing mound struc-
+ture determines the ﬂow of heat and air within the mound,
+which are driven by external temperature oscillations. Internal
+airﬂows then transport odor concentrations generated at the
+mound nest throughout the mound interior (24). This odor ﬁeld
+can represent secreted pheromones, metabolic gases such as
+carbon dioxide, or any other information-carrying particle that
+can undergo diffusion and advection within the mound. Ter-
+mite workers adjust their construction behavior in response to
+local odor concentration and modify the mound structure, com-
+pleting the feedback loop. This system governs the dynamics of
+mound morphogenesis until a mature mound size and shape are
+obtained.
+Within the mound environment, our model deﬁnes four dis-
+joint subdomains, which are ( i) the mound interior, which is
+macroporous; (ii) the ground, which consists of the space below
+a speciﬁed ground level that is not part of the mound interior;
+(iii) the surrounding air, which consists of the space above the
+ground level that is not part of the mound interior or wall; and
+(iv) the wall, the boundary between the interior and the air with
+a ﬁxed thickness. In addition, we assume that the termite nest
+is at ground level along the radial center of the mound inte-
+rior; changing the depth of the nest simply rescales the vertical
+dimension of the mound. For geometric and numerical sim-
+plicity, we limit ourselves to the consideration of axisymmetric
+mounds.
+In these domains, we model the evolution of temperature, air-
+ﬂow, and odor ﬁelds as ﬂuids in a porous medium (25). The
+temperature in the mound T(r, t) varies due to thermal conduc-
+tion and ﬂuid convection; heat diffuses within the mound interior
+and wall with constant thermal diffusivity DT and is advected by
+an airﬂow ﬁeld u(r, t) with an advection weight ν, according to
+the advection–diffusion equation
+∂T
+∂t (r, t) =∇·
+[
+DT ∇T(r, t) −νu(r, t) ·T(r, t)
+]
+. [1]
+The advection weight ν parameterizes the relative speed at
+which heat follows the airﬂow within the mound, and of par-
+ticular interest is the thermal conduction limit ν→0, in which
+conduction dominates convection. At the interface between the
+mound wall and air, the temperature ﬂuctuates according to a
+driving diurnal oscillation set by the mound boundary with the
+ambient air:
+Fig. 2. Schematic of model procedures over a single iteration. ( A) The previous mound state is composed of disjoint mound regions. ( B) As the ambient
+temperature oscillates over a 1-d cycle, the heat proﬁle and airﬂow ﬁeld are calculated in the mound interior. ( C) The odor proﬁle is computed, and the
+mound wall shape is updated accordingly. Green or red cells indicate sites with an average odor level sufﬁciently above or below (respectively) the odor
+threshold, resulting in termites extending the mound outward or allowing the wall to collapse inward. ( D) The mound shape is updated and used for the
+next iteration. This process is repeated until convergence to a steady-state morphology.
+3380 | www.pnas.org/cgi/doi/10.1073/pnas.1818759116 Ocko et al.
+
+===== PAGE 3 =====
+APPLIED PHYSICAL
+SCIENCES
+ECOLOGY
+T(r, t) = ∆T sin(2πt/τ), [2]
+where ∆T is the amplitude of thermal oscillation and τ is the
+day length. We model the airﬂow ﬁeld u as being driven by heat
+gradients, following Darcy’s law with a conserved ﬂuid,
+u(r, t) = κ(r)
+η [αρgT(r, t)ˆz −∇P(r, t)], ∇·u(r, t) = 0, [3]
+where P(r, t) is ﬂuid pressure, κ(r) is permeability, ηis viscosity,
+and αρg is the buoyancy parameter, with αthe thermal expan-
+sion coefﬁcient. We take permeability to be a positive constant
+κ0 in the mound interior, and zero in the wall and ground.
+We model the odor concentration ﬁeld φ(r, t) in the mound
+as the consequence of small particle diffusion and advection by
+airﬂows, with odor production at rate J at the nest. For a central
+nest at ground height, the odor dynamics follow
+ϵ∂φ
+∂t (r, t) =∇·
+[
+D(r)∇φ(r, t) −u(r, t) ·φ(r, t)
+]
++ Jδ(r), [4]
+where ϵ sets the time scale of the dynamics, D(r) is the odor
+diffusivity, and δ(r) denotes the Dirac distribution representing
+a point source of odor at the nest. We set the odor diffusivity to
+a positive constant D0 in the mound interior and the wall and
+zero in the ground. To impose boundary conditions, we require
+that the odor concentration vanishes at the edge of the mound, so
+that φ= 0outside of the mound. Under the assumption that odor
+particles are small and highly diffuse, we consider the limit of
+ϵ→0, so that at any point in time, the odor ﬁeld is a steady-state
+solution to a rapid advection–diffusion process. This allows the
+odor ﬁeld to respond immediately to modiﬁcations in the airﬂow
+within the mound.
+To update the mound morphology iteratively, we suppose that
+in any local region of the mound wall with an odor concentra-
+tion above the threshold φc, termite workers work to enlarge
+the mound, extending outward the mound boundary. Similarly,
+in any region along the wall with an odor concentration belowφc,
+termites no longer maintain the area, and so the mound bound-
+ary moves inward due to natural decay. We note that, in this
+model, the effect of any localized building pheromone or local
+stigmergic rule will modify the value of φc. This then represents
+a general iterative strategy to solve for the steady-state mound
+shape, which could also emerge from alternative update rules.
+For model simplicity, we update the mound geometry only
+along the boundary and do not model changes in internal struc-
+ture. As a result, we do not impose conservation of building
+material as a constraint, as the ﬂux of material between the
+mound wall and mound interior or exterior is not known. At
+each update, the below-ground portion of the mound interior
+becomes a hemisphere having the same radius as the mound at
+ground level. We assume that the characteristic time for mound
+construction is long compared with the diurnal time scale; the
+update frequency is taken to approximately represent a day,
+while the full construction process can require a month to a year
+before a steady-state morphology is achieved.
+Eqs. 1–4 along with the behavioral rules described above com-
+plete the prescription of our model and allow us to solve for
+T(r, t), u(r, t), φ(r, t) over a diurnal period τ, and then update
+these ﬁelds before iterating the process. The model has four
+length scales: ( i) the wall thickness, h, which for most natu-
+rally occurring mounds falls within a narrow range (SI Appendix,
+Table S1); (ii) the thermal diffusion length, LT = √τDT , which
+sets the penetration depth of the diurnal temperature oscilla-
+tions; ( iii) the Peclet length of odor, L0 = D0η/(κ0αρg∆T),
+which deﬁnes the length scale over which odor diffuses due to
+buoyancy-driven ﬂow; and (iv) a characteristic mound radius,Rc,
+deﬁned below.
+By comparing the characteristic mound radius to the other
+length scales, we obtain three dimensionless parameters: the
+Peclet number (Pe = Rc/L0), the ratio of the characteristic
+mound radius to the Peclet length of odor; the relative thick-
+ness (Th = h/Rc), the ratio of wall thickness to the characteristic
+mound radius; and the Biot number (Bi = LT /Rc), the ratio of
+the thermal diffusion length to the characteristic mound radius,
+which together deﬁne the morphogenetic processes deﬁning
+steady-state mound shapes.
+Although a rough estimate for the Peclet number Pe could
+be obtained under the assumption of simple molecular diffu-
+sion, we explore a wide range of values that give rise to a
+variety of mound forms. We note that natural pheromones
+yield typically low Prandtl numbers, and a further reduction
+to the effective Prandtl number is due to thermal conduc-
+tion through the mound material and internal air. To reﬂect
+this, we consider the thermal conduction limit of small ν, such
+that thermal Peclet length greatly exceeds the Peclet length
+of odor.
+Using the length scales for characteristic mound radius, ther-
+mal diffusion length, and wall thickness as constrained by exper-
+iments and natural observations, we ﬁnd that Peclet numbers
+are in the range Pe ∈[10−6, 106], Biot numbers fall in the nar-
+rower range Bi ∈[10−2, 1], and the relative thickness lies within
+the range Th ∈[10−3, 10−1] (SI Appendix, Table S1 ). Varia-
+tion between natural populations in any of these dimensionless
+parameters can explain large disparities in mound size and shape
+observed in nature.
+Scaling of Mound Size, Shape, and Construction Time
+The natural scaling relationships in our model formulation
+lead to simple predictions for the size, shape, and construc-
+tion time of a mature mound. The surface area of the mound
+at steady state, for example, must be precisely large enough
+to balance J, the volumetric ﬂux of odor generation inside
+the mound, with the rate at which odor diffuses out through
+the mound walls. This outward rate is the product of the total
+amount of odor within the mound wall Φ, and the charac-
+teristic speed at which this odor escapes through the wall is
+D0/h. The amount of odor at the mound wall is proportional
+to Φ ∼R2φc, since the surface area scales as the squared mound
+radius R2 and the average odor concentration at the wall must
+be precisely φc, the odor threshold, if steady state is achieved.
+Hence, we have the relationship J = R2φcD0/h. Therefore, the
+mature mound radius at steady-state Rc, i.e., the characteris-
+tic mound radius used in our deﬁnition of the dimensionless
+parameters, is
+Rc ∼
+√
+Jh
+D0φc
+. [5]
+When the Peclet number is small such that the mature mound
+approximates a hemisphere, the mature surface area is simply
+proportional to R2
+c , and so the construction time until the mound
+converges to its mature size scales as R2
+c /DT . This represents
+the time at which the thermal diffusion length LT matches the
+steady-state mound radius. Hence, the dimensionless construc-
+tion time tc follows the scaling law
+tc ∼ R2
+c
+DT τ ∼Bi−2. [6]
+A similar scaling prediction can be generated for the mound
+aspect ratio H /R, the ratio of height H , and radius R of the
+mound at steady state. This aspect ratio is determined primar-
+ily by the convection of odor by vertical air currents, quantiﬁed
+by the Peclet number Pe. An estimate can be obtained by a per-
+turbation approach ( SI Appendix). The resulting scaling law is
+Ocko et al. PNAS | February 26, 2019 | vol. 116 | no. 9 | 3381
+
+===== PAGE 4 =====
+simple: When Pe= 0, diffusion entirely dominates advection, giv-
+ing rise to a hemispherical mound with a 1:1 aspect ratio, and any
+deviation in the aspect ratio from perfect sphericity then scales
+as the squared Peclet number:
+H
+R ∼1 +Pe2, [7]
+where the constant of proportionality depends on the other
+parameters in the model—namely, the Biot number Bi and the
+relative thickness Th. Hence, the mature mound shape responds
+quadratically to modiﬁcation of the Peclet number, as this affects
+the degree to which air currents transport odor vertically in the
+mound and promote mound construction and maintenance far
+above the nest.
+In combination, these three simple scaling laws predict a rela-
+tionship between size, shape, and construction time of natural
+mounds. Smaller mounds of low Rc, such as those built by ter-
+mites of the Cornitermes genus, will tend to have smaller Peclet
+numbers and, hence, a more spherical shape, as well as larger
+Biot numbers and, hence, a shorter construction time. In con-
+trast, the large, meter-sized mounds of high Rc built by some
+termite species including O. obesus will tend to be more elon-
+gated and will require longer construction time, assuming similar
+values for h, LT , and L0. In this way, the size, shape, and con-
+struction time of natural mounds can be related by the physical
+parameters that govern the process of mound morphogenesis.
+Numerical Simulations of Mound Morphospace
+To go beyond the approximate scaling laws for the mature
+mound radius, surface area, construction time, and aspect ratio
+derived in the previous section, we now turn to numerical simula-
+tions of model Eqs. 1–4 solved by using a ﬁnite difference model
+in Matlab. We conducted 500 independent simulations of mound
+morphogenesis across a wide volume of parameter space repre-
+sentative of the range of feasible natural conditions under which
+our model can operate, with typical values used to determine the
+center of each range ( SI Appendix, Table S1 ). Each simulation
+was initialized with a nest encased in a spherical mound wall of
+ﬁxed thickness and run until a stable steady-state morphology
+was obtained, and the dynamic size and shape of each mound
+was tracked over time (Fig. 3 andMovie S1 ). Because our model
+has no cylindrically asymmetric effects, all simulated mounds
+must preserve their cylindrical symmetry over time, so we inte-
+grate the morphogenesis model by discretizing in cylindrical
+coordinates.
+While sweeping through each of the full range of dimension-
+less parameter values assumed in our model formulation, we
+measured mound size and shape after convergence to a steady-
+state morphology, which occurred between 5 and 500 iterations
+after initialization. Using mound volume as a measurement of
+mound size, and using aspect ratio and mound sphericity (the
+ratio of the surface area of a sphere to the surface area of the
+mound, proportionally scaled to range between 0 and 1) as mea-
+surements of mound shape, we tested for relationships between
+mound morphology and the three dimensionless parameters that
+control the system.
+Within the large volume of searched feasible parameter space
+(Fig. 4), our simulations found that mounds with low relative
+thickness and low Biot number tend to grow to larger vol-
+umes. Indeed, by deﬁnition, these two dimensionless quantities
+should be relatively small when the critical mound radius is
+large. Moreover, we found that mound sphericity was strongly
+promoted by low Peclet number, while high Peclet numbers
+resulted in more unusual, aspherical mound shapes. This con-
+ﬁrms our intuition that systems with high Peclet numbers,
+where convective currents dominate conduction, can grow in
+a focused direction due to the airﬂow transporting the odor
+in the direction of growth. The nonlinear and nonmonotonic
+nature of these associations was evident both in parameter space
+and when steady-state mound shapes were plotted on size–
+shape axes that deﬁne a mound morphospace ( SI Appendix, Fig.
+S2). However, despite the simplicity of our model, there exists
+no simple relationship between mound size and Peclet num-
+ber, nor does mound shape appear to be strongly affected by
+either relative thickness or Biot number within the parameter
+range tested.
+We found that the simulated mound morphologies conformed
+well to our simple scaling predictions across the full range of
+plausible model parameters (Fig. 5).
+Discussion: Physics, Behavior, and Architecture
+Termite mounds are one of the most remarkable examples of
+self-organized animal architectures, and the range of shapes and
+sizes that they exhibit have excited the imagination of scientists
+for a long time (9). To explain these morphologies, we provide
+a simple, coarse-grained theory that couples the physics of heat
+and mass transport to termite building behavior. The resulting
+morphology then feeds back on the transport processes until a
+dynamic steady state is achieved. This two-way coupling between
+termite behavior and local temperature and airﬂow sufﬁces to
+generate a variety of mound geometries as three dimensionless
+Fig. 3. Morphogenesis dynamics of simulated mounds. (A) Various steady-state mound morphologies are plotted in a 2D morphospace of mound sphericity
+and log10 volume, relative to the critical mound radius. Points are colored and sized by the Bi and Th values used in the simulation. The two black trajectories
+show two possible paths through this morphospace, from an initially small and spherical mound to the mature shape. ( B and C) Progression of mound
+geometries during morphogenesis. Each row corresponds to a single mound as it progresses along the corresponding trajectory in A. Parameters were set
+to Bi = 10−2, Th = 10−2, and Pe = 4 ×104 (B) or Pe = 2 ×102 (C).
+3382 | www.pnas.org/cgi/doi/10.1073/pnas.1818759116 Ocko et al.
+
+===== PAGE 5 =====
+APPLIED PHYSICAL
+SCIENCES
+ECOLOGY
+Fig. 4. Mapping model parameters to mature mound morphologies. ( A) An array of nine simulated mound shapes for varying relative thickness Th and
+Peclet number Pe, for ﬁxed Biot number Bi = 0.05. (B) Three simulated mound shapes for varying Bi for ﬁxed Th = 0.05 and Pe = 200. (C) Dimensionless
+parameter space of our morphogenesis model. Each dot corresponds to a single simulation, with dot position giving the values of Pe, Th, and Bi from the
+simulation, dot size proportional to the mound volume at steady state, and dot color corresponding to mound sphericity at steady state according to the
+color bar. Axes represent base-10 logarithms of the dimensionless model parameters.
+parameters characterizing the geometry and dynamics of heat
+and ﬂuid transport are varied.
+In the absence of any existing ﬁeld experiments to compare
+with, we ask whether the variability of mound morphologies as
+a function of species and climates around the world is qual-
+itatively consistent with our model. The growth of mounds is
+dominated by building processes at the surface and limited by
+molecular diffusion of pheromones through the mound wall.
+As a mound grows, unless more termites are recruited into the
+building process, the volumetric density of termites decreases
+over time. Nevertheless, larger termite colonies should build
+larger mounds, as has been observed within and across many ter-
+mite taxa, including Nasutitermes, Macrotermes, and much of the
+Termitinae subfamily (26). Our model agree with this intuitive
+relationship, as larger colonies will tend to produce a greater
+quantity of odor, and this high rateJ will result in a large mound
+radius Rc.
+Moreover, our model agrees with the simple intuition that
+larger mounds will take longer to construct, and, as a result,
+the distribution of mounds in an area may be more sparse than
+smaller mounds, which can be constructed quickly and may be
+quite dense. This relationship aligns with the observation that
+large Macrotermes mounds have a low density of 1–4 ha −1 (27),
+while small Cubitermes mounds have a substantially higher den-
+sity of 385–496 ha −1 (28). Our results also show that, cetus
+paribus, the absolute size of termite mounds increases with the
+amplitude of temperature oscillations. Consistent with this, the
+mounds of the genus M. michaelseni found in the open grass-
+lands of southern Africa are much taller than those of the genus
+O. obesus from the subtropical grasslands and forests of south
+Fig. 5. Correspondence between analytical scaling predictions and simulated mature mound morphologies. ( A) Simulated mound radii are well predicted
+by the critical mound radius Rc as deﬁned in the main text. ( B) Mound surface area grows approximately in proportion to the square of Rc. (C) The mound
+aspect ratio H/R scales as 1 + Pe2, where Pe is the Peclet number. (D) The construction time tc until the mound achieves its mature size scales approximately
+as the inverse-squared Biot number Bi. All axes have been scaled by the appropriate proportionality factors, and all points are colored according to the
+base-10 logarithm of the Biot number (Bi).
+Ocko et al. PNAS | February 26, 2019 | vol. 116 | no. 9 | 3383
+
+===== PAGE 6 =====
+Asia, as the scale of diurnal temperature oscillations in covered
+forests are mitigated by the shade (8). In our proposed modeling
+framework, it is these diurnal thermal oscillations that provide
+the external ﬂuctuations that drive the mound-construction pro-
+cess, as opposed to external pressure gradient or wind ﬂow. This
+choice was informed by previous studies on the external condi-
+tions that induce interior transient ﬂows in the termite mounds
+of O. obesus(7) and M. michaelseni(8). In the mounds of both
+species, external wind was found to play a subordinate role rel-
+ative to the dominant thermal mechanism considered by our
+model in this work.
+The modeling framework presented here suggests several
+possible extensions, each at the expense of model simplicity. Cur-
+rently, our model does not address changes in mound shape
+associated with mechanical forces and mound settling under the
+inﬂuence of gravity, a process that is likely important during the
+early stages of mound building. Furthermore, the current model
+averages over the complex internal structure of the mound,
+clearly seen in excavated nests and captured in agent-based
+simulations (16, 29). These labyrinthine structures change the
+detailed mechanics of heat and mass transport while also making
+these processes heterogeneous, effects that will lead to ﬂuctua-
+tions in the shape and stability of the mound. The construction
+of these internal nest structures in social insects has already seen
+modeling interest (17–19). Instead, by averaging over these com-
+plex internal structures, our continuum model serves to provide
+a global picture of the generation of the overall mound form.
+Our coarse-grained macroscopic model could serve as the
+outer problem that drives and is driven by the microscale pro-
+cesses at the level of individual agents. For example, we have
+neglected here the effects of active transport of water by ter-
+mites within the mound and the passive dynamics of evaporative
+cooling that will change the temperature proﬁles and thereby
+the mechanics of odor transport. Moreover, our threshold-based
+update rule gives rise to one possible set of dynamics leading
+to an equilibrium mound form, and it serves to roughly capture
+the idea that termite workers respond to the odor in a sensi-
+tive manner by shaping their environment. The incorporation
+of more nuanced individual behaviors or other nonthresholded
+update rules, including a linear relationship between local odor
+concentration and worker activity, could result in altered dynam-
+ics, although the properties of our system would nonetheless lead
+the mound to converge upon the same equilibrium morphology.
+Finally, the radially symmetric formulation of our morpho-
+genesis model adequately captures the largely symmetric shapes
+of natural mounds, but clearly neglects a few potential sources
+of asymmetry. We assume that the termite nest is approxi-
+mately positioned along the central mound axis at ground level,
+although asymmetric or subterranean nests can alter the odor
+dynamics and lead to different, radially asymmetric steady-state
+mound shapes. Consistent bias in directed sunlight may also be a
+source of radial asymmetry, yielding effects such as the north-
+ward tilt seen in mounds of M. michaelseni in the Southern
+Hemisphere (30). Likewise, ﬂuctuations in the direction of sun-
+light may lead to cyclic asymmetric growth on the time scales of
+days and years, which may be particularly relevant to understand-
+ing mound morphogenesis far from the Equator [for example, in
+Australian compass termites (5)].
+Generalizing our model to account for these additional effects
+is certainly within the realm of possibility and would be impor-
+tant to address the ecological and evolutionary aspects of mound
+morphogenesis. Furthermore, understanding similar principles
+underlying the construction of animal architectures such as ant
+nests and beehives are natural next steps, as are quantitative
+predictions of our theory in speciﬁc contexts such as mound
+repair and maintenance. More broadly, our theory demonstrates
+how an organism capable of building behavior can respond to
+its macroenvironment by changing its microenvironment, via a
+feedback process leading to a nonequilibrium steady state that
+is adaptable and robust by virtue of this feedback loop. This
+is clearly not limited to social insect architecture. Indeed, we
+humans do it all of the time; as W. Churchill pointed out a long
+time ago, “We shape our buildings; thereafter they shape us.”
+ACKNOWLEDGMENTS. We thank H. King for helpful discussions. Partial
+support was provided by NSF Graduate Fellowship DGE 1144152 (to A.H);
+the Human Frontiers Science Program under Grant RGP0066/2012-TURNER
+(to S.A.O. and L.M.); the Henry W. Kendall Physics Fellowship (S.A.O.);
+the Karel Urbanek Applied Physics Fellowship (S.A.O.); the MacArthur
+Foundation (L.M.); and NSF Physics of Living Systems Grant PHY1606895
+(to L.M.).
+1.Korb J (2001) Termite mound architecture, from function to construction. Biology of
+Termites: A Modern Synthesis, eds Bignell DE, Roisin Y, Lo N (Springer, Dordrecht, The
+Netherlands), pp 349–373.
+2.Korb J (2007) Termites. Curr Biol17:R995–R999.
+3.Heinrich B (1981) Insect Thermoregulation(Wiley-Interscience, New York).
+4.Korb J (2003) Thermoregulation and ventilation of termite mounds. Naturwis-
+senschaften 90:212–219.
+5.Jacklyn PM (1992) “Magnetic” termite mound surfaces are oriented to suit wind and
+shade conditions. Oecologia 91:385–395.
+6.Cosarinsky MI (2011) The nest growth of the neotropical mound-building termite,
+Cornitermes cumulans: A micromorphological analysis. J Insect Sci11:122.
+7.King H, Ocko S, Mahadevan L (2015) Termite mounds harness diurnal temperature
+oscillations for ventilation. Proc Natl Acad Sci USA112:11589–11593.
+8.Ocko SA, et al. (2017) Solar-powered ventilation of African termite mounds. J Exp Biol
+220:3260–3269.
+9.Hansell M (2005) Animal Architecture(Oxford Univ Press, Oxford).
+10.Grass ´e P-P (1959) Reconstruction of the nest and coordination between individuals
+in terms. Bellicositermes natalensisand cubitermes sp. the theory of stigmergy: Test
+interpretation of termite constructions. Soc Insect6:41–80.
+11.Theraulaz G, Bonabeau E (1999) A brief history of stigmergy. Artif Life 5:97–
+116.
+12.Camazine S, et al. (2001) Self-Organization in Biological Systems(Princeton Univ Press,
+Princeton).
+13.Theraulaz G, Bonabeau E (1995) Coordination in distributed building. Science
+269:686–688.
+14.Bonabeau E (1997) From classical models of morphogenesis to agent-based models of
+pattern formation. Artif Life3:191–211.
+15.Courtois PJ, Heymans F (1991) A simulation of the construction process of a termite
+nest. J Theor Biol153:469–475.
+16.Khuong A, et al. (2016) Stigmergic construction and topochemical information shape
+ant nest architecture. Proc Natl Acad Sci USA113:1303–1308.
+17.Deneubourg JL (1977) Application de l’ordre par ﬂuctuations `a la description de
+certaines ´etapes de la construction du nid chez les termites. Insect Soc24:117–130.
+18.Bonabeau E, et al. (1988) A model for the emergence of pillars, walls and royal
+chambers in termite nests. Phil Trans R Soc B353:1561–1576.
+19.Franks NR, Deneubourg JL (1997) Self-organizing nest construction in ants: Individual
+worker behaviour and the nest’s dynamics.Anim Behav54:779–796.
+20.Bruinsma OH (1979) An analysis of building behaviour of the termite Macroter-
+mes subhyalinus (Rambur). PhD dissertation (Wageningen University and Research,
+Wageningen, The Netherlands).
+21.Cox MD, Blanchard GB (1977) Gaseous templates in ant nests. J Theor Biol204:223–
+238.
+22.Fouquet D, Costa-Leonardo AM, Fournier R, Blanco S, Jost C (1977) Coordination of
+construction behavior in the termite Procornitermes araujoi: Structure is a stronger
+stimulus than volatile marking. Insect Soc61:253–264.
+23.Howse PE (1966) Air movement and termite behaviour. Nature 210:967–968.
+24.Darlington J, Zimmerman P, Greenberg J, Westberg C, Bakwin P (1997) Production of
+metabolic gases by nests of the termite Macrotermes jeanneli in Kenya. J Trop Ecol
+13:491–510.
+25.Bear J (2013) Dynamics of Fluids in Porous Media (Courier Corporation, North
+Chelmsford, MA).
+26.Josens G, Soki K (2010) Relation between termite numbers and the size of their
+mounds. Insect Soc57:303–316.
+27.Pomero DE (1977) The distribution and abundance of large termite mounds in
+Uganda. J Appl Ecol14:465–475.
+28.Ferrar P (1982) Termites of a South African savanna. II. Densities and populations of
+smaller mounds, and seasonality of breeding. Oecologia 52:133–138.
+29.Perna A, Theraulaz G (2017) When social behaviour is moulded in clay: On growth
+and form of social insect nests. J Exp Biol220:83–91.
+30.Turner JS (2000) Architecture and morphogenesis in the mound of Macrotermes
+michaelseni (Sj ¨ostedt) (Isoptera: Termitidae, Macrotermitinae) in northern Namibia.
+Cimbebasia 16:143–175.
+3384 | www.pnas.org/cgi/doi/10.1073/pnas.1818759116 Ocko et al.

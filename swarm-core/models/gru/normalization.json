@@ -1,0 +1,9 @@
+{
+  "version": "bootstrap-v1",
+  "note": "Feature normalization metadata. Populated by the trainer after first real training run.",
+  "featureMeans": [],
+  "featureStds": [],
+  "featureMin": [],
+  "featureMax": [],
+  "computed": false
+}

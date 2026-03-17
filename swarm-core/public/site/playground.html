@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testing Ground — Rylvo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ─── GATE ─── */
+.pg-gate{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg)}
+.pg-gate .gate-spinner{width:24px;height:24px;border:3px solid var(--border2);border-top-color:var(--red);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ─── LAYOUT ─── */
+.pg-layout{display:grid;grid-template-columns:210px 1fr;min-height:100vh;display:none}
+.pg-sidebar{background:var(--bg);padding:20px 14px;border-right:1px solid var(--border);display:flex;flex-direction:column}
+.pg-sidebar .sidebar-logo{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--red);padding:8px 10px;margin-bottom:24px;text-align:center}
+.pg-sidebar .sidebar-logo span{color:var(--text3);font-weight:400;font-size:10px;display:block;letter-spacing:.5px;margin-top:2px}
+.pg-nav a{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text2);padding:8px 10px;border-radius:8px;margin-bottom:2px;transition:all .15s;cursor:pointer}
+.pg-nav a:hover{color:var(--text);background:var(--surface2)}
+.pg-nav a.active{color:var(--text);background:rgba(220,38,38,.06);font-weight:600}
+.pg-nav a .nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.pg-divider{height:1px;background:var(--border);margin:12px 8px}
+.pg-sidebar .sb-status{margin-top:auto;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:.7rem}
+.sb-status .sb-row{display:flex;justify-content:space-between;padding:2px 0;color:var(--text3)}
+.sb-status .sb-row .sb-val{font-family:var(--mono);font-weight:600;color:var(--text)}
+.sb-status .sb-row .sb-val.running{color:var(--green)}
+.sb-status .sb-row .sb-val.stopped{color:var(--red)}
+
+.pg-main{background:var(--bg1);padding:28px 32px;overflow-y:auto;max-height:100vh}
+.pg-header{margin-bottom:24px}
+.pg-header h1{font-size:1.3rem;font-weight:700;margin-bottom:2px}
+.pg-header p{font-size:.82rem;color:var(--text3)}
+
+/* ─── TABS / SECTIONS ─── */
+.pg-section{display:none}
+.pg-section.active{display:block}
+
+/* ─── CARDS / PANELS ─── */
+.pg-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+.pg-panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.pg-panel-head h3{font-size:.88rem;font-weight:700}
+.pg-panel-head .badge{font-size:.6rem;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+.badge-green{background:rgba(22,163,74,.08);color:var(--green)}
+.badge-red{background:rgba(220,38,38,.08);color:var(--red)}
+.badge-amber{background:rgba(217,119,6,.08);color:var(--amber)}
+.badge-cyan{background:rgba(8,145,178,.08);color:var(--cyan)}
+
+/* ─── FORM ELEMENTS ─── */
+.pg-row{display:flex;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.pg-row label{font-size:.75rem;color:var(--text3);min-width:80px}
+.pg-select,.pg-input,.pg-textarea{font-family:var(--mono);font-size:.78rem;padding:7px 10px;background:var(--surface);border:1px solid var(--border2);border-radius:6px;color:var(--text);transition:border .15s}
+.pg-select:focus,.pg-input:focus,.pg-textarea:focus{outline:none;border-color:var(--red)}
+.pg-select{cursor:pointer}
+.pg-input{width:100%}
+.pg-textarea{width:100%;min-height:80px;resize:vertical;line-height:1.5}
+.pg-input-sm{width:80px}
+.pg-btn{font-family:var(--sans);font-size:.78rem;font-weight:600;padding:8px 18px;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s;border:none}
+.pg-btn-red{background:var(--red);color:#fff}
+.pg-btn-red:hover{opacity:.85}
+.pg-btn-green{background:var(--green);color:#fff}
+.pg-btn-green:hover{opacity:.85}
+.pg-btn-dark{background:var(--accent);color:#fff}
+.pg-btn-dark:hover{opacity:.85}
+.pg-btn-outline{background:transparent;color:var(--text2);border:1px solid var(--border2)}
+.pg-btn-outline:hover{border-color:var(--text);color:var(--text)}
+.pg-btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* ─── JSON OUTPUT ─── */
+.pg-json{background:#1e1e1e;color:#d4d4d4;font-family:var(--mono);font-size:.72rem;line-height:1.6;padding:16px;border-radius:8px;overflow-x:auto;max-height:500px;overflow-y:auto;white-space:pre-wrap;word-break:break-all;position:relative}
+.pg-json .json-key{color:#9cdcfe}
+.pg-json .json-str{color:#ce9178}
+.pg-json .json-num{color:#b5cea8}
+.pg-json .json-bool{color:#569cd6}
+.pg-json .json-null{color:#808080}
+.pg-json-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pg-json-header .response-meta{font-size:.68rem;font-family:var(--mono);color:var(--text3)}
+.pg-json-header .response-meta .latency{color:var(--green);font-weight:700}
+.pg-json-header .response-meta .status-ok{color:var(--green)}
+.pg-json-header .response-meta .status-err{color:var(--red)}
+
+/* ─── STAT GRID ─── */
+.pg-stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+.pg-stat{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.pg-stat .st-label{font-size:.6rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--text3);margin-bottom:6px}
+.pg-stat .st-value{font-family:var(--mono);font-size:1.4rem;font-weight:800;line-height:1}
+.pg-stat .st-sub{font-size:.68rem;color:var(--text3);margin-top:4px}
+
+/* ─── ENDPOINT LIST ─── */
+.ep-list{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
+.ep-item{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;cursor:pointer;transition:all .1s;border:1px solid transparent}
+.ep-item:hover{background:var(--surface2)}
+.ep-item.selected{background:var(--surface2);border-color:var(--border2)}
+.ep-method{font-family:var(--mono);font-size:.65rem;font-weight:700;padding:2px 6px;border-radius:3px;min-width:38px;text-align:center}
+.ep-method.get{background:rgba(22,163,74,.1);color:var(--green)}
+.ep-method.post{background:rgba(8,145,178,.1);color:var(--cyan)}
+.ep-method.ws{background:rgba(217,119,6,.1);color:var(--amber)}
+.ep-path{font-family:var(--mono);font-size:.78rem;color:var(--text2)}
+.ep-desc{font-size:.7rem;color:var(--text3);margin-left:auto}
+
+/* ─── MODEL CARDS ─── */
+.model-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+.model-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;cursor:pointer;transition:all .15s}
+.model-card:hover{border-color:var(--border2)}
+.model-card.selected{border-color:var(--red);background:rgba(220,38,38,.02)}
+.model-card.active{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+.model-card .mc-name{font-size:.82rem;font-weight:700;margin-bottom:2px}
+.model-card .mc-id{font-family:var(--mono);font-size:.68rem;color:var(--text3)}
+.model-card .mc-desc{font-size:.72rem;color:var(--text2);margin-top:6px;line-height:1.4}
+.model-card .mc-cost{display:flex;gap:2px;margin-top:8px}
+.model-card .mc-cost .dot{width:8px;height:8px;border-radius:50%;background:var(--border2)}
+.model-card .mc-cost .dot.filled{background:var(--red)}
+
+/* ─── COMPARISON GRID ─── */
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.compare-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.compare-card .cc-head{padding:10px 14px;background:var(--surface2);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.compare-card .cc-head .cc-model{font-size:.78rem;font-weight:700}
+.compare-card .cc-head .cc-latency{font-family:var(--mono);font-size:.68rem;color:var(--green)}
+.compare-card .cc-head .cc-err{color:var(--red)}
+.compare-card .cc-body{padding:0}
+.compare-card .cc-body .pg-json{border-radius:0;max-height:350px}
+
+/* ─── ANT TABLE ─── */
+.ant-table{width:100%;border-collapse:collapse}
+.ant-table th{text-align:left;font-size:.6rem;text-transform:uppercase;letter-spacing:1px;color:var(--text3);padding:8px 10px;border-bottom:1px solid var(--border)}
+.ant-table td{padding:8px 10px;border-bottom:1px solid var(--border);font-size:.78rem;color:var(--text2);font-family:var(--mono)}
+.ant-table .caste-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+
+/* ─── WS LOG ─── */
+.ws-log{background:#1e1e1e;color:#d4d4d4;font-family:var(--mono);font-size:.7rem;line-height:1.5;padding:12px;border-radius:8px;max-height:500px;overflow-y:auto}
+.ws-msg{padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.ws-msg .ws-time{color:#808080;margin-right:8px}
+.ws-msg .ws-type{font-weight:700;margin-right:6px}
+.ws-msg .ws-type.tick{color:#b5cea8}
+.ws-msg .ws-type.discovery{color:#dcdcaa}
+.ws-msg .ws-type.emergence{color:#6a9955}
+.ws-msg .ws-type.info{color:#9cdcfe}
+.ws-msg .ws-type.error{color:#f44747}
+.ws-msg .ws-type.info{color:#569cd6}
+.ws-msg .ws-type.status{color:#9cdcfe}
+
+/* ─── PERF CHART ─── */
+.perf-bar-chart{display:flex;align-items:flex-end;gap:3px;height:120px;padding:8px 0}
+.perf-bar{background:var(--red);border-radius:2px 2px 0 0;min-width:6px;flex:1;transition:height .3s;position:relative}
+.perf-bar:hover{opacity:.7}
+.perf-bar .perf-tip{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#1e1e1e;color:#d4d4d4;padding:3px 6px;border-radius:4px;font-size:.6rem;white-space:nowrap;display:none;z-index:5}
+.perf-bar:hover .perf-tip{display:block}
+
+/* ─── CUSTOM CONFIG ─── */
+.config-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.config-item{display:flex;flex-direction:column;gap:4px}
+.config-item label{font-size:.68rem;text-transform:uppercase;letter-spacing:.8px;color:var(--text3)}
+.config-item input,.config-item select{font-family:var(--mono);font-size:.78rem;padding:7px 10px;background:var(--bg1);border:1px solid var(--border);border-radius:6px;color:var(--text)}
+.config-item input:focus,.config-item select:focus{outline:none;border-color:var(--red)}
+
+/* ─── HISTORY TABLE ─── */
+.hist-table{width:100%;border-collapse:collapse;margin-top:10px}
+.hist-table th{text-align:left;font-size:.6rem;text-transform:uppercase;letter-spacing:1px;color:var(--text3);padding:6px 8px;border-bottom:1px solid var(--border)}
+.hist-table td{padding:6px 8px;border-bottom:1px solid var(--border);font-size:.72rem;font-family:var(--mono);color:var(--text2)}
+.hist-table .td-ok{color:var(--green)}
+.hist-table .td-err{color:var(--red)}
+
+/* ─── GUIDE BOX ─── */
+.pg-guide{background:rgba(220,38,38,.03);border:1px solid rgba(220,38,38,.1);border-radius:8px;padding:14px 18px;margin-bottom:18px;font-size:.78rem;line-height:1.7;color:var(--text2)}
+.pg-guide strong{color:var(--text);font-weight:600}
+.pg-guide ul{margin:6px 0 0 16px;padding:0}
+.pg-guide li{margin-bottom:2px}
+.pg-guide code{font-family:var(--mono);font-size:.72rem;background:var(--surface2);padding:1px 5px;border-radius:3px}
+
+/* ─── MODEL DETAIL ─── */
+.model-detail{display:none;background:var(--bg1);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-top:10px}
+.model-detail.visible{display:block}
+.model-detail h4{font-size:.82rem;font-weight:700;margin-bottom:4px;color:var(--text)}
+.model-detail .md-focus{font-size:.78rem;color:var(--text2);margin-bottom:12px;line-height:1.5}
+.md-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:8px}
+.md-item{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px}
+.md-item .md-label{font-size:.58rem;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:4px}
+.md-item .md-val{font-family:var(--mono);font-size:.82rem;font-weight:600;color:var(--text)}
+.md-item .md-sub{font-size:.66rem;color:var(--text3);margin-top:2px}
+
+/* ─── LLM INTERPRET ─── */
+.llm-interpret{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:16px;margin-top:10px}
+.llm-interpret h4{font-size:.82rem;font-weight:700;margin-bottom:8px}
+.li-row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.78rem;border-bottom:1px solid var(--border)}
+.li-row:last-child{border-bottom:none}
+.li-icon{width:20px;text-align:center;flex-shrink:0;font-weight:700;font-size:.72rem;margin-top:1px}
+.li-icon.ok{color:var(--green)}.li-icon.warn{color:var(--amber)}.li-icon.err{color:var(--red)}.li-icon.info{color:var(--cyan)}
+.li-label{color:var(--text3);min-width:110px;font-size:.72rem;flex-shrink:0}
+.li-val{color:var(--text);flex:1;line-height:1.4}
+
+/* ─── RESPONSE VALIDATOR ─── */
+.rv-summary{font-size:.74rem;font-weight:700;padding:3px 8px;border-radius:4px}
+.rv-summary.pass{background:rgba(22,163,74,.1);color:var(--green)}
+.rv-summary.warn{background:rgba(217,119,6,.12);color:var(--amber)}
+.rv-summary.fail{background:rgba(220,38,38,.12);color:var(--red)}
+.rv-row{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:.76rem}
+.rv-row:last-child{border-bottom:none}
+.rv-icon{width:20px;text-align:center;flex-shrink:0;font-weight:700}
+.rv-icon.pass{color:var(--green)}
+.rv-icon.warn{color:var(--amber)}
+.rv-icon.fail{color:var(--red)}
+.rv-label{min-width:150px;color:var(--text3);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px}
+.rv-val{color:var(--text);line-height:1.45}
+
+/* ─── HISTORY FILTER ─── */
+.hist-filter-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hist-filter-bar label{font-size:.72rem;color:var(--text3);display:flex;align-items:center;gap:4px;cursor:pointer}
+
+/* ─── ENGINE ACTIVITY ─── */
+.ea-panel{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-top:8px}
+.ea-row{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:.76rem}
+.ea-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
+.ea-dot.active{background:var(--green)}
+.ea-dot.idle{background:var(--text3);animation:none}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .pg-layout{grid-template-columns:1fr}
+  .pg-sidebar{display:none}
+  .pg-stat-grid{grid-template-columns:repeat(2,1fr)}
+  .compare-grid{grid-template-columns:1fr}
+  .model-grid{grid-template-columns:1fr 1fr}
+  .config-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ AUTH GATE ═══ -->
+<div class="pg-gate" id="gate">
+  <div class="gate-spinner"></div>
+</div>
+
+<!-- ═══ MAIN LAYOUT ═══ -->
+<div class="pg-layout" id="layout">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside class="pg-sidebar">
+    <div class="sidebar-logo">RYLVO <span>Testing Ground</span></div>
+
+    <nav class="pg-nav" id="nav">
+      <a data-tab="launcher" class="active"><span class="nav-dot" style="background:var(--green)"></span>Runtime Status</a>
+      <a data-tab="endpoints"><span class="nav-dot" style="background:var(--cyan)"></span>Endpoint Tester</a>
+      <a data-tab="llm"><span class="nav-dot" style="background:var(--amber)"></span>LLM Simulator</a>
+      <a data-tab="compare"><span class="nav-dot" style="background:var(--red)"></span>Multi-Model Compare</a>
+      <div class="pg-divider"></div>
+      <a data-tab="ants"><span class="nav-dot" style="background:#6366f1"></span>Ant Inspector</a>
+      <a data-tab="websocket"><span class="nav-dot" style="background:#f59e0b"></span>WebSocket Monitor</a>
+      <a data-tab="perf"><span class="nav-dot" style="background:#ec4899"></span>Performance</a>
+      <div class="pg-divider"></div>
+      <a data-tab="history"><span class="nav-dot" style="background:var(--text3)"></span>Test History</a>
+    </nav>
+
+    <div class="sb-status" id="sidebarStatus">
+      <div class="sb-row"><span>Engine</span><span class="sb-val stopped" id="sbEngine">STOPPED</span></div>
+      <div class="sb-row"><span>Model</span><span class="sb-val" id="sbModel">—</span></div>
+      <div class="sb-row"><span>Round</span><span class="sb-val" id="sbRound">0</span></div>
+      <div class="sb-row"><span>Ants</span><span class="sb-val" id="sbAnts">0</span></div>
+      <div class="sb-row"><span>Tests</span><span class="sb-val" id="sbTests">0</span></div>
+    </div>
+  </aside>
+
+  <!-- ─── MAIN CONTENT ─── -->
+  <main class="pg-main">
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: ENGINE LAUNCHER                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section active" id="sec-launcher">
+      <div class="pg-header">
+        <h1>Runtime Status</h1>
+        <p>Query-driven runtime monitor. The engine auto-starts on <code>POST /api/query</code> and auto-stops after idle.</p>
+      </div>
+
+      <div class="pg-stat-grid" id="engineStats">
+        <div class="pg-stat"><div class="st-label">Status</div><div class="st-value" id="engStatus">STOPPED</div></div>
+        <div class="pg-stat"><div class="st-label">Model</div><div class="st-value" id="engModel">—</div></div>
+        <div class="pg-stat"><div class="st-label">Round</div><div class="st-value" id="engRound">0</div></div>
+        <div class="pg-stat"><div class="st-label">Total Ants</div><div class="st-value" id="engAnts">0</div></div>
+        <div class="pg-stat"><div class="st-label">Locations</div><div class="st-value" id="engLocs">0</div></div>
+        <div class="pg-stat"><div class="st-label">Reports</div><div class="st-value" id="engReports">0</div></div>
+      </div>
+
+      <div class="pg-guide">
+        <strong>What is this?</strong> Runtime is fully query-driven. There are no manual start/stop controls. The first query starts model shards automatically, local FIFO is per shard, and idle shards auto-stop after timeout.
+        <ul>
+          <li><strong>Model selection</strong> now belongs to each <code>/api/query</code> request.</li>
+          <li><strong>Timeout</strong> is validated per model (min/default/max).</li>
+          <li><strong>Queue</strong> is deterministic per shard with global backpressure.</li>
+          <li><strong>Symbol fallback</strong> returns structured resolution states when exact symbols are missing.</li>
+          <li>Check <strong>WebSocket Monitor</strong> for runtime events in real time.</li>
+        </ul>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Runtime Policy</h3></div>
+        <div style="font-size:.8rem;line-height:1.6;color:var(--text2)">
+          <div><strong>Lifecycle:</strong> query-driven (auto-start per query model)</div>
+          <div><strong>Queue:</strong> per-model shard pools with local FIFO and QoS admission control</div>
+          <div><strong>Idle Auto-stop:</strong> 120 seconds</div>
+          <div><strong>Model wait limits:</strong> discover/correlate/full 20-120s (default 45s), precise 15-90s (default 35s), sentiment 10-60s (default 25s)</div>
+        </div>
+      </div>
+
+      <div class="pg-panel" style="margin-top:14px">
+        <div class="pg-panel-head"><h3>Engine Activity</h3><span class="badge" id="eaStatusBadge" style="font-size:.6rem;padding:2px 8px;border-radius:4px">STOPPED</span></div>
+        <div id="engineActivity" class="ea-panel">
+          <div style="color:var(--text3);font-size:.78rem;text-align:center;padding:12px">Engine is idle. It auto-starts on the next query.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: ENDPOINT TESTER                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section" id="sec-endpoints">
+      <div class="pg-header">
+        <h1>Endpoint Tester</h1>
+        <p>Test any API endpoint directly. See raw request/response, latency, headers.</p>
+      </div>
+
+      <div class="pg-guide">
+        <strong>How to use:</strong> Select any API endpoint from the list below, configure params/body, and hit Send. This is the raw HTTP level — you see exactly what the server returns.
+        <ul>
+          <li><code>GET /api/status</code> — inspect runtime state, shard pools, queue depth, and the last execution plan</li>
+          <li><code>GET /api/discover</code> — see what topics and evidence the runtime has promoted so far</li>
+          <li><code>POST /api/query</code> — the main LLM endpoint (same as LLM Simulator but raw)</li>
+          <li><code>GET /api/health</code> — quality and memory-health snapshot after promoted evidence is harvested</li>
+        </ul>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Select Endpoint</h3></div>
+        <div class="ep-list" id="epList"></div>
+      </div>
+
+      <div class="pg-panel" id="epConfigPanel">
+        <div class="pg-panel-head"><h3>Request Configuration</h3><span class="badge badge-cyan" id="epMethodBadge">GET</span></div>
+
+        <div class="pg-row">
+          <label>URL</label>
+          <input class="pg-input" id="epUrl" readonly>
+        </div>
+        <div class="pg-row" id="epParamsRow" style="display:none">
+          <label>Params</label>
+          <input class="pg-input" id="epParams" placeholder='e.g. limit=10&polarity=negative'>
+        </div>
+        <div class="pg-row" id="epBodyRow" style="display:none">
+          <label>Body (JSON)</label>
+          <textarea class="pg-textarea" id="epBody" placeholder='{"query":"what is trending?","entities":["AI","Tesla"]}'></textarea>
+        </div>
+        <div class="pg-row">
+          <label>API Key</label>
+          <input class="pg-input" id="epApiKey" placeholder="sk_live_swr_... (or leave blank for auth token)">
+        </div>
+        <div style="display:flex;gap:10px;margin-top:6px">
+          <button class="pg-btn pg-btn-dark" onclick="fireEndpoint()">SEND REQUEST</button>
+          <button class="pg-btn pg-btn-outline" onclick="clearEndpointOutput()">CLEAR</button>
+        </div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-json-header">
+          <h3 style="font-size:.88rem;font-weight:700">Response</h3>
+          <span class="response-meta" id="epMeta"></span>
+        </div>
+        <div id="epOutput" class="pg-json" style="min-height:100px">// Select an endpoint and send a request</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: LLM SIMULATOR                          -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section" id="sec-llm">
+      <div class="pg-header">
+        <h1>LLM Simulator</h1>
+        <p>Simulate what an LLM sees when it calls POST /api/query. Test different queries, entities, depths.</p>
+      </div>
+
+      <div class="pg-guide">
+        <strong>What is this?</strong> This simulates an LLM calling the Rylvo API. When an LLM uses the <code>swarm_query</code> tool, it sends a query here and gets back intelligence data.
+        <ul>
+          <li><strong>Topic resolutions</strong> show whether the swarm found an exact topic, phrase match, fuzzy match, related-only result, or nothing useful inside the time budget.</li>
+          <li><strong>Entities field</strong> — explicit topics or phrases to resolve. Leave blank to query by keywords only.</li>
+          <li><strong>Model</strong> — each query can pick a model. Runtime will switch automatically if needed.</li>
+          <li><strong>Timeout</strong> — client wait budget, validated per model (min/default/max).</li>
+          <li><strong>Streaming</strong> — optional SSE mode for lifecycle events and live evidence updates.</li>
+          <li><strong>Depth</strong> — quick (less data, faster), standard, deep (more data, slower)</li>
+          <li>The <strong>Tool Definition</strong> panel shows the OpenAI function-calling schema that LLMs see.</li>
+        </ul>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Query Configuration</h3></div>
+
+        <div class="pg-row">
+          <label>Query</label>
+          <textarea class="pg-textarea" id="llmQuery" placeholder="What entities are showing unusual activity?" style="min-height:60px"></textarea>
+        </div>
+        <div class="pg-row">
+          <label>Entities</label>
+          <input class="pg-input" id="llmSymbols" placeholder='Comma-separated: e.g. Tesla, Bitcoin, AI, climate change'>
+        </div>
+        <div class="pg-row">
+          <label>Depth</label>
+          <select class="pg-select" id="llmDepth">
+            <option value="quick">Quick</option>
+            <option value="standard" selected>Standard</option>
+            <option value="deep">Deep</option>
+          </select>
+        </div>
+        <div class="pg-row">
+          <label>Model</label>
+          <select class="pg-select" id="llmModel">
+            <option value="full" selected>full</option>
+            <option value="discover">discover</option>
+            <option value="precise">precise</option>
+            <option value="correlate">correlate</option>
+            <option value="sentiment">sentiment</option>
+          </select>
+        </div>
+        <div class="pg-row">
+          <label>Timeout (sec)</label>
+          <input class="pg-input" id="llmTimeout" type="number" min="1" step="1" placeholder="Uses model default if blank">
+        </div>
+        <div class="pg-row" style="margin-top:-8px">
+          <label></label>
+          <div style="font-size:.72rem;color:var(--text3)" id="llmTimeoutHint">full: 20-120s (default 45s)</div>
+        </div>
+        <div class="pg-row">
+          <label>Streaming</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--text2)">
+            <input id="llmStream" type="checkbox">
+            Stream lifecycle events (SSE) and live evidence updates
+          </label>
+        </div>
+        <div class="pg-row">
+          <label>API Key</label>
+          <input class="pg-input" id="llmApiKey" placeholder="sk_live_swr_... (or leave blank for auth token)">
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:6px">
+          <button class="pg-btn pg-btn-dark" onclick="fireLLMQuery()">SIMULATE LLM CALL</button>
+          <button class="pg-btn pg-btn-outline" onclick="clearLLMOutput()">CLEAR</button>
+        </div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Tool Definition (what the LLM sees)</h3><button class="pg-btn pg-btn-outline" style="font-size:.7rem;padding:4px 12px" onclick="fetchToolDef()">LOAD</button></div>
+        <div id="toolDefOutput" class="pg-json" style="max-height:300px">// Click LOAD to fetch the tool definition</div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Request Payload (what was sent)</h3></div>
+        <div id="llmRequestOutput" class="pg-json" style="max-height:220px">// Run a query to inspect exact payload (query/model/timeout)</div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-json-header">
+          <h3 style="font-size:.88rem;font-weight:700">LLM Response</h3>
+          <span class="response-meta" id="llmMeta"></span>
+        </div>
+        <div id="llmOutput" class="pg-json" style="min-height:120px">// Simulate an LLM call to see the response</div>
+        <div class="llm-interpret" id="llmInterpret" style="display:none">
+          <h4>What this means (human-readable)</h4>
+          <div id="llmInterpretBody"></div>
+        </div>
+      </div>
+
+      <div class="pg-panel" id="llmValidatorPanel" style="display:none">
+        <div class="pg-panel-head">
+          <h3>Response Validator</h3>
+          <span id="llmValidatorSummary" class="rv-summary">PENDING</span>
+        </div>
+        <div style="font-size:.75rem;color:var(--text3);margin-bottom:8px">
+          Validates query-driven contract: model usage, timeout bounds, queue/runtime metadata, structured symbol resolutions, coverage KPI fields, and ISO timestamp formatting.
+        </div>
+        <div id="llmValidatorBody"></div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Quick Test Presets</h3></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="pg-btn pg-btn-outline" onclick="llmPreset('trending')">Trending</button>
+          <button class="pg-btn pg-btn-outline" onclick="llmPreset('negative')">Negative Signals</button>
+          <button class="pg-btn pg-btn-outline" onclick="llmPreset('positive')">Positive Signals</button>
+          <button class="pg-btn pg-btn-outline" onclick="llmPreset('correlations')">Correlations</button>
+          <button class="pg-btn pg-btn-outline" onclick="llmPreset('anomalies')">Anomalies</button>
+          <button class="pg-btn pg-btn-outline" onclick="llmPreset('health')">Colony Health</button>
+          <button class="pg-btn pg-btn-outline" onclick="llmPreset('entities')">Specific Entities</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: MULTI-MODEL COMPARE                    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section" id="sec-compare">
+      <div class="pg-header">
+        <h1>Multi-Model Comparison</h1>
+        <p>Run the same query against all swarm models side-by-side. Compare response quality, latency, data richness.</p>
+      </div>
+
+      <div class="pg-guide">
+        <strong>What is this?</strong> Send the same query to multiple swarm models at once and compare results side-by-side. Each model biases the adaptive planner differently — discover is broader and faster, precise verifies harder, correlate emphasizes cross-topic links, sentiment leans into forum/public mood. This helps you see which model is best for different query types.
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Test Query</h3></div>
+        <div class="pg-row">
+          <label>Query</label>
+          <textarea class="pg-textarea" id="compareQuery" placeholder="What's trending right now?" style="min-height:50px"></textarea>
+        </div>
+        <div class="pg-row">
+          <label>Entities</label>
+          <input class="pg-input" id="compareSymbols" placeholder='Optional: e.g. Tesla, OpenAI, Bitcoin'>
+        </div>
+        <div class="pg-row">
+          <label>API Key</label>
+          <input class="pg-input" id="compareApiKey" placeholder="sk_live_swr_...">
+        </div>
+
+        <div class="pg-row" style="margin-top:4px">
+          <label>Models</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <label style="min-width:auto;font-size:.78rem;display:flex;align-items:center;gap:4px"><input type="checkbox" value="discover" class="cmp-model" checked> discover</label>
+            <label style="min-width:auto;font-size:.78rem;display:flex;align-items:center;gap:4px"><input type="checkbox" value="precise" class="cmp-model" checked> precise</label>
+            <label style="min-width:auto;font-size:.78rem;display:flex;align-items:center;gap:4px"><input type="checkbox" value="correlate" class="cmp-model" checked> correlate</label>
+            <label style="min-width:auto;font-size:.78rem;display:flex;align-items:center;gap:4px"><input type="checkbox" value="sentiment" class="cmp-model" checked> sentiment</label>
+            <label style="min-width:auto;font-size:.78rem;display:flex;align-items:center;gap:4px"><input type="checkbox" value="full" class="cmp-model" checked> full</label>
+          </div>
+        </div>
+
+        <button class="pg-btn pg-btn-red" onclick="runComparison()" style="margin-top:8px">RUN COMPARISON</button>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Results</h3><span class="response-meta" id="compareMeta"></span></div>
+        <div class="compare-grid" id="compareGrid">
+          <div style="color:var(--text3);font-size:.82rem;padding:20px;text-align:center">Run a comparison to see side-by-side results</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: ANT INSPECTOR                          -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section" id="sec-ants">
+      <div class="pg-header">
+        <h1>Ant Inspector</h1>
+        <p>Live view of all ant castes — counts, locations, deposits, performance breakdown.</p>
+      </div>
+
+      <div class="pg-guide">
+        <strong>What is this?</strong> Shows every type of ant in the colony and what they're doing. Each caste has a specific job:
+        <ul>
+          <li><strong>Scouts</strong> — crawl the web discovering new entities (the "explorers")</li>
+          <li><strong>Foragers</strong> — collect live data (value, activity, sentiment) for discovered entities</li>
+          <li><strong>Amplifiers</strong> — boost strong signals via positive feedback loops</li>
+          <li><strong>Correlators</strong> — compare entities, detect convergence/divergence patterns</li>
+          <li><strong>Validators</strong> — cross-check signals for consistency and flag anomalies</li>
+          <li><strong>Guards</strong> — detect echo chambers and quarantine bad data</li>
+          <li><strong>Harvesters</strong> — turn raw pheromone data into intelligence reports</li>
+          <li><strong>Nurse</strong> — monitors colony health, detects stale/saturated locations</li>
+        </ul>
+      </div>
+
+      <div class="pg-panel" style="padding:12px 14px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+          <label style="font-size:.76rem;color:var(--text2);display:flex;align-items:center;gap:6px;cursor:pointer">
+            <input type="checkbox" id="antsAutoRefresh" checked>
+            Auto refresh ant panels every 8s
+          </label>
+          <span id="antsLastSync" style="font-size:.72rem;color:var(--text3)">Last sync: never</span>
+        </div>
+      </div>
+
+      <div class="pg-stat-grid" id="antStats"></div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Adaptive Runtime Breakdown</h3><button class="pg-btn pg-btn-outline" style="font-size:.7rem;padding:4px 12px" onclick="refreshAnts()">REFRESH</button></div>
+        <table class="ant-table" id="antTable">
+          <thead><tr><th>Caste</th><th>Count</th><th>Role</th><th>Status</th></tr></thead>
+          <tbody id="antTableBody"><tr><td colspan="4" style="text-align:center;color:var(--text3)">Run a query to auto-start runtime and populate ant data</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Colony Health Report</h3><button class="pg-btn pg-btn-outline" style="font-size:.7rem;padding:4px 12px" onclick="refreshHealth()">REFRESH</button></div>
+        <div id="healthOutput" class="pg-json" style="min-height:80px">// Query-driven runtime: run a query or wait for auto refresh</div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Discovered Entities</h3><button class="pg-btn pg-btn-outline" style="font-size:.7rem;padding:4px 12px" onclick="refreshDiscover()">REFRESH</button></div>
+        <div id="discoverOutput" class="pg-json" style="min-height:80px">// Query-driven runtime: run a query or wait for auto refresh</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: WEBSOCKET MONITOR                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section" id="sec-websocket">
+      <div class="pg-header">
+        <h1>WebSocket Monitor</h1>
+        <p>Real-time stream of adaptive runtime events. See planning, discovery, emergence, and finalization as they happen.</p>
+      </div>
+
+      <div class="pg-guide">
+        <strong>What is this?</strong> A live event stream showing exactly what the adaptive runtime is doing right now. Click CONNECT to start watching.
+        <ul>
+          <li><strong>tick</strong> — one adaptive query cycle completed</li>
+          <li><strong>discovery</strong> — providers or breeds found new public-web sources or evidence</li>
+          <li><strong>emergence</strong> — planner, resolver, or corroboration state advanced during the query window</li>
+          <li><strong>info</strong> — finalization or lifecycle updates</li>
+          <li><strong>error</strong> — something went wrong (blocked by website, timeout, etc.)</li>
+        </ul>
+        This is the best way to see whether the runtime is actually producing useful evidence during a query window.
+      </div>
+
+      <div class="pg-stat-grid">
+        <div class="pg-stat"><div class="st-label">WS Status</div><div class="st-value" id="wsStatus">DISCONNECTED</div></div>
+        <div class="pg-stat"><div class="st-label">Messages</div><div class="st-value" id="wsMsgCount">0</div></div>
+        <div class="pg-stat"><div class="st-label">Last Event</div><div class="st-value" id="wsLastEvent" style="font-size:.9rem">—</div></div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-bottom:14px">
+        <button class="pg-btn pg-btn-green" id="btnWsConnect" onclick="wsConnect()">CONNECT</button>
+        <button class="pg-btn pg-btn-outline" id="btnWsDisconnect" onclick="wsDisconnect()" disabled>DISCONNECT</button>
+        <button class="pg-btn pg-btn-outline" onclick="wsClear()">CLEAR LOG</button>
+        <div style="margin-left:auto;display:flex;align-items:center;gap:6px">
+          <label style="font-size:.72rem;color:var(--text3)">Filter:</label>
+          <select class="pg-select" id="wsFilter" style="font-size:.72rem;padding:4px 8px">
+            <option value="all">All Events</option>
+            <option value="tick">Ticks Only</option>
+            <option value="discovery">Discoveries</option>
+            <option value="emergence">Emergence</option>
+            <option value="info">Info</option>
+            <option value="error">Errors</option>
+          </select>
+          <label style="font-size:.72rem;color:var(--text3);display:flex;align-items:center;gap:4px"><input type="checkbox" id="wsAutoScroll" checked> Auto-scroll</label>
+        </div>
+      </div>
+
+      <div class="ws-log" id="wsLog">
+        <div style="color:#808080;text-align:center;padding:20px">Click CONNECT to start monitoring WebSocket events</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: PERFORMANCE                            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section" id="sec-perf">
+      <div class="pg-header">
+        <h1>Performance Analytics</h1>
+        <p>Response time distribution, error rates, data freshness across all test runs this session.</p>
+      </div>
+
+      <div class="pg-guide">
+        <strong>What is this?</strong> Aggregated performance stats for all API calls you've made this session. Shows latency distribution, error rates, and per-endpoint breakdowns. Useful for stress testing and benchmarking.
+      </div>
+
+      <div class="pg-stat-grid" id="perfStats">
+        <div class="pg-stat"><div class="st-label">Total Tests</div><div class="st-value" id="perfTotal">0</div></div>
+        <div class="pg-stat"><div class="st-label">Avg Latency</div><div class="st-value" id="perfAvg">—</div></div>
+        <div class="pg-stat"><div class="st-label">Min / Max</div><div class="st-value" id="perfMinMax" style="font-size:1rem">—</div></div>
+        <div class="pg-stat"><div class="st-label">Success Rate</div><div class="st-value" id="perfSuccess">—</div></div>
+        <div class="pg-stat"><div class="st-label">Errors</div><div class="st-value" id="perfErrors">0</div><div class="st-sub" id="perfLastErr">—</div></div>
+        <div class="pg-stat"><div class="st-label">P95 Latency</div><div class="st-value" id="perfP95">—</div></div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Latency Distribution (last 50 requests)</h3></div>
+        <div class="perf-bar-chart" id="perfChart"></div>
+      </div>
+
+      <div class="pg-panel">
+        <div class="pg-panel-head"><h3>Per-Endpoint Breakdown</h3></div>
+        <table class="hist-table" id="perfBreakdown">
+          <thead><tr><th>Endpoint</th><th>Calls</th><th>Avg (ms)</th><th>Min</th><th>Max</th><th>Errors</th></tr></thead>
+          <tbody id="perfBreakdownBody"><tr><td colspan="6" style="text-align:center;color:var(--text3)">No data yet</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAB: TEST HISTORY                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="pg-section" id="sec-history">
+      <div class="pg-header">
+        <h1>Test History</h1>
+        <p>All API calls made from this testing session. Click any row to see the full response.</p>
+      </div>
+
+      <div class="pg-guide">
+        <strong>What is this?</strong> A log of every API call you've made (manually). Auto-polling status checks are hidden by default. Click any row to inspect the full response body. Use filters to find specific calls.
+      </div>
+
+      <div style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+        <button class="pg-btn pg-btn-outline" onclick="clearHistory()">CLEAR HISTORY</button>
+        <button class="pg-btn pg-btn-outline" onclick="exportHistory()">EXPORT JSON</button>
+        <div class="hist-filter-bar" style="margin-left:auto">
+          <label><input type="checkbox" id="histShowPolling" onchange="updateHistoryTable()"> Show auto-polling</label>
+          <select class="pg-select" id="histMethodFilter" style="font-size:.72rem;padding:3px 8px" onchange="updateHistoryTable()">
+            <option value="all">All Methods</option>
+            <option value="GET">GET only</option>
+            <option value="POST">POST only</option>
+          </select>
+        </div>
+        <span style="font-size:.75rem;color:var(--text3)" id="histCount">0 requests</span>
+      </div>
+
+      <table class="hist-table" id="histTable">
+        <thead><tr><th>#</th><th>Time</th><th>Method</th><th>Endpoint</th><th>Status</th><th>Latency</th><th>Size</th></tr></thead>
+        <tbody id="histBody"><tr><td colspan="7" style="text-align:center;color:var(--text3)">No requests yet</td></tr></tbody>
+      </table>
+
+      <div class="pg-panel" style="margin-top:14px">
+        <div class="pg-panel-head"><h3>Selected Response</h3></div>
+        <div id="histDetail" class="pg-json" style="min-height:80px">// Click a row above to see the response</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- SCRIPTS                                         -->
+<!-- ═══════════════════════════════════════════════ -->
+<script type="module" src="firebase-init.js"></script>
+<script type="module">
+// ─── CONFIG ──────────────────────────────
+const API_BASE = (() => {
+  const loc = window.location;
+  if (loc.hostname === 'localhost' || loc.hostname === '127.0.0.1') {
+    return `${loc.protocol}//localhost:3388`;
+  }
+  return loc.origin;
+})();
+let authToken = null;
+let currentUser = null;
+
+// ─── STATE ───────────────────────────────
+let testHistory = [];
+let perfData = [];
+let perfByEndpoint = {};
+let wsSocket = null;
+let wsMsgCount = 0;
+let engineState = { running: false, model: '—', round: 0, ants: 0 };
+let activeTab = 'launcher';
+let autoRefreshHandle = null;
+let autoRefreshInFlight = false;
+let lastLLMRequestBody = null;
+let lastLLMResponseEntry = null;
+let wsSyncTimer = null;
+const AUTO_REFRESH_MS = 8000;
+
+// ─── ENDPOINT DEFINITIONS ────────────────
+const ENDPOINTS = [
+  { method: 'GET',  path: '/api/models',          desc: 'List swarm models',        auth: false },
+  { method: 'GET',  path: '/api/status',           desc: 'Engine status + ant counts', auth: false },
+  { method: 'GET',  path: '/api/health',           desc: 'Colony health report',     auth: false },
+  { method: 'GET',  path: '/api/discover',         desc: 'Trending / discovered',    auth: true },
+  { method: 'GET',  path: '/api/analyze/{id}',     desc: 'Deep analysis on entity',  auth: true, param: 'locationId' },
+  { method: 'GET',  path: '/api/reports',           desc: 'All intelligence reports', auth: true },
+  { method: 'GET',  path: '/api/reports/top/{n}',  desc: 'Top N reports',            auth: true, param: 'n' },
+  { method: 'GET',  path: '/api/correlate',         desc: 'Cross-entity correlations', auth: true },
+  { method: 'GET',  path: '/api/events',            desc: 'Engine event log',         auth: true },
+  { method: 'POST', path: '/api/query',             desc: 'LLM tool call endpoint',   auth: true, hasBody: true },
+  { method: 'GET',  path: '/api/tool-definition',   desc: 'OpenAI function schema',   auth: false },
+  { method: 'GET',  path: '/api/me',                desc: 'Current user data',        auth: true },
+  { method: 'GET',  path: '/api/keys',              desc: 'List API keys',            auth: true },
+  { method: 'GET',  path: '/api/usage',             desc: 'Monthly usage data',       auth: true },
+  { method: 'GET',  path: '/api/request-logs',      desc: 'Recent API call history',  auth: true },
+  { method: 'GET',  path: '/api/admin/stats',       desc: 'System-wide stats (admin)', auth: true },
+  { method: 'GET',  path: '/api/admin/users',       desc: 'List all users (admin)',   auth: true },
+  { method: 'GET',  path: '/api/test/ping',          desc: 'Latency test (no auth)',   auth: false },
+  { method: 'GET',  path: '/api/test/snapshot',      desc: 'Pheromone space snapshot', auth: true },
+  { method: 'GET',  path: '/api/test/config',        desc: 'Current engine config',    auth: true },
+  { method: 'POST', path: '/api/test/stress',        desc: 'Stress test (N queries)',  auth: true, hasBody: true },
+];
+
+const MODELS = [
+  { id: 'discover',  name: 'Swarm Discover',   desc: 'Broad discovery — finds trending entities, emerging topics.', cost: 2, color: '#16a34a' },
+  { id: 'precise',   name: 'Swarm Precise',    desc: 'Deep cross-validated analysis on specific entities.',          cost: 3, color: '#0891b2' },
+  { id: 'correlate', name: 'Swarm Correlate',   desc: 'Cross-entity pattern detection, convergences, divergences.', cost: 4, color: '#6366f1' },
+  { id: 'sentiment', name: 'Swarm Sentiment',   desc: 'Social signal analysis — crowd mood, hype, fear.',           cost: 2, color: '#d97706' },
+  { id: 'full',      name: 'Swarm Full',        desc: 'Maximum intelligence — all castes at full strength.',         cost: 5, color: '#dc2626' },
+];
+
+const MODEL_WAIT_LIMITS = {
+  discover: { min: 20, default: 45, max: 120 },
+  precise: { min: 15, default: 35, max: 90 },
+  correlate: { min: 20, default: 45, max: 120 },
+  sentiment: { min: 10, default: 25, max: 60 },
+  full: { min: 20, default: 45, max: 120 },
+};
+
+const MODEL_CONFIGS = {
+  discover: {
+    focus: 'Broad public-web discovery. Planner biases toward news, forum, and general-web terrain with lightweight corroboration.',
+    terrains: 'news, forum, general-web',
+    breeds: 'search_bootstrap, link_pathfinder, news_reader, forum_thread_reader',
+    verification: 'light corroboration',
+    browser: { instances: 3, tabsEach: 4 },
+    tick: '25 sec'
+  },
+  precise: {
+    focus: 'High-confidence investigation on explicit topics. Planner biases toward docs, company pages, and verifier work before promotion.',
+    terrains: 'docs, company, general-web',
+    breeds: 'search_bootstrap, docs_reader, source_verifier',
+    verification: 'heavy corroboration',
+    browser: { instances: 3, tabsEach: 5 },
+    tick: '30 sec'
+  },
+  correlate: {
+    focus: 'Cross-topic convergence and divergence. Planner mixes forum, news, and verifier passes to connect related evidence clusters.',
+    terrains: 'news, forum, company',
+    breeds: 'search_bootstrap, link_pathfinder, forum_thread_reader, source_verifier',
+    verification: 'balanced corroboration',
+    browser: { instances: 2, tabsEach: 4 },
+    tick: '30 sec'
+  },
+  sentiment: {
+    focus: 'Short-window social and discussion monitoring. Planner favors forum/social terrain and returns fast partial evidence.',
+    terrains: 'forum, social-signal, news',
+    breeds: 'search_bootstrap, forum_thread_reader, link_pathfinder',
+    verification: 'fast corroboration',
+    browser: { instances: 1, tabsEach: 3 },
+    tick: '20 sec'
+  },
+  full: {
+    focus: 'Maximum adaptive coverage. Planner spreads budget across news, forum, docs, company, and academic terrain with the strongest verifier pass.',
+    terrains: 'news, forum, docs, academic, company, general-web',
+    breeds: 'search_bootstrap, link_pathfinder, news_reader, docs_reader, paper_abstract_reader, source_verifier',
+    verification: 'deep corroboration',
+    browser: { instances: 3, tabsEach: 5 },
+    tick: '30 sec'
+  }
+};
+
+// ─── WAIT FOR SWARM AUTH ─────────────────
+function waitForAuth() {
+  return new Promise((resolve, reject) => {
+    if (window.SwarmAuth) return resolve(window.SwarmAuth);
+    let tries = 0;
+    const iv = setInterval(() => {
+      tries++;
+      if (window.SwarmAuth) { clearInterval(iv); resolve(window.SwarmAuth); }
+      if (tries > 200) { clearInterval(iv); reject(new Error('Auth timeout')); }
+    }, 50);
+  });
+}
+
+// ─── AUTH GATE ───────────────────────────
+(async () => {
+  let SA;
+  try { SA = await waitForAuth(); } catch {
+    document.getElementById('gate').innerHTML = '<div style="text-align:center;color:var(--red)">Auth failed to load. Refresh the page.</div>';
+    return;
+  }
+
+  SA.onAuth(async (user) => {
+    if (!user) { window.location.href = '/login'; return; }
+    currentUser = user;
+    authToken = await user.getIdToken();
+
+    // Check admin
+    try {
+      const r = await fetch(`${API_BASE}/api/admin/check`, { headers: { Authorization: `Bearer ${authToken}` } });
+      const j = await r.json();
+      if (!j.data?.isAdmin) { document.getElementById('gate').innerHTML = '<div style="text-align:center"><h2 style="font-size:1.1rem;margin-bottom:8px">Admin Access Required</h2><p style="color:var(--text3);font-size:.85rem">This testing ground is admin-only.</p><a href="/console" style="color:var(--red);font-size:.85rem;margin-top:12px;display:inline-block">← Back to Console</a></div>'; return; }
+    } catch { /* allow if admin check fails (offline dev) */ }
+
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('layout').style.display = 'grid';
+    initPlayground();
+  });
+})();
+
+// ─── INIT ────────────────────────────────
+function initPlayground() {
+  renderEndpoints();
+  const modelSel = document.getElementById('llmModel');
+  if (modelSel) {
+    modelSel.addEventListener('change', updateTimeoutHint);
+  }
+  const antsAutoRefresh = document.getElementById('antsAutoRefresh');
+  if (antsAutoRefresh) {
+    antsAutoRefresh.addEventListener('change', () => {
+      if (antsAutoRefresh.checked) refreshAntInspectorBundle(false);
+    });
+  }
+  updateTimeoutHint();
+  refreshStatus().then((statusJson) => refreshAntInspectorBundle(false, statusJson));
+  startAutoRefreshLoop();
+}
+
+// ─── TAB NAV ─────────────────────────────
+document.querySelectorAll('.pg-nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelectorAll('.pg-nav a').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('.pg-section').forEach(x => x.classList.remove('active'));
+    a.classList.add('active');
+    activeTab = a.dataset.tab;
+    document.getElementById('sec-' + activeTab).classList.add('active');
+    handleTabActivation(activeTab);
+  });
+});
+
+// ─── SILENT API CALL (no history recording) ──
+async function silentApiCall(method, path, body = null, apiKey = null) {
+  const headers = { 'Content-Type': 'application/json' };
+  if (apiKey) {
+    headers['Authorization'] = `Bearer ${apiKey}`;
+  } else if (authToken) {
+    headers['Authorization'] = `Bearer ${authToken}`;
+  }
+  const opts = { method, headers };
+  if (body && method !== 'GET') opts.body = JSON.stringify(body);
+  try {
+    const res = await fetch(API_BASE + path, opts);
+    let json = null;
+    try {
+      json = await res.json();
+    } catch {
+      json = null;
+    }
+    return { ok: res.ok, status: res.status, json };
+  } catch (error) {
+    return { ok: false, status: 0, json: null, error: error?.message || 'network_error' };
+  }
+}
+
+// ─── API HELPER ──────────────────────
+async function apiCall(method, path, body = null, apiKey = null) {
+  const start = Date.now();
+  const headers = { 'Content-Type': 'application/json' };
+
+  if (apiKey) {
+    headers['Authorization'] = `Bearer ${apiKey}`;
+  } else if (authToken) {
+    headers['Authorization'] = `Bearer ${authToken}`;
+  }
+
+  const opts = { method, headers };
+  if (body && method !== 'GET') opts.body = JSON.stringify(body);
+
+  let url = API_BASE + path;
+
+  try {
+    const res = await fetch(url, opts);
+    const latency = Date.now() - start;
+    const data = await res.json();
+    const size = JSON.stringify(data).length;
+    const request = { method, path, body: body || null };
+    const entry = { id: testHistory.length + 1, time: new Date().toLocaleTimeString(), method, path, status: res.status, latency, size, data, ok: res.ok, request };
+    testHistory.unshift(entry);
+    recordPerf(entry);
+    updateSidebar();
+    return entry;
+  } catch (err) {
+    const latency = Date.now() - start;
+    const request = { method, path, body: body || null };
+    const entry = { id: testHistory.length + 1, time: new Date().toLocaleTimeString(), method, path, status: 0, latency, size: 0, data: { error: err.message }, ok: false, request };
+    testHistory.unshift(entry);
+    recordPerf(entry);
+    updateSidebar();
+    return entry;
+  }
+}
+
+async function apiStreamCall(path, body = null, apiKey = null) {
+  const start = Date.now();
+  const headers = {
+    'Content-Type': 'application/json',
+    'Accept': 'text/event-stream',
+  };
+
+  if (apiKey) {
+    headers['Authorization'] = `Bearer ${apiKey}`;
+  } else if (authToken) {
+    headers['Authorization'] = `Bearer ${authToken}`;
+  }
+
+  const opts = { method: 'POST', headers, body: JSON.stringify(body || {}) };
+  const url = API_BASE + path;
+
+  try {
+    const res = await fetch(url, opts);
+    const latency = Date.now() - start;
+    const text = await res.text();
+    const events = [];
+    let currentEvent = 'message';
+    let currentData = [];
+
+    function flushEvent() {
+      if (currentData.length === 0) return;
+      const raw = currentData.join('\n');
+      let parsed = raw;
+      try {
+        parsed = JSON.parse(raw);
+      } catch {}
+      events.push({ event: currentEvent, data: parsed });
+      currentEvent = 'message';
+      currentData = [];
+    }
+
+    for (const line of text.split(/\r?\n/)) {
+      if (!line.trim()) {
+        flushEvent();
+        continue;
+      }
+      if (line.startsWith('event:')) {
+        currentEvent = line.slice(6).trim();
+      } else if (line.startsWith('data:')) {
+        currentData.push(line.slice(5).trim());
+      }
+    }
+    flushEvent();
+
+    const finalEvent = events.find((evt) => evt.event === 'final');
+    const doneEvent = events.find((evt) => evt.event === 'done');
+    const data = finalEvent
+      ? { ok: true, data: finalEvent.data, meta: doneEvent?.data?.meta || {}, events }
+      : { ok: res.ok, error: 'Missing final SSE event', events };
+    const size = JSON.stringify(data).length;
+    const request = { method: 'POST', path, body: body || null };
+    const entry = { id: testHistory.length + 1, time: new Date().toLocaleTimeString(), method: 'POST', path, status: res.status, latency, size, data, ok: res.ok, request };
+    testHistory.unshift(entry);
+    recordPerf(entry);
+    updateSidebar();
+    return entry;
+  } catch (err) {
+    const latency = Date.now() - start;
+    const request = { method: 'POST', path, body: body || null };
+    const entry = { id: testHistory.length + 1, time: new Date().toLocaleTimeString(), method: 'POST', path, status: 0, latency, size: 0, data: { error: err.message }, ok: false, request };
+    testHistory.unshift(entry);
+    recordPerf(entry);
+    updateSidebar();
+    return entry;
+  }
+}
+
+// ─── RECORD PERF ─────────────────────────
+function recordPerf(entry) {
+  perfData.push(entry);
+  if (!perfByEndpoint[entry.path]) perfByEndpoint[entry.path] = [];
+  perfByEndpoint[entry.path].push(entry);
+  updatePerfStats();
+}
+
+function updatePerfStats() {
+  const total = perfData.length;
+  const ok = perfData.filter(e => e.ok).length;
+  const errors = total - ok;
+  const latencies = perfData.map(e => e.latency).sort((a, b) => a - b);
+  const avg = total > 0 ? Math.round(latencies.reduce((a, b) => a + b, 0) / total) : 0;
+  const min = latencies[0] || 0;
+  const max = latencies[latencies.length - 1] || 0;
+  const p95 = latencies[Math.floor(total * 0.95)] || 0;
+
+  document.getElementById('perfTotal').textContent = total;
+  document.getElementById('perfAvg').textContent = total > 0 ? avg + 'ms' : '—';
+  document.getElementById('perfMinMax').textContent = total > 0 ? `${min} / ${max}ms` : '—';
+  document.getElementById('perfSuccess').textContent = total > 0 ? ((ok / total * 100).toFixed(1) + '%') : '—';
+  document.getElementById('perfErrors').textContent = errors;
+  document.getElementById('perfP95').textContent = total > 0 ? p95 + 'ms' : '—';
+  if (errors > 0) {
+    const lastErr = perfData.filter(e => !e.ok).pop();
+    document.getElementById('perfLastErr').textContent = lastErr ? lastErr.path : '—';
+  }
+
+  // Latency chart
+  const chart = document.getElementById('perfChart');
+  const recent = perfData.slice(-50);
+  const maxLat = Math.max(...recent.map(e => e.latency), 1);
+  chart.innerHTML = recent.map(e => {
+    const h = Math.max(4, (e.latency / maxLat) * 110);
+    const color = e.ok ? (e.latency > 2000 ? 'var(--amber)' : 'var(--green)') : 'var(--red)';
+    return `<div class="perf-bar" style="height:${h}px;background:${color}"><div class="perf-tip">${e.latency}ms ${e.path}</div></div>`;
+  }).join('');
+
+  // Breakdown table
+  const tbody = document.getElementById('perfBreakdownBody');
+  const endpoints = Object.keys(perfByEndpoint);
+  if (endpoints.length === 0) { tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text3)">No data yet</td></tr>'; return; }
+  tbody.innerHTML = endpoints.map(ep => {
+    const entries = perfByEndpoint[ep];
+    const epOk = entries.filter(e => e.ok).length;
+    const epLat = entries.map(e => e.latency);
+    const epAvg = Math.round(epLat.reduce((a, b) => a + b, 0) / epLat.length);
+    return `<tr><td>${ep}</td><td>${entries.length}</td><td>${epAvg}</td><td>${Math.min(...epLat)}</td><td>${Math.max(...epLat)}</td><td class="${entries.length - epOk > 0 ? 'td-err' : ''}">${entries.length - epOk}</td></tr>`;
+  }).join('');
+}
+
+// ─── SIDEBAR STATUS ──────────────────────
+function updateSidebar() {
+  const e = document.getElementById('sbEngine');
+  e.textContent = engineState.running ? 'RUNNING' : 'STOPPED';
+  e.className = 'sb-val ' + (engineState.running ? 'running' : 'stopped');
+  document.getElementById('sbModel').textContent = engineState.model || '—';
+  document.getElementById('sbRound').textContent = engineState.round || 0;
+  document.getElementById('sbAnts').textContent = engineState.ants || 0;
+  document.getElementById('sbTests').textContent = testHistory.length;
+}
+
+function handleTabActivation(tab) {
+  if (tab === 'ants') {
+    refreshAntInspectorBundle(false);
+  }
+  if (tab === 'history') {
+    updateHistoryTable();
+  }
+  if (tab === 'perf') {
+    updatePerfStats();
+  }
+}
+
+function startAutoRefreshLoop() {
+  if (autoRefreshHandle) clearInterval(autoRefreshHandle);
+  autoRefreshHandle = setInterval(async () => {
+    if (autoRefreshInFlight) return;
+    autoRefreshInFlight = true;
+    try {
+      const statusJson = await refreshStatus();
+      const antsEnabled = document.getElementById('antsAutoRefresh')?.checked !== false;
+      if (antsEnabled || activeTab === 'ants' || activeTab === 'launcher') {
+        await refreshAntInspectorBundle(false, statusJson);
+      }
+      if (activeTab === 'history') {
+        updateHistoryTable();
+      }
+    } finally {
+      autoRefreshInFlight = false;
+    }
+  }, AUTO_REFRESH_MS);
+}
+
+function updateAntSyncStamp(source = 'auto') {
+  const stamp = document.getElementById('antsLastSync');
+  if (!stamp) return;
+  const ts = new Date().toLocaleTimeString();
+  stamp.textContent = `Last sync: ${ts} (${source})`;
+}
+
+async function syncAfterQuery() {
+  const statusJson = await refreshStatus();
+  await refreshAntInspectorBundle(false, statusJson);
+}
+
+// ─── REFRESH STATUS ──────────────────────
+async function refreshStatus() {
+  const result = await silentApiCall('GET', '/api/status');
+  if (!result?.ok || !result.json?.data) return null;
+  const d = result.json.data;
+  engineState.running = d.running || false;
+  engineState.model = result.json.meta?.model || d.model || '—';
+  engineState.round = d.round || 0;
+  engineState.ants = d.ants?.total || 0;
+
+  document.getElementById('engStatus').textContent = d.running ? 'RUNNING' : 'STOPPED';
+  document.getElementById('engStatus').style.color = d.running ? 'var(--green)' : 'var(--red)';
+  document.getElementById('engModel').textContent = engineState.model;
+  document.getElementById('engRound').textContent = d.round || 0;
+  document.getElementById('engAnts').textContent = d.ants?.total || 0;
+  document.getElementById('engLocs').textContent = d.space?.locations || 0;
+  document.getElementById('engReports').textContent = d.reports || 0;
+
+  // Engine Activity panel
+  const eaBadge = document.getElementById('eaStatusBadge');
+  const eaPanel = document.getElementById('engineActivity');
+  if (d.running) {
+    eaBadge.textContent = 'RUNNING';
+    eaBadge.style.background = 'rgba(22,163,74,.1)';
+    eaBadge.style.color = 'var(--green)';
+    const a = d.ants || {};
+    const sp = d.space || {};
+    const plan = d.executionPlan || {};
+    const breedSummary = Array.isArray(plan.breedPlan) && plan.breedPlan.length
+      ? plan.breedPlan.map((entry) => `${entry.breedId} x${entry.count}`).join(' | ')
+      : 'No active execution plan yet';
+    const terrainSummary = Array.isArray(plan.terrains) && plan.terrains.length
+      ? plan.terrains.map((entry) => `${entry.terrain} ${Math.round((entry.weight || 0) * 100)}%`).join(' | ')
+      : 'No terrain plan yet';
+    const policy = d.runtimePolicy || {};
+    const lastQueryMeta = d.lastQueryMeta || {};
+    const sourceCoverage = d.sourceCoverage || {};
+    eaPanel.innerHTML = `
+      <div class="ea-row"><span class="ea-dot active"></span><strong style="min-width:120px">Round ${d.round || 0}</strong><span style="color:var(--text3)">Last adaptive query cycle completed and state is retained for warm reuse.</span></div>
+      <div class="ea-row"><span class="ea-dot active"></span><strong style="min-width:120px">Active Breeds</strong><span style="color:var(--text3)">${breedSummary}</span></div>
+      <div class="ea-row"><span class="ea-dot active"></span><strong style="min-width:120px">Terrain Plan</strong><span style="color:var(--text3)">${terrainSummary}</span></div>
+      <div class="ea-row"><span class="ea-dot ${policy.providerKinds?.length ? 'active' : 'idle'}"></span><strong style="min-width:120px">Discovery Policy</strong><span style="color:var(--text3)">${policy.crawlMode || 'robots-first'} · providers: ${(policy.providerKinds || []).join(', ') || '—'} · caps ${policy.maxPagesPerDomainPerQuery || 0}/${policy.maxTotalPagesPerQuery || 0}</span></div>
+      <div class="ea-row"><span class="ea-dot ${(sourceCoverage.totalEvidence || d.evidenceStored) ? 'active' : 'idle'}"></span><strong style="min-width:120px">Evidence</strong><span style="color:var(--text3)">${sourceCoverage.totalEvidence || d.evidenceStored || 0} evidence · ${sourceCoverage.totalDomains || 0} domains · ${d.topicsTracked || 0} promoted topics</span></div>
+      <div class="ea-row"><span class="ea-dot ${sp.totalDeposits ? 'active' : 'idle'}"></span><strong style="min-width:120px">Pheromone Space</strong><span style="color:var(--text3)">${sp.locations || 0} locations · ${sp.totalDeposits || 0} deposits · ${sp.activeSignals || 0} active signals</span></div>
+      <div class="ea-row"><span class="ea-dot ${d.reports ? 'active' : 'idle'}"></span><strong style="min-width:120px">Reports</strong><span style="color:var(--text3)">${d.reports || 0} intelligence reports generated · first evidence ${lastQueryMeta.performance?.timeToFirstEvidenceMs ?? '—'}ms · first useful ${lastQueryMeta.performance?.timeToFirstUsefulMs ?? '—'}ms</span></div>
+      <div style="margin-top:8px;padding:8px 10px;background:var(--surface);border-radius:6px;font-size:.72rem;color:var(--text3);line-height:1.5">
+        Query-driven runtime is active. The engine was started by a query and will auto-stop after 120s without new queries.
+      </div>
+    `;
+  } else {
+    eaBadge.textContent = 'STOPPED';
+    eaBadge.style.background = 'rgba(220,38,38,.1)';
+    eaBadge.style.color = 'var(--red)';
+    eaPanel.innerHTML = '<div style="color:var(--text3);font-size:.78rem;text-align:center;padding:12px">Engine is idle. It will auto-start on the next query.</div>';
+  }
+
+  updateSidebar();
+  return result.json;
+}
+
+// ─── JSON SYNTAX HIGHLIGHT ───────────────
+function highlightJSON(obj) {
+  const json = typeof obj === 'string' ? obj : JSON.stringify(obj, null, 2);
+  return json
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"([^"]+)"(?=\s*:)/g, '"<span class="json-key">$1</span>"')
+    .replace(/:\s*"([^"]*)"/g, ': "<span class="json-str">$1</span>"')
+    .replace(/:\s*(\d+\.?\d*)/g, ': <span class="json-num">$1</span>')
+    .replace(/:\s*(true|false)/g, ': <span class="json-bool">$1</span>')
+    .replace(/:\s*(null)/g, ': <span class="json-null">$1</span>');
+}
+
+// ─── RENDER ENDPOINTS ────────────────────
+function renderEndpoints() {
+  const list = document.getElementById('epList');
+  list.innerHTML = ENDPOINTS.map((ep, i) => `
+    <div class="ep-item" data-idx="${i}" onclick="selectEndpoint(${i})">
+      <span class="ep-method ${ep.method.toLowerCase()}">${ep.method}</span>
+      <span class="ep-path">${ep.path}</span>
+      <span class="ep-desc">${ep.desc}</span>
+    </div>
+  `).join('');
+}
+
+let selectedEpIdx = -1;
+function selectEndpoint(idx) {
+  selectedEpIdx = idx;
+  document.querySelectorAll('.ep-item').forEach(el => el.classList.remove('selected'));
+  document.querySelectorAll('.ep-item')[idx].classList.add('selected');
+
+  const ep = ENDPOINTS[idx];
+  document.getElementById('epMethodBadge').textContent = ep.method;
+  document.getElementById('epMethodBadge').className = 'badge ' + (ep.method === 'GET' ? 'badge-green' : 'badge-cyan');
+
+  let url = API_BASE + ep.path;
+  document.getElementById('epUrl').value = url;
+  document.getElementById('epParamsRow').style.display = ep.method === 'GET' ? 'flex' : 'none';
+  document.getElementById('epBodyRow').style.display = ep.hasBody ? 'flex' : 'none';
+
+  // Prefill body for known endpoints
+  if (ep.path === '/api/query') {
+    document.getElementById('epBody').value = JSON.stringify({ query: "What's trending?", symbols: [], model: "full", depth: "standard", timeout: 45 }, null, 2);
+  } else {
+    document.getElementById('epBody').value = '';
+  }
+  document.getElementById('epParams').value = '';
+}
+
+async function fireEndpoint() {
+  if (selectedEpIdx < 0) { alert('Select an endpoint first'); return; }
+  const ep = ENDPOINTS[selectedEpIdx];
+  let path = ep.path;
+
+  // Replace path params
+  if (ep.param) {
+    const val = prompt(`Enter value for {${ep.param}}:`, ep.param === 'n' ? '10' : 'Tesla');
+    if (!val) return;
+    path = path.replace(`{${ep.param}}`, val);
+  }
+
+  // Add query params
+  const params = document.getElementById('epParams').value.trim();
+  if (params) path += '?' + params;
+
+  // Body
+  let body = null;
+  if (ep.hasBody) {
+    try { body = JSON.parse(document.getElementById('epBody').value); } catch { alert('Invalid JSON body'); return; }
+  }
+
+  const apiKey = document.getElementById('epApiKey').value.trim() || null;
+  const entry = await apiCall(ep.method, path, body, apiKey);
+
+  document.getElementById('epMeta').innerHTML = `
+    <span class="${entry.ok ? 'status-ok' : 'status-err'}">${entry.status}</span> ·
+    <span class="latency">${entry.latency}ms</span> ·
+    ${(entry.size / 1024).toFixed(1)}KB
+  `;
+  document.getElementById('epOutput').innerHTML = highlightJSON(entry.data);
+  updateHistoryTable();
+  if (path.startsWith('/api/query')) {
+    await syncAfterQuery();
+  }
+}
+
+function clearEndpointOutput() {
+  document.getElementById('epOutput').innerHTML = '// Select an endpoint and send a request';
+  document.getElementById('epMeta').innerHTML = '';
+}
+
+function updateTimeoutHint() {
+  const model = document.getElementById('llmModel')?.value || 'full';
+  const limits = MODEL_WAIT_LIMITS[model] || MODEL_WAIT_LIMITS.full;
+  const hint = document.getElementById('llmTimeoutHint');
+  if (hint) {
+    hint.textContent = `${model}: ${limits.min}-${limits.max}s (default ${limits.default}s)`;
+  }
+  const timeoutInput = document.getElementById('llmTimeout');
+  if (timeoutInput) {
+    timeoutInput.min = String(limits.min);
+    timeoutInput.max = String(limits.max);
+    timeoutInput.placeholder = `Blank = ${limits.default}s`;
+  }
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function isValidIsoTimestamp(value) {
+  if (typeof value !== 'string') return false;
+  if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/.test(value)) return false;
+  return !Number.isNaN(Date.parse(value));
+}
+
+function pushValidatorCheck(checks, level, label, message) {
+  checks.push({ level, label, message });
+}
+
+function buildLLMValidatorReport(entry, requestBody) {
+  const checks = [];
+  const resp = entry?.data;
+  const reqModel = requestBody?.model || null;
+  const reqTimeout = requestBody?.timeout;
+
+  if (entry?.status !== 200 || !resp?.ok) {
+    pushValidatorCheck(checks, 'fail', 'HTTP', `Expected HTTP 200 with ok=true. Got status=${entry?.status || 0}, ok=${resp?.ok === true ? 'true' : 'false'}.`);
+    return { verdict: 'fail', checks };
+  }
+  pushValidatorCheck(checks, 'pass', 'HTTP', 'HTTP 200 and ok=true.');
+
+  const d = resp.data || {};
+  const qm = d.queryMeta;
+  if (!qm || typeof qm !== 'object') {
+    pushValidatorCheck(checks, 'fail', 'queryMeta', 'Missing data.queryMeta. Response is not on the new contract.');
+    return { verdict: 'fail', checks };
+  }
+
+  const requiredFields = [
+    'modelRequested', 'modelUsed', 'timeoutRequestedSec', 'timeoutAcceptedSec', 'timeoutLimitsSec',
+    'queuePosition', 'queueWaitMs', 'autoStarted', 'restartedForModel', 'coldStartMs',
+    'elapsedMs', 'respondedAt', 'partial', 'coverage',
+  ];
+  const missingFields = requiredFields.filter((key) => qm[key] === undefined);
+  if (missingFields.length > 0) {
+    pushValidatorCheck(checks, 'fail', 'queryMeta fields', `Missing required fields: ${missingFields.join(', ')}.`);
+  } else {
+    pushValidatorCheck(checks, 'pass', 'queryMeta fields', 'All required queryMeta fields are present.');
+  }
+
+  if (qm.timeoutSec !== undefined && (qm.timeoutAcceptedSec === undefined || qm.timeoutLimitsSec === undefined)) {
+    pushValidatorCheck(checks, 'fail', 'Legacy format', 'Detected old queryMeta.timeoutSec shape (legacy response).');
+  }
+
+  const modelUsed = qm.modelUsed;
+  const metaModel = resp.meta?.model;
+  if (reqModel && modelUsed !== reqModel) {
+    pushValidatorCheck(checks, 'fail', 'Model selection', `Requested model "${reqModel}" but modelUsed is "${modelUsed}".`);
+  } else {
+    pushValidatorCheck(checks, 'pass', 'Model selection', `Requested model and modelUsed are aligned (${modelUsed || reqModel || 'auto'}).`);
+  }
+  if (modelUsed && metaModel && modelUsed !== metaModel) {
+    pushValidatorCheck(checks, 'warn', 'Meta model', `meta.model "${metaModel}" differs from queryMeta.modelUsed "${modelUsed}".`);
+  } else if (modelUsed && metaModel) {
+    pushValidatorCheck(checks, 'pass', 'Meta model', `meta.model matches modelUsed (${modelUsed}).`);
+  }
+
+  const limits = qm.timeoutLimitsSec || {};
+  const hasLimits = [limits.min, limits.default, limits.max].every((v) => Number.isFinite(v));
+  if (!hasLimits) {
+    pushValidatorCheck(checks, 'fail', 'Timeout limits', 'timeoutLimitsSec is missing min/default/max numbers.');
+  } else {
+    const accepted = Number(qm.timeoutAcceptedSec);
+    if (!Number.isFinite(accepted) || accepted < limits.min || accepted > limits.max) {
+      pushValidatorCheck(checks, 'fail', 'Timeout accepted', `timeoutAcceptedSec=${qm.timeoutAcceptedSec} outside ${limits.min}-${limits.max}.`);
+    } else {
+      pushValidatorCheck(checks, 'pass', 'Timeout accepted', `timeoutAcceptedSec=${accepted}s within ${limits.min}-${limits.max}s.`);
+    }
+  }
+
+  if (reqTimeout !== undefined && Number.isFinite(Number(reqTimeout))) {
+    if (Number(qm.timeoutRequestedSec) !== Number(reqTimeout)) {
+      pushValidatorCheck(checks, 'warn', 'Requested timeout', `Request timeout=${reqTimeout}s, queryMeta.timeoutRequestedSec=${qm.timeoutRequestedSec}.`);
+    } else {
+      pushValidatorCheck(checks, 'pass', 'Requested timeout', `Request timeout echoed correctly (${reqTimeout}s).`);
+    }
+  }
+
+  if (!Number.isFinite(Number(qm.queuePosition)) || Number(qm.queuePosition) < 0 || !Number.isFinite(Number(qm.queueWaitMs)) || Number(qm.queueWaitMs) < 0) {
+    pushValidatorCheck(checks, 'fail', 'Queue metrics', `Invalid queue metrics (position=${qm.queuePosition}, waitMs=${qm.queueWaitMs}).`);
+  } else {
+    pushValidatorCheck(checks, 'pass', 'Queue metrics', `queuePosition=${qm.queuePosition}, queueWaitMs=${qm.queueWaitMs}.`);
+  }
+
+  if (!isValidIsoTimestamp(qm.respondedAt)) {
+    pushValidatorCheck(checks, 'fail', 'respondedAt', `Invalid ISO timestamp: ${qm.respondedAt}`);
+  } else {
+    pushValidatorCheck(checks, 'pass', 'respondedAt', `Valid ISO timestamp (${qm.respondedAt}).`);
+  }
+
+  const coverage = qm.coverage || {};
+  const coverageFields = ['requestedSymbols', 'exactCount', 'resolvedCount', 'relatedOnlyCount', 'notFoundCount', 'coverageRatio', 'usefulnessScore'];
+  const missingCoverage = coverageFields.filter((k) => coverage[k] === undefined);
+  if (missingCoverage.length > 0) {
+    pushValidatorCheck(checks, 'fail', 'Coverage', `Missing queryMeta.coverage fields: ${missingCoverage.join(', ')}.`);
+  } else {
+    pushValidatorCheck(checks, 'pass', 'Coverage', `coverageRatio=${coverage.coverageRatio}, usefulnessScore=${coverage.usefulnessScore}.`);
+  }
+
+  if (Array.isArray(requestBody?.symbols) && requestBody.symbols.length > 0) {
+    const resolutions = Array.isArray(d.topicResolutions) ? d.topicResolutions : d.symbolResolutions;
+    if (!Array.isArray(resolutions)) {
+      pushValidatorCheck(checks, 'fail', 'topicResolutions', 'symbols were requested but data.topicResolutions is missing.');
+    } else if (resolutions.length !== requestBody.symbols.length) {
+      pushValidatorCheck(checks, 'fail', 'topicResolutions', `Expected ${requestBody.symbols.length} topicResolutions, got ${resolutions.length}.`);
+    } else {
+      const allowedStatuses = new Set(['exact', 'phrase_match', 'alias_match', 'fuzzy_match', 'related_only', 'not_found']);
+      const invalid = resolutions.filter((r) => !allowedStatuses.has(String(r?.status || '')));
+      if (invalid.length > 0) {
+        pushValidatorCheck(checks, 'fail', 'Resolution status', `Invalid status values in topicResolutions (${invalid.length} entries).`);
+      } else {
+        pushValidatorCheck(checks, 'pass', 'topicResolutions', `Received ${resolutions.length} structured topic resolutions.`);
+      }
+    }
+  }
+
+  if (!Array.isArray(d.evidence)) {
+    pushValidatorCheck(checks, 'fail', 'Evidence', 'Missing data.evidence array.');
+  } else {
+    pushValidatorCheck(checks, 'pass', 'Evidence', `Received ${d.evidence.length} evidence items.`);
+  }
+
+  if (!d.executionPlan || !Array.isArray(d.executionPlan.terrains) || !Array.isArray(d.executionPlan.providerPlan) || !Array.isArray(d.executionPlan.breedPlan)) {
+    pushValidatorCheck(checks, 'fail', 'Execution plan', 'Missing executionPlan.terrains/providerPlan/breedPlan.');
+  } else {
+    pushValidatorCheck(checks, 'pass', 'Execution plan', `Terrains=${d.executionPlan.terrains.length}, providers=${d.executionPlan.providerPlan.length}, breeds=${d.executionPlan.breedPlan.length}.`);
+  }
+
+  if (!d.sourceCoverage || typeof d.sourceCoverage !== 'object') {
+    pushValidatorCheck(checks, 'fail', 'Source coverage', 'Missing data.sourceCoverage.');
+  } else {
+    pushValidatorCheck(checks, 'pass', 'Source coverage', `domains=${d.sourceCoverage.totalDomains || 0}, evidence=${d.sourceCoverage.totalEvidence || 0}, blocked=${d.sourceCoverage.blockedCount || 0}.`);
+  }
+
+  if (resp.meta?.engineRunning === false) {
+    pushValidatorCheck(checks, 'warn', 'Engine state', 'meta.engineRunning=false in response; verify this is expected for your runtime timing.');
+  } else {
+    pushValidatorCheck(checks, 'pass', 'Engine state', `meta.engineRunning=${resp.meta?.engineRunning === true ? 'true' : 'false'}.`);
+  }
+
+  const topReports = Array.isArray(d.topReports) ? d.topReports : [];
+  if (topReports.length > 0) {
+    const lowConfidence = topReports.filter((r) => String(r?.confidence || '').toLowerCase() === 'low').length;
+    if (lowConfidence / topReports.length >= 0.6) {
+      pushValidatorCheck(checks, 'warn', 'Signal quality', `${lowConfidence}/${topReports.length} top reports are low-confidence.`);
+    } else {
+      pushValidatorCheck(checks, 'pass', 'Signal quality', 'Confidence mix is acceptable for exploratory usage.');
+    }
+  }
+
+  const hasFail = checks.some((c) => c.level === 'fail');
+  const hasWarn = checks.some((c) => c.level === 'warn');
+  const verdict = hasFail ? 'fail' : hasWarn ? 'warn' : 'pass';
+  return { verdict, checks };
+}
+
+function renderLLMValidator(entry, requestBody) {
+  const panel = document.getElementById('llmValidatorPanel');
+  const summary = document.getElementById('llmValidatorSummary');
+  const body = document.getElementById('llmValidatorBody');
+  if (!panel || !summary || !body) return;
+
+  const report = buildLLMValidatorReport(entry, requestBody);
+  panel.style.display = 'block';
+
+  const summaryLabel = report.verdict === 'pass' ? 'PASS' : report.verdict === 'warn' ? 'WARN' : 'FAIL';
+  summary.className = `rv-summary ${report.verdict}`;
+  summary.textContent = summaryLabel;
+
+  const iconMap = { pass: '[+]', warn: '[!]', fail: '[x]' };
+  body.innerHTML = report.checks.map((check) => `
+    <div class="rv-row">
+      <span class="rv-icon ${check.level}">${iconMap[check.level] || '[?]'}</span>
+      <span class="rv-label">${escapeHtml(check.label)}</span>
+      <span class="rv-val">${escapeHtml(check.message)}</span>
+    </div>
+  `).join('');
+}
+
+// ─── LLM SIMULATOR ──────────────────────
+async function fireLLMQuery() {
+  const query = document.getElementById('llmQuery').value.trim();
+  const symbolsRaw = document.getElementById('llmSymbols').value.trim();
+  const depth = document.getElementById('llmDepth').value;
+  const model = document.getElementById('llmModel').value;
+  const timeoutRaw = document.getElementById('llmTimeout').value.trim();
+  const stream = document.getElementById('llmStream').checked;
+  const apiKey = document.getElementById('llmApiKey').value.trim() || null;
+
+  const body = {};
+  if (query) body.query = query;
+  if (symbolsRaw) body.symbols = symbolsRaw.split(',').map(s => s.trim()).filter(Boolean);
+  body.model = model;
+  body.depth = depth;
+  if (timeoutRaw) body.timeout = Number(timeoutRaw);
+  if (stream) body.stream = true;
+
+  if (!body.query && !body.symbols) { alert('Enter a query or symbols'); return; }
+
+  lastLLMRequestBody = { ...body };
+  document.getElementById('llmRequestOutput').innerHTML = highlightJSON(lastLLMRequestBody);
+  const entry = stream
+    ? await apiStreamCall('/api/query', body, apiKey)
+    : await apiCall('POST', '/api/query', body, apiKey);
+  lastLLMResponseEntry = entry;
+
+  document.getElementById('llmMeta').innerHTML = `
+    <span class="${entry.ok ? 'status-ok' : 'status-err'}">${entry.status}</span> ·
+    <span class="latency">${entry.latency}ms</span> ·
+    ${(entry.size / 1024).toFixed(1)}KB
+  `;
+  document.getElementById('llmOutput').innerHTML = highlightJSON(entry.data);
+
+  // Show human-readable interpretation
+  const interpret = document.getElementById('llmInterpret');
+  interpret.style.display = 'block';
+  document.getElementById('llmInterpretBody').innerHTML = interpretLLMResponse(entry.data);
+  renderLLMValidator(entry, body);
+  updateHistoryTable();
+  await syncAfterQuery();
+}
+
+function interpretLLMResponse(data) {
+  if (!data || !data.ok) {
+    return '<div class="li-row"><span class="li-icon err">[X]</span><span class="li-val" style="color:var(--red)">Request failed: ' + (data?.error || 'Unknown error') + '</span></div>';
+  }
+
+  const d = data.data || {};
+  const meta = data.meta || {};
+  let rows = [];
+
+  rows.push(`<div class="li-row"><span class="li-icon info">[i]</span><span class="li-label">Engine</span><span class="li-val">${meta.engineRunning ? 'Running' : 'Stopped'} | Model: ${meta.model || '?'} | Round: ${meta.round || 0}</span></div>`);
+  if (d.queryMeta) {
+    rows.push(`<div class="li-row"><span class="li-icon info">[M]</span><span class="li-label">Model</span><span class="li-val">requested: ${d.queryMeta.modelRequested || 'auto'} | used: ${d.queryMeta.modelUsed || '?'}</span></div>`);
+    rows.push(`<div class="li-row"><span class="li-icon info">[T]</span><span class="li-label">Timeout</span><span class="li-val">requested: ${d.queryMeta.timeoutRequestedSec ?? 'default'}s | accepted: ${d.queryMeta.timeoutAcceptedSec ?? '?'}s | limits: ${d.queryMeta.timeoutLimitsSec?.min ?? '?'}-${d.queryMeta.timeoutLimitsSec?.max ?? '?'}s</span></div>`);
+    rows.push(`<div class="li-row"><span class="li-icon info">[Q]</span><span class="li-label">Queue</span><span class="li-val">position: ${d.queryMeta.queuePosition ?? 0} | wait: ${d.queryMeta.queueWaitMs ?? 0}ms | elapsed: ${d.queryMeta.elapsedMs ?? 0}ms</span></div>`);
+    rows.push(`<div class="li-row"><span class="li-icon info">[R]</span><span class="li-label">Runtime</span><span class="li-val">auto-started: ${d.queryMeta.autoStarted ? 'yes' : 'no'} | restarted-for-model: ${d.queryMeta.restartedForModel ? 'yes' : 'no'} | cold start: ${d.queryMeta.coldStartMs ?? 0}ms</span></div>`);
+    if (d.queryMeta.coverage) {
+      rows.push(`<div class="li-row"><span class="li-icon info">[C]</span><span class="li-label">Coverage</span><span class="li-val">requested: ${d.queryMeta.coverage.requestedSymbols ?? 0} | exact: ${d.queryMeta.coverage.exactCount ?? 0} | resolved: ${d.queryMeta.coverage.resolvedCount ?? 0} | related-only: ${d.queryMeta.coverage.relatedOnlyCount ?? 0} | not-found: ${d.queryMeta.coverage.notFoundCount ?? 0} | ratio: ${d.queryMeta.coverage.coverageRatio ?? 0} | usefulness: ${d.queryMeta.coverage.usefulnessScore ?? 0}</span></div>`);
+    }
+    if (d.queryMeta.streaming) {
+      rows.push(`<div class="li-row"><span class="li-icon info">[E]</span><span class="li-label">Streaming</span><span class="li-val">enabled: ${d.queryMeta.streaming.enabled ? 'yes' : 'no'} | events: ${d.queryMeta.streaming.eventCount ?? 0}</span></div>`);
+    }
+    if (d.queryMeta.corroboration) {
+      rows.push(`<div class="li-row"><span class="li-icon info">[V]</span><span class="li-label">Corroboration</span><span class="li-val">promoted: ${d.queryMeta.corroboration.promoted ?? 0} | withheld: ${d.queryMeta.corroboration.withheld ?? 0}</span></div>`);
+    }
+  }
+
+  const resolutions = Array.isArray(d.topicResolutions) ? d.topicResolutions : Array.isArray(d.symbolResolutions) ? d.symbolResolutions : [];
+  if (resolutions.length > 0) {
+    const byStatus = resolutions.reduce((acc, item) => {
+      const key = String(item?.status || 'unknown');
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    }, {});
+    const parts = Object.entries(byStatus).map(([k, v]) => `${k}: ${v}`).join(' | ');
+    rows.push(`<div class="li-row"><span class="li-icon info">[S]</span><span class="li-label">Topic Resolutions</span><span class="li-val">${parts}</span></div>`);
+    const found = resolutions.filter(r => !['not_found', 'related_only'].includes(String(r.status)));
+    const relatedOnly = resolutions.filter(r => String(r.status) === 'related_only');
+    const notFound = resolutions.filter(r => String(r.status) === 'not_found');
+    if (found.length > 0) {
+      rows.push(`<div class="li-row"><span class="li-icon ok">[+]</span><span class="li-label">Resolved</span><span class="li-val">${found.map(r => '<strong>' + (r.matchedTopic || r.input) + '</strong>').join(', ')} — corroborated public-web evidence available</span></div>`);
+    }
+    if (relatedOnly.length > 0) {
+      rows.push(`<div class="li-row"><span class="li-icon info">[~]</span><span class="li-label">Related Only</span><span class="li-val">${relatedOnly.map(r => r.input).join(', ')} — no exact topic match yet, returned best corroborated related topics.</span></div>`);
+    }
+    if (notFound.length > 0) {
+      rows.push(`<div class="li-row"><span class="li-icon warn">[?]</span><span class="li-label">Not Found</span><span class="li-val" style="color:var(--amber)">${notFound.map(r => r.input).join(', ')} — no corroborated public-web evidence was found inside the current time budget.</span></div>`);
+    }
+  }
+
+  if (Array.isArray(d.evidence) && d.evidence.length > 0) {
+    const domains = [...new Set(d.evidence.map((item) => item.domain))];
+    rows.push(`<div class="li-row"><span class="li-icon ok">[+]</span><span class="li-label">Evidence</span><span class="li-val">${d.evidence.length} evidence items across ${domains.length} domains</span></div>`);
+  }
+  if (d.executionPlan) {
+    const terrains = (d.executionPlan.terrains || []).map((t) => `${t.terrain}:${t.weight}`).join(' | ');
+    const breeds = (d.executionPlan.breedPlan || []).map((b) => `${b.breedId}:${b.count}`).join(' | ');
+    rows.push(`<div class="li-row"><span class="li-icon info">[P]</span><span class="li-label">Plan</span><span class="li-val">terrains: ${terrains || '—'} | breeds: ${breeds || '—'}</span></div>`);
+  }
+  if (d.sourceCoverage) {
+    rows.push(`<div class="li-row"><span class="li-icon info">[D]</span><span class="li-label">Source Coverage</span><span class="li-val">domains: ${d.sourceCoverage.totalDomains || 0} | evidence: ${d.sourceCoverage.totalEvidence || 0} | blocked: ${d.sourceCoverage.blockedCount || 0} | allowed: ${d.sourceCoverage.allowedCount || 0} | promoted topics: ${d.sourceCoverage.promotedTopics || 0}</span></div>`);
+  }
+  if (d.trending && d.trending.length > 0) {
+    rows.push(`<div class="li-row"><span class="li-icon ok">[+]</span><span class="li-label">Trending</span><span class="li-val">${d.trending.length} promoted topics discovered from public-web evidence</span></div>`);
+  }
+  if (d.negativeSignals && d.negativeSignals.length > 0) {
+    rows.push(`<div class="li-row"><span class="li-icon warn">[-]</span><span class="li-label">Negative</span><span class="li-val">${d.negativeSignals.length} entities with negative/distress signals</span></div>`);
+  }
+  if (d.positiveSignals && d.positiveSignals.length > 0) {
+    rows.push(`<div class="li-row"><span class="li-icon ok">[+]</span><span class="li-label">Positive</span><span class="li-val">${d.positiveSignals.length} entities with positive/momentum signals</span></div>`);
+  }
+  if (d.correlations && d.correlations.length > 0) {
+    rows.push(`<div class="li-row"><span class="li-icon info">[~]</span><span class="li-label">Correlations</span><span class="li-val">${d.correlations.length} cross-entity patterns detected</span></div>`);
+  }
+  if (d.anomalies && d.anomalies.length > 0) {
+    rows.push(`<div class="li-row"><span class="li-icon warn">[!]</span><span class="li-label">Anomalies</span><span class="li-val">${d.anomalies.length} unusual patterns / quarantined data</span></div>`);
+  }
+  if (d.health) {
+    const score = d.health.healthScore != null ? (d.health.healthScore * 100).toFixed(0) + '%' : '?';
+    rows.push(`<div class="li-row"><span class="li-icon ok">[H]</span><span class="li-label">Health</span><span class="li-val">Colony health: ${score} | SNR: ${d.health.signalToNoiseRatio?.toFixed(2) || '?'}</span></div>`);
+  }
+  if (d.engineStatus) {
+    rows.push(`<div class="li-row"><span class="li-icon info">[S]</span><span class="li-label">Stats</span><span class="li-val">Round ${d.engineStatus.round || 0} | discovered: ${d.engineStatus.totalDiscovered || 0} | reports: ${d.engineStatus.totalReports || 0}</span></div>`);
+  } else if (d.engineStats) {
+    rows.push(`<div class="li-row"><span class="li-icon info">[S]</span><span class="li-label">Stats</span><span class="li-val">Round ${d.engineStats.round || 0} | ${d.engineStats.ants?.total || 0} ants | ${d.engineStats.space?.locations || 0} locations</span></div>`);
+  }
+  if (d.summary) {
+    rows.push(`<div class="li-row"><span class="li-icon info">[=]</span><span class="li-label">Summary</span><span class="li-val">${d.summary}</span></div>`);
+  }
+
+  if (rows.length <= 1) {
+    rows.push(`<div class="li-row"><span class="li-icon warn">[_]</span><span class="li-val" style="color:var(--text3)">No useful evidence returned yet. Increase timeout, add terrain hints, or narrow the query to a more specific public-web topic.</span></div>`);
+  }
+
+  return rows.join('');
+}
+
+function clearLLMOutput() {
+  document.getElementById('llmOutput').innerHTML = '// Simulate an LLM call to see the response';
+  document.getElementById('llmMeta').innerHTML = '';
+  document.getElementById('llmInterpret').style.display = 'none';
+  document.getElementById('llmRequestOutput').innerHTML = '// Run a query to inspect exact payload (query/model/timeout)';
+  document.getElementById('llmValidatorPanel').style.display = 'none';
+  lastLLMRequestBody = null;
+  lastLLMResponseEntry = null;
+}
+
+async function fetchToolDef() {
+  const entry = await apiCall('GET', '/api/tool-definition');
+  document.getElementById('toolDefOutput').innerHTML = highlightJSON(entry.data);
+}
+
+function llmPreset(type) {
+  const presets = {
+    trending:      { query: 'What entities are trending? Show me recent hot discoveries and emerging topics.', symbols: '', model: 'discover' },
+    negative:      { query: 'Show me negative signals, declining entities, risk factors, and distress indicators.', symbols: '', model: 'sentiment' },
+    positive:      { query: 'What entities show positive momentum, growth patterns, and strong signals?', symbols: '', model: 'full' },
+    correlations:  { query: 'What cross-entity correlations and category-level patterns are forming?', symbols: '', model: 'correlate' },
+    anomalies:     { query: 'Are there any anomalies, unusual patterns, echo chambers, or quarantined data?', symbols: '', model: 'precise' },
+    health:        { query: 'What is the colony health status? How is the engine performing?', symbols: '', model: 'full' },
+    entities:      { query: 'Give me a deep analysis of these specific entities.', symbols: 'Tesla, Bitcoin, AI, SpaceX', model: 'precise' },
+  };
+  const p = presets[type];
+  document.getElementById('llmQuery').value = p.query;
+  document.getElementById('llmSymbols').value = p.symbols;
+  document.getElementById('llmModel').value = p.model;
+  document.getElementById('llmTimeout').value = '';
+  updateTimeoutHint();
+}
+
+// ─── MULTI-MODEL COMPARE ────────────────
+async function runComparison() {
+  const query = document.getElementById('compareQuery').value.trim();
+  const symbolsRaw = document.getElementById('compareSymbols').value.trim();
+  const apiKey = document.getElementById('compareApiKey').value.trim() || null;
+
+  if (!query && !symbolsRaw) { alert('Enter a query or symbols'); return; }
+
+  const models = [...document.querySelectorAll('.cmp-model:checked')].map(cb => cb.value);
+  if (models.length === 0) { alert('Select at least one model'); return; }
+
+  const grid = document.getElementById('compareGrid');
+  grid.innerHTML = models.map(m => `
+    <div class="compare-card" id="cmp-${m}">
+      <div class="cc-head"><span class="cc-model">${m}</span><span class="cc-latency">loading...</span></div>
+      <div class="cc-body"><div class="pg-json" style="min-height:150px;border-radius:0">// Running...</div></div>
+    </div>
+  `).join('');
+
+  document.getElementById('compareMeta').textContent = `Testing ${models.length} models...`;
+
+  // Fire all in parallel
+  const body = {};
+  if (query) body.query = query;
+  if (symbolsRaw) body.symbols = symbolsRaw.split(',').map(s => s.trim()).filter(Boolean);
+  body.depth = 'standard';
+
+  const promises = models.map(async (m) => {
+    const b = { ...body, model: m };
+    const entry = await apiCall('POST', '/api/query', b, apiKey);
+    return { model: m, entry };
+  });
+
+  const results = await Promise.all(promises);
+
+  results.forEach(({ model, entry }) => {
+    const card = document.getElementById('cmp-' + model);
+    if (!card) return;
+    const latSpan = card.querySelector('.cc-latency');
+    latSpan.textContent = entry.latency + 'ms';
+    latSpan.className = entry.ok ? 'cc-latency' : 'cc-latency cc-err';
+    if (!entry.ok) latSpan.textContent = `ERR ${entry.status}`;
+    card.querySelector('.pg-json').innerHTML = highlightJSON(entry.data);
+  });
+
+  const totalLatency = results.reduce((sum, r) => sum + r.entry.latency, 0);
+  document.getElementById('compareMeta').textContent = `${models.length} models · Total: ${totalLatency}ms · Avg: ${Math.round(totalLatency / models.length)}ms`;
+  updateHistoryTable();
+  await syncAfterQuery();
+}
+
+// ─── ANT INSPECTOR ───────────────────────
+function renderAntsFromApiResponse(apiResponse) {
+  if (!apiResponse?.ok || !apiResponse?.data?.ants) {
+    document.getElementById('antStats').innerHTML = '';
+    document.getElementById('antTableBody').innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text3)">Engine not running or no data</td></tr>';
+    return;
+  }
+
+  const ants = apiResponse.data.ants;
+  const stats = apiResponse.data;
+  const runtimePolicy = stats.runtimePolicy || {};
+  const executionPlan = stats.executionPlan || {};
+  const sourceCoverage = stats.sourceCoverage || {};
+  const lastQueryMeta = stats.lastQueryMeta || {};
+  const breedRows = Array.isArray(executionPlan.breedPlan) ? executionPlan.breedPlan : [];
+
+  document.getElementById('antStats').innerHTML = `
+    <div class="pg-stat"><div class="st-label">Runtime Workers</div><div class="st-value">${ants.total || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Harvesters</div><div class="st-value">${ants.harvesters || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Nurse</div><div class="st-value">${ants.nurse || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Topics Tracked</div><div class="st-value">${stats.topicsTracked || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Evidence Stored</div><div class="st-value">${stats.evidenceStored || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Domains Seen</div><div class="st-value">${sourceCoverage.totalDomains || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Blocked URLs</div><div class="st-value">${sourceCoverage.blockedCount || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Promoted Topics</div><div class="st-value">${sourceCoverage.promotedTopics || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Navigations</div><div class="st-value">${stats.pool?.totalNavigations || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Per-Domain Cap</div><div class="st-value">${runtimePolicy.maxPagesPerDomainPerQuery || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">Per-Query Cap</div><div class="st-value">${runtimePolicy.maxTotalPagesPerQuery || 0}</div></div>
+    <div class="pg-stat"><div class="st-label">First Evidence</div><div class="st-value">${lastQueryMeta.performance?.timeToFirstEvidenceMs ?? '—'}</div></div>
+    <div class="pg-stat"><div class="st-label">First Useful</div><div class="st-value">${lastQueryMeta.performance?.timeToFirstUsefulMs ?? '—'}</div></div>
+  `;
+
+  const runtimeRows = [
+    { name: 'search_bootstrap', count: breedRows.find((row) => row.breedId === 'search_bootstrap')?.count || 0, role: 'Bootstraps candidate URLs from public-web discovery providers', color: '#d97706' },
+    { name: 'link_pathfinder', count: breedRows.find((row) => row.breedId === 'link_pathfinder')?.count || 0, role: 'Expands the frontier by following policy-approved links, feeds, and sitemaps', color: '#16a34a' },
+    { name: 'terrain_readers', count: breedRows.filter((row) => row.breedId !== 'search_bootstrap' && row.breedId !== 'link_pathfinder' && row.breedId !== 'source_verifier').reduce((sum, row) => sum + (row.count || 0), 0), role: 'Reads terrain-specific pages and extracts normalized evidence', color: '#0891b2' },
+    { name: 'source_verifier', count: breedRows.find((row) => row.breedId === 'source_verifier')?.count || 0, role: 'Checks corroboration before promotion into global memory', color: '#6366f1' },
+    { name: 'harvesters', count: ants.harvesters || 0, role: 'Convert promoted pheromone state into intelligence reports', color: '#8b5cf6' },
+    { name: 'nurse', count: ants.nurse || 0, role: 'Tracks stale and saturated state in the colony', color: '#14b8a6' },
+  ];
+
+  document.getElementById('antTableBody').innerHTML = runtimeRows.map(c => `
+    <tr>
+      <td><span class="caste-dot" style="background:${c.color}"></span>${c.name}</td>
+      <td style="font-weight:700">${c.count}</td>
+      <td style="font-family:var(--sans);color:var(--text3)">${c.role}</td>
+      <td>${c.count > 0 ? '<span style="color:var(--green)">Active</span>' : '<span style="color:var(--text3)">Idle</span>'}</td>
+    </tr>
+  `).join('');
+}
+
+function renderHealthFromApiResponse(apiResponse) {
+  document.getElementById('healthOutput').innerHTML = highlightJSON(apiResponse || { ok: false, error: 'No health data' });
+}
+
+function renderDiscoverFromApiResponse(apiResponse) {
+  document.getElementById('discoverOutput').innerHTML = highlightJSON(apiResponse || { ok: false, error: 'No discovery data' });
+}
+
+async function refreshAnts(recordHistory = true) {
+  if (recordHistory) {
+    const entry = await apiCall('GET', '/api/status');
+    renderAntsFromApiResponse(entry.data);
+    updateAntSyncStamp('manual');
+    updateHistoryTable();
+    return;
+  }
+  const result = await silentApiCall('GET', '/api/status');
+  renderAntsFromApiResponse(result?.json);
+  updateAntSyncStamp('auto');
+}
+
+async function refreshHealth(recordHistory = true) {
+  if (recordHistory) {
+    const entry = await apiCall('GET', '/api/health');
+    renderHealthFromApiResponse(entry.data);
+    updateHistoryTable();
+    return;
+  }
+  const result = await silentApiCall('GET', '/api/health');
+  renderHealthFromApiResponse(result?.json);
+}
+
+async function refreshDiscover(recordHistory = true) {
+  if (recordHistory) {
+    const entry = await apiCall('GET', '/api/discover');
+    renderDiscoverFromApiResponse(entry.data);
+    updateHistoryTable();
+    return;
+  }
+  const result = await silentApiCall('GET', '/api/discover');
+  renderDiscoverFromApiResponse(result?.json);
+}
+
+async function refreshAntInspectorBundle(recordHistory = false, statusJson = null) {
+  if (recordHistory) {
+    await Promise.all([refreshAnts(true), refreshHealth(true), refreshDiscover(true)]);
+    return;
+  }
+  const [statusResult, healthResult, discoverResult] = await Promise.all([
+    statusJson ? Promise.resolve({ json: statusJson }) : silentApiCall('GET', '/api/status'),
+    silentApiCall('GET', '/api/health'),
+    silentApiCall('GET', '/api/discover'),
+  ]);
+  renderAntsFromApiResponse(statusResult?.json);
+  renderHealthFromApiResponse(healthResult?.json);
+  renderDiscoverFromApiResponse(discoverResult?.json);
+  updateAntSyncStamp('auto');
+}
+
+// ─── WEBSOCKET MONITOR ──────────────────
+function wsConnect() {
+  if (wsSocket && wsSocket.readyState === WebSocket.OPEN) return;
+
+  const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  const wsUrl = `${protocol}//${window.location.host}/ws`;
+
+  try {
+    wsSocket = new WebSocket(wsUrl);
+  } catch (err) {
+    document.getElementById('wsStatus').textContent = 'ERROR';
+    document.getElementById('wsStatus').style.color = 'var(--red)';
+    return;
+  }
+
+  wsSocket.onopen = () => {
+    document.getElementById('wsStatus').textContent = 'CONNECTED';
+    document.getElementById('wsStatus').style.color = 'var(--green)';
+    document.getElementById('btnWsConnect').disabled = true;
+    document.getElementById('btnWsDisconnect').disabled = false;
+    addWsMsg('info', 'Connected to WebSocket');
+  };
+
+  wsSocket.onmessage = (evt) => {
+    wsMsgCount++;
+    document.getElementById('wsMsgCount').textContent = wsMsgCount;
+
+    try {
+      const msg = JSON.parse(evt.data);
+      const type = msg.type || 'unknown';
+      document.getElementById('wsLastEvent').textContent = type;
+      if (type === 'status' || type === 'tick' || type === 'discovery' || type === 'emergence' || type === 'info') {
+        scheduleWsSync();
+      }
+
+      const filter = document.getElementById('wsFilter').value;
+      if (filter !== 'all' && filter !== type) return;
+
+      addWsMsg(type, JSON.stringify(msg.data || msg, null, 2));
+    } catch {
+      addWsMsg('info', evt.data);
+    }
+  };
+
+  wsSocket.onclose = () => {
+    document.getElementById('wsStatus').textContent = 'DISCONNECTED';
+    document.getElementById('wsStatus').style.color = 'var(--red)';
+    document.getElementById('btnWsConnect').disabled = false;
+    document.getElementById('btnWsDisconnect').disabled = true;
+    addWsMsg('info', 'Disconnected');
+  };
+
+  wsSocket.onerror = () => {
+    addWsMsg('error', 'WebSocket error');
+  };
+}
+
+function scheduleWsSync() {
+  if (wsSyncTimer) return;
+  wsSyncTimer = setTimeout(async () => {
+    wsSyncTimer = null;
+    const statusJson = await refreshStatus();
+    const antsEnabled = document.getElementById('antsAutoRefresh')?.checked !== false;
+    if (antsEnabled || activeTab === 'ants') {
+      await refreshAntInspectorBundle(false, statusJson);
+    }
+  }, 1200);
+}
+
+function wsDisconnect() {
+  if (wsSocket) { wsSocket.close(); wsSocket = null; }
+}
+
+function wsClear() {
+  document.getElementById('wsLog').innerHTML = '';
+  wsMsgCount = 0;
+  document.getElementById('wsMsgCount').textContent = '0';
+}
+
+function addWsMsg(type, content) {
+  const log = document.getElementById('wsLog');
+  const time = new Date().toLocaleTimeString();
+  const truncated = content.length > 800 ? content.substring(0, 800) + '\n... (truncated)' : content;
+  const div = document.createElement('div');
+  div.className = 'ws-msg';
+  div.innerHTML = `<span class="ws-time">${time}</span><span class="ws-type ${type}">[${type}]</span><pre style="display:inline;font-size:inherit;margin:0;white-space:pre-wrap">${truncated.replace(/</g,'&lt;')}</pre>`;
+  log.appendChild(div);
+
+  if (document.getElementById('wsAutoScroll').checked) {
+    log.scrollTop = log.scrollHeight;
+  }
+
+  // Keep max 500 messages
+  while (log.children.length > 500) log.removeChild(log.firstChild);
+}
+
+// ─── TEST HISTORY ────────────────────────
+function updateHistoryTable() {
+  const showPolling = document.getElementById('histShowPolling')?.checked || false;
+  const methodFilter = document.getElementById('histMethodFilter')?.value || 'all';
+
+  let filtered = testHistory;
+  if (!showPolling) {
+    filtered = filtered.filter(e => !e._autoPolling);
+  }
+  if (methodFilter !== 'all') {
+    filtered = filtered.filter(e => e.method === methodFilter);
+  }
+
+  const tbody = document.getElementById('histBody');
+  document.getElementById('histCount').textContent = filtered.length + ' of ' + testHistory.length + ' requests';
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--text3)">No matching requests</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.slice(0, 100).map((e) => {
+    const idx = testHistory.indexOf(e);
+    return `
+    <tr onclick="showHistDetail(${idx})" style="cursor:pointer">
+      <td>${e.id}</td>
+      <td>${e.time}</td>
+      <td><span class="ep-method ${e.method.toLowerCase()}" style="font-size:.6rem">${e.method}</span></td>
+      <td>${e.path}</td>
+      <td class="${e.ok ? 'td-ok' : 'td-err'}">${e.status}</td>
+      <td>${e.latency}ms</td>
+      <td>${(e.size / 1024).toFixed(1)}KB</td>
+    </tr>
+  `;
+  }).join('');
+}
+
+function showHistDetail(idx) {
+  const entry = testHistory[idx];
+  document.getElementById('histDetail').innerHTML = highlightJSON({
+    request: entry.request || { method: entry.method, path: entry.path, body: null },
+    response: entry.data,
+  });
+}
+
+function clearHistory() {
+  testHistory = [];
+  perfData = [];
+  perfByEndpoint = {};
+  updateHistoryTable();
+  updatePerfStats();
+}
+
+function exportHistory() {
+  const blob = new Blob([JSON.stringify(testHistory, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `rylvo-test-history-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ─── EXPOSE TO WINDOW (module scope) ─────
+window.refreshStatus = refreshStatus;
+window.fireEndpoint = fireEndpoint;
+window.clearEndpointOutput = clearEndpointOutput;
+window.selectEndpoint = selectEndpoint;
+window.fireLLMQuery = fireLLMQuery;
+window.clearLLMOutput = clearLLMOutput;
+window.fetchToolDef = fetchToolDef;
+window.llmPreset = llmPreset;
+window.runComparison = runComparison;
+window.refreshAnts = refreshAnts;
+window.refreshHealth = refreshHealth;
+window.refreshDiscover = refreshDiscover;
+window.wsConnect = wsConnect;
+window.wsDisconnect = wsDisconnect;
+window.wsClear = wsClear;
+window.clearHistory = clearHistory;
+window.exportHistory = exportHistory;
+window.showHistDetail = showHistDetail;
+</script>
+</body>
+</html>

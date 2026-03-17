@@ -1,0 +1,1002 @@
+
+
+===== PAGE 1 =====
+iScience
+Article
+Collective motion as a distinct behavioral state of
+the individual
+Daniel Knebel,
+Ciona Sha-ked,
+Noa Agmon, Gil
+Ariel, Amir Ayali
+ayali@tauex.tau.ac.il
+Highlights
+Locusts were monitored
+before, during, and after
+experiencing collective
+motion
+In each condition the
+l o c u s t ss h o w e dd i s t i n c t
+walking kinematics
+This indicates that the
+locusts adopt collective-
+motion-dependent
+behavioral states
+Simulations show that
+these states may be
+advantageous for the
+swarm integrity
+Knebel et al., iScience24,
+102299
+April 23, 2021 ª 2021 The
+Author(s).
+https://doi.org/10.1016/
+j.isci.2021.102299
+ll
+OPEN ACCESS
+
+===== PAGE 2 =====
+iScience
+Article
+Collective motion as a distinct
+behavioral state of the individual
+Daniel Knebel, 1,2 Ciona Sha-ked, 1 Noa Agmon, 2 Gil Ariel, 3 and Amir Ayali 1,4,5,*
+SUMMARY
+The collective motion of swarms depends on adaptations at the individual level.
+We explored these and their effects on swarm formation and maintenance in lo-
+custs. The walking kinematics of individual insects were monitored under labora-
+tory settings, before, as well as during collective motion in a group, and again
+after separation from the group. It was found that taking part in collective motion
+induced in the individual unique behavioral kinematics, suggesting the existence
+of a distinct behavioral mode that we term a ‘‘collective-motion-state.’’ This state,
+characterized by behavioral adaptation to the social context, is long lasting, not
+induced by crowding per se, but only by experiencing collective motion. Utilizing
+computational models, we show that this adaptability increases the robustness of
+the swarm. Overall, our ﬁndings suggest that collective motion is not only an
+emergent property of the group but also depends on a behavioral mode, rooted
+in endogenous mechanisms of the individual.
+INTRODUCTION
+The ability to form groups that move collectively is a key behavioral feature of many species ( Sumpter,
+2006; Ward and Webster, 2016 ), assumed to increase the survival of both individuals and groups ( Be’er
+and Ariel, 2019 ; Yang and Schmickl, 2019 ). Collectively moving organisms, however, differ in the levels of
+peer-to-peer interactions, ranging from mini mal cooperation to complex social behaviors ( Attanasi et al.,
+2014; Cavagna et al., 2010 ). Furthermore, endogenous differences among individuals, heterogenic envi-
+ronments, and variability in the interactions between the individual and its direct environment are all
+sources of variance that may affect the coordinated behavior of the collective. Accordingly, it is not clear
+how synchronized collective motion constitutes such a robust phenomenon, maintaining its form across
+various group sizes and densities, and under heterogeneous and unpredictable environmental
+conditions.
+One of the most interesting, albeit disastrous, examples of collective motion is that of the marching of lo-
+custs. These insects swarm in groups of millions, migrating in mass across large distances, devastating
+vegetation, and agriculture ( Ayali, 2019 ; Cullen et al., 2017 ; Zhang et al., 2019 ). In the context of social
+interactions, locust swarming is characterized by a minimal level of cooperation between individuals:
+collectivity, which is based on local interactions, is mostly manifested in alignment among neighboring in-
+dividuals and in maintaining the overall movement in the same general direction (e.g., Ariel et al., 2014a ;
+Bazazi et al., 2008 ). Nonetheless, the locust swarming phenomenon is extremely robust, with huge swarms
+demonstrating moderate to high collectivity on huge scales (up to 6–7 orders of magnitudes), in terms of
+both the number of animals and their spatiotemporal distribution ( Ellis and Ashall, 1957 ; Uvarov, 1977 ;s e e
+further references in Ariel and Ayali, 2015 ). Thus, locusts exhibit a considerable disparity between little local
+cooperation and large-scale collectivity.
+What is the key to this ability of locust swarms to maintain their integrity? Here, we show by a
+series of carefully controlled behavioral experiments that collective movement induces an internal
+switch in the individual gregarious locust, activating a behavioral mode we refer to as a ‘‘collective-
+motion-state.’’ In this state, the kinematic behavio r of individuals notably differs from that during a
+non-collective-motion-state. It is important to emphasize that both the ‘‘collective-motion-state’’ and
+the ‘‘non-collective-motion-state’’ are internal states of swarming-gregarious locusts. We are not
+referring to the well-known solitarious-gregarious phase transition in locusts ( Ayali, 2019 ; Cullen et al.,
+2017).
+1School of Zoology, Faculty of
+Life Sciences, Tel Aviv
+University, Tel Aviv, 6997801,
+Israel
+2Department of Computer
+Science, Bar-Ilan University,
+Ramat-Gan, 5290002, Israel
+3Department of
+Mathematics, Bar Ilan
+University, Ramat-Gan,
+5290002, Israel
+4Sagol School of
+Neuroscience, Tel Aviv
+University, Tel Aviv, 6997801,
+Israel
+5Lead contact
+*Correspondence:
+ayali@tauex.tau.ac.il
+https://doi.org/10.1016/j.isci.
+2021.102299
+iScience 24, 102299, April 23, 2021ª 2021 The Author(s).
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+1
+ll
+OPEN ACCESS
+
+===== PAGE 3 =====
+How, then, does the collective-motion-state affect the formation and robustness of the swarm? Interest-
+ingly, the switch into this state seems to occur rapidly, and in response to coordinated walking. In particular,
+our experiments indicate that aggregation alone is not sufﬁcient. Switching out of the collective-motion-
+state occurs over a longer timescale— signiﬁcantly longer than the typical timescale of normal ﬂuctuations
+around the swarm typical dynamics. Hence, stocha stic ﬂuctuations, typical to swarming behavior ( Algar
+et al., 2019 ; Ariel and Ayali, 2015 ; Escaff et al., 2018 ), are ‘‘smoothed-out,’’ leading to highly robust
+dynamics of the swarm collective behavior, which is in turn beneﬁcial for the swarm integrity.
+Using a simpliﬁed computer model, we simulated the swarming properties of locust-like agents with
+different kinematic parameters, representing the different behavioral states. The results support the func-
+tional advantages of the collective-motion-state, allowing us to conclude that the collective-motion-state
+provides an individual-based mechanism that increases the stability of swarms in the presence of ﬂuctua-
+tions, preventing the swarm from collapsing.
+RESULTS
+The main objective of this report was to examine the behavior of individual animals upon joining and mostly
+leaving a group of conspeciﬁcs. Here we studied gregarious locusts, reared in dense populations, one
+developmental stage before becoming adults and developing functional wings (i.e., ﬁfth-instar larva).
+The experiments comprised three consecutive stages, representing different conditions ( Figure 1 and
+Video S1 ): (1) Isolation stage: a single animal was taken from its highly dense rearing cage, tagged with
+a barcode, and introduced alone into a ring-shap ed arena (outer and inner diameters: 60 and 30 cm,
+respectively). (2) Grouping stage: nine other individually tagged animals were added to the arena. (3)
+Re-isolation stage: the nine added animals were removed from the arena, leaving the original animal alone.
+The duration of each stage was 1 h, which was enough for the locusts to exhibit their walking kinematics, yet
+did not cause behavioral changes due to exhaustion, hunger, etc. The trajectories of the animals were fully
+reconstructed using a barcode tracking system. The m iddle 40 min of each stage were analyzed, as detailed
+in the transparent methods section. A range of kinematic statistics was collected to classify and compare
+the locusts’ behavior in the different stages.
+Swarm formation—validation of collective motion
+To verify that our grouping conditions were indeed inducing collective motion (swarming), we calculated
+the synchronization in movement of the grouped animals using the order parameter (see transparent
+methods for deﬁnition), which is a fundamental estimator for the typical marching behavior of locusts
+(e.g., Knebel et al., 2019 ). The median order parameter in the grouping stage was found to be signiﬁcantly
+higher than that obtained for computationally rand omized groups (as presented in our previous report,
+Knebel et al., 2019 ; medians: 0.632 and 0.239, respective ly; Wilcoxon rank-sum test: p < 0.001).
+Figure 1. A schematic ﬂow of t he experimental procedure
+Locusts were reared in high-density conditions. The Experiments comprised the following consecutive stages: (1) isolation for 1 h in the arena, (2) g rouping
+for 1 h, and (3) re-isolation for 1 h.
+ll
+OPEN ACCESS
+2 iScience 24, 102299, April 23, 2021
+iScience
+Article
+
+===== PAGE 4 =====
+Consequently, we conclude that the groups in our experimental setup indeed demonstrated swarming and
+collective motion.
+Kinematic differences among the isolation, grouping, and re-isolation stages
+Locusts walk in an intermittent motion pattern ( Ariel et al., 2014a ; Bazazi et al., 2012 ), i.e., movement occurs
+in sequences of alternating walking bouts and pauses. To characterize individual locust kinematics, we
+measured four parameters: (1) the fraction of time an animal spends walking, (2) the average speed while
+walking, (3) the average walking bout duration, and (4) the average pause duration. Comparing these
+values across the three experimental stages, we found several statistically signiﬁcant differences ( Figure 2 ).
+In the following, p values correspond to a Friedman te st followed by a multiple comparison test using the
+Bonferroni method.
+We found that when comparing between isolation and grouping, the fraction of time spent walking and the
+pause durations differed signiﬁcantly (p < 0.01 and p < 0. 001, respectively), showing a larger fraction of time
+walking and shorter pauses while grouping. These ﬁndings are in accordance with previous reports ( Knebel
+et al., 2019 ), and are consistent with the known propensity of locusts to walk more and rest for shorter times
+w h i l ei nas w a r m(Ariel et al., 2014a ; Bazazi et al, 2008 , 2012; Knebel et al., 2019 ). However, our experiments
+also revealed a new effect of swarming. Comparing the isolation and re-isolation stages, we found that all
+the studied parameters differed signiﬁcantly. Speciﬁc ally, the fraction of time walking, speed, and walking
+bout duration were all higher in the re-isolation st age, whereas the pause duration decreased (p < 0.001,
+p < 0.001, p < 0.05, and p < 0.05, respectively). Interpre ting these parameters tog ether, while also taking
+Figure 2. Kinematic changes throughou t the three experimental conditions
+(A–D) (A) The fraction of walking, (B) the averaged walking speed, (C) the average duration of walking bouts, and (D) the
+average duration of pauses of the traced animals in the isolati on, grouping, and re-isolation stages. Red lines denote the
+median. Boxes show the interquartile range (25th to 75th percentiles). Whiskers are the max and min data points
+(excluding points that are more than 1.5 times the interquartile range away from the bottom or top of the box). *p < 0.05,
+**p < 0.01, ***p < 0.001.
+ll
+OPEN ACCESS
+iScience 24, 102299, April 23, 2021 3
+iScience
+Article
+
+===== PAGE 5 =====
+into account the low propensity of locusts to turn whil e walking (or to make a U-turn upon starting to walk;
+Ariel et al., 2014a ), the overall area explored by the locusts was much larger during the second isolation
+state. Furthermore, comparing the grouping and re-isolation conditions revealed that the walking bout
+duration increased signiﬁcantly following re-isolation (p < 0.01). The data for all other comparison combi-
+nations were found not to differ signiﬁcantly. The exact data points and trends can be found in Figure S1 .
+The increase in activity following re-isolation is surprising and suggests that the marching behavior of
+locusts is not dictated by instantaneous or immediate interactions among individuals per se. Rather, our
+ﬁndings indicate that the interactions with other marching locusts induce a switch to a new internal behav-
+ioral state, which outlasts the presence of the swarm. In accordance with our results, we term this internal
+state the ‘‘collective-motion-state.’’ The different behavioral states are schematically presented in Figure 3 .
+To verify that the observed behavioral changes indeed represent a transient state, rather than a permanent
+behavioral modulation, a simple control experiment was performed. In six of the experiments, following
+the re-isolation stage, locusts were returned to their rearing cage (in high crowding conditions without col-
+lective motion) and tested the next day again alone in the arena (isolation condition). We found no signif-
+icant behavioral difference between this latter isolation and the ﬁrst isolation stage of the previous day.
+Hence the collective-motion state is transient. A second series of control experiments (n = 6) was per-
+formed to exclude potential time effects on the locusts’ behavior due to the duration of the experiments.
+To this end, locusts were tested in isolation for three consecutive hours. The above-described kinematic
+analysis procedure was then performed separately on three 40-min segments of the 3-h tests, and no
+signiﬁcant differences were found.
+Consistency of individual behavioral tendencies
+Despite the observed major differences in behavioral kinematics among the three experimental stages, we
+were also interested to know whether there are any correlations between the changing parameters in the
+three experimental conditions: isolation, grouping, and re-isolation. This would indicate that although in-
+dividuals change their behavior throughout the experimental stages ( Figure 2 ), they maintain the relative
+position when compared with others, and thus show some consistent individual tendencies. We found that
+individual behavioral tendencies generally persisted. The fraction of walking, speed, and pause durations
+all showed high within-individual correlation across the three stages. The walking bout durations, however,
+were signiﬁcantly correlated only between the isolation and grouped stages, but not between re-isolation
+and the other stages (see Table 1 for numerical details). This suggests that whereas the fraction of walking,
+speed, and pause durations are highly dependent on the animal tested itself, the bout duration during re-
+isolation cannot be predicted by the previous stages, and is therefore inﬂuenced by the social context
+rather than by the animal’s unique properties.
+Modeling and simulations
+The above-described experiments demonstrated that individual locusts introduced into a collectively mov-
+ing swarm undergo a switch into a distinct internal sociobehavioral state. However, whether this change
+confers a beneﬁt on the swarm formation and maintenance, and if so, of what kind, remained unanswered.
+Figure 3. A schematic representation o f the behavioral states of the locusts
+ll
+OPEN ACCESS
+4 iScience 24, 102299, April 23, 2021
+iScience
+Article
+
+===== PAGE 6 =====
+To explore this aspect of the collective-motion-state, we developed a model that simulates locust swarms,
+in which individual kinematics could be manipulated.
+To simulate swarms, we used a simpli ﬁed agent-based model in a square domain with periodic boundaries.
+Agents were designed as rectangles with a circular receptive ﬁeld around their center. The agents’ kine-
+matics was programmed to resemble that of locusts, i.e., to move in an intermittent motion (pause-and-
+go) pattern: at every step of the simulation, each agent made an individual decision whether to walk or
+stop, based on its current state (walking or stopping) with predeﬁned probabilities ( p
+W and pS,r e s p e c t i v e l y ;
+Figure S2 ). While moving, the speed was constant. The individual direction of movement was allowed to
+change only when an agent changes its state from stopping to walking ( Ariel et al., 2014a ). An agent’s
+new direction was a weighted sum of its own direction (inertia), the direction of other agents in its visual
+ﬁeld, with a short memory (see Rimer and Ariel, 2017 for the importance of memory in pause-and-go sim-
+ulations), and noise. These were set to generate an or der value approximately similar to that obtained in
+our experiments. See transparent methods for details and Table S1 for parameter values.
+The spatial and temporal scales of the model were set as follows: 1 cm was considered as a distance of 0.1 in
+the simulated arena, and 1 s corresponded to 1 simulation step. Thus, we ﬁxed the model dimensions to
+correspond with real locusts’ size and movement parameters. The size of agents (0.1 3 0.4) maintains
+the proportions of ﬁfth-instar larva locusts. Addition ally, the visual range of 1 radius, 10 times larger than
+the agent’s rectangle width, represents the proportional visual ﬁeld of locusts (range just under 10 cm; Ariel
+et al., 2014a ). The speed was set to 0.25, corresponding to the typical swarming speed shown in Figure 2 B.
+F i n a l l y ,t h es i z eo ft h ea r e n aw a ss e tt ob e73 7, with 12 agents within. This generated a slightly lower den-
+sity than in the real experiments, but better mimicked the limited visual ﬁeld the locusts experienced in our
+ring-shaped experimental arena.
+We evaluated the effect of the agent’s walking bout and pause durations, controlled by p
+W and pS,o nf o u r
+statistics that characterize co llective motion in the swarm:
+1. The order parameter (the size of the average direction vector).
+2. Spread (the average distance between all pairs).
+Table 1. Correlation values between kinematic param eters throughout the thre e experimental conditions
+p value rho value
+Fraction of walking
+Isolation-grouping <0.001 0.706
+Isolation-re-isolation 0.001 0.679
+Grouping-re-isolation 0.002 0.638
+Speed
+Isolation-grouping 0.001 0.679
+Isolation-re-isolation 0.010 0.561
+Grouping-re-isolation 0.002 0.636
+Walking bout duration
+Isolation-grouping 0.002
+0.628
+Isolation-re-isolation 0.148 0.391
+Grouping-re-isolation 0.354 0.314
+Pause duration
+Isolation-grouping 0.007 0.580
+Isolation-re-isolation 0.003 0.612
+Grouping-re-isolation <0.001 0.708
+The fraction of walking, the averaged walking speed, the average duration of walking bouts, and the average duration of
+pauses were tested for correlation across the three experimental conditions: (1) isolation, (2) grouping, and (3) re-isolation.
+The underlined values mark signiﬁcant correlations.
+ll
+OPEN ACCESS
+iScience 24, 102299, April 23, 2021 5
+iScience
+Article
+
+===== PAGE 7 =====
+3. The number of neighbors (within the ﬁeld of view, denoted NN).
+4. Regrouping time (the average number of steps it takes an agent that has lost all other agents in its
+receptive ﬁeld to re-obtain at least one neighbor).
+Statistics were averaged over all agents and simulation steps
+Figure 4 shows the median value over 40 independent repetitions for each parameter set. We found that
+the order parameter increases with the walking bout duration but decreases with pause durations
+Figure 4. The inﬂuence of different walking bout and paus e durations on the collectiv ity parameters in simulated
+swarms
+(A) The areas representing the behavioral states in the next traces, where the black and white frames indicate the
+interquartile ranges and medians of each condition, respectively, obtained from Figures 2 Ca n d2 D .
+(B–E) (B) The order parameter, (C) spread, (D) the average number of agents within each agent’s visual ﬁeld, and (E) the
+average number of steps to regroup, for different walking bout (rows) and pause (columns) average durations. The arena
+size is 7 3 7 with periodic boundaries.
+(F) The average number of steps to regroup in a large 75 3 75 arena, with the same number of agents. In (B–E) each
+colored box represents the median of 40.
+ll
+OPEN ACCESS
+6 iScience 24, 102299, April 23, 2021
+iScience
+Article
+
+===== PAGE 8 =====
+(Figure 4 B). The spread, on the other hand, is increasing both with walking and pausing durations ( Fig-
+ure 4 C). The NN statistics ( Figure 3 D) were in accord with the spread (small spread implies many NN).
+Its values were similar to that obtained in the real experimental arena ( /C241–1.5), which was slightly denser,
+as explained earlier. The regrouping time ( Figure 4 E) showed a more complex dependency on the duration
+of walk and pause durations: it was shortest when bo th the parameters were low and longest when the
+walking bout was low but the pause duration was high. Yet, for mid values of pause duration, high walking
+bouts durations induced a reduction in the number of steps to regroup. Worth noting is the fact that
+because agents could only change direction when starting to move (similar to the locusts; Ariel et al.,
+2014a), the length of walking segments between turns increases with walking durations.
+To relate the simulation and experimental results, the three collective motion states—isolation, grouping
+and re-isolation—were indicated in Figure 4 by the tiles corresponding to the interquartile range of the
+empirical data presented in Figures 2 C and 2D. Additionally, we also marked the corresponding median
+data point. As can be seen, in all the parameters calculated, the individual behavior that reﬂects the collec-
+tive state in a crowd improves the coherency and rigidity of the swarm. This important observation suggests
+a possible beneﬁt for increasing the walking bout duration when a locust is in a collective state, but ﬁnds
+itself alone.
+To further explore the advantages of a collective motion step in re-isolation scenarios, we increased the
+size of the arena to 75 3 75, with the same number of agents, thereby reducing the density considerably,
+and calculated the steps to regroup parameter ( Figure 3 E). We found that for low density, where practically
+no collective behavior is present (see Figure S3 ), longer walking bouts reduce the time to regroup. There-
+fore, it is beneﬁcial for an agent that ﬁnds itself alone due to a sparse distribution of the swarm to increase
+its walking bouts duration (even at the cost of decreasing other parameters of collectivity), and thus shorten
+the time until it reunites with other locusts.
+DISCUSSION
+Our ﬁndings reported here suggest that, in locusts, t he sensorimotor act of collective motion is accompa-
+nied by an internal state of the indivi dual locust—a collective-motion-state, which is manifested in speciﬁc
+behavioral kinematics. This state is induced by the experience of synchronous, collective marching. In turn,
+it has an important role in maintaining the integrity and consistency of the swarm. Next, we discuss several
+key aspects and implications of this ﬁnding.
+It should be stressed once again that the current study focused on gregarious, crowded-reared locusts
+only. The described behavioral states should not be confused, therefore, with the well-known and much
+researched locust density-de pendent phase polyphenism ( Ayali, 2019 ; Cullen et al., 2017 ). Collective mo-
+tion is limited to the gregarious, swarming, and migrating phase. Accordingly, all our experimental animals
+were taken from our gregarious (crowded-reared) breeding colony, maintained in crowded conditions for
+many consecutive generations. In their breeding cages, mostly due to the physical constraints and abun-
+dance of food, despite experiencing high density, the locusts very rarely, if at all, demonstrate collective
+motion. Thus, they adopted the collective-motion-state only upon experiencing, and taking part in, collec-
+tive marching within the experimental arena.
+In a recent study ( Knebel et al., 2019 ), we have introduced a comparison between the walking behavior ki-
+nematics of individual gregarious locusts in different social (density) contexts. Our reported ﬁndings are
+reconﬁrmed and further elucidated here by the results of the initial isolation and grouping stages in our
+experiments. The novel idea posited here is that these differences represent not only the spatially and
+temporally immediate social environment and the instantaneous local interactions among locusts but
+also are dictated by the effects of an internal state induced by the general experience of collective motion.
+A fundamental aspect of the concept of the collective-motion-state arises from our ﬁndings related to its
+persistent effect in time: upon re-isolation, the individual locust adopted behavioral kinematics that criti-
+cally differed from that in the ﬁrst experimental stage ( initial isolation). We also showed that, as expected,
+the collective-motion-state is transient. If the locus t does not experience collective motion for some time,
+and is then isolated once more, it loses the unique walking-related kinematics it previously adopted in
+response to the collective motion, i.e., the internal collective-motion-state. The dynamics of this decay
+were not explored, but are likely to be affected by many external factors, such as the availability of food
+and the day-night cycle.
+ll
+OPEN ACCESS
+iScience 24, 102299, April 23, 2021 7
+iScience
+Article
+
+===== PAGE 9 =====
+The individual locusts in our experiments retained th e variability demonstrated in our previous report ( Kne-
+bel et al., 2019 ), while demonstrating a second layer of variability or plasticity upon experiencing collective
+motion, when entering the collective-motion-state. Considerable research has been devoted in recent
+years to understanding the effect of variability among individuals on the group’s collective behavior,
+both experimentally—ranging from bacteria to primates ( Benisty et al., 2015 ; Brown and Irving, 2014 ; Crall
+et al., 2016 ; Dyer et al., 2009 ; Farine et al., 2017 ; Fu¨ rtbauer and Fry, 2018 ; Herbert-Read et al., 2013 ; Jolles
+et al., 2018 ; Planas-Sitja` et al., 2015 )—and theoretically ( Aplin et al., 2014 ; Ariel et al., 2014b ; Calovi et al.,
+2015; Copenhagen et al., 2016 ; Guisandez et al., 2017 ; Jolles et al., 2017 ; Menzel, 2012 ; Mishra et al., 2012 ;
+see Mar Delgado et al., 2018 ; Modlmeier et al., 2015 ; Webster and Ward, 2011 for recent reviews). The in-
+teractions between variability in speciﬁc aspects of the individuals’ behavior and group-level processes
+were found to be complex and, moreover, bidirectional (e.g., Knebel et al., 2019 ). Variability among indi-
+vidual animals was found to have important consequences for the collective behavior of the group (e.g.,
+O’shea-Wheller et al., 2017 ; Szorkovszky et al., 2018 ).
+However, beyond the variability among the individuals composing a group, variability is also expected in
+the behavior of the individual animal over time, as it experiences changes in environmental and social
+conditions. The swarm (or ﬂock, shoal, herd, etc.) is a heterogeneous entity, moving in a heterogeneous
+environment. The individual is bound on occasion to ﬁnd itself in different locations within the swarm
+(e.g., leading edge, at the outskirts, trailing), and it m ay also ﬁnd itself separated from the group by natural
+obstacles (vegetation, rocks, and boulders). It is esse ntial for the robustness and consistency of the swarm
+that throughout these changing conditions the behavior of the individual will adapt accordingly, such as to
+be appropriate for the changing context. For example, if temporarily separated from the core of the swarm,
+a locust’s walking kinematics should change to support rapid reunion with the group, as reported in both
+our experimental and simulation ﬁndings (e.g., increased fraction of walking and duration of walking
+bouts). If previously naive to collective motion, that individual’s kinematics would, however, be disadvan-
+tageous, or even hinder the formation of a swarm.
+In Bazazi et al., 2012 , the authors suggest that beha vioral variability can be ex plained by the existence of
+two internal states. Studying single locusts in isolation for 8 consecutive hours, they have observed changes
+in behavioral kinematics that were suggested to result from ‘‘internal state behavioral modulation.’’ The
+observed variations, however, were merely attributed to changes in ‘‘starvation/satiation state,’’ i.e., as
+the locust becomes starved, it changes its walking behavior, searching more vigorously for food. Moreover,
+they conclude that animals continually switch between the two states on a scale of minutes. The collective-
+motion-state reported here is, of course, a very different type of internal behavioral state, which is strongly
+involved with the locust past and current social environment. It may be viewed as a form, or a manifestation
+of a social carryover effect ( Niemela¨ and Santostefano, 2015 ), where a social environment experienced by a
+focal individual affects aspects of its locomotion behavior at a later, non-social context. As noted, however,
+the change in behavioral state described here is induc ed by collective marching, i.e., a particular mode of
+social interaction, rather than by aggregation or being around other conspeciﬁcs per se. Moreover, as
+our simulations show, the enhanced marching displayed in the re-isolation stage is advantageous for
+maintaining collective swarming—it is still much related to the social context rather than carried over to
+a non-social one.
+The reported collective-motion-state is also in accord with the overall daily behavioral changes of marching
+locust swarms. The swarm will spend the night (as well as times of low temperature or other unfavorable
+climatic conditions) roosting among the vegetation. Upon suitable conditions, after a period of feeding,
+the locusts will initiate marching—highly synchronized, collective motion. Frequently, when temperature
+becomes too high around noon, or when dusk arrives, the swarm will again switch to feeding and roosting.
+These daily patterns call for corresponding changes in the internal behavioral states of the individual lo-
+custs and mostly a dedicated collective-motion-state.
+In the current work we are cautious in discussing the underlying mechanisms of the behavioral states re-
+ported. Although this is beyond the scope of this study, it is clear that these behavioral states represent
+physiological states. With some conﬁdence, we can speculate about the nature or the physiological mech-
+anisms involved in the demonstrated behavioral states. Behavioral plasticity in locust behavior has been
+attributed to various second messengers or neuromodulators, or to the balance among them. Most
+notable are the biogenic amines (e.g., serotonin, a prominent bio-amine, was recently reported to inhibit
+ll
+OPEN ACCESS
+8 iScience 24, 102299, April 23, 2021
+iScience
+Article
+
+===== PAGE 10 =====
+walking behavior in Drosophila ; Howard et al., 2019 ). Hence, it may well be that the (spatial and temporal)
+immediate social environment affects biogenic amine levels, and these in turn modulate the walking-
+related behavioral kinematics manifested in the different behavioral states.
+Another candidate that may be involved in the collective-motion-state is the locust adipokinetic hormone
+(AKH). AKH is a metabolic neuropeptide principally known for its mobilization of energy substrates, notably
+lipid and trehalose, during energy-requiring activities such as ﬂight and locomotion, and also during stress
+(e.g., Peri/C19c-Mataruga et al., 2006 ). It is well accepted that the metabolic state affects the level of general
+activity of an organism, and AKHs are reported to stimu late locomotor activity, either directly by way of
+their activity within the central nervous system (e.g., Wicher, 2007 ) or via octopamine—a biogenic amine
+with ample behavioral effects ( Verlinden et al., 2010 ; Yang et al., 2015 ).
+F u r t h e r m o r e ,a sn o t e d ,w eh a v ed e m o n s t r a t e dh e r ea ne x t e n d e de f f e c to ft h ee x p e r i e n c eo fc o l l e c t i v em o -
+tion. Hence, learning and memory-related mechanisms would also seem to be involved. Again, previous
+work may suggest some candidate molecules and pathways, including cGMP-dependent protein kinase
+(PKG) and protein kinase A (PKA) ( Geva et al., 2010 ; Lucas et al., 2010 ; Ott et al., 2012 ).
+Last, as noted, solitarious phase locusts lack the capacity to demonstrate collective motion, and thus also
+the collective-motion-state. Accordingly, they diffe r from gregarious locusts in all the above-mentioned
+physiological pathways (bioamines: e.g., Alessi et al., 2014 ; Cullen et al., 2017 ; Ma et al., 2015 ;A K H : Ayali
+and Pener, 1992 ; Pener et al., 1997 ;P K G :Lucas et al., 2010 ;P K A :Ott et al., 2012 ). An in-depth investigation
+of the development of gregarious-like states in solitary locusts should prove to be very enlightening.
+A central question is whether a collective (herd, ﬂock, or swarm) is merely a sum of its parts, or a new entity.
+Most related studies have perceived collectivity as a self-emergent phenomenon, suggesting that new dy-
+namics and behavior are the result of intricate, multi -body, typically non-linear interactions (e.g., Cucker
+and Smale, 2007 ; Vicsek and Zafeiris, 2012 ). One hidden assumption underlying this perception is that in-
+dividuals remain inherently unchanged when isolated or in a crowd. Even studies of heterogeneous
+swarms, in which conspeciﬁcs may differ from each other, still assume consistency in the properties of
+the individual over time. This is essentially a physical point of view, in the sense that agents/individuals
+possess certain properties that determine their behavior across a range of situations. Thus, the collective
+motion is an emergent property that builds up in particular contexts, such as a sufﬁciently high local density
+of animals. This point of view allows, among others, extrapolation from experiments with one, two, or a few
+animals to large swarms (e.g., Calovi et al., 2015 ).
+Our ﬁndings reported here suggest a fundamentally different point of view. We perceive the sensorimotor
+act of collective motion as accompanied by an internal state—a collective-motion-state that is manifested
+in speciﬁc behavioral kinematics. This state is induced by the experience of synchronous, collective motion.
+Most importantly, it is not induced by spatial aggregation alone. Collectivity, therefore, is not just self-
+emerging. Rather, the collective-motion-state has an important role in maintaining the integrity and con-
+sistency of the swarm. The robustness of the swarm is also a major challenge and requirement in swarming
+robotics, making the current novel insights applicable and even important also to this emerging ﬁeld.
+In the case of locusts, our far-from-complete understanding of the swarming phenomenon is also proving
+crucial for human well-being and survival, as evident from the current devastating locust situation in large
+parts of Africa and Asia ( FAO, 2020 ). Much scientiﬁc attention has been dedicated to the perception, de-
+cision-making, and individual kinematics of locusts in a swarm. These efforts have led to various models that
+attempt to explain the collective behavior on the basis of local interactions among the individual locusts
+(see Ariel and Ayali, 2015 for review). The current study is, to the best of our knowledge, the ﬁrst to include
+the internal state of the individual locust as an important factor in dictating its behavior, and in turn
+affecting the maintenance and the properties of the swarm.
+Limitations of the study
+The study presented here outlines a post-swarming behavioral state of individuals. Clearly, as noted, this
+state is induced by neurochemical changes such as secretion of neuromodulators and/or hormones. Yet, it
+was beyond this research to pinpoint the exact neuronal mechanisms involved. Furthermore, the presented
+model is simpliﬁed and ignores various aspects of locust swarming that might be critical. However, the
+ll
+OPEN ACCESS
+iScience 24, 102299, April 23, 2021 9
+iScience
+Article
+
+===== PAGE 11 =====
+simplicity is also a virtue of the model, which can be easily generalized to other systems. In addition,
+although we show that the collective-motion-state is transient, we did not explore its temporal materiali-
+zation and decline.
+Data and code availability
+The data will be made available upon request.
+METHODS
+A l lm e t h o d sc a nb ef o u n di nt h ea c c o m p a n y i n gtransparent methods supplemental ﬁle .
+SUPPLEMENTAL INFORMATION
+Supplemental information can be found online at https://doi.org/10 .1016/j.isci.2021.102299 .
+ACKNOWLEDGMENTS
+This research has been supported by the Israel Science Foundation (research grant 2306/18).
+AUTHOR CONTRIBUTION
+D . K . ,G . A . ,a n dA . A .d e s i g n e dt h es t u d y .D . K .a n dC . S.-k. performed the experiments. D.K. and C.S.-k.
+analyzed the data. D.K. N.A., and G.A constructed the model. D.K. wrote the code, performed simulations,
+and analyzed the data. D.K., G.A., and A.A. wrote the manuscript. All authors reviewed and approved the
+paper.
+DECLARATION OF INTERESTS
+The authors declare that they have no competing interests.
+Received: November 27, 2020
+Revised: February 4, 2021
+Accepted: March 5, 2021
+Published: April 23, 2021
+REFERENCES
+Alessi, A.M., O’Connor, V., Aonuma, H., and
+Newland, P.L. (2014). Dopaminergic modulation
+of phase reversal in desert locusts. Front. Behav.
+Neurosci. 8, 1–15.
+Algar, S.D., Stemler, T., and Small, M. (2019).
+From ﬂocs to ﬂocks. In A Mathematical Modeling
+Approach from Nonlinear Dynamics to Complex
+Systems, E.E.N. Macau, ed. (Springer),
+pp. 157–175 .
+Aplin, L.M., Farine, D.R., Mann, R.P., and Sheldon,
+B.C. (2014). Individual-level personality inﬂuences
+social foraging and collective behaviour in wild
+birds. Proc. Biol. Sci. 281, 20141016 .
+Ariel, G., and Ayali, A. (2015). Locust collective
+motion and its modeling. PLoS Comput. Biol. 11,
+1–25.
+Ariel, G., Ophir, Y., Levi, S., Ben-Jacob, E., and
+Ayali, A. (2014a). Individual pause-and-go motion
+is instrumental to the formation and maintenance
+of swarms of marching locust nymphs. PLoS One
+9, e101636 .
+Ariel, G., Rimer, O., and Ben-Jacob, E. (2014b).
+Order–Disorder phase transition in
+heterogeneous populations of self-propelled
+particles. J. Stat. Phys. 158, 579–588 .
+Attanasi, A., Cavagna, A., Del Castello, L.,
+Giardina, I., Melillo, S., Parisi, L., Pohl, O.,
+Rossaro, B., Shen, E., Silvestri, E., and Viale, M.
+(2014). Collective behaviour without collective
+order in wild swarms of midges. PLoS Comput.
+Biol. 10, 1–10 .
+Ayali, A. (2019). The puzzle of locust density-
+dependent phase polyphenism. Curr. Opin.
+Insect Sci. 35, 41–47 .
+Ayali, A., and Pener, M.P. (1992). Density-
+dependent phase polymorphism affects
+response to adipokinetic hormone in Locusta.
+Comp. Biochem. Physiol. A Physiol. 101, 549–552.
+Bazazi, S., Bartumeus, F., Hale, J.J., and Couzin,
+I.D. (2012). Intermittent motion in desert locusts:
+behavioural complexity in simple environments.
+PLoS Comput. Biol. 8, e1002498 .
+Bazazi, S., Buhl, J., Hale, J.J., Anstey, M.L., Sword,
+G.A., Simpson, S.J., and Couzin, I.D. (2008).
+Collective motion and cannibalism in locust
+migratory bands. Curr. Biol. 18, 735–739 .
+Be’er, A., and Ariel, G. (2019). A statistical physics
+view of swarming bacteria. Mov. Ecol. 7, 1–17.
+Benisty, S., Ben-Jacob, E., Ariel, G., and Be’er, A.
+(2015). Antibiotic-induced anomalous statistics of
+collective bacterial swarming. Phys. Rev. Lett. 114,
+1–5.
+Brown, C., and Irving, E. (2014). Individual
+personality traits inﬂuence group exploration in a
+feral guppy population. Behav. Ecol. 25, 95–101 .
+Calovi, D.S., Lopez, U., Schuhmacher, P., Chate ´ ,
+H., Sire, C., and Theraulaz, G. (2015). Collective
+response to perturbations in a data-driven ﬁsh
+school model. J. R. Soc. Interface 12, 20141362 .
+Cavagna, A., Cimarelli, A., Giardina, I., Parisi, G.,
+Santagati, R., Stefanini, F., and Viale, M. (2010).
+Scale-free correlations in starling ﬂocks. Proc.
+Natl. Acad. Sci. U S A 107, 11865–11870 .
+Copenhagen, K., Quint, D.A., and Gopinathan, A.
+(2016). Self-organized sorting limits behavioral
+variability in swarms. Sci. Rep. 6, 1–11.
+Crall, J.D., Souffrant, A.D., Akandwanaho, D.,
+Hescock, S.D., Callan, S.E., Coronado, W.M.,
+Baldwin, M.W., and de Bivort, B.L. (2016). Social
+context modulates idiosyncrasy of behaviour in
+the gregarious cockroach Blaberus discoidalis.
+Anim. Behav. 111, 297–305 .
+Cucker, F., and Smale, S. (2007). Emergent
+behavior in ﬂocks. IEEE Trans. Automat. Contr.
+52, 852–862 .
+ll
+OPEN ACCESS
+10 iScience 24, 102299, April 23, 2021
+iScience
+Article
+
+===== PAGE 12 =====
+Cullen, D.A., Cease, A.J., Latchininsky, A.V., Ayali,
+A., Berry, K., Buhl, J., De Keyser, R., Foquet, B.,
+Hadrich, J.C., Matheson, T., et al. (2017). From
+molecules to management: mechanisms and
+consequences of locust phase polyphenism. Adv.
+Insect Physiol. 53, 167–285 .
+Dyer, J.R.G., Croft, D.P., Morrell, L.J., and Krause,
+J. (2009). Shoal composition determines foraging
+success in the guppy. Behav. Ecol. 20, 165–171 .
+Ellis, P.E., and Ashall, C. (1957). Field studies on
+diurnal behaviour, movement and aggregation in
+the desert locust (Schistocerca gregaria forsk ǻl).
+Anti-locust Bull. 25, 1–103.
+Escaff, D., Toral, R., Van Den Broeck, C., and
+Lindenberg, K. (2018). A continuous-time
+persistent random walk model for ﬂocking. Chaos
+28, 075507 .
+FAO (2020). Desert Locust Situation Update - 21
+April 2020 (Food Agric. Organ. United Nations) .
+Farine, D.R., Strandburg-Peshkin, A., Couzin, I.D.,
+Berger-Wolf, T.Y., and Crofoot, M.C. (2017).
+Individual variation in local interaction rules can
+explain emergent patterns of spatial organisation
+in wild baboons. Proc. R. Soc. B Biol. Sci. 284,
+20162243.
+Fu¨ rtbauer, I., and Fry, A. (2018). Social conformity
+in solitary crabs, Carcinus maenas, is driven by
+individual differences in behavioural plasticity.
+Anim. Behav. 135, 131–137 .
+Geva, N., Guershon, M., Orlova, M., and Ayali, A.
+(2010). Memoirs of a locust: density-dependent
+behavioral change as a model for learning and
+memory. Neurobiol. Learn. Mem. 93, 175–182 .
+Guisandez, L., Baglietto, G., and Rozenfeld, A.
+(2017). Heterogeneity Promotes First to Second
+Order Phase Transition on Flocking Systems 1–
+11.
+Herbert-Read, J.E., Krause, S., Morrell, L.J.,
+Schaerf, T.M., Krause, J., and Ward, A.J.W. (2013).
+The role of individuality in collective group
+movement. Proc. Biol. Sci. 280, 20122564 .
+Howard, C.E., Chen, C.L., Tabachnik, T.,
+Hormigo, R., Ramdya, P., and Mann, R.S. (2019).
+Serotonergic modulation of walking in
+Drosophila. Curr. Biol. 29, 4218–4230.e8 .
+Jolles, J.W., Boogert, N.J., Sridhar, V.H., Couzin,
+I.D., and Manica, A. (2017). Consistent individual
+differences drive collective behavior and group
+functioning of schooling ﬁsh. Curr. Biol. 2862–
+2868.e7.
+Jolles, J.W., Laskowski, K.L., Boogert, N.J., and
+Manica, A. (2018). Repeatable group differences
+in the collective behaviour of stickleback shoals
+across ecological contexts. Proc. R. Soc. B Biol.
+Sci. 285, 13–16 .
+Knebel, D., Ayali, A., Guershon, M., and Ariel, G.
+(2019). Intra- versus intergroup variance in
+collective behavior. Sci. Adv. 5, eaav0695 .
+Lucas, C., Kornfein, R., Chakaborty-Chatterjee,
+M., Schonfeld, J., Geva, N., Sokolowski, M.B., and
+Ayali, A. (2010). The locust foraging gene. Arch.
+Insect Biochem. Physiol. 74, 52–66 .
+Ma, Z., Guo, X., Lei, H., Li, T., Hao, S., and Kang, L.
+(2015). Octopamine and tyramine respectively
+regulate attractive and repulsive behavior in
+locust phase changes. Sci. Rep. 5, 1–11.
+Mar Delgado, M.del, Miranda, M., Alvarez, S.J.,
+Gurarie, E., Fagan, W.F., Penteriani, V., di Virgilio,
+A., and Morales, J.M. (2018). The importance of
+individual variation in the dynamics of animal
+collective movements. Philos. Trans. R. Soc. Lond.
+B Biol. Sci. 373, 20170008 .
+Menzel, A.M. (2012). Collective motion of binary
+self-propelled particle mixtures. Phys. Rev. E Stat.
+Nonlin. Soft Matter Phys. 85, 31–33 .
+Mishra, S., Tunstrøm, K., Couzin, I.D., and Huepe,
+C. (2012). Collective dynamics of self-propelled
+particles with variable speed. Phys. Rev. E 86,
+011901.
+Modlmeier, A.P., Keiser, C.N., Wright, C.M.,
+Lichtenstein, J.L.L., and Pruitt, J.N. (2015).
+Integrating animal personality into insect
+population and community ecology. Curr. Opin.
+Insect Sci. 9, 77–85 .
+Niemela¨ , P.T., and Santostefano, F. (2015). Social
+carry-over effects on non-social behavioral
+variation: mechanisms and consequences. Front.
+Ecol. Evol. 3, 1–12.
+O’shea-Wheller, T.A., Masuda, N., Sendova-
+Franks, A.B., and Franks, N.R. (2017). Variability in
+individual assessment behaviour and its
+implications for collective decision-making. Proc.
+R. Soc. B Biol. Sci. 284, 1–7 .
+Ott, S.R., Verlinden, H., Rogers, S.M., Brighton,
+C.H., Quah, P.S., Vleugels, R.K., Verdonck, R., and
+Broeck, J. Vanden (2012). Critical role for protein
+kinase A in the acquisition of gregarious behavior
+in the desert locust. Proc. Natl. Acad. Sci. U S A
+109, 381–387 .
+Pener, M.P., Ayali, A., and Golenser, E. (1997).
+Adipokinetic hormone and ﬂight fuel related
+characteristics of density-dependent locust
+phase polymorphism: a review. Comp. Biochem.
+Physiol. B Biochem. Mol. Biol. 117, 513–524 .
+Peri/C19c-Mataruga, V., Nenadovi /C19c, V., and Ivanovi /C19c,
+J. (2006). Neurohormones in insect stress: a
+review. Arch. Biol. Sci. 58, 1–12 .
+Planas-Sitja` , I., Deneubourg, J.-L., Gibon, C., and
+Sempo, G. (2015). Group personality during
+collective decision-making: a multi-level
+approach. Proc. Biol. Sci. 282, 20142515 .
+Rimer, O., and Ariel, G. (2017). Kinetic order-
+disorder transitions in a pause-and-go swarming
+model with memory. J. Theor. Biol. 419, 90–99 .
+Sumpter, D.J.T. (2006). The principles of
+collective animal behaviour. Philos. Trans. R. Soc.
+B Biol. Sci. 361, 5–22.
+Szorkovszky, A., Kotrschal, A., Herbert-Read, J.E.,
+Buechel, S.D., Romenskyy, M., Rose ´ n, E., van der
+Bijl, W., Pelckmans, K., Kolm, N., and Sumpter,
+D.J.T. (2018). Assortative interactions revealed by
+sorting of animal groups. Anim. Behav. 142,
+165–179.
+Uvarov, B. (1977). Grasshoppers and Locusts: A
+Handbook of General Acridology (Centre for
+Overseas Pest Research) .
+Verlinden, H., Vleugels, R., Marchal, E., Badisco,
+L., Pﬂu¨ ger, H.J., Blenau, W., and Broeck, J.
+Vanden (2010). The role of octopamine in locusts
+and other arthropods. J. Insect Physiol. 56,
+854–867.
+Vicsek, T., and Zafeiris, A. (2012). Collective
+motion. Phys. Rep. 517, 71–140 .
+Ward, A., and Webster, M. (2016). Sociality: The
+Behaviour of Group-Living Animals (Springer
+International Publishing) .
+Webster, M.M., and Ward, A.J.W. (2011).
+Personality and social context. Biol. Rev. 86,
+759–773.
+Wicher, D. (2007). Metabolic regulation and
+behavior: how hunger produces arousal - an
+insect study. Endocr. Metab. Immune Disord.
+Drug Targets 7, 304–310 .
+Yang, W.C., and Schmickl, T. (2019). Collective
+motion as an ultimate effect in crowded selﬁsh
+herds. Sci. Rep. 9, 1–11.
+Yang, Z., Yu, Y., Zhang, V., Tian, Y., Qi, W., and
+Wang, L. (2015). Octopamine mediates
+starvation-induced hyperactivity in adult
+Drosophila. Proc. Natl. Acad. Sci. U S A 112, 5219–
+5224.
+Zhang, L., Lecoq, M., Latchininsky, A., and Hunter,
+D. (2019). Locust and grasshopper management.
+Annu. Rev. Entomol. 64, 15–34.
+ll
+OPEN ACCESS
+iScience 24, 102299, April 23, 2021 11
+iScience
+Article
+
+===== PAGE 13 =====
+iScience, Volume24
+Supplemental information
+Collective motion as a distinct
+behavioral state of the individual
+Daniel Knebel, Ciona Sha-ked, Noa Agmon, Gil Ariel, and Amir Ayali
+
+===== PAGE 14 =====
+1 
+ 
+Supplemental information 
+Figures and tables 
+Variable Value 
+Simulation 
+parameters 
+Num. of agents (N) 12 
+Num. of steps 1000 
+Arena size (periodic boundaries; L) 7 x 7 / 75 x 75 
+Agents 
+dimensions 
+Size of agents (a1 x a2) 0.1 x 0.4 
+Visual range radius (r) 1 
+Movement 
+parameters 
+Probability to stop (ps) 0.5 - 0.917 
+Probability to walk (pw) 0.8 - 0.933 
+Speed (v) 0.25 
+Direction 
+parameters 
+Inertia weight (q1) 0.2 
+Current surrounding weight (q2) 0.2 
+Memory surrounding weight (q3) 0.3 
+Memory length (of surrounding memory) 5 
+Random vector weight (q4) 0.3 
+ 
+Table S1. Model parameters. 
+
+===== PAGE 15 =====
+2 
+ 
+ 
+ 
+Fig. S1. Kinematic changes throughout the three experimental conditions  – exact data points and trends . (A) 
+the fraction of walking, ( B) the averaged walking speed, (C) the average duration of walking bouts, and ( D) the 
+average duration of pauses, of the traced animals in the isolation, grouping, and re -isolation stages. Blue lines 
+represent increase and red lines decrease between consequent experimental condit ions of individual animals 
+(n=26). *p<0.05, **p<0.01, ***p<0.001. 
+ 
+
+
+===== PAGE 16 =====
+3 
+ 
+ 
+ 
+Figure S2. Walking and pause durations for different pW and pS values. The median bout and pause durations 
+presented in Fig. 4, arranged by their corresponding pW and pS (blue and red, respectively). 
+  
+
+
+===== PAGE 17 =====
+4 
+ 
+ 
+ 
+Figure S3. The influence of different walking bouts and pauses duration  on the collectivity parameters of 
+simulated swarms in an arena of 75x75. The order parameter, spread and the average number of agents within 
+each agent’s visual field for different walking bouts (rows) and pauses (columns) durations. Notice that the low 
+numbers and minor changes between the boxes indicate that there was minimal to no collective behaviour in 
+the 75x75 sized arena. Each box represents the median of 100 simulations. 
+ 
+
+
+===== PAGE 18 =====
+5 
+ 
+Transparent Methods 
+Animals 
+The empirical experiments were conducted on gregarious desert locusts, Schistocerca 
+gregaria (Forsskål), bred at Tel Aviv University, School of Zoology. The animals were kept at 
+high density: over 100 animals in cages of 60 l, under a 12 h:12 h light/dark regime, a 
+temperature of 30℃, and 30-65 % humidity. Animals were fed daily with wheat seedlings and 
+dry oats. All experimental locusts were the offspring of many generations of gregarious 
+locusts reared in these conditions. 
+Experimental setup 
+A ring-shaped arena was used for the assessment of the behaviours of individuals and 
+swarms. It comprised blue plastic walls (60 cm diameter and 55 cm high) with an inner central 
+cone dome (30 cm diameter). The bottom of the structure was covered with a thin layer of 
+Fluon (Whitford Plastics Ltd., Runcorn, UK), in order to prevent locusts from climbing. A white 
+paper covered the floor of the arena and was changed before each experiment. Light sources 
+around the arena lit its f loor evenly. A video camera (Sony FDR -AXP35: 4K Ultra HD) was 
+positioned above the arena and filmed the locusts throughout the experiment. 
+Monitoring the locust movements 
+Prior to the experiments, each of the experimented locusts was tagged with a unique 
+barcode glued to the dorsal side of its prothorax using a drop of Epoxy glue. Using the video 
+footage at 25/3 frames per second, the trajectory of each animal was reconstructed offline 
+using BugTag software (Robiotec Ltd., Israel). To this we added a custom -designed multiple-
+target tracking and a trajectory -smoothing method (for details: Ariel et al., 2014a ). briefly, 
+
+===== PAGE 19 =====
+6 
+ 
+segments in which tags were not identified (less than 5 cm or 25 s) by the system positions 
+were interpolated. We thus obtained the positions of the tags’ centre of mass relative to the 
+arena centre, at a final resolution of 2 -3 pixels (ca. 0.5 mm), for about 99% of the video 
+frames. In order to reach 100% recognition, we completed the analysis manually for the 
+remaining frames. In three out of the 26 experiment the tracking system failed to recognise 
+1-2 animals in the grouping stage. Therefore, the order parameter was calculated based on 
+the recognized animals only . These miss -identifications, which only slightly  affect the order 
+parameter calculated in the grouping stage, have no influence on any of the kinematic 
+statistics in any of the stages (that only describe the focal animal). 
+Experimental procedure 
+In the morning of each experiment day, 10 locusts were tak en from their cage and 
+individually tagged. Thereafter, one locust was randomly chosen and placed in the arena 
+alone for one hour. The other 9 locusts were then added for an additional hour; after which 
+they were removed. The remaining locust was then filmed for another hour. 
+Analysed parameters 
+Following the recognition process, we analysed the middle 40 min of each of the 3 hours 
+of the experiment using MATLAB (MathWorks, Natick, MA, USA). The following parameters 
+were calculated: 
+1. Order parameter – the absolute value of the average direction of movement of the 
+walking animals (clockwise denoted as -1 and anticlockwise as +1), averaged for all the 
+frames. 
+2. Fraction of walking – the number of frames an animal walked divided by the total 
+number of analysed frames. 
+
+===== PAGE 20 =====
+7 
+ 
+3. Detection of walking bouts – a walking period was defined as walking at a speed above 
+0.25 cm/sec for more than one third of a second. This double threshold allowed us to 
+overcome the limitation of the tracking system and avoid recognizing very small 
+movements as real walking. 
+4. Speed – averaged for all experimental animals and analysed frames when the animal 
+walked and the speed differed from zero. 
+5. Walking bout duration – the time an animal moved continuously between one pause 
+to the next, averaged for all walking bouts.  
+6. Pause duration – the time an animal did not walk between one walking bout and the 
+next, averaged for all pauses. 
+Statistical analysis 
+All statistical tests were conducted with MATLAB. To compare the order parameters, 
+Wilcoxon rank-sum test was used. To compare among the three stages, Friedman Test was 
+used. Since all comparisons were significant according to the latter test, Bonferroni multiple 
+comparison post -hoc test accompanied each Friedman Test, in order to reveal the 
+significantly different groups. The p values noted are of the Bonferroni multiple comparison 
+post-hoc test. Correlations were conducted using Spearman's Rank Correlation test.  
+Modelling 
+We employed a two-dimensional model comprising 𝑁 agents moving at a fixed speed 
+𝑣 in a square domain of linear size L and periodic boundaries. Position and heading (direction) 
+of each rectangle centre were denoted by 𝑥𝑖(𝑡) and 𝑣̂𝑖(𝑡), respectively, where 𝑥𝑖(𝑡) ∈ [0, 𝐿]2 
+and ‖𝑣̂𝑖(𝑡)‖ = 1. In addition,  𝑤𝑖(𝑡) is a Boolean variable that denoted whether at time t, 
+
+===== PAGE 21 =====
+8 
+ 
+agent i is moving (𝑤𝑖(𝑡) = 1) or pausing (𝑤𝑖(𝑡) = 0). In order to take into account the physical 
+size of animals, we assumed that each agent is a rectangle with sides 𝑎1 × 𝑎2. 
+In each simulation step, the position of moving agents changed by amount v in the direction  
+𝑣̂𝑖(𝑡),  
+ 
+𝑥𝑖(𝑡 + 1) = 𝑥𝑖(𝑡) + 𝑣𝑤𝑖(𝑡)𝑣̂𝑖(𝑡)   (𝑚𝑜𝑑 𝐿). 
+ 
+The new velocity of agent 𝑖 depended on three terms: i. Inertia (its own direction); ii. the 
+direction of other agents in its receptive field (see below), possibly with a memory; and iii. a 
+random vector with unit norm 𝜉𝑖(𝑡). The receptive field view is a circle around 𝑥𝑖(𝑡). Unlike 
+previous models, we assumed that an agent sees all other agents whose rectangle is within a 
+distance r from 𝑥𝑖(𝑡), and not merely the center of the rectangle. Denoting the four corners 
+of the rectangle describing agent j as indexes 𝑐𝑗
+1(𝑡), … , 𝑐𝑗
+4(𝑡), we defined the edges of the 
+rectangle as the line segment  𝑒𝑗
+𝑘(𝑡) = [𝑐𝑗
+𝑘(𝑡), 𝑐𝑗
+𝑘+1(𝑡)], where 𝑐𝑗
+5(𝑡) = 𝑐𝑗
+1(𝑡). The adjacency 
+matrix 𝐴𝑖𝑗(𝑡) is a zero-one matrix that is one if agent j can be observed by agent i at time t, 
+i.e., 
+𝐴𝑖𝑗(𝑡) = {1 (𝑒𝑗
+1(𝑡) ∪ 𝑒𝑗
+2(𝑡) ∪ 𝑒𝑗
+3(𝑡) ∪ 𝑒𝑗
+4(𝑡)) ∩ {𝑥: ‖𝑥𝑖(𝑡) −  𝑥‖ ≤ 𝑟} ≠ 𝜙
+0 otherwise
+ 
+Then, the set of observable neighbours of agent i at time t as, 
+𝐼𝑖(𝑡) ≔ ∑ 𝐴𝑖𝑗(𝑡)𝑖≠𝑗 . 
+The average direction in the receptive field at time 𝑡, is 𝑢̂𝑖(𝑡) = 𝑢𝑖(𝑡)/‖𝑢𝑖(𝑡)‖, where 
+ 
+𝑢𝑖(𝑡) =  ( 1
+𝑛𝑖(𝑡) ∑ cos(𝑣̂𝑗)
+𝑗∈𝐼𝑖(𝑡)
+, 1
+𝑛𝑖(𝑡) ∑ sin(𝑣̂𝑗)
+𝑗∈𝐼𝑖(𝑡)
+ ). 
+
+===== PAGE 22 =====
+9 
+ 
+ 
+Here, 𝑛𝑖(𝑡) is the number of elements in 𝐼𝑖(𝑡). 
+Overall, the new heading 𝑣̂𝑖(𝑡 + 1) was the weighted average of four terms: inertia, 
+direction of moving intersecting rectangles at time 𝑡, the average heading of movin g 
+intersecting rectangles at time [𝑡 − 5 … 𝑡 − 1], and independent random vector with unit 
+norm 𝜉𝑖(𝑡) from a uniform distribution of [−𝜋, 𝜋]. Angles of other agents to the focal agent 
+were provided by the simulator. Let the set of the weights be [𝑞1 … 𝑞4].The updated weighted 
+averaged direction, was, therefore, 𝑣̂𝑖(𝑡) = 𝑣𝑖(𝑡)/‖𝑣𝑖(𝑡)‖,  where 
+  
+𝑣𝑖(𝑡 + 1) = 𝑞1𝑣̂𝑖(𝑡) + 𝑞2𝑢̂𝑖(𝑡) + 𝑞3
+1
+5 ∑ 𝑢̂(𝑡 − 𝑠)
+5
+𝑠=1
++ 𝑞4𝜉𝑖(𝑡) 
+The weights were set to 𝑄 = [0.2, 0.2, 0.3, 0.3]. Collisions of agents with each other were not 
+taken into account, as our previous study found that visual stimuli is sufficient for generating 
+collective behaviour (Ariel et al., 2014a).   
+Switching between walking and pausing was determined as follows. Assuming 
+exponential distributions of moving and pausing durations, the probability to proceed moving 
+was given by a single parameter, 𝑝𝑤, describing the probability per -step of an agent to 
+continue walking, 𝑝w = 𝑃(𝑤𝑖(𝑡 + 1) = 1|𝑤𝑖(𝑡) =  1). Similarly, 𝑝s = 𝑃(𝑤𝑖(𝑡 + 1) =
+0|𝑤𝑖(𝑡) =  0) was the probability per-step that a stopping agent will continue stopping. 
+The following statistics were calculated over steps 200 -1000 of the simulation. Brackets 
+denote averaging over all analysed frames. 
+1. Order: 𝜃(𝑡) =
+1
+𝑁 〈‖∑ 𝑣̂𝑖
+𝑁
+𝑖=1 ‖〉 .  
+2. Spread: 𝑆(𝑡) =
+1
+𝑁(𝑁−1) 〈∑ ∑ |𝑥𝑖(𝑡) −  𝑥𝑗(𝑡)|𝑗≠𝑖
+𝑁
+𝑖=1 〉 
+
+===== PAGE 23 =====
+10 
+ 
+3. Number of neighbours:  𝑛𝑖(𝑡) =
+1
+𝑁 〈∑ 𝐼𝑖(𝑡)𝑁
+𝑖=1 〉  
+4. Steps to regroup: the number of steps that passed from the first step in which an agent 
+has no neighbours within its visual field ( 𝑛𝑖(𝑡) = 0)  until it encounters a neighbour 
+again (𝑛𝑖(𝑡 + 𝑠) > 0). 
+ 
+ 
